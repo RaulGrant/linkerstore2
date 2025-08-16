@@ -1,0 +1,7 @@
+<!-- Placeholder SVG temporal -->
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f3f4f6"/>
+  <path d="M200 150C183.431 150 170 163.431 170 180C170 196.569 183.431 210 200 210C216.569 210 230 196.569 230 180C230 163.431 216.569 150 200 150Z" fill="#9ca3af"/>
+  <path d="M150 250L200 200L250 250L350 150V350H50V250H150Z" fill="#9ca3af"/>
+  <text x="200" y="280" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">Imagen del producto</text>
+</svg>

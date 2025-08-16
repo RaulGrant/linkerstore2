@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#f8fafc"/>
+  <rect x="50" y="50" width="300" height="300" rx="12" fill="#e2e8f0"/>
+  
+  <!-- Hard hat icon -->
+  <path d="M200 120 L160 140 L160 180 L200 190 L240 180 L240 140 Z" fill="#3b82f6"/>
+  <ellipse cx="200" cy="190" rx="50" ry="8" fill="#1e40af"/>
+  <rect x="185" y="130" width="30" height="50" rx="15" fill="#60a5fa"/>
+  
+  <!-- Safety vest pattern -->
+  <path d="M120 220 L140 200 L160 220 L160 280 L120 280 Z" fill="#fbbf24"/>
+  <path d="M240 220 L260 200 L280 220 L280 280 L240 280 Z" fill="#fbbf24"/>
+  <rect x="140" y="205" width="20" height="3" fill="#f59e0b"/>
+  <rect x="240" y="205" width="20" height="3" fill="#f59e0b"/>
+  
+  <text x="200" y="330" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="16" font-weight="500">
+    Producto de Seguridad
+  </text>
+  <text x="200" y="350" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">
+    Imagen no disponible
+  </text>
+</svg>

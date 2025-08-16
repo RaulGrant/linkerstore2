@@ -1,0 +1,135 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { ContactFormModal } from "@/components/modals/contact-form-modal"
+
+export function Footer() {
+  const [contactModalOpen, setContactModalOpen] = useState(false)
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 lg:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Logo y descripción */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">LP</span>
+              </div>
+              <span className="text-xl font-bold">LinkerPro</span>
+            </div>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              La plataforma líder que conecta empresas con freelancers especializados en ingeniería, automatización y
+              tecnología industrial.
+            </p>
+            <div className="flex space-x-3">
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white p-2">
+                <Facebook className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white p-2">
+                <Twitter className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white p-2">
+                <Instagram className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white p-2">
+                <Linkedin className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Enlaces principales */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Navegación Principal</h3>
+            <div className="space-y-2">
+              <Link href="/#como-funciona" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Cómo Funciona
+              </Link>
+              <Link href="/#para-empresas" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Para Empresas
+              </Link>
+              <Link href="/#para-freelancers" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Para Freelancers
+              </Link>
+              <Link href="/#precios" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Precios
+              </Link>
+            </div>
+          </div>
+
+          {/* Enlaces legales */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Legal y Soporte</h3>
+            <div className="space-y-2">
+              <Link href="/terms" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Términos y Condiciones
+              </Link>
+              <Link href="/faq" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Preguntas Frecuentes
+              </Link>
+              <Link href="/support" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Soporte
+              </Link>
+            </div>
+          </div>
+
+          {/* Contacto */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contacto</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2 text-sm">
+                <Mail className="h-4 w-4 text-blue-400" />
+                <span className="text-gray-300">soporte@linkerpro.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <Phone className="h-4 w-4 text-blue-400" />
+                <span className="text-gray-300">+52 55 1234 5678</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <MapPin className="h-4 w-4 text-blue-400" />
+                <span className="text-gray-300">Ciudad de México, México</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <button
+                  onClick={() => setContactModalOpen(true)}
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Formulario de Contacto
+                </button>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+               
+               {/* <Link href="/help" className="text-gray-300 hover:text-white transition-colors">
+                  Centro de Ayuda
+                </Link> */}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Separator className="my-8 bg-gray-700" />
+
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="text-sm text-gray-400">© 2025 LinkerPro. Todos los derechos reservados.</div>
+          <div className="flex items-center space-x-6 text-sm text-gray-400">
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Política de Privacidad
+            </Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">
+              Cookies
+            </Link>
+            <Link href="/legal" className="hover:text-white transition-colors">
+              Aviso Legal
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <ContactFormModal open={contactModalOpen} onOpenChange={setContactModalOpen} />
+    </footer>
+  )
+}
