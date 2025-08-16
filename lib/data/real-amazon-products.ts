@@ -1804,7 +1804,7 @@ export function getProductsByCategory(category: string): AmazonProduct[] {
     product.category?.toLowerCase() === category.toLowerCase()
   );
 }
-//hola si prueba135678
+//hola si prueba135678907
 //prueba
 // Función para obtener productos relacionados (misma categoría, excluyendo el actual)
 export function getRelatedProducts(asin: string, limit: number = 4): AmazonProduct[] {
