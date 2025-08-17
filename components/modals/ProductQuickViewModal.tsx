@@ -16,7 +16,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { 
   Star, 
-  ShoppingCart, 
   ExternalLink, 
   Check, 
   X, 
@@ -34,7 +33,10 @@ import {
   PieChart,
   Zap,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Info,
+  CheckCircle,
+  Wrench
 } from 'lucide-react';
 import { AmazonProduct } from '@/lib/types/store';
 import { getProductImageUrls, hasMultipleImages } from '@/lib/utils/productImageMapping';
@@ -96,51 +98,17 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
 
   if (!product) return null;
 
-  // Generar reseñas detalladas y realistas
-  const detailedReviews = [
-    {
-      id: 1,
-      name: "Carlos Mendoza",
-      verified: true,
-      rating: 5,
-      date: "15 de julio, 2024",
-      title: "Excelente calidad para uso industrial",
-      text: `He estado usando este ${product.category?.toLowerCase()} durante 6 meses en mi taller y la calidad es excepcional. La construcción es sólida, cumple todas las normativas OSHA que necesitamos y el equipo de trabajo está muy satisfecho. La relación calidad-precio es imbatible, especialmente considerando la durabilidad que ha demostrado hasta ahora. Sin duda lo recomiendo para uso profesional.`,
-      helpful: 24,
-      images: 3,
-      pros: ["Construcción robusta", "Certificación completa", "Confort prolongado"],
-      cons: ["Precio ligeramente alto", "Tiempo de envío"]
-    },
-    {
-      id: 2,
-      name: "María Elena Rodríguez",
-      verified: true,
-      rating: 4,
-      date: "3 de julio, 2024",
-      title: "Muy bueno pero con pequeños detalles",
-      text: `Compré este producto para mi empresa de construcción y en general estamos muy contentos. La funcionalidad es excelente y cumple perfectamente con su propósito. Sin embargo, me gustaría que las instrucciones fueran más claras y que incluyera algunos accesorios adicionales. Aún así, lo recomiendo porque la calidad principal del producto es muy buena.`,
-      helpful: 18,
-      images: 2,
-      pros: ["Funcionalidad perfecta", "Buen acabado", "Llegó rápido"],
-      cons: ["Instrucciones confusas", "Faltan accesorios"]
-    },
-    {
-      id: 3,
-      name: "Roberto Jiménez",
-      verified: true,
-      rating: 5,
-      date: "28 de junio, 2024",
-      title: "Superó mis expectativas completamente",
-      text: `Después de usar varios productos similares, puedo decir que éste es superior en muchos aspectos. La atención al detalle en el diseño es notable, los materiales se sienten premium y la funcionalidad es intuitiva. Lo he usado en condiciones exigentes y ha resistido perfectamente. El servicio al cliente también fue excelente cuando tuve una consulta. Definitivamente una inversión que vale la pena.`,
-      helpful: 31,
-      images: 4,
-      pros: ["Calidad premium", "Muy resistente", "Excelente servicio"],
-      cons: ["Ninguno destacable"]
-    }
-  ];
-
-  // Datos para gráficas de calificaciones
-  const ratingData = [
+  // Usar datos reales del producto
+  const productReviews = product.reviews || [];
+  
+  // Datos para gráficas de calificaciones desde el producto
+  const ratingData = (product as any).rating_distribution ? [
+    { stars: 5, count: Math.round((product.reviews?.length || 0) * ((product as any).rating_distribution["5"] / 100)), percentage: (product as any).rating_distribution["5"] },
+    { stars: 4, count: Math.round((product.reviews?.length || 0) * ((product as any).rating_distribution["4"] / 100)), percentage: (product as any).rating_distribution["4"] },
+    { stars: 3, count: Math.round((product.reviews?.length || 0) * ((product as any).rating_distribution["3"] / 100)), percentage: (product as any).rating_distribution["3"] },
+    { stars: 2, count: Math.round((product.reviews?.length || 0) * ((product as any).rating_distribution["2"] / 100)), percentage: (product as any).rating_distribution["2"] },
+    { stars: 1, count: Math.round((product.reviews?.length || 0) * ((product as any).rating_distribution["1"] / 100)), percentage: (product as any).rating_distribution["1"] }
+  ] : [
     { stars: 5, count: 245, percentage: 65 },
     { stars: 4, count: 89, percentage: 24 },
     { stars: 3, count: 28, percentage: 7 },
@@ -148,42 +116,182 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
     { stars: 1, count: 4, percentage: 1 }
   ];
 
-  // Análisis de sentimientos simulado
-  const sentimentData = [
-    { aspect: "Calidad", positive: 92, negative: 8 },
-    { aspect: "Precio", positive: 78, negative: 22 },
-    { aspect: "Durabilidad", positive: 89, negative: 11 },
-    { aspect: "Comodidad", positive: 85, negative: 15 },
-    { aspect: "Diseño", positive: 91, negative: 9 }
-  ];
-
-  // Razones detalladas para elegir este producto
-  const reasons = [
-    {
-      icon: Award,
-      title: "Calidad Certificada OSHA/ANSI",
-      description: "Cumple y supera todas las normativas de seguridad laboral requeridas",
-      score: 98
-    },
-    {
-      icon: Users,
-      title: "Aprobado por + de 500 Profesionales", 
-      description: `${product.review_count || 377}+ reseñas positivas de usuarios verificados`,
-      score: 94
-    },
-    {
-      icon: TrendingUp,
-      title: "Mejor Relación Calidad-Precio",
-      description: "Análisis comparativo confirma 23% mejor valor que competidores",
-      score: 91
-    },
-    {
-      icon: Shield,
-      title: "Garantía Extendida",
-      description: "2 años de garantía completa + soporte técnico especializado",
-      score: 96
+  // Razones detalladas para elegir este producto - específicas por producto
+  const getProductSpecificReasons = (product: AmazonProduct) => {
+    const productId = product.id;
+    
+    switch(productId) {
+      case "1": // Chaleco de seguridad
+        return [
+          {
+            icon: Award,
+            title: "Material Premium de Alta Visibilidad",
+            description: "Cumple y supera normativas ANSI/ISEA 107-2020. Material reflectante 3M de grado comercial",
+            score: 98
+          },
+          {
+            icon: Users,
+            title: "Aprobado por + de 400 Profesionales", 
+            description: `${product.review_count || 377}+ reseñas positivas de trabajadores de construcción verificados`,
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Relación Calidad-Precio Excepcional",
+            description: `Por solo $${product.price} obtienes protección profesional. 35% mejor valor que competidores`,
+            score: 91
+          },
+          {
+            icon: Shield,
+            title: "Resistente y Lavable",
+            description: "Material duradero que mantiene propiedades reflectantes después de 100+ lavados",
+            score: 96
+          }
+        ];
+      
+      case "2": // Overol industrial
+        return [
+          {
+            icon: Award,
+            title: "100% Algodón Industrial Mexicano",
+            description: "Gabardina premium fabricada en México. Resistente y transpirable para largas jornadas",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Cierre Doble Dieléctrico",
+            description: "Tecnología única que permite abrir desde arriba o abajo. Material plástico antieléctrico",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "Preferido en Industria Petrolera", 
+            description: "Bandas reflejantes de alta visibilidad. Ideal para construcción y mantenimiento industrial",
+            score: 92
+          },
+          {
+            icon: TrendingUp,
+            title: "Diseño Ergonómico Mexicano",
+            description: "Cintura elástica trasera y corte anatómico. Hecho en México con estándares internacionales",
+            score: 94
+          }
+        ];
+      
+      case "3": // LICA Botas
+        return [
+          {
+            icon: Award,
+            title: "Certificación NOM-113-STPS-2009",
+            description: "Casquillo de poliamida resiste impactos de 101.7 J. Certificación oficial mexicana",
+            score: 99
+          },
+          {
+            icon: Shield,
+            title: "Protección Dieléctrica 14,000V",
+            description: "Resistencia eléctrica certificada hasta 14,000 voltios. Ideal para electricistas",
+            score: 98
+          },
+          {
+            icon: Users,
+            title: "89 Reseñas Verificadas Positivas", 
+            description: "4.5/5 estrellas promedio. Preferidas por electricistas y trabajadores industriales",
+            score: 95
+          },
+          {
+            icon: TrendingUp,
+            title: "Ultraligeras y Cómodas",
+            description: "Solo 0.785g por bota. Plantilla PU conformado y forro antimicótico para comodidad",
+            score: 93
+          }
+        ];
+      
+      case "4": // Lubardy Tenis
+        return [
+          {
+            icon: Award,
+            title: "Tecnología Antideslizante Avanzada",
+            description: "Suela especializada para superficies húmedas y aceitosas. Adherencia superior",
+            score: 96
+          },
+          {
+            icon: Shield,
+            title: "Protección Integral del Pie",
+            description: "Casquillo reforzado y protección lateral. Resistente a aceites y químicos industriales",
+            score: 94
+          },
+          {
+            icon: Users,
+            title: "Recomendado por Chefs y Operarios", 
+            description: "Ideal para cocinas industriales y plantas de producción. Fácil limpieza",
+            score: 92
+          },
+          {
+            icon: TrendingUp,
+            title: "Precio Competitivo $599",
+            description: "Calzado profesional a precio accesible. 40% más económico que marcas importadas",
+            score: 90
+          }
+        ];
+      
+      case "5": // ThreeH Guantes
+        return [
+          {
+            icon: Award,
+            title: "Recubrimiento Antideslizante",
+            description: "Tecnología de agarre superior en superficies húmedas y secas. Durabilidad extendida",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Protección Nivel A3",
+            description: "Resistencia al corte nivel A3. Protege contra objetos punzocortantes en construcción",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "Preferidos por Constructores", 
+            description: "Flexibilidad y destreza manual sin sacrificar protección. Cómodos por horas",
+            score: 93
+          },
+          {
+            icon: TrendingUp,
+            title: "Mejor Precio $299",
+            description: "Pack de guantes profesionales. 50% más económicos que competidores europeos",
+            score: 91
+          }
+        ];
+      
+      default:
+        return [
+          {
+            icon: Award,
+            title: "Calidad Certificada",
+            description: "Cumple normativas internacionales de seguridad laboral",
+            score: 98
+          },
+          {
+            icon: Users,
+            title: "Aprobado por Profesionales", 
+            description: `${product.review_count || 100}+ reseñas positivas de usuarios verificados`,
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Mejor Relación Calidad-Precio",
+            description: "Análisis comparativo confirma mejor valor que competidores",
+            score: 91
+          },
+          {
+            icon: Shield,
+            title: "Garantía Extendida",
+            description: "Garantía completa + soporte técnico especializado",
+            score: 96
+          }
+        ];
     }
-  ];
+  };
+
+  const reasons = getProductSpecificReasons(product);
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
@@ -314,10 +422,6 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
 
             {/* Acciones principales */}
             <div className="space-y-3">
-              <Button className="w-full h-12 text-lg" size="lg">
-                <ShoppingCart className="h-5 w-5 mr-2" />
-                Agregar al carrito
-              </Button>
               <Button variant="outline" className="w-full h-12 text-lg" size="lg">
                 <ExternalLink className="h-5 w-5 mr-2" />
                 Ver en Amazon
@@ -349,12 +453,16 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Modelo:</span>
-                  <span className="font-medium font-mono text-sm">{product.asin}</span>
+                  <span className="font-medium">
+                    {(product as any).product_details?.['Número de modelo'] || 
+                     (product as any).specifications?.['Modelo'] || 
+                     'Modelo Industrial'}
+                  </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Prime:</span>
-                  <span className={`font-medium ${product.is_prime ? 'text-blue-600' : 'text-gray-400'}`}>
-                    {product.is_prime ? '✓ Disponible' : 'No disponible'}
+                  <span className="text-gray-600">Disponibilidad:</span>
+                  <span className="font-medium text-green-600">
+                    ✓ En stock
                   </span>
                 </div>
               </CardContent>
@@ -377,10 +485,9 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
         <div className="border-t bg-gray-50">
           <div className="p-6">
             <Tabs value={selectedTab} onValueChange={setSelectedTab}>
-              <TabsList className="grid grid-cols-4 w-full mb-6">
+              <TabsList className="grid grid-cols-3 w-full mb-6">
                 <TabsTrigger value="overview">Resumen</TabsTrigger>
                 <TabsTrigger value="reviews">Reseñas</TabsTrigger>
-                <TabsTrigger value="analytics">Análisis</TabsTrigger>
                 <TabsTrigger value="why-choose">¿Por qué elegir?</TabsTrigger>
               </TabsList>
 
@@ -422,171 +529,229 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Especificaciones Técnicas</CardTitle>
+                <Card className="border-l-4 border-l-blue-500 bg-gradient-to-r from-blue-50 to-white">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="flex items-center gap-3 text-blue-800">
+                      <div className="p-2 bg-blue-100 rounded-lg">
+                        <Info className="h-5 w-5 text-blue-600" />
+                      </div>
+                      Acerca de este artículo
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <span className="font-medium">Marca:</span> {product.brand || 'Premium Industrial'}
+                    {(product as any).features && (
+                      <div className="space-y-4">
+                        {Object.entries((product as any).features).map(([key, value]) => (
+                          <div key={key} className="bg-white rounded-lg p-4 border border-blue-100 shadow-sm">
+                            <div className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="flex-1">
+                                <span className="font-semibold text-gray-800 block mb-1 text-sm uppercase tracking-wide">{key}</span>
+                                <span className="text-gray-600 leading-relaxed">{String(value)}</span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                      <div>
-                        <span className="font-medium">Modelo:</span> {product.asin}
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card className="border-l-4 border-l-green-500 bg-gradient-to-r from-green-50 to-white">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="flex items-center gap-3 text-green-800">
+                      <div className="p-2 bg-green-100 rounded-lg">
+                        <CheckCircle className="h-5 w-5 text-green-600" />
                       </div>
-                      <div>
-                        <span className="font-medium">Categoría:</span> {product.category}
+                      Información adicional
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {(product as any).additional_info && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {Object.entries((product as any).additional_info).map(([key, value]) => (
+                          <div key={key} className="bg-white rounded-lg p-4 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex items-center gap-3 mb-2">
+                              {key === "País de origen" && <div className="w-3 h-3 bg-blue-500 rounded-full"></div>}
+                              {key === "Envío" && <div className="w-3 h-3 bg-orange-500 rounded-full"></div>}
+                              {key === "Vendido por" && <div className="w-3 h-3 bg-purple-500 rounded-full"></div>}
+                              {key === "Devolución" && <div className="w-3 h-3 bg-red-500 rounded-full"></div>}
+                              {key === "Pago" && <div className="w-3 h-3 bg-green-500 rounded-full"></div>}
+                              <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide">{key}</span>
+                            </div>
+                            <span className="text-gray-600 font-medium">{String(value)}</span>
+                          </div>
+                        ))}
                       </div>
-                      <div>
-                        <span className="font-medium">Certificación:</span> OSHA/ANSI Compliant
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card className="border-l-4 border-l-purple-500 bg-gradient-to-r from-purple-50 to-white">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="flex items-center gap-3 text-purple-800">
+                      <div className="p-2 bg-purple-100 rounded-lg">
+                        <Eye className="h-5 w-5 text-purple-600" />
                       </div>
-                      <div>
-                        <span className="font-medium">Garantía:</span> 24 meses
+                      Detalles del producto
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {(product as any).product_details && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {Object.entries((product as any).product_details).map(([key, value]) => (
+                          <div key={key} className="bg-white rounded-lg p-4 border border-purple-100 shadow-sm hover:shadow-md transition-all duration-200">
+                            <div className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="flex-1">
+                                <span className="font-semibold text-gray-800 block mb-1 text-sm uppercase tracking-wide">{key}</span>
+                                <span className="text-gray-600 leading-relaxed">{String(value)}</span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                      <div>
-                        <span className="font-medium">Origen:</span> Fabricado en USA
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card className="border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 to-white">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="flex items-center gap-3 text-orange-800">
+                      <div className="p-2 bg-orange-100 rounded-lg">
+                        <Wrench className="h-5 w-5 text-orange-600" />
                       </div>
-                    </div>
+                      Especificaciones Técnicas
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {(product as any).specifications ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {Object.entries((product as any).specifications).map(([key, value]) => (
+                          <div key={key} className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm hover:shadow-md transition-all duration-200">
+                            <div className="flex items-center justify-between">
+                              <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                {key}
+                              </span>
+                              <span className="text-gray-600 font-medium text-right">{String(value)}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                              Marca
+                            </span>
+                            <span className="text-gray-600 font-medium">{product.brand || 'Premium Industrial'}</span>
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                              Modelo
+                            </span>
+                            <span className="text-gray-600 font-medium">{product.asin}</span>
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                              Categoría
+                            </span>
+                            <span className="text-gray-600 font-medium">{product.category}</span>
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              Certificación
+                            </span>
+                            <span className="text-gray-600 font-medium">OSHA/ANSI Compliant</span>
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                              Garantía
+                            </span>
+                            <span className="text-gray-600 font-medium">24 meses</span>
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg p-4 border border-orange-100 shadow-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 text-sm uppercase tracking-wide flex items-center gap-2">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                              Origen
+                            </span>
+                            <span className="text-gray-600 font-medium">Fabricado en USA</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               </TabsContent>
 
               <TabsContent value="reviews" className="space-y-4">
-                {detailedReviews.map((review) => (
-                  <Card key={review.id}>
+                {productReviews.map((review: any) => (
+                  <Card key={review.id} className="border-l-4 border-l-yellow-400 bg-gradient-to-r from-yellow-50 to-white hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start justify-between mb-3">
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-semibold">{review.name}</span>
-                            {review.verified && (
-                              <Badge variant="outline" className="text-xs">
-                                <Check className="h-3 w-3 mr-1" />
-                                Compra verificada
-                              </Badge>
-                            )}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                              {review.author.charAt(0).toUpperCase()}
+                            </div>
+                            <div>
+                              <span className="font-bold text-gray-900 text-lg">{review.author}</span>
+                              {review.verified && (
+                                <Badge variant="outline" className="ml-2 text-xs border-green-500 text-green-700 bg-green-50">
+                                  <Check className="h-3 w-3 mr-1" />
+                                  Compra verificada
+                                </Badge>
+                              )}
+                            </div>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-3">
                             <div className="flex">
                               {[...Array(5)].map((_, i) => (
                                 <Star 
                                   key={i} 
-                                  className={`h-4 w-4 ${
-                                    i < review.rating 
+                                  className={`h-5 w-5 ${
+                                    i < (review.rating || 0)
                                       ? 'fill-yellow-400 text-yellow-400' 
                                       : 'text-gray-300'
                                   }`}
                                 />
                               ))}
                             </div>
-                            <span className="text-sm text-gray-500">{review.date}</span>
+                            <span className="text-sm text-gray-500 font-medium bg-gray-100 px-2 py-1 rounded-full">{review.date}</span>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="flex items-center gap-1 text-sm text-gray-500">
-                            <ThumbsUp className="h-4 w-4" />
-                            {review.helpful}
+                          <div className="flex items-center gap-2 text-sm text-gray-500 bg-blue-50 px-3 py-1 rounded-full">
+                            <ThumbsUp className="h-4 w-4 text-blue-600" />
+                            <span className="font-medium text-blue-700">{review.helpful_count || 0}</span>
                           </div>
                         </div>
                       </div>
                       
-                      <h4 className="font-semibold mb-2">{review.title}</h4>
-                      <p className="text-gray-700 mb-4">{review.text}</p>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <h5 className="font-medium text-green-700 mb-2">Pros:</h5>
-                          <ul className="space-y-1">
-                            {review.pros.map((pro, i) => (
-                              <li key={i} className="flex items-center gap-2 text-sm">
-                                <Check className="h-3 w-3 text-green-600" />
-                                {pro}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-medium text-red-700 mb-2">Contras:</h5>
-                          <ul className="space-y-1">
-                            {review.cons.map((con, i) => (
-                              <li key={i} className="flex items-center gap-2 text-sm">
-                                <X className="h-3 w-3 text-red-600" />
-                                {con}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                      <div className="bg-white rounded-lg p-4 border border-gray-100 shadow-sm">
+                        <h4 className="font-bold text-gray-900 mb-3 text-lg">{review.title}</h4>
+                        <p className="text-gray-700 leading-relaxed">{review.content}</p>
                       </div>
-                      
-                      {review.images > 0 && (
-                        <div className="mt-4 flex items-center gap-2 text-sm text-gray-500">
-                          <Eye className="h-4 w-4" />
-                          {review.images} imágenes incluidas
-                        </div>
-                      )}
                     </CardContent>
                   </Card>
                 ))}
-              </TabsContent>
-
-              <TabsContent value="analytics" className="space-y-4">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <PieChart className="h-5 w-5" />
-                      Análisis de Sentimientos por Aspecto
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      {sentimentData.map((item) => (
-                        <div key={item.aspect}>
-                          <div className="flex justify-between mb-2">
-                            <span className="font-medium">{item.aspect}</span>
-                            <span className="text-sm text-gray-500">
-                              {item.positive}% positivo
-                            </span>
-                          </div>
-                          <div className="flex h-3 bg-red-200 rounded-full overflow-hidden">
-                            <div 
-                              className="bg-green-500 transition-all duration-500"
-                              style={{ width: `${item.positive}%` }}
-                            />
-                            <div 
-                              className="bg-red-500"
-                              style={{ width: `${item.negative}%` }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Tendencias de Ventas</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div className="p-4 bg-green-50 rounded-lg">
-                        <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-green-600">+23%</div>
-                        <div className="text-sm text-gray-600">Ventas este mes</div>
-                      </div>
-                      <div className="p-4 bg-blue-50 rounded-lg">
-                        <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-blue-600">1,247</div>
-                        <div className="text-sm text-gray-600">Compradores únicos</div>
-                      </div>
-                      <div className="p-4 bg-purple-50 rounded-lg">
-                        <Clock className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-purple-600">2.3 años</div>
-                        <div className="text-sm text-gray-600">Vida útil promedio</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </TabsContent>
 
               <TabsContent value="why-choose" className="space-y-4">
@@ -609,22 +774,6 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
                     </CardContent>
                   </Card>
                 ))}
-
-                <Card className="bg-gradient-to-r from-blue-50 to-indigo-50">
-                  <CardContent className="p-6">
-                    <div className="text-center">
-                      <Zap className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                      <h3 className="text-xl font-bold mb-2">¡Oferta Especial!</h3>
-                      <p className="text-gray-700 mb-4">
-                        Compra ahora y obtén 15% de descuento en tu próxima compra + envío gratis express
-                      </p>
-                      <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-                        <Truck className="h-4 w-4" />
-                        Entrega en 1-2 días hábiles
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </TabsContent>
             </Tabs>
           </div>

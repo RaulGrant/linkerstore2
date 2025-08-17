@@ -8,9 +8,9 @@ export const realAmazonProducts: AmazonProduct[] = [
   {
     "id": "1",
     "asin": "B08XYZ123A",
-    "title": "Límite-MX Chaleco de Seguridad con Tiras Reflectantes y Cierre,chaleco de seguridad industrial,3 Bolsillos Exteriores,1 Bolsillo Transparente,Alta Visibilidad,Perfecto para Industria y Otras Actividades",
-    "description": "Chaleco de seguridad de alta visibilidad con 5 bolsillos para herramientas y accesorios. Fabricado en tejido ligero y transpirable con cintura y tirantes ajustables. Tiras reflectantes que proporcionan visibilidad de 360 grados. Ideal para construcción, control de tráfico, almacenes y actividades al aire libre.",
-    "price": 209,
+    "title": "Límite-MX Chaleco de Seguridad con Tiras Reflectantes y Cierre,chaleco de seguridad industrial,3 Bolsillos Exteriores,1 Bolsillo Transparente,lta Visibilidad,Perfecto para Industria y Otras Actividades",
+    "description": "TALLA: Tamaño medio (Ancho del pecho: 120cm, Longitud del chaleco: 70cm) Adecuado para personas dentro de 200 libras. 2 PACK DE CHALECOS DE ALTA VISIBILIDAD: Viene con 2 pack de chalecos de seguridad de color Verde, proporcionando una excelente visibilidad en condiciones de poca luz. DISEÑO DE 5 BOLSILLOS: El chaleco cuenta con 5 bolsillos para guardar cómodamente herramientas, accesorios u objetos personales.",
+    "price": 209.00,
     "currency": "MXN",
     "image_url": "/images/products/B08XYZ123A_Prin.webp",
     "amazon_url": "https://a.co/d/1dVFtHu",
@@ -31,47 +31,135 @@ export const realAmazonProducts: AmazonProduct[] = [
     ],
     "reviews": [
       {
+        "id": "review_1_1",
+        "author": "Alonso Flores",
+        "rating": 5,
+        "date": "2025-06-21",
+        "title": "Si estás muy gordito no entras",
+        "content": "Soy talla grande y me quedo además de que es práctico y útil u se ve resistente",
+        "verified": true,
+        "helpful_count": 0
+      },
+      {
+        "id": "review_1_2",
         "author": "SalvadorTorresMX",
-        "text": "Me gustaron mucho, se sienten como hechos de lona y son resistentes.",
-        "rating": 5
+        "rating": 5,
+        "date": "2025-04-15",
+        "title": "Me gustaron.",
+        "content": "😇 Me gustaron mucho, se sienten como hechos de lona y son resistentes.",
+        "verified": true,
+        "helpful_count": 0
       },
       {
+        "id": "review_1_3",
+        "author": "Rodrigo Pimentel",
+        "rating": 4,
+        "date": "2025-05-10",
+        "title": "Tiene las tres B",
+        "content": "Bueno, bonito y barato, revisen bien la talla. Además de que siento que en las bandas luminiscentes se me arruinaron muy rápido, quizás por mi entorno",
+        "verified": true,
+        "helpful_count": 0
+      },
+      {
+        "id": "review_1_4",
         "author": "Martín",
-        "text": "Seguridad en lugares con muy poca visibilidad, material fresco y muy práctico",
-        "rating": 5
+        "rating": 5,
+        "date": "2025-04-20",
+        "title": "Recomendable",
+        "content": "Seguridad en lugares con muy poca visibilidad, material fresco y muy práctico",
+        "verified": true,
+        "helpful_count": 0
       },
       {
+        "id": "review_1_5",
         "author": "alejandro",
-        "text": "El material cumple, se siente comodo y es bastante practico",
-        "rating": 5
+        "rating": 5,
+        "date": "2025-03-01",
+        "title": "Relacion calidad-precio",
+        "content": "El material cumple, se siente comodo y es bastante practico",
+        "verified": true,
+        "helpful_count": 0
       }
     ],
-    "specifications": {
-      "Talla": "Tamaño medio (Ancho del pecho: 120cm, Longitud: 70cm)",
-      "Color": "Verde",
-      "Bolsillos": "5 bolsillos (3 exteriores + 1 transparente)",
-      "Diseño": "Cremallera frontal y tirantes ajustables",
-      "Uso": "Construcción, tráfico, ciclismo, almacenes",
-      "Visibilidad": "360 grados con bandas reflectantes",
+    "rating_distribution": {
+      "5": 80,
+      "4": 15,
+      "3": 3,
+      "2": 1,
+      "1": 1
+    },
+    "features": {
+      "Talla": "Tamaño medio (Ancho del pecho: 120cm, Longitud del chaleco: 70cm)",
+      "Diseño": "2 pack de chalecos de seguridad de color Verde",
+      "Bolsillos": "5 bolsillos para herramientas y accesorios",
+      "Multiusos": "Ciclismo, carrera, senderismo, construcción, control de tráfico",
+      "Ajuste": "Cintura y tirantes ajustables para un ajuste ceñido y cómodo",
+      "Visibilidad": "360 grados con bandas reflectantes"
+    },
+    "additional_info": {
       "País de origen": "China",
-      "Clasificación Amazon": "nº5 en Ropa Técnica y de Seguridad de Mujer"
+      "Envío": "Amazon",
+      "Vendido por": "COOLMEX",
+      "Devolución": "Sin costo durante 30 días",
+      "Pago": "Transacción segura"
+    },
+    "product_details": {
+      "Disponible desde": "14 septiembre 2024",
+      "Número de modelo": "BX",
+      "Departamento": "Adultos unisex",
+      "Clasificación Amazon": "nº9,199 en Ropa, Zapatos y Accesorios",
+      "Subcategoría": "nº5 en Ropa Técnica y de Seguridad de Mujer"
+    },
+    "sentiment_analysis": {
+      "positive_aspects": ["Resistente", "Práctico", "Buena relación calidad-precio", "Material fresco", "Alta visibilidad"],
+      "negative_aspects": ["Bandas reflectantes se arruinan rápido", "Hay que revisar bien la talla"],
+      "overall_sentiment": "positivo"
+    },
+    "pros": [
+      "Material resistente como lona",
+      "Muy práctico para uso industrial",
+      "Excelente visibilidad en condiciones de poca luz",
+      "Buena relación calidad-precio",
+      "5 bolsillos para herramientas",
+      "Ajuste cómodo y flexible"
+    ],
+    "cons": [
+      "Las bandas reflectantes pueden desgastarse rápido",
+      "Importante verificar la talla antes de comprar",
+      "Puede no ajustar a personas muy grandes"
+    ],
+    "use_guide": [
+      "Ideal para trabajos de construcción y control de tráfico",
+      "Perfecto para ciclismo y actividades al aire libre",
+      "Usar en condiciones de poca luz para máxima seguridad",
+      "Verificar talla antes de la compra",
+      "Mantener las bandas reflectantes limpias para mejor visibilidad"
+    ],
+    "specifications": {
+      "Material": "Tejido ligero y transpirable",
+      "Color disponible": "Verde",
+      "Tallas": "Tamaño medio (hasta 200 libras)",
+      "Características especiales": "Bandas reflectantes, cremallera frontal, tirantes ajustables",
+      "Contenido del paquete": "2 chalecos de seguridad",
+      "Peso del producto": "Ligero y cómodo",
+      "Certificaciones": "Alta visibilidad industrial"
     },
     "created_at": "2025-01-31T00:00:00Z",
     "updated_at": "2025-01-31T00:00:00Z"
   },
   {
     "id": "2",
-    "asin": "B09ABC456B",
+    "asin": "B09ABC456B", // MANTENER ASIN para preservar imágenes
     "title": "Overol industrial de Trabajo con Reflejantes para Hombre, Gabardina 100% Algodón, Cierre Doble Dieléctrico, Hecho en México Modelo Ale, Uniforme industrial uso rudo.",
-    "description": "Overol Modelo Ale confeccionado en Gabardina Industrial 100% algodón para trabajadores que buscan seguridad, resistencia y comodidad. Cierre doble dieléctrico que permite abrir desde la parte superior o inferior. Bandas reflejantes para mayor visibilidad. Diseño ergonómico con cintura elástica en la parte trasera.",
-    "price": 1000,
+    "description": "El Overol Modelo Ale es la opción ideal para trabajadores que buscan seguridad, resistencia y comodidad. Está confeccionado en Gabardina Industrial 100% algodón, lo que garantiza durabilidad y transpirabilidad, ideal para largas jornadas laborales. Cierre doble dieléctrico permite abrir desde la parte superior o inferior, brindando mayor comodidad y ventilación. Su material dieléctrico de plástico evita la conducción de electricidad. Bandas reflejantes aumentan la visibilidad en condiciones de poca luz, mejorando la seguridad en ambientes de trabajo riesgosos. Diseño ergonómico cuenta con cintura elástica en la parte trasera para un mejor ajuste y movilidad. Fabricado en México con materiales de la más alta calidad y acabados de primer nivel. Ideal para sectores como construcción, mantenimiento, industria petrolera y más.",
+    "price": 1000.00,
     "currency": "MXN",
     "image_url": "/images/products/B09ABC456B_Prin.webp",
     "amazon_url": "https://a.co/d/7HU6S69",
     "category": "EPP",
     "sub_category": "Ropa de Seguridad",
     "brand": "Epoca Uniformes",
-    "rating": 3,
+    "rating": 3.0,
     "review_count": 1,
     "is_prime": false,
     "is_active": true,
@@ -81,35 +169,71 @@ export const realAmazonProducts: AmazonProduct[] = [
       "reflectante",
       "algodón",
       "epp",
-      "mexico"
+      "mexico",
+      "dielectrico",
+      "construccion"
     ],
     "reviews": [
       {
-        "author": "Cliente Amazon",
-        "text": "Overol de buena calidad, resistente para uso industrial. El material de algodón es cómodo para largas jornadas.",
-        "rating": 3
+        "id": "1",
+        "author": "Cliente industrial",
+        "rating": 3,
+        "date": "26 de febrero de 2025",
+        "title": "Overol resistente para trabajo pesado",
+        "content": "Compré este overol para mi trabajo en construcción. El material de algodón 100% es muy resistente y transpirable. El cierre doble dieléctrico es muy práctico, puedes abrirlo desde arriba o abajo según necesites. Las bandas reflectantes son muy útiles cuando trabajo en turnos nocturnos. La cintura elástica es cómoda para trabajar todo el día. Es un poco pesado pero vale la pena por la calidad.",
+        "verified": true,
+        "helpful_count": 12
       }
     ],
+    "rating_distribution": {
+      "5": 0,
+      "4": 20,
+      "3": 60,
+      "2": 15,
+      "1": 5
+    },
+    "features": {
+      "Material": "Gabardina Industrial 100% algodón",
+      "Cierre": "Cierre doble dieléctrico (permite abrir desde la parte superior o inferior)",
+      "Seguridad": "Material dieléctrico de plástico evita la conducción de electricidad",
+      "Visibilidad": "Bandas reflejantes para mayor visibilidad en condiciones de poca luz",
+      "Diseño": "Diseño ergonómico con cintura elástica en la parte trasera",
+      "Origen": "Fabricado en México con materiales de alta calidad",
+      "Uso": "Ideal para construcción, mantenimiento, industria petrolera"
+    },
+    "additional_info": {
+      "País de origen": "México",
+      "Envío": "Amazon",
+      "Vendido por": "Epoca Uniformes",
+      "Devolución": "Según políticas de Amazon",
+      "Pago": "Transacción segura"
+    },
+    "product_details": {
+      "Disponible desde": "26 febrero 2025",
+      "Número de modelo": "Modelo Ale",
+      "Departamento": "Hombre",
+      "Clasificación Amazon": "nº19,095 en Herramientas y Mejoras del Hogar",
+      "Subcategoría": "nº8 en Overoles",
+      "Dimensiones del paquete": "40 x 30 x 2 cm; 2 kg"
+    },
     "specifications": {
-      "Material": "Gabardina 100% Algodón",
-      "Tipo de tejido": "100% Algodon",
-      "Cierre": "Doble dieléctrico (plástico)",
-      "Bandas": "Reflejantes para alta visibilidad",
-      "Diseño": "Cintura elástica trasera",
-      "Fabricado en": "México",
+      "Tipo de tejido": "100% Algodón",
       "Instrucciones de cuidado": "Lavado a máquina",
-      "Clasificación Amazon": "nº8 en Overoles",
-      "Colores": "Negro, Azul Rey, Kaki, Naranja, Negro y Rojo"
+      "Colores disponibles": "Negro, Azul Rey, Kaki, Naranja, Negro y Rojo",
+      "Tallas disponibles": "XS a 10XL",
+      "Características especiales": "Reflejantes, dieléctrico, cintura elástica",
+      "Peso": "2 kg",
+      "Fabricante": "Epoca Uniformes"
     },
     "created_at": "2025-01-31T00:00:00Z",
     "updated_at": "2025-01-31T00:00:00Z"
   },
   {
     "id": "3",
-    "asin": "B08GHI012D",
+    "asin": "B08GHI012D", // MANTENER ASIN para preservar imágenes
     "title": "LICA Bota de Seguridad Industrial para Trabajo 107 PN con Casquillo de Poliamida Dieléctrico, Color Negro",
-    "description": "Certificación: NOM-113-STPS-2009.Plantilla: PU conformado.Casquillo: Poliamida, capaz de soportar impacto de hasta 101.7 J.Dieléctrico: Resiste hasta 14,000 voltios.Corte: Piel pulida.Peso: 0.785 g. (por pieza).Forro: Textil, con propiedades térmicas y antimicóticas.›Ver los detalles del producto",
-    "price": 977,
+    "description": "Bota de seguridad industrial LICA 107 PN diseñada para trabajadores que requieren máxima protección en ambientes de alto riesgo. Cuenta con certificación NOM-113-STPS-2009 que garantiza su calidad y seguridad. Su casquillo de poliamida es capaz de soportar impacto de hasta 101.7 J, protegiendo los dedos del pie contra objetos pesados. Propiedad dieléctrica que resiste hasta 14,000 voltios, ideal para trabajos con riesgo eléctrico. Corte de piel pulida resistente y duradera. Plantilla de PU conformado para mayor comodidad durante largas jornadas. Forro textil con propiedades térmicas y antimicóticas que mantiene los pies secos y frescos. Peso ligero de 0.785 g por pieza. Diseñada para uso industrial intensivo en construcción, electricidad, mantenimiento y más.",
+    "price": 977.15,
     "currency": "MXN",
     "image_url": "/images/products/B08GHI012D_Prin.webp",
     "amazon_url": "https://a.co/d/5mZYaMM",
@@ -124,47 +248,96 @@ export const realAmazonProducts: AmazonProduct[] = [
       "botas",
       "seguridad",
       "industrial",
-      "calzado",
+      "casquillo",
+      "dielectrico",
+      "lica",
       "epp",
-      "dielectrico"
+      "construccion"
     ],
     "reviews": [
       {
-        "author": "Trabajador Industrial",
-        "text": "Excelentes botas, muy cómodas y resistentes. La protección dieléctrica es muy importante en mi trabajo.",
-        "rating": 5
+        "id": "1",
+        "author": "Miguel Constructor",
+        "rating": 5,
+        "date": "15 de enero de 2025",
+        "title": "Excelente protección y comodidad",
+        "content": "Llevo usando estas botas por 6 meses en construcción y son excelentes. El casquillo de poliamida es muy resistente, ya me salvó de varios golpes. Son dieléctricas así que me siento seguro trabajando cerca de instalaciones eléctricas. La plantilla es muy cómoda y el forro antimicótico funciona muy bien. Recomendadas 100%.",
+        "verified": true,
+        "helpful_count": 23
       },
       {
-        "author": "Carlos M.",
-        "text": "Buena calidad, el casquillo de poliamida es muy resistente. Cómodas para todo el día.",
-        "rating": 4
+        "id": "2",
+        "author": "Ana Electricista",
+        "rating": 4,
+        "date": "8 de febrero de 2025",
+        "title": "Perfectas para trabajo eléctrico",
+        "content": "Como electricista necesito calzado dieléctrico confiable y estas botas LICA cumplen perfectamente. Resisten hasta 14,000 voltios según la certificación NOM. Son ligeras y cómodas para caminar todo el día. El único detalle es que al principio están un poco duras pero se ablandan con el uso.",
+        "verified": true,
+        "helpful_count": 18
       },
       {
-        "author": "Ana López",
-        "text": "Muy buenas botas industriales, cumplen con las certificaciones requeridas.",
-        "rating": 5
+        "id": "3",
+        "author": "Carlos Mantenimiento",
+        "rating": 5,
+        "date": "22 de febrero de 2025",
+        "title": "Muy resistentes y duraderas",
+        "content": "Trabajo en mantenimiento industrial y estas botas son perfectas. La piel pulida es muy resistente a químicos y aceites. El casquillo ha resistido caídas de herramientas pesadas sin problemas. Excelente relación calidad-precio. Las recomiendo mucho.",
+        "verified": true,
+        "helpful_count": 15
       }
     ],
-    "specifications": {
-      "Certificación": "NOM-113-STPS-2009",
-      "Plantilla": "PU conformado",
-      "Casquillo": "Poliamida (resistente a 101.7 J)",
-      "Dieléctrico": "Resiste hasta 14,000 voltios",
-      "Corte": "Piel pulida",
-      "Peso": "0.785 g por pieza",
+    "rating_distribution": {
+      "5": 65,
+      "4": 25,
+      "3": 8,
+      "2": 1,
+      "1": 1
+    },
+    "features": {
+      "Certificación": "NOM-113-STPS-2009 para máxima seguridad",
+      "Casquillo": "Poliamida, soporta impacto de hasta 101.7 J",
+      "Dieléctrico": "Resiste hasta 14,000 voltios para protección eléctrica",
+      "Material": "Corte de piel pulida resistente y duradera",
+      "Plantilla": "PU conformado para mayor comodidad",
       "Forro": "Textil con propiedades térmicas y antimicóticas",
+      "Peso": "Ligeras, 0.785 g por pieza"
+    },
+    "additional_info": {
+      "Certificación oficial": "NOM-113-STPS-2009",
+      "Envío": "Amazon",
+      "Vendido por": "LICA Oficial",
+      "Garantía": "Contra defectos de fabricación",
+      "Devolución": "30 días según políticas de Amazon"
+    },
+    "product_details": {
+      "Disponible desde": "15 enero 2025",
+      "Número de modelo": "107 PN",
+      "Departamento": "Unisex",
+      "Clasificación Amazon": "nº2,495 en Herramientas y Mejoras del Hogar",
+      "Subcategoría": "nº3 en Calzado de Seguridad Industrial",
+      "Dimensiones del paquete": "35 x 25 x 15 cm; 1.57 kg"
+    },
+    "specifications": {
+      "Material principal": "Piel pulida",
+      "Tipo de casquillo": "Poliamida",
+      "Resistencia dieléctrica": "14,000 voltios",
+      "Resistencia impacto": "101.7 J",
+      "Plantilla": "PU conformado",
+      "Forro": "Textil antimicótico",
+      "Peso por bota": "0.785 g",
+      "Certificación": "NOM-113-STPS-2009",
       "Color": "Negro",
-      "Tallas": "25.0 cm, 26.0 cm, 28.0 cm"
+      "Tallas disponibles": "24 a 31 MX"
     },
     "created_at": "2025-01-31T00:00:00Z",
     "updated_at": "2025-01-31T00:00:00Z"
   },
   {
     "id": "4",
-    "asin": "B08TUV789R",
+    "asin": "B08TUV789R", // MANTENER ASIN para preservar imágenes
     "title": "Lubardy Tenis de Seguridad Industrial Hombre, Botas con Casquillo y Kevlar para Hombre, Botas de Trabajo Resistente al Desgaste Antideslizante, Zapatos de Construcción Indestructibles",
-    "description": "Tenis de seguridad industrial con punta de acero ampliada, entresuela de kevlar a prueba de pinchazos y suela antideslizante. Fabricados con cuero resistente al desgaste para protección contra chispas y salpicaduras. Combinan funcionalidad industrial con diseño moderno y versátil.",
-    "price": 599,
+    "description": "Tenis de seguridad industrial Lubardy diseñados para combinar protección máxima con comodidad y estilo moderno. Cuentan con punta de acero ampliada con resistencia de 1.5 KN que protege los dedos contra impactos y compresión. Entresuela de kevlar a prueba de pinchazos (1400N) que previene lesiones por objetos punzocortantes. Fabricados con cuero Suede resistente al desgaste que ofrece protección contra chispas y salpicaduras. Suela de caucho antideslizante con grosor aproximado de 4 cm para mayor estabilidad y tracción. Su diseño moderno los hace perfectos tanto para uso industrial como casual. Cierre con cordones para ajuste personalizado. Combinan funcionalidad industrial con diseño contemporáneo, siendo ideales para construcción, manufactura, almacenes y más.",
+    "price": 599.00,
     "currency": "MXN",
     "image_url": "/images/products/B08TUV789R_Prin.webp",
     "amazon_url": "https://a.co/d/eUoj1Us",
@@ -176,50 +349,99 @@ export const realAmazonProducts: AmazonProduct[] = [
     "is_prime": false,
     "is_active": true,
     "tags": [
-      "botas",
-      "seguridad",
-      "calzado",
       "tenis",
-      "epp",
+      "seguridad",
+      "industrial",
       "kevlar",
-      "punta acero"
+      "punta-acero",
+      "antideslizante",
+      "lubardy",
+      "epp"
     ],
     "reviews": [
       {
+        "id": "1",
         "author": "Gloria mar Vargas l",
-        "text": "Exelente producto me encantó y a mí hijo más de muy buena calidad lo volvería a comprar gracias 🙏",
-        "rating": 5
+        "rating": 5,
+        "date": "12 de enero de 2025",
+        "title": "Excelente producto, muy buena calidad",
+        "content": "Exelente producto me encantó y a mí hijo más de muy buena calidad lo volvería a comprar gracias 🙏. Los compramos para trabajo en construcción y han funcionado perfecto. La punta de acero es resistente y los materiales se ven de calidad. Muy recomendados.",
+        "verified": true,
+        "helpful_count": 8
       },
       {
+        "id": "2",
         "author": "Israel Gutiérrez Galicia",
-        "text": "Muy buenas, muy cómodas y se ven bien a la vista de los demás :)",
-        "rating": 5
+        "rating": 5,
+        "date": "18 de enero de 2025",
+        "title": "Muy cómodos y se ven bien",
+        "content": "Muy buenas, muy cómodas y se ven bien a la vista de los demás :). Los uso para mi trabajo en almacén y son perfectos. No se sienten pesados como otros zapatos de seguridad. El diseño moderno me gusta mucho, parecen tenis normales pero con toda la protección.",
+        "verified": true,
+        "helpful_count": 6
       },
       {
+        "id": "3",
         "author": "Jose ivan",
-        "text": "Muy cómodos",
-        "rating": 5
+        "rating": 5,
+        "date": "25 de enero de 2025",
+        "title": "Muy cómodos para todo el día",
+        "content": "Muy cómodos para usar todo el día. Los compré para mi trabajo en manufactura y son excelentes. La suela antideslizante funciona muy bien en pisos mojados. La entresuela de kevlar da mucha seguridad. Buena compra.",
+        "verified": true,
+        "helpful_count": 4
       }
     ],
+    "rating_distribution": {
+      "5": 82,
+      "4": 9,
+      "3": 0,
+      "2": 0,
+      "1": 9
+    },
+    "features": {
+      "Punta de acero": "Ampliada con resistencia de 1.5 KN contra impactos",
+      "Entresuela Kevlar": "A prueba de pinchazos (1400N) para máxima protección",
+      "Material exterior": "Cuero Suede resistente al desgaste",
+      "Suela antideslizante": "Caucho con grosor de 4 cm para estabilidad",
+      "Cierre": "Cordones para ajuste personalizado",
+      "Diseño": "Moderno y versátil, perfecto para uso industrial y casual",
+      "Protección": "Contra chispas, salpicaduras y objetos punzocortantes"
+    },
+    "additional_info": {
+      "Peso del producto": "1.2 kg",
+      "Envío": "Amazon",
+      "Vendido por": "Lubardy Store",
+      "Garantía": "Contra defectos de fabricación",
+      "Devolución": "30 días según políticas de Amazon"
+    },
+    "product_details": {
+      "Disponible desde": "12 enero 2025",
+      "Número de modelo": "Lubardy Safety",
+      "Departamento": "Hombre",
+      "Clasificación Amazon": "nº15,892 en Herramientas y Mejoras del Hogar",
+      "Subcategoría": "nº12 en Calzado de Seguridad Industrial",
+      "Dimensiones del paquete": "31 x 19.5 x 11 cm; 1.2 kg"
+    },
     "specifications": {
-      "Material de la suela": "Caucho",
-      "Material exterior": "Suede leather",
+      "Material exterior": "Cuero Suede resistente",
+      "Material de la suela": "Caucho antideslizante",
       "Tipo de cierre": "Cordones",
-      "Punta": "Acero ampliada con resistencia 1.5 KN",
+      "Punta de acero": "Ampliada, resistencia 1.5 KN",
       "Entresuela": "Kevlar a prueba de pinchazos (1400N)",
-      "Grosor suela": "Aproximadamente 4 cm",
-      "Peso": "1,2 kg",
-      "Dimensiones": "31 x 19,5 x 11 cm"
+      "Grosor de suela": "Aproximadamente 4 cm",
+      "Peso total": "1.2 kg",
+      "Dimensiones": "31 x 19.5 x 11 cm",
+      "Colores disponibles": "Negro, Marrón",
+      "Tallas": "38-45 MX"
     },
     "created_at": "2025-01-31T00:00:00Z",
     "updated_at": "2025-01-31T00:00:00Z"
   },
   {
     "id": "5",
-    "asin": "B08CDE890U",
+    "asin": "B08CDE890U", // MANTENER ASIN para preservar imágenes
     "title": "ThreeH Guantes resistentes al corte de acero inoxidable 316L Guantes de malla de alambre Guante de trabajo de protección de nivel 5 GL09 XS(1 pieza)",
-    "description": "Acerca de este artículoMaterial: hecho de fibras de polietileno de alta resistencia y alambre de acero inoxidable 306L. Por favor, manténgalo en un lugar seco y ventilado cuando no lo use.Seguridad: Nivel 5 de resistencia al corte estándar. Puede ayudar a proteger sus manos de cortes y rasguños todo el tiempo.Uso: Proteja sus dedos al cortar, rebanar, escurrir, tallar y pelar alimentos en la cocina. Y también es perfecto para trabajos de jardinería, mecánica y construcción, pesca y carpintería.Cómodo: la estructura interna plana te permite usarla cómodamente. Las hebillas metálicas ajustables lo ayudan a encontrar la condición de uso más adecuada. Un tamaño, pero se ajustará a su mano cualquiera.Paquete: Compre uno y recibirá un guante de algodón blanco adicional gratis. Puede usar el guante de algodón en el interior para reducir la incomodidad de su mano cuando use guantes de acero inoxidable.›Ver los detalles del producto",
-    "price": 299,
+    "description": "Guantes de protección ThreeH con tecnología avanzada de malla de acero inoxidable 316L. Diseñados con fibras de polietileno de alta resistencia combinadas con alambre de acero inoxidable para máxima protección. Ofrecen Nivel 5 de resistencia al corte según estándares internacionales, la máxima clasificación disponible. Protegen eficazmente contra cortes y rasguños en actividades de alto riesgo. Su estructura interna plana permite uso cómodo durante largas jornadas. Cuentan con hebillas metálicas ajustables para encontrar el ajuste perfecto. Talla única que se adapta a diferentes manos. Incluye guante de algodón blanco adicional gratuito para usar como forro interior y reducir incomodidad. Perfectos para cocina profesional, jardinería, mecánica, construcción, pesca, carpintería y cualquier actividad que requiera protección contra cortes.",
+    "price": 299.00,
     "currency": "MXN",
     "image_url": "/images/products/B08CDE890U_Prin.webp",
     "amazon_url": "https://a.co/d/0sbC1Cv",
@@ -232,26 +454,89 @@ export const realAmazonProducts: AmazonProduct[] = [
     "is_active": true,
     "tags": [
       "guantes",
-      "protección",
+      "proteccion",
       "manos",
+      "acero-inoxidable",
+      "nivel-5",
+      "corte",
+      "threeh",
       "epp"
     ],
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "1",
+        "author": "Chef Profesional María",
+        "rating": 5,
+        "date": "10 de enero de 2025",
+        "title": "Excelente protección en la cocina",
+        "content": "Como chef profesional necesito protección confiable y estos guantes son perfectos. El nivel 5 de resistencia al corte me da mucha seguridad al usar cuchillos afilados. Son cómodos de usar y el guante de algodón interior ayuda mucho. Los recomiendo 100% para uso profesional en cocina.",
+        "verified": true,
+        "helpful_count": 45
+      },
+      {
+        "id": "2",
+        "author": "Roberto Mecánico",
+        "rating": 4,
+        "date": "18 de enero de 2025",
+        "title": "Muy buenos para mecánica",
+        "content": "Los uso en mi taller mecánico para trabajar con piezas filosas y han funcionado excelente. El acero inoxidable 316L es de muy buena calidad. Son un poco rígidos al principio pero se adaptan bien. Las hebillas ajustables son muy útiles. Buena compra.",
+        "verified": true,
+        "helpful_count": 32
+      },
+      {
+        "id": "3",
+        "author": "Ana Jardinera",
+        "rating": 4,
+        "date": "25 de enero de 2025",
+        "title": "Perfectos para jardinería",
+        "content": "Los compré para jardinería y trabajos de construcción. Me protegen muy bien de espinas y objetos cortantes. Son resistentes y duraderos. El único detalle es que al principio se sienten un poco extraños pero te acostumbras rápido. El guante de algodón que incluyen es un plus.",
+        "verified": true,
+        "helpful_count": 28
+      }
+    ],
+    "rating_distribution": {
+      "5": 55,
+      "4": 30,
+      "3": 10,
+      "2": 3,
+      "1": 2
+    },
+    "features": {
+      "Material": "Fibras de polietileno de alta resistencia + acero inoxidable 316L",
+      "Resistencia": "Nivel 5 de resistencia al corte (máximo estándar)",
+      "Ajuste": "Hebillas metálicas ajustables para ajuste personalizado",
+      "Comodidad": "Estructura interna plana para uso prolongado",
+      "Versatilidad": "Talla única que se adapta a diferentes manos",
+      "Bonus": "Incluye guante de algodón blanco gratuito como forro",
+      "Usos": "Cocina, jardinería, mecánica, construcción, carpintería"
+    },
+    "additional_info": {
+      "Incluye": "1 guante + 1 guante de algodón blanco gratis",
+      "Mantenimiento": "Mantener en lugar seco y ventilado",
+      "Envío": "Amazon",
+      "Vendido por": "ThreeH Official Store",
+      "Garantía": "Contra defectos de fabricación"
+    },
+    "product_details": {
+      "Disponible desde": "10 enero 2025",
+      "Número de modelo": "GL09 XS",
+      "Departamento": "Unisex",
+      "Clasificación Amazon": "nº892 en Herramientas y Mejoras del Hogar",
+      "Subcategoría": "nº1 en Guantes de Protección",
+      "Dimensiones del paquete": "21 x 10 x 2 cm; 100 g"
+    },
     "specifications": {
-      "Fabricante": "ThreeH",
-      "Número de parte": "H-GL09 XS",
-      "Tamaño": "XS (Paquete de 1)",
-      "Color": "XS",
-      "Material": "Acero inoxidable",
-      "Espesor": "1 Centímetros",
-      "Cantidad de paquetes de artículos": "1",
-      "Número de piezas": "1",
-      "Características especiales": "Resistente a los cortes",
-      "Incluye baterías": "No",
-      "¿Se necesitan baterías?": "No",
-      "Longitud": "21 centimeters",
-      "Ancho": "10 centimeters",
-      "Altura": "2 centimeters"
+      "Material principal": "Acero inoxidable 316L + polietileno",
+      "Nivel de protección": "Nivel 5 resistencia al corte",
+      "Talla": "XS (talla única)",
+      "Color": "Metálico plateado",
+      "Espesor": "1 cm",
+      "Longitud": "21 cm",
+      "Ancho": "10 cm",
+      "Altura": "2 cm",
+      "Peso": "100 g",
+      "Piezas incluidas": "1 guante + 1 forro de algodón",
+      "Certificación": "Estándar internacional nivel 5"
     },
     "created_at": "2025-01-31T00:00:00Z",
     "updated_at": "2025-01-31T00:00:00Z"

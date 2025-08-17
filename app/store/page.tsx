@@ -212,7 +212,7 @@ export default function StorePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center space-y-2">
             <p className="text-sm text-gray-600">
-              <strong>Nota:</strong> Al hacer clic en "Agregar al carrito" o "Ver en Amazon", 
+              <strong>Nota:</strong> Al hacer clic en "Ver en Amazon", 
               serás redirigido a Amazon para completar tu compra.
             </p>
             <p className="text-xs text-gray-500">

@@ -2,13 +2,15 @@ esta es la informacion extraida de los proeductos presentes en la tienda
 
 PRODUCTO UNO
 
+Link de producto:
 https://a.co/d/1dVFtHu
 
-Límite-MX Chaleco de Seguridad con Tiras Reflectantes y Cierre,chaleco de seguridad industrial,3 Bolsillos Exteriores,1 Bolsillo Transparente,lta Visibilidad,Perfecto para Industria y Otras Actividade
+Titulo de producto:
+Límite-MX Chaleco de Seguridad con Tiras Reflectantes y Cierre,chaleco de seguridad industrial,3 Bolsillos Exteriores,1 Bolsillo Transparente,lta Visibilidad,Perfecto para Industria y Otras Actividades
 
 Precio: 209.00
 
-Acerca de este artículo
+Acerca de este artículo (Información del producto):
 TALLA: Tamaño medio (Ancho del pecho: 120cm, Longitud del chaleco: 70cm) Adecuado para personas dentro de 200 libras.
 2 PACK DE CHALECOS DE ALTA VISIBILIDAD: Viene con 2 pack de chalecos de seguridad de color Verde, proporcionando una excelente visibilidad en condiciones de poca luz para actividades al aire libre, obras de construcción, o cualquier situación en la que la alta visibilidad es crucial.
 DISEÑO DE 5 BOLSILLOS: El chaleco de seguridad cuenta con 5 bolsillos para guardar cómodamente herramientas, accesorios u objetos personales. El diseño de la cremallera frontal permite un fácil acceso a los bolsillos, por lo que es conveniente mantener lo esencial al alcance de la mano.
@@ -31,8 +33,9 @@ Número de modelo del producto ‏ : ‎ BX
 Departamento ‏ : ‎ Adultos unisex
 Clasificación en los más vendidos de Amazon: nº9,199 en Ropa, Zapatos y Accesorios (Ver el Top 100 en Ropa, Zapatos y Accesorios)
 nº5 en Ropa Técnica y de Seguridad de Mujer
-Opiniones de los clientes: 4.2 de 5 estrellas 
 
+
+Opiniones de los clientes: 4.2 de 5 estrellas 
 
 Los clientes dicen: 
 Los clientes están satisfechos con la calidad y la practicidad de la prenda. La describen como resistente, de material fresco y muy práctica. Además, consideran que ofrece una buena relación calidad-precio. 
