@@ -889,7 +889,7 @@ los arneses tienen muy buena calidad , cumplen todas mis expectativas
 
 
 ONCEAVO PRODUCTO
-CAMBIAR ESTE ENLACE 
+CAMBIAR ESTE ENLACE  
 https://a.co/d/865MGaD
 CON ESTE ENLACE 
 https://a.co/d/ec5k6IQ
@@ -1810,7 +1810,7 @@ cambia ese enlace por este otro
 
 https://a.co/d/cUhxFW0  
 
-y reemplaza la informacion por la siguiente
+
 
 Truper BOT-I, Botas industriales, suela antiderrapante, Paquete con 1 par
 Precio:	$227.00
@@ -2358,8 +2358,9 @@ PRODUCTO VEINTITRES
 
 https://a.co/d/2oP7ecN
 ESTE ENLACE YA NO ESTA DISPONIBLE CAMBIARLO POR EL SIGUIENTE 
+
 https://a.co/d/dqnGR2c
-y cambiar la informacion, asi como sus imagenes 
+
 Caja de Herramientas 100 en 1 Kits de Mantenimiento para el Hogar, Kit de Herramientas Manuales de Reparación Portátil y Universal, Adecuado para uso de Mantenimiento en el hogar, garaje y oficina
 
 Promoción

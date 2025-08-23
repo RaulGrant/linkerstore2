@@ -17,14 +17,35 @@ export interface AmazonProduct {
   tags: string[];
   reviews?: ProductReview[];
   specifications?: Record<string, string>;
+  features?: Record<string, string>;
+  additional_info?: Record<string, string>;
+  product_details?: Record<string, string>;
+  review_banners?: Array<string | Record<string, any>>;
+  related_products?: string[];
+  technical_analysis?: string;
+  user_profiles?: string[] | Array<{profile: string; notes: string}>;
+  usage_guide?: string | string[];
+  is_bestseller?: boolean;
+  rating_distribution?: Record<string, number>;
+  sentiment_analysis?: Record<string, any>;
+  pros?: string[];
+  cons?: string[];
+  use_guide?: string[];
   created_at: string;
   updated_at: string;
 }
 
 export interface ProductReview {
+  id?: string;
   author: string;
-  text: string;
+  text?: string;
   rating?: number;
+  date?: string;
+  comment?: string;
+  content?: string;
+  verified?: boolean;
+  title?: string;
+  helpful_count?: number;
 }
 
 export interface CartItem {

@@ -261,6 +261,566 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
           }
         ];
       
+      case "6": // DEWALT Gafas de Seguridad DPG82-11
+        return [
+          {
+            icon: Award,
+            title: "Tecnología Anti-Empañamiento DEWALT Xtra",
+            description: "Revestimiento antivaho avanzado y canales de ventilación integrados para máxima claridad visual",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "Protección Superior Contra Impactos",
+            description: "Lente de policarbonato resistente que cumple normas ANSI Z87.1+ con protección UVA/UVB del 99.9%",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "Confianza de Profesionales en Carpintería", 
+            description: "Ideales para amoladoras, sierras de mesa y routers. Cómodas por horas de trabajo continuo",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Marca Líder en Herramientas - DEWALT",
+            description: `Por $${product.price} obtienes calidad profesional DEWALT. Nº8 en ventas de Lentes de Seguridad`,
+            score: 92
+          }
+        ];
+      
+      case "7": // ZSKEUR Lentes de Seguridad Kit 3 Piezas
+        return [
+          {
+            icon: Award,
+            title: "Kit Completo de 3 Piezas Económico",
+            description: "Por solo $199 obtienes 3 pares de lentes de seguridad profesionales para uso diario prolongado",
+            score: 95
+          },
+          {
+            icon: Shield,
+            title: "Material Acrílico Transparente Duro",
+            description: "Plástico acrílico resistente que no afecta reconocimiento de color. Uso interior y exterior",
+            score: 92
+          },
+          {
+            icon: Users,
+            title: "Calificación Perfecta de Usuarios", 
+            description: "5/5 estrellas con 100% de satisfacción. 'Prácticos y de buena calidad para el precio'",
+            score: 88
+          },
+          {
+            icon: TrendingUp,
+            title: "Devolución Gratuita Amazon",
+            description: "30 días de devolución sin costo. Vendido por LIBIN-1144 con transacción segura",
+            score: 90
+          }
+        ];
+      
+      case "8": // RTUMENG Lentes para Soldar Kit 11pzs
+        return [
+          {
+            icon: Award,
+            title: "Tecnología Solar Automática",
+            description: "Oscurecimiento automático con paneles solares. No requiere cambio frecuente de baterías",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "Kit Industrial de 11 Piezas",
+            description: "Gafas con tapa abatible + 10 láminas protectoras de repuesto. Máximo valor profesional",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "Calificación Perfecta 5/5 Estrellas", 
+            description: "100% de satisfacción en soldadura profesional. Filtros UV avanzados para máxima protección",
+            score: 93
+          },
+          {
+            icon: TrendingUp,
+            title: "Devolución Sin Costo 30 Días",
+            description: "Vendido por RTUMENG oficial con transacción segura Amazon. Pago protegido",
+            score: 91
+          }
+        ];
+      
+      case "9": // AdooAdii Arnés de Seguridad Cuerpo Completo
+        return [
+          {
+            icon: Award,
+            title: "Construcción Profesional 3500 Hilos",
+            description: "Cintas de poliéster ultra-resistentes con aleación de acero. Peso robusto de 2.0KG",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Diseño Ergonómico de Seguridad Integral",
+            description: "Trabillas espalda, pecho, laterales con correas 6.2cm. Máxima estabilidad y sujeción",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "Satisfacción Total 5/5 Estrellas", 
+            description: "100% de calificaciones perfectas. Almohadillas transpirables para comodidad extrema",
+            score: 92
+          },
+          {
+            icon: TrendingUp,
+            title: "Devolución Amazon 30 Días",
+            description: "Vendido por AdooAdii-MX con opciones de regalo. Devolución sin costo garantizada",
+            score: 89
+          }
+        ];
+      
+      case "10": // GLOROUSCHU Arnés OSHA/ANSI Certificado
+        return [
+          {
+            icon: Award,
+            title: "Certificación OSHA/ANSI Completa",
+            description: "Cumple ANSI/ASSE Z359.11-2014 y Z359.13-2013. Mosquetón certificado ASTM F1774",
+            score: 99
+          },
+          {
+            icon: Shield,
+            title: "Respaldado por 1,354 Usuarios Reales",
+            description: "4.6/5 estrellas. 'Excelente calidad', 'Seguro para podar nogales', 'Fácil de colocar'",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "Testimonios Verificados de Profesionales", 
+            description: "'Pintar fachadas ya no es problema', 'Muy seguro', 'Cumplen todas mis expectativas'",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Garantía Extendida Premium",
+            description: "45 días devolución + 2 años garantía. Cordón absorción 6 pies. Ajuste 80-140cm",
+            score: 91
+          }
+        ];
+      
+      case "11": // Yostyle Tapones de Silicona 12 Pares
+        return [
+          {
+            icon: Award,
+            title: "Reducción de Ruido Profesional 32dB",
+            description: "Clasificación NRR de 32dB que bloquea efectivamente todo tipo de ruidos molestos",
+            score: 96
+          },
+          {
+            icon: Shield,
+            title: "Material Premium de Silicona",
+            description: "Gel de sílice duradero, suave y flexible. Diseño único de árbol de Navidad ergonómico",
+            score: 94
+          },
+          {
+            icon: Users,
+            title: "Respaldado por 122 Usuarios Reales",
+            description: "4.5/5 estrellas. 'Excelentes, lo mejor de tapones', 'Funcionales y cómodos', 'Ya no me despiertan'",
+            score: 93
+          },
+          {
+            icon: TrendingUp,
+            title: "Pack Completo Premium",
+            description: "12 pares con cordón anti-pérdida + 12 cajas individuales. Impermeables para nadar",
+            score: 89
+          }
+        ];
+
+      case "12": // Loop Quiet 2 Tapones Auditivos
+        return [
+          {
+            icon: Award,
+            title: "Reducción de Ruido de 24 dB Certificada",
+            description: "Tecnología Loop con silicona flexible para máxima reducción de ruido sin perder comodidad",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "4 Tallas de Almohadillas Incluidas",
+            description: "Incluye tallas XS, S, M, L para ajuste perfecto en cualquier oído + Carry Case portátil",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "12,321+ Usuarios Satisfechos",
+            description: "4.3/5 estrellas. Nº1 en Tapones para Oídos. 'Muy cómodos', 'Excelentes para dormir'",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Versátiles para Múltiples Usos",
+            description: "Ideales para descanso, concentración, viajes, trabajo y sensibilidad al ruido",
+            score: 92
+          }
+        ];
+
+      case "13": // ProCase Orejeras contra Ruido
+        return [
+          {
+            icon: Award,
+            title: "Cancelación Profesional NRR 28 dB",
+            description: "Certificación ANSI S3.19 (EE.UU.) con tecnología de difusor de presión avanzada",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Construcción Premium ABS + Acero",
+            description: "Material duradero ABS con banda de acero inoxidable retráctil y esponja acústica",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "19,490+ Reviews Positivas",
+            description: "4.5/5 estrellas. Nº1 en Orejeras de Caza. 'Muy resistentes', 'Bloquean bien el ruido'",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Diseño Plegable Compacto",
+            description: "Fácil almacenamiento y portabilidad. Ajustable desde niños hasta adultos",
+            score: 91
+          }
+        ];
+
+      case "14": // Respirador 6200 con Gafas de Seguridad
+        return [
+          {
+            icon: Award,
+            title: "Sistema de Filtración Dual Profesional",
+            description: "Bloquea eficazmente polen, polvo y partículas. Incluye 10 filtros de algodón",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "Silicona de Calidad Alimentaria",
+            description: "Gel de sílice premium con diademas elásticas dobles. Cómodo y duradero",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "158+ Profesionales lo Recomiendan",
+            description: "4.7/5 estrellas. Nº1 en Respiradores. 'Excelente para carpintería', 'Se ajusta perfecto'",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Kit Completo con Gafas Incluidas",
+            description: "Máscara + 10 filtros + 2 tapas + gafas de seguridad. Ideal para múltiples trabajos",
+            score: 92
+          }
+        ];
+
+      case "15": // Truper Gabardina Impermeable
+        return [
+          {
+            icon: Award,
+            title: "Protección PVC Total contra Lluvia",
+            description: "Material PVC con forro de poliéster 100% y refuerzo interior resistente",
+            score: 95
+          },
+          {
+            icon: Shield,
+            title: "Diseño Funcional Profesional",
+            description: "Ventilación en axilas, cordón ajustable, cremallera + broches. Repele líquidos",
+            score: 93
+          },
+          {
+            icon: Users,
+            title: "197+ Trabajadores Satisfechos",
+            description: "4.5/5 estrellas. 'Muy resistente', 'Excelente para lluvias', 'Buena calidad'",
+            score: 91
+          },
+          {
+            icon: TrendingUp,
+            title: "Marca TRUPER Confiable",
+            description: "Calidad industrial comprobada. Ideal para construcción y trabajo exterior",
+            score: 89
+          }
+        ];
+
+      case "17": // Truper Protector facial de malla PF-500M
+        return [
+          {
+            icon: Award,
+            title: "Malla de Acero Aleación Resistente",
+            description: "Máxima ventilación en condiciones de humedad. Material duradero que no compromete la visibilidad",
+            score: 96
+          },
+          {
+            icon: Shield,
+            title: "Sistema de Ajuste Profesional",
+            description: "Ajuste de profundidad personalizable y abatimiento de 90° para facilidad de uso",
+            score: 94
+          },
+          {
+            icon: Users,
+            title: "Preferido por Jardineros Profesionales",
+            description: "4.5/5 estrellas. Nº1 en Protectores Faciales. 'Excelente para desbrozadora', 'Muy cómodo'",
+            score: 92
+          },
+          {
+            icon: TrendingUp,
+            title: "Marca TRUPER Confiable",
+            description: "Reusable con mantenimiento adecuado. Especialmente recomendado para uso forestal",
+            score: 90
+          }
+        ];
+
+      case "18": // Truper BOT-I Botas industriales
+        return [
+          {
+            icon: Award,
+            title: "Material PVC de Alta Resistencia",
+            description: "Construcción robusta que resiste abrasión, flexión y descarre en entornos industriales",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Suela Antiderrapante Especializada",
+            description: "Diseño que impide acumulación de residuos con tracción superior en superficies húmedas",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "205+ Trabajadores las Recomiendan",
+            description: "4.6/5 estrellas. Nº2 en Calzado Industrial. 'Súper buenas', 'Excelente calidad-precio'",
+            score: 93
+          },
+          {
+            icon: TrendingUp,
+            title: "Resistente a Químicos y Aceites",
+            description: "Fácil limpieza y mantenimiento. Disponible en tallas 25-30 cm con forro sintético",
+            score: 91
+          }
+        ];
+
+      case "19": // AKRON Escalera De Extensión Fibra De Vidrio
+        return [
+          {
+            icon: Award,
+            title: "Fibra de Vidrio Aislante Eléctrico",
+            description: "Material que cumple normas de seguridad obligatorias. Aislamiento eléctrico para trabajos especializados",
+            score: 99
+          },
+          {
+            icon: Shield,
+            title: "Capacidad Industrial de 175kg",
+            description: "24 escalones robustos hasta 7.32m de altura total. Máxima seguridad laboral hasta 5.46m",
+            score: 97
+          },
+          {
+            icon: Users,
+            title: "Calificación Perfecta 5/5 Estrellas",
+            description: "100% satisfacción. 'Muy útil para pintar', 'Incluso para cortar ramas de árbol'",
+            score: 95
+          },
+          {
+            icon: TrendingUp,
+            title: "Uso Obligatorio por Norma",
+            description: "Requerida en empresas, fábricas e instalaciones. Inversión en seguridad profesional",
+            score: 93
+          }
+        ];
+
+      case "20": // Truper EST-35 Escalera de tijera
+        return [
+          {
+            icon: Award,
+            title: "Estructura de Aluminio Profesional",
+            description: "5 escalones antiderrapantes de 8cm con bandeja retráctil para herramientas",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "Doble Refuerzo y Estabilidad",
+            description: "Refuerzo en peldaños inferiores y separadores externos. Capacidad 90.72kg",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "1,888+ Usuarios Satisfechos",
+            description: "4.8/5 estrellas. Nº3 en Escaleras de Tijera. 'Ligera y resistente', 'Muy estable'",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Diseño Plegable Compacto",
+            description: "Fácil almacenamiento. Tacones antiderrapantes protegen suelo. Marca TRUPER confiable",
+            score: 92
+          }
+        ];
+
+      case "21": // Crescent Juego de llaves combinadas
+        return [
+          {
+            icon: Award,
+            title: "Acero Cromo Vanadio Premium",
+            description: "Durabilidad excepcional con tecnología Surface Drive que elimina redondeo de sujetadores",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Tratamiento Térmico Profesional",
+            description: "Máxima resistencia con acabado níquel cromado anticorrosión y pulido espejo",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "1,105+ Profesionales Confían",
+            description: "4.6/5 estrellas. Nº82 en Llaves Mixtas. 'Excelente para suspensión', 'Gran calidad'",
+            score: 93
+          },
+          {
+            icon: TrendingUp,
+            title: "Marca Crescent desde 1907",
+            description: "Especificaciones ANSI y ASME. Tamaños 8-19mm estampados ambos lados para identificación",
+            score: 91
+          }
+        ];
+
+      case "22": // YIYITOOLS - Juego de llaves hexagonales
+        return [
+          {
+            icon: Award,
+            title: "Acero S2 Tratado Térmicamente", 
+            description: "30 piezas métricas e imperiales. Mejor dureza y torsión que cromo vanadio estándar",
+            score: 94
+          },
+          {
+            icon: Shield,
+            title: "Diseño de Brazo Largo/Corto",
+            description: "Alcance extendido + apalancamiento adicional. Acabado óxido negro anticorrosión",
+            score: 92
+          },
+          {
+            icon: Users,
+            title: "4,301+ Usuarios Satisfechos",
+            description: "4.7/5 estrellas. Ranking #5 Llaves Hexagonales. 'Excelente calidad por el precio'",
+            score: 90
+          },
+          {
+            icon: TrendingUp,
+            title: "Kit Completo Profesional",
+            description: "Changzhou Yiyi Tools 20 años experiencia. Estuche organizado con medidas marcadas",
+            score: 88
+          }
+        ];
+
+      case "24": // Caja de Herramientas 100 en 1
+        return [
+          {
+            icon: Award,
+            title: "Kit Completo 100 Piezas",
+            description: "Incluye destornilladores, alicates, cinta métrica, martillo sacaclavos y más",
+            score: 88
+          },
+          {
+            icon: Shield,
+            title: "Acero Forjado Galvanizado",
+            description: "Protección contra oxidación y larga vida útil. Caja moldeo por soplado resistente",
+            score: 86
+          },
+          {
+            icon: Users,
+            title: "61 Reseñas Verificadas",
+            description: "4.4/5 estrellas. Ranking #3 Juegos Herramientas. 'Excelente relación calidad-precio'",
+            score: 84
+          },
+          {
+            icon: TrendingUp,
+            title: "Perfecto para el Hogar",
+            description: "Ideal bricolaje, reparaciones básicas, oficina y garaje. Fácil almacenamiento",
+            score: 82
+          }
+        ];
+
+      case "25": // Pretul J-2032MPG
+        return [
+          {
+            icon: Award,
+            title: "Acero Cromo Vanadio Premium",
+            description: "32 llaves combinadas. 2X más resistente al desgaste que acero al carbono",
+            score: 96
+          },
+          {
+            icon: Shield,
+            title: "Acabado Níquel Negro",
+            description: "2X más resistencia a corrosión. Incluye llaves cortas para espacios reducidos",
+            score: 94
+          },
+          {
+            icon: Users,
+            title: "38 Usuarios Profesionales",
+            description: "4.8/5 estrellas. Ranking #4 Juegos Llaves. 'Excelente calidad, muy completo'",
+            score: 92
+          },
+          {
+            icon: TrendingUp,
+            title: "Garantía Truper Extendida",
+            description: "177 centros servicio México/Latinoamérica. Sin nota compra requerida",
+            score: 90
+          }
+        ];
+
+      case "26": // CRAFTSMAN Taladro
+        return [
+          {
+            icon: Award,
+            title: "Potencia Industrial 800W",
+            description: "3,100 RPM + 52,700 IPM. Portabrocas con llave para máxima retención",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "Construcción Uso Pesado",
+            description: "Diseño robusto CRAFTSMAN. Botón bloqueo para operación continua segura",
+            score: 96
+          },
+          {
+            icon: Users,
+            title: "697+ Profesionales Aprueban",
+            description: "4.8/5 estrellas. 'El mejor taladro', 'Potencia excepcional para concreto'",
+            score: 94
+          },
+          {
+            icon: TrendingUp,
+            title: "Marca de Confianza",
+            description: "CRAFTSMAN tradición calidad. Incluye llave mandril, porta llaves, mango lateral",
+            score: 92
+          }
+        ];
+
+      case "27": // Bosch Rotomartillo
+        return [
+          {
+            icon: Award,
+            title: "Tecnología Bosch 18V",
+            description: "60 Nm torque + Electronic Cell Protection. Mandril metálico robusto",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Sistema Tres en Uno",
+            description: "Destornillador + Taladro + Percutor. LED integrado sin sombras",
+            score: 95
+          },
+          {
+            icon: Users,
+            title: "427+ Usuarios Satisfechos",
+            description: "4.7/5 estrellas. Ranking #1 Martillos Perforadores. '10+ horas una batería'",
+            score: 93
+          },
+          {
+            icon: TrendingUp,
+            title: "Kit Completo Premium",
+            description: "2 baterías + cargador + maletín. Tradición Bosch desde 1886",
+            score: 91
+          }
+        ];
+      
       default:
         return [
           {
@@ -485,8 +1045,11 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
         <div className="border-t bg-gray-50">
           <div className="p-6">
             <Tabs value={selectedTab} onValueChange={setSelectedTab}>
-              <TabsList className="grid grid-cols-3 w-full mb-6">
+              <TabsList className="grid grid-cols-6 w-full mb-6">
                 <TabsTrigger value="overview">Resumen</TabsTrigger>
+                <TabsTrigger value="about">Acerca de</TabsTrigger>
+                <TabsTrigger value="details">Detalles</TabsTrigger>
+                <TabsTrigger value="additional">Info Adicional</TabsTrigger>
                 <TabsTrigger value="reviews">Reseñas</TabsTrigger>
                 <TabsTrigger value="why-choose">¿Por qué elegir?</TabsTrigger>
               </TabsList>
@@ -702,8 +1265,8 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
               </TabsContent>
 
               <TabsContent value="reviews" className="space-y-4">
-                {productReviews.map((review: any) => (
-                  <Card key={review.id} className="border-l-4 border-l-yellow-400 bg-gradient-to-r from-yellow-50 to-white hover:shadow-lg transition-all duration-300">
+                {productReviews.map((review: any, index: number) => (
+                  <Card key={`review-${index}-${review.author}`} className="border-l-4 border-l-yellow-400 bg-gradient-to-r from-yellow-50 to-white hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
@@ -747,11 +1310,118 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
                       
                       <div className="bg-white rounded-lg p-4 border border-gray-100 shadow-sm">
                         <h4 className="font-bold text-gray-900 mb-3 text-lg">{review.title}</h4>
-                        <p className="text-gray-700 leading-relaxed">{review.content}</p>
+                        <p className="text-gray-700 leading-relaxed">{review.text || review.content}</p>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
+              </TabsContent>
+
+              <TabsContent value="about" className="space-y-4">
+                <Card className="border-blue-100 shadow-sm">
+                  <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
+                    <CardTitle className="flex items-center gap-2 text-blue-800">
+                      <Info className="h-5 w-5" />
+                      Acerca de este artículo
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      {product.features && Object.entries(product.features).map(([feature, description], index) => (
+                        <div key={index} className="flex items-start gap-3 p-3 bg-green-50 rounded-lg border-l-4 border-green-400">
+                          <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <span className="font-semibold text-green-800">{feature}:</span>
+                            <p className="text-gray-700 mt-1">{description}</p>
+                          </div>
+                        </div>
+                      ))}
+                      {product.pros && product.pros.slice(0, 4).map((pro, index) => (
+                        <div key={index} className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-700">{pro}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="details" className="space-y-4">
+                <Card className="border-purple-100 shadow-sm">
+                  <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50">
+                    <CardTitle className="flex items-center gap-2 text-purple-800">
+                      <Wrench className="h-5 w-5" />
+                      Detalles del producto
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="grid grid-cols-1 gap-4">
+                      {product.product_details && Object.entries(product.product_details).map(([key, value], index) => (
+                        <div key={index} className="flex justify-between items-center py-3 px-4 bg-purple-50 rounded-lg border border-purple-200">
+                          <span className="font-semibold text-purple-900">{key}:</span>
+                          <span className="text-gray-700 text-right max-w-xs font-medium">{value}</span>
+                        </div>
+                      ))}
+                      {product.specifications && Object.entries(product.specifications).slice(0, 6).map(([spec, value], index) => (
+                        <div key={index} className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg border border-gray-200">
+                          <span className="font-semibold text-gray-900">{spec}:</span>
+                          <span className="text-gray-700 text-right max-w-xs">{value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="additional" className="space-y-4">
+                <Card className="border-amber-100 shadow-sm">
+                  <CardHeader className="bg-gradient-to-r from-amber-50 to-yellow-50">
+                    <CardTitle className="flex items-center gap-2 text-amber-800">
+                      <Shield className="h-5 w-5" />
+                      Información adicional
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      {product.additional_info && Object.entries(product.additional_info).map(([key, value], index) => (
+                        <div key={index} className="flex justify-between items-center py-3 px-4 bg-amber-50 rounded-lg border border-amber-200">
+                          <span className="font-semibold text-amber-900 flex items-center gap-2">
+                            <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                            {key}:
+                          </span>
+                          <span className="text-gray-700 text-right max-w-xs font-medium">{value}</span>
+                        </div>
+                      ))}
+                      {product.usage_guide && (
+                        <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
+                          <h4 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                            <Eye className="h-4 w-4" />
+                            Guía de uso:
+                          </h4>
+                          <ul className="space-y-2">
+                            {(() => {
+                              const guideData = product.usage_guide;
+                              if (!guideData) return null;
+                              
+                              // Si es string, convertir a array
+                              const guides = Array.isArray(guideData) 
+                                ? guideData 
+                                : [guideData];
+                              
+                              return guides.slice(0, 4).map((guide, index) => (
+                                <li key={index} className="flex items-start gap-2">
+                                  <Check className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                  <span className="text-gray-700 text-sm">{guide}</span>
+                                </li>
+                              ));
+                            })()}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
               </TabsContent>
 
               <TabsContent value="why-choose" className="space-y-4">
