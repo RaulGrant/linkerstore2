@@ -36,7 +36,13 @@ import {
   ChevronRight,
   Info,
   CheckCircle,
-  Wrench
+  Wrench,
+  Scale,
+  Cog,
+  Briefcase,
+  Siren,
+  Beaker,
+  BatteryCharging
 } from 'lucide-react';
 import { AmazonProduct } from '@/lib/types/store';
 import { getProductImageUrls, hasMultipleImages } from '@/lib/utils/productImageMapping';
@@ -821,6 +827,230 @@ export default function ProductQuickViewModal({ isOpen, onClose, product }: Prod
           }
         ];
       
+      case "30": // Bosch Medidor Láser GLM 25-23
+        return [
+          {
+            icon: Award,
+            title: "Precisión Profesional Bosch",
+            description: "Tecnología láser que garantiza mediciones con precisión de ±1.5mm hasta 25m.",
+            score: 99
+          },
+          {
+            icon: Wrench,
+            title: "Operación Intuitiva",
+            description: "Interfaz de dos botones que simplifica su uso: encender, medir y cambiar de función fácilmente.",
+            score: 96
+          },
+          {
+            icon: Shield,
+            title: "Durabilidad Garantizada",
+            description: "Protección IP54 contra polvo y salpicaduras, con carcasa robusta que soporta caídas de 1 metro.",
+            score: 95
+          },
+          {
+            icon: TrendingUp,
+            title: "Diseño Ultra-Compacto",
+            description: "Cabe en cualquier bolsillo. Su diseño ergonómico y ligero lo hace ideal para cualquier trabajo.",
+            score: 93
+          }
+        ];
+
+      case "31": // MOYAC Linterna
+        return [
+          {
+            icon: Zap,
+            title: "Potencia Inigualable de 2400 Lúmenes",
+            description: "Equipada con un chip LED P70.2, ilumina objetos a 1000 metros de distancia, superando a las linternas convencionales.",
+            score: 99
+          },
+          {
+            icon: Clock,
+            title: "Batería de Larga Duración (5000mAh)",
+            description: "Ofrece hasta 12 horas de autonomía. Recargable vía USB-C y funciona como power bank para tus dispositivos.",
+            score: 97
+          },
+          {
+            icon: Shield,
+            title: "Construcción de Grado Militar",
+            description: "Fabricada con aleación de aluminio aeroespacial, con resistencia al agua IPX6 y a impactos severos.",
+            score: 95
+          },
+          {
+            icon: Award,
+            title: "Versatilidad Táctica Total",
+            description: "Cuenta con 5 modos de luz (Alto, Medio, Bajo, SOS, Estroboscópico) y zoom telescópico para cualquier situación.",
+            score: 94
+          }
+        ];
+
+      case "32": // ZAWELIYO Tijeras para Cables
+        return [
+          {
+            icon: Wrench,
+            title: "Mecanismo de Trinquete Eficiente",
+            description: "Corta cables de Cobre/Aluminio de 300mm² con una mano, reduciendo el esfuerzo en un 60%.",
+            score: 98
+          },
+          {
+            icon: Award,
+            title: "Cuchillas de Acero de Alto Carbono",
+            description: "Filo duradero con tratamiento térmico para cortes limpios y precisos en más de 5,000 ciclos.",
+            score: 96
+          },
+          {
+            icon: Shield,
+            title: "Diseño Seguro y Ergonómico",
+            description: "Mangos antideslizantes de PVC y bloqueo de seguridad para un manejo cómodo y seguro.",
+            score: 94
+          },
+          {
+            icon: Users,
+            title: "Calificación Perfecta de 4.6 Estrellas",
+            description: "Respaldado por usuarios profesionales, ideal para electricistas e instaladores.",
+            score: 92
+          }
+        ];
+
+      case "33": // ANMIEN Cinturón Portaherramientas
+        return [
+          {
+            icon: Briefcase,
+            title: "Construcción de Grado Militar",
+            description: "Fabricado con tela Oxford 1680D, ofrece una resistencia superior al desgarro y la abrasión, superando a los materiales estándar 600D.",
+            score: 98
+          },
+          {
+            icon: Scale,
+            title: "Distribución Ergonómica del Peso",
+            description: "Los tirantes acolchados y ajustables distribuyen el peso de las herramientas, reduciendo la tensión en la espalda y las caderas para mayor comodidad durante todo el día.",
+            score: 96
+          },
+          {
+            icon: Wrench,
+            title: "Máxima Organización y Acceso",
+            description: "Con 27 bolsillos, 2 bolsas desmontables y soportes específicos para martillo y cinta métrica, cada herramienta tiene su lugar para un acceso rápido.",
+            score: 95
+          },
+          {
+            icon: Cog,
+            title: "Diseño Totalmente Personalizable",
+            description: "Su sistema modular permite quitar, reposicionar o usar las bolsas de forma independiente, adaptándose perfectamente a cualquier tarea o preferencia.",
+            score: 94
+          }
+        ];
+      
+      case "34": // CARTMAN Juego 218 piezas
+        return [
+          {
+            icon: Wrench,
+            title: "Kit Todo en Uno Definitivo",
+            description: "Con 218 piezas, este juego cubre casi cualquier necesidad mecánica, desde automoción hasta reparaciones domésticas, eliminando la necesidad de comprar herramientas por separado.",
+            score: 98
+          },
+          {
+            icon: Shield,
+            title: "Calidad Profesional (Estándar ANSI)",
+            description: "Fabricado en acero al cromo vanadio y cumpliendo con los estándares ANSI, garantiza durabilidad, resistencia y un rendimiento fiable a largo plazo.",
+            score: 96
+          },
+          {
+            icon: Cog,
+            title: "Trinquetes de Alto Rendimiento",
+            description: "Los trinquetes de 72 dientes permiten trabajar en espacios reducidos con un arco de giro de solo 5 grados, una característica de herramientas de gama alta.",
+            score: 95
+          },
+          {
+            icon: Briefcase,
+            title: "Organización y Portabilidad Superior",
+            description: "El robusto maletín moldeado mantiene cada pieza en su lugar, facilitando el transporte y la localización rápida de la herramienta correcta.",
+            score: 94
+          }
+        ];
+      
+      case "35": // AKSTEST Monitor de 4 Gases
+        return [
+          {
+            icon: Shield,
+            title: "Seguridad 4 en 1 Crítica",
+            description: "Detecta simultáneamente O₂, CO, H₂S y gases combustibles (LEL), proporcionando una protección completa contra las amenazas atmosféricas más comunes y peligrosas.",
+            score: 99
+          },
+          {
+            icon: Siren,
+            title: "Alerta Triple Infalible",
+            description: "Combina alarmas sonoras fuertes (≥85dB), luces LED parpadeantes y vibración para garantizar que las alertas de peligro nunca pasen desapercibidas, incluso en entornos ruidosos.",
+            score: 97
+          },
+          {
+            icon: Beaker,
+            title: "Sensores de Alta Precisión",
+            description: "Equipado con sensores electroquímicos y catalíticos de grado industrial para una detección rápida (T90 <30s) y precisa, asegurando lecturas fiables cuando más importa.",
+            score: 96
+          },
+          {
+            icon: BatteryCharging,
+            title: "Listo para el Trabajo Duro",
+            description: "Con una clasificación IP65 a prueba de polvo y agua y una batería de larga duración (+12h), está construido para soportar las condiciones más exigentes del campo.",
+            score: 95
+          }
+        ];
+      
+      case "36": // Bitwo Detector de Gas
+        return [
+          {
+            icon: Shield,
+            title: "Detección Rápida y Precisa",
+            description: "Sensor de alta sensibilidad que detecta fugas de Gas LP y Natural de forma casi instantánea, protegiendo tu hogar o negocio.",
+            score: 98
+          },
+          {
+            icon: BarChart3,
+            title: "Indicador Visual Intuitivo",
+            description: "La barra de 8 LEDs muestra claramente la concentración del gas, permitiendo localizar la fuente de la fuga con facilidad.",
+            score: 95
+          },
+          {
+            icon: BatteryCharging,
+            title: "Portátil y Recargable por USB-C",
+            description: "Diseño ultraligero con hasta 6 horas de autonomía y la comodidad de la carga moderna vía USB-C.",
+            score: 94
+          },
+          {
+            icon: Cog,
+            title: "Operación Simplificada",
+            description: "Con un solo botón y calibración automática, es la herramienta de seguridad perfecta para cualquier persona, sin necesidad de conocimientos técnicos.",
+            score: 96
+          }
+        ];
+
+      case "37": // ThermoPro TP30 Termómetro
+        return [
+          {
+            icon: Zap,
+            title: "Precisión y Rapidez Profesional",
+            description: "Obtén lecturas de temperatura ultra rápidas (<500ms) con una precisión de ±1.5% gracias a su avanzada tecnología de sensor.",
+            score: 98
+          },
+          {
+            icon: Cog,
+            title: "Emisividad Ajustable",
+            description: "Ajusta la emisividad de 0.1 a 1.0 para una precisión inigualable en cualquier tipo de superficie, desde alimentos hasta motores.",
+            score: 96
+          },
+          {
+            icon: BarChart3,
+            title: "Versatilidad para Múltiples Usos",
+            description: "Con un amplio rango de -50°C a 550°C, es la herramienta perfecta para cocina, mecánica, HVAC y reparaciones del hogar.",
+            score: 95
+          },
+          {
+            icon: Award,
+            title: "Líder en Ventas y Confianza",
+            description: "Respaldado por más de 7,400 reseñas positivas, es una de las pistolas de temperatura más confiables y mejor valoradas del mercado.",
+            score: 97
+          }
+        ];
+
       default:
         return [
           {

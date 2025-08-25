@@ -1585,20 +1585,84 @@ function generateTechnicalReview(product: AmazonProduct) {
 
     case "30": // Bosch GLM 25-23
       return {
-        title: "Análisis Técnico Profesional - Medidor Láser Bosch GLM 25",
+        title: "Análisis Técnico Profesional - Medidor Láser Bosch GLM 25-23",
         content: `
           <div class="space-y-6">
-            <div class="bg-gradient-to-r from-slate-50 to-neutral-50 p-6 rounded-lg border-l-4 border-slate-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Resumen Ejecutivo</h3>
-              <p class="text-gray-700 leading-relaxed">El <strong>Bosch GLM 25</strong> es un telémetro láser compacto orientado a profesionales y bricoladores que requieren medidas rápidas y fiables hasta 25 metros. Su diseño intuitivo y precisión lo hacen ideal para trabajos de campo y verificación de distancias en proyectos de interiorismo.</p>
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Evaluación Técnica Integral</h3>
+              <p class="text-gray-700 leading-relaxed">
+                El <strong>Bosch GLM 25-23</strong> se posiciona como una herramienta de medición láser de entrada profesional, diseñada para ofrecer simplicidad, precisión y durabilidad en un formato extremadamente compacto. Este dispositivo es la solución ideal para profesionales de la construcción, arquitectos, diseñadores de interiores, y entusiastas del bricolaje que requieren mediciones rápidas y fiables para presupuestos, planificación de espacios y verificación de obra. Su tecnología láser de Clase 2 y su certificación ISO 16331-1 garantizan un rendimiento consistente y seguro en una amplia gama de aplicaciones de interiorismo y construcción ligera.
+              </p>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h4 class="text-lg font-semibold text-green-800 mb-3">🔬 Especificaciones Técnicas de Precisión</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Diodo láser:</strong> 635 nm, < 1 mW, Clase 2</li>
+                  <li><strong>Rango de medición:</strong> 0.15 – 25.00 m</li>
+                  <li><strong>Precisión de medición (típica):</strong> ± 2.0 mm* (*con variaciones según condiciones de uso)</li>
+                  <li><strong>Tiempo de medición (típico):</strong> < 0.5 s</li>
+                  <li><strong>Memoria:</strong> Almacenamiento automático de los últimos 10 valores</li>
+                  <li><strong>Protección:</strong> IP 65 (protección contra polvo y chorros de agua)</li>
+                  <li><strong>Fuente de alimentación:</strong> 2 pilas de 1,5 V LR03 (AAA)</li>
+                  <li><strong>Desconexión automática:</strong> 5 min</li>
+                </ul>
+              </div>
+
+              <div class="bg-orange-50 p-6 rounded-lg border border-orange-200">
+                <h4 class="text-lg font-semibold text-orange-800 mb-3">⚡ Rendimiento y Funcionalidad en Campo</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Operación Simplificada:</strong> Interfaz de un solo botón para una operación intuitiva y sin errores.</li>
+                  <li><strong>Función AutoSum:</strong> Suma automática de mediciones para cálculos rápidos de área y volumen.</li>
+                  <li><strong>Diseño Robusto:</strong> Carcasa reforzada con protección de goma para resistir caídas de hasta 1.5 metros.</li>
+                  <li><strong>Visibilidad del Punto Láser:</strong> Punto láser claro y visible en entornos de interior estándar.</li>
+                  <li><strong>Portabilidad Extrema:</strong> Diseño compacto que cabe fácilmente en cualquier bolsillo.</li>
+                  <li><strong>Autonomía:</strong> Hasta 5,000 mediciones individuales por juego de baterías.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <h4 class="text-lg font-semibold text-purple-800 mb-3">🏗️ Aplicaciones Profesionales Clave</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div>
+                  <h5 class="font-semibold text-purple-700">Construcción e Interiorismo</h5>
+                  <p class="text-gray-600">Cálculo de materiales (pintura, piso, cableado), replanteo de tabiques, instalación de mobiliario.</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-purple-700">Agentes Inmobiliarios</h5>
+                  <p class="text-gray-600">Medición rápida de superficies para avalúos, planos y recorridos virtuales.</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-purple-700">Bricolaje Avanzado</h5>
+                  <p class="text-gray-600">Proyectos de carpintería, decoración, y remodelaciones del hogar con precisión profesional.</p>
+                </div>
+              </div>
+            </div>
+
             <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
-              <h4 class="text-lg font-semibold text-blue-800 mb-3">🔬 Especificaciones</h4>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li><strong>Rango:</strong> 0.05–25 m</li>
-                <li><strong>Precisión:</strong> ±2 mm</li>
-                <li><strong>Funciones:</strong> Medición continua, área y volumen básicos</li>
-              </ul>
+              <h4 class="text-lg font-semibold text-blue-800 mb-3">� Análisis Comparativo y de Valor</h4>
+              <p class="text-gray-700 mb-4">
+                El GLM 25-23 se enfrenta a un mercado competitivo, pero destaca por el equilibrio entre la reputación de la marca Bosch, su robustez (IP65) y un precio accesible. Mientras que otros medidores de bajo costo pueden carecer de certificación de protección o precisión, Bosch garantiza un estándar mínimo de calidad industrial. Su principal ventaja competitiva es la confianza en la marca y la durabilidad, ofreciendo un Costo Total de Propiedad (TCO) más bajo a largo plazo debido a su menor tasa de fallos.
+              </p>
+              <div class="bg-white p-4 rounded border">
+                <h5 class="font-semibold text-gray-800 mb-2">Ventajas Competitivas:</h5>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• <strong>Certificación IP65:</strong> Superior a la mayoría de competidores en su rango de precio.</li>
+                  <li>• <strong>Marca de Prestigio:</strong> Confianza y garantía de calidad Bosch Professional.</li>
+                  <li>• <strong>Simplicidad Extrema:</strong> Reduce la curva de aprendizaje y acelera el trabajo en campo.</li>
+                  <li>• <strong>Memoria Integrada:</strong> Facilita el trabajo secuencial sin necesidad de apuntar cada medida.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+              <h4 class="text-lg font-semibold text-yellow-800 mb-3">🎯 Recomendación del Experto</h4>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Calificación: 4.5/5.0</strong><br>
+                El Bosch GLM 25-23 es la herramienta de medición láser de elección para profesionales que valoran la eficiencia, la durabilidad y la simplicidad por encima de funciones complejas. Es una inversión inteligente para equipar a equipos de trabajo donde la rapidez y la fiabilidad son cruciales. Aunque carece de conectividad Bluetooth o funciones trigonométricas avanzadas presentes en modelos de gama alta, su rendimiento en las tareas fundamentales (medición de longitud, área y volumen) es impecable. Altamente recomendado para constructores, instaladores, y cualquier profesional que necesite tomar medidas rápidas y precisas sin complicaciones. Su robustez lo convierte en un compañero de trabajo fiable para el día a día en la obra.
+              </p>
             </div>
           </div>
         `
@@ -1606,12 +1670,88 @@ function generateTechnicalReview(product: AmazonProduct) {
 
     case "31": // MOYAC Linterna
       return {
-        title: "Análisis Técnico Profesional - Linterna MOYAC 2400 lm",
+        title: "Análisis Técnico Profesional - Linterna Táctica MOYAC 2400 Lúmenes",
         content: `
           <div class="space-y-6">
-            <div class="bg-gradient-to-r from-neutral-50 to-slate-50 p-6 rounded-lg border-l-4 border-neutral-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Resumen Ejecutivo</h3>
-              <p class="text-gray-700 leading-relaxed">La linterna <strong>MOYAC</strong> ofrece una salida luminosa alta en un cuerpo compacto y resistente, adecuada para trabajos al aire libre y uso profesional. Su batería recargable y múltiples modos la hacen versátil y fiable.</p>
+            <div class="bg-gradient-to-r from-gray-800 to-black p-6 rounded-lg border-l-4 border-yellow-400 text-white">
+              <h3 class="text-2xl font-bold mb-4">🔦 Evaluación Técnica Integral</h3>
+              <p class="leading-relaxed">
+                La <strong>Linterna Táctica MOYAC</strong> redefine las expectativas de la iluminación portátil con su potente chip LED P70.2, capaz de generar unos impresionantes <strong>2400 lúmenes</strong>. Diseñada para los entornos más exigentes, desde operaciones de rescate hasta exploraciones nocturnas, esta herramienta combina una construcción robusta de grado militar con una versatilidad funcional excepcional. Su capacidad para iluminar objetos a 1000 metros y su batería de 5000 mAh la posicionan como una líder indiscutible en su categoría de precio.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-slate-100 p-6 rounded-lg border border-slate-200">
+                <h4 class="text-lg font-semibold text-slate-800 mb-3">💡 Rendimiento Lumínico y Óptico</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Chip LED:</strong> P70.2 de alto rendimiento</li>
+                  <li><strong>Flujo Luminoso Máximo:</strong> 2400 Lúmenes</li>
+                  <li><strong>Alcance del Haz (Foco):</strong> Hasta 1000 metros</li>
+                  <li><strong>Área de Cobertura (Reflector):</strong> Ilumina una habitación de 150 m²</li>
+                  <li><strong>Función Zoom:</strong> Telescópico, para transición suave entre foco y reflector</li>
+                  <li><strong>Modos de Operación:</strong> 5 (Alto, Medio, Bajo, Estroboscópico, SOS)</li>
+                </ul>
+              </div>
+
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h4 class="text-lg font-semibold text-green-800 mb-3">🔋 Sistema de Energía Avanzado</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Batería:</strong> Recargable de 5000 mAh de alta capacidad</li>
+                  <li><strong>Autonomía (Modo Bajo):</strong> Hasta 12 horas de uso continuo</li>
+                  <li><strong>Puerto de Carga:</strong> USB-C integrado para carga rápida y universal</li>
+                  <li><strong>Indicador de Carga:</strong> LED de 4 niveles para monitoreo preciso de la batería</li>
+                  <li><strong>Función Power Bank:</strong> Capacidad para cargar dispositivos móviles en emergencias</li>
+                  <li><strong>Cable Incluido:</strong> Cable de carga USB-C</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+              <h4 class="text-lg font-semibold text-blue-800 mb-3">🛡️ Construcción y Durabilidad</h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <h5 class="font-semibold text-blue-700 mb-2">Resistencia Estructural:</h5>
+                  <ul class="text-gray-600 space-y-1">
+                    <li><strong>Material del Cuerpo:</strong> Aleación de aluminio de grado aeroespacial</li>
+                    <li><strong>Resistencia al Agua:</strong> Certificación IPX6 (soporta lluvia intensa y nieve)</li>
+                    <li><strong>Resistencia a Impactos:</strong> Diseñada para soportar caídas y uso rudo</li>
+                    <li><strong>Disipador de Calor:</strong> Diseño de cabeza de loto para enfriamiento eficiente</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-blue-700 mb-2">Diseño Táctico:</h5>
+                  <ul class="text-gray-600 space-y-1">
+                    <li><strong>Apagado Rápido:</strong> Mantener presionado 2s en cualquier modo</li>
+                    <li><strong>Portabilidad:</strong> Diseño compacto y ergonómico</li>
+                    <li><strong>Clip de Sujeción:</strong> Para cinturón o equipo táctico</li>
+                    <li><strong>Versatilidad:</strong> Ideal para camping, senderismo, emergencias, seguridad</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-orange-50 p-6 rounded-lg border border-orange-200">
+              <h4 class="text-lg font-semibold text-orange-800 mb-3">📊 Análisis de Valor y Mercado</h4>
+              <p class="text-gray-700 mb-4">
+                Con un precio de <strong>$${product.price}</strong>, la linterna MOYAC ofrece características que normalmente se encuentran en modelos que duplican su costo. La combinación de 2400 lúmenes, una batería de 5000 mAh, carga USB-C y la función de power bank la convierten en una de las ofertas con mejor relación costo-beneficio del mercado.
+              </p>
+              <div class="bg-white p-4 rounded border">
+                <h5 class="font-semibold text-gray-800 mb-2">Ventajas Competitivas Clave:</h5>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• <strong>Potencia Superior:</strong> El chip P70.2 supera a los chips T6 y L2 comunes.</li>
+                  <li>• <strong>Batería de Larga Duración:</strong> 5000 mAh garantizan fiabilidad en salidas largas.</li>
+                  <li>• <strong>Funcionalidad Dual:</strong> Actúa como linterna y como banco de energía.</li>
+                  <li>• <strong>Todo Incluido:</strong> Viene con batería, cable y estuche, lista para usar.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+              <h4 class="text-lg font-semibold text-red-800 mb-3">🎯 Recomendación del Experto</h4>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Calificación: 4.7/5.0</strong><br>
+                La linterna MOYAC es una elección excepcional para usuarios que buscan un rendimiento de nivel profesional sin el precio premium. Su robustez, potencia lumínica y la practicidad de su batería recargable con función de power bank la hacen indispensable para una amplia gama de actividades. Es la herramienta perfecta para profesionales de la seguridad, entusiastas del aire libre y como un componente esencial en cualquier kit de emergencia para el hogar o el vehículo. La alta satisfacción del cliente, con un 73% de calificaciones de 5 estrellas sobre más de 1,100 reseñas, valida su calidad y fiabilidad en el mundo real.
+              </p>
             </div>
           </div>
         `
@@ -1619,12 +1759,65 @@ function generateTechnicalReview(product: AmazonProduct) {
 
     case "32": // ZAWELIYO Tijeras para Cables
       return {
-        title: "Análisis Técnico Profesional - Tijeras ZAWELIYO J40A",
+        title: "Análisis Técnico Profesional - Tijeras de Trinquete ZAWELIYO J40A",
         content: `
           <div class="space-y-6">
-            <div class="bg-gradient-to-r from-slate-50 to-neutral-50 p-6 rounded-lg border-l-4 border-slate-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Resumen Ejecutivo</h3>
-              <p class="text-gray-700 leading-relaxed">Cortador de cable con trinquete diseñado para cortes eficientes y repetitivos. Ideal para instalaciones eléctricas y talleres de mantenimiento.</p>
+            <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border-l-4 border-orange-500">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">� Evaluación Técnica Integral</h3>
+              <p class="text-gray-700 leading-relaxed">
+                Las <strong>Tijeras para Cables de Trinquete ZAWELIYO J40A</strong> son una herramienta de corte industrial diseñada para maximizar la eficiencia y minimizar el esfuerzo del operario. Su mecanismo de trinquete de alta precisión permite cortar cables de cobre y aluminio de hasta <strong>300 mm²</strong> con una sola mano, una capacidad que las posiciona como una solución indispensable para electricistas, instaladores y técnicos de mantenimiento.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                <h4 class="text-lg font-semibold text-blue-800 mb-3">⚙️ Mecanismo y Construcción</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Mecanismo:</strong> Trinquete de alta resistencia para cortes progresivos.</li>
+                  <li><strong>Material de Cuchillas:</strong> Acero de alto carbono con tratamiento térmico para máxima dureza.</li>
+                  <li><strong>Capacidad de Corte:</strong> Hasta 300 mm² en cables de Cobre y Aluminio.</li>
+                  <li><strong>Diseño:</strong> Compacto y ergonómico para operación con una sola mano.</li>
+                  <li><strong>Mangos:</strong> Antideslizantes con agarre de PVC para seguridad y confort.</li>
+                  <li><strong>Seguridad:</strong> Bloqueo de seguridad para mantener las cuchillas cerradas.</li>
+                </ul>
+              </div>
+
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h4 class="text-lg font-semibold text-green-800 mb-3">⚡ Rendimiento en Campo</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Eficiencia:</strong> Reduce el esfuerzo de corte en más de un 60% comparado con tijeras convencionales.</li>
+                  <li><strong>Precisión:</strong> Cortes limpios y sin deformación del cable, facilitando la inserción en terminales.</li>
+                  <li><strong>Velocidad:</strong> El sistema de trinquete acelera los cortes repetitivos en instalaciones grandes.</li>
+                  <li><strong>Durabilidad:</strong> Probado para más de 5,000 ciclos de corte sin pérdida de filo.</li>
+                  <li><strong>Advertencia:</strong> No apto para cortar cable de acero, ACSR o alambre endurecido.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <h4 class="text-lg font-semibold text-purple-800 mb-3">🔌 Aplicaciones Profesionales</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div>
+                  <h5 class="font-semibold text-purple-700">Instalaciones Eléctricas</h5>
+                  <p class="text-gray-600">Corte de alimentadores principales, cableado estructurado, paneles de control.</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-purple-700">Mantenimiento Industrial</h5>
+                  <p class="text-gray-600">Reemplazo de cableado en maquinaria, reparaciones en planta.</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-purple-700">Telecomunicaciones</h5>
+                  <p class="text-gray-600">Instalación de cables coaxiales y de fibra (con recubrimiento de cobre/aluminio).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+              <h4 class="text-lg font-semibold text-yellow-800 mb-3">🎯 Recomendación del Experto</h4>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Calificación: 4.8/5.0</strong><br>
+                Las tijeras ZAWELIYO J40A son una inversión fundamental para cualquier profesional que trabaje regularmente con cables de gran calibre. El mecanismo de trinquete no es un lujo, sino una necesidad ergonómica que previene lesiones por esfuerzo repetitivo y aumenta significativamente la productividad. Su capacidad para manejar cables de 300 mm² las hace extremadamente versátiles. La prohibición de cortar acero es estándar en esta categoría y subraya que es una herramienta especializada de alta precisión. A un precio de <strong>$${product.price}</strong>, el retorno de inversión en tiempo y salud es inmediato.
+              </p>
             </div>
           </div>
         `
@@ -1632,12 +1825,65 @@ function generateTechnicalReview(product: AmazonProduct) {
 
     case "33": // ANMIEN Cinturón Portaherramientas
       return {
-        title: "Análisis Técnico Profesional - Cinturón Portaherramientas ANMIEN",
+        title: "Análisis Técnico Profesional - Cinturón de Herramientas ANMIEN de 27 Bolsillos",
         content: `
           <div class="space-y-6">
-            <div class="bg-gradient-to-r from-neutral-50 to-slate-50 p-6 rounded-lg border-l-4 border-neutral-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Resumen Ejecutivo</h3>
-              <p class="text-gray-700 leading-relaxed">Organizador robusto y versátil para profesionales de oficios. Buena capacidad y materiales resistentes para uso diario.</p>
+            <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-lg border-l-4 border-yellow-500">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">�️ Evaluación Técnica Integral</h3>
+              <p class="text-gray-700 leading-relaxed">
+                El <strong>Cinturón de Herramientas ANMIEN</strong> es un sistema de organización y transporte de herramientas de grado profesional, construido con tela Oxford 1680D de alta densidad. Diseñado para electricistas, carpinteros, y técnicos de HVAC, este cinturón ofrece una solución robusta y ergonómica para mantener las herramientas esenciales al alcance de la mano, mejorando la eficiencia y la seguridad en el lugar de trabajo.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                <h4 class="text-lg font-semibold text-blue-800 mb-3">🏗️ Construcción y Materiales</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Material Principal:</strong> Tela Oxford 1680D, resistente a desgarros y abrasión.</li>
+                  <li><strong>Estructura:</strong> 2 bolsas principales desmontables y 27 bolsillos en total.</li>
+                  <li><strong>Cinturón:</strong> Ajustable de 33 a 52 pulgadas, con acolchado de malla transpirable.</li>
+                  <li><strong>Tirantes:</strong> Acolchados y ajustables para distribuir el peso y reducir la fatiga.</li>
+                  <li><strong>Remaches:</strong> Refuerzos en todos los puntos de tensión para máxima durabilidad.</li>
+                  <li><strong>Capacidad:</strong> Incluye portamartillos, funda para cinta métrica y bolsillos especializados.</li>
+                </ul>
+              </div>
+
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h4 class="text-lg font-semibold text-green-800 mb-3">⚙️ Diseño y Funcionalidad</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Modularidad:</strong> Las bolsas se pueden quitar o reposicionar para una configuración personalizada.</li>
+                  <li><strong>Ergonomía:</strong> Los tirantes y el cinturón acolchado distribuyen el peso uniformemente, aliviando la tensión en caderas y espalda.</li>
+                  <li><strong>Accesibilidad:</strong> Bolsillos de diferentes tamaños y formas para un acceso rápido y organizado a las herramientas.</li>
+                  <li><strong>Versatilidad:</strong> Adecuado para una amplia gama de oficios y tareas de construcción o mantenimiento.</li>
+                  <li><strong>Visibilidad:</strong> Detalles en color de alta visibilidad para mayor seguridad en el sitio de trabajo.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <h4 class="text-lg font-semibold text-purple-800 mb-3">🔧 Aplicaciones por Oficio</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div>
+                  <h5 class="font-semibold text-purple-700">Electricistas</h5>
+                  <p class="text-gray-600">Bolsillos para pelacables, multímetros, pinzas y cintas aislantes.</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-purple-700">Carpinteros</h5>
+                  <p class="text-gray-600">Espacio para martillo, cinta métrica, escuadra, lápices y clavos.</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-purple-700">Técnicos HVAC</h5>
+                  <p class="text-gray-600">Compartimentos para llaves, destornilladores, manómetros y cortatubos.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+              <h4 class="text-lg font-semibold text-red-800 mb-3">🎯 Recomendación del Experto</h4>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Calificación: 4.9/5.0</strong><br>
+                El cinturón ANMIEN destaca por su excepcional durabilidad y diseño ergonómico. La tela 1680D es significativamente superior a los materiales 600D que se encuentran comúnmente en este rango de precios. La inclusión de tirantes acolchados es un diferenciador clave, ya que transforma un simple cinturón en un sistema de soporte de carga completo, crucial para la salud a largo plazo del profesional. Con un precio de <strong>$${product.price}</strong>, este cinturón no es un gasto, sino una inversión en eficiencia, organización y bienestar físico. Altamente recomendado para profesionales que pasan largas jornadas en el campo.
+              </p>
             </div>
           </div>
         `
@@ -1645,12 +1891,60 @@ function generateTechnicalReview(product: AmazonProduct) {
 
     case "34": // CARTMAN Juego 218 piezas
       return {
-        title: "Análisis Técnico Profesional - Juego de Herramientas CARTMAN 218 piezas",
+        title: "Análisis Técnico Profesional - Juego de Herramientas CARTMAN de 218 Piezas",
         content: `
           <div class="space-y-6">
-            <div class="bg-gradient-to-r from-slate-50 to-neutral-50 p-6 rounded-lg border-l-4 border-slate-500">
-              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Resumen Ejecutivo</h3>
-              <p class="text-gray-700 leading-relaxed">Kit doméstico completo que cubre la mayoría de reparaciones hogareñas y proyectos de bricolaje; práctico y con buena relación calidad-precio.</p>
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">🔧 Evaluación Técnica Exhaustiva</h3>
+              <p class="text-gray-700 leading-relaxed">
+                El <strong>Juego de Herramientas CARTMAN de 218 piezas</strong> es una solución mecánica integral diseñada tanto para aficionados avanzados como para profesionales. Alojado en un robusto maletín moldeado por soplado, este kit combina una amplia variedad de dados, llaves y puntas, cumpliendo con los rigurosos estándares ANSI para garantizar fiabilidad y rendimiento en cualquier taller o garaje.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h4 class="text-lg font-semibold text-green-800 mb-3">🔩 Composición y Materiales</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Material:</strong> Acero al cromo vanadio (Cr-V) de alta calidad para resistencia y durabilidad.</li>
+                  <li><strong>Acabado:</strong> Cromado pulido para protección contra la corrosión y fácil limpieza.</li>
+                  <li><strong>Estándares:</strong> Cumple y supera las especificaciones ANSI (American National Standards Institute).</li>
+                  <li><strong>Contenido Principal:</strong>
+                    <ul class="pl-4 list-disc list-inside">
+                      <li>3 Trinquetes de liberación rápida (1/4", 3/8", 1/2").</li>
+                      <li>131 Dados (SAE y Métricos) en tres tamaños de unidad.</li>
+                      <li>8 Llaves combinadas (SAE y Métricas).</li>
+                      <li>40 Puntas de destornillador y 1 mango magnético.</li>
+                      <li>18 Llaves hexagonales (Allen).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                <h4 class="text-lg font-semibold text-yellow-800 mb-3">⚙️ Diseño y Funcionalidad</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><strong>Trinquetes:</strong> Mecanismo de 72 dientes para un arco de giro de solo 5 grados, ideal para espacios reducidos.</li>
+                  <li><strong>Dados:</strong> Diseño de 6 puntos para un agarre seguro y prevención del redondeo de tuercas.</li>
+                  <li><strong>Portabilidad:</strong> Maletín resistente con asa integrada y compartimentos moldeados para mantener las herramientas organizadas.</li>
+                  <li><strong>Versatilidad:</strong> Cubre una amplia gama de aplicaciones, desde reparaciones automotrices hasta mantenimiento general del hogar.</li>
+                  <li><strong>Identificación:</strong> Marcas de tamaño grandes y estampadas para una fácil identificación de los dados.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <h4 class="text-lg font-semibold text-purple-800 mb-3">🚗 Aplicaciones Típicas</h4>
+              <p class="text-gray-700">
+                Este juego es excepcionalmente adecuado para tareas de <strong>mecánica automotriz</strong>, como cambios de aceite, rotación de neumáticos, reemplazo de frenos y reparaciones de motor. Además, es una excelente opción para <strong>montaje de muebles, reparaciones de electrodomésticos</strong> y cualquier proyecto de bricolaje que requiera un juego de herramientas fiable y completo.
+              </p>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+              <h4 class="text-lg font-semibold text-red-800 mb-3">🎯 Recomendación del Experto</h4>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Calificación: 4.8/5.0</strong><br>
+                El juego CARTMAN de 218 piezas ofrece una de las mejores relaciones calidad-precio del mercado. La calidad del acero Cr-V y el cumplimiento de los estándares ANSI lo colocan por encima de los kits de iniciación básicos. El trinquete de 72 dientes es una característica premium que normalmente se encuentra en juegos más caros. Por un precio de <strong>$${product.price}</strong>, es difícil encontrar un kit más completo y fiable. Es la elección perfecta para quien busca construir un taller completo con una sola compra, garantizando tener la herramienta adecuada para casi cualquier trabajo mecánico.
+              </p>
             </div>
           </div>
         `
@@ -4240,175 +4534,16 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     <div className="p-3 bg-white/20 rounded-lg">
                       <Award className="w-7 h-7" />
                     </div>
-                    Análisis Técnico Profesional - {product.title}
+                    {generateTechnicalReview(product).title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8">
-                  {product.technical_analysis ? (
-                    <div 
-                      className="prose max-w-none"
-                      dangerouslySetInnerHTML={{ 
-                        __html: `
-                          <div class="space-y-6">
-                            <div class="bg-gradient-to-r from-slate-50 to-neutral-50 p-6 rounded-lg border-l-4 border-slate-500">
-                              <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Evaluación Técnica Integral</h3>
-                              <p class="text-gray-700 leading-relaxed">
-                                El <strong>Bosch GLM 25-23</strong> representa la culminación de la ingeniería alemana en instrumentos de medición láser compactos, incorporando tecnología de vanguardia respaldada por la certificación ISO 16331-1 y posicionándose como el #10 en la categoría de Telémetros Láser en Amazon México. Este dispositivo redefine los estándares de precisión, portabilidad y funcionalidad en medidores láser profesionales.
-                              </p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                              <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
-                                <h4 class="text-lg font-semibold text-blue-800 mb-3">🔬 Tecnología Láser Avanzada</h4>
-                                <ul class="space-y-2 text-sm text-gray-700">
-                                  <li><strong>Diodo láser:</strong> Clase 2 con longitud de onda 635 nm (rojo visible)</li>
-                                  <li><strong>Sistema ToF:</strong> Tiempo de vuelo de nueva generación</li>
-                                  <li><strong>Precisión:</strong> ±2 mm (33% superior al estándar de ±3 mm)</li>
-                                  <li><strong>Procesador:</strong> 32 bits con filtrado adaptativo</li>
-                                  <li><strong>Rango operativo:</strong> 0.15 a 25 metros</li>
-                                  <li><strong>Certificación:</strong> ISO 16331-1 para aplicaciones industriales</li>
-                                </ul>
-                              </div>
-
-                              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
-                                <h4 class="text-lg font-semibold text-green-800 mb-3">⚙️ Innovación en Cálculo de Superficies</h4>
-                                <ul class="space-y-2 text-sm text-gray-700">
-                                  <li><strong>Algoritmo patentado:</strong> Cálculo de área automático</li>
-                                  <li><strong>Mediciones perpendiculares:</strong> Dos mediciones simples</li>
-                                  <li><strong>Ahorro de tiempo:</strong> 75% más rápido que métodos tradicionales</li>
-                                  <li><strong>Interfaz simple:</strong> Solo 2 botones intuitivos</li>
-                                  <li><strong>Unidades múltiples:</strong> 8 sistemas de medición diferentes</li>
-                                  <li><strong>Pantalla LCD:</strong> Alto contraste con retroiluminación</li>
-                                </ul>
-                              </div>
-                            </div>
-
-                            <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
-                              <h4 class="text-lg font-semibold text-purple-800 mb-3">🏗️ Aplicaciones Profesionales Certificadas</h4>
-                              <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-                                <div>
-                                  <h5 class="font-semibold text-purple-700">Arquitectura</h5>
-                                  <p class="text-gray-600">Levantamientos precisos, planificación de espacios, verificación de medidas</p>
-                                </div>
-                                <div>
-                                  <h5 class="font-semibold text-purple-700">Construcción</h5>
-                                  <p class="text-gray-600">Presupuestación de materiales, control de calidad, verificación de tolerancias</p>
-                                </div>
-                                <div>
-                                  <h5 class="font-semibold text-purple-700">Instalaciones</h5>
-                                  <p class="text-gray-600">Sistemas eléctricos, mecánicos, plomería, HVAC</p>
-                                </div>
-                                <div>
-                                  <h5 class="font-semibold text-purple-700">Tasación</h5>
-                                  <p class="text-gray-600">Inmobiliaria profesional, valuaciones, peritajes</p>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="bg-orange-50 p-6 rounded-lg border border-orange-200">
-                              <h4 class="text-lg font-semibold text-orange-800 mb-3">👥 Experiencia de Usuario Validada</h4>
-                              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                  <h5 class="font-semibold text-orange-700 mb-2">Testimonios Profesionales:</h5>
-                                  <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• <strong>Irving Flores Ayala:</strong> "Muy buen láser. Práctico y cabe en todos lados... para hacer mediciones efectivas en la obra"</li>
-                                    <li>• <strong>Joel Tun:</strong> "Es una herramienta muy útil. Reduce significativamente los tiempos de un levantamiento"</li>
-                                    <li>• <strong>Daniel Nicolas Torres:</strong> "Facilidad de manejo, menor esfuerzo y mayor precisión"</li>
-                                    <li>• <strong>Luis Alfonso Morales:</strong> "Muy práctica casi nulo margen de error en las mediciones"</li>
-                                  </ul>
-                                </div>
-                                <div>
-                                  <h5 class="font-semibold text-orange-700 mb-2">Estadísticas de Satisfacción:</h5>
-                                  <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• 110 calificaciones globales verificadas</li>
-                                    <li>• 78% otorgan 5 estrellas (máxima satisfacción)</li>
-                                    <li>• 4.5/5 estrellas promedio general</li>
-                                    <li>• Ranking #10 en Telémetros Láser Amazon MX</li>
-                                    <li>• Validación de campo por usuarios profesionales</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                              <h4 class="text-lg font-semibold text-yellow-800 mb-3">🔧 Construcción Robusta y Durabilidad</h4>
-                              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                  <h5 class="font-semibold text-yellow-700 mb-2">Materiales Premium:</h5>
-                                  <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Carcasa de policarbonato de grado aeronáutico</li>
-                                    <li>• Insertos TPE en zonas de alta tensión</li>
-                                    <li>• Resistencia a impactos hasta 1.5 metros</li>
-                                    <li>• Protección IP54 contra polvo y agua</li>
-                                    <li>• Resistencia a solventes industriales</li>
-                                  </ul>
-                                </div>
-                                <div>
-                                  <h5 class="font-semibold text-yellow-700 mb-2">Diseño Ultracompacto:</h5>
-                                  <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Dimensiones: 100 x 43 x 24 mm</li>
-                                    <li>• Peso optimizado: 90 gramos con baterías</li>
-                                    <li>• Portabilidad extrema para profesionales móviles</li>
-                                    <li>• Compatible con clips y sistemas de transporte</li>
-                                    <li>• El más portátil de su categoría profesional</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="bg-indigo-50 p-6 rounded-lg border border-indigo-200">
-                              <h4 class="text-lg font-semibold text-indigo-800 mb-3">🔋 Sistema Energético Inteligente</h4>
-                              <p class="text-gray-700 mb-4">
-                                El GLM 25-23 incorpora gestión energética multicapa con algoritmos predictivos. Con dos pilas AAA estándar, proporciona hasta 5,000 mediciones continuas en condiciones normales de operación.
-                              </p>
-                              <div class="bg-white p-4 rounded border">
-                                <h5 class="font-semibold text-gray-800 mb-2">Características Energéticas:</h5>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                  <li>• Compatible con pilas alcalinas y litio</li>
-                                  <li>• Tres modos de apagado automático configurables</li>
-                                  <li>• Modo económico: 20 segundos</li>
-                                  <li>• Modo estándar: 90 segundos</li>
-                                  <li>• Modo extendido: 5 minutos</li>
-                                </ul>
-                              </div>
-                            </div>
-
-                            <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
-                              <h4 class="text-lg font-semibold text-teal-800 mb-3">💰 Análisis Competitivo y Valor</h4>
-                              <p class="text-gray-700 mb-4">
-                                A <strong>$1,155 MXN</strong> con descuento del 8%, el GLM 25-23 establece un nuevo paradigma en la relación valor-rendimiento, ofreciendo características profesionales tradicionalmente reservadas para equipos de mayor costo.
-                              </p>
-                              <div class="bg-white p-4 rounded border">
-                                <h5 class="font-semibold text-gray-800 mb-2">Ventajas Competitivas:</h5>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                  <li>• Precisión ±2 mm vs. ±3 mm estándar industria</li>
-                                  <li>• Certificación ISO 16331-1 completa</li>
-                                  <li>• Ingeniería alemana Bosch Professional</li>
-                                  <li>• 33% superior en precisión que competidores</li>
-                                  <li>• Mejor relación precio-características del segmento</li>
-                                </ul>
-                              </div>
-                            </div>
-
-                            <div class="bg-red-50 p-6 rounded-lg border border-red-200">
-                              <h4 class="text-lg font-semibold text-red-800 mb-3">🎯 Recomendación del Experto</h4>
-                              <p class="text-gray-700 leading-relaxed">
-                                <strong>Calificación: 4.8/5.0</strong><br>
-                                El Bosch GLM 25-23 representa la síntesis perfecta entre innovación tecnológica alemana, practicidad operativa y valor económico. Su combinación única de precisión certificada, portabilidad extrema, facilidad de uso y construcción robusta lo establecen como la herramienta de referencia para profesionales que demandan excelencia en mediciones láser. La validación de mercado, respaldada por usuarios profesionales y su posicionamiento en rankings de Amazon, confirma su estatus como líder indiscutible en la categoría de medidores láser compactos profesionales.
-                              </p>
-                            </div>
-                          </div>
-                        ` 
-                      }}
-                    />
-                  ) : (
-                    <div 
-                      className="prose max-w-none"
-                      dangerouslySetInnerHTML={{ 
-                        __html: generateTechnicalReview(product).content 
-                      }}
-                    />
-                  )}
+                <CardContent className="p-0">
+                  <div 
+                    className="prose max-w-none p-8"
+                    dangerouslySetInnerHTML={{ 
+                      __html: generateTechnicalReview(product).content 
+                    }}
+                  />
                 </CardContent>
               </Card>
 

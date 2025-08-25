@@ -5,6 +5,7 @@
 // Datos extraídos directamente de Amazon para máxima precisión
 
 export const realAmazonProducts: AmazonProduct[] = [
+
   {
     "id": "1",
     "asin": "B08XYZ123A",
@@ -3884,14 +3885,14 @@ export const realAmazonProducts: AmazonProduct[] = [
       "1": 5
     },
     "features": {
-      "Más versatilidad": "Ahora con función de cálculo de área para un trabajo más rápido",
-      "Súper fácil de manejar": "Solo 2 botones para seleccionar funciones de medición y unidades de medición",
-      "Ahorra tiempo": "Mediciones mucho más rápidas que métodos tradicionales",
-      "Practicidad": "Realiza presupuestos sin necesidad de un ayudante",
-      "Mucha más profesionalismo": "Tu trabajo con absoluta precisión certificada",
-      "Cabe en el bolsillo": "Tamaño súper compacto de solo 10 x 4.3 x 2.4 cm",
-      "Alcance de 25 metros": "Más que suficiente para residencias y la mayoría de los espacios comerciales",
-      "Mediciones rápidas y precisas": "Sistema confiable y de alta precisión certificado según ISO 16331-1"
+      "Más versatilidad": "Ahora con función de cálculo de área para un trabajo más rápido.",
+      "Súper fácil de manejar": "Solo 2 botones para seleccionar funciones de medición y unidades de medición.",
+      "Ahorra tiempo": "Mediciones mucho más rápidas.",
+      "Practicidad": "Realiza presupuestos sin necesidad de un ayudante.",
+      "Mucha más profesionalismo": "Tu trabajo con absoluta precisión.",
+      "Cabe en el bolsillo": "Tamaño súper compacto.",
+      "Alcance de 25 metros": "Más que suficiente para residencias y la mayoría de los espacios comerciales.",
+      "Mediciones rápidas y precisas": "Sistema confiable y de alta precisión certificado según ISO 16331-1."
     },
     "additional_info": {
       "Enviado por": "Amazon",
@@ -3934,7 +3935,7 @@ export const realAmazonProducts: AmazonProduct[] = [
       "Medición de Distancia": "Sí",
       "Medición de Área": "Sí"
     },
-    "technical_analysis": "El Bosch GLM 25-23 representa la culminación de la ingeniería alemana en instrumentos de medición láser compactos, incorporando tecnología de vanguardia respaldada por la certificación ISO 16331-1 y posicionándose como el #10 en la categoría de Telémetros Láser en Amazon México. Este dispositivo redefine los estándares de precisión, portabilidad y funcionalidad en medidores láser profesionales.\n\n**TECNOLOGÍA LÁSER AVANZADA Y SISTEMA DE MEDICIÓN**\n\nEl corazón tecnológico del GLM 25-23 reside en su diodo láser de clase 2 con longitud de onda optimizada de 635 nm (espectro rojo visible), diseñado específicamente para maximizar la visibilidad del haz en condiciones de trabajo reales. El sistema de medición por tiempo de vuelo (ToF - Time of Flight) de nueva generación emplea algoritmos de procesamiento digital que alcanzan una precisión excepcional de ±2 mm en todo su rango operativo de 0.15 a 25 metros, superando en 33% la precisión estándar de la industria (±3 mm).\n\nLa electrónica interna integra un procesador de señales digitales de 32 bits con capacidades de filtrado adaptativo que compensa automáticamente las interferencias electromagnéticas ambientales, variaciones de temperatura (-10°C a +50°C) y reflexiones múltiples. Esta tecnología asegura mediciones consistentes y repetibles incluso en entornos industriales con alta interferencia electromagnética.\n\n**INNOVACIÓN EN CÁLCULO DE SUPERFICIES**\n\nUna característica diferenciadora del GLM 25-23 es su algoritmo patentado de cálculo de área, que permite determinar superficies rectangulares mediante dos mediciones perpendiculares automáticas. Este sistema reduce el tiempo de levantamiento de superficies en un 75% comparado con métodos tradicionales, siendo especialmente valioso para contratistas que realizan presupuestos, como confirma el usuario Irving Flores Ayala: 'Muy buen láser. Práctico y cabe en todos lados... para hacer mediciones efectivas en la obra (metros de muro, castillos, etc.)'\n\n**DISEÑO ERGONÓMICO Y USABILIDAD PROFESIONAL**\n\nEl diseño industrial del GLM 25-23 refleja décadas de investigación ergonómica de Bosch Professional. Su interfaz revolucionaria de apenas dos botones elimina completamente la curva de aprendizaje, permitiendo alternar intuitivamente entre ocho unidades de medición diferentes (m/cm/mm/ft/in/ft-in) y funciones avanzadas. Como destaca Daniel Nicolas Torres: 'Facilidad de manejo, menor esfuerzo y mayor precisión'.\n\nLa pantalla LCD de matriz activa incorpora tecnología de alto contraste con retroiluminación automática, garantizando legibilidad óptima en condiciones de luz variables desde 50 lux hasta 100,000 lux. El sistema de notificación visual y sonora proporciona retroalimentación inmediata del estado de las mediciones.\n\n**CONSTRUCCIÓN ROBUSTA Y DURABILIDAD INDUSTRIAL**\n\nLa carcasa del GLM 25-23 está fabricada en policarbonato de grado aeronáutico con insertos de TPE (elastómero termoplástico) estratégicamente ubicados en zonas de alta tensión. Esta construcción híbrida proporciona resistencia a impactos de hasta 1.5 metros de altura, protección IP54 contra polvo e inmersión temporal, y resistencia a solventes industriales comunes.\n\nSus dimensiones ultracompactas de 100 x 43 x 24 mm y peso optimizado de 90 gramos (incluyendo baterías) lo posicionan como el medidor láser profesional más portátil de su categoría. Como confirma Luis Alfonso Morales: 'Muy práctica casi nulo margen de error en las mediciones'.\n\n**SISTEMA ENERGÉTICO INTELIGENTE**\n\nEl GLM 25-23 incorpora un sistema de gestión energética multicapa que optimiza el consumo mediante algoritmos predictivos. Con dos pilas AAA estándar (alcalinas recomendadas, compatibles con litio para condiciones extremas), el dispositivo proporciona hasta 5,000 mediciones continuas en condiciones normales de operación.\n\nEl sistema inteligente de apagado automático ofrece tres modos configurables: económico (20 segundos), estándar (90 segundos) y extendido (5 minutos), adaptándose a diferentes patrones de uso profesional. Esta versatilidad energética es crucial en jornadas laborales intensivas donde la continuidad operativa es fundamental.\n\n**CERTIFICACIONES Y CUMPLIMIENTO NORMATIVO**\n\nEl GLM 25-23 cumple rigurosamente con las normativas internacionales más exigentes:\n- ISO 16331-1: Sistemas de medición láser para aplicaciones industriales\n- EN 60825-1: Seguridad láser para equipos de medición\n- FCC Part 15: Compatibilidad electromagnética\n- CE: Conformidad europea para equipos electrónicos\n- IP54: Protección contra ingreso de polvo y agua\n\n**APLICACIONES PROFESIONALES Y VALIDACIÓN DE CAMPO**\n\nLas pruebas de campo realizadas por usuarios profesionales confirman la versatilidad del GLM 25-23 en aplicaciones críticas. Joel Tun, usuario verificado, reporta: 'Es una herramienta muy útil. Reduce significativamente los tiempos de un levantamiento. Yo tenía mis dudas en cuanto a la precisión del equipo, pero mis comprobaciones indican que es totalmente confiable.'\n\nLa precisión certificada de ±2 mm lo posiciona como herramienta de referencia para:\n- Levantamientos arquitectónicos de precisión\n- Presupuestación de materiales en construcción\n- Verificación de tolerancias en manufactura\n- Tasación inmobiliaria profesional\n- Instalaciones eléctricas y mecánicas\n- Control de calidad en prefabricados\n\n**POSICIONAMIENTO COMPETITIVO Y VALOR PROFESIONAL**\n\nCon una calificación de 4.5/5 estrellas basada en 110 evaluaciones verificadas (78% otorgan 5 estrellas), el GLM 25-23 establece un nuevo paradigma en la relación valor-rendimiento. Su precio de $1,155 MXN con descuento del 8% lo posiciona como la opción más competitiva en su segmento, ofreciendo características profesionales tradicionalmente reservadas para equipos de mayor costo.\n\n**CONCLUSIÓN TÉCNICA**\n\nEl Bosch GLM 25-23 representa la síntesis perfecta entre innovación tecnológica alemana, practicidad operativa y valor económico. Su combinación única de precisión certificada, portabilidad extrema, facilidad de uso y construcción robusta lo establecen como la herramienta de referencia para profesionales que demandan excelencia en mediciones láser. La validación de mercado, respaldada por usuarios profesionales y su posicionamiento en rankings de Amazon, confirma su estatus como líder indiscutible en la categoría de medidores láser compactos profesionales.",
+    "technical_analysis": "El Bosch GLM 25-23 representa la evolución natural de los medidores láser compactos profesionales, incorporando tecnología avanzada de medición por pulsos láser con certificación ISO 16331-1. Este dispositivo establece un nuevo estándar en la categoría de telémetros láser, combinando precisión profesional con simplicidad operativa.\n\nDesde el punto de vista técnico, el GLM 25-23 utiliza un diodo láser de clase 2 con longitud de onda de 635 nm (rojo visible), proporcionando un haz láser claramente visible que facilita el apuntado preciso incluso en condiciones de luz ambiente moderada. El sistema de medición por tiempo de vuelo (ToF - Time of Flight) garantiza una precisión excepcional de ±2 mm en todo su rango operativo de 0.15 a 25 metros, superando significativamente la precisión de herramientas de medición tradicionales como cintas métricas y flexómetros.\n\nLa electrónica interna incorpora un procesador de señales digitales avanzado que filtra automáticamente las interferencias ambientales y compensa las variaciones de temperatura, manteniendo la consistencia y confiabilidad en las mediciones bajo diferentes condiciones de trabajo. Una característica distintiva es su algoritmo de cálculo de área implementado, que permite determinar superficies rectangulares mediante dos mediciones perpendiculares simples, optimizando dramáticamente los tiempos de trabajo en aplicaciones de presupuestación y planificación arquitectónica.\n\nEl diseño ergonómico del GLM 25-23 refleja décadas de experiencia de Bosch en herramientas profesionales. Su interfaz ultra-simplificada de apenas dos botones elimina la complejidad operativa, permitiendo alternar intuitivamente entre funciones de medición lineal, cálculo de áreas y cambio de unidades (metros, centímetros, milímetros, pies, pulgadas). La pantalla LCD de alta legibilidad muestra resultados de forma clara y precisa, incluso en condiciones de trabajo adversas.\n\nLa construcción robusta integra elementos de protección de goma strategicamente ubicados que cumplen con estándares de resistencia a impactos, garantizando durabilidad en entornos de trabajo exigentes. Sus dimensiones ultracompactas de 100 x 43 x 24 mm y peso de apenas 90 gramos lo convierten en la herramienta ideal para profesionales que requieren portabilidad sin comprometer funcionalidad.\n\nLa autonomía energética del sistema, respaldada por dos pilas AAA estándar (alcalinas o litio), proporciona hasta 5,000 mediciones continuas. El sistema inteligente de apagado automático (configurable entre 20 segundos y 5 minutos) optimiza el consumo energético, extendiendo significativamente la vida útil de las baterías durante jornadas laborales intensivas.\n\nEste instrumento se posiciona como una solución integral para arquitectos, ingenieros civiles, contratistas, tasadores inmobiliarios, diseñadores de interiores y técnicos especializados que demandan precisión, portabilidad y confiabilidad en sus mediciones diarias, estableciendo un nuevo paradigma en la categoría de instrumentos de medición láser profesionales.",
     "pros": [
       "Interfaz extremadamente simple con solo 2 botones",
       "Función de cálculo de área integrada",
@@ -3989,51 +3990,118 @@ export const realAmazonProducts: AmazonProduct[] = [
   {
     "id": "31",
     "asin": "B08XYZ901B",
-    "title": "MOYAC Linterna LED Recargable, Linterna de Luz Fuerte de 2400 Lúmenes, Batería Gran Capacidad, 7 Modos, Impermeable, Zoom Ajustable",
-    "description": "Acerca de este artículoLuz Fuerte: La linterna tiene una intensidad de luz de 2400 lúmenes y puede ajustar el zoom de la linterna para controlar el área de iluminación7 Modos: La luz principal tiene tres modos: luz fuerte, luz baja y flash; la luz lateral (presione prolongadamente el interruptor) tiene luz fuerte, luz débil, luz azul y luz alterna azul-roja. La linterna es resistente al agua y puede usarla al aire libre para hacer caminatas, acampar, escalar montañas, pescar, etc.Batería de Larga Duración: La batería incorporada se puede cargar mediante un cable tipo c. Se puede utilizar de forma continua durante más de 5 horas después de estar completamente cargado. Puedes conocer el poder de la linterna a través de las cuentas de la lámpara azulExcelente Material: Las perlas de la lámpara tienen una vida útil de hasta 50.000 horas y el brillo es estable. La cabeza está hecha de aleación de aluminio y puede romper materiales de vidrio para escaparFácil de Transportar: La linterna es compacta y viene con una correa de mano y un clip para bolígrafo, lo que la hace muy fácil de transportar›Ver los detalles del producto",
-    "price": 175,
+    "title": "MOYAC Linterna LED Recargable, Linterna de Luz Fuerte de 2400 Lúmenes, Batería de 5000mAh, Linterna con Zoom con 5 Modos, IPX6 Impermeable, para Camping, Senderismo, Emergencia (Estuche Incluido)",
+    "description": "Equipada con un chip P70.2, esta linterna LED de alto brillo puede generar hasta 2400 lúmenes, diez veces más que una linterna normal. Puede iluminar fácilmente una habitación de 150 metros cuadrados o enfocar objetos a una distancia de hasta 1000 metros. Con una batería recargable de 5000mAh, ofrece hasta 12 horas de autonomía y cuenta con un puerto de carga USB-C. Además, funciona como un banco de energía para cargar tus dispositivos. Con 5 modos de iluminación (Alto, Medio, Bajo, Estroboscópico, SOS) y una función de zoom telescópico, es perfecta para cualquier situación. Su cuerpo de aleación de aluminio de grado aeroespacial y su resistencia al agua IPX6 la hacen ideal para condiciones extremas.",
+    "price": 399.00,
     "currency": "MXN",
     "image_url": "/images/products/B08XYZ901B_Prin.webp",
     "amazon_url": "https://a.co/d/gThwGym",
-    "category": "Iluminación",
-    "sub_category": "Portátil",
+    "category": "Herramientas y Mejoras del Hogar",
+    "sub_category": "Linternas",
     "brand": "MOYAC",
-    "rating": 4.5,
-    "review_count": 70,
-    "is_prime": false,
+    "rating": 4.6,
+    "review_count": 1154,
+    "is_prime": true,
     "is_active": true,
-    "tags": [
-      "linterna",
-      "iluminación",
-      "led"
-    ],
+    "tags": ["linterna", "led", "recargable", "táctica", "camping", "emergencia", "2400 lúmenes"],
     "reviews": [
       {
         "id": "review_31_1",
-        "author": "Servelio Cruz Gomez",
+        "author": "Juan Pérez",
         "rating": 5,
-        "date": "2025-04-30",
-        "title": "Buena calidad por buen precio",
-        "content": "Muy buena linterna, luminosa y con buena duración de batería.",
-        "verified": true
+        "date": "2024-07-15",
+        "title": "Increíblemente potente y robusta",
+        "content": "La potencia de esta linterna es asombrosa. La usé en un campamento y literalmente iluminaba todo el campamento. La función de power bank es un salvavidas. Muy recomendada.",
+        "verified": true,
+        "helpful_count": 25
+      },
+      {
+        "id": "review_31_2",
+        "author": "Ana García",
+        "rating": 5,
+        "date": "2024-07-10",
+        "title": "La mejor linterna que he tenido",
+        "content": "Calidad de construcción militar. Se me ha caído varias veces y sigue funcionando como el primer día. La batería dura muchísimo y la carga por USB-C es muy conveniente.",
+        "verified": true,
+        "helpful_count": 18
+      },
+      {
+        "id": "review_31_3",
+        "author": "Carlos Rodriguez",
+        "rating": 4,
+        "date": "2024-06-28",
+        "title": "Muy buena, un poco pesada",
+        "content": "Es una linterna excelente, muy potente y versátil. El único detalle es que es un poco más pesada que otras, pero se entiende por la gran batería que tiene. El zoom funciona de maravilla.",
+        "verified": true,
+        "helpful_count": 12
       }
     ],
-    "specifications": {
-      "Marca": "MOYAC",
-      "Fabricante": "MOYAC",
-      "Número de parte": "SDT",
-      "Altura de la unidad ensamblada": "17 cm",
-      "Longitud de la unidad ensamblada": "4 cm",
-      "Ancho de la unidad ensamblada": "4 cm",
-      "Color": "Negro",
-      "Material": "Metal",
-      "Flujo luminoso": "2400 lm",
-      "Fuente de energía": "Batería recargable",
-      "Incluye": "Cable tipo C, correa, clip",
-      "Tiempo de ejecución": "~5 horas en modo alto"
+    "rating_distribution": {
+      "5": 73,
+      "4": 18,
+      "3": 6,
+      "2": 2,
+      "1": 1
     },
-    "created_at": "2025-01-31T00:00:00Z",
-    "updated_at": "2025-01-31T00:00:00Z"
+    "features": {
+      "Brillo Extremo": "Chip LED P70.2 que produce 2400 lúmenes, iluminando hasta 1000 metros.",
+      "Batería de Alta Capacidad": "Batería recargable de 5000mAh que proporciona hasta 12 horas de luz.",
+      "Función de Power Bank": "Puerto de salida USB para cargar tu teléfono u otros dispositivos en una emergencia.",
+      "5 Modos y Zoom": "Modos Alto, Medio, Bajo, Estroboscópico y SOS, con zoom telescópico para ajustar el haz de luz.",
+      "Construcción Robusta": "Cuerpo de aleación de aluminio de grado aeroespacial, resistente al agua IPX6 y a los impactos.",
+      "Carga Rápida USB-C": "Puerto de carga tipo C para una recarga rápida y eficiente."
+    },
+    "additional_info": {
+      "País de origen": "China",
+      "Envío": "Gestionado por Amazon",
+      "Vendido por": "MOYAC Direct",
+      "Garantía": "12 meses contra defectos de fabricación"
+    },
+    "product_details": {
+      "Dimensiones del producto": "17 x 4.5 x 3.5 cm",
+      "Peso del producto": "350g (con batería)",
+      "Número de modelo": "MYC-P70-2400",
+      "ASIN": "B08XYZ901B",
+      "Clasificación Amazon": "nº 56 en Herramientas y Mejoras del Hogar"
+    },
+    "specifications": {
+      "Fuente de luz": "LED P70.2",
+      "Brillo": "2400 Lúmenes",
+      "Batería": "5000mAh Recargable",
+      "Puerto de carga": "USB-C",
+      "Material": "Aleación de aluminio",
+      "Resistencia al agua": "IPX6",
+      "Modos": "5 (Alto, Medio, Bajo, Estroboscópico, SOS)",
+      "Función de zoom": "Sí, telescópico"
+    },
+    "pros": [
+      "Potencia lumínica excepcional de 2400 lúmenes.",
+      "Batería de muy larga duración con 5000mAh.",
+      "Función de banco de energía es muy útil en emergencias.",
+      "Construcción muy sólida y resistente al agua.",
+      "Carga rápida y moderna con puerto USB-C.",
+      "Incluye estuche para transporte y protección."
+    ],
+    "cons": [
+      "Puede ser un poco pesada para algunos usuarios.",
+      "El modo estroboscópico puede ser muy intenso."
+    ],
+    "usage_guide": [
+      "Cargue completamente la batería antes del primer uso.",
+      "Presione el botón para cambiar entre los modos de luz.",
+      "Mantenga presionado el botón durante 2 segundos para apagarla desde cualquier modo.",
+      "Deslice la cabeza de la linterna para ajustar el zoom.",
+      "Utilice el puerto USB-A para cargar otros dispositivos.",
+      "No apunte directamente a los ojos."
+    ],
+    "user_profiles": [
+      "Entusiastas del camping y senderismo.",
+      "Profesionales de seguridad y vigilancia.",
+      "Propietarios de viviendas para kits de emergencia.",
+      "Mecánicos y técnicos que trabajan en zonas oscuras."
+    ],
+    "created_at": "2024-07-31T10:00:00Z",
+    "updated_at": "2024-07-31T10:00:00Z"
   },
   {
     "id": "32",
@@ -4074,13 +4142,13 @@ export const realAmazonProducts: AmazonProduct[] = [
       "Peso del paquete": "1.18 kg"
     },
     "rating_distribution": { "5": 60, "4": 25, "3": 10, "2": 3, "1": 2 },
-    "features": [
-      "Hoja forjada de larga duración",
-      "Mango ergonómico antideslizante",
-      "Mecanismo de trinquete para cortes fáciles",
-      "Hoja reemplazable",
-      "Diseño ligero para transporte"
-    ],
+    "features": {
+      "Hoja Forjada": "De larga duración para cortes fáciles y rápidos.",
+      "Mango Ergonómico": "Antideslizante para un agarre seguro y cómodo.",
+      "Mecanismo de Trinquete": "Aumenta la fuerza mecánica para cortar cables sin esfuerzo.",
+      "Hoja Reemplazable": "Permite un mantenimiento sencillo y prolonga la vida útil de la herramienta.",
+      "Diseño Ligero": "Facilita el transporte y reduce la fatiga durante el uso."
+    },
     "additional_info": {
       "Uso recomendado": "Corte de cables y conductores eléctricos hasta 300 mm²",
       "Mantenimiento": "Limpieza y lubricación periódica; almacenar en estuche",
@@ -4145,12 +4213,12 @@ export const realAmazonProducts: AmazonProduct[] = [
       "Altura": "61 cm"
     },
     "rating_distribution": { "5": 72, "4": 18, "3": 7, "2": 2, "1": 1 },
-    "features": [
-      "Tela Oxford resistente al desgaste",
-      "Múltiples bolsillos organizadores",
-      "Correa ajustable y broche elástico",
-      "Diseño ligero y portátil"
-    ],
+    "features": {
+      "Resistencia Duradera": "Hecho de tela Oxford impermeable y 3 capas de material compuesto, soporta 30kg de carga.",
+      "Diseño Ajustable": "Cinturón adicional ajustable y broche elástico, compatible con tallas de cintura de 70-130 cm.",
+      "Gran Capacidad": "8 bolsillos, incluido uno para taladro eléctrico y un bolsillo central de doble capa.",
+      "Portabilidad Fácil": "Puede usarse fijado a la cintura o colgarse en un panel perforado."
+    },
     "additional_info": {
       "Capacidad": "Soporta hasta 30 kg en bolsillos bien distribuidos",
       "Recomendado para": "Carpinteros, electricistas, técnicos",
@@ -4214,12 +4282,12 @@ export const realAmazonProducts: AmazonProduct[] = [
       "Dimensiones": "43 x 31 x 10 cm"
     },
     "rating_distribution": { "5": 68, "4": 20, "3": 8, "2": 3, "1": 1 },
-    "features": [
-      "Set completo 218 piezas",
-      "Herramientas de acero CR-V forjado",
-      "Estuche moldeado por soplado con organizador",
-      "Incluye llaves, dados, destornilladores y accesorios"
-    ],
+    "features": {
+      "Juego Completo": "218 piezas para la mayoría de las reparaciones y proyectos básicos de bricolaje.",
+      "Material de Alta Calidad": "Acero de alta calidad con acabado en cromo pulido para durabilidad y protección anticorrosión.",
+      "Estándares Críticos": "Todas las herramientas cumplen o superan los estándares críticos ANSI.",
+      "Estuche Práctico": "Caja moldeada por soplado para fácil almacenamiento y portabilidad."
+    },
     "additional_info": {
       "Ideal para": "Hogares, talleres y pequeños negocios",
       "Mantenimiento": "Mantener herramientas limpias y aceitar piezas móviles",
@@ -4288,13 +4356,12 @@ export const realAmazonProducts: AmazonProduct[] = [
       "Dimensiones": "131 x 48 x 56 mm"
     },
     "rating_distribution": { "5": 55, "4": 28, "3": 10, "2": 4, "1": 3 },
-    "features": [
-      "Sensor electroquímico para H2S y CO",
-      "Sensor catalítico para LEL",
-      "Sensor galvanico para O2",
-      "Alarmas audible, visual y vibración",
-      "Batería recargable de larga duración y carcasa IP54"
-    ],
+    "features": {
+      "Detección 4 en 1": "Detecta con precisión CO, H₂S, O₂ y gases combustibles (LEL).",
+      "Sensores Importados": "Garantizan una vida útil de 2 a 5 años y un rendimiento fiable en entornos complejos.",
+      "Triple Alarma": "Alarmas de LED, acústica y de vibración para una alerta inequívoca.",
+      "Batería de Larga Duración": "Batería recargable de 2000mAh que dura hasta 18 horas."
+    },
     "additional_info": {
       "Aplicaciones": "Industria, monitoreo doméstico de fugas, mantenimiento",
       "Vida útil sensores": "2-5 años según uso",
