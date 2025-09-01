@@ -1,6 +1,4 @@
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 
 interface WebhookLog {
   timestamp: string;
@@ -11,17 +9,11 @@ interface WebhookLog {
   transaction_id?: string;
 }
 
-async function logWebhookRequest(supabase: any, log: WebhookLog) {
-  try {
-    await supabase
-      .from('webhook_logs')
-      .insert({
-        ...log,
-        request_source: 'openpay'
-      });
-  } catch (error) {
-    console.error('Error logging webhook:', error);
-  }
+function logWebhookRequest(log: WebhookLog) {
+  console.log('Webhook log:', {
+    ...log,
+    request_source: 'openpay'
+  });
 }
 
 export async function POST(req: Request) {
@@ -59,85 +51,46 @@ export async function POST(req: Request) {
       return new NextResponse('Invalid event structure', { status: 400 });
     }
 
-    const supabase = createRouteHandlerClient({ cookies });
+    // Log del webhook
+    logWebhookRequest({
+      timestamp: new Date().toISOString(),
+      ip: clientIp || 'unknown',
+      event_type: event.type,
+      status: 'processed',
+      transaction_id: event.transaction.id
+    });
 
-    // Procesar diferentes tipos de eventos
+    // Procesar diferentes tipos de eventos (solo logging por ahora)
     switch (event.type) {
       case 'charge.succeeded':
-        // Actualizar el estado del pago a succeeded
-        await supabase
-          .from('payments')
-          .update({ 
-            status: 'completed',
-            updated_at: new Date().toISOString()
-          })
-          .eq('transaction_id', event.transaction.id);
-
-        // Crear notificación para el payee
-        await supabase
-          .from('notifications')
-          .insert({
-            user_id: event.transaction.payee_id,
-            title: 'Pago recibido',
-            message: `Has recibido un pago de $${event.transaction.amount} MXN`,
-            type: 'payment_received'
-          });
+        console.log(`✅ Payment succeeded: $${event.transaction.amount} MXN (Transaction: ${event.transaction.id})`);
         break;
 
       case 'charge.failed':
-        // Actualizar el estado del pago a failed
-        await supabase
-          .from('payments')
-          .update({ 
-            status: 'failed',
-            updated_at: new Date().toISOString()
-          })
-          .eq('transaction_id', event.transaction.id);
-
-        // Crear notificación para el payer
-        await supabase
-          .from('notifications')
-          .insert({
-            user_id: event.transaction.payer_id,
-            title: 'Pago fallido',
-            message: `Tu pago de $${event.transaction.amount} MXN no pudo ser procesado`,
-            type: 'payment_failed'
-          });
+        console.log(`❌ Payment failed: $${event.transaction.amount} MXN (Transaction: ${event.transaction.id})`);
         break;
 
       case 'charge.refunded':
-        // Actualizar el estado del pago a refunded
-        await supabase
-          .from('payments')
-          .update({ 
-            status: 'refunded',
-            updated_at: new Date().toISOString()
-          })
-          .eq('transaction_id', event.transaction.id);
-
-        // Crear notificaciones para ambas partes
-        await supabase
-          .from('notifications')
-          .insert([
-            {
-              user_id: event.transaction.payer_id,
-              title: 'Pago reembolsado',
-              message: `Tu pago de $${event.transaction.amount} MXN ha sido reembolsado`,
-              type: 'payment_refunded'
-            },
-            {
-              user_id: event.transaction.payee_id,
-              title: 'Pago reembolsado',
-              message: `Se ha realizado un reembolso de $${event.transaction.amount} MXN`,
-              type: 'payment_refunded'
-            }
-          ]);
+        console.log(`🔄 Payment refunded: $${event.transaction.amount} MXN (Transaction: ${event.transaction.id})`);
         break;
+
+      default:
+        console.log(`ℹ️ Unknown event type: ${event.type} (Transaction: ${event.transaction.id})`);
     }
 
     return new NextResponse('OK', { status: 200 });
   } catch (error: any) {
     console.error('Webhook error:', error);
+    
+    // Log del error
+    logWebhookRequest({
+      timestamp: new Date().toISOString(),
+      ip: 'unknown',
+      event_type: 'error',
+      status: 'failed',
+      error: error.message
+    });
+    
     return new NextResponse(error.message, { status: 500 });
   }
 }
