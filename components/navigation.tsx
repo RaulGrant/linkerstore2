@@ -22,11 +22,7 @@ import {
   LogOut
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Separator } from '@/components/ui/separator';
-import CartSimulator from '@/components/store/CartSimulator';
-import { useCart } from '@/lib/hooks/useCart';
 
 interface NavigationProps {
   user?: {
@@ -40,7 +36,6 @@ interface NavigationProps {
 export default function Navigation({ user }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { cart } = useCart();
 
   const isAuthenticated = !!user;
   const isCompany = user?.role === 'company';
