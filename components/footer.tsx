@@ -23,8 +23,8 @@ export function Footer() {
               <span className="text-xl font-bold">LinkerPro</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              La plataforma líder que conecta empresas con freelancers especializados en ingeniería, automatización y
-              tecnología industrial.
+              Tu fuente confiable de información sobre seguridad industrial y equipos de protección personal. 
+              Ayudando a profesionales a crear ambientes de trabajo más seguros.
             </p>
             <div className="flex space-x-3">
               <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white p-2">
@@ -44,35 +44,40 @@ export function Footer() {
 
           {/* Enlaces principales */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Navegación Principal</h3>
+            <h3 className="text-lg font-semibold">Contenido</h3>
             <div className="space-y-2">
-              <Link href="/#como-funciona" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Cómo Funciona
+              <Link href="/blog" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Blog de Seguridad
               </Link>
-              <Link href="/#para-empresas" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Para Empresas
+              <Link href="/guias" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Guías Técnicas
               </Link>
-              <Link href="/#para-freelancers" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Para Freelancers
+              {/* Temporalmente oculto
+              <Link href="/store" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Catálogo de Productos
               </Link>
-              <Link href="/#precios" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Precios
+              */}
+              <Link href="/sobre-nosotros" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Sobre Nosotros
               </Link>
             </div>
           </div>
 
           {/* Enlaces legales */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Legal y Soporte</h3>
+            <h3 className="text-lg font-semibold">Legal y Privacidad</h3>
             <div className="space-y-2">
-              <Link href="/terms" className="block text-gray-300 hover:text-white text-sm transition-colors">
+              <Link href="/legal/politica-privacidad" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Política de Privacidad
+              </Link>
+              <Link href="/legal/terminos-condiciones" className="block text-gray-300 hover:text-white text-sm transition-colors">
                 Términos y Condiciones
               </Link>
-              <Link href="/faq" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Preguntas Frecuentes
+              <Link href="/legal/divulgacion-afiliados" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Divulgación de Afiliados
               </Link>
-              <Link href="/support" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Soporte
+              <Link href="/legal/cookies" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Política de Cookies
               </Link>
             </div>
           </div>
@@ -116,14 +121,14 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-gray-400">© 2025 LinkerPro. Todos los derechos reservados.</div>
           <div className="flex items-center space-x-6 text-sm text-gray-400">
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link href="/legal/politica-privacidad" className="hover:text-white transition-colors">
               Política de Privacidad
             </Link>
-            <Link href="/cookies" className="hover:text-white transition-colors">
+            <Link href="/legal/cookies" className="hover:text-white transition-colors">
               Cookies
             </Link>
-            <Link href="/legal" className="hover:text-white transition-colors">
-              Aviso Legal
+            <Link href="/legal/terminos-condiciones" className="hover:text-white transition-colors">
+              Términos y Condiciones
             </Link>
           </div>
         </div>

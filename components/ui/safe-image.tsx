@@ -15,7 +15,7 @@ interface SafeImageProps {
   sizes?: string;
 }
 
-export function SafeImage({
+function SafeImage({
   src,
   alt,
   className = '',

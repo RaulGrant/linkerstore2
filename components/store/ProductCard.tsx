@@ -2,29 +2,41 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Star, ShoppingCart, Heart, ExternalLink, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Star, Heart, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { SafeImage } from '@/components/ui/safe-image';
 import { AmazonProduct } from '@/lib/types/store';
-import { useCart } from '@/lib/hooks/useCart';
-import ProductQuickViewModal from '@/components/modals/ProductQuickViewModal';
+
+// Crear una referencia lazy del modal para evitar problemas de imports
+let ProductQuickViewModal: any = null;
 
 interface ProductCardProps {
   product: AmazonProduct;
   showViewDetails?: boolean;
 }
 
-export default function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
+function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { addToCart, isInCart, getItemQuantity } = useCart();
+  const [ModalComponent, setModalComponent] = useState<any>(null);
   const router = useRouter();
 
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    addToCart(product);
+  // Cargar el modal de forma asíncrona cuando se necesite
+  const loadModal = async () => {
+    if (!ModalComponent) {
+      try {
+        // Usar el modal simple temporalmente
+        const module = await import('@/components/modals/SimpleModal');
+        const Component = module.default;
+        setModalComponent(() => Component);
+        return Component;
+      } catch (error) {
+        console.error('Error loading modal:', error);
+        return null;
+      }
+    }
+    return ModalComponent;
   };
 
   const handleViewOnAmazon = (e: React.MouseEvent) => {
@@ -32,15 +44,18 @@ export default function ProductCard({ product, showViewDetails = true }: Product
     window.open(product.amazon_url, '_blank');
   };
 
-  const handleViewDetails = () => {
+  const handleViewDetails = async (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (showViewDetails) {
+      await loadModal();
       setIsModalOpen(true);
     }
   };
 
-  const handleViewFullDetails = (e: React.MouseEvent) => {
+  const handleImageClick = async (e: React.MouseEvent) => {
     e.stopPropagation();
-    router.push(`/store/${product.asin}`);
+    await loadModal();
+    setIsModalOpen(true);
   };
 
   return (
@@ -50,17 +65,36 @@ export default function ProductCard({ product, showViewDetails = true }: Product
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={handleViewDetails}
     >
       <CardContent className="p-4">
-        <div className="relative aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
-          <SafeImage
-            src={`/images/products/${product.asin}_Prin.webp`}
-            alt={product.title}
-            fill
-            className="object-cover"
-            fallbackSrc="/placeholder-product.svg"
-          />
+        <div 
+          className="relative aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100 cursor-pointer"
+          onClick={handleImageClick}
+        >
+          {/* Imagen específica del chaleco */}
+          {product.asin === "B08XYZ123A" ? (
+            <div className="relative w-full h-full">
+              <img
+                src="/images/products/chaleco/chaleco.webp"
+                alt={product.title}
+                className="object-cover w-full h-full"
+              />
+              {/* Mini banner AI para ProductCard */}
+              <div className="absolute top-1 right-1 bg-yellow-400 text-black px-1 py-0.5 rounded text-xs font-bold">
+                🤖 IA
+              </div>
+            </div>
+          ) : (
+            <img
+              src={product.image_url}
+              alt={product.title}
+              className="object-cover w-full h-full"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/placeholder-product.svg';
+              }}
+            />
+          )}
           
           {/* Badges */}
           <div className="absolute top-2 left-2 flex flex-col gap-1">
@@ -115,13 +149,6 @@ export default function ProductCard({ product, showViewDetails = true }: Product
             )}
           </div>
 
-          <div className="flex items-center gap-1">
-            <span className="text-lg font-bold text-green-600">
-              ${product.price.toFixed(2)}
-            </span>
-            <span className="text-sm text-gray-500">{product.currency}</span>
-          </div>
-
           {product.brand && (
             <p className="text-xs text-gray-600">por {product.brand}</p>
           )}
@@ -132,43 +159,43 @@ export default function ProductCard({ product, showViewDetails = true }: Product
         <div className="space-y-2 w-full">
           <div className="flex gap-2 w-full">
             <Button 
-              className="flex-1" 
-              onClick={handleAddToCart}
-              variant={isInCart(product.id) ? "secondary" : "default"}
-            >
-              <ShoppingCart className="h-4 w-4 mr-2" />
-              {isInCart(product.id) ? 
-                `En carrito (${getItemQuantity(product.id)})` : 
-                'Agregar'
-              }
-            </Button>
-            <Button 
-              variant="outline" 
               onClick={handleViewOnAmazon}
-              className="px-3"
+              className="flex-1 bg-blue-700 hover:bg-blue-800 text-white"
             >
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Comprar en Amazon
             </Button>
           </div>
           
-          {/* Botón Ver más */}
-          <Button 
-            variant="outline" 
-            className="w-full"
-            onClick={handleViewFullDetails}
-          >
-            <Eye className="h-4 w-4 mr-2" />
-            Ver más
-          </Button>
+          <div className="flex gap-2 w-full">
+            <Button 
+              variant="outline" 
+              className="flex-1"
+              onClick={() => window.open(`/store/${product.asin}`, '_blank')}
+            >
+              Ver página completa
+            </Button>
+            <Button 
+              variant="outline" 
+              className="flex-1"
+              onClick={handleViewDetails}
+            >
+              Ver detalles
+            </Button>
+          </div>
         </div>
       </CardFooter>
       
       {/* Modal del producto */}
-      <ProductQuickViewModal 
-        product={product}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      {isModalOpen && ModalComponent && (
+        <ModalComponent 
+          product={product}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </Card>
   );
 }
+
+export default ProductCard;

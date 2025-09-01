@@ -1,71 +1,12 @@
 'use client'
 
 import { useState, useEffect } from "react";
+import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import Image from "next/image";
-import { realAmazonProducts } from "@/lib/data/real-amazon-products";
-import { AmazonProduct } from "@/lib/types/store";
-import { ArrowRight, ShoppingBag, Users, Target, Star, Timer, Sparkles, Zap, Shield, Award, Eye } from "lucide-react";
+import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
 import { useRouter } from "next/navigation";
-import ProductQuickViewModal from "@/components/modals/ProductQuickViewModal";
-
-// Verificar que los productos existan antes de usarlos
-const products = realAmazonProducts || [];
-
-// Datos fijos para las animaciones de partículas (evita errores de hidratación)
-const ANIMATION_PARTICLES = [
-  { left: 23.09, top: 73.48, delay: 0.88, duration: 5.93 },
-  { left: 26.58, top: 36.22, delay: 1.56, duration: 5.81 },
-  { left: 16.74, top: 48.94, delay: 1.13, duration: 5.43 },
-  { left: 96.37, top: 89.76, delay: 1.01, duration: 5.81 },
-  { left: 77.36, top: 86.52, delay: 2.56, duration: 3.04 },
-  { left: 36.28, top: 87.71, delay: 2.72, duration: 5.53 },
-  { left: 66.16, top: 77.82, delay: 1.04, duration: 4.56 },
-  { left: 33.67, top: 34.36, delay: 0.98, duration: 4.23 },
-  { left: 17.85, top: 52.60, delay: 2.11, duration: 6.26 },
-  { left: 44.50, top: 23.85, delay: 0.06, duration: 5.52 },
-  { left: 73.10, top: 67.10, delay: 1.88, duration: 5.35 },
-  { left: 14.13, top: 61.55, delay: 0.49, duration: 3.85 },
-  { left: 65.48, top: 84.60, delay: 0.58, duration: 3.85 },
-  { left: 6.28, top: 11.12, delay: 1.62, duration: 4.52 },
-  { left: 80.58, top: 25.86, delay: 0.51, duration: 4.87 },
-  { left: 96.26, top: 96.85, delay: 2.64, duration: 4.98 },
-  { left: 81.76, top: 14.42, delay: 0.90, duration: 5.79 },
-  { left: 88.98, top: 81.69, delay: 2.43, duration: 3.34 },
-  { left: 56.60, top: 28.85, delay: 1.99, duration: 6.30 },
-  { left: 18.97, top: 35.49, delay: 2.39, duration: 4.08 }
-];
-
-const categories = [
-  {
-    name: "Equipos de Protección",
-    description: "EPP certificado OSHA/ANSI para seguridad laboral",
-    count: products.filter((p: AmazonProduct) => p.category === "EPP").length,
-    href: "/store?category=epp",
-    color: "bg-gradient-to-r from-green-500 to-emerald-600",
-    icon: Shield
-  },
-  {
-    name: "Herramientas Industriales",
-    description: "Equipos profesionales para proyectos industriales",
-    count: products.filter((p: AmazonProduct) => p.category === "Herramientas").length,
-    href: "/store?category=herramientas",
-    color: "bg-gradient-to-r from-blue-500 to-cyan-600",
-    icon: Zap
-  },
-  {
-    name: "Seguridad y Mantenimiento",
-    description: "Equipos para detección, monitoreo y mantenimiento",
-    count: products.filter((p: AmazonProduct) => p.category === "Seguridad").length,
-    href: "/store?category=seguridad",
-    color: "bg-gradient-to-r from-yellow-500 to-orange-500",
-    icon: Award
-  }
-];
-
-const featuredProducts = products.slice(0, 6);
 
 interface CountdownProps {
   targetDate: Date;
@@ -147,349 +88,589 @@ function CountdownTimer({ targetDate }: CountdownProps) {
         { label: "Minutos", value: timeLeft.minutes },
         { label: "Segundos", value: timeLeft.seconds }
       ].map((item, index) => (
-        <div key={index} className="text-center">
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
-            <div className="text-3xl font-bold text-white">
+        <motion.div 
+          key={index} 
+          className="text-center"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: index * 0.1, type: "spring", bounce: 0.4 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <motion.div 
+            className="bg-white/20 backdrop-blur-sm rounded-lg p-4 min-w-[80px] border border-white/30"
+            animate={{
+              boxShadow: [
+                "0 0 20px rgba(59, 130, 246, 0.3)",
+                "0 0 30px rgba(147, 51, 234, 0.4)",
+                "0 0 20px rgba(59, 130, 246, 0.3)"
+              ]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              type: "tween"
+            }}
+          >
+            <motion.div 
+              className="text-3xl font-bold text-white"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                type: "tween"
+              }}
+            >
               {item.value.toString().padStart(2, '0')}
-            </div>
+            </motion.div>
             <div className="text-sm text-blue-100 font-medium">
               {item.label}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       ))}
     </div>
   );
 }
 
 export default function HomePage() {
-  // Estado para el modal de vista rápida
-  const [selectedProduct, setSelectedProduct] = useState<AmazonProduct | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
-  
-  // Función para abrir el modal con un producto
-  const openProductModal = (product: AmazonProduct) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-  };
-
-  // Función para cerrar el modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProduct(null);
-  };
 
   // Fecha objetivo: 3 meses desde ahora (1 de noviembre, 2025)
   const targetDate = new Date('2025-11-01T00:00:00');
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section con Cuenta Regresiva */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
-        {/* Efectos visuales de fondo */}
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] opacity-10 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-900/80"></div>
-        
-        {/* Partículas flotantes */}
+    <motion.div 
+      className="min-h-screen relative overflow-hidden"
+      style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #312e81 50%, #1e1b4b 100%)' }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {/* LinkerPro Section - Próximamente (MOVIDO ARRIBA) */}
+      <motion.section 
+        className="py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {/* Background animated particles */}
         <div className="absolute inset-0">
-          {ANIMATION_PARTICLES.map((particle, i) => (
-            <div
+          {[...Array(15)].map((_, i) => (
+            <motion.div
               key={i}
-              className="absolute animate-pulse"
+              className="absolute w-2 h-2 bg-white rounded-full opacity-20"
               style={{
-                left: `${particle.left}%`,
-                top: `${particle.top}%`,
-                animationDelay: `${particle.delay}s`,
-                animationDuration: `${particle.duration}s`
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
               }}
-            >
-              <Sparkles className="w-4 h-4 text-blue-300/30" />
-            </div>
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: Math.random() * 2,
+                type: "tween"
+              }}
+            />
           ))}
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             {/* Badge "Próximamente" */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+            <motion.div 
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
+              initial={{ scale: 0, rotateY: 180 }}
+              animate={{ scale: 1, rotateY: 0 }}
+              transition={{ type: "spring", bounce: 0.4, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
+            >
               <Timer className="w-4 h-4 text-blue-300" />
               <span className="text-blue-100 font-medium">Próximamente</span>
-            </div>
+            </motion.div>
 
-            {/* Título principal */}
-            <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+            {/* Título principal con animaciones espectaculares */}
+            <motion.h1 
+              className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent"
+              initial={{ y: 100, opacity: 0, scale: 0.8 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.4, type: "spring", bounce: 0.4 }}
+              whileHover={{ 
+                scale: 1.05,
+                textShadow: '0 0 50px rgba(147, 51, 234, 0.8)',
+                transition: { type: "spring", stiffness: 300 }
+              }}
+            >
               LinkerPro
-            </h1>
+            </motion.h1>
             
             {/* Subtítulo impactante */}
-            <div className="max-w-4xl mx-auto mb-8">
+            <motion.div 
+              className="max-w-4xl mx-auto mb-8"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
               <p className="text-xl md:text-2xl text-blue-100 font-light leading-relaxed">
-                La plataforma que permitirá{" "}
-                <span className="font-bold text-white">unir talento con las empresas</span>{" "}
-                de la manera más{" "}
-                <span className="font-bold text-yellow-300">fácil y justa</span>{" "}
-                jamás antes vista
+                Mientras preparamos LinkerPro, descubre nuestro{" "}
+                <motion.span 
+                  className="font-bold text-white"
+                  whileHover={{ scale: 1.1, color: "#60a5fa" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  blog especializado en seguridad industrial
+                </motion.span>{" "}
+                con guías expertas,{" "}
+                <motion.span 
+                  className="font-bold text-yellow-300"
+                  whileHover={{ scale: 1.1, color: "#fbbf24" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  reseñas de equipos EPP
+                </motion.span>{" "}
+                y consejos para crear ambientes laborales más seguros
               </p>
-            </div>
+            </motion.div>
 
-            {/* Cuenta regresiva */}
-            <div className="mb-8">
-              <p className="text-lg text-blue-200 mb-4 font-medium">
+            {/* Cuenta regresiva espectacular */}
+            <motion.div 
+              className="mb-8"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <motion.p 
+                className="text-lg text-blue-200 mb-4 font-medium"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ 
+                  duration: 2, 
+                  repeat: Infinity, 
+                  ease: "easeInOut",
+                  type: "tween"
+                }}
+              >
                 🚀 Lanzamiento oficial en:
-              </p>
+              </motion.p>
               <CountdownTimer targetDate={targetDate} />
-            </div>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <Link href="/store" className="flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5" />
-                  Explora Nuestra Tienda Industrial
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="secondary" size="lg" className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300">
-                <Link href="/guides" className="flex items-center gap-2">
-                  <Target className="w-5 h-5" />
-                  Ver Guías de Compra
-                </Link>
-              </Button>
-            </div>
-
-            {/* Estadísticas impresionantes */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-white">{products.length}</div>
-                <div className="text-blue-200">Productos Catalogados</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-white">6</div>
-                <div className="text-blue-200">Sectores Industriales</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-white">100%</div>
-                <div className="text-blue-200">Productos Verificados</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Banner de Aviso Amazon Afiliados */}
-      <section className="bg-gradient-to-r from-amber-50 to-yellow-50 border-b border-amber-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-center gap-2 text-center">
-            <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-300">
-              Amazon Afiliados
-            </Badge>
-            <p className="text-sm text-amber-800">
-              <strong>Transparencia total:</strong> Como afiliado de Amazon, obtenemos ingresos por las compras adscritas. 
-              Esto nos permite mantener el catálogo actualizado sin costo para ti.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Categories Section Mejorada */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-800">Catálogo Especializado</Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Equipos Industriales por Sector
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Productos verificados y categorizados especialmente para contratistas, 
-              electricistas, soldadores y profesionales industriales
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {categories.map((category) => {
-              const IconComponent = category.icon;
-              return (
-                <Link key={category.name} href={category.href} className="group">
-                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 transform hover:scale-105">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className={`${category.color} p-4 rounded-xl w-16 h-16 flex items-center justify-center shadow-lg`}>
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <Badge variant="secondary" className="bg-gray-100 text-gray-700">
-                        {category.count} productos
-                      </Badge>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {category.name}
-                    </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {category.description}
-                    </p>
-                    <div className="flex items-center text-blue-600 group-hover:text-blue-800 font-semibold">
-                      <span>Explorar categoría</span>
-                      <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products Section Mejorada */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-green-100 text-green-800">Más Vendidos</Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Productos Destacados
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Los equipos más populares y mejor valorados por profesionales industriales. 
-              Todos verificados en Amazon con reseñas reales.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProducts.map((product: AmazonProduct) => (
-              <div
-                key={product.asin}
-                role="link"
-                tabIndex={0}
-                onClick={() => router.push(`/store/${product.asin}`)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    router.push(`/store/${product.asin}`);
-                  }
-                }}
-                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:scale-105 cursor-pointer"
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                  <div className="aspect-square relative overflow-hidden">
-                    <Image
-                      src={product.image_url}
-                      alt={product.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-blue-600 text-white">
-                        {product.category}
-                      </Badge>
-                    </div>
-                    {product.is_prime && (
-                      <div className="absolute top-4 right-4">
-                        <Badge className="bg-orange-500 text-white">
-                          Prime
-                        </Badge>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className={`w-4 h-4 ${
-                            i < Math.floor(product.rating || 0) 
-                              ? 'text-yellow-400 fill-current' 
-                              : 'text-gray-300'
-                          }`} 
-                        />
-                      ))}
-                      <span className="text-sm text-gray-600 ml-1">
-                        ({product.review_count || 0})
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 line-clamp-2">
-                      {product.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                      {product.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-2xl font-bold text-gray-900">
-                          ${(product.price || 0).toLocaleString('es-MX')}
-                        </span>
-                        <span className="text-sm text-gray-500 ml-1">MXN</span>
-                      </div>
-                      <div className="flex gap-2">
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            openProductModal(product);
-                          }}
-                          className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-                        >
-                          <Eye className="w-3 h-3 mr-1" />
-                          Vista rápida
-                        </Button>
-                        <Button
-                          asChild
-                          size="sm"
-                          className="bg-blue-600 hover:bg-blue-700"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <Link href={`/store/${product.asin}`}>
-                            Ver más
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            ))}
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link href="/blog" className="flex items-center gap-2">
+                    <ShoppingBag className="w-5 h-5" />
+                    Explora Nuestro Blog de Seguridad
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  asChild 
+                  variant="secondary" 
+                  size="lg" 
+                  className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
+                >
+                  <Link href="/guias" className="flex items-center gap-2">
+                    <Target className="w-5 h-5" />
+                    Ver Guías de Seguridad
+                  </Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            {/* Estadísticas impresionantes animadas */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              {[
+                { value: "50+", label: "Artículos Especializados" },
+                { value: "15+", label: "Guías Técnicas Detalladas" },
+                { value: "100%", label: "Contenido Verificado por Expertos" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ scale: 0, rotateY: 180 }}
+                  animate={{ scale: 1, rotateY: 0 }}
+                  transition={{ 
+                    delay: 1.4 + index * 0.1, 
+                    type: "spring", 
+                    bounce: 0.4 
+                  }}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    y: -5,
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
+                  }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+                >
+                  <motion.div 
+                    className="text-3xl font-bold text-white"
+                    animate={{ 
+                      textShadow: [
+                        "0 0 10px rgba(59, 130, 246, 0.5)",
+                        "0 0 20px rgba(147, 51, 234, 0.5)",
+                        "0 0 10px rgba(59, 130, 246, 0.5)"
+                      ]
+                    }}
+                    transition={{ 
+                      duration: 3, 
+                      repeat: Infinity, 
+                      ease: "easeInOut",
+                      type: "tween"
+                    }}
+                  >
+                    {stat.value}
+                  </motion.div>
+                  <div className="text-blue-200">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
+        </div>
+      </motion.section>
+
+      {/* Hero Section LinkerStore (TEMPORALMENTE OCULTO) */}
+      {/*
+      <motion.section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <motion.div
+            initial={{ y: 100, opacity: 0, scale: 0.8 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            <motion.div 
+              className="relative inline-block mb-8"
+              whileHover={{ scale: 1.2 }}
+              animate={{ 
+                rotate: [0, 5, -5, 0],
+                y: [0, -10, 0]
+              }}
+              transition={{ 
+                rotate: { duration: 4, repeat: Infinity, type: "tween" },
+                y: { duration: 2, repeat: Infinity, type: "tween" }
+              }}
+            >
+              <motion.div
+                className="text-8xl relative z-10"
+                animate={{
+                  filter: [
+                    'drop-shadow(0 0 20px rgba(59, 130, 246, 0.8))',
+                    'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
+                    'drop-shadow(0 0 20px rgba(219, 39, 119, 0.8))',
+                    'drop-shadow(0 0 30px rgba(59, 130, 246, 0.8))'
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity, type: "tween" }}
+              >
+                🏭
+              </motion.div>
+            </motion.div>
+
+            <motion.h1 
+              className="text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              whileHover={{ 
+                scale: 1.05,
+                textShadow: '0 0 30px rgba(147, 51, 234, 0.8)'
+              }}
+            >
+              LinkerStore
+            </motion.h1>
+
+            <motion.p 
+              className="text-xl lg:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              La plataforma más avanzada para equipos industriales y de protección personal. 
+              Calidad premium, precios competitivos y entregas confiables.
+            </motion.p>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold shadow-xl"
+                  onClick={() => router.push('/store')}
+                >
+                  <ShoppingBag className="mr-2 h-5 w-5" />
+                  Explorar Productos
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-purple-400 bg-purple-400 text-purple-900 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg font-bold"
+                  onClick={() => router.push('/guides')}
+                >
+                  <Target className="mr-2 h-5 w-5" />
+                  Ver Guías
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+      */}
+
+      {/* Simple Categories Section */}
+      <motion.section 
+        className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <Badge className="mb-4 bg-blue-100 text-blue-800">Contenido Especializado</Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Explora Nuestro Blog de Seguridad Industrial
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Información confiable y actualizada sobre equipos de protección personal, 
+              guías técnicas y mejores prácticas en seguridad laboral
+            </p>
+          </motion.div>
           
-          <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-              <Link href="/store" className="flex items-center gap-2">
-                Ver todos los {products.length} productos
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.4 }}
+          >
+            {[
+              {
+                name: "Artículos del Blog",
+                description: "Contenido actualizado sobre seguridad industrial y EPP",
+                count: "50+ artículos",
+                href: "/blog",
+                color: "bg-gradient-to-r from-green-500 to-emerald-600"
+              },
+              {
+                name: "Guías Técnicas",
+                description: "Manuales detallados y guías paso a paso",
+                count: "15+ guías",
+                href: "/guias",
+                color: "bg-gradient-to-r from-blue-500 to-cyan-600"
+              },
+              {
+                name: "Sobre Nosotros",
+                description: "Conoce a nuestro equipo de expertos certificados",
+                count: "Nuestro equipo",
+                href: "/sobre-nosotros",
+                color: "bg-gradient-to-r from-purple-500 to-indigo-600"
+              }
+            ].map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ y: 100, opacity: 0, scale: 0.8 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 1.6 + index * 0.2,
+                  type: "spring",
+                  bounce: 0.4
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  transition: { type: "spring", bounce: 0.4 }
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link href={category.href} className="group block">
+                  <motion.div 
+                    className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 relative overflow-hidden"
+                    whileHover={{
+                      boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                    }}
+                  >
+                    <div className="relative z-10">
+                      <div className={`${category.color} p-4 rounded-xl w-16 h-16 flex items-center justify-center shadow-lg mb-6`}>
+                        <FileText className="w-8 h-8 text-white" />
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                        {category.name}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {category.description}
+                      </p>
 
-      {/* CTA Section Final */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Listo para encontrar el equipo perfecto?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Explora nuestro catálogo de {products.length} productos verificados en Amazon. 
-            Equipos profesionales para contratistas que exigen calidad.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              <Link href="/store" className="flex items-center gap-2">
-                <ShoppingBag className="w-5 h-5" />
-                Explorar Catálogo
-              </Link>
-            </Button>
-            <Button asChild variant="secondary" size="lg" className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold transition-all duration-300">
-              <Link href="/guides" className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                Guías de Compra
-              </Link>
-            </Button>
-          </div>
+                      <Badge variant="secondary" className="bg-gray-100 text-gray-700 mb-4">
+                        {category.count}
+                      </Badge>
+                      
+                      <div className="flex items-center text-blue-600 group-hover:text-blue-800 font-semibold">
+                        <span>Explorar sección</span>
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Modal de vista rápida */}
-      <ProductQuickViewModal 
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        product={selectedProduct}
-      />
-    </div>
+      {/* CTA Final */}
+      <motion.section 
+        className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 2 }}
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold mb-6"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 2.2 }}
+          >
+            ¿Listo para mejorar la seguridad en tu trabajo?
+          </motion.h2>
+          
+          <motion.p 
+            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 2.4 }}
+          >
+            Descubre nuestras guías especializadas, reseñas de equipos EPP y consejos 
+            de expertos para crear ambientes laborales más seguros.
+          </motion.p>
+          
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 2.6 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
+                <Link href="/blog" className="flex items-center gap-2">
+                  <FileText className="w-5 h-5" />
+                  Explorar Blog
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
+                <Link href="/guias" className="flex items-center gap-2">
+                  <Target className="w-5 h-5" />
+                  Ver Guías
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Resto del contenido original... */}
+      <motion.section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h2 
+            className="text-4xl font-bold text-gray-900 mb-6"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Únete a Nuestra Comunidad de Seguridad
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-2xl mx-auto mb-8"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Mientras preparamos LinkerPro, mantente actualizado con nuestro blog especializado en seguridad industrial.
+          </motion.p>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+            >
+              <Link href="/blog">
+                Explorar Blog de Seguridad
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </motion.section>
+    </motion.div>
   );
 }

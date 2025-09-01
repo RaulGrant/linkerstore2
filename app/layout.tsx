@@ -1,16 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { AuthProvider } from '@/hooks/useAuth'
-import { Toaster } from '@/components/ui/toaster'
-import { AuthTokenProvider } from '@/components/auth/AuthTokenProvider'
-import { LoginRedirectHandler } from '@/components/auth/LoginRedirectHandler'
-import PromoBanner from '@/components/banners/PromoBanner'
+import Navigation from '@/components/navigation'
+import ConditionalFooter from '@/components/ConditionalFooter'
 
 export const metadata: Metadata = {
-  title: 'LinkerPro - Próximamente | Conectando Talento Industrial',
-  description: 'Próximamente: La plataforma más justa para unir talento industrial con empresas. Explora nuestra tienda de productos industriales verificados en Amazon.',
+  title: 'LinkerPro - Blog de Seguridad Industrial | Equipos de Protección Personal',
+  description: 'Tu fuente confiable de información sobre seguridad industrial y EPP. Guías, reseñas y consejos de expertos para crear ambientes de trabajo más seguros.',
   generator: 'v0.dev',
-  keywords: 'LinkerPro, talento industrial, productos industriales, EPP, herramientas, Amazon afiliados',
+  keywords: 'seguridad industrial, EPP, equipos protección personal, blog seguridad, guías seguridad laboral, LinkerPro',
 }
 
 export default function RootLayout({
@@ -19,16 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
-        <AuthProvider>
-          <AuthTokenProvider>
-            <PromoBanner />
-            <LoginRedirectHandler />
-            {children}
-            <Toaster />
-          </AuthTokenProvider>
-        </AuthProvider>
+        <Navigation />
+        {children}
+        <ConditionalFooter />
       </body>
     </html>
   )

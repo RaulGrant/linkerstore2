@@ -3,7 +3,6 @@ export interface AmazonProduct {
   asin: string;
   title: string;
   description: string;
-  price: number;
   currency: string;
   image_url: string;
   amazon_url: string;

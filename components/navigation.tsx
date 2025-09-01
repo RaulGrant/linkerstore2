@@ -48,11 +48,11 @@ export default function Navigation({ user }: NavigationProps) {
 
   const mainNavItems = [
     { name: 'Inicio', href: '/', icon: Home },
+    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'Guías', href: '/guias', icon: GraduationCap },
     { name: 'Tienda', href: '/store', icon: Store },
-    { name: 'Freelancers', href: '/map-freelancers', icon: Users },
-    { name: 'Empresas', href: '/map-empresas', icon: Building2 },
-    { name: 'Proyectos', href: '/projects', icon: FileText },
-    { name: 'Cursos', href: '/cursos', icon: GraduationCap },
+    // { name: 'Freelancers', href: '/map-freelancers', icon: Users }, // Temporalmente oculto
+    // { name: 'Empresas', href: '/map-empresas', icon: Building2 }, // Temporalmente oculto
   ];
 
   const userNavItems = isAuthenticated ? [
@@ -108,12 +108,14 @@ export default function Navigation({ user }: NavigationProps) {
 
           {/* Right Side */}
           <div className="flex items-center gap-3">
-            {/* Cart */}
+            {/* Cart - Temporalmente oculto
             <div className="hidden md:block">
               <CartSimulator />
             </div>
+            */}
 
             {/* User Menu */}
+            {/* Temporalmente oculto el sistema de autenticación
             {isAuthenticated ? (
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild>
@@ -146,6 +148,7 @@ export default function Navigation({ user }: NavigationProps) {
                 </Button>
               </div>
             )}
+            */}
 
             {/* Mobile Menu */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -189,10 +192,11 @@ export default function Navigation({ user }: NavigationProps) {
                       </>
                     )}
 
-                    {/* Cart in Mobile */}
+                    {/* Cart in Mobile - Temporalmente oculto
                     <div className="mb-6">
                       <CartSimulator />
                     </div>
+                    */}
                   </div>
 
                   {/* Footer */}

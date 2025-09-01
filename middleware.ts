@@ -10,6 +10,7 @@ const protectedRoutes = [
   '/proposals',
   '/map-empresas',
   '/map-freelancers',
+  // '/admin' // Comentado temporalmente durante transformación a blog
 ]
 
 // Rutas solo para visitantes (no autenticados)
@@ -17,6 +18,9 @@ const publicOnlyRoutes = ['/login', '/register']
 
 // Rutas públicas que no requieren autenticación
 const publicRoutes = ['/login-success']
+
+// Rutas admin que no requieren autenticación (temporalmente durante transformación)
+const adminRoutes = ['/admin', '/admin/analytics', '/admin/images', '/admin/products', '/admin/users', '/admin/login']
 
 // Rutas de debug que no requieren autenticación (solo para desarrollo)
 const debugRoutes = process.env.NODE_ENV === 'development' ? [
@@ -45,6 +49,12 @@ export async function middleware(request: NextRequest) {
     const urlParams = request.nextUrl.searchParams
     const tokenParam = urlParams.get('token')
     console.log(`🔍 URL token parameter: ${tokenParam ? tokenParam.substring(0, 20) + '...' : 'none'}`)
+    
+    // Permitir rutas de admin sin autenticación (temporalmente durante transformación)
+    if (adminRoutes.some(route => pathname.startsWith(route))) {
+      console.log('🔧 Admin route detected, allowing access during blog transformation')
+      return NextResponse.next()
+    }
     
     // Permitir rutas de debug sin autenticación
     if (debugRoutes.some(route => pathname.startsWith(route))) {
