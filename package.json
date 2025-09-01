@@ -1,6 +1,7 @@
 {
-  "name": "my-v0-project",
+  "name": "linkerstore",
   "version": "0.1.0",
+  "homepage": "https://RaulGrant.github.io/linkerstore2",
   "private": true,
   "scripts": {
     "build": "next build",
