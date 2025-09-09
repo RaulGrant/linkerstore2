@@ -45,7 +45,7 @@ export default function Navigation({ user }: NavigationProps) {
     { name: 'Inicio', href: '/', icon: Home },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Guías', href: '/guias', icon: GraduationCap },
-    { name: 'Tienda', href: '/store', icon: Store },
+    // { name: 'Tienda', href: '/store', icon: Store },
     // { name: 'Freelancers', href: '/map-freelancers', icon: Users }, // Temporalmente oculto
     // { name: 'Empresas', href: '/map-empresas', icon: Building2 }, // Temporalmente oculto
   ];
