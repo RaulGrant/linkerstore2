@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, TrendingUp, Users } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 interface BlogHeroProps {
   title: string;
@@ -10,7 +11,36 @@ interface BlogHeroProps {
   ctaText: string;
 }
 
+// Posiciones fijas para las partículas para evitar diferencias SSR/Client
+const FIXED_PARTICLE_POSITIONS = [
+  { left: 10, top: 20 },
+  { left: 25, top: 60 },
+  { left: 40, top: 15 },
+  { left: 55, top: 75 },
+  { left: 70, top: 30 },
+  { left: 85, top: 55 },
+  { left: 15, top: 80 },
+  { left: 30, top: 40 },
+  { left: 45, top: 70 },
+  { left: 60, top: 25 },
+  { left: 75, top: 85 },
+  { left: 90, top: 45 },
+  { left: 5, top: 50 },
+  { left: 20, top: 10 },
+  { left: 35, top: 90 },
+  { left: 50, top: 35 },
+  { left: 65, top: 65 },
+  { left: 80, top: 20 },
+  { left: 95, top: 75 },
+  { left: 12, top: 35 }
+];
+
 export default function BlogHero({ title, subtitle, ctaText }: BlogHeroProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
       {/* Patrón de fondo decorativo */}
@@ -26,7 +56,7 @@ export default function BlogHero({ title, subtitle, ctaText }: BlogHeroProps) {
 
       {/* Partículas flotantes */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {mounted && FIXED_PARTICLE_POSITIONS.map((position, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-white rounded-full opacity-10"
@@ -41,8 +71,8 @@ export default function BlogHero({ title, subtitle, ctaText }: BlogHeroProps) {
               ease: "linear"
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${position.left}%`,
+              top: `${position.top}%`,
             }}
           />
         ))}

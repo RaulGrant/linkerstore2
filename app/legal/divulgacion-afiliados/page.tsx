@@ -47,11 +47,13 @@ export default function DivulgacionAfiliados() {
                   Declaración de Afiliación
                 </h2>
                 <p className="text-orange-800 text-lg">
-                  <strong>LinkerPro participa en programas de afiliación que nos permiten ganar comisiones por las compras realizadas a través de nuestros enlaces.</strong> Esta página explica cómo funcionan estas relaciones y cómo nos comprometemos a mantener la transparencia y objetividad en nuestras recomendaciones.
+                  <strong>LinkerPro participa en programas de afiliación de Amazon Associates y Mercado Libre Afiliados que nos permiten ganar comisiones por las compras realizadas a través de nuestros enlaces.</strong> Esta página explica cómo funcionan estas relaciones y cómo nos comprometemos a mantener la transparencia y objetividad en nuestras recomendaciones.
                 </p>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Programa de Afiliados de Amazon</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Programas de Afiliación</h2>
+              
+              {/* Amazon Associates */}
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-6">
                 <h3 className="font-semibold text-blue-900 mb-3 flex items-center gap-2">
                   <ExternalLink className="h-5 w-5" />
@@ -68,6 +70,26 @@ export default function DivulgacionAfiliados() {
                 </ul>
               </div>
 
+              {/* Mercado Libre Afiliados */}
+              <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg mb-6">
+                <h3 className="font-semibold text-yellow-900 mb-3 flex items-center gap-2">
+                  <ExternalLink className="h-5 w-5" />
+                  Mercado Libre Afiliados
+                </h3>
+                <p className="text-yellow-800 mb-3">
+                  LinkerPro también participa en el Programa de Afiliados de Mercado Libre, la plataforma de e-commerce líder en América Latina. Esto nos permite ofrecer alternativas locales y facilitar el acceso a productos de seguridad industrial en:
+                </p>
+                <ul className="list-disc list-inside text-yellow-800 space-y-1">
+                  <li>MercadoLibre.com.mx (México)</li>
+                  <li>MercadoLibre.com.ar (Argentina)</li>
+                  <li>MercadoLibre.com.co (Colombia)</li>
+                  <li>Otros sitios de Mercado Libre según disponibilidad</li>
+                </ul>
+                <p className="text-yellow-800 mt-3 text-sm">
+                  <strong>Ventajas de Mercado Libre:</strong> Envío gratuito en muchos productos, opciones de pago locales, atención al cliente en español y garantía de compra protegida.
+                </p>
+              </div>
+
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Cómo Funcionan las Comisiones</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-green-50 p-6 rounded-lg border border-green-200">
@@ -76,10 +98,11 @@ export default function DivulgacionAfiliados() {
                     Para Usted (Comprador)
                   </h3>
                   <ul className="text-green-800 space-y-2 text-sm">
-                    <li>✅ <strong>Sin costo adicional:</strong> El precio es el mismo</li>
-                    <li>✅ <strong>Mismas ofertas:</strong> Accede a todas las promociones</li>
-                    <li>✅ <strong>Misma garantía:</strong> Términos y condiciones de Amazon</li>
-                    <li>✅ <strong>Mismo servicio:</strong> Atención al cliente de Amazon</li>
+                    <li>✅ <strong>Sin costo adicional:</strong> El precio es exactamente el mismo</li>
+                    <li>✅ <strong>Mismas ofertas:</strong> Accede a todas las promociones disponibles</li>
+                    <li>✅ <strong>Misma garantía:</strong> Términos y condiciones de Amazon/Mercado Libre</li>
+                    <li>✅ <strong>Mismo servicio:</strong> Atención al cliente oficial de cada plataforma</li>
+                    <li>✅ <strong>Protección de compra:</strong> Políticas de devolución estándar</li>
                   </ul>
                 </div>
                 <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
@@ -88,8 +111,9 @@ export default function DivulgacionAfiliados() {
                     Para LinkerPro
                   </h3>
                   <ul className="text-purple-800 space-y-2 text-sm">
-                    <li>📈 <strong>Comisión variable:</strong> 1-10% según la categoría</li>
-                    <li>⏰ <strong>Solo compras en 24h:</strong> Desde el último clic</li>
+                    <li>📈 <strong>Amazon:</strong> Comisión 1-10% según categoría</li>
+                    <li>🛒 <strong>Mercado Libre:</strong> Comisión 1-8% según categoría</li>
+                    <li>⏰ <strong>Plazo de cookie:</strong> 24h Amazon, 30 días Mercado Libre</li>
                     <li>🎯 <strong>Solo productos enlazados:</strong> Productos que recomendamos</li>
                     <li>💰 <strong>Financiación del sitio:</strong> Mantiene LinkerPro gratuito</li>
                   </ul>
@@ -133,11 +157,15 @@ export default function DivulgacionAfiliados() {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span><strong>Botones de compra</strong> con texto "Ver en Amazon" o "Comprar en Amazon"</span>
+                    <span><strong>Botones de compra</strong> con texto "Ver en Amazon", "Comprar en Amazon" o "Ver en Mercado Libre"</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                     <span><strong>Avisos en artículos</strong> indicando "Enlaces de afiliación incluidos"</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span><strong>Iconos distintivos</strong> junto a enlaces que generan comisión</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
@@ -182,7 +210,7 @@ export default function DivulgacionAfiliados() {
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Su Privacidad y las Cookies</h2>
               <p className="mb-6">
-                Cuando hace clic en un enlace de afiliación, Amazon puede colocar cookies en su dispositivo para rastrear la referencia. Esta información se utiliza únicamente para calcular comisiones y no afecta su experiencia de compra. Para más información, consulte nuestra <a href="/legal/politica-privacidad" className="text-blue-600 hover:underline">Política de Privacidad</a> y <a href="/legal/cookies" className="text-blue-600 hover:underline">Política de Cookies</a>.
+                Cuando hace clic en un enlace de afiliación, tanto Amazon como Mercado Libre pueden colocar cookies en su dispositivo para rastrear la referencia. Esta información se utiliza únicamente para calcular comisiones y no afecta su experiencia de compra. Para más información, consulte nuestra <a href="/legal/politica-privacidad" className="text-blue-600 hover:underline">Política de Privacidad</a> y <a href="/legal/cookies" className="text-blue-600 hover:underline">Política de Cookies</a>.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contacto</h2>

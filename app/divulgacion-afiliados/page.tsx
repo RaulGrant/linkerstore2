@@ -30,16 +30,30 @@ export default function DivulgacionAfiliadosPage() {
           
           <div className="prose prose-lg max-w-none">
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Programa de Afiliados de Amazon</h2>
-              <p className="text-gray-700 mb-4">
-                LinkerPro es un participante del Programa de Afiliados de Amazon Services LLC, 
-                un programa de publicidad de afiliados diseñado para proporcionar un medio 
-                para que los sitios web ganen tarifas de publicidad mediante publicidad 
-                y enlaces a Amazon.com y Amazon.es.
-              </p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Programas de Afiliados</h2>
+              
+              <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">Amazon Associates</h3>
+                <p className="text-blue-800 mb-2">
+                  LinkerPro es un participante del Programa de Afiliados de Amazon Services LLC, 
+                  un programa de publicidad de afiliados diseñado para proporcionar un medio 
+                  para que los sitios web ganen tarifas de publicidad mediante publicidad 
+                  y enlaces a Amazon.com, Amazon.com.mx y Amazon.es.
+                </p>
+              </div>
+
+              <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-4">
+                <h3 className="text-lg font-semibold text-yellow-900 mb-2">Mercado Libre Afiliados</h3>
+                <p className="text-yellow-800 mb-2">
+                  También participamos en el programa de afiliados de Mercado Libre, lo que nos permite 
+                  ofrecer alternativas locales y facilitar el acceso a productos en América Latina 
+                  a través de MercadoLibre.com.mx y otros sitios de la plataforma.
+                </p>
+              </div>
+
               <p className="text-gray-700 mb-4">
                 Esto significa que cuando haces clic en nuestros enlaces hacia productos 
-                de Amazon y realizas una compra, podemos recibir una pequeña comisión 
+                de cualquiera de estas plataformas y realizas una compra, podemos recibir una pequeña comisión 
                 sin costo adicional para ti.
               </p>
             </section>
@@ -89,7 +103,7 @@ export default function DivulgacionAfiliadosPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Tu Elección</h2>
               <p className="text-gray-700 mb-4">
                 El uso de nuestros enlaces de afiliados es completamente opcional. 
-                Puedes buscar los productos directamente en Amazon o en cualquier 
+                Puedes buscar los productos directamente en Amazon, Mercado Libre o en cualquier 
                 otro retailer de tu preferencia. 
               </p>
               <p className="text-gray-700 mb-4">

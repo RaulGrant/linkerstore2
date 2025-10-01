@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowRight, Eye, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 interface ArticleCardProps {
   title: string;
@@ -20,6 +21,18 @@ interface ArticleCardProps {
   isNew?: boolean;
 }
 
+// Posiciones fijas para las partículas para evitar diferencias SSR/Client
+const FIXED_PARTICLE_POSITIONS = [
+  { left: 25, top: 30 },
+  { left: 70, top: 25 },
+  { left: 15, top: 60 },
+  { left: 80, top: 70 },
+  { left: 45, top: 15 },
+  { left: 60, top: 80 },
+  { left: 30, top: 45 },
+  { left: 85, top: 40 }
+];
+
 export default function ArticleCard({
   title,
   excerpt,
@@ -31,6 +44,12 @@ export default function ArticleCard({
   isPopular = false,
   isNew = false
 }: ArticleCardProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Función para obtener emoji según la categoría
   const getCategoryEmoji = (category: string) => {
     const categoryMap: { [key: string]: string } = {
@@ -47,6 +66,11 @@ export default function ArticleCard({
       'Calzado': '👷‍♂️'
     };
     return categoryMap[category] || '📄';
+  };
+
+  // Función para formatear vistas de manera consistente
+  const formatViews = (views: number) => {
+    return views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
   return (
@@ -82,24 +106,24 @@ export default function ArticleCard({
         >
           {/* Partículas flotantes en el header */}
           <div className="absolute inset-0 pointer-events-none">
-            {[...Array(8)].map((_, i) => (
+            {mounted && FIXED_PARTICLE_POSITIONS.map((position, i) => (
               <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-0"
                 animate={{
-                  x: [0, Math.random() * 60 - 30],
-                  y: [0, Math.random() * 60 - 30],
+                  x: [0, (i % 2 === 0 ? 15 : -15)],
+                  y: [0, (i % 3 === 0 ? 15 : -15)],
                   opacity: [0, 0.6, 0],
                   scale: [0, 1, 0]
                 }}
                 transition={{
-                  duration: 3 + Math.random() * 2,
+                  duration: 3 + (i % 3),
                   repeat: Infinity,
                   delay: i * 0.4
                 }}
                 style={{
-                  left: `${20 + Math.random() * 60}%`,
-                  top: `${20 + Math.random() * 60}%`,
+                  left: `${position.left}%`,
+                  top: `${position.top}%`,
                 }}
               />
             ))}
@@ -193,7 +217,7 @@ export default function ArticleCard({
               <div className="bg-white/80 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1 shadow-lg">
                 <Eye className="h-3 w-3 text-gray-600" />
                 <span className="text-xs text-gray-600 font-medium">
-                  {views.toLocaleString()}
+                  {mounted ? formatViews(views) : views.toString()}
                 </span>
               </div>
             </motion.div>

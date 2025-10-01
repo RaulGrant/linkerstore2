@@ -27,10 +27,7 @@ export default function SearchFilters({
   resultsCount = 0
 }: SearchFiltersProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [priceRange, setPriceRange] = useState<[number, number]>([
-    filters.priceRange?.min || 0,
-    filters.priceRange?.max || 500
-  ]);
+
 
   const handleSearchChange = (value: string) => {
     onFiltersChange({
@@ -46,13 +43,7 @@ export default function SearchFilters({
     });
   };
 
-  const handlePriceRangeChange = (value: [number, number]) => {
-    setPriceRange(value);
-    onFiltersChange({
-      ...filters,
-      priceRange: { min: value[0], max: value[1] }
-    });
-  };
+
 
   const handleRatingChange = (rating: string) => {
     onFiltersChange({
@@ -78,7 +69,7 @@ export default function SearchFilters({
   const getActiveFiltersCount = () => {
     let count = 0;
     if (filters.category) count++;
-    if (filters.priceRange) count++;
+
     if (filters.rating) count++;
     if (filters.isPrime) count++;
     if (filters.brand) count++;
@@ -104,24 +95,7 @@ export default function SearchFilters({
         </Select>
       </div>
 
-      {/* Rango de precios */}
-      <div className="space-y-3">
-        <Label className="text-sm font-medium">
-          Precio: ${priceRange[0]} - ${priceRange[1]}
-        </Label>
-        <Slider
-          value={priceRange}
-          onValueChange={handlePriceRangeChange}
-          max={500}
-          min={0}
-          step={10}
-          className="w-full"
-        />
-        <div className="flex justify-between text-xs text-gray-500">
-          <span>$0</span>
-          <span>$500+</span>
-        </div>
-      </div>
+
 
       {/* Calificación */}
       <div className="space-y-2">
@@ -251,15 +225,7 @@ export default function SearchFilters({
               />
             </Badge>
           )}
-          {filters.priceRange && (
-            <Badge variant="secondary" className="text-xs">
-              ${filters.priceRange.min} - ${filters.priceRange.max}
-              <X 
-                className="h-3 w-3 ml-1 cursor-pointer" 
-                onClick={() => onFiltersChange({ ...filters, priceRange: undefined })}
-              />
-            </Badge>
-          )}
+
           {filters.rating && (
             <Badge variant="secondary" className="text-xs">
               {filters.rating}+ estrellas

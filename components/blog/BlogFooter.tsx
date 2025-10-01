@@ -190,7 +190,7 @@ export default function BlogFooter() {
         {/* Disclaimer sobre afiliados */}
         <div className="mt-6 p-4 bg-gray-800 rounded-lg">
           <p className="text-xs text-gray-400 text-center">
-            <strong>Divulgación:</strong> LinkerPro participa en el Programa de Afiliados de Amazon. 
+            <strong>Divulgación:</strong> LinkerPro participa en los programas de afiliados de Amazon Associates y Mercado Libre Afiliados. 
             Podemos recibir comisiones por compras realizadas a través de nuestros enlaces, sin costo adicional para ti. 
             Esto nos ayuda a mantener nuestro contenido gratuito y de calidad.
           </p>

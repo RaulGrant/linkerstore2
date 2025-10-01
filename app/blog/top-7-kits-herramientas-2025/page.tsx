@@ -46,7 +46,7 @@ export default function KitsHerramientasArticle() {
     { name: "Material", product1: "Acero CR-V Pulido", product2: "Acero al Carbono", product3: "Acero Aleado" },
     { name: "Tipo de Estuche", product1: "Plástico Rígido", product2: "Tela", product3: "Plástico Rígido" },
     { name: "Puntas Magnéticas", product1: "No (Dados)", product2: "Sí (Desarmador)", product3: "Sí (Algunos)" },
-    { name: "Precio Aproximado", product1: "$4,000", product2: "$1,600", product3: "$1,200" },
+    { name: "Disponibilidad", product1: "Amazon Prime", product2: "Amazon Prime", product3: "Envío Estándar" },
   ];
 
   // Artículos relacionados
@@ -523,6 +523,25 @@ export default function KitsHerramientasArticle() {
                     🏆 Top 7 Kits de Herramientas Recomendados de 2025
                   </motion.h2>
                   
+                  {/* Nota importante sobre calificaciones */}
+                  <motion.div 
+                    className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-8"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                  >
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <span className="text-blue-400 text-xl">📋</span>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm text-blue-800">
+                          <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (30 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes de cada producto aquí mostrado.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                  
                   <div className="space-y-12">
                     {/* Producto #1 - DEWALT DWMT81535 */}
                     <motion.div 
@@ -629,7 +648,7 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Precio elevado</b> comparado con otras opciones</span>
+                                <span className="text-red-700 text-sm"><b>Inversión considerable</b> comparado con otras opciones</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -643,12 +662,12 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-xl border-2 border-orange-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-orange-600 mb-2">$4,000 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors cursor-pointer">
@@ -735,7 +754,7 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Excelente relación calidad-precio</b></span>
+                                <span className="text-green-700 text-sm"><b>Excelente relación calidad-funcionalidad</b></span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -775,12 +794,12 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-emerald-100 to-green-100 p-6 rounded-xl border-2 border-emerald-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-emerald-600 mb-2">$1,600 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-emerald-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors cursor-pointer">
@@ -879,7 +898,7 @@ export default function KitsHerramientasArticle() {
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Relación calidad-precio</b> sobresaliente</span>
+                                <span className="text-green-700 text-sm"><b>Relación calidad-funcionalidad</b> sobresaliente</span>
                               </div>
                             </div>
                           </div>
@@ -907,12 +926,12 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-blue-600 mb-2">$1,200 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-blue-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-blue-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600 transition-colors cursor-pointer">
@@ -1038,12 +1057,12 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-purple-600 mb-2">$600 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-purple-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-purple-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors cursor-pointer">
@@ -1142,7 +1161,7 @@ export default function KitsHerramientasArticle() {
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Precio competitivo</b> para lo que incluye</span>
+                                <span className="text-green-700 text-sm"><b>Opción económica</b> para lo que incluye</span>
                               </div>
                             </div>
                           </div>
@@ -1170,12 +1189,12 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-orange-600 mb-2">$1,800 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors cursor-pointer">
@@ -1296,18 +1315,18 @@ export default function KitsHerramientasArticle() {
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Precio elevado</b> por número de piezas</span>
+                                <span className="text-red-700 text-sm"><b>Menor variedad</b> de herramientas por kit</span>
                               </div>
                             </div>
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-teal-600 mb-2">$2,200 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-teal-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-teal-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors cursor-pointer">
@@ -1352,10 +1371,10 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         <p className="text-gray-700 leading-relaxed mb-6">
-                          El ZAWELIYO de <b>253 piezas</b> es para quienes creen que "más es mejor" y tienen un 
-                          presupuesto ajustado. Con una <b>cantidad impresionante de herramientas</b> que incluye 
+                          El ZAWELIYO de <b>253 piezas</b> es para quienes creen que "más es mejor" y buscan 
+                          valor en la cantidad. Con una <b>cantidad impresionante de herramientas</b> que incluye 
                           desde dados hasta puntas especializadas, ofrece una variedad que pocas marcas pueden igualar 
-                          en este rango de precio. Es perfecto para <b>talleres nuevos</b> o personas que están 
+                          en su categoría. Es perfecto para <b>talleres nuevos</b> o personas que están 
                           empezando a construir su colección de herramientas.
                         </p>
                         
@@ -1399,7 +1418,7 @@ export default function KitsHerramientasArticle() {
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Precio muy económico</b> por pieza</span>
+                                <span className="text-green-700 text-sm"><b>Excelente cantidad</b> de herramientas</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -1435,12 +1454,12 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
 
-                        {/* Precio y CTA */}
+                        {/* Disponibilidad y CTA */}
                         <div className="bg-gradient-to-r from-red-100 to-rose-100 p-6 rounded-xl border-2 border-red-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-2xl font-bold text-red-600 mb-2">$900 MXN</p>
-                              <p className="text-sm text-gray-600">* El precio puede variar</p>
+                              <p className="text-xl font-bold text-red-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
                               <div className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors cursor-pointer">
@@ -1569,13 +1588,13 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-white p-4 rounded-lg border border-green-100">
                           <h4 className="font-bold text-green-800 mb-2">🥇 Recomendación #1:</h4>
                           <p className="text-gray-700 font-semibold">CARTMAN 238 Piezas</p>
-                          <p className="text-gray-600 text-sm">Perfecto equilibrio entre variedad, calidad y precio para bricolaje.</p>
+                          <p className="text-gray-600 text-sm">Perfecto equilibrio entre variedad, calidad y funcionalidad para bricolaje.</p>
                         </div>
                         
                         <div className="bg-white p-4 rounded-lg border border-green-100">
                           <h4 className="font-bold text-green-800 mb-2">🥈 Económica:</h4>
                           <p className="text-gray-700 font-semibold">Pretul SET-83</p>
-                          <p className="text-gray-600 text-sm">Lo esencial para mecánica básica con excelente relación calidad-precio.</p>
+                          <p className="text-gray-600 text-sm">Lo esencial para mecánica básica con excelente funcionalidad.</p>
                         </div>
                       </div>
                     </motion.div>
@@ -1683,7 +1702,7 @@ export default function KitsHerramientasArticle() {
                           </li>
                           <li className="flex items-start">
                             <span className="font-semibold mr-2">•</span>
-                            <span><b>Doméstico:</b> Busca versatilidad y buena relación calidad-precio</span>
+                            <span><b>Doméstico:</b> Busca versatilidad y buena funcionalidad</span>
                           </li>
                           <li className="flex items-start">
                             <span className="font-semibold mr-2">•</span>
@@ -1704,7 +1723,7 @@ export default function KitsHerramientasArticle() {
                           </li>
                           <li className="flex items-start">
                             <span className="font-semibold mr-2">•</span>
-                            <span><b>Acero Aleado:</b> Buen equilibrio calidad-precio</span>
+                            <span><b>Acero Aleado:</b> Buen equilibrio calidad-durabilidad</span>
                           </li>
                           <li className="flex items-start">
                             <span className="font-semibold mr-2">•</span>
@@ -1816,7 +1835,7 @@ export default function KitsHerramientasArticle() {
                       <p className="text-gray-700 text-center">
                         Invierte en el kit que <b>realmente usarás</b>. Es mejor tener 50 herramientas de calidad 
                         que 250 piezas que se rompen en el primer uso. Tu trabajo y tu tiempo valen más que 
-                        unos pesos de diferencia en el precio inicial.
+                        cualquier diferencia inicial en la inversión.
                       </p>
                     </div>
                   </div>
@@ -1835,11 +1854,11 @@ export default function KitsHerramientasArticle() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.1 }}
                     >
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">¿Cuánto debo invertir en un kit de herramientas?</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">¿Qué tipo de kit de herramientas necesito?</h3>
                       <p className="text-gray-700">
-                        Depende del uso que le darás. Para <b>uso profesional</b>, invierte entre $3,000-$5,000 MXN en un kit de calidad. 
-                        Para <b>bricolaje doméstico</b>, $1,000-$2,000 MXN es suficiente. Para <b>uso ocasional</b>, 
-                        $500-$1,000 MXN puede cubrir tus necesidades básicas.
+                        Depende del uso que le darás. Para <b>uso profesional</b>, busca kits completos con herramientas de alta calidad y resistencia. 
+                        Para <b>bricolaje doméstico</b>, kits versátiles con herramientas básicas son suficientes. Para <b>uso ocasional</b>, 
+                        kits compactos con herramientas esenciales pueden cubrir tus necesidades básicas.
                       </p>
                     </motion.div>
 

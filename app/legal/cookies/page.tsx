@@ -153,10 +153,10 @@ export default function PoliticaCookies() {
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">3. Cookies de Afiliación</h3>
                 <div className="bg-orange-50 p-4 rounded-lg mb-4">
-                  <p className="text-orange-800 mb-2"><strong>Proveedor:</strong> Amazon Associates, otros socios afiliados</p>
+                  <p className="text-orange-800 mb-2"><strong>Proveedor:</strong> Amazon Associates, Mercado Libre Afiliados</p>
                   <p className="text-orange-800 mb-2"><strong>Finalidad:</strong> Rastreo de conversiones y comisiones de afiliación</p>
-                  <p className="text-orange-800 mb-2"><strong>Duración:</strong> 24 horas - 30 días</p>
-                  <p className="text-orange-800"><strong>Información:</strong> Productos visitados, clics en enlaces de afiliación</p>
+                  <p className="text-orange-800 mb-2"><strong>Duración:</strong> 24 horas (Amazon) - 30 días (Mercado Libre)</p>
+                  <p className="text-orange-800"><strong>Información:</strong> Productos visitados, clics en enlaces de afiliación, referencias de ventas</p>
                 </div>
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">4. Cookies de Redes Sociales</h3>
@@ -213,6 +213,14 @@ export default function PoliticaCookies() {
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Afiliación</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
                           <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank" rel="noopener noreferrer" className="hover:underline">Ver política</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mercado Libre Afiliados</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Mercado Libre</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Afiliación</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
+                          <a href="https://www.mercadolibre.com.mx/privacidad" target="_blank" rel="noopener noreferrer" className="hover:underline">Ver política</a>
                         </td>
                       </tr>
                     </tbody>

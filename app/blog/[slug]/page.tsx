@@ -109,7 +109,7 @@ const comparisonFeatures = [
   { name: 'Bolsillos', product1: '4 bolsillos', product2: '2 bolsillos', product3: '1 bolsillo' },
   { name: 'Ajustable', product1: true, product2: true, product3: true },
   { name: 'Lavable', product1: true, product2: true, product3: false },
-  { name: 'Precio aproximado', product1: '$45-60', product2: '$35-45', product3: '$20-30' }
+  { name: 'Disponibilidad', product1: 'Amazon Prime', product2: 'Amazon Prime', product3: 'Envío Estándar' }
 ];
 
 interface ArticlePageProps {

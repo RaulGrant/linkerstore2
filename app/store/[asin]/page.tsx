@@ -688,7 +688,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               </div>
               <div className="flex items-center gap-2 p-3 bg-orange-50 rounded-lg">
                 <TrendingUp className="h-5 w-5 text-orange-600" />
-                <span className="text-sm font-medium">Mejor Precio</span>
+                <span className="text-sm font-medium">Calidad Premium</span>
               </div>
             </div>
 
@@ -1016,8 +1016,8 @@ export default function ProductPage({ params }: ProductPageProps) {
                         <div className="p-3 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-lg mb-3 mx-auto w-fit">
                           <TrendingUp className="h-6 w-6 text-amber-600" />
                         </div>
-                        <h5 className="font-semibold text-slate-800 mb-2">Mejor Precio</h5>
-                        <p className="text-xs text-slate-600">Relación calidad-precio imbatible</p>
+                        <h5 className="font-semibold text-slate-800 mb-2">Calidad Premium</h5>
+                        <p className="text-xs text-slate-600">Relación calidad-beneficio imbatible</p>
                       </div>
                       
                       <div className="bg-white/70 backdrop-blur-sm p-5 rounded-xl border border-white/50 text-center hover:bg-white/80 transition-all duration-300">

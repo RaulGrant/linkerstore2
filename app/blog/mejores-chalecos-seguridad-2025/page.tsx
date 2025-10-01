@@ -18,7 +18,7 @@ export default function ChalecosSeguridadArticle() {
         rating: 4.4,
         reviewCount: 427,
         isRecommended: true,
-        bestFor: 'Mejor Calidad-Precio',
+        bestFor: 'Mejor Funcionalidad',
         amazonLink: 'https://a.co/d/bw2qd4o'
       },
       {
@@ -48,7 +48,7 @@ export default function ChalecosSeguridadArticle() {
       { name: 'Ajuste Lateral', product1: false, product2: true, product3: false },
       { name: 'Personalizable', product1: false, product2: false, product3: true },
       { name: 'Visibilidad Clase 2', product1: false, product2: false, product3: true },
-      { name: 'Precio Aproximado', product1: '$174', product2: '$299', product3: '$89' }
+      { name: 'Disponibilidad', product1: 'Amazon Prime', product2: 'Amazon Prime', product3: 'Envío Estándar' }
     ]
   };
 
@@ -57,7 +57,7 @@ export default function ChalecosSeguridadArticle() {
     {
       id: 1,
       title: 'Los Mejores Cascos de Seguridad Industrial 2025',
-      excerpt: 'Guía completa de cascos de protección para trabajo y construcción.',
+      excerpt: 'Guía completa de cas cos de protección para trabajo y construcción.',
       description: 'Guía completa de cascos de protección para trabajo y construcción.',
       category: 'EPP',
       publishDate: '10 Nov 2023',
@@ -833,7 +833,7 @@ export default function ChalecosSeguridadArticle() {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.6 }}
                     >
-                      <em>(Nota: Los precios son aproximados y pueden variar. Los enlaces te llevarán a la página del producto en Amazon).</em>
+                      <em>(Nota: Para ver información actualizada, visita directamente la página del producto en Amazon o Mercado Libre).</em>
                     </motion.p>
 
                     <div className="space-y-10">
@@ -860,22 +860,36 @@ export default function ChalecosSeguridadArticle() {
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.9 }}
                           >
-                            MEJOR CALIDAD-PRECIO
+                            MEJOR FUNCIONALIDAD
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Simonetta Vespetti - Mejor Opción Calidad-Precio</h3>
+                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Simonetta Vespetti - Mejor Opción en Funcionalidad</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Con una calificación estelar y siendo el #1 más vendido en su categoría, este chaleco de Simonetta Vespetti es la prueba de que no necesitas gastar una fortuna para obtener calidad. Fabricado en 100% poliéster, es ligero, cómodo y perfecto para una amplia gama de actividades. Sus 5 bolsillos, incluyendo uno transparente para identificación, lo hacen increíblemente funcional para el uso diario.
                         </p>
 
+                        {/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Uso general, logística, eventos, y cualquiera que busque el mejor balance entre costo y beneficio.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$174.00 MXN</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.2/5 estrellas (55 reseñas)</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
-                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Excelente precio, muy popular y bien calificado, ligero, funcional con bolsillo para ID.</p>
+                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Excelente relación calidad-funcionalidad, muy popular y bien calificado, ligero, funcional con bolsillo para ID.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> El poliéster puede ser menos duradero que la gabardina para uso industrial pesado.</p>
                           </div>
                         </div>
@@ -921,11 +935,23 @@ export default function ChalecosSeguridadArticle() {
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Cuando la durabilidad es la máxima prioridad, el chaleco de Señor Seguridad es el claro ganador. Su construcción en gabardina (80% algodón) y su diseño tipo brigadista están pensados para el uso rudo. Cuenta con múltiples bolsillos especializados, incluyendo uno para radio y una bolsa trasera de gran capacidad. Los costados abiertos con ajuste garantizan que se adapte a cualquier usuario.
                         </p>
-
+{/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Brigadistas, construcción, minería, y cualquier trabajo que exija máxima resistencia.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$299.00 MXN</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.5/5 estrellas (150+ reseñas)</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Extremadamente duradero, múltiples bolsillos funcionales, ajuste universal, excelente para cargar equipo.</p>
@@ -974,14 +1000,26 @@ export default function ChalecosSeguridadArticle() {
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Si necesitas equipar a tu equipo y reforzar tu marca, el chaleco de Greaxid es la opción perfecta. No solo ofrece personalización completa con logos o texto, sino que también cumple con el estándar de alta visibilidad Clase 2. Con 5 bolsillos, clips para micrófono y un anillo en D, está diseñado para la eficiencia en el trabajo.
                         </p>
-
+{/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Empresas de construcción, seguridad, logística y control de tráfico que buscan uniformes personalizados.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$89.00 MXN</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.0/5 estrellas (200+ reseñas)</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
-                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Totalmente personalizable, alta visibilidad Clase 2, muy funcional, excelente precio.</p>
+                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Totalmente personalizable, alta visibilidad Clase 2, muy funcional, excelente valor.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> El proceso de personalización requiere un paso extra antes de la compra.</p>
                           </div>
                         </div>
@@ -1026,16 +1064,28 @@ export default function ChalecosSeguridadArticle() {
                         <h3 className="text-3xl font-bold mb-6 text-gray-900">Límite-MX (Pack de 2) - Mejor Oferta por Volumen</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
-                          Para quienes necesitan equipar a un pequeño equipo con un presupuesto ajustado, esta oferta de Límite-MX es insuperable. Por un precio muy competitivo, obtienes dos chalecos de poliéster con 5 bolsillos, incluyendo el práctico porta-identificación transparente. Es una solución económica y funcional para necesidades básicas de visibilidad.
+                          Para quienes necesitan equipar a un pequeño equipo con un presupuesto ajustado, esta oferta de Límite-MX es insuperable. Con una alta relación calidad-funcionalidad, obtienes dos chalecos de poliéster con 5 bolsillos, incluyendo el práctico porta-identificación transparente. Es una solución económica y funcional para necesidades básicas de visibilidad.
                         </p>
-
+                        {/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Pequeños equipos, voluntarios, vigilantes de estacionamiento.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$199.00 MXN (por 2 unidades)</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon (paquete de 2 unidades)</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
-                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Increíble relación calidad-precio (2 chalecos), funcional con 5 bolsillos.</p>
+                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Increíble relación calidad-funcionalidad (2 chalecos), funcional con 5 bolsillos.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> Diseño básico y talla única que puede no ajustarse a todos.</p>
                           </div>
                         </div>
@@ -1081,11 +1131,23 @@ export default function ChalecosSeguridadArticle() {
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Similar al de Greaxid, el chaleco de WolunLi es otra excelente alternativa para la personalización. Con una calificación casi perfecta (4.8 estrellas), destaca por su calidad y la facilidad para añadir logos o texto. Fabricado en poliéster ligero y con 5 bolsillos, es una opción cómoda y profesional para cualquier equipo.
                         </p>
-
+                        {/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Equipos que buscan una alternativa de personalización con una calificación muy alta.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$99.00 MXN</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Calificación de usuario excepcional, totalmente personalizable, ligero y cómodo.</p>
@@ -1132,16 +1194,28 @@ export default function ChalecosSeguridadArticle() {
                         <h3 className="text-3xl font-bold mb-6 text-gray-900">Genérico (Axo Click) - El Brigadista de Gabardina Equilibrado</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
-                          Este chaleco tipo brigadista ofrece la durabilidad de la tela de gabardina a un precio más accesible que las opciones premium. Con 5 bolsillos bien distribuidos (incluyendo uno trasero) y ajuste lateral, es una opción robusta y versátil para trabajos industriales que no requieren la máxima especialización.
+                          Este chaleco tipo brigadista ofrece la durabilidad de la tela de gabardina a un valor más accesible que las opciones premium. Con 5 bolsillos bien distribuidos (incluyendo uno trasero) y ajuste lateral, es una opción robusta y versátil para trabajos industriales que no requieren la máxima especialización.
                         </p>
-
+                        {/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Uso industrial general, mantenimiento, brigadas con presupuesto moderado.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$225.00 MXN</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
-                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Material de gabardina duradero, buen número de bolsillos, precio competitivo para su tipo.</p>
+                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Material de gabardina duradero, buen número de bolsillos, valor competitivo para su tipo.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> Menos calificaciones de usuarios que otras marcas.</p>
                           </div>
                         </div>
@@ -1187,14 +1261,26 @@ export default function ChalecosSeguridadArticle() {
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Si te gusta el estilo y la funcionalidad de un chaleco brigadista pero tu presupuesto es limitado, esta opción de Mexsafe es para ti. Ofrece las características esenciales, como 5 bolsillos frontales y ajuste lateral, en una mezcla de poliéster y algodón. Es un punto de entrada funcional al mundo de los chalecos de trabajo más serios.
                         </p>
-
+                        {/* Nota importante sobre calificaciones */}
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg">
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400 text-lg">📋</span>
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm text-blue-800">
+                                <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (29 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-6 mb-6">
                           <div className="bg-white/70 p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Usuarios que necesitan la funcionalidad de un brigadista sin el alto costo.</p>
-                            <p className="text-gray-700 mb-3 text-lg"><strong>💰 Rango de Precio:</strong> ~$250.00 MXN</p>
+                            <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
                           </div>
                           <div className="bg-white/70 p-6 rounded-xl">
-                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Precio muy asequible para un chaleco tipo brigadista, funcional.</p>
+                            <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Muy asequible para un chaleco tipo brigadista, funcional.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> La calidad de los materiales puede no ser tan alta como en modelos más caros.</p>
                           </div>
                         </div>
@@ -1223,7 +1309,7 @@ export default function ChalecosSeguridadArticle() {
                     </motion.h2>
                     
                     <p className="text-gray-700 mb-6">
-                      Para ayudarte a visualizar las diferencias clave, aquí tienes una tabla comparando nuestras 3 mejores selecciones: el de mejor calidad-precio, el más duradero y el mejor para personalización.
+                      Para ayudarte a visualizar las diferencias clave, aquí tienes una tabla comparando nuestras 3 mejores selecciones: el de mejor calidad-funcionalidad, el más duradero y el mejor para personalización.
                     </p>
 
                     <ProductComparison 
@@ -1235,7 +1321,7 @@ export default function ChalecosSeguridadArticle() {
                           rating: 4.4,
                           reviewCount: 427,
                           isRecommended: true,
-                          bestFor: 'Mejor Calidad-Precio',
+                          bestFor: 'Mejor Funcionalidad',
                           amazonLink: 'https://a.co/d/bw2qd4o'
                         },
                         {
@@ -1265,7 +1351,7 @@ export default function ChalecosSeguridadArticle() {
                         { name: 'Ajuste Lateral', product1: false, product2: true, product3: false },
                         { name: 'Personalizable', product1: false, product2: false, product3: true },
                         { name: 'Visibilidad Clase 2', product1: false, product2: false, product3: true },
-                        { name: 'Precio Aproximado', product1: '$174', product2: '$299', product3: '$89' }
+                        { name: 'Disponibilidad', product1: 'Amazon', product2: 'Amazon', product3: 'Amazon' }
                       ]}
                     />
                   </section>
@@ -1293,7 +1379,7 @@ export default function ChalecosSeguridadArticle() {
                       <div className="bg-red-50 border border-red-200 rounded-lg p-6">
                         <h3 className="text-xl font-semibold mb-3 text-red-900">❌ Errores Comunes a Evitar:</h3>
                         <ul className="space-y-2 text-gray-700">
-                          <li>• Comprar solo por precio bajo, ignorando la durabilidad.</li>
+                          <li>• Comprar solo por valor bajo, ignorando la durabilidad.</li>
                           <li>• Elegir un chaleco sin suficientes bolsillos para tus herramientas.</li>
                           <li>• No verificar las instrucciones de lavado, lo que puede arruinar la reflectividad.</li>
                         </ul>
@@ -1368,7 +1454,7 @@ export default function ChalecosSeguridadArticle() {
                           </p>
                           <div className="bg-white/80 p-6 rounded-xl mb-4">
                             <p className="text-gray-700 leading-relaxed mb-3 text-lg">
-                              Después de nuestro análisis, nuestra recomendación principal para la <strong className="bg-yellow-200 px-2 py-1 rounded">mejor opción general es el Chaleco Simonetta Vespetti</strong>. Ofrece una combinación inmejorable de funcionalidad, altas calificaciones y un precio accesible que lo hace perfecto para la mayoría de los usuarios.
+                              Después de nuestro análisis, nuestra recomendación principal para la <strong className="bg-yellow-200 px-2 py-1 rounded">mejor opción general es el Chaleco Simonetta Vespetti</strong>. Ofrece una combinación inmejorable de funcionalidad, altas calificaciones y un valor accesible que lo hace perfecto para la mayoría de los usuarios.
                             </p>
                             <p className="text-gray-700 leading-relaxed text-lg">
                               Si tu trabajo exige lo máximo en resistencia y capacidad de carga, no busques más: el <strong className="bg-blue-200 px-2 py-1 rounded">Chaleco Señor Seguridad</strong> es la inversión profesional que necesitas.

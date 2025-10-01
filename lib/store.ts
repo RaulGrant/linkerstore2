@@ -23,12 +23,8 @@ export function filterProducts(products: AmazonProduct[], filters: ProductFilter
       return false;
     }
 
-    // Filtro por rango de precios
-    if (filters.priceRange) {
-      if (product.price < filters.priceRange.min || product.price > filters.priceRange.max) {
-        return false;
-      }
-    }
+    // Filtro por rango de precios - REMOVIDO
+    // Los precios ya no están disponibles en el producto
 
     // Filtro por calificación
     if (filters.rating && (!product.rating || product.rating < filters.rating)) {
@@ -52,12 +48,10 @@ export function filterProducts(products: AmazonProduct[], filters: ProductFilter
 /**
  * Ordena productos según diferentes criterios
  */
-export function sortProducts(products: AmazonProduct[], sortBy: 'price' | 'rating' | 'name' | 'newest' = 'newest'): AmazonProduct[] {
+export function sortProducts(products: AmazonProduct[], sortBy: 'rating' | 'name' | 'newest' = 'newest'): AmazonProduct[] {
   const sorted = [...products];
   
   switch (sortBy) {
-    case 'price':
-      return sorted.sort((a, b) => a.price - b.price);
     case 'rating':
       return sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
     case 'name':
@@ -86,33 +80,6 @@ export function findSimilarProducts(product: AmazonProduct, allProducts: AmazonP
   });
   
   return similar.slice(0, limit);
-}
-
-/**
- * Calcula el descuento simulado para mostrar
- */
-export function calculateDiscount(product: AmazonProduct): { hasDiscount: boolean; originalPrice: number; discountPercentage: number } {
-  // Simulación de descuento aleatorio para algunos productos
-  const hasDiscount = Math.random() > 0.7; // 30% de productos con descuento
-  
-  if (!hasDiscount) {
-    return { hasDiscount: false, originalPrice: product.price, discountPercentage: 0 };
-  }
-  
-  const discountPercentage = Math.floor(Math.random() * 30) + 10; // 10-40% de descuento
-  const originalPrice = product.price * (1 + discountPercentage / 100);
-  
-  return { hasDiscount: true, originalPrice, discountPercentage };
-}
-
-/**
- * Formatea el precio con moneda
- */
-export function formatPrice(price: number, currency: string = 'MXN'): string {
-  return new Intl.NumberFormat('es-MX', {
-    style: 'currency',
-    currency: currency,
-  }).format(price);
 }
 
 /**

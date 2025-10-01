@@ -28,7 +28,7 @@ const featuredArticles = [
   },
   {
     title: 'Top 7 Kits de Herramientas Que Todo Profesional (y Aficionado) Debe Tener en 2025',
-    excerpt: 'Los conjuntos de herramientas esenciales para trabajos industriales y hogar. Calidad, funcionalidad y mejor relación precio-valor.',
+    excerpt: 'Los conjuntos de herramientas esenciales para trabajos industriales y hogar. Calidad, funcionalidad y mejor relación valor-rendimiento.',
     category: 'Herramientas',
     readTime: '13 min',
     publishDate: '30 Ago 2025',

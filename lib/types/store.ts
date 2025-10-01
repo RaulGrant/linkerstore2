@@ -60,10 +60,6 @@ export interface Cart {
 
 export interface ProductFilters {
   category?: string;
-  priceRange?: {
-    min: number;
-    max: number;
-  };
   rating?: number;
   brand?: string;
   isPrime?: boolean;

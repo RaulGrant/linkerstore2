@@ -7,8 +7,6 @@ CREATE TABLE amazon_products (
     asin VARCHAR(10) UNIQUE NOT NULL,
     title TEXT NOT NULL,
     description TEXT,
-    price_amount DECIMAL(10,2),
-    price_currency VARCHAR(3) DEFAULT 'USD',
     image_url TEXT,
     amazon_url TEXT NOT NULL,
     category VARCHAR(100),
@@ -110,10 +108,10 @@ WITH CHECK (
 );
 
 -- Datos de ejemplo para desarrollo
-INSERT INTO amazon_products (asin, title, description, price_amount, price_currency, image_url, amazon_url, category) VALUES
-('B08N5WRWNW', 'Echo Dot (4th Gen)', 'Smart speaker with Alexa', 49.99, 'USD', 'https://m.media-amazon.com/images/I/714Rq4k05UL._AC_SL1500_.jpg', 'https://amazon.com/dp/B08N5WRWNW', 'Electronics'),
-('B07FZ8S74R', 'Fire TV Stick 4K', 'Streaming device with Alexa Voice Remote', 39.99, 'USD', 'https://m.media-amazon.com/images/I/51TjJOTfslL._AC_SL1000_.jpg', 'https://amazon.com/dp/B07FZ8S74R', 'Electronics'),
-('B0833PFGML', 'Kindle Paperwhite', 'Waterproof e-reader', 139.99, 'USD', 'https://m.media-amazon.com/images/I/61T4CrwCANL._AC_SL1000_.jpg', 'https://amazon.com/dp/B0833PFGML', 'Books');
+INSERT INTO amazon_products (asin, title, description, image_url, amazon_url, category) VALUES
+('B08N5WRWNW', 'Echo Dot (4th Gen)', 'Smart speaker with Alexa', 'https://m.media-amazon.com/images/I/714Rq4k05UL._AC_SL1500_.jpg', 'https://amazon.com/dp/B08N5WRWNW', 'Electronics'),
+('B07FZ8S74R', 'Fire TV Stick 4K', 'Streaming device with Alexa Voice Remote', 'https://m.media-amazon.com/images/I/51TjJOTfslL._AC_SL1000_.jpg', 'https://amazon.com/dp/B07FZ8S74R', 'Electronics'),
+('B0833PFGML', 'Kindle Paperwhite', 'Waterproof e-reader', 'https://m.media-amazon.com/images/I/61T4CrwCANL._AC_SL1000_.jpg', 'https://amazon.com/dp/B0833PFGML', 'Books');
 
 INSERT INTO hotmart_banners (title, description, image_url, hotmart_url, banner_type, weight) VALUES
 ('Curso de Programación Web', 'Aprende desarrollo web desde cero', 'https://via.placeholder.com/800x200/4A90E2/FFFFFF?text=Curso+Programacion+Web', 'https://hotmart.com/curso-programacion-web', 'horizontal', 3),

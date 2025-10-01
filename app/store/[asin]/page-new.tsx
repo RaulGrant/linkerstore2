@@ -193,11 +193,8 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </div>
                 </div>
 
-                {/* Price and Rating */}
+                {/* Rating */}
                 <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {product.price}
-                  </div>
                   <div className="flex items-center justify-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -213,18 +210,6 @@ export default function ProductPage({ params }: ProductPageProps) {
                       ({product.rating}) • {product.reviewCount} reseñas
                     </span>
                   </div>
-                  
-                  {product.originalPrice && (
-                    <div className="text-lg text-gray-500 line-through mb-2">
-                      {product.originalPrice}
-                    </div>
-                  )}
-                  
-                  {product.discount && (
-                    <Badge variant="destructive" className="mb-4">
-                      {product.discount} de descuento
-                    </Badge>
-                  )}
                 </div>
 
                 {/* Action Buttons */}
