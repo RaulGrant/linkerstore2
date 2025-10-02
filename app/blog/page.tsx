@@ -37,6 +37,43 @@ const featuredArticles = [
     isPopular: true
   },
   {
+  title: 'Guía NOM-009-STPS-2011: Trabajos en Alturas',
+  excerpt: 'Los 7 puntos clave que todo supervisor debe dominar para garantizar la seguridad en trabajos de altura. Incluye análisis de riesgos, jerarquía de controles y plan de emergencia.',
+  category: 'Seguridad Industrial',
+  readTime: '15 min',
+  publishDate: '1 Oct 2025',
+  slug: 'guia-nom-009-stps-2011-trabajos-altura',
+  views: 900,
+  isPopular: false,
+  isNew: true
+},
+{
+  title: 'Los 5 Errores que Están Destruyendo tus Herramientas Eléctricas',
+  excerpt: 'Y cómo evitarlos para ahorrar miles de pesos. Guía profesional sobre extensiones eléctricas, limpieza, mantenimiento preventivo y uso correcto de accesorios. Incluye calculadora de ahorro y simuladores interactivos.',
+  description: 'Descubre los 5 errores más comunes que acortan la vida útil de tus herramientas eléctricas. Aprende sobre extensiones eléctricas correctas, limpieza diaria, prevención de sobrecarga, selección de accesorios y mantenimiento de escobillas de carbón.',
+  category: 'Herramientas',
+  readTime: '18 min',
+  publishDate: '2 Oct 2025',
+  slug: 'ahorra-mantenimiento-herramientas-electricas',
+  views: 500,
+  isPopular: false,
+  isNew: true,
+  tags: ['mantenimiento', 'herramientas eléctricas', 'ahorro', 'productividad', 'profesional']
+},
+{
+  title: 'EPP: La Inversión que Salva Vidas (y Millones en Multas)',
+  excerpt: '¿Sabías que el 85% de lesiones laborales podrían prevenirse con EPP correcto? Descubre por qué el 40% de trabajadores no usa su equipo y cómo solucionarlo. Incluye guía de selección profesional y tecnologías del futuro.',
+  description: 'Guía exhaustiva sobre Equipo de Protección Personal: desde estadísticas impactantes hasta implementación práctica. Cubre protección de cabeza, ojos, oídos, respiratoria, manos y pies con estándares OSHA/ANSI. Incluye psicología del cumplimiento, materiales avanzados, EPP inteligente y estrategias de cultura de seguridad.',
+  category: 'Seguridad Industrial',
+  readTime: '22 min',
+  publishDate: '2 Oct 2025',
+  slug: 'guia-completa-epp-seguridad-industrial',
+  views: 850,
+  isPopular: true,
+  isNew: true,
+  tags: ['EPP', 'seguridad', 'OSHA', 'prevención de accidentes', 'salud laboral', 'equipos de protección']
+},
+  {
     title: 'Los Mejores Botiquines de Emergencia para el Lugar de Trabajo',
     excerpt: 'Equipos de primeros auxilios especializados para diferentes entornos laborales. Normativas y contenido recomendado.',
     category: 'Primeros Auxilios',
