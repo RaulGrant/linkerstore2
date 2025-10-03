@@ -28,13 +28,17 @@ interface ProductComparisonProps {
   products: ComparisonProduct[];
   features: ProductFeature[];
   className?: string;
+  affiliateNote?: string;
+  buttonText?: string;
 }
 
 export default function ProductComparison({
   title,
   products,
   features,
-  className = ''
+  className = '',
+  affiliateNote,
+  buttonText = 'Ver en Amazon'
 }: ProductComparisonProps) {
   const renderFeatureValue = (value: boolean | string) => {
     if (typeof value === 'boolean') {
@@ -267,7 +271,7 @@ export default function ProductComparison({
                 className="font-bold"
                 whileHover={{ scale: 1.05 }}
               >
-                Ver en Amazon
+                {buttonText}
               </motion.span>
               
               <span className="text-sm opacity-90">{product.name}</span>
@@ -307,8 +311,12 @@ export default function ProductComparison({
         transition={{ delay: 1.2 }}
       >
         <p className="text-sm text-blue-800">
-          <strong>📢 Divulgación:</strong> Los enlaces anteriores son enlaces de afiliados de Amazon. 
-          Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. 💙
+          {affiliateNote || (
+            <>
+              <strong>📢 Divulgación:</strong> Los enlaces anteriores son enlaces de afiliados de Amazon. 
+              Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. 💙
+            </>
+          )}
         </p>
       </motion.div>
     </motion.div>
