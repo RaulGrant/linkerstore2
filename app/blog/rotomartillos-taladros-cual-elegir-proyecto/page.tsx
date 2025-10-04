@@ -1630,8 +1630,6 @@ export default function RotomartillosTaladrosArticle() {
                       title="Análisis Comparativo: Las 3 Mejores Opciones"
                       products={comparisonProducts}
                       features={comparisonFeatures}
-                      buttonText="Ver Producto"
-                      affiliateNote="📢 Divulgación: Los enlaces son de afiliados de Mercado Libre. Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. Esto nos ayuda a mantener este contenido gratuito y actualizado."
                     />
                   </section>
 

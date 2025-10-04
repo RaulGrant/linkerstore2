@@ -1784,8 +1784,6 @@ export default function MultimetrosProfesionalesArticle() {
                       title="Análisis Comparativo: Los 3 Mejores Multímetros"
                       products={comparisonProducts}
                       features={comparisonFeatures}
-                      buttonText="Ver Producto"
-                      affiliateNote="📢 Divulgación: Los enlaces son de afiliados. Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. Esto nos ayuda a mantener este contenido gratuito y actualizado."
                     />
 
                     {/* Análisis de Tendencia */}
