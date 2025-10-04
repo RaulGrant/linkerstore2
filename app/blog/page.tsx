@@ -225,7 +225,7 @@ const featuredArticles = [
     category: 'Industrial',
     readTime: '9 min',
     publishDate: '21 Ago 2025',
-    slug: 'monitores-gases-proteccion-invisible-vital',
+    slug: 'monitores-gases-proteccion-invisible-vitales',
     views: 789
   },
   {
@@ -243,7 +243,7 @@ const featuredArticles = [
     category: 'Seguridad',
     readTime: '10 min',
     publishDate: '17 Ago 2025',
-    slug: 'mejores-extintores-diferentes-tipos-incendios',
+    slug: 'los-mejores-extintores-diferentes-tipos-incendios',
     views: 1045,
     isPopular: true
   }
