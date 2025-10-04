@@ -117,25 +117,25 @@ export default function SelladoresIndustrialesArticle() {
   const faqs = [
     {
       question: '¿Cuál es la diferencia fundamental entre un sellador de silicona y uno de poliuretano?',
-      answer: 'La diferencia principal reside en su estructura química, que dicta sus propiedades. La silicona destaca por su superior flexibilidad, resistencia a los rayos UV y a temperaturas extremas, siendo ideal para exteriores y sellado de vidrio, pero no se puede pintar. El poliuretano ofrece una excelente resistencia mecánica y a la abrasión, se adhiere fuertemente al concreto y es pintable, pero es menos resistente a la exposición directa y prolongada a los rayos UV. En resumen: piense en la silicona para "flexibilidad y resistencia al clima" y en el poliuretano para "dureza, tráfico y capacidad de ser pintado".'
+      answer: "La diferencia principal reside en su estructura química, que dicta sus propiedades. La silicona destaca por su superior flexibilidad, resistencia a los rayos UV y a temperaturas extremas, siendo ideal para exteriores y sellado de vidrio, pero no se puede pintar. El poliuretano ofrece una excelente resistencia mecánica y a la abrasión, se adhiere fuertemente al concreto y es pintable, pero es menos resistente a la exposición directa y prolongada a los rayos UV. En resumen: piense en la silicona para 'flexibilidad y resistencia al clima' y en el poliuretano para 'dureza, tráfico y capacidad de ser pintado'."
     },
     {
       question: '¿Qué significa "RTV" en un sellador de silicona?',
-      answer: 'RTV son las siglas de "Room Temperature Vulcanizing" (Vulcanizado a Temperatura Ambiente). Este término indica que el sellador cura mediante una reacción química con la humedad presente en el aire a temperatura ambiente, sin necesidad de aplicar calor o mezclar un segundo componente para endurecer.'
+      answer: "RTV son las siglas de 'Room Temperature Vulcanizing' (Vulcanizado a Temperatura Ambiente). Este término indica que el sellador cura mediante una reacción química con la humedad presente en el aire a temperatura ambiente, sin necesidad de aplicar calor o mezclar un segundo componente para endurecer."
     },
     {
       question: '¿Puedo aplicar un sellador nuevo sobre una junta que ya tiene sellador viejo?',
-      answer: 'No. Este es un error crítico que garantiza una falla prematura. La adhesión de un nuevo sellador depende de una superficie perfectamente limpia y seca. Es imperativo eliminar mecánicamente todo el sellador viejo, ya sea cortándolo o raspándolo. Posteriormente, la junta debe limpiarse con un solvente adecuado (como alcohol isopropílico) para remover cualquier residuo, polvo o grasa antes de aplicar el nuevo cordón de sellador.'
+      answer: "No. Este es un error crítico que garantiza una falla prematura. La adhesión de un nuevo sellador depende de una superficie perfectamente limpia y seca. Es imperativo eliminar mecánicamente todo el sellador viejo, ya sea cortándolo o raspándolo. Posteriormente, la junta debe limpiarse con un solvente adecuado (como alcohol isopropílico) para remover cualquier residuo, polvo o grasa antes de aplicar el nuevo cordón de sellador."
     },
     {
       question: '¿Cómo puedo quitar sellador de poliuretano o silicona que ya está curado?',
-      answer: 'La remoción es un proceso principalmente mecánico. Para Silicona Curada: Utilice una navaja o un rascador para cortar y retirar la mayor parte del material. Aplicar calor con una pistola de aire caliente puede ayudar a ablandar la silicona, facilitando su remoción. Para los residuos finos, se pueden utilizar solventes como acetona o removedores de silicona comerciales. Para Poliuretano Curado: Es extremadamente difícil de quitar debido a su alta adherencia y tenacidad. El método principal es el raspado y lijado mecánico. La acetona es efectiva para disolver el poliuretano fresco, pero tiene una eficacia muy limitada una vez que ha curado por completo.'
+      answer: "La remoción es un proceso principalmente mecánico. Para Silicona Curada: Utilice una navaja o un rascador para cortar y retirar la mayor parte del material. Aplicar calor con una pistola de aire caliente puede ayudar a ablandar la silicona, facilitando su remoción. Para los residuos finos, se pueden utilizar solventes como acetona o removedores de silicona comerciales. Para Poliuretano Curado: Es extremadamente difícil de quitar debido a su alta adherencia y tenacidad. El método principal es el raspado y lijado mecánico. La acetona es efectiva para disolver el poliuretano fresco, pero tiene una eficacia muy limitada una vez que ha curado por completo."
     },
     {
       question: '¿Todos los selladores que dicen "pintable" se comportan igual con la pintura?',
-      answer: 'No. Los selladores acrílicos son los más fáciles y rápidos de pintar, a menudo en menos de una hora. Los selladores de poliuretano también son pintables, pero es crucial esperar a que estén completamente curados para evitar problemas de adherencia de la pintura. Es importante considerar que aplicar una pintura rígida sobre un sellador elastomérico puede provocar que la pintura se agriete cuando la junta se mueva. Por ello, se recomienda el uso de pinturas flexibles. Las siliconas, por su naturaleza química, NUNCA deben pintarse.'
+      answer: "No. Los selladores acrílicos son los más fáciles y rápidos de pintar, a menudo en menos de una hora. Los selladores de poliuretano también son pintables, pero es crucial esperar a que estén completamente curados para evitar problemas de adherencia de la pintura. Es importante considerar que aplicar una pintura rígida sobre un sellador elastomérico puede provocar que la pintura se agriete cuando la junta se mueva. Por ello, se recomienda el uso de pinturas flexibles. Las siliconas, por su naturaleza química, NUNCA deben pintarse."
     }
-  ];
+  ];;
 
   return (
     <BlogLayout>

@@ -47,84 +47,6 @@ const featuredArticles = [
   isPopular: false,
   isNew: true
 },
-{
-  title: 'Los 5 Errores que Están Destruyendo tus Herramientas Eléctricas',
-  excerpt: 'Y cómo evitarlos para ahorrar miles de pesos. Guía profesional sobre extensiones eléctricas, limpieza, mantenimiento preventivo y uso correcto de accesorios. Incluye calculadora de ahorro y simuladores interactivos.',
-  description: 'Descubre los 5 errores más comunes que acortan la vida útil de tus herramientas eléctricas. Aprende sobre extensiones eléctricas correctas, limpieza diaria, prevención de sobrecarga, selección de accesorios y mantenimiento de escobillas de carbón.',
-  category: 'Herramientas',
-  readTime: '18 min',
-  publishDate: '2 Oct 2025',
-  slug: 'ahorra-mantenimiento-herramientas-electricas',
-  views: 500,
-  isPopular: false,
-  isNew: true,
-  tags: ['mantenimiento', 'herramientas eléctricas', 'ahorro', 'productividad', 'profesional']
-},
-{
-  title: 'EPP: La Inversión que Salva Vidas (y Millones en Multas)',
-  excerpt: '¿Sabías que el 85% de lesiones laborales podrían prevenirse con EPP correcto? Descubre por qué el 40% de trabajadores no usa su equipo y cómo solucionarlo. Incluye guía de selección profesional y tecnologías del futuro.',
-  description: 'Guía exhaustiva sobre Equipo de Protección Personal: desde estadísticas impactantes hasta implementación práctica. Cubre protección de cabeza, ojos, oídos, respiratoria, manos y pies con estándares OSHA/ANSI. Incluye psicología del cumplimiento, materiales avanzados, EPP inteligente y estrategias de cultura de seguridad.',
-  category: 'Seguridad Industrial',
-  readTime: '22 min',
-  publishDate: '2 Oct 2025',
-  slug: 'guia-completa-epp-seguridad-industrial',
-  views: 850,
-  isPopular: true,
-  isNew: true,
-  tags: ['EPP', 'seguridad', 'OSHA', 'prevención de accidentes', 'salud laboral', 'equipos de protección']
-},
-{
-  title: 'Tapones vs. Orejeras: La Guía Definitiva de Protección Auditiva',
-  excerpt: 'Análisis completo con ciencia, cálculos NRR reales y matriz de decisión. Descubre cuál protector auditivo es el correcto para cada situación laboral y evita los errores que destruyen tu audición.',
-  description: 'Guía experta sobre protección auditiva laboral: tapones vs orejeras, decodificación del NRR, fórmula OSHA, químicos ototóxicos, doble protección y matriz de decisión situacional. Incluye calculadora interactiva, tabla comparativa y método correcto de inserción.',
-  category: 'Seguridad Industrial',
-  readTime: '25 min',
-  publishDate: '3 Oct 2025',
-  slug: 'proteccion-auditiva-trabajo-tapones-vs-orejeras',
-  views: 1450,
-  isPopular: true,
-  isNew: true,
-  tags: ['protección auditiva', 'tapones auditivos', 'orejeras', 'NRR', 'ruido laboral', 'conservación auditiva', 'EPP auditivo']
-},
-{
-  title: 'Guía Definitiva de Extintores: Cuál Usar en Cada Tipo de Fuego',
-  excerpt: 'Matriz interactiva fuego vs extintor, técnica P.A.S.O., ubicación estratégica y mantenimiento. Aprende a tomar la decisión correcta en segundos y evita errores fatales en emergencias.',
-  description: 'Guía completa de extintores contra incendios: clases de fuego A, B, C, D y K, tipos de agentes extintores (PQS, CO₂, agua, químico húmedo), técnica P.A.S.O., ubicación estratégica por área, mantenimiento NFPA y quiz interactivo con escenarios reales de emergencia.',
-  category: 'Seguridad Industrial',
-  readTime: '28 min',
-  publishDate: '4 Oct 2025',
-  slug: 'mejores-extintores-diferentes-tipos-incendios',
-  views: 1850,
-  isPopular: true,
-  isNew: true,
-  tags: ['extintores', 'seguridad contra incendios', 'clases de fuego', 'prevención incendios', 'NFPA', 'emergencias', 'protección civil']
-},
-{
-  title: 'Rotomartillo vs. Taladro Percutor: Guía Definitiva 2025',
-  excerpt: 'Descubre cuál herramienta necesitas según el material. Comparativa técnica con energía de impacto, asesor interactivo y escenarios reales para elegir correctamente y ahorrar dinero.',
-  description: 'Guía completa rotomartillo vs taladro percutor: diferencias técnicas, energía de impacto en Joules, sistema SDS, tabla comparativa, asesor por material (ladrillo, concreto, piedra), escenarios prácticos, guía de compra y FAQ con experto.',
-  category: 'Herramientas',
-  readTime: '22 min',
-  publishDate: '5 Oct 2025',
-  slug: 'rotomartillo-vs-taladro-percutor-guia-definitiva',
-  views: 1650,
-  isPopular: true,
-  isNew: true,
-  tags: ['rotomartillo', 'taladro percutor', 'herramientas eléctricas', 'construcción', 'bricolaje', 'concreto', 'SDS']
-},
-{
-  title: 'Monitores de Gases: Protección Invisible Pero Vital | Guía 2025',
-  excerpt: 'Los peligros que no puedes ver son los que te matan. Guía esencial sobre detección de gases en espacios confinados: los 4 grandes, bump test vs calibración, y tecnología conectada que salva vidas.',
-  description: 'Guía completa de monitores de gases: O₂, LEL, CO, H₂S. Detectores monogás vs multigás, bump test diario, calibración, conectividad P2P, IIoT. Incluye estadísticas de fatalidades, casos reales y tecnología del futuro.',
-  category: 'Seguridad Industrial',
-  readTime: '25 min',
-  publishDate: '21 Oct 2025',
-  slug: 'monitores-gases-proteccion-invisible-vital',
-  views: 789,
-  isPopular: false,
-  isNew: true,
-  tags: ['monitores de gases', 'espacios confinados', 'detección atmosférica', 'OSHA', 'NIOSH', 'bump test', 'calibración', 'IIoT']
-},
   {
     title: 'Los Mejores Botiquines de Emergencia para el Lugar de Trabajo',
     excerpt: 'Equipos de primeros auxilios especializados para diferentes entornos laborales. Normativas y contenido recomendado.',
@@ -225,7 +147,7 @@ const featuredArticles = [
     category: 'Industrial',
     readTime: '9 min',
     publishDate: '21 Ago 2025',
-    slug: 'monitores-gases-proteccion-invisible-vitales',
+    slug: 'monitores-gases-proteccion-invisible-vital',
     views: 789
   },
   {
@@ -243,7 +165,7 @@ const featuredArticles = [
     category: 'Seguridad',
     readTime: '10 min',
     publishDate: '17 Ago 2025',
-    slug: 'los-mejores-extintores-diferentes-tipos-incendios',
+    slug: 'mejores-extintores-diferentes-tipos-incendios',
     views: 1045,
     isPopular: true
   }
