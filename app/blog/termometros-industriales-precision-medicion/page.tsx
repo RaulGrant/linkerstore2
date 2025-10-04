@@ -1852,8 +1852,6 @@ export default function TermometrosIndustrialesArticle() {
                       title="Análisis Comparativo: Los 3 Termómetros Mejor Valorados"
                       products={comparisonProducts}
                       features={comparisonFeatures}
-                      buttonText="Ver en Mercado Libre"
-                      affiliateNote="📢 Divulgación: Los enlaces son de afiliados de Mercado Libre. Podemos recibir una comisión si realizas una compra, sin costo adicional para ti."
                     />
                   </section>
 

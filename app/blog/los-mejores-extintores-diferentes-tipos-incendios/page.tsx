@@ -992,7 +992,8 @@ export default function ExtintoresGuiaArticle() {
                       className="bg-gradient-to-br from-yellow-50 to-amber-50 border-4 border-yellow-400 p-8 rounded-2xl mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                    ></motion.div>                      <div className="flex items-start gap-4">
+                    >
+                      <div className="flex items-start gap-4">
                         <AlertTriangle className="h-10 w-10 text-yellow-600 flex-shrink-0" />
                         <div>
                           <h3 className="text-2xl font-bold text-yellow-900 mb-3">⚠️ No es Opcional, es Ley</h3>
@@ -1970,8 +1971,6 @@ export default function ExtintoresGuiaArticle() {
                       title="Análisis Comparativo: Los 3 Extintores Esenciales"
                       products={comparisonProducts}
                       features={comparisonFeatures}
-                      buttonText="Ver en Mercado Libre"
-                      affiliateNote="📢 Divulgación: Los enlaces son de afiliados de Mercado Libre. Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. Esto nos ayuda a mantener este contenido gratuito y actualizado."
                     />
                   </section>
 

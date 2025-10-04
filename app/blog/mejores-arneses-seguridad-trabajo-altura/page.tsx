@@ -1840,8 +1840,6 @@ export default function ArnesesSeguridadArticle() {
                       title="Análisis Comparativo: Los 3 Mejores Arneses Certificados"
                       products={comparisonProducts}
                       features={comparisonFeatures}
-                      buttonText="Ver en Mercado Libre"
-                      affiliateNote="📢 Divulgación: Los enlaces son de afiliados de Mercado Libre. Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. Esto nos ayuda a mantener este contenido gratuito y actualizado."
                     />
                   </section>
 

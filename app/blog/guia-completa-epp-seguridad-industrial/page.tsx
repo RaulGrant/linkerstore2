@@ -530,7 +530,7 @@ export default function GuiaEPPIndustrialArticle() {
                           <Hand className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
                           <div>
                             <p className="font-bold text-gray-800">Lesiones en Extremidades (EE.UU.)</p>
-                            <p className="text-sm text-gray-600">30.6% de casos DART • >$100k por fractura</p>
+                            <p className="text-sm text-gray-600">30.6% de casos DART • {'>'}$100k por fractura</p>
                           </div>
                         </div>
 
