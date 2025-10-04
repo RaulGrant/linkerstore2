@@ -319,8 +319,8 @@ export default function SelladoresIndustrialesArticle() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
-                ></motion.article>
-                                  {/* Introducción */}
+                >
+                  {/* Introducción */}
                   <section id="introduccion" className="mb-16">
                     <motion.div 
                       className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-8 border-blue-500 p-8 rounded-r-2xl mb-8 shadow-lg"
@@ -2074,8 +2074,6 @@ export default function SelladoresIndustrialesArticle() {
                       title="Análisis Comparativo: Los 3 Selladores Mejor Valorados"
                       products={comparisonProducts}
                       features={comparisonFeatures}
-                      buttonText="Ver en Mercado Libre"
-                      affiliateNote="📢 Divulgación: Los enlaces son de afiliados de Mercado Libre. Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. Esto nos ayuda a mantener este contenido gratuito y actualizado."
                     />
                   </section>
 
