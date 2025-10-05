@@ -452,7 +452,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900">
                     🔧 Conoce a los Contendientes
                   </h2>
                   <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
@@ -676,7 +676,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900">
                     🎯 Asesor de Proyectos: ¿Qué Herramienta Necesitas?
                   </h2>
                   <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
@@ -765,7 +765,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900">
                     ⚡ Cara a Cara: La Diferencia en Números
                   </h2>
                   <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
@@ -820,7 +820,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900">
                     📊 Tabla Comparativa Completa
                   </h2>
                   <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
@@ -882,7 +882,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900">
                     🎬 Escenarios Prácticos del Mundo Real
                   </h2>
                   <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
@@ -971,7 +971,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900">
                     💰 Guía de Compra: ¿Qué Considerar?
                   </h2>
                   <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
@@ -1149,7 +1149,7 @@ export default function RotomartilloTaladroArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     ❓ Preguntas Frecuentes
                   </h2>
 
@@ -1204,7 +1204,7 @@ export default function RotomartilloTaladroArticle() {
               >
                 <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-3xl shadow-2xl">
                   <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-6">🎯 La Regla de Oro</h2>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">🎯 La Regla de Oro</h2>
                     <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl mb-6">
                       <p className="text-lg sm:text-xl md:text-2xl font-bold text-amber-400 mb-4">
                         "Si es ladrillo o bloque, un buen taladro percutor es tu aliado."

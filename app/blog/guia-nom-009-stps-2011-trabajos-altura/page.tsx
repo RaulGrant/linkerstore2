@@ -307,7 +307,7 @@ export default function GuiaNOM009Article() {
                       transition={{ delay: 0.3 }}
                     >
                       <div className="text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-2">💰</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">💰</div>
                         <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-700 mb-2">$535,350</div>
                         <p className="text-sm text-gray-700">Multa máxima STPS por incumplimiento</p>
                       </div>
@@ -320,7 +320,7 @@ export default function GuiaNOM009Article() {
                       transition={{ delay: 0.4 }}
                     >
                       <div className="text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-2">📈</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">📈</div>
                         <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-700 mb-2">+$$$$</div>
                         <p className="text-sm text-gray-700">Incremento en Prima de Riesgo IMSS</p>
                       </div>
@@ -333,7 +333,7 @@ export default function GuiaNOM009Article() {
                       transition={{ delay: 0.5 }}
                     >
                       <div className="text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-2">⚖️</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">⚖️</div>
                         <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-orange-700 mb-2">Legal</div>
                         <p className="text-sm text-gray-700">Responsabilidad Civil y Penal</p>
                       </div>
@@ -350,19 +350,19 @@ export default function GuiaNOM009Article() {
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">📊 Estadísticas de Accidentes en México</h3>
                     <div className="grid md:grid-cols-4 gap-4 mb-6">
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200 text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-red-600 mb-2">27%</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">27%</div>
                         <p className="text-sm text-gray-700">Accidentes por caídas</p>
                       </div>
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200 text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-orange-600 mb-2">~4</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">~4</div>
                         <p className="text-sm text-gray-700">Muertes laborales diarias</p>
                       </div>
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-200 text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-yellow-600 mb-2">1.8m</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-2">1.8m</div>
                         <p className="text-sm text-gray-700">Altura mínima NOM-009</p>
                       </div>
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200 text-center">
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-purple-600 mb-2">100%</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-purple-600 mb-2">100%</div>
                         <p className="text-sm text-gray-700">Accidentes prevenibles</p>
                       </div>
                     </div>
@@ -448,7 +448,7 @@ export default function GuiaNOM009Article() {
                 {/* Sistema de Tabs para los 7 Puntos Clave */}
                 <section id="puntos-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
@@ -484,7 +484,7 @@ export default function GuiaNOM009Article() {
                     {activeTab === 0 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🔍</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🔍</span>
                           Punto Clave 1: Análisis de Condiciones Prevalecientes
                         </h3>
                         
@@ -660,7 +660,7 @@ export default function GuiaNOM009Article() {
                     {activeTab === 1 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">⚡</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">⚡</span>
                           Punto Clave 2: La Jerarquía de Controles
                         </h3>
                         
@@ -801,7 +801,7 @@ export default function GuiaNOM009Article() {
 {activeTab === 2 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🛡️</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🛡️</span>
                           Punto Clave 3: Selección y Uso Correcto de EPP
                         </h3>
                         
@@ -990,7 +990,7 @@ export default function GuiaNOM009Article() {
                     {activeTab === 3 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🏗️</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🏗️</span>
                           Punto Clave 4: Sistemas de Andamios Seguros
                         </h3>
                         
@@ -1187,7 +1187,7 @@ export default function GuiaNOM009Article() {
                     {activeTab === 4 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🚨</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🚨</span>
                           Punto Clave 5: El Plan de Atención a Emergencias
                         </h3>
                         
@@ -1437,7 +1437,7 @@ export default function GuiaNOM009Article() {
                     {activeTab === 5 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">📋</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">📋</span>
                           Punto Clave 6: La Capacitación y Adiestramiento - DC-3
                         </h3>
                         
@@ -1625,7 +1625,7 @@ export default function GuiaNOM009Article() {
                     {activeTab === 6 && (
                       <div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">✅</span>
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">✅</span>
                           Punto Clave 7: El Registro y la Supervisión Continua
                         </h3>
                         
@@ -1864,7 +1864,7 @@ export default function GuiaNOM009Article() {
                 {/* Conclusión */}
                 <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                   >

@@ -496,7 +496,7 @@ export default function KitsHerramientasArticle() {
                 {/* Top 7 Kits de Herramientas */}
                 <section id="top-kits" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -30, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1477,7 +1477,7 @@ export default function KitsHerramientasArticle() {
                 {/* Comparación de productos */}
                 <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, x: -50, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1513,7 +1513,7 @@ export default function KitsHerramientasArticle() {
                 {/* Guía de compra */}
                 <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: 30, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1609,7 +1609,7 @@ export default function KitsHerramientasArticle() {
                       transition={{ duration: 0.8, delay: 0.2 }}
                     >
                       <div className="text-center mb-4">
-                        <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">📱</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">📱</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Reparación de Electrónicos</h4>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-purple-100">
@@ -1625,7 +1625,7 @@ export default function KitsHerramientasArticle() {
                       transition={{ duration: 0.8, delay: 0.4 }}
                     >
                       <div className="text-center mb-4">
-                        <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🔧</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🔧</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Kit Todo-en-Uno</h4>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-orange-100">
@@ -1641,7 +1641,7 @@ export default function KitsHerramientasArticle() {
                       transition={{ duration: 0.8, delay: 0.6 }}
                     >
                       <div className="text-center mb-4">
-                        <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">💰</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">💰</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Presupuesto Limitado</h4>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-red-100">
@@ -1655,7 +1655,7 @@ export default function KitsHerramientasArticle() {
                 {/* Factores clave a considerar */}
                 <section id="factores-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, rotateX: -20, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1786,7 +1786,7 @@ export default function KitsHerramientasArticle() {
 
                 {/* Conclusión */}
                 <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                     🎯 Conclusión: Tu Decisión Final
                   </motion.h2>
                   <div className="bg-gradient-to-r from-indigo-50 to-purple-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-200">
@@ -1843,7 +1843,7 @@ export default function KitsHerramientasArticle() {
 
                 {/* Preguntas frecuentes */}
                 <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                     ❓ Preguntas Frecuentes
                   </motion.h2>
                   
@@ -1908,7 +1908,7 @@ export default function KitsHerramientasArticle() {
 
                 {/* Artículos relacionados */}
                 <section id="articulos-relacionados" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
                     📚 Artículos Relacionados
                   </motion.h2>
                   <RelatedArticles articles={relatedArticles} />

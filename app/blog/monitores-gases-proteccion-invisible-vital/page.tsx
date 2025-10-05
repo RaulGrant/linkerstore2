@@ -407,15 +407,15 @@ export default function MonitoresGasesArticle() {
                       </h3>
                       <div className="grid md:grid-cols-3 gap-3 mb-6">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
-                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-red-600 mb-2">1,030</div>
+                          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">1,030</div>
                           <div className="text-sm text-gray-700">Muertes en espacios confinados (2011-2018, EE.UU.)</div>
                         </div>
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
-                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-orange-600 mb-2">166</div>
+                          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">166</div>
                           <div className="text-sm text-gray-700">Pico de fatalidades en 2017</div>
                         </div>
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
-                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-yellow-600 mb-2">60%+</div>
+                          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-2">60%+</div>
                           <div className="text-sm text-gray-700">Son rescatistas improvisados</div>
                         </div>
                       </div>
@@ -456,7 +456,7 @@ export default function MonitoresGasesArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-sky-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4">
                     <span className="bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">
                       Entendiendo los "Cuatro Grandes"
                     </span>
@@ -664,7 +664,7 @@ export default function MonitoresGasesArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4">
                     <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                       La Herramienta Correcta para el Trabajo
                     </span>
@@ -945,7 +945,7 @@ export default function MonitoresGasesArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-red-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4">
                     <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                       La Diferencia Entre la Vida y la Muerte
                     </span>
@@ -1078,7 +1078,7 @@ export default function MonitoresGasesArticle() {
                       <Wifi className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         El Futuro de la Detección
                       </h2>
                       <p className="text-gray-600 text-lg">Innovaciones que Salvan Vidas</p>
@@ -1228,7 +1228,7 @@ export default function MonitoresGasesArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       Preguntas Frecuentes
                     </span>
@@ -1311,7 +1311,7 @@ export default function MonitoresGasesArticle() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
                       Un Instrumento Científico, No un Amuleto
                     </h2>
                     
@@ -1333,17 +1333,17 @@ export default function MonitoresGasesArticle() {
 
                       <div className="grid md:grid-cols-3 gap-3">
                         <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
-                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🔍</div>
+                          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">🔍</div>
                           <h3 className="font-bold text-xl mb-2">Entender</h3>
                           <p className="text-sm">Los riesgos atmosféricos específicos de tu entorno</p>
                         </div>
                         <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
-                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">✅</div>
+                          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">✅</div>
                           <h3 className="font-bold text-xl mb-2">Verificar</h3>
                           <p className="text-sm">Bump test diario antes de cada uso sin excepciones</p>
                         </div>
                         <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
-                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🛡️</div>
+                          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">🛡️</div>
                           <h3 className="font-bold text-xl mb-2">Proteger</h3>
                           <p className="text-sm">Tu vida y la de tus compañeros con tecnología confiable</p>
                         </div>

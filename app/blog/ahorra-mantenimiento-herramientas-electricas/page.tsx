@@ -373,7 +373,7 @@ export default function MantenimientoHerramientasArticle() {
                 transition={{ delay: 0.2 }}
                 className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
               >
-                <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   Los 5 Errores Más Destructivos
                 </h2>
 
@@ -949,7 +949,7 @@ export default function MantenimientoHerramientasArticle() {
                 className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-center"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
                     Tu Profesionalismo se Refleja en tus Herramientas
                   </h2>
                   <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-4 sm:mb-6 md:mb-8">
@@ -960,17 +960,17 @@ export default function MantenimientoHerramientasArticle() {
 
                   <div className="grid md:grid-cols-3 gap-3 mt-8">
                     <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl">
-                      <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">💰</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">💰</div>
                       <h3 className="font-bold text-blue-900 mb-2">Ahorro Real</h3>
                       <p className="text-gray-700 text-sm">Reduce costos de reemplazo hasta un 80% con mantenimiento preventivo</p>
                     </div>
                     <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
-                      <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">⚡</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">⚡</div>
                       <h3 className="font-bold text-green-900 mb-2">Mayor Productividad</h3>
                       <p className="text-gray-700 text-sm">Elimina el tiempo de inactividad por fallas inesperadas</p>
                     </div>
                     <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
-                      <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🏆</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">🏆</div>
                       <h3 className="font-bold text-purple-900 mb-2">Imagen Profesional</h3>
                       <p className="text-gray-700 text-sm">Herramientas bien cuidadas demuestran seriedad y compromiso</p>
                     </div>

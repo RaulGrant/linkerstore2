@@ -419,7 +419,7 @@ export default function GuiaEPPIndustrialArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-red-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
                     <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                       Los Números No Mienten
                     </span>
@@ -443,7 +443,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl border border-red-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-red-600 mb-2">290,527</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">290,527</div>
                         <div className="text-sm text-gray-700">Riesgos de trabajo (2023)</div>
                         <div className="text-xs text-gray-500 mt-2">STPS</div>
                       </motion.div>
@@ -452,7 +452,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl border border-orange-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-orange-600 mb-2">796</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">796</div>
                         <div className="text-sm text-gray-700">Defunciones (Q3 2024)</div>
                         <div className="text-xs text-gray-500 mt-2">IMSS</div>
                       </motion.div>
@@ -461,7 +461,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl border border-yellow-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-yellow-600 mb-2">38.77%</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-2">38.77%</div>
                         <div className="text-sm text-gray-700">Lesiones en manos/muñecas</div>
                         <div className="text-xs text-gray-500 mt-2">Región más afectada</div>
                       </motion.div>
@@ -470,7 +470,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-amber-50 to-red-50 rounded-2xl border border-amber-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-amber-600 mb-2">550+</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-600 mb-2">550+</div>
                         <div className="text-sm text-gray-700">Accidentes de mano/día</div>
                         <div className="text-xs text-gray-500 mt-2">201,000 al año</div>
                       </motion.div>
@@ -562,7 +562,7 @@ export default function GuiaEPPIndustrialArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-orange-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-6">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6">
                     <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                       El Arsenal de Protección
                     </span>
@@ -910,15 +910,15 @@ export default function GuiaEPPIndustrialArticle() {
                           </h4>
                           <div className="grid md:grid-cols-3 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
-                              <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-red-600 mb-2">201,000</div>
+                              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">201,000</div>
                               <div className="text-sm text-gray-700">Bajas por accidentes de mano (2023)</div>
                             </div>
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
-                              <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-orange-600 mb-2">3.9M</div>
+                              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">3.9M</div>
                               <div className="text-sm text-gray-700">Días de trabajo perdidos</div>
                             </div>
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
-                              <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-amber-600 mb-2">550+</div>
+                              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-600 mb-2">550+</div>
                               <div className="text-sm text-gray-700">Accidentes de mano por día</div>
                             </div>
                           </div>
@@ -1215,7 +1215,7 @@ export default function GuiaEPPIndustrialArticle() {
                       <Brain className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         El Factor Humano
                       </h2>
                       <p className="text-gray-600 text-lg">¿Por qué no usamos el EPP y cómo solucionarlo?</p>
@@ -1392,7 +1392,7 @@ export default function GuiaEPPIndustrialArticle() {
                       <Zap className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         El Futuro es Ahora
                       </h2>
                       <p className="text-gray-600 text-lg">EPP Inteligente y Materiales de Próxima Generación</p>
@@ -1543,7 +1543,7 @@ export default function GuiaEPPIndustrialArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
-                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       Preguntas Frecuentes
                     </span>
@@ -1626,7 +1626,7 @@ export default function GuiaEPPIndustrialArticle() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
                       Su Seguridad, Su Responsabilidad, Su Futuro
                     </h2>
                     
@@ -1661,7 +1661,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">👔</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">👔</div>
                         <h3 className="font-bold text-xl mb-2">Para Gerentes</h3>
                         <p className="text-sm text-white/90">
                           Revisen programas de EPP como oportunidad de mejora. Involucren equipos en selección e inviertan en capacitación de calidad.
@@ -1672,7 +1672,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">👷</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">👷</div>
                         <h3 className="font-bold text-xl mb-2">Para Trabajadores</h3>
                         <p className="text-sm text-white/90">
                           Sean guardianes proactivos de su seguridad. Inspeccionen su equipo. Si algo no se ajusta bien, levanten la voz.
@@ -1683,7 +1683,7 @@ export default function GuiaEPPIndustrialArticle() {
                         className="p-3 sm:p-4 md:p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🎯</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">🎯</div>
                         <h3 className="font-bold text-xl mb-2">Para Líderes</h3>
                         <p className="text-sm text-white/90">
                           Lideren con el ejemplo. Las reglas de seguridad se aplican a todos. Cero excepciones para niveles superiores.
