@@ -136,7 +136,7 @@ export default function RotomartillosTaladrosArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-yellow-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-yellow-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema herramientas/construcción */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -221,7 +221,7 @@ export default function RotomartillosTaladrosArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ export default function RotomartillosTaladrosArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -248,7 +248,7 @@ export default function RotomartillosTaladrosArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -257,7 +257,7 @@ export default function RotomartillosTaladrosArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -307,19 +307,19 @@ export default function RotomartillosTaladrosArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-50 to-amber-50 border-l-8 border-orange-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-orange-50 to-amber-50 border-l-8 border-orange-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -329,7 +329,7 @@ export default function RotomartillosTaladrosArticle() {
                           <AlertTriangle className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-orange-900 mb-3">⚠️ La Herramienta Incorrecta = Frustración Garantizada</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-3">⚠️ La Herramienta Incorrecta = Frustración Garantizada</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             ¿Estás por colgar una repisa, armar un mueble o remodelar por completo un muro? 
                             <strong className="text-orange-600"> La elección entre un taladro y un rotomartillo puede parecer confusa</strong>, 
@@ -352,14 +352,14 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Construction className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Tu Guía Definitiva para 2025</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Tu Guía Definitiva para 2025</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         En esta guía definitiva para 2025, desglosamos <b>todo lo que necesitas saber para elegir la herramienta perfecta</b> 
@@ -369,9 +369,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Mecanismo de Acción */}
-                  <section id="mecanismo-accion" className="mb-16">
+                  <section id="mecanismo-accion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -381,7 +381,7 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -390,7 +390,7 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.p>
 
                     {/* Selector de tipo de herramienta */}
-                    <div className="flex justify-center gap-4 mb-8">
+                    <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
                       <motion.button
                         onClick={() => setSelectedTool('taladro')}
                         whileHover={{ scale: 1.05 }}
@@ -437,14 +437,14 @@ export default function RotomartillosTaladrosArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-300"
+                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300"
                         >
                           <h4 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
                             <Zap className="h-6 w-6" />
                             Taladro-Atornillador (Rotación Simple)
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-lg mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-4">
                             <p className="text-gray-700 mb-4">
                               Su función principal es <b className="text-green-700">la rotación</b>. Un motor eléctrico hace girar un mandril 
                               (portabrocas) para perforar materiales relativamente blandos como madera, plástico y metal, o para insertar y 
@@ -483,14 +483,14 @@ export default function RotomartillosTaladrosArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300"
                         >
                           <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
                             <Power className="h-6 w-6" />
                             Taladro Percutor (Rotación + Percusión Mecánica)
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-lg mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-4">
                             <p className="text-gray-700 mb-4">
                               Además de girar, añade un <b className="text-blue-700">movimiento de golpeteo hacia adelante</b>. Este efecto 
                               se logra a través de un mecanismo de embrague, usualmente compuesto por dos discos metálicos con crestas o estrías.
@@ -540,14 +540,14 @@ export default function RotomartillosTaladrosArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-2 border-red-300"
+                          className="bg-gradient-to-br from-red-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300"
                         >
                           <h4 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
                             <FlameKindling className="h-6 w-6" />
                             Rotomartillo (Rotación + Percusión Electroneumática)
                           </h4>
                           
-                          <div className="bg-gradient-to-r from-red-100 to-pink-100 p-6 rounded-lg mb-4 border-2 border-red-400">
+                          <div className="bg-gradient-to-r from-red-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-lg mb-4 border-2 border-red-400">
                             <p className="text-red-900 font-bold mb-3 text-lg">🏆 Esta es la tecnología superior para materiales duros y densos</p>
                             <p className="text-gray-700">
                               En lugar de discos mecánicos, utiliza un <b className="text-red-700">sistema con un pistón que comprime aire</b> 
@@ -556,7 +556,7 @@ export default function RotomartillosTaladrosArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-white p-6 rounded-lg mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-4">
                             <h5 className="font-bold text-red-800 mb-3">⚡ Ventajas del Sistema Electroneumático:</h5>
                             <ul className="space-y-2 text-gray-700">
                               <li className="flex items-start gap-2">
@@ -610,16 +610,16 @@ export default function RotomartillosTaladrosArticle() {
 
                     {/* Regla clara */}
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="mt-8 bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">🎯 Regla de Oro</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">🎯 Regla de Oro</h3>
                       </div>
-                      <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
+                      <div className="bg-white/20 p-3 sm:p-4 md:p-6 rounded-xl backdrop-blur-sm">
                         <p className="text-xl font-bold mb-4 text-center">
                           Para madera y tabique = Taladro percutor es suficiente
                         </p>
@@ -631,9 +631,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Fuente de Poder y Tecnología */}
-                  <section id="fuente-poder" className="mb-16">
+                  <section id="fuente-poder" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -645,18 +645,18 @@ export default function RotomartillosTaladrosArticle() {
                     <div className="space-y-8">
                       {/* Con Cable vs. Inalámbrico */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-2 border-blue-200"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-blue-200"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
-                        <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
                           <Battery className="h-8 w-8" />
                           Con Cable vs. Inalámbrico
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-blue-50 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <Power className="h-5 w-5" />
                               Con Cable
@@ -683,7 +683,7 @@ export default function RotomartillosTaladrosArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-green-50 p-6 rounded-xl">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <Battery className="h-5 w-5" />
                               Inalámbrico
@@ -713,18 +713,18 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Motores Brushed vs. Brushless */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-purple-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
-                        <h3 className="text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
                           <Settings className="h-8 w-8" />
                           Motores con Carbones vs. Sin Carbones (Brushless)
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl border-2 border-gray-300">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-300">
                             <h4 className="font-bold text-gray-800 mb-4">⚙️ Con Carbones (Brushed)</h4>
                             <p className="text-sm text-gray-700 mb-3">
                               Tecnología tradicional que utiliza <b>pequeñas escobillas de carbón</b> para transmitir electricidad a las 
@@ -741,7 +741,7 @@ export default function RotomartillosTaladrosArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-400">
+                          <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-400">
                             <h4 className="font-bold text-purple-900 mb-4 flex items-center gap-2">
                               <Zap className="h-5 w-5" />
                               Sin Escobillas (Brushless) 🏆
@@ -772,9 +772,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Especificaciones Técnicas */}
-                  <section id="especificaciones" className="mb-16">
+                  <section id="especificaciones" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -784,17 +784,17 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       Entender los números te ayudará a <b className="text-green-600">elegir la herramienta correcta</b> para tus necesidades específicas.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
                       {/* Velocidad (RPM) */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-green-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-green-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -820,7 +820,7 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Tasa de Impacto (GPM) */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-blue-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-blue-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
@@ -846,7 +846,7 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Torque (Nm) */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-purple-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-purple-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
@@ -877,7 +877,7 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Baterías */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-orange-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-orange-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
@@ -919,9 +919,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Top 6 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -931,7 +931,7 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-lg text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-lg text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -941,7 +941,7 @@ export default function RotomartillosTaladrosArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -961,13 +961,13 @@ export default function RotomartillosTaladrosArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - DeWalt DCD7781D2-B3 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -975,7 +975,7 @@ export default function RotomartillosTaladrosArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           DeWalt DCD7781D2-B3: El Mejor Taladro-Rotomartillo Inalámbrico para el Hogar
                         </h3>
 
@@ -1002,8 +1002,8 @@ export default function RotomartillosTaladrosArticle() {
                           mampostería ligera como ladrillo</b>, haciéndolo extremadamente versátil.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1028,7 +1028,7 @@ export default function RotomartillosTaladrosArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1046,7 +1046,7 @@ export default function RotomartillosTaladrosArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-2 border-yellow-300">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-yellow-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1056,7 +1056,7 @@ export default function RotomartillosTaladrosArticle() {
                               href="https://www.mercadolibre.com.mx/juego-de-taladro-percutor-atornillador-de-12-brushless-20v-max-dewalt-dcd7781d2/p/MLM18373456"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1066,13 +1066,13 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Producto #2 - Bosch GSB 18V-50 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1080,7 +1080,7 @@ export default function RotomartillosTaladrosArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Bosch GSB 18V-50 Professional: Rotomartillo Inalámbrico de Alto Rendimiento
                         </h3>
 
@@ -1106,8 +1106,8 @@ export default function RotomartillosTaladrosArticle() {
                           mampostería. Es una herramienta robusta, fiable y con el respaldo de una de las marcas líderes para profesionales.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1132,7 +1132,7 @@ export default function RotomartillosTaladrosArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1150,7 +1150,7 @@ export default function RotomartillosTaladrosArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1160,7 +1160,7 @@ export default function RotomartillosTaladrosArticle() {
                               href="https://www.mercadolibre.com.mx/taladro-rotomartillo-bosch-gsb-18v-50-professional-inalambrico-18v-azul-220v/p/MLM25024759"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1170,13 +1170,13 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Producto #3 - Truper ROTO-1/2A8 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -1184,7 +1184,7 @@ export default function RotomartillosTaladrosArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Truper ROTO-1/2A8: La Mejor Opción Calidad-Precio para Uso Rudo (con Cable)
                         </h3>
 
@@ -1203,7 +1203,7 @@ export default function RotomartillosTaladrosArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
                             <TrendingUp className="h-6 w-6" />
                             🏆 Fenómeno de Ventas en México
@@ -1221,8 +1221,8 @@ export default function RotomartillosTaladrosArticle() {
                           sin realizar una gran inversión.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1247,7 +1247,7 @@ export default function RotomartillosTaladrosArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1265,7 +1265,7 @@ export default function RotomartillosTaladrosArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1275,7 +1275,7 @@ export default function RotomartillosTaladrosArticle() {
                               href="https://www.mercadolibre.com.mx/rotomartillo-truper-roto-12a8-750w-220v-naranja-y-negro/p/MLM15160653"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1285,13 +1285,13 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Producto #4 - Makita HP1630 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             ⭐ #4
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1299,7 +1299,7 @@ export default function RotomartillosTaladrosArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Makita HP1630: El Estándar Profesional para Trabajo Ligero (con Cable)
                         </h3>
 
@@ -1325,8 +1325,8 @@ export default function RotomartillosTaladrosArticle() {
                           y su capacidad para operar durante largas jornadas sin sobrecalentarse.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1351,7 +1351,7 @@ export default function RotomartillosTaladrosArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1369,7 +1369,7 @@ export default function RotomartillosTaladrosArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1379,7 +1379,7 @@ export default function RotomartillosTaladrosArticle() {
                               href="https://www.mercadolibre.com.mx/taladro-percutor-makita-hp1630-710w-220v-azul/p/MLM8390439"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1389,13 +1389,13 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Producto #5 - Milwaukee M18 FUEL */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-3xl shadow-2xl border-2 border-red-200"
+                        className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-red-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-red-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🚀 #5
                           </Badge>
                           <Badge className="bg-red-100 text-red-800 px-4 py-2 font-bold">
@@ -1403,7 +1403,7 @@ export default function RotomartillosTaladrosArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Milwaukee M18 FUEL 2-Tool Combo Kit: Para Profesionales Exigentes
                         </h3>
 
@@ -1422,7 +1422,7 @@ export default function RotomartillosTaladrosArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-yellow-900 mb-2">🏆 La Cúspide de la Tecnología</h4>
                           <p className="text-gray-700">
                             Este kit de Milwaukee representa la <b className="text-red-700">cúspide de la tecnología</b> en herramientas 
@@ -1437,8 +1437,8 @@ export default function RotomartillosTaladrosArticle() {
                           profesionales que no aceptan concesiones en rendimiento o seguridad.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-red-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1463,7 +1463,7 @@ export default function RotomartillosTaladrosArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1481,7 +1481,7 @@ export default function RotomartillosTaladrosArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-red-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1491,7 +1491,7 @@ export default function RotomartillosTaladrosArticle() {
                               href="https://listado.mercadolibre.com.mx/milwaukee-m18-fuel-combo"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1501,13 +1501,13 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Producto #6 - DeWalt DCH133M2 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
+                        className="bg-gradient-to-br from-orange-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-orange-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-orange-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💪 #6
                           </Badge>
                           <Badge className="bg-orange-100 text-orange-800 px-4 py-2 font-bold">
@@ -1515,7 +1515,7 @@ export default function RotomartillosTaladrosArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           DeWalt DCH133M2: El Mejor Rotomartillo SDS Plus Inalámbrico para Concreto
                         </h3>
 
@@ -1534,7 +1534,7 @@ export default function RotomartillosTaladrosArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-50 to-pink-50 border-4 border-red-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-red-50 to-pink-50 border-4 border-red-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-red-900 mb-2 flex items-center gap-2">
                             <FlameKindling className="h-6 w-6" />
                             🔨 Cuando el Trabajo Real es Perforar Concreto
@@ -1551,8 +1551,8 @@ export default function RotomartillosTaladrosArticle() {
                           donde un taladro percutor convencional <b className="bg-orange-100 px-2 py-1 rounded">simplemente no es una opción viable</b>.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-orange-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                             <h4 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1577,7 +1577,7 @@ export default function RotomartillosTaladrosArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1595,7 +1595,7 @@ export default function RotomartillosTaladrosArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-orange-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1605,7 +1605,7 @@ export default function RotomartillosTaladrosArticle() {
                               href="https://www.mercadolibre.com.mx/rotomartillo-electroneumatico-dewalt-dch133m2-b2-inalambrico-amarillo-y-negro-con-16kw-de-potencia/p/MLM44712352"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1616,9 +1616,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1634,9 +1634,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1648,17 +1648,17 @@ export default function RotomartillosTaladrosArticle() {
                     <div className="space-y-8">
                       {/* Consejo 1 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             1
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-red-900 mb-3">La Regla del Concreto</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">La Regla del Concreto</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Si el proyecto principal implica perforar <b className="text-red-700">concreto, losas, piedra o cualquier tipo de hormigón</b>, 
                               la elección es simple: <b className="bg-red-100 px-2 py-1 rounded">se necesita un rotomartillo</b>.
@@ -1675,17 +1675,17 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Consejo 2 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             2
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-3">Pensar en el Ecosistema</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">Pensar en el Ecosistema</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Al elegir una herramienta inalámbrica, no se está comprando solo un taladro, sino una <b className="text-blue-700">entrada 
                               a un sistema de baterías</b> de una marca específica (DeWalt 20V MAX*, Makita 18V LXT, Milwaukee M18, etc.).
@@ -1702,17 +1702,17 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Consejo 3 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             3
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-3">El Cable Sigue Siendo Rey para Potencia Continua</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-3">El Cable Sigue Siendo Rey para Potencia Continua</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Para trabajos estacionarios en un taller o para tareas de demolición prolongadas que demandan energía constante, 
                               una herramienta con cable sigue ofreciendo la <b className="text-green-700">mejor relación potencia-precio</b>.
@@ -1729,17 +1729,17 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* 3 Errores Comunes */}
                       <motion.div 
-                        className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                        className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">
                           ❌ 3 Errores Comunes a Evitar
                         </h3>
                         
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <h4 className="font-bold text-red-900 mb-2">1. Usar un Taladro Normal para Perforar Muros</h4>
                             <p className="text-gray-700">
                               Es el error más frecuente y costoso. Intentar perforar mampostería o concreto sin activar la función de percusión 
@@ -1747,7 +1747,7 @@ export default function RotomartillosTaladrosArticle() {
                             </p>
                           </div>
                           
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                             <h4 className="font-bold text-orange-900 mb-2">2. Usar el Modo Percutor en Madera, Metal o Azulejos</h4>
                             <p className="text-gray-700">
                               Activar el martilleo en estos materiales es contraproducente y dañino. En madera, astilla y rompe las fibras. 
@@ -1755,7 +1755,7 @@ export default function RotomartillosTaladrosArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                             <h4 className="font-bold text-yellow-900 mb-2">3. Comprar por Voltaje sin Considerar los Ah</h4>
                             <p className="text-gray-700">
                               En herramientas inalámbricas, elegir un kit económico con baterías de bajo amperaje (ej. 1.5Ah) para trabajos que 
@@ -1768,12 +1768,12 @@ export default function RotomartillosTaladrosArticle() {
 
                       {/* Mantenimiento */}
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.7 }}
                       >
-                        <h3 className="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
                           <Settings className="h-8 w-8" />
                           🔧 Mantenimiento Básico
                         </h3>
@@ -1793,9 +1793,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1813,7 +1813,7 @@ export default function RotomartillosTaladrosArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-amber-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-amber-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -1833,7 +1833,7 @@ export default function RotomartillosTaladrosArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -1845,9 +1845,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1857,7 +1857,7 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -1879,8 +1879,8 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor Versátil</h3>
@@ -1890,7 +1890,7 @@ export default function RotomartillosTaladrosArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Package className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor Valor</h3>
@@ -1900,7 +1900,7 @@ export default function RotomartillosTaladrosArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <FlameKindling className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor para Concreto</h3>
@@ -1913,13 +1913,13 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="mt-8 bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Elige Sabiamente, Trabaja Inteligente</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Elige Sabiamente, Trabaja Inteligente</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Para quienes enfrentan trabajos más pesados y buscan la máxima potencia por su dinero, el mercado ofrece opciones 
@@ -1931,11 +1931,11 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-2xl border-2 border-yellow-400"
+                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-yellow-400"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál será tu compañero de trabajo perfecto? 
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -1945,9 +1945,9 @@ export default function RotomartillosTaladrosArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

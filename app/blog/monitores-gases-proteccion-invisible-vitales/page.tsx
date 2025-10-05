@@ -136,7 +136,7 @@ export default function MonitoresGasesArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-gray-900 via-slate-900 to-zinc-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-gray-900 via-slate-900 to-zinc-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema de partículas - Tema gases/detección */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes tipo moléculas (100 partículas) */}
@@ -220,7 +220,7 @@ export default function MonitoresGasesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -238,7 +238,7 @@ export default function MonitoresGasesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -247,7 +247,7 @@ export default function MonitoresGasesArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-gray-300 mb-8"
+                className="text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -256,7 +256,7 @@ export default function MonitoresGasesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-gray-400"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-gray-400"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -305,19 +305,19 @@ export default function MonitoresGasesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -327,7 +327,7 @@ export default function MonitoresGasesArticle() {
                           <AlertTriangle className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900 mb-3">⚠️ Los Peligros Invisibles</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">⚠️ Los Peligros Invisibles</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             En el trabajo, <strong className="text-red-600">los peligros más letales son a menudo los que no se pueden ver, oler ni sentir</strong>. 
                             En la quietud de un tanque, un pozo o una tubería, una atmósfera invisible puede robar el oxígeno del aire o encenderse con una sola chispa. 
@@ -348,14 +348,14 @@ export default function MonitoresGasesArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Tu Guía Definitiva</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Tu Guía Definitiva</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed text-lg">
                         Esta guía completa analiza a fondo <b>la tecnología de detección de gases, el marco normativo mexicano y los mejores 
@@ -365,9 +365,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Los 4 Gases Críticos */}
-                  <section id="gases-criticos" className="mb-16">
+                  <section id="gases-criticos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -377,7 +377,7 @@ export default function MonitoresGasesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-10 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -388,23 +388,23 @@ export default function MonitoresGasesArticle() {
                     <div className="space-y-8">
                       {/* Oxígeno */}
                       <motion.div 
-                        className="bg-gradient-to-r from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-xl border-2 border-blue-300"
+                        className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-blue-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
                           <div className="bg-blue-500 rounded-2xl p-4 flex-shrink-0">
                             <Wind className="h-10 w-10 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-4">1. Oxígeno (O₂): El Equilibrio Vital</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-4">1. Oxígeno (O₂): El Equilibrio Vital</h3>
                             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
                               El oxígeno es el gas más fundamental para la vida. El aire normal contiene aproximadamente <b>20.8% de oxígeno</b>. 
                               Cualquier desviación significativa presenta un peligro inmediato.
                             </p>
-                            <div className="grid md:grid-cols-2 gap-6">
-                              <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                                 <h4 className="font-bold text-red-800 mb-3">❌ Deficiencia (&lt;19.5%)</h4>
                                 <p className="text-gray-700 text-sm">
                                   Una atmósfera deficiente en oxígeno causa <b>asfixia</b>. Los síntomas van desde dificultad para respirar 
@@ -412,7 +412,7 @@ export default function MonitoresGasesArticle() {
                                   gases, combustión o reacciones químicas como la oxidación.
                                 </p>
                               </div>
-                              <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                                 <h4 className="font-bold text-orange-800 mb-3">🔥 Enriquecimiento (&gt;23.5%)</h4>
                                 <p className="text-gray-700 text-sm">
                                   Una atmósfera enriquecida en oxígeno es un <b>riesgo de incendio extremo</b>. Aumenta drásticamente la 
@@ -427,23 +427,23 @@ export default function MonitoresGasesArticle() {
 
                       {/* Gases Combustibles */}
                       <motion.div 
-                        className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-2xl shadow-xl border-2 border-orange-300"
+                        className="bg-gradient-to-r from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-orange-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
                           <div className="bg-orange-500 rounded-2xl p-4 flex-shrink-0">
                             <Flame className="h-10 w-10 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-orange-900 mb-4">2. Gases Combustibles (%LEL): El Riesgo de Explosión</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-4">2. Gases Combustibles (%LEL): El Riesgo de Explosión</h3>
                             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
                               Este parámetro no mide un solo gas, sino la <b>inflamabilidad general de la atmósfera</b>. El LEL (Límite 
                               Inferior de Explosividad) es la concentración mínima de un gas combustible en el aire que puede encenderse 
                               en presencia de una fuente de ignición.
                             </p>
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <div className="flex items-start gap-3 mb-4">
                                 <AlertCircle className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
                                 <div>
@@ -468,22 +468,22 @@ export default function MonitoresGasesArticle() {
 
                       {/* Monóxido de Carbono */}
                       <motion.div 
-                        className="bg-gradient-to-r from-gray-50 to-slate-50 p-8 rounded-2xl shadow-xl border-2 border-gray-300"
+                        className="bg-gradient-to-r from-gray-50 to-slate-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-gray-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
                           <div className="bg-gray-600 rounded-2xl p-4 flex-shrink-0">
                             <Activity className="h-10 w-10 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Monóxido de Carbono (CO): El Asesino Silencioso</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4">3. Monóxido de Carbono (CO): El Asesino Silencioso</h3>
                             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
                               El monóxido de carbono es un gas <b className="text-red-600">altamente tóxico, incoloro e inodoro</b>, 
                               lo que lo hace imposible de detectar sin un equipo adecuado.
                             </p>
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-gray-800 mb-3">⚠️ Mecanismo Letal</h4>
                               <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                                 Es un subproducto de la combustión incompleta de materiales a base de carbono. Al ser inhalado, 
@@ -503,22 +503,22 @@ export default function MonitoresGasesArticle() {
 
                       {/* Sulfuro de Hidrógeno */}
                       <motion.div 
-                        className="bg-gradient-to-r from-yellow-50 to-amber-50 p-8 rounded-2xl shadow-xl border-2 border-yellow-300"
+                        className="bg-gradient-to-r from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-yellow-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
                           <div className="bg-yellow-600 rounded-2xl p-4 flex-shrink-0">
                             <Droplets className="h-10 w-10 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-yellow-900 mb-4">4. Sulfuro de Hidrógeno (H₂S): El Peligro Engañoso</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-4">4. Sulfuro de Hidrógeno (H₂S): El Peligro Engañoso</h3>
                             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
                               El ácido sulfhídrico es un gas <b>extremadamente tóxico, corrosivo e inflamable</b>. Es conocido por su 
                               distintivo olor a "huevo podrido" a bajas concentraciones.
                             </p>
-                            <div className="bg-gradient-to-r from-red-100 to-orange-100 border-4 border-red-400 p-6 rounded-xl">
+                            <div className="bg-gradient-to-r from-red-100 to-orange-100 border-4 border-red-400 p-3 sm:p-4 md:p-6 rounded-xl">
                               <div className="flex items-start gap-3">
                                 <AlertTriangle className="h-8 w-8 text-red-600 flex-shrink-0" />
                                 <div>
@@ -545,9 +545,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Tecnología de Sensores */}
-                  <section id="tecnologia-sensores" className="mb-16">
+                  <section id="tecnologia-sensores" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -557,7 +557,7 @@ export default function MonitoresGasesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-10 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -566,7 +566,7 @@ export default function MonitoresGasesArticle() {
                     </motion.p>
 
                     {/* Selector de tipo de sensor */}
-                    <div className="flex justify-center gap-4 mb-10">
+                    <div className="flex justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.button
                         onClick={() => setSelectedSensor('electroquimico')}
                         whileHover={{ scale: 1.05 }}
@@ -613,19 +613,19 @@ export default function MonitoresGasesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         >
                           <div className="flex items-start gap-4 mb-6">
                             <div className="p-4 bg-blue-500 rounded-xl">
                               <Activity className="h-8 w-8 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold text-blue-900 mb-2">Sensores Electroquímicos</h3>
+                              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-2">Sensores Electroquímicos</h3>
                               <p className="text-gray-600">Tecnología más común para gases tóxicos y oxígeno</p>
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
                               <Settings className="h-5 w-5" />
                               Principio de Funcionamiento
@@ -638,8 +638,8 @@ export default function MonitoresGasesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-green-500">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-800 mb-3">✅ Ventajas</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -657,7 +657,7 @@ export default function MonitoresGasesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                               <h4 className="font-bold text-red-800 mb-3">❌ Limitaciones</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -691,19 +691,19 @@ export default function MonitoresGasesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border-2 border-orange-300"
+                          className="bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-orange-300"
                         >
                           <div className="flex items-start gap-4 mb-6">
                             <div className="p-4 bg-orange-500 rounded-xl">
                               <Flame className="h-8 w-8 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold text-orange-900 mb-2">Sensores Catalíticos (Pellistors)</h3>
+                              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-2">Sensores Catalíticos (Pellistors)</h3>
                               <p className="text-gray-600">Tecnología tradicional para gases combustibles</p>
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-orange-900 mb-4 flex items-center gap-2">
                               <Settings className="h-5 w-5" />
                               Principio de Funcionamiento
@@ -716,7 +716,7 @@ export default function MonitoresGasesArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-6 rounded-xl mb-6">
+                          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <div className="flex items-start gap-3">
                               <AlertCircle className="h-8 w-8 text-yellow-600 flex-shrink-0" />
                               <div>
@@ -730,8 +730,8 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-green-500">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-800 mb-3">✅ Ventajas</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -749,7 +749,7 @@ export default function MonitoresGasesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                               <h4 className="font-bold text-red-800 mb-3">❌ Limitaciones</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -776,19 +776,19 @@ export default function MonitoresGasesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                         >
                           <div className="flex items-start gap-4 mb-6">
                             <div className="p-4 bg-green-500 rounded-xl">
                               <Zap className="h-8 w-8 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold text-green-900 mb-2">Sensores Infrarrojos (IR)</h3>
+                              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-2">Sensores Infrarrojos (IR)</h3>
                               <p className="text-gray-600">Tecnología avanzada con ventajas significativas</p>
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-green-900 mb-4 flex items-center gap-2">
                               <Settings className="h-5 w-5" />
                               Principio de Funcionamiento
@@ -801,7 +801,7 @@ export default function MonitoresGasesArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-4 border-green-400 p-6 rounded-xl mb-6">
+                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-4 border-green-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <div className="flex items-start gap-3">
                               <CheckCircle className="h-8 w-8 text-green-600 flex-shrink-0" />
                               <div>
@@ -815,8 +815,8 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-green-500">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-800 mb-3">✅ Ventajas Superiores</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -838,7 +838,7 @@ export default function MonitoresGasesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                               <h4 className="font-bold text-red-800 mb-3">❌ Consideraciones</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -857,7 +857,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-green-50 p-6 rounded-xl border-2 border-green-300">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                             <div className="flex items-start gap-3">
                               <TrendingUp className="h-6 w-6 text-green-600 flex-shrink-0" />
                               <div>
@@ -877,9 +877,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Top 5 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -890,7 +890,7 @@ export default function MonitoresGasesArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -910,13 +910,13 @@ export default function MonitoresGasesArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - Dräger X-am 2500 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -924,7 +924,7 @@ export default function MonitoresGasesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Dräger X-am 2500
                         </h3>
 
@@ -951,8 +951,8 @@ export default function MonitoresGasesArticle() {
                           <b className="bg-blue-100 px-2 py-1 rounded">sensor Ex catalítico con alta resistencia al envenenamiento</b> minimizan los costos operativos a largo plazo.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -981,7 +981,7 @@ export default function MonitoresGasesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -999,7 +999,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Rango de Precio: $25,000 - $30,500 MXN</p>
@@ -1009,7 +1009,7 @@ export default function MonitoresGasesArticle() {
                               href="https://www.mercadolibre.com.mx/detector-de-gases-ex-o2-co-h2s-drger-x-am-2500/p/MLM25414537"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1019,13 +1019,13 @@ export default function MonitoresGasesArticle() {
 
                       {/* Producto #2 - Honeywell BW MicroClip X3 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -1033,7 +1033,7 @@ export default function MonitoresGasesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Honeywell BW MicroClip X3
                         </h3>
 
@@ -1059,7 +1059,7 @@ export default function MonitoresGasesArticle() {
                           destaca por su <b className="bg-green-100 px-2 py-1 rounded">garantía de 3 años y sensor de O₂ con vida útil de 5 años</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Zap className="h-6 w-6" />
                             Características Destacadas
@@ -1080,8 +1080,8 @@ export default function MonitoresGasesArticle() {
                           </ul>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1110,7 +1110,7 @@ export default function MonitoresGasesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1128,7 +1128,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $24,000 - $27,500 MXN</p>
@@ -1138,7 +1138,7 @@ export default function MonitoresGasesArticle() {
                               href="https://www.mercadolibre.com.mx/detector-multigas-gas-alert-microclip-x3-mcx3xwhmyna/up/MLMU1096175422"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1148,13 +1148,13 @@ export default function MonitoresGasesArticle() {
 
                       {/* Producto #3 - Honeywell BW Flex4 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1162,7 +1162,7 @@ export default function MonitoresGasesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Honeywell BW Flex4
                         </h3>
 
@@ -1188,7 +1188,7 @@ export default function MonitoresGasesArticle() {
                           dos meses con una sola carga</b>, eliminando la necesidad de recargas diarias.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Radio className="h-6 w-6" />
                             Conectividad Bluetooth
@@ -1200,8 +1200,8 @@ export default function MonitoresGasesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1230,7 +1230,7 @@ export default function MonitoresGasesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1248,7 +1248,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1258,7 +1258,7 @@ export default function MonitoresGasesArticle() {
                               href="https://www.mercadolibre.com.mx/detector-portatil-multigas-honeywell-bw-flex/up/MLMU420826277"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1268,13 +1268,13 @@ export default function MonitoresGasesArticle() {
 
                       {/* Producto #4 - Detector Genérico 4-en-1 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             ⭐ #4
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -1282,7 +1282,7 @@ export default function MonitoresGasesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Detector Multigás Genérico 4-en-1 (Tipo Yosoo/GOYOJO)
                         </h3>
 
@@ -1307,7 +1307,7 @@ export default function MonitoresGasesArticle() {
                           de 4 gases (O₂, LEL, CO, H₂S), pantalla LCD a color, alarmas triples (sonido, luz, vibración) y batería recargable por USB.
                         </p>
 
-                        <div className="bg-gradient-to-r from-red-50 to-orange-50 border-4 border-red-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-red-50 to-orange-50 border-4 border-red-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <div className="flex items-start gap-3">
                             <AlertTriangle className="h-8 w-8 text-red-600 flex-shrink-0" />
                             <div>
@@ -1324,8 +1324,8 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1350,7 +1350,7 @@ export default function MonitoresGasesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras Críticos
@@ -1376,7 +1376,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-2 border-yellow-300">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-yellow-700 mb-2">💰 Rango de Precio: $1,200 - $4,500 MXN</p>
@@ -1386,7 +1386,7 @@ export default function MonitoresGasesArticle() {
                               href="https://www.mercadolibre.com.mx/detector-de-4-gases"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1396,13 +1396,13 @@ export default function MonitoresGasesArticle() {
 
                       {/* Producto #5 - Honeywell BW Clip Monogás */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🎯 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1410,7 +1410,7 @@ export default function MonitoresGasesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Honeywell BW Clip (Detector Monogás CO)
                         </h3>
 
@@ -1436,7 +1436,7 @@ export default function MonitoresGasesArticle() {
                           No requiere calibración, cambio de sensor ni recarga de batería.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <Package className="h-6 w-6" />
                             Filosofía "Encender y Olvidar"
@@ -1448,8 +1448,8 @@ export default function MonitoresGasesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1478,7 +1478,7 @@ export default function MonitoresGasesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1496,7 +1496,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1506,7 +1506,7 @@ export default function MonitoresGasesArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-2392230887-bw-clip-bwc2-m-monitor-de-co-de-gas-unico-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1517,9 +1517,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1535,9 +1535,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Guía de Compra */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1549,16 +1549,16 @@ export default function MonitoresGasesArticle() {
                     <div className="space-y-8">
                       {/* 3 Consejos Clave */}
                       <motion.div 
-                        className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border-2 border-green-300"
+                        className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-green-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                       >
-                        <h3 className="text-2xl font-bold text-green-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 text-center">
                           💡 3 Consejos Clave para Acertar
                         </h3>
                         
                         <div className="space-y-6">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-green-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                             <div className="flex items-start gap-4">
                               <div className="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">
                                 1
@@ -1575,7 +1575,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-blue-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-blue-500">
                             <div className="flex items-start gap-4">
                               <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">
                                 2
@@ -1592,7 +1592,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-purple-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-purple-500">
                             <div className="flex items-start gap-4">
                               <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">
                                 3
@@ -1613,16 +1613,16 @@ export default function MonitoresGasesArticle() {
 
                       {/* 3 Errores Comunes */}
                       <motion.div 
-                        className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl shadow-lg border-2 border-red-300"
+                        className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-red-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">
                           ❌ 3 Errores Comunes a Evitar
                         </h3>
                         
                         <div className="space-y-6">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <div className="flex items-start gap-4">
                               <AlertTriangle className="h-8 w-8 text-red-600 flex-shrink-0" />
                               <div>
@@ -1637,7 +1637,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                             <div className="flex items-start gap-4">
                               <AlertCircle className="h-8 w-8 text-orange-600 flex-shrink-0" />
                               <div>
@@ -1652,7 +1652,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                             <div className="flex items-start gap-4">
                               <HelpCircle className="h-8 w-8 text-yellow-600 flex-shrink-0" />
                               <div>
@@ -1672,13 +1672,13 @@ export default function MonitoresGasesArticle() {
 
                       {/* Mantenimiento */}
                       <motion.div 
-                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg border-2 border-indigo-300"
+                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-indigo-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                       >
                         <div className="flex items-center gap-3 mb-6">
                           <Settings className="h-8 w-8 text-indigo-600" />
-                          <h3 className="text-2xl font-bold text-indigo-900">🔧 Mantenimiento Esencial</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900">🔧 Mantenimiento Esencial</h3>
                         </div>
                         
                         <p className="text-gray-700 mb-6 leading-relaxed">
@@ -1686,8 +1686,8 @@ export default function MonitoresGasesArticle() {
                           programa de seguridad. Se basa en dos prácticas complementarias y obligatorias:
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl border-2 border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                             <h4 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
                               <Activity className="h-5 w-5" />
                               Prueba de Respuesta (Bump Test)
@@ -1707,7 +1707,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-2 border-purple-200">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                             <h4 className="font-bold text-purple-900 mb-4 flex items-center gap-2">
                               <Settings className="h-5 w-5" />
                               Calibración Periódica
@@ -1728,7 +1728,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="mt-6 bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-4 border-red-400">
+                        <div className="mt-6 bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-red-400">
                           <p className="text-red-900 font-bold text-center text-lg">
                             ⚠️ Omitir cualquiera de estos pasos convierte un equipo de protección vital en una peligrosa fuente de falsa confianza
                           </p>
@@ -1738,9 +1738,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1758,7 +1758,7 @@ export default function MonitoresGasesArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-indigo-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-indigo-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -1778,7 +1778,7 @@ export default function MonitoresGasesArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -1790,9 +1790,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1802,7 +1802,7 @@ export default function MonitoresGasesArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -1823,8 +1823,8 @@ export default function MonitoresGasesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor Robustez</h3>
@@ -1834,7 +1834,7 @@ export default function MonitoresGasesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Package className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor Compacto</h3>
@@ -1845,7 +1845,7 @@ export default function MonitoresGasesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <Zap className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor Tecnología</h3>
@@ -1858,13 +1858,13 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-red-500 to-orange-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-red-500 to-orange-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <AlertTriangle className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Recuerde: La Preparación es Clave</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Recuerde: La Preparación es Clave</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Un monitor de gases adecuado es aquel que te permite concentrarte plenamente en tu trabajo, con la tranquilidad 
@@ -1877,11 +1877,11 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border-2 border-blue-300"
+                      className="mt-8 text-center bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-blue-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál de estos monitores se convertirá en tu guardián invisible? 
                       </p>
                       <p className="text-lg text-blue-800 font-semibold">
@@ -1891,9 +1891,9 @@ export default function MonitoresGasesArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

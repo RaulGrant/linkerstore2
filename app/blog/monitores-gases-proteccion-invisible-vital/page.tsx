@@ -246,7 +246,7 @@ export default function MonitoresGasesArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {Array.from({ length: 100 }, (_, i) => (
@@ -276,7 +276,7 @@ export default function MonitoresGasesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -284,7 +284,7 @@ export default function MonitoresGasesArticle() {
               className="text-center max-w-5xl mx-auto"
             >
               <motion.div
-                className="inline-flex items-center gap-2 bg-sky-600/20 border border-sky-400/30 rounded-full px-6 py-3 text-sky-100 text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 bg-sky-600/20 border border-sky-400/30 rounded-full px-4 sm:px-6 py-3 text-sky-100 text-sm font-medium mb-6"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
@@ -294,7 +294,7 @@ export default function MonitoresGasesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -306,7 +306,7 @@ export default function MonitoresGasesArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2xl text-sky-100 mb-8 leading-relaxed"
+                className="text-xl md:text-lg sm:text-xl md:text-2xl text-sky-100 mb-4 sm:mb-6 md:mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -317,7 +317,7 @@ export default function MonitoresGasesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex flex-wrap items-center justify-center gap-6 text-sm text-sky-200"
+                className="flex flex-wrap items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-sky-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -371,28 +371,28 @@ export default function MonitoresGasesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-16 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-8 sm:py-10 md:py-12 md:py-16 relative z-10">
             <div className="max-w-6xl mx-auto">
               
               {/* El Silencio Mortal - Introducción */}
               <motion.section
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-sky-100">
-                  <div className="flex items-start gap-6 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-sky-100">
+                  <div className="flex items-start gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl">
                       <Skull className="h-10 w-10 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                         El Silencio Mortal de los Espacios Confinados
                       </h2>
                     </div>
                   </div>
 
-                  <div className="space-y-6 text-gray-700 leading-relaxed text-lg mb-8">
+                  <div className="space-y-6 text-gray-700 leading-relaxed text-lg mb-4 sm:mb-6 md:mb-8">
                     <p>
                       En el complejo panorama de la seguridad industrial, existen peligros que{' '}
                       <b className="text-red-600">no anuncian su llegada</b>. No hay estruendos, ni llamas visibles, 
@@ -400,22 +400,22 @@ export default function MonitoresGasesArticle() {
                       en el aire que respiramos.
                     </p>
 
-                    <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300">
-                      <h3 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                    <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
                         <AlertTriangle className="h-6 w-6" />
                         Las Estadísticas No Mienten
                       </h3>
-                      <div className="grid md:grid-cols-3 gap-6 mb-6">
-                        <div className="bg-white p-6 rounded-xl text-center">
-                          <div className="text-4xl font-bold text-red-600 mb-2">1,030</div>
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
+                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-red-600 mb-2">1,030</div>
                           <div className="text-sm text-gray-700">Muertes en espacios confinados (2011-2018, EE.UU.)</div>
                         </div>
-                        <div className="bg-white p-6 rounded-xl text-center">
-                          <div className="text-4xl font-bold text-orange-600 mb-2">166</div>
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
+                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-orange-600 mb-2">166</div>
                           <div className="text-sm text-gray-700">Pico de fatalidades en 2017</div>
                         </div>
-                        <div className="bg-white p-6 rounded-xl text-center">
-                          <div className="text-4xl font-bold text-yellow-600 mb-2">60%+</div>
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
+                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-yellow-600 mb-2">60%+</div>
                           <div className="text-sm text-gray-700">Son rescatistas improvisados</div>
                         </div>
                       </div>
@@ -430,8 +430,8 @@ export default function MonitoresGasesArticle() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-8 rounded-2xl border-2 border-yellow-300">
-                    <h3 className="text-2xl font-bold text-yellow-900 mb-4">
+                  <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-yellow-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-4">
                       💡 El Caso Real que lo Ejemplifica
                     </h3>
                     <p className="text-gray-700 leading-relaxed mb-4">
@@ -453,21 +453,21 @@ export default function MonitoresGasesArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-sky-100">
-                  <h2 className="text-4xl font-bold text-center mb-4">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-sky-100">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
                     <span className="bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">
                       Entendiendo los "Cuatro Grandes"
                     </span>
                   </h2>
-                  <p className="text-center text-gray-600 text-lg mb-10 max-w-3xl mx-auto">
+                  <p className="text-center text-gray-600 text-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto">
                     Estos asesinos invisibles son los riesgos atmosféricos más comunes en entornos industriales. 
                     Selecciona cada gas para comprender su peligro y cómo los monitores lo detectan.
                   </p>
 
                   {/* Tabs de Gases */}
-                  <div className="flex flex-wrap justify-center gap-3 mb-10">
+                  <div className="flex flex-wrap justify-center gap-3 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                     {Object.values(gasesData).map((gas) => (
                       <motion.button
                         key={gas.id}
@@ -505,7 +505,7 @@ export default function MonitoresGasesArticle() {
                                 {gas.icon}
                               </div>
                               <div className="flex-1">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-2">{gas.title}</h3>
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2">{gas.title}</h3>
                                 <p className="text-gray-700">{gas.description}</p>
                                 <div className="mt-4 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg">
                                   <Activity className="h-5 w-5 text-green-600" />
@@ -534,7 +534,7 @@ export default function MonitoresGasesArticle() {
 
                           {/* Información Adicional según el Gas */}
                           {gas.id === 'o2' && gas.effects && (
-                            <div className="bg-white p-8 rounded-2xl border border-gray-200">
+                            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border border-gray-200">
                               <h4 className="font-bold text-gray-900 mb-4 text-xl">
                                 Efectos Fisiológicos de la Hipoxia
                               </h4>
@@ -550,7 +550,7 @@ export default function MonitoresGasesArticle() {
                           )}
 
                           {gas.id === 'lel' && gas.examples && (
-                            <div className="bg-white p-8 rounded-2xl border border-gray-200">
+                            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border border-gray-200">
                               <h4 className="font-bold text-gray-900 mb-4 text-xl">
                                 Ejemplos de LEL para Gases Comunes
                               </h4>
@@ -558,7 +558,7 @@ export default function MonitoresGasesArticle() {
                                 {gas.examples.map((example, idx) => (
                                   <div key={idx} className="p-4 bg-orange-50 rounded-xl border border-orange-200">
                                     <div className="font-bold text-orange-900 mb-1">{example.gas}</div>
-                                    <div className="text-2xl font-bold text-orange-600 mb-1">{example.lel}</div>
+                                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 mb-1">{example.lel}</div>
                                     <div className="text-sm text-gray-600">{example.use}</div>
                                   </div>
                                 ))}
@@ -567,8 +567,8 @@ export default function MonitoresGasesArticle() {
                           )}
 
                           {(gas.id === 'co' || gas.id === 'h2s') && gas.mechanism && (
-                            <div className="grid md:grid-cols-2 gap-6">
-                              <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-2xl border border-gray-200">
                                 <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                                   <TestTube className="h-5 w-5" />
                                   {gas.mechanism.title}
@@ -590,7 +590,7 @@ export default function MonitoresGasesArticle() {
                               </div>
 
                               {gas.sources && (
-                                <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                                <div className="bg-white p-3 sm:p-4 md:p-6 rounded-2xl border border-gray-200">
                                   <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                                     <Flame className="h-5 w-5" />
                                     Fuentes Comunes
@@ -610,7 +610,7 @@ export default function MonitoresGasesArticle() {
 
                           {/* Gráfico */}
                           {gas.chartData && (
-                            <div className="bg-white p-8 rounded-2xl border border-gray-200">
+                            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border border-gray-200">
                               <h4 className="font-bold text-gray-900 mb-6 text-xl text-center">
                                 Visualización de Niveles de Peligro
                               </h4>
@@ -661,21 +661,21 @@ export default function MonitoresGasesArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-blue-100">
-                  <h2 className="text-4xl font-bold text-center mb-4">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
                     <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                       La Herramienta Correcta para el Trabajo
                     </span>
                   </h2>
-                  <p className="text-center text-gray-600 text-lg mb-10 max-w-3xl mx-auto">
+                  <p className="text-center text-gray-600 text-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto">
                     La elección entre un detector monogás y uno multigás depende del riesgo específico de tu entorno de trabajo. 
                     Comprender sus diferencias es clave para una protección adecuada.
                   </p>
 
                   {/* Selector de Tipo */}
-                  <div className="flex justify-center gap-4 mb-10">
+                  <div className="flex justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                     <motion.button
                       onClick={() => setSelectedDetector('monogas')}
                       whileHover={{ scale: 1.05 }}
@@ -711,14 +711,14 @@ export default function MonitoresGasesArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 20 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border-2 border-amber-300"
+                        className="bg-gradient-to-br from-amber-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-amber-300"
                       >
                         <div className="flex items-start gap-4 mb-6">
                           <div className="p-4 bg-amber-500 rounded-xl">
                             <Radio className="h-8 w-8 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-amber-900 mb-2">Detectores Monogás</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-amber-900 mb-2">Detectores Monogás</h3>
                             <p className="text-gray-700">
                               Dispositivos personales, a menudo desechables, diseñados para proteger contra un peligro 
                               <b> conocido y constante</b>.
@@ -727,7 +727,7 @@ export default function MonitoresGasesArticle() {
                         </div>
 
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-amber-900 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ideal Para:
@@ -749,7 +749,7 @@ export default function MonitoresGasesArticle() {
                           </div>
 
                           <div className="grid md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-green-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-900 mb-3">Ventajas</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-center gap-2">
@@ -771,7 +771,7 @@ export default function MonitoresGasesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                               <h4 className="font-bold text-red-900 mb-3">Limitaciones</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-center gap-2">
@@ -798,14 +798,14 @@ export default function MonitoresGasesArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-2xl border-2 border-sky-300"
+                        className="bg-gradient-to-br from-sky-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-sky-300"
                       >
                         <div className="flex items-start gap-4 mb-6">
                           <div className="p-4 bg-sky-600 rounded-xl">
                             <Shield className="h-8 w-8 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-sky-900 mb-2">Detectores Multigás</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-sky-900 mb-2">Detectores Multigás</h3>
                             <p className="text-gray-700">
                               El estándar para entrada a espacios confinados, capaces de medir los <b>"Cuatro Grandes"</b> simultáneamente.
                             </p>
@@ -813,7 +813,7 @@ export default function MonitoresGasesArticle() {
                         </div>
 
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-sky-900 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ideal Para:
@@ -834,7 +834,7 @@ export default function MonitoresGasesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-2 border-sky-300">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-sky-300">
                             <h4 className="font-bold text-sky-900 mb-4">Monitoreo Estándar de los "4 Grandes"</h4>
                             <div className="grid md:grid-cols-4 gap-4">
                               <div className="p-4 bg-blue-50 rounded-lg text-center">
@@ -861,7 +861,7 @@ export default function MonitoresGasesArticle() {
                           </div>
 
                           <div className="grid md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-green-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-900 mb-3">Ventajas</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-center gap-2">
@@ -883,7 +883,7 @@ export default function MonitoresGasesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                               <h4 className="font-bold text-yellow-900 mb-3">Consideraciones</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-center gap-2">
@@ -942,10 +942,10 @@ export default function MonitoresGasesArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-red-100">
-                  <h2 className="text-4xl font-bold text-center mb-4">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-red-100">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
                     <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                       La Diferencia Entre la Vida y la Muerte
                     </span>
@@ -953,13 +953,13 @@ export default function MonitoresGasesArticle() {
                   <p className="text-center text-gray-600 text-lg mb-4 max-w-3xl mx-auto">
                     <b className="text-red-600">"No hacer el bump test a tu detector de gases es como subirte a un coche sin saber si los frenos funcionan."</b>
                   </p>
-                  <p className="text-center text-gray-600 text-lg mb-10 max-w-3xl mx-auto">
+                  <p className="text-center text-gray-600 text-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto">
                     Un monitor sin verificar es solo una <b>falsa sensación de seguridad</b>. Puede que funcione... o puede que no.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
-                      className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                      className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                       whileHover={{ scale: 1.02, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -967,7 +967,7 @@ export default function MonitoresGasesArticle() {
                           <TestTube className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900">"Bump Test"</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900">"Bump Test"</h3>
                           <Badge className="bg-red-600 mt-1">ANTES DE CADA USO</Badge>
                         </div>
                       </div>
@@ -1003,7 +1003,7 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                       whileHover={{ scale: 1.02, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1011,7 +1011,7 @@ export default function MonitoresGasesArticle() {
                           <Activity className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-blue-900">Calibración</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Calibración</h3>
                           <Badge className="bg-blue-600 mt-1">PERIÓDICAMENTE</Badge>
                         </div>
                       </div>
@@ -1047,8 +1047,8 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-8 rounded-2xl border-4 border-yellow-400">
-                    <h3 className="text-2xl font-bold text-yellow-900 mb-4 text-center flex items-center justify-center gap-2">
+                  <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-yellow-400">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-4 text-center flex items-center justify-center gap-2">
                       <AlertTriangle className="h-8 w-8" />
                       El Peligro del "Placebo de Seguridad"
                     </h3>
@@ -1070,30 +1070,30 @@ export default function MonitoresGasesArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-purple-100">
-                  <div className="flex items-center gap-4 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-purple-100">
+                  <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl">
                       <Wifi className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-4xl font-bold text-gray-900">
+                      <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-gray-900">
                         El Futuro de la Detección
                       </h2>
                       <p className="text-gray-600 text-lg">Innovaciones que Salvan Vidas</p>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 text-lg mb-8 text-center max-w-4xl mx-auto">
+                  <p className="text-gray-700 text-lg mb-4 sm:mb-6 md:mb-8 text-center max-w-4xl mx-auto">
                     La tecnología de detección de gases está evolucionando rápidamente, pasando de dispositivos aislados 
                     a componentes de un <b className="text-purple-600">ecosistema de seguridad conectado e inteligente</b>. 
                     Este cambio representa una transición de la seguridad personal a la seguridad en red.
                   </p>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
-                      className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-300"
+                      className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-300"
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1112,7 +1112,7 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border-2 border-green-300"
+                      className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border-2 border-green-300"
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1131,7 +1131,7 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-300"
+                      className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-300"
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1150,7 +1150,7 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl border-2 border-orange-300"
+                      className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl border-2 border-orange-300"
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1169,7 +1169,7 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl border-2 border-yellow-300"
+                      className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl border-2 border-yellow-300"
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1188,7 +1188,7 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border-2 border-indigo-300"
+                      className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border-2 border-indigo-300"
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
@@ -1207,8 +1207,8 @@ export default function MonitoresGasesArticle() {
                     </motion.div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-2xl border-2 border-purple-300">
-                    <h3 className="text-2xl font-bold text-purple-900 mb-4 text-center">
+                  <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 text-center">
                       De Reactivo a Predictivo: El Verdadero Poder
                     </h3>
                     <p className="text-gray-700 text-center max-w-3xl mx-auto">
@@ -1225,10 +1225,10 @@ export default function MonitoresGasesArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-blue-100">
-                  <h2 className="text-4xl font-bold text-center mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       Preguntas Frecuentes
                     </span>
@@ -1243,7 +1243,7 @@ export default function MonitoresGasesArticle() {
                       >
                         <button
                           onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                          className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-purple-50 transition-all flex items-center justify-between gap-4"
+                          className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-purple-50 transition-all flex items-center justify-between gap-4"
                         >
                           <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                           <motion.div
@@ -1263,7 +1263,7 @@ export default function MonitoresGasesArticle() {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                              <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                 {faq.answer}
                               </div>
                             </motion.div>
@@ -1280,9 +1280,9 @@ export default function MonitoresGasesArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-600 text-white rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+                <div className="bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-600 text-white rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
                   {/* Partículas decorativas */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {Array.from({ length: 30 }, (_, i) => (
@@ -1311,18 +1311,18 @@ export default function MonitoresGasesArticle() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+                    <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
                       Un Instrumento Científico, No un Amuleto
                     </h2>
                     
-                    <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed mb-10">
+                    <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <p className="text-center">
                         Un monitor de gases requiere <b className="text-yellow-300">conocimiento para su uso correcto</b>. 
                         Entender los riesgos, elegir el detector adecuado y, sobre todo, verificarlo antes de cada uso, 
                         son pilares de una cultura de seguridad profesional.
                       </p>
 
-                      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                      <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 md:p-6 rounded-2xl border border-white/20">
                         <p className="font-semibold mb-2">💡 El Mensaje Clave:</p>
                         <p>
                           En estos entornos, la tecnología no es un complemento a la seguridad; es el <b>único sentido fiable</b> que 
@@ -1331,19 +1331,19 @@ export default function MonitoresGasesArticle() {
                         </p>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6">
-                        <div className="bg-white/20 backdrop-blur-md p-6 rounded-2xl text-center">
-                          <div className="text-4xl mb-3">🔍</div>
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
+                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🔍</div>
                           <h3 className="font-bold text-xl mb-2">Entender</h3>
                           <p className="text-sm">Los riesgos atmosféricos específicos de tu entorno</p>
                         </div>
-                        <div className="bg-white/20 backdrop-blur-md p-6 rounded-2xl text-center">
-                          <div className="text-4xl mb-3">✅</div>
+                        <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
+                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">✅</div>
                           <h3 className="font-bold text-xl mb-2">Verificar</h3>
                           <p className="text-sm">Bump test diario antes de cada uso sin excepciones</p>
                         </div>
-                        <div className="bg-white/20 backdrop-blur-md p-6 rounded-2xl text-center">
-                          <div className="text-4xl mb-3">🛡️</div>
+                        <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
+                          <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🛡️</div>
                           <h3 className="font-bold text-xl mb-2">Proteger</h3>
                           <p className="text-sm">Tu vida y la de tus compañeros con tecnología confiable</p>
                         </div>
@@ -1351,7 +1351,7 @@ export default function MonitoresGasesArticle() {
                     </div>
 
                     <div className="text-center">
-                      <p className="text-2xl font-bold mb-6">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold mb-6">
                         🎯 La seguridad atmosférica no es negociable. La detección de gases es tu sentido extra.
                       </p>
                       <motion.a

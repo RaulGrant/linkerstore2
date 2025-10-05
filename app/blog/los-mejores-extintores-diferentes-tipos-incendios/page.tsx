@@ -135,7 +135,7 @@ export default function ExtintoresGuiaArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema fuego/extintores */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas de fuego (100 partículas) */}
@@ -217,7 +217,7 @@ export default function ExtintoresGuiaArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ export default function ExtintoresGuiaArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -244,7 +244,7 @@ export default function ExtintoresGuiaArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -253,7 +253,7 @@ export default function ExtintoresGuiaArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -303,19 +303,19 @@ export default function ExtintoresGuiaArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -325,7 +325,7 @@ export default function ExtintoresGuiaArticle() {
                           <AlertTriangle className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900 mb-3">⚠️ No Todos los Fuegos Son Iguales</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">⚠️ No Todos los Fuegos Son Iguales</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             Ante el peligro de un incendio, tu primer instinto podría ser buscar el extintor más cercano. 
                             Pero, <strong className="text-red-600">¿sabías que no todos los fuegos son iguales y que usar el 
@@ -349,14 +349,14 @@ export default function ExtintoresGuiaArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Tu Guía Experta 2025</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Tu Guía Experta 2025</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Esta guía 2025 te convertirá en un experto, ayudándote a navegar el mercado mexicano para encontrar 
@@ -368,9 +368,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Clasificación de Fuegos */}
-                  <section id="clasificacion-fuegos" className="mb-16">
+                  <section id="clasificacion-fuegos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -380,7 +380,7 @@ export default function ExtintoresGuiaArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -390,7 +390,7 @@ export default function ExtintoresGuiaArticle() {
                     </motion.p>
 
                     {/* Selector de Clase de Fuego */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-10">
+                    <div className="flex flex-wrap justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.button
                         onClick={() => setSelectedFireClass('a')}
                         whileHover={{ scale: 1.05 }}
@@ -449,14 +449,14 @@ export default function ExtintoresGuiaArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                         >
-                          <h3 className="text-2xl font-bold text-green-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-4 flex items-center gap-2">
                             <Package className="h-7 w-7" />
                             Fuego Clase A: Combustibles Sólidos
                           </h3>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-green-800 mb-2">📦 Materiales Involucrados:</h4>
                             <p className="text-gray-700 mb-3">
                               Involucra combustibles sólidos comunes que, al quemarse, <b className="text-green-700">dejan brasas y cenizas</b>. 
@@ -464,7 +464,7 @@ export default function ExtintoresGuiaArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-green-100 p-6 rounded-xl">
+                          <div className="bg-green-100 p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-green-800 mb-2">💧 Método de Extinción:</h4>
                             <p className="text-gray-700">
                               El método de extinción más efectivo para esta clase es el <b className="text-green-700">enfriamiento</b>, 
@@ -480,14 +480,14 @@ export default function ExtintoresGuiaArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         >
-                          <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
                             <Droplets className="h-7 w-7" />
                             Fuego Clase B: Líquidos y Gases Inflamables
                           </h3>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-blue-800 mb-2">⛽ Materiales Involucrados:</h4>
                             <p className="text-gray-700 mb-3">
                               Se origina en líquidos inflamables y combustibles, así como en gases. Ejemplos comunes son la 
@@ -496,7 +496,7 @@ export default function ExtintoresGuiaArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-blue-100 p-6 rounded-xl">
+                          <div className="bg-blue-100 p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-2">🌪️ Método de Extinción:</h4>
                             <p className="text-gray-700">
                               Deben ser extinguidos por <b className="text-blue-700">sofocación</b> (eliminando el oxígeno) o 
@@ -512,14 +512,14 @@ export default function ExtintoresGuiaArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border-2 border-yellow-300"
+                          className="bg-gradient-to-br from-yellow-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-yellow-300"
                         >
-                          <h3 className="text-2xl font-bold text-yellow-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-4 flex items-center gap-2">
                             <Zap className="h-7 w-7" />
                             Fuego Clase C: Equipos Eléctricos Energizados
                           </h3>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-yellow-800 mb-2">⚡ Materiales Involucrados:</h4>
                             <p className="text-gray-700 mb-3">
                               Implica equipos y aparatos eléctricos que están conectados a una fuente de energía 
@@ -528,7 +528,7 @@ export default function ExtintoresGuiaArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <h4 className="font-bold text-red-800 mb-2 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               ⚠️ Peligro Principal:
@@ -548,14 +548,14 @@ export default function ExtintoresGuiaArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-2xl border-2 border-red-300"
+                          className="bg-gradient-to-br from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         >
-                          <h3 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
                             <Flame className="h-7 w-7" />
                             Fuego Clase K: Aceites y Grasas de Cocina
                           </h3>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-red-800 mb-2">🍳 Materiales Involucrados:</h4>
                             <p className="text-gray-700 mb-3">
                               Es específico de cocinas y se refiere a incendios que involucran 
@@ -564,7 +564,7 @@ export default function ExtintoresGuiaArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-4 border-yellow-400">
+                          <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-yellow-400">
                             <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               ⚠️ EXTREMADAMENTE PELIGROSO:
@@ -584,9 +584,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Agentes Extintores */}
-                  <section id="agentes-extintores" className="mb-16">
+                  <section id="agentes-extintores" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -596,7 +596,7 @@ export default function ExtintoresGuiaArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -608,7 +608,7 @@ export default function ExtintoresGuiaArticle() {
                     <div className="space-y-8">
                       {/* PQS ABC */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-yellow-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-yellow-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
@@ -618,12 +618,12 @@ export default function ExtintoresGuiaArticle() {
                             <Beaker className="h-8 w-8 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-yellow-900">Polvo Químico Seco (PQS) - Tipo ABC</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900">Polvo Químico Seco (PQS) - Tipo ABC</h3>
                             <p className="text-gray-600 text-sm">El "Todoterreno" Más Popular en México</p>
                           </div>
                         </div>
 
-                        <div className="bg-yellow-50 p-6 rounded-xl mb-4">
+                        <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                           <h4 className="font-bold text-yellow-800 mb-2">📝 Descripción:</h4>
                           <p className="text-gray-700">
                             Es el agente más versátil y popular en México. Compuesto principalmente de 
@@ -632,8 +632,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -658,7 +658,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Desventajas
@@ -683,7 +683,7 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* CO₂ */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
@@ -693,12 +693,12 @@ export default function ExtintoresGuiaArticle() {
                             <Wind className="h-8 w-8 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-blue-900">Dióxido de Carbono (CO₂)</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Dióxido de Carbono (CO₂)</h3>
                             <p className="text-gray-600 text-sm">Agente Limpio para Equipos Sensibles</p>
                           </div>
                         </div>
 
-                        <div className="bg-blue-50 p-6 rounded-xl mb-4">
+                        <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                           <h4 className="font-bold text-blue-800 mb-2">📝 Descripción:</h4>
                           <p className="text-gray-700">
                             Es un gas que apaga el fuego al <b className="text-blue-700">desplazar el oxígeno</b> (sofocación) 
@@ -707,8 +707,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -733,7 +733,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Desventajas
@@ -758,7 +758,7 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Químico Húmedo */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-red-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-red-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
@@ -768,12 +768,12 @@ export default function ExtintoresGuiaArticle() {
                             <Flame className="h-8 w-8 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-red-900">Químico Húmedo (Acetato de Potasio)</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900">Químico Húmedo (Acetato de Potasio)</h3>
                             <p className="text-gray-600 text-sm">Especializado para Clase K - Cocinas</p>
                           </div>
                         </div>
 
-                        <div className="bg-red-50 p-6 rounded-xl mb-4">
+                        <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                           <h4 className="font-bold text-red-800 mb-2">📝 Descripción:</h4>
                           <p className="text-gray-700">
                             Este agente líquido está diseñado específicamente para los fuegos de Clase K. Al ser descargado 
@@ -782,7 +782,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-4 border-yellow-400 mb-4">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-yellow-400 mb-4">
                           <h4 className="font-bold text-yellow-900 mb-2">⚗️ Proceso de Saponificación:</h4>
                           <p className="text-gray-800">
                             La espuma jabonosa <b>sofoca las llamas</b> y, al mismo tiempo, <b>enfría el aceite</b> por debajo 
@@ -790,8 +790,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl border border-red-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -816,7 +816,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-200">
+                          <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-3 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Limitaciones
@@ -841,7 +841,7 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Agua */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-cyan-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-cyan-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
@@ -851,12 +851,12 @@ export default function ExtintoresGuiaArticle() {
                             <Droplets className="h-8 w-8 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-cyan-900">Agua a Presión</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-cyan-900">Agua a Presión</h3>
                             <p className="text-gray-600 text-sm">Básico y Limitado - Solo Clase A</p>
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-4 border-red-400">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-red-400">
                           <h4 className="font-bold text-red-900 mb-2 flex items-center gap-2">
                             <AlertTriangle className="h-6 w-6" />
                             ⚠️ ADVERTENCIA CRÍTICA:
@@ -885,9 +885,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Capacidad y Rating */}
-                  <section id="capacidad-rating" className="mb-16">
+                  <section id="capacidad-rating" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -897,7 +897,7 @@ export default function ExtintoresGuiaArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -905,18 +905,18 @@ export default function ExtintoresGuiaArticle() {
                       la capacidad y el rating de extinción.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-8 mb-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-blue-200"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <Package className="h-8 w-8 text-blue-600" />
-                          <h3 className="text-2xl font-bold text-blue-900">Capacidad Nominal</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Capacidad Nominal</h3>
                         </div>
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <p className="text-gray-700 mb-4">
                             Indica la <b className="text-blue-700">cantidad de agente extintor</b> que contiene el cilindro. 
                             Se expresa en:
@@ -943,16 +943,16 @@ export default function ExtintoresGuiaArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-purple-200"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <Activity className="h-8 w-8 text-purple-600" />
-                          <h3 className="text-2xl font-bold text-purple-900">Rating de Extinción</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900">Rating de Extinción</h3>
                         </div>
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <p className="text-gray-700 mb-4">
                             Es una clasificación alfanumérica (ej. <b className="bg-purple-100 px-2 py-1 rounded">2-A:10-B:C</b>) 
                             que mide el <b className="text-purple-700">poder de extinción</b> bajo pruebas UL estandarizadas:
@@ -977,9 +977,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Marco Normativo */}
-                  <section id="marco-normativo" className="mb-16">
+                  <section id="marco-normativo" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -989,14 +989,14 @@ export default function ExtintoresGuiaArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-yellow-50 to-amber-50 border-4 border-yellow-400 p-8 rounded-2xl mb-8"
+                      className="bg-gradient-to-br from-yellow-50 to-amber-50 border-4 border-yellow-400 p-4 sm:p-6 md:p-8 rounded-2xl mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
                       <div className="flex items-start gap-4">
                         <AlertTriangle className="h-10 w-10 text-yellow-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-yellow-900 mb-3">⚠️ No es Opcional, es Ley</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-3">⚠️ No es Opcional, es Ley</h3>
                           <p className="text-gray-800 leading-relaxed mb-4 text-lg">
                             En México, la posesión y el mantenimiento de extintores en entornos laborales 
                             <span className="bg-yellow-200 px-2 py-1 rounded font-semibold mx-1">no es opcional, sino una obligación legal</span>. 
@@ -1011,7 +1011,7 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* NOM-002-STPS-2010 */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-red-600 mb-6"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-red-600 mb-6"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 }}
@@ -1019,7 +1019,7 @@ export default function ExtintoresGuiaArticle() {
                       <div className="flex items-start gap-4 mb-4">
                         <FileText className="h-10 w-10 text-red-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900">NOM-002-STPS-2010</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900">NOM-002-STPS-2010</h3>
                           <p className="text-gray-600 text-sm">Prevención y Protección contra Incendios en los Centros de Trabajo</p>
                         </div>
                       </div>
@@ -1029,8 +1029,8 @@ export default function ExtintoresGuiaArticle() {
                         en los centros de trabajo. Obliga a los empleadores a:
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6 mb-4">
-                        <div className="bg-red-50 p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4">
+                        <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-red-800 mb-3">📋 Obligaciones del Patrón:</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -1056,7 +1056,7 @@ export default function ExtintoresGuiaArticle() {
                           </ul>
                         </div>
 
-                        <div className="bg-green-50 p-6 rounded-xl">
+                        <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">🎯 Impacto en el Mercado:</h4>
                           <p className="text-sm text-gray-700 mb-3">
                             La existencia de esta norma es un <b className="text-green-700">motor principal del mercado</b>, 
@@ -1075,7 +1075,7 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* NOM-154-SCFI-2005 */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-blue-600 mb-6"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-blue-600 mb-6"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 }}
@@ -1083,12 +1083,12 @@ export default function ExtintoresGuiaArticle() {
                       <div className="flex items-start gap-4 mb-4">
                         <Activity className="h-10 w-10 text-blue-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-blue-900">NOM-154-SCFI-2005</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">NOM-154-SCFI-2005</h3>
                           <p className="text-gray-600 text-sm">Equipos contra incendio - Extintores - Servicio de mantenimiento y recarga</p>
                         </div>
                       </div>
                       
-                      <div className="bg-blue-50 p-6 rounded-xl mb-4">
+                      <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                         <p className="text-gray-700 leading-relaxed mb-3">
                           Esta norma regula a las empresas que prestan el <b className="text-blue-700">servicio de mantenimiento 
                           y recarga de extintores</b>. La ley exige que cada extintor reciba un servicio de mantenimiento completo 
@@ -1096,8 +1096,8 @@ export default function ExtintoresGuiaArticle() {
                         </p>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-xl border-2 border-blue-200">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                           <h4 className="font-bold text-blue-800 mb-3">🔧 Mantenimiento Anual:</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -1119,7 +1119,7 @@ export default function ExtintoresGuiaArticle() {
                           </ul>
                         </div>
 
-                        <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-200">
+                        <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                           <h4 className="font-bold text-purple-800 mb-3">📅 Inspección Mensual:</h4>
                           <p className="text-sm text-gray-700 mb-3">
                             Adicional al servicio profesional anual, el propietario debe realizar una <b>inspección visual cada mes</b>:
@@ -1148,20 +1148,20 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* Conclusión Normativa */}
                     <motion.div 
-                      className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Interacción Entre Normativas</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Interacción Entre Normativas</h3>
                       </div>
                       <p className="leading-relaxed text-lg mb-4">
                         La interacción entre estos factores define el mercado. Por ejemplo, la propiedad <b>corrosiva del PQS</b>, 
                         el agente más común, crea una demanda específica para agentes limpios como el CO₂.
                       </p>
-                      <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
+                      <div className="bg-white/20 p-3 sm:p-4 md:p-6 rounded-xl backdrop-blur-sm">
                         <p className="text-white leading-relaxed">
                           💡 El daño potencial a equipos electrónicos o maquinaria de alto valor es la <b>causa directa</b> que 
                           justifica la inversión en un extintor de CO₂, que, aunque más costoso inicialmente, previene pérdidas 
@@ -1172,9 +1172,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Top 6 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1185,7 +1185,7 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -1205,13 +1205,13 @@ export default function ExtintoresGuiaArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - PQS ABC 4.5kg */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -1219,7 +1219,7 @@ export default function ExtintoresGuiaArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Extintor De Polvo Químico Seco De 4.5kg PQS ABC Nuevo
                         </h3>
 
@@ -1246,7 +1246,7 @@ export default function ExtintoresGuiaArticle() {
                           para Protección Civil y bitácora de mantenimiento.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <TrendingUp className="h-6 w-6" />
                             Estándar de la Industria
@@ -1258,8 +1258,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1288,7 +1288,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1310,7 +1310,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $250 - $400 MXN</p>
@@ -1320,7 +1320,7 @@ export default function ExtintoresGuiaArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-703515506-extintor-45-kg-pqs-nuevo-tipo-abc-responsiva-certificado-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1330,13 +1330,13 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Producto #2 - CO₂ 5 lbs */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1344,7 +1344,7 @@ export default function ExtintoresGuiaArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Extintor De 5 Lbs Tipo Co2 Ideal Para Fuego BC
                         </h3>
 
@@ -1371,7 +1371,7 @@ export default function ExtintoresGuiaArticle() {
                           cocinas con equipos eléctricos costosos y laboratorios.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <Eye className="h-6 w-6" />
                             Protección de Activos Valiosos
@@ -1388,8 +1388,8 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1418,7 +1418,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1440,7 +1440,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Rango de Precio: $700 - $1,000 MXN</p>
@@ -1450,7 +1450,7 @@ export default function ExtintoresGuiaArticle() {
                               href="https://www.mercadolibre.com.mx/extintor-de-5-lbs-tipo-co2-ideal-para-fuego-bc/p/MLM52296516"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1460,13 +1460,13 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Producto #3 - Clase K */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-3xl shadow-2xl border-2 border-red-200"
+                        className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-red-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-red-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-red-100 text-red-800 px-4 py-2 font-bold">
@@ -1474,7 +1474,7 @@ export default function ExtintoresGuiaArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Extintor Para Cocina Tipo K 6 Litros + Curso + Letrero
                         </h3>
 
@@ -1500,7 +1500,7 @@ export default function ExtintoresGuiaArticle() {
                           aceite para prevenir la reignición. Su cilindro de acero inoxidable resiste la corrosión en ambientes de cocina.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl mb-6 border-4 border-yellow-400">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-4 border-yellow-400">
                           <h4 className="font-bold text-yellow-900 mb-3 text-lg flex items-center gap-2">
                             <AlertTriangle className="h-6 w-6" />
                             ⚠️ INDISPENSABLE en Cocinas Comerciales
@@ -1515,8 +1515,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-red-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1545,7 +1545,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-200">
+                          <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1567,7 +1567,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-red-700 mb-2">💰 Rango de Precio: $1,500 - $2,500 MXN</p>
@@ -1577,7 +1577,7 @@ export default function ExtintoresGuiaArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-932269040-extintor-para-cocina-tipo-k-6-litros-curso-letrero-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1587,13 +1587,13 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Producto #4 - Compacto para Auto */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🚗 #4
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1601,7 +1601,7 @@ export default function ExtintoresGuiaArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Extintor Recargable Auto Camioneta Universal 1 Kg C/ Base
                         </h3>
 
@@ -1628,7 +1628,7 @@ export default function ExtintoresGuiaArticle() {
                           vehículo: sólidos (tapicería), líquidos (combustible) y eléctricos.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl mb-6 border-2 border-yellow-300">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-yellow-300">
                           <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
                             <Info className="h-5 w-5" />
                             💡 Importante para Vehículos
@@ -1640,8 +1640,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1670,7 +1670,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1692,7 +1692,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Rango de Precio: $150 - $250 MXN</p>
@@ -1702,7 +1702,7 @@ export default function ExtintoresGuiaArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-2889051444-extintor-recargable-auto-camioneta-universal-1-kg-c-base-bgs-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1712,13 +1712,13 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Producto #5 - Kidde FA110 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🏠 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1726,7 +1726,7 @@ export default function ExtintoresGuiaArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Kidde FA110 Multi Propósito Extintor
                         </h3>
 
@@ -1753,7 +1753,7 @@ export default function ExtintoresGuiaArticle() {
                           fácil de instalar y manejar en una emergencia.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Marca de Prestigio Mundial
@@ -1765,8 +1765,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1795,7 +1795,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1817,7 +1817,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Ver precio en Amazon México</p>
@@ -1827,7 +1827,7 @@ export default function ExtintoresGuiaArticle() {
                               href="https://www.amazon.com.mx/Kidde-FA110-Multi-Prop%C3%B3sito-extintor-unidad/dp/B00002ND64/"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Amazon →
                             </a>
@@ -1837,13 +1837,13 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Producto #6 - Jaloma Básico */}
                       <motion.div 
-                        className="bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-3xl shadow-2xl border-2 border-amber-200"
+                        className="bg-gradient-to-br from-amber-50 to-yellow-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-amber-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-amber-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-amber-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💰 #6
                           </Badge>
                           <Badge className="bg-amber-100 text-amber-800 px-4 py-2 font-bold">
@@ -1851,7 +1851,7 @@ export default function ExtintoresGuiaArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Jaloma Botiquín en Caja Plástica (Extintor Portátil Básico)
                         </h3>
 
@@ -1876,7 +1876,7 @@ export default function ExtintoresGuiaArticle() {
                           su <b className="bg-amber-100 px-2 py-1 rounded mx-1">estuche de plástico lo hace portátil</b> para emergencias menores en entornos de bajo riesgo.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <TrendingUp className="h-6 w-6" />
                             Marca Reconocida en México
@@ -1888,8 +1888,8 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-amber-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-amber-200">
                             <h4 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1914,7 +1914,7 @@ export default function ExtintoresGuiaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1936,7 +1936,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-amber-100 to-yellow-100 p-6 rounded-xl border-2 border-amber-300">
+                        <div className="bg-gradient-to-r from-amber-100 to-yellow-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-amber-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-amber-700 mb-2">💰 Rango de Precio: $100 - $200 MXN</p>
@@ -1946,7 +1946,7 @@ export default function ExtintoresGuiaArticle() {
                               href="https://www.mercadolibre.com.mx/jaloma-botiquin-en-caja-plastica-primeros-auxilios-22-pzas/p/MLM35212740"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1957,9 +1957,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1975,9 +1975,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1987,7 +1987,7 @@ export default function ExtintoresGuiaArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1998,7 +1998,7 @@ export default function ExtintoresGuiaArticle() {
                     <div className="space-y-8">
                       {/* Para Oficina/Casa */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
@@ -2008,7 +2008,7 @@ export default function ExtintoresGuiaArticle() {
                             <Package className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-3">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-3">
                               Para Oficina o Casa
                             </h3>
                             <p className="text-gray-600 text-sm mb-4">(Protección general contra riesgos mixtos)</p>
@@ -2033,7 +2033,7 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Para Equipos Electrónicos */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
@@ -2043,7 +2043,7 @@ export default function ExtintoresGuiaArticle() {
                             <Zap className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-3">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">
                               Para Proteger Equipos Electrónicos Valiosos
                             </h3>
                             <p className="text-gray-600 text-sm mb-4">(Servidores, centros de datos, equipos médicos)</p>
@@ -2069,7 +2069,7 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Para Cocinas */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
@@ -2079,7 +2079,7 @@ export default function ExtintoresGuiaArticle() {
                             <Flame className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-red-900 mb-3">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">
                               Para Cocinas Comerciales y Restaurantes
                             </h3>
                             <p className="text-gray-600 text-sm mb-4">(Freidoras, áreas de preparación con aceite)</p>
@@ -2105,7 +2105,7 @@ export default function ExtintoresGuiaArticle() {
 
                       {/* Para Vehículos */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-purple-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-purple-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
@@ -2115,7 +2115,7 @@ export default function ExtintoresGuiaArticle() {
                             <Activity className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-purple-900 mb-3">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-3">
                               Para Tu Vehículo
                             </h3>
                             <p className="text-gray-600 text-sm mb-4">(Automóvil, camioneta, vehículo comercial)</p>
@@ -2144,19 +2144,19 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* Consejos Clave */}
                     <motion.div 
-                      className="mt-12 bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl border-2 border-indigo-300"
+                      className="mt-12 bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-indigo-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7 }}
                     >
-                      <h3 className="text-2xl font-bold text-indigo-900 mb-6 text-center">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900 mb-6 text-center">
                         💡 3 Consejos Clave para Acertar
                       </h3>
                       
-                      <div className="grid md:grid-cols-3 gap-6">
-                        <div className="bg-white p-6 rounded-xl shadow-md">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md">
                           <div className="text-center mb-4">
-                            <span className="text-4xl">🎯</span>
+                            <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🎯</span>
                             <h4 className="font-bold text-indigo-800 mt-2">1. Identifica tu Riesgo</h4>
                           </div>
                           <p className="text-sm text-gray-700 text-center">
@@ -2165,9 +2165,9 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md">
                           <div className="text-center mb-4">
-                            <span className="text-4xl">🔄</span>
+                            <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🔄</span>
                             <h4 className="font-bold text-indigo-800 mt-2">2. Versatilidad vs Especialización</h4>
                           </div>
                           <p className="text-sm text-gray-700 text-center">
@@ -2176,9 +2176,9 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md">
                           <div className="text-center mb-4">
-                            <span className="text-4xl">📚</span>
+                            <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">📚</span>
                             <h4 className="font-bold text-indigo-800 mt-2">3. Aprende a Usarlo</h4>
                           </div>
                           <p className="text-sm text-gray-700 text-center">
@@ -2191,17 +2191,17 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* Errores Comunes */}
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                      className="mt-8 bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.8 }}
                     >
-                      <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">
                         ❌ 3 Errores Comunes a Evitar
                       </h3>
                       
                       <div className="space-y-4">
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                           <div className="flex items-start gap-4">
                             <AlertTriangle className="h-8 w-8 text-red-600 flex-shrink-0" />
                             <div>
@@ -2215,7 +2215,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                           <div className="flex items-start gap-4">
                             <Package className="h-8 w-8 text-orange-600 flex-shrink-0" />
                             <div>
@@ -2229,7 +2229,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                           <div className="flex items-start gap-4">
                             <Activity className="h-8 w-8 text-yellow-600 flex-shrink-0" />
                             <div>
@@ -2247,14 +2247,14 @@ export default function ExtintoresGuiaArticle() {
 
                     {/* Mantenimiento */}
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                      className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.9 }}
                     >
                       <div className="flex items-center gap-3 mb-6">
                         <Shield className="h-8 w-8 text-green-600" />
-                        <h3 className="text-2xl font-bold text-green-900">🔧 Mantenimiento: La Clave de la Seguridad</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900">🔧 Mantenimiento: La Clave de la Seguridad</h3>
                       </div>
                       
                       <p className="text-gray-700 mb-6 leading-relaxed">
@@ -2264,8 +2264,8 @@ export default function ExtintoresGuiaArticle() {
                         y que no haya golpes, óxido o fugas.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">📅 Inspección Mensual (Tú mismo):</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -2287,7 +2287,7 @@ export default function ExtintoresGuiaArticle() {
                           </ul>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3">🔧 Mantenimiento Anual (Profesional):</h4>
                           <p className="text-sm text-gray-700 mb-3">
                             <b className="text-blue-700">Crucial y obligatorio</b> para negocios según la NOM-002-STPS-2010. 
@@ -2313,9 +2313,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2333,7 +2333,7 @@ export default function ExtintoresGuiaArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -2353,7 +2353,7 @@ export default function ExtintoresGuiaArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -2365,9 +2365,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2377,7 +2377,7 @@ export default function ExtintoresGuiaArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -2396,8 +2396,8 @@ export default function ExtintoresGuiaArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor Uso General</h3>
@@ -2407,7 +2407,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Zap className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor para Electrónicos</h3>
@@ -2417,7 +2417,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-red-200">
                           <div className="text-center mb-4">
                             <Flame className="h-10 w-10 mx-auto text-red-600 mb-2" />
                             <h3 className="text-lg font-bold text-red-900">Mejor para Cocinas</h3>
@@ -2430,13 +2430,13 @@ export default function ExtintoresGuiaArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl mb-8"
+                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">No Esperes a la Emergencia</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">No Esperes a la Emergencia</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Para una protección integral y el cumplimiento normativo, el extintor PQS ABC de 4.5 kg es el equipo 
@@ -2449,11 +2449,11 @@ export default function ExtintoresGuiaArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-2xl border-2 border-yellow-400"
+                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-yellow-400"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         🛡️ La unión perfecta es aquella que protege tu vida
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -2463,9 +2463,9 @@ export default function ExtintoresGuiaArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

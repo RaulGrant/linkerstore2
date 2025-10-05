@@ -153,7 +153,7 @@ export default function ArnesesSeguridadArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema altura/seguridad */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -237,7 +237,7 @@ export default function ArnesesSeguridadArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -255,7 +255,7 @@ export default function ArnesesSeguridadArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -264,7 +264,7 @@ export default function ArnesesSeguridadArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -273,7 +273,7 @@ export default function ArnesesSeguridadArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -323,19 +323,19 @@ export default function ArnesesSeguridadArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -345,7 +345,7 @@ export default function ArnesesSeguridadArticle() {
                           <AlertTriangle className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900 mb-3">⚠️ Tu Vida Depende de Este Equipo</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">⚠️ Tu Vida Depende de Este Equipo</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             En México, cualquier trabajo a más de <strong className="text-red-600">1.80 metros del suelo</strong> no es 
                             solo una tarea; es una operación de alto riesgo regulada por ley. Según la <b className="bg-red-100 px-2 py-1 rounded">
@@ -369,14 +369,14 @@ export default function ArnesesSeguridadArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <FileText className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Tu Manual de Campo Completo</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Tu Manual de Campo Completo</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Esta guía definitiva para 2025 es tu manual de campo. Hemos realizado una <b>investigación exhaustiva del mercado 
@@ -388,9 +388,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Marco Regulatorio */}
-                  <section id="marco-regulatorio" className="mb-16">
+                  <section id="marco-regulatorio" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -400,7 +400,7 @@ export default function ArnesesSeguridadArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -410,7 +410,7 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* NOM-009-STPS-2011 */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-red-500 mb-6"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-red-500 mb-6"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 }}
@@ -418,7 +418,7 @@ export default function ArnesesSeguridadArticle() {
                       <div className="flex items-start gap-4 mb-4">
                         <FileText className="h-8 w-8 text-red-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900">NOM-009-STPS-2011</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900">NOM-009-STPS-2011</h3>
                           <p className="text-gray-600 text-sm">Condiciones de seguridad para realizar trabajos en altura</p>
                         </div>
                       </div>
@@ -428,15 +428,15 @@ export default function ArnesesSeguridadArticle() {
                         Su cumplimiento es obligatorio para todas las empresas y establece los requisitos mínimos para prevenir accidentes.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6 mb-4">
-                        <div className="bg-red-50 p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4">
+                        <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-red-800 mb-3">📐 Ámbito de Aplicación:</h4>
                           <p className="text-gray-700 text-sm">
                             Aplicable a todas las actividades laborales que se realicen a una altura <b className="text-red-700">superior a 
                             1.80 metros</b> sobre un nivel de referencia inferior.
                           </p>
                         </div>
-                        <div className="bg-red-50 p-6 rounded-xl">
+                        <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-red-800 mb-3">🦺 EPP Obligatorio:</h4>
                           <p className="text-gray-700 text-sm">
                             Exige el uso de un <b className="text-red-700">arnés de cuerpo completo certificado</b> como parte del 
@@ -445,7 +445,7 @@ export default function ArnesesSeguridadArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-6 rounded-xl">
+                      <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl">
                         <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
                           <AlertTriangle className="h-5 w-5" />
                           ⚠️ Sanciones por Incumplimiento
@@ -459,7 +459,7 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* Estándares Internacionales */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-blue-500 mb-6"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-blue-500 mb-6"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.6 }}
@@ -467,7 +467,7 @@ export default function ArnesesSeguridadArticle() {
                       <div className="flex items-start gap-4 mb-4">
                         <Shield className="h-8 w-8 text-blue-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-blue-900">Estándares Internacionales como Sello de Calidad</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Estándares Internacionales como Sello de Calidad</h3>
                         </div>
                       </div>
                       
@@ -476,15 +476,15 @@ export default function ArnesesSeguridadArticle() {
                         <b className="text-blue-700"> sello de calidad y rendimiento superior</b>.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-blue-50 p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-blue-800 mb-3">🇺🇸 ANSI/ASSP Z359.11</h4>
                           <p className="text-gray-700 text-sm">
                             Estándar del American National Standards Institute para arneses de cuerpo completo. Define requisitos de diseño, 
                             rendimiento, pruebas y marcado. Especifica pruebas para usuarios de <b>59 a 140 kg</b>.
                           </p>
                         </div>
-                        <div className="bg-blue-50 p-6 rounded-xl">
+                        <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-blue-800 mb-3">🇪🇺 Normas Europeas (EN)</h4>
                           <p className="text-gray-700 text-sm">
                             Referente global. La <b>EN 361</b> especifica requisitos para arneses de detención de caídas, y la <b>EN 358</b> 
@@ -504,14 +504,14 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* Certificación y Etiquetas */}
                     <motion.div 
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Eye className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">La Importancia de la Certificación y las Etiquetas</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">La Importancia de la Certificación y las Etiquetas</h3>
                       </div>
                       <p className="leading-relaxed text-lg mb-4">
                         Un arnés de calidad profesional debe contar con una <b>etiqueta duradera y legible</b> que contenga:
@@ -544,9 +544,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Anatomía del Arnés */}
-                  <section id="anatomia-arnes" className="mb-16">
+                  <section id="anatomia-arnes" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -556,7 +556,7 @@ export default function ArnesesSeguridadArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -566,7 +566,7 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* Cintas y Correas */}
                     <motion.div 
-                      className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-xl border-2 border-green-300 mb-8"
+                      className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-green-300 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 }}
@@ -576,7 +576,7 @@ export default function ArnesesSeguridadArticle() {
                           <Scissors className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-green-900 mb-2">Cintas y Correas (Webbing)</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-2">Cintas y Correas (Webbing)</h3>
                           <p className="text-gray-600">El esqueleto del arnés</p>
                         </div>
                       </div>
@@ -586,8 +586,8 @@ export default function ArnesesSeguridadArticle() {
                         de las partes más fuertes del cuerpo.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">🧵 Materiales Comunes</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -604,7 +604,7 @@ export default function ArnesesSeguridadArticle() {
                             </li>
                           </ul>
                         </div>
-                        <div className="bg-green-100 p-6 rounded-xl">
+                        <div className="bg-green-100 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">🔥 Materiales Especializados</h4>
                           <p className="text-gray-700 text-sm">
                             Para trabajos específicos como <b>soldadura</b> o en entornos con <b>riesgo de arco eléctrico</b>, 
@@ -616,7 +616,7 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* Herrajes y Hebillas */}
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl border-2 border-blue-300 mb-8"
+                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-blue-300 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.6 }}
@@ -626,7 +626,7 @@ export default function ArnesesSeguridadArticle() {
                           <Settings className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">Herrajes y Hebillas (Hardware & Buckles)</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-2">Herrajes y Hebillas (Hardware & Buckles)</h3>
                           <p className="text-gray-600">Puntos de conexión y ajuste</p>
                         </div>
                       </div>
@@ -662,7 +662,7 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* Costuras y Refuerzos */}
                     <motion.div 
-                      className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-xl border-2 border-purple-300"
+                      className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-purple-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.7 }}
@@ -672,7 +672,7 @@ export default function ArnesesSeguridadArticle() {
                           <Activity className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-purple-900 mb-2">Costuras y Refuerzos</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-2">Costuras y Refuerzos</h3>
                           <p className="text-gray-600">Los puntos que soportan toda la carga</p>
                         </div>
                       </div>
@@ -682,8 +682,8 @@ export default function ArnesesSeguridadArticle() {
                         Se debe buscar:
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-purple-800 mb-3">✓ Características Clave</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -700,7 +700,7 @@ export default function ArnesesSeguridadArticle() {
                             </li>
                           </ul>
                         </div>
-                        <div className="bg-purple-100 p-6 rounded-xl">
+                        <div className="bg-purple-100 p-3 sm:p-4 md:p-6 rounded-xl">
                           <p className="text-purple-900 font-semibold mb-2">🔍 Inspección Visual</p>
                           <p className="text-sm text-gray-700">
                             Las zonas de alta tensión, como alrededor de los anillos "D", deben tener <b>costuras visiblemente reforzadas</b>. 
@@ -712,9 +712,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Puntos de Anclaje */}
-                  <section id="puntos-anclaje" className="mb-16">
+                  <section id="puntos-anclaje" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -724,7 +724,7 @@ export default function ArnesesSeguridadArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -732,7 +732,7 @@ export default function ArnesesSeguridadArticle() {
                       No se trata de que "más es mejor", sino de que cada anillo tiene un propósito específico.
                     </motion.p>
 
-                    <div className="bg-yellow-50 border-4 border-yellow-400 p-6 rounded-xl mb-8">
+                    <div className="bg-yellow-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-4 sm:mb-6 md:mb-8">
                       <p className="text-yellow-900 font-semibold text-center text-lg">
                         ⚠️ El estándar de la industria exige que cada anillo "D" de anclaje tenga una resistencia mínima de 
                         <span className="bg-yellow-200 px-2 py-1 rounded mx-2">2,270 kg (5,000 lbs)</span>
@@ -740,7 +740,7 @@ export default function ArnesesSeguridadArticle() {
                     </div>
 
                     {/* Selector de tipo de anillo */}
-                    <div className="flex justify-center gap-4 mb-10">
+                    <div className="flex justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.button
                         onClick={() => setSelectedAnchorType('dorsal')}
                         whileHover={{ scale: 1.05 }}
@@ -787,26 +787,26 @@ export default function ArnesesSeguridadArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                          className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         >
                           <div className="flex items-start gap-4 mb-6">
                             <div className="bg-red-500 rounded-xl p-4">
                               <Anchor className="h-10 w-10 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold text-red-900 mb-2">Anillo Dorsal (Dorsal D-Ring)</h3>
+                              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-2">Anillo Dorsal (Dorsal D-Ring)</h3>
                               <p className="text-gray-600">El único para detención de caídas</p>
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-red-800 mb-3">📍 Ubicación</h4>
                             <p className="text-gray-700">
                               En la espalda, <b className="text-red-700">entre los omóplatos</b>.
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-4 border-red-400">
+                          <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-red-400">
                             <h4 className="font-bold text-red-900 mb-3 text-lg">⚠️ Función Crítica</h4>
                             <p className="text-gray-800 leading-relaxed mb-3">
                               Este es el <b className="bg-red-200 px-2 py-1 rounded">ÚNICO punto de anclaje diseñado y certificado para 
@@ -827,26 +827,26 @@ export default function ArnesesSeguridadArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         >
                           <div className="flex items-start gap-4 mb-6">
                             <div className="bg-blue-500 rounded-xl p-4">
                               <Users className="h-10 w-10 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold text-blue-900 mb-2">Anillos Laterales (Side/Hip D-Rings)</h3>
+                              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-2">Anillos Laterales (Side/Hip D-Rings)</h3>
                               <p className="text-gray-600">Para posicionamiento de trabajo</p>
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-blue-800 mb-3">📍 Ubicación</h4>
                             <p className="text-gray-700">
                               A ambos lados de la <b className="text-blue-700">cadera</b>.
                             </p>
                           </div>
 
-                          <div className="bg-blue-100 p-6 rounded-xl mb-4">
+                          <div className="bg-blue-100 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h4 className="font-bold text-blue-800 mb-3">🔧 Función</h4>
                             <p className="text-gray-700 leading-relaxed">
                               Su uso es exclusivo para <b className="text-blue-700">posicionamiento de trabajo</b>. Permiten que un 
@@ -855,7 +855,7 @@ export default function ArnesesSeguridadArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-red-50 to-pink-50 p-6 rounded-xl border-4 border-red-400">
+                          <div className="bg-gradient-to-r from-red-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-red-400">
                             <h4 className="font-bold text-red-900 mb-2 flex items-center gap-2">
                               <AlertTriangle className="h-6 w-6" />
                               ⚠️ ADVERTENCIA CRÍTICA
@@ -874,20 +874,20 @@ export default function ArnesesSeguridadArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                          className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         >
                           <div className="flex items-start gap-4 mb-6">
                             <div className="bg-purple-500 rounded-xl p-4">
                               <Package className="h-10 w-10 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold text-purple-900 mb-2">Otros Anillos Especializados</h3>
+                              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-2">Otros Anillos Especializados</h3>
                               <p className="text-gray-600">Para aplicaciones específicas</p>
                             </div>
                           </div>
 
                           <div className="space-y-4">
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-purple-800 mb-3">💪 Anillos Pectorales/Esternales</h4>
                               <p className="text-gray-700">
                                 <b>Ubicación:</b> Centro del pecho<br/>
@@ -895,7 +895,7 @@ export default function ArnesesSeguridadArticle() {
                               </p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-purple-800 mb-3">🎯 Anillos de Hombro</h4>
                               <p className="text-gray-700">
                                 <b>Ubicación:</b> En los hombros<br/>
@@ -903,7 +903,7 @@ export default function ArnesesSeguridadArticle() {
                               </p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-purple-800 mb-3">⚓ Anillo Ventral</h4>
                               <p className="text-gray-700">
                                 <b>Ubicación:</b> Parte frontal de la cintura<br/>
@@ -917,9 +917,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Características Adicionales */}
-                  <section id="caracteristicas-adicionales" className="mb-16">
+                  <section id="caracteristicas-adicionales" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -929,7 +929,7 @@ export default function ArnesesSeguridadArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -937,17 +937,17 @@ export default function ArnesesSeguridadArticle() {
                       son <b className="text-green-600">vitales</b>, especialmente para quienes lo usan durante jornadas completas.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                       {/* Acolchado */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300"
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-green-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">🛏️</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🛏️</span>
                           </div>
                           <h3 className="text-xl font-bold text-green-900">Acolchado (Padding)</h3>
                         </div>
@@ -960,14 +960,14 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Sistemas de Ajuste */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300"
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-blue-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">📏</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">📏</span>
                           </div>
                           <h3 className="text-xl font-bold text-blue-900">Sistemas de Ajuste</h3>
                         </div>
@@ -980,14 +980,14 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Indicadores de Caída */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl border-2 border-yellow-300"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300"
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-yellow-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">⚠️</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">⚠️</span>
                           </div>
                           <h3 className="text-xl font-bold text-yellow-900">Indicadores de Caída</h3>
                         </div>
@@ -1004,14 +1004,14 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Cintas Anti-Trauma */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-2 border-red-300"
+                        className="bg-gradient-to-br from-red-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300"
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-red-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">🩹</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🩹</span>
                           </div>
                           <h3 className="text-xl font-bold text-red-900">Cintas Anti-Trauma</h3>
                         </div>
@@ -1029,14 +1029,14 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Porta-Ganchos */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-purple-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">🔗</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🔗</span>
                           </div>
                           <h3 className="text-xl font-bold text-purple-900">Porta-Ganchos y Porta-Herramientas</h3>
                         </div>
@@ -1050,9 +1050,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Top 6 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1063,7 +1063,7 @@ export default function ArnesesSeguridadArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -1083,13 +1083,13 @@ export default function ArnesesSeguridadArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - Combyeo Kit */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💰 #1
                           </Badge>
                           <Badge className="bg-red-100 text-red-800 px-4 py-2 font-bold">
@@ -1097,7 +1097,7 @@ export default function ArnesesSeguridadArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Combyeo Arnés de Seguridad con Cuerda Doble y Gancho
                         </h3>
 
@@ -1123,8 +1123,8 @@ export default function ArnesesSeguridadArticle() {
                           es el <b>precio accesible</b>, pero presenta serias deficiencias en certificación.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas Percibidas
@@ -1145,7 +1145,7 @@ export default function ArnesesSeguridadArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Deficiencias Críticas
@@ -1171,7 +1171,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-red-700 mb-2">⚠️ Rango: ~$400-500 MXN</p>
@@ -1181,7 +1181,7 @@ export default function ArnesesSeguridadArticle() {
                               href="https://www.mercadolibre.com.mx/arnes-seguridad-contra-caidas-con-cuerda-doble-y-gancho-3-m/p/MLM53473765"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1191,13 +1191,13 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Producto #2 - Jyrsa JYR-10A */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #2
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -1205,7 +1205,7 @@ export default function ArnesesSeguridadArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Jyrsa JYR-10A (1 Anillo Dorsal)
                         </h3>
 
@@ -1230,7 +1230,7 @@ export default function ArnesesSeguridadArticle() {
                           una función esencial: la detención de caídas.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Certificaciones Transparentes
@@ -1258,8 +1258,8 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1284,7 +1284,7 @@ export default function ArnesesSeguridadArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1302,7 +1302,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1312,7 +1312,7 @@ export default function ArnesesSeguridadArticle() {
                               href="https://www.mercadolibre.com.mx/arnes-con-anillo-d-espalda-trabajo-alturas-jyrsa-jyr-10a-verde-alta-visibilidad/p/MLM43738470"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1322,13 +1322,13 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Producto #3 - Truper 14434 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #3
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1336,7 +1336,7 @@ export default function ArnesesSeguridadArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Truper 14434 (5 Anillos)
                         </h3>
 
@@ -1361,7 +1361,7 @@ export default function ArnesesSeguridadArticle() {
                           puntos de anclaje lo convierten en una herramienta multifuncional.
                         </p>
 
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl mb-6 border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-purple-300">
                           <h4 className="font-bold text-purple-800 mb-3 text-lg flex items-center gap-2">
                             <Package className="h-6 w-6" />
                             Máxima Multifuncionalidad
@@ -1383,8 +1383,8 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1409,7 +1409,7 @@ export default function ArnesesSeguridadArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1427,7 +1427,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1437,7 +1437,7 @@ export default function ArnesesSeguridadArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-833998590-arnes-cuerpo-completo-5-anillos-truper-14434-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1447,13 +1447,13 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Producto #4 - LICA-KIT */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             📦 #4
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1461,7 +1461,7 @@ export default function ArnesesSeguridadArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           LICA-KIT (Arnés, Amortiguador y Punto Fijo)
                         </h3>
 
@@ -1486,7 +1486,7 @@ export default function ArnesesSeguridadArticle() {
                           incluye un arnés certificado, una línea de vida con amortiguador de impacto y un punto de anclaje.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <CheckCircle className="h-6 w-6" />
                             Certificaciones Múltiples
@@ -1508,8 +1508,8 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1534,7 +1534,7 @@ export default function ArnesesSeguridadArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1552,7 +1552,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1562,7 +1562,7 @@ export default function ArnesesSeguridadArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-594033466-lica-kit-kit-de-arnes-amortiguador-y-punto-fijo-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1572,13 +1572,13 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Producto #5 - MSA V-Form */}
                       <motion.div 
-                        className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-3xl shadow-2xl border-2 border-indigo-200"
+                        className="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-indigo-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-indigo-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-indigo-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             👑 #5
                           </Badge>
                           <Badge className="bg-indigo-100 text-indigo-800 px-4 py-2 font-bold">
@@ -1586,7 +1586,7 @@ export default function ArnesesSeguridadArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           MSA V-Form (3 Anillos)
                         </h3>
 
@@ -1612,7 +1612,7 @@ export default function ArnesesSeguridadArticle() {
                           posicionamiento de trabajo.
                         </p>
 
-                        <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl mb-6 border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-orange-300">
                           <h4 className="font-bold text-orange-800 mb-3 text-lg flex items-center gap-2">
                             <TrendingUp className="h-6 w-6" />
                             Diseño Revolucionario RaceFORM
@@ -1634,8 +1634,8 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-indigo-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-indigo-200">
                             <h4 className="font-bold text-indigo-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1664,7 +1664,7 @@ export default function ArnesesSeguridadArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1682,7 +1682,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-xl border-2 border-indigo-300">
+                        <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-indigo-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-indigo-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1692,7 +1692,7 @@ export default function ArnesesSeguridadArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-1663193802-arnes-v-form-msa-argolla-d-en-espalda-y-cadera-contra-caidas-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1702,13 +1702,13 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Producto #6 - Warthog Safety */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💪 #6
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1716,7 +1716,7 @@ export default function ArnesesSeguridadArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Warthog Safety Arnés 5 Puntos de Ajuste
                         </h3>
 
@@ -1741,7 +1741,7 @@ export default function ArnesesSeguridadArticle() {
                           descripciones en línea son inconsistentes, el modelo más completo ofrece cinco anillos "D".
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Certificación ANSI
@@ -1761,8 +1761,8 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1787,7 +1787,7 @@ export default function ArnesesSeguridadArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1805,7 +1805,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1815,7 +1815,7 @@ export default function ArnesesSeguridadArticle() {
                               href="https://www.mercadolibre.com.mx/arnes-seguridad-anti-caidas-warthog-safety-5-puntos-ajuste-color-verdenegro/p/MLM35606995"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1826,9 +1826,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1844,9 +1844,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1858,22 +1858,22 @@ export default function ArnesesSeguridadArticle() {
                     <div className="space-y-8">
                       {/* Paso 1 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             1
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-3">Diagnostica tu Riesgo</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">Diagnostica tu Riesgo</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               El punto de partida NO es el catálogo de productos, sino un <b className="text-blue-700">análisis de tu entorno 
                               de trabajo</b>. Define con precisión los peligros a los que te enfrentas diariamente.
                             </p>
-                            <div className="bg-blue-50 p-6 rounded-xl">
+                            <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-blue-800 mb-3">¿Qué Tareas Realizarás?</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -1896,17 +1896,17 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Paso 2 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             2
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-3">Verifica las Certificaciones</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-3">Verifica las Certificaciones</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Esta es <b className="text-green-700">LA DECISIÓN MÁS CRÍTICA</b>. Un arnés sin certificaciones verificables 
                               no solo te expone a riesgos legales, sino que pone en peligro tu vida.
@@ -1935,24 +1935,24 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Paso 3 - Domina tu Talla */}
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg border-4 border-purple-400"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-4 border-purple-400"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             3
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-purple-900 mb-3">Domina tu Talla y Ajuste 🎯</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-3">Domina tu Talla y Ajuste 🎯</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               <b className="bg-purple-200 px-2 py-1 rounded">Un arnés mal ajustado puede ser TAN PELIGROSO</b> como no 
                               llevarlo. Puede causar lesiones graves durante una caída o permitir que el trabajador se deslice fuera.
                             </p>
 
                             <div className="space-y-4">
-                              <div className="bg-white p-6 rounded-xl border-2 border-purple-200">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                                 <h4 className="font-bold text-purple-900 mb-3 text-lg">📏 Procedimiento de Ajuste Correcto (5 Pasos)</h4>
                                 <ol className="space-y-3 text-gray-700">
                                   <li className="flex items-start gap-3">
@@ -1978,7 +1978,7 @@ export default function ArnesesSeguridadArticle() {
                                 </ol>
                               </div>
 
-                              <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-4 border-yellow-400">
+                              <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-yellow-400">
                                 <h4 className="font-bold text-yellow-900 text-lg mb-2">⚠️ Regla de Oro del Tallaje</h4>
                                 <p className="text-gray-800 font-semibold">
                                   Si tus medidas están entre dos tallas, <b className="bg-yellow-300 px-2 py-1 rounded">SIEMPRE elige la 
@@ -1993,24 +1993,24 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Paso 4 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-orange-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-orange-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             4
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-orange-900 mb-3">Inspección y Mantenimiento</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-3">Inspección y Mantenimiento</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Un arnés es un equipo que <b className="text-orange-700">se degrada con el uso y el tiempo</b>. Un programa 
                               riguroso de inspección es un requisito legal y una práctica de seguridad indispensable.
                             </p>
                             
-                            <div className="grid md:grid-cols-2 gap-6">
-                              <div className="bg-orange-50 p-6 rounded-xl">
+                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                              <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl">
                                 <h4 className="font-bold text-orange-800 mb-3">🔍 Inspección Pre-Uso (Diaria)</h4>
                                 <ul className="space-y-2 text-sm text-gray-700">
                                   <li className="flex items-start gap-2">
@@ -2028,7 +2028,7 @@ export default function ArnesesSeguridadArticle() {
                                 </ul>
                               </div>
                               
-                              <div className="bg-orange-50 p-6 rounded-xl">
+                              <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl">
                                 <h4 className="font-bold text-orange-800 mb-3">📋 Inspección Formal (Anual)</h4>
                                 <p className="text-sm text-gray-700 mb-3">
                                   La <b>NOM-009-STPS-2011</b> exige que una persona competente realice una inspección formal y 
@@ -2057,24 +2057,24 @@ export default function ArnesesSeguridadArticle() {
 
                       {/* Paso 5 - TCO */}
                       <motion.div 
-                        className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-2xl shadow-2xl"
+                        className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-white text-indigo-600 rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-white text-indigo-600 rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             5
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-3">Considera el Costo Total de Propiedad (TCO)</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3">Considera el Costo Total de Propiedad (TCO)</h3>
                             <p className="leading-relaxed mb-6 text-lg">
                               No te dejes guiar únicamente por el precio de compra. <b>Un arnés económico de $400 MXN que necesita ser 
                               reemplazado cada seis meses</b> resulta, a largo plazo, mucho más costoso que un modelo certificado de 
                               $1,000 MXN que puede durar varios años.
                             </p>
                             
-                            <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
+                            <div className="bg-white/20 p-3 sm:p-4 md:p-6 rounded-xl backdrop-blur-sm">
                               <h4 className="font-bold text-xl mb-4">💰 Ejemplo de TCO Real</h4>
                               <div className="grid md:grid-cols-2 gap-4">
                                 <div className="bg-white/10 p-4 rounded-lg">
@@ -2109,9 +2109,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2129,7 +2129,7 @@ export default function ArnesesSeguridadArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -2149,7 +2149,7 @@ export default function ArnesesSeguridadArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -2161,9 +2161,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2173,7 +2173,7 @@ export default function ArnesesSeguridadArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -2194,8 +2194,8 @@ export default function ArnesesSeguridadArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor Certificado Básico</h3>
@@ -2205,7 +2205,7 @@ export default function ArnesesSeguridadArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Package className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor Versátil</h3>
@@ -2215,7 +2215,7 @@ export default function ArnesesSeguridadArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <Star className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor Premium</h3>
@@ -2228,13 +2228,13 @@ export default function ArnesesSeguridadArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <AlertTriangle className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Tu Decisión, Tu Seguridad</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Tu Decisión, Tu Seguridad</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Recuerda: <b>el arnés adecuado es aquel que te permite concentrarte plenamente en tu trabajo</b>, con la tranquilidad 
@@ -2247,11 +2247,11 @@ export default function ArnesesSeguridadArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-2xl border-2 border-yellow-400"
+                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-yellow-400"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál de estos arneses se convertirá en tu compañero de altura? 
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -2261,9 +2261,9 @@ export default function ArnesesSeguridadArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

@@ -182,7 +182,7 @@ export default function MantenimientoHerramientasArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {Array.from({ length: 80 }, (_, i) => (
@@ -213,7 +213,7 @@ export default function MantenimientoHerramientasArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -231,7 +231,7 @@ export default function MantenimientoHerramientasArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -240,7 +240,7 @@ export default function MantenimientoHerramientasArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -249,7 +249,7 @@ export default function MantenimientoHerramientasArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -298,18 +298,18 @@ export default function MantenimientoHerramientasArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-20">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               
               {/* Introducción con Estadísticas */}
               <motion.section
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-12"
+                className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                    <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-800 mb-4">
                       La Verdadera Amenaza para tu Inversión
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -318,9 +318,9 @@ export default function MantenimientoHerramientasArticle() {
                     </p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8 items-center mt-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 items-center mt-8">
                     <div>
-                      <h3 className="text-2xl font-bold text-orange-600 mb-4">El Costo Real del Downtime</h3>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 mb-4">El Costo Real del Downtime</h3>
                       <div className="space-y-4">
                         <div className="flex items-start gap-3 p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
                           <AlertTriangle className="h-6 w-6 text-red-500 flex-shrink-0 mt-0.5" />
@@ -356,7 +356,7 @@ export default function MantenimientoHerramientasArticle() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-200">
+                  <div className="mt-8 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-200">
                     <p className="text-center text-lg text-gray-800">
                       <strong className="text-blue-900">La buena noticia:</strong> La gran mayoría de estas fallas son 
                       <strong className="bg-blue-200 px-2 py-1 rounded mx-1">completamente prevenibles</strong> 
@@ -371,14 +371,14 @@ export default function MantenimientoHerramientasArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-12"
+                className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
               >
-                <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   Los 5 Errores Más Destructivos
                 </h2>
 
                 {/* Navegación de tabs */}
-                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <div className="flex flex-wrap justify-center gap-3 mb-4 sm:mb-6 md:mb-8">
                   {[
                     { id: 0, icon: '⚡', title: 'Extensiones' },
                     { id: 1, icon: '🧹', title: 'Limpieza' },
@@ -409,17 +409,17 @@ export default function MantenimientoHerramientasArticle() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white/95 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-2xl border border-white/50"
+                  className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* ERROR 1: EXTENSIONES */}
                   {activeTab === 0 && (
                     <div>
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0">
                           1
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                             Matar el Motor con la Extensión Eléctrica Equivocada
                           </h3>
                           <p className="text-gray-700 text-lg leading-relaxed">
@@ -430,7 +430,7 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6">
                         <h4 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
                           <Info className="h-5 w-5" />
                           La Física de la Falla
@@ -445,7 +445,7 @@ export default function MantenimientoHerramientasArticle() {
                       </div>
 
                       {/* Selector interactivo de amperaje */}
-                      <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+                      <div className="bg-gray-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-200">
                         <h4 className="font-bold text-gray-900 mb-4 text-lg">
                           🔍 Calculadora de Calibre de Extensión
                         </h4>
@@ -470,7 +470,7 @@ export default function MantenimientoHerramientasArticle() {
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
-                            className="bg-white p-6 rounded-lg shadow-inner"
+                            className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-inner"
                           >
                             <h5 className="font-bold text-green-900 mb-3 text-lg">
                               ✅ Recomendación de Calibre (AWG):
@@ -487,7 +487,7 @@ export default function MantenimientoHerramientasArticle() {
                         )}
                       </div>
 
-                      <div className="mt-6 p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-500">
+                      <div className="mt-6 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-500">
                         <p className="text-gray-800">
                           <strong className="text-yellow-800">💡 Tip Pro:</strong> Si la extensión está caliente al tacto después del uso, 
                           es de un calibre insuficiente. Usa un número AWG más bajo (cable más grueso) para esa aplicación.
@@ -500,11 +500,11 @@ export default function MantenimientoHerramientasArticle() {
                   {activeTab === 1 && (
                     <div>
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0">
                           2
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                             El Cáncer del Polvo: Ignorar la Limpieza Diaria
                           </h3>
                           <p className="text-gray-700 text-lg leading-relaxed">
@@ -514,7 +514,7 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+                      <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6">
                         <h4 className="font-bold text-red-900 mb-3 text-lg flex items-center gap-2">
                           <AlertTriangle className="h-5 w-5" />
                           El Enemigo Invisible: Polvo de Sílice
@@ -527,7 +527,7 @@ export default function MantenimientoHerramientasArticle() {
                       </div>
 
                       {/* Simulador visual de limpieza */}
-                      <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+                      <div className="bg-gray-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-200">
                         <h4 className="font-bold text-gray-900 mb-4 text-lg text-center">
                           🔍 Simulador Visual: Ventilas del Motor
                         </h4>
@@ -553,14 +553,14 @@ export default function MantenimientoHerramientasArticle() {
                           </p>
                           <button
                             onClick={() => setIsClean(!isClean)}
-                            className="mt-4 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+                            className="mt-4 px-4 sm:px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
                           >
                             {isClean ? '🔄 Simular Uso Diario' : '🧹 Limpiar Herramienta'}
                           </button>
                         </div>
                       </div>
 
-                      <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
+                      <div className="mt-6 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
                         <h4 className="font-bold text-green-900 mb-3 text-lg">✅ El Ritual de 60 Segundos</h4>
                         <ol className="space-y-2 text-gray-700">
                           <li className="flex items-start gap-2">
@@ -588,11 +588,11 @@ export default function MantenimientoHerramientasArticle() {
                   {activeTab === 2 && (
                     <div>
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0">
                           3
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                             "Más Fuerza Bruta": Forzar la Herramienta Más Allá de sus Límites
                           </h3>
                           <p className="text-gray-700 text-lg leading-relaxed">
@@ -603,7 +603,7 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-lg mb-6">
+                      <div className="bg-purple-50 border-l-4 border-purple-500 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6">
                         <h4 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
                           <Info className="h-5 w-5" />
                           El Baile del Torque y las RPM
@@ -627,7 +627,7 @@ export default function MantenimientoHerramientasArticle() {
                       </div>
 
                       {/* Mini-juego interactivo */}
-                      <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+                      <div className="bg-gray-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-200">
                         <h4 className="font-bold text-gray-900 mb-4 text-lg text-center">
                           🎯 Prueba de Conocimiento: ¿Qué herramienta usarías?
                         </h4>
@@ -643,7 +643,7 @@ export default function MantenimientoHerramientasArticle() {
                                 : 'border-gray-300 bg-white hover:border-orange-300'
                             }`}
                           >
-                            <p className="text-5xl mb-3">🔩</p>
+                            <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">🔩</p>
                             <p className="font-bold text-gray-900">Taladro Ligero (600W)</p>
                           </button>
                           <button
@@ -654,7 +654,7 @@ export default function MantenimientoHerramientasArticle() {
                                 : 'border-gray-300 bg-white hover:border-orange-300'
                             }`}
                           >
-                            <p className="text-5xl mb-3">🛠️</p>
+                            <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">🛠️</p>
                             <p className="font-bold text-gray-900">Rotomartillo SDS (1500W)</p>
                           </button>
                         </div>
@@ -678,7 +678,7 @@ export default function MantenimientoHerramientasArticle() {
                         )}
                       </div>
 
-                      <div className="mt-6 p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-500">
+                      <div className="mt-6 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-500">
                         <p className="text-gray-800">
                           <strong className="text-yellow-800">💡 Regla de Oro:</strong> "Deja que la herramienta haga el trabajo". 
                           Si el motor baja de tono o se vuelve más grave, reduce la presión inmediatamente. La velocidad viene de las RPM y 
@@ -692,11 +692,11 @@ export default function MantenimientoHerramientasArticle() {
                   {activeTab === 3 && (
                     <div>
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0">
                           4
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                             Ahorro que Sale Caro: Accesorios Incorrectos o de Baja Calidad
                           </h3>
                           <p className="text-gray-700 text-lg leading-relaxed">
@@ -707,7 +707,7 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+                      <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6">
                         <h4 className="font-bold text-red-900 mb-3 text-lg flex items-center gap-2">
                           <AlertTriangle className="h-5 w-5" />
                           El Peligro Mortal: Discos Dentados en Amoladoras
@@ -725,7 +725,7 @@ export default function MantenimientoHerramientasArticle() {
                       </div>
 
                       {/* Gráfico de comparación */}
-                      <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+                      <div className="bg-gray-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-200">
                         <h4 className="font-bold text-gray-900 mb-4 text-lg text-center">
                           📊 Impacto del Accesorio en el Rendimiento y Desgaste del Motor
                         </h4>
@@ -738,8 +738,8 @@ export default function MantenimientoHerramientasArticle() {
                         </p>
                       </div>
 
-                      <div className="mt-6 grid md:grid-cols-2 gap-6">
-                        <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
+                      <div className="mt-6 grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
                           <h5 className="font-bold text-green-900 mb-3">✅ Invierte en Calidad</h5>
                           <ul className="space-y-2 text-gray-700 text-sm">
                             <li className="flex items-start gap-2">
@@ -756,7 +756,7 @@ export default function MantenimientoHerramientasArticle() {
                             </li>
                           </ul>
                         </div>
-                        <div className="p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-500">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-500">
                           <h5 className="font-bold text-yellow-900 mb-3">💡 Tip Pro</h5>
                           <p className="text-gray-700 text-sm">
                             El sobreprecio pagado por un accesorio de calidad es una <strong>póliza de seguro barata</strong> contra 
@@ -771,11 +771,11 @@ export default function MantenimientoHerramientasArticle() {
                   {activeTab === 4 && (
                     <div>
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                        <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0">
                           5
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                             La Falla Anunciada: Olvidar el Mantenimiento Preventivo
                           </h3>
                           <p className="text-gray-700 text-lg leading-relaxed">
@@ -786,7 +786,7 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6">
                         <h4 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
                           <Info className="h-5 w-5" />
                           ¿Qué son las Escobillas de Carbón?
@@ -808,7 +808,7 @@ export default function MantenimientoHerramientasArticle() {
                       </div>
 
                       {/* Simulador de desgaste de escobillas */}
-                      <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+                      <div className="bg-gray-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-200">
                         <h4 className="font-bold text-gray-900 mb-4 text-lg text-center">
                           🔧 Simulador de Desgaste de Escobillas
                         </h4>
@@ -838,13 +838,13 @@ export default function MantenimientoHerramientasArticle() {
                           <div className="mt-6 flex justify-center gap-4">
                             <button
                               onClick={simulateWear}
-                              className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
+                              className="px-4 sm:px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
                             >
                               ⚙️ Simular Uso Diario
                             </button>
                             <button
                               onClick={replaceBrushes}
-                              className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+                              className="px-4 sm:px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
                             >
                               🔧 Reemplazar Escobillas
                             </button>
@@ -852,8 +852,8 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="mt-6 grid md:grid-cols-2 gap-6">
-                        <div className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border-l-4 border-purple-500">
+                      <div className="mt-6 grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border-l-4 border-purple-500">
                           <h5 className="font-bold text-purple-900 mb-3">📅 Frecuencia de Inspección</h5>
                           <ul className="space-y-2 text-gray-700 text-sm">
                             <li><strong>Uso profesional intensivo:</strong> Cada 3-6 meses</li>
@@ -861,7 +861,7 @@ export default function MantenimientoHerramientasArticle() {
                             <li><strong>Criterio de reemplazo:</strong> Menos de 5-6 mm de longitud</li>
                           </ul>
                         </div>
-                        <div className="p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
                           <h5 className="font-bold text-red-900 mb-3">⚠️ El Mito Brushless</h5>
                           <p className="text-gray-700 text-sm">
                             Las herramientas brushless (sin escobillas) no requieren cambio de carbones, pero NO son "libres de mantenimiento". 
@@ -879,17 +879,17 @@ export default function MantenimientoHerramientasArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mb-12"
+                className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
               >
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-8 md:p-10 shadow-2xl text-white">
-                  <h2 className="text-3xl font-bold text-center mb-4">
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl text-white">
+                  <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-center mb-4">
                     💰 Calcula tu Ahorro Potencial Anual
                   </h2>
-                  <p className="text-center text-orange-100 mb-8 max-w-2xl mx-auto">
+                  <p className="text-center text-orange-100 mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto">
                     Descubre cuánto dinero podrías estar perdiendo anualmente por fallas prematuras evitables
                   </p>
 
-                  <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                  <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 items-center">
                     <div className="space-y-6">
                       <div>
                         <label className="block font-semibold mb-2 text-orange-100">
@@ -918,13 +918,13 @@ export default function MantenimientoHerramientasArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-white rounded-2xl p-8 text-center shadow-xl">
+                    <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 text-center shadow-xl">
                       <p className="text-orange-600 font-semibold mb-2">Ahorro Anual Estimado</p>
                       <motion.p 
                         key={calculateSavings()}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        className="text-5xl font-bold text-green-600 mb-4"
+                        className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-green-600 mb-4"
                       >
                         ${calculateSavings()}
                       </motion.p>
@@ -946,37 +946,37 @@ export default function MantenimientoHerramientasArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-12 text-center"
+                className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 text-center"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold mb-6 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
                     Tu Profesionalismo se Refleja en tus Herramientas
                   </h2>
-                  <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
+                  <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-4 sm:mb-6 md:mb-8">
                     Cuidar tus herramientas no es solo una tarea de mantenimiento; es una <strong className="text-orange-600">inversión 
                     inteligente en tu negocio</strong> y una marca de tu profesionalismo. Una herramienta bien cuidada no solo te ahorra 
                     miles de pesos en reemplazos, sino que garantiza un trabajo de mayor calidad, más seguro y más eficiente.
                   </p>
 
-                  <div className="grid md:grid-cols-3 gap-6 mt-8">
-                    <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl">
-                      <div className="text-4xl mb-3">💰</div>
+                  <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                    <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl">
+                      <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">💰</div>
                       <h3 className="font-bold text-blue-900 mb-2">Ahorro Real</h3>
                       <p className="text-gray-700 text-sm">Reduce costos de reemplazo hasta un 80% con mantenimiento preventivo</p>
                     </div>
-                    <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
-                      <div className="text-4xl mb-3">⚡</div>
+                    <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
+                      <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">⚡</div>
                       <h3 className="font-bold text-green-900 mb-2">Mayor Productividad</h3>
                       <p className="text-gray-700 text-sm">Elimina el tiempo de inactividad por fallas inesperadas</p>
                     </div>
-                    <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
-                      <div className="text-4xl mb-3">🏆</div>
+                    <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                      <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🏆</div>
                       <h3 className="font-bold text-purple-900 mb-2">Imagen Profesional</h3>
                       <p className="text-gray-700 text-sm">Herramientas bien cuidadas demuestran seriedad y compromiso</p>
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl border-2 border-orange-300">
+                  <div className="mt-8 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl border-2 border-orange-300">
                     <p className="text-xl font-bold text-orange-900">
                       🎯 El poder de evitar fallas, reducir costos y maximizar la vida útil de tu equipo no está en manos del servicio técnico... 
                       <span className="text-orange-600"> está en TUS manos</span>.
@@ -990,12 +990,12 @@ export default function MantenimientoHerramientasArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="mb-12"
+                className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
               >
-                <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+                <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   📚 Artículos Relacionados
                 </h2>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
                   {relatedArticles.map((article, index) => (
                     <motion.div
                       key={article.id}
@@ -1003,7 +1003,7 @@ export default function MantenimientoHerramientasArticle() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.9 + index * 0.1 }}
                       whileHover={{ y: -5 }}
-                      className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all"
+                      className="bg-white rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all"
                     >
                       <Badge className={`mb-3 ${
                         index === 0 ? 'bg-blue-100 text-blue-800' :

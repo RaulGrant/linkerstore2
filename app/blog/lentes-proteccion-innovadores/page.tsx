@@ -133,7 +133,7 @@ export default function LentesProteccionArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema lentes/visión */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -216,7 +216,7 @@ export default function LentesProteccionArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ export default function LentesProteccionArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -243,7 +243,7 @@ export default function LentesProteccionArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-cyan-100 mb-8"
+                className="text-xl text-cyan-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -252,7 +252,7 @@ export default function LentesProteccionArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-cyan-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-cyan-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -302,19 +302,19 @@ export default function LentesProteccionArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-cyan-50 to-blue-50 border-l-8 border-cyan-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-cyan-50 to-blue-50 border-l-8 border-cyan-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -324,7 +324,7 @@ export default function LentesProteccionArticle() {
                           <Sparkles className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-cyan-900 mb-3">👓 La Revolución de la Protección Ocular</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-cyan-900 mb-3">👓 La Revolución de la Protección Ocular</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             Atrás quedaron los días en que la protección ocular era un simple pedazo de plástico incómodo y voluminoso. 
                             <strong className="text-cyan-600"> Hoy, los lentes de seguridad son una pieza de alta tecnología</strong>, 
@@ -346,14 +346,14 @@ export default function LentesProteccionArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Eye className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">¿Por Qué Esta Guía es Diferente?</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">¿Por Qué Esta Guía es Diferente?</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         No solo te mostraremos los productos mejor calificados en el mercado mexicano, sino que <b className="text-blue-700">decodificaremos 
@@ -364,9 +364,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* Guía de Características Clave */}
-                  <section id="caracteristicas-clave" className="mb-16">
+                  <section id="caracteristicas-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -376,7 +376,7 @@ export default function LentesProteccionArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -387,7 +387,7 @@ export default function LentesProteccionArticle() {
 
                     {/* Resistencia a Impactos ANSI Z87.1+ */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-red-500 mb-8"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-red-500 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 }}
@@ -395,7 +395,7 @@ export default function LentesProteccionArticle() {
                       <div className="flex items-start gap-4 mb-6">
                         <Shield className="h-10 w-10 text-red-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900">Resistencia a Impactos: El Estándar de Oro ANSI Z87.1+</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900">Resistencia a Impactos: El Estándar de Oro ANSI Z87.1+</h3>
                           <p className="text-gray-600 text-sm mt-1">La Certificación que Diferencia Vida o Muerte</p>
                         </div>
                       </div>
@@ -405,12 +405,12 @@ export default function LentesProteccionArticle() {
                         certificación garantiza que los lentes han superado rigurosas pruebas de laboratorio.
                       </p>
 
-                      <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl mb-6 border-2 border-red-300">
+                      <div className="bg-gradient-to-r from-red-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-red-300">
                         <h4 className="font-bold text-red-900 mb-3 text-lg flex items-center gap-2">
                           <AlertTriangle className="h-6 w-6" />
                           La Diferencia Crucial: Z87 vs Z87+
                         </h4>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
                           <div className="bg-white p-4 rounded-lg">
                             <p className="font-bold text-orange-800 mb-2">⚠️ Certificación Básica "Z87":</p>
                             <p className="text-sm text-gray-700">
@@ -439,7 +439,7 @@ export default function LentesProteccionArticle() {
 
                     {/* Tecnologías Avanzadas de la Mica */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-purple-500 mb-8"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-purple-500 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.6 }}
@@ -447,7 +447,7 @@ export default function LentesProteccionArticle() {
                       <div className="flex items-start gap-4 mb-6">
                         <Settings className="h-10 w-10 text-purple-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-purple-900">Tecnologías Avanzadas de la Mica</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900">Tecnologías Avanzadas de la Mica</h3>
                           <p className="text-gray-600 text-sm mt-1">Visión Clara y Duradera</p>
                         </div>
                       </div>
@@ -460,7 +460,7 @@ export default function LentesProteccionArticle() {
 
                       <div className="space-y-6">
                         {/* Antiempañante */}
-                        <div className="bg-blue-50 p-6 rounded-xl">
+                        <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <div className="flex items-center gap-3 mb-3">
                             <Droplets className="h-6 w-6 text-blue-600" />
                             <h4 className="font-bold text-blue-900 text-lg">Tratamiento Antiempañante (Anti-Fog)</h4>
@@ -482,7 +482,7 @@ export default function LentesProteccionArticle() {
                         </div>
 
                         {/* Antirayaduras */}
-                        <div className="bg-green-50 p-6 rounded-xl">
+                        <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <div className="flex items-center gap-3 mb-3">
                             <Shield className="h-6 w-6 text-green-600" />
                             <h4 className="font-bold text-green-900 text-lg">Tratamiento Antirayaduras (Anti-Scratch)</h4>
@@ -496,7 +496,7 @@ export default function LentesProteccionArticle() {
                         </div>
 
                         {/* Protección UV */}
-                        <div className="bg-yellow-50 p-6 rounded-xl">
+                        <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <div className="flex items-center gap-3 mb-3">
                             <Sun className="h-6 w-6 text-yellow-600" />
                             <h4 className="font-bold text-yellow-900 text-lg">Protección UV del 99.9%</h4>
@@ -519,14 +519,14 @@ export default function LentesProteccionArticle() {
 
                     {/* La Ciencia del Tinte */}
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-50 to-amber-50 p-8 rounded-2xl shadow-xl border-2 border-orange-300 mb-8"
+                      className="bg-gradient-to-r from-orange-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-orange-300 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7 }}
                     >
                       <div className="flex items-center gap-3 mb-6">
                         <Package className="h-8 w-8 text-orange-600" />
-                        <h3 className="text-2xl font-bold text-orange-900">La Ciencia del Tinte: Adaptación a Cada Entorno de Luz</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900">La Ciencia del Tinte: Adaptación a Cada Entorno de Luz</h3>
                       </div>
 
                       <p className="text-gray-700 mb-6 leading-relaxed">
@@ -536,7 +536,7 @@ export default function LentesProteccionArticle() {
                       </p>
 
                       {/* Selector de Tinte */}
-                      <div className="flex flex-wrap justify-center gap-4 mb-8">
+                      <div className="flex flex-wrap justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
                         <motion.button
                           onClick={() => setSelectedTint('claro')}
                           whileHover={{ scale: 1.05 }}
@@ -595,7 +595,7 @@ export default function LentesProteccionArticle() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
-                            className="bg-white p-6 rounded-xl"
+                            className="bg-white p-3 sm:p-4 md:p-6 rounded-xl"
                           >
                             <h4 className="font-bold text-gray-900 mb-3">💡 Micas Claras: Máxima Visibilidad Interior</h4>
                             <p className="text-gray-700 mb-3">
@@ -617,7 +617,7 @@ export default function LentesProteccionArticle() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
-                            className="bg-gradient-to-br from-gray-100 to-slate-100 p-6 rounded-xl"
+                            className="bg-gradient-to-br from-gray-100 to-slate-100 p-3 sm:p-4 md:p-6 rounded-xl"
                           >
                             <h4 className="font-bold text-gray-900 mb-3">😎 Micas Grises/Ahumadas: Protección Solar</h4>
                             <p className="text-gray-700 mb-3">
@@ -638,7 +638,7 @@ export default function LentesProteccionArticle() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
-                            className="bg-gradient-to-br from-yellow-100 to-amber-100 p-6 rounded-xl"
+                            className="bg-gradient-to-br from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl"
                           >
                             <h4 className="font-bold text-amber-900 mb-3">🌅 Micas Ámbar/Amarillas: Máximo Contraste</h4>
                             <p className="text-gray-700 mb-3">
@@ -660,7 +660,7 @@ export default function LentesProteccionArticle() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
-                            className="bg-gradient-to-br from-purple-100 to-indigo-100 p-6 rounded-xl border-2 border-purple-400"
+                            className="bg-gradient-to-br from-purple-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-400"
                           >
                             <h4 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
                               <Sparkles className="h-6 w-6" />
@@ -698,14 +698,14 @@ export default function LentesProteccionArticle() {
 
                     {/* Ergonomía y Comodidad */}
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl shadow-xl border-2 border-green-300"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-green-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.8 }}
                     >
                       <div className="flex items-center gap-3 mb-6">
                         <TrendingUp className="h-8 w-8 text-green-600" />
-                        <h3 className="text-2xl font-bold text-green-900">Ergonomía y Comodidad: La Clave para el Uso Constante</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900">Ergonomía y Comodidad: La Clave para el Uso Constante</h3>
                       </div>
 
                       <p className="text-gray-700 mb-6 leading-relaxed">
@@ -714,7 +714,7 @@ export default function LentesProteccionArticle() {
                         de herramientas debido a que son incómodos.
                       </p>
 
-                      <div className="bg-white p-6 rounded-xl mb-6">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                         <h4 className="font-bold text-green-800 mb-4">🔗 El Círculo Virtuoso de la Protección</h4>
                         <div className="space-y-3">
                           <div className="flex items-start gap-3">
@@ -746,7 +746,7 @@ export default function LentesProteccionArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-300">
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                         <h4 className="font-bold text-blue-900 mb-3 flex items-center gap-2">
                           <Zap className="h-6 w-6" />
                           Innovación: Tecnología de Difusión de Presión (PDT)
@@ -762,9 +762,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* Top 6 Productos Destacados */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -775,7 +775,7 @@ export default function LentesProteccionArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -795,13 +795,13 @@ export default function LentesProteccionArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - Kleenguard Nemesis V30 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -809,7 +809,7 @@ export default function LentesProteccionArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Kleenguard Nemesis V30 (Mica Ahumada/Gris)
                         </h3>
 
@@ -835,8 +835,8 @@ export default function LentesProteccionArticle() {
                           estética moderna</b> elimina la apariencia de equipo de seguridad tradicional, lo que fomenta un uso constante.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -861,7 +861,7 @@ export default function LentesProteccionArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -879,7 +879,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-2 border-yellow-300">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-yellow-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -889,7 +889,7 @@ export default function LentesProteccionArticle() {
                               href="https://www.mercadolibre.com.mx/gafas-de-seguridad-kleenguard-v30-nemesis-14481/p/MLM2022204992"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -899,13 +899,13 @@ export default function LentesProteccionArticle() {
 
                       {/* Producto #2 - Milwaukee */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-3xl shadow-2xl border-2 border-red-200"
+                        className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-red-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-red-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-red-100 text-red-800 px-4 py-2 font-bold">
@@ -913,7 +913,7 @@ export default function LentesProteccionArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Milwaukee Lentes de Seguridad Antirayaduras y Antiempañantes (Claros)
                         </h3>
 
@@ -939,7 +939,7 @@ export default function LentesProteccionArticle() {
                           trabajo, y un <b className="bg-red-100 px-2 py-1 rounded">tratamiento antiempañante eficaz</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Doble Certificación
@@ -950,8 +950,8 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-red-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -976,7 +976,7 @@ export default function LentesProteccionArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -994,7 +994,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-red-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1004,7 +1004,7 @@ export default function LentesProteccionArticle() {
                               href="https://www.mercadolibre.com.mx/lentes-seguridad-claras-antirayas-milwaukee-48-73-2010/p/MLM27892719"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1014,13 +1014,13 @@ export default function LentesProteccionArticle() {
 
                       {/* Producto #3 - 3M SecureFit */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1028,7 +1028,7 @@ export default function LentesProteccionArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           3M SecureFit Serie 400 con Recubrimiento Scotchgard
                         </h3>
 
@@ -1054,7 +1054,7 @@ export default function LentesProteccionArticle() {
                           recubrimiento antiempañante Scotchgard™</b>, el resultado es un par de lentes ultraligeros con visión clara durante todo el día.
                         </p>
 
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl mb-6 border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-purple-300">
                           <h4 className="font-bold text-purple-800 mb-3 text-lg flex items-center gap-2">
                             <Sparkles className="h-6 w-6" />
                             Tecnología de Difusión de Presión (PDT)
@@ -1066,8 +1066,8 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1092,7 +1092,7 @@ export default function LentesProteccionArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1110,7 +1110,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Amazon México</p>
@@ -1120,7 +1120,7 @@ export default function LentesProteccionArticle() {
                               href="https://www.amazon.com.mx/3M-SecureFit-400-Safety-Glasses/dp/B00AZ8B57S"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Amazon →
                             </a>
@@ -1130,13 +1130,13 @@ export default function LentesProteccionArticle() {
 
                       {/* Producto #4 - Hexarmor VS250 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             ⭐ #4
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1144,7 +1144,7 @@ export default function LentesProteccionArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Hexarmor VS250 con Micas Fotocromáticas (Variomatic)
                         </h3>
 
@@ -1170,7 +1170,7 @@ export default function LentesProteccionArticle() {
                           solución única para cualquier condición de luz</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl mb-6 border-2 border-yellow-400">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-yellow-400">
                           <h4 className="font-bold text-yellow-900 mb-3 text-lg flex items-center gap-2">
                             <Sun className="h-6 w-6" />
                             Tecnología Fotocromática Inteligente
@@ -1193,7 +1193,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Recubrimiento Premium TruShield®
@@ -1204,8 +1204,8 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1230,7 +1230,7 @@ export default function LentesProteccionArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1248,7 +1248,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1258,7 +1258,7 @@ export default function LentesProteccionArticle() {
                               href="https://www.mercadolibre.com.mx/lentes-de-seguridad-fotocromaticos"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1268,13 +1268,13 @@ export default function LentesProteccionArticle() {
 
                       {/* Producto #5 - Truper Sobrelente */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💰 #5
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -1282,7 +1282,7 @@ export default function LentesProteccionArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Truper Sobrelente de Seguridad Antiempaño (Modelo 101954)
                         </h3>
 
@@ -1309,7 +1309,7 @@ export default function LentesProteccionArticle() {
                           tratamiento antiempañante</b>, resolviendo dos problemas comunes a un costo inmejorable.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Glasses className="h-6 w-6" />
                             Diseño OTG (Over-The-Glass)
@@ -1321,8 +1321,8 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1347,7 +1347,7 @@ export default function LentesProteccionArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1365,7 +1365,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1375,7 +1375,7 @@ export default function LentesProteccionArticle() {
                               href="https://www.mercadolibre.com.mx/lentes-de-seguridad-mica-transparente-truper-14252/p/MLM39874983"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1385,13 +1385,13 @@ export default function LentesProteccionArticle() {
 
                       {/* Producto #6 - Bollé Safety SWIFT OTG */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🌱 #6
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1399,7 +1399,7 @@ export default function LentesProteccionArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Bollé Safety SWIFT OTG con Recubrimiento PLATINUM Lite
                         </h3>
 
@@ -1425,7 +1425,7 @@ export default function LentesProteccionArticle() {
                           <b className="bg-teal-100 px-2 py-1 rounded">PLATINUM Lite</b>, una tecnología de élite.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-400">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-400">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <Wind className="h-6 w-6" />
                             Compromiso con la Sostenibilidad
@@ -1442,8 +1442,8 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1468,7 +1468,7 @@ export default function LentesProteccionArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1486,7 +1486,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1496,7 +1496,7 @@ export default function LentesProteccionArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-3382861608-sobre-lente-de-seguridad-bolle-swift-otg-antiempano-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1507,9 +1507,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1525,9 +1525,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1539,16 +1539,16 @@ export default function LentesProteccionArticle() {
                     <div className="space-y-8">
                       {/* 3 Consejos Clave */}
                       <motion.div 
-                        className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                       >
-                        <h3 className="text-2xl font-bold text-green-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 text-center">
                           💡 3 Consejos Clave para Acertar
                         </h3>
                         
                         <div className="space-y-6">
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <div className="flex items-start gap-4">
                               <div className="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">
                                 1
@@ -1566,7 +1566,7 @@ export default function LentesProteccionArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <div className="flex items-start gap-4">
                               <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">
                                 2
@@ -1584,7 +1584,7 @@ export default function LentesProteccionArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <div className="flex items-start gap-4">
                               <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0 text-xl">
                                 3
@@ -1606,16 +1606,16 @@ export default function LentesProteccionArticle() {
 
                       {/* 3 Errores Comunes */}
                       <motion.div 
-                        className="bg-gradient-to-r from-red-50 to-pink-50 p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
+                        className="bg-gradient-to-r from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">
                           ❌ 3 Errores Comunes a Evitar
                         </h3>
                         
                         <div className="space-y-6">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <div className="flex items-start gap-4">
                               <AlertTriangle className="h-8 w-8 text-red-600 flex-shrink-0" />
                               <div>
@@ -1631,7 +1631,7 @@ export default function LentesProteccionArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                             <div className="flex items-start gap-4">
                               <Eye className="h-8 w-8 text-orange-600 flex-shrink-0" />
                               <div>
@@ -1646,7 +1646,7 @@ export default function LentesProteccionArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                             <div className="flex items-start gap-4">
                               <Droplets className="h-8 w-8 text-yellow-600 flex-shrink-0" />
                               <div>
@@ -1665,16 +1665,16 @@ export default function LentesProteccionArticle() {
 
                       {/* Mantenimiento */}
                       <motion.div 
-                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg border border-indigo-200"
+                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                       >
                         <div className="flex items-center gap-3 mb-6">
                           <Settings className="h-8 w-8 text-indigo-600" />
-                          <h3 className="text-2xl font-bold text-indigo-900">🧼 Mantenimiento: Prolonga la Vida de tus Lentes</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900">🧼 Mantenimiento: Prolonga la Vida de tus Lentes</h3>
                         </div>
                         
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <p className="text-gray-700 leading-relaxed mb-4">
                             Para maximizar la vida útil de tus lentes de protección y asegurar que sus tecnologías funcionen como el primer día, 
                             un <b className="text-indigo-700">cuidado adecuado es fundamental</b>.
@@ -1725,9 +1725,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1745,7 +1745,7 @@ export default function LentesProteccionArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-cyan-50 hover:from-cyan-50 hover:to-blue-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-cyan-50 hover:from-cyan-50 hover:to-blue-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -1765,7 +1765,7 @@ export default function LentesProteccionArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -1777,9 +1777,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1789,7 +1789,7 @@ export default function LentesProteccionArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -1806,8 +1806,8 @@ export default function LentesProteccionArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <Sparkles className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Opción Más Innovadora</h3>
@@ -1817,7 +1817,7 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Star className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor Relación Calidad-Precio</h3>
@@ -1827,7 +1827,7 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-cyan-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-cyan-200">
                           <div className="text-center mb-4">
                             <Shield className="h-10 w-10 mx-auto text-cyan-600 mb-2" />
                             <h3 className="text-lg font-bold text-cyan-900">Mejor Tecnología</h3>
@@ -1840,13 +1840,13 @@ export default function LentesProteccionArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Eye className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Tu Visión, Tu Futuro</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Tu Visión, Tu Futuro</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Tus ojos son <b>irreemplazables</b>. No hay segundas oportunidades cuando se trata de lesiones oculares. Proteger tu 
@@ -1858,11 +1858,11 @@ export default function LentesProteccionArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-2xl border-2 border-yellow-400"
+                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-yellow-400"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál de estos lentes innovadores elegirás? 
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -1872,9 +1872,9 @@ export default function LentesProteccionArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

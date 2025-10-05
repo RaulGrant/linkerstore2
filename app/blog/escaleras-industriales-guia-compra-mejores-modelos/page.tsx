@@ -134,7 +134,7 @@ export default function EscalerasIndustrialesArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-yellow-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-yellow-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema industrial/construcción */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -218,7 +218,7 @@ export default function EscalerasIndustrialesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -236,7 +236,7 @@ export default function EscalerasIndustrialesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -245,7 +245,7 @@ export default function EscalerasIndustrialesArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -254,7 +254,7 @@ export default function EscalerasIndustrialesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -304,19 +304,19 @@ export default function EscalerasIndustrialesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -326,7 +326,7 @@ export default function EscalerasIndustrialesArticle() {
                           <AlertTriangle className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900 mb-3">⚠️ Las Caídas: El Enemigo Silencioso</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">⚠️ Las Caídas: El Enemigo Silencioso</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             En México, <strong className="text-red-600">las caídas representan el 27% de todos los accidentes de trabajo</strong>, 
                             y un error tan simple como usar una escalera mal instalada o inadecuada es una de las causas principales en sectores 
@@ -349,14 +349,14 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Tu Guía Definitiva para 2025</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Tu Guía Definitiva para 2025</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Esta guía definitiva te ayudará a <b>invertir en la herramienta adecuada</b>, garantizando que cada 
@@ -367,9 +367,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Material de Fabricación */}
-                  <section id="material-fabricacion" className="mb-16">
+                  <section id="material-fabricacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -379,7 +379,7 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -388,7 +388,7 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.p>
 
                     {/* Selector de Material */}
-                    <div className="flex justify-center gap-4 mb-10">
+                    <div className="flex justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.button
                         onClick={() => setSelectedMaterial('fibra')}
                         whileHover={{ scale: 1.05 }}
@@ -423,7 +423,7 @@ export default function EscalerasIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border-2 border-green-300"
+                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-green-300"
                         >
                           <h4 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
                             <Shield className="h-6 w-6" />
@@ -436,8 +436,8 @@ export default function EscalerasIndustrialesArticle() {
                             profesional que trabaje cerca de instalaciones, cableado o fuentes de energía potenciales.
                           </p>
 
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-xl">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-green-800 mb-3">✅ Ventajas</h5>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -459,7 +459,7 @@ export default function EscalerasIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-400">
                               <h5 className="font-bold text-red-800 mb-3">❌ Desventajas</h5>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -488,7 +488,7 @@ export default function EscalerasIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-blue-300"
                         >
                           <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
                             <Layers className="h-6 w-6" />
@@ -501,8 +501,8 @@ export default function EscalerasIndustrialesArticle() {
                             lo convierte en una opción popular para tareas de mantenimiento general.
                           </p>
 
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-xl">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-blue-800 mb-3">✅ Ventajas</h5>
                               <ul className="space-y-2 text-sm text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -524,7 +524,7 @@ export default function EscalerasIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-400">
                               <h5 className="font-bold text-red-800 mb-3">❌ Desventaja Crítica</h5>
                               <div className="bg-red-100 p-4 rounded-lg">
                                 <p className="text-red-900 font-bold text-center mb-2">
@@ -550,9 +550,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Tipología de Escaleras */}
-                  <section id="tipologia-escaleras" className="mb-16">
+                  <section id="tipologia-escaleras" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -562,7 +562,7 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -573,17 +573,17 @@ export default function EscalerasIndustrialesArticle() {
                     <div className="space-y-8">
                       {/* Escaleras de Tijera */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-green-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4 mb-4">
                           <div className="bg-green-500 rounded-xl p-3 flex-shrink-0">
-                            <span className="text-white text-2xl">🔺</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🔺</span>
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-green-900 mb-2">Escaleras de Tijera (Autosoportables)</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-2">Escaleras de Tijera (Autosoportables)</h3>
                             <p className="text-gray-600 text-sm">Diseño en forma de "A" - No requieren superficie vertical de apoyo</p>
                           </div>
                         </div>
@@ -594,7 +594,7 @@ export default function EscalerasIndustrialesArticle() {
                           Son comunes en almacenes, mantenimiento eléctrico y construcción general.
                         </p>
 
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">🔧 Elementos de Seguridad Clave:</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -615,17 +615,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Escaleras de Extensión */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-blue-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-start gap-4 mb-4">
                           <div className="bg-blue-500 rounded-xl p-3 flex-shrink-0">
-                            <span className="text-white text-2xl">📏</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">📏</span>
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-blue-900 mb-2">Escaleras de Extensión</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-2">Escaleras de Extensión</h3>
                             <p className="text-gray-600 text-sm">Dos o más secciones deslizantes - Para grandes alturas</p>
                           </div>
                         </div>
@@ -636,7 +636,7 @@ export default function EscalerasIndustrialesArticle() {
                           Son indispensables para acceder a tejados, fachadas o postes de servicios públicos.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-6 rounded-xl">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-yellow-900 mb-3">⚠️ Reglas de Seguridad Fundamentales:</h4>
                           <div className="space-y-4">
                             <div className="bg-white p-4 rounded-lg">
@@ -657,17 +657,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Escaleras Multipropósito */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-purple-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-start gap-4 mb-4">
                           <div className="bg-purple-500 rounded-xl p-3 flex-shrink-0">
-                            <span className="text-white text-2xl">🔄</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🔄</span>
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-purple-900 mb-2">Escaleras Multipropósito o Articuladas</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-2">Escaleras Multipropósito o Articuladas</h3>
                             <p className="text-gray-600 text-sm">La solución más versátil del mercado</p>
                           </div>
                         </div>
@@ -678,7 +678,7 @@ export default function EscalerasIndustrialesArticle() {
                           e incluso como base para andamios.
                         </p>
 
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-purple-800 mb-3">🎯 Configuraciones Posibles:</h4>
                           <div className="grid md:grid-cols-2 gap-4">
                             <div className="bg-purple-50 p-3 rounded-lg">
@@ -705,17 +705,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Escaleras con Plataforma */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-300"
+                        className="bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-orange-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8 }}
                       >
                         <div className="flex items-start gap-4 mb-4">
                           <div className="bg-orange-500 rounded-xl p-3 flex-shrink-0">
-                            <span className="text-white text-2xl">🛡️</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🛡️</span>
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-orange-900 mb-2">Escaleras con Plataforma</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-2">Escaleras con Plataforma</h3>
                             <p className="text-gray-600 text-sm">Máxima estabilidad y seguridad para tareas prolongadas</p>
                           </div>
                         </div>
@@ -726,7 +726,7 @@ export default function EscalerasIndustrialesArticle() {
                           trabajar cómodamente con ambas manos libres y moverse en 360 grados.
                         </p>
 
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-orange-800 mb-3">🎯 Perfectas para:</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
                             <li className="flex items-start gap-2">
@@ -752,9 +752,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Capacidad de Carga */}
-                  <section id="capacidad-carga" className="mb-16">
+                  <section id="capacidad-carga" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -764,7 +764,7 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -774,18 +774,18 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300 mb-8"
+                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.5 }}
                     >
-                      <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6 text-center">
                         📋 Desglose de Tipos de Servicio (Norma ANSI)
                       </h3>
 
                       <div className="space-y-4">
                         {/* Tipo III */}
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-gray-400">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-gray-400">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-gray-800">Tipo III - Servicio Ligero</h4>
                             <Badge className="bg-gray-500 text-white">200 lbs / 90 kg</Badge>
@@ -796,7 +796,7 @@ export default function EscalerasIndustrialesArticle() {
                         </div>
 
                         {/* Tipo II */}
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-400">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-400">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-yellow-800">Tipo II - Servicio Medio</h4>
                             <Badge className="bg-yellow-500 text-white">225 lbs / 102 kg</Badge>
@@ -807,7 +807,7 @@ export default function EscalerasIndustrialesArticle() {
                         </div>
 
                         {/* Tipo I */}
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-blue-400">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-blue-400">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-blue-800">Tipo I - Servicio Pesado</h4>
                             <Badge className="bg-blue-500 text-white">250 lbs / 113 kg</Badge>
@@ -818,7 +818,7 @@ export default function EscalerasIndustrialesArticle() {
                         </div>
 
                         {/* Tipo IA */}
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-green-400">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-400">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-green-800">Tipo IA - Servicio Extra Pesado</h4>
                             <Badge className="bg-green-500 text-white">300 lbs / 136 kg</Badge>
@@ -829,7 +829,7 @@ export default function EscalerasIndustrialesArticle() {
                         </div>
 
                         {/* Tipo IAA */}
-                        <div className="bg-white p-6 rounded-xl border-l-4 border-purple-400">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-purple-400">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-purple-800">Tipo IAA - Servicio Especial</h4>
                             <Badge className="bg-purple-500 text-white">375 lbs / 170 kg</Badge>
@@ -843,7 +843,7 @@ export default function EscalerasIndustrialesArticle() {
 
                     {/* Advertencia importante */}
                     <motion.div 
-                      className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-8 rounded-2xl"
+                      className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-4 sm:p-6 md:p-8 rounded-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6 }}
@@ -869,9 +869,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Características de Seguridad */}
-                  <section id="caracteristicas-seguridad" className="mb-16">
+                  <section id="caracteristicas-seguridad" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -881,7 +881,7 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -889,17 +889,17 @@ export default function EscalerasIndustrialesArticle() {
                       <b className="text-red-600"> mejoran drásticamente la seguridad y funcionalidad</b> de una escalera industrial.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
                       {/* Zapatas Antiderrapantes */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-green-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">👟</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">👟</span>
                           </div>
                           <h3 className="text-xl font-bold text-green-900">Zapatas Antiderrapantes</h3>
                         </div>
@@ -912,14 +912,14 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Tirantes Antipellizcos */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-blue-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">🔒</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🔒</span>
                           </div>
                           <h3 className="text-xl font-bold text-blue-900">Tirantes Antipellizcos</h3>
                         </div>
@@ -932,14 +932,14 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Tapa Multifuncional */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-purple-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">🧰</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🧰</span>
                           </div>
                           <h3 className="text-xl font-bold text-purple-900">Tapa Multifuncional</h3>
                         </div>
@@ -952,14 +952,14 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Peldaños Antideslizantes */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border-2 border-orange-300"
+                        className="bg-gradient-to-br from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="bg-orange-500 rounded-lg p-3">
-                            <span className="text-white text-2xl">👣</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">👣</span>
                           </div>
                           <h3 className="text-xl font-bold text-orange-900">Peldaños Antideslizantes</h3>
                         </div>
@@ -972,14 +972,14 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Etiquetas de Seguridad */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl border-2 border-yellow-300 md:col-span-2"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300 md:col-span-2"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.9 }}
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-yellow-500 rounded-lg p-3 flex-shrink-0">
-                            <span className="text-white text-2xl">🏷️</span>
+                            <span className="text-white text-lg sm:text-xl md:text-2xl">🏷️</span>
                           </div>
                           <div>
                             <h3 className="text-xl font-bold text-yellow-900 mb-3">Etiquetas de Seguridad Legibles</h3>
@@ -998,9 +998,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Top 5 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1011,7 +1011,7 @@ export default function EscalerasIndustrialesArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -1031,13 +1031,13 @@ export default function EscalerasIndustrialesArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - Cuprum C-3217-06 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -1045,7 +1045,7 @@ export default function EscalerasIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Cuprum C-3217-06 - Escalera de Tijera de Fibra de Vidrio
                         </h3>
 
@@ -1070,8 +1070,8 @@ export default function EscalerasIndustrialesArticle() {
                           profesional con ranuras para herramientas y tirantes antipellizcos la hacen segura y funcional para el uso rudo diario.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1096,7 +1096,7 @@ export default function EscalerasIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1114,7 +1114,7 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1124,7 +1124,7 @@ export default function EscalerasIndustrialesArticle() {
                               href="https://listado.mercadolibre.com.mx/escalera-cuprum-c-3217-06"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1134,13 +1134,13 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Producto #2 - Truper 101906 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1148,7 +1148,7 @@ export default function EscalerasIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Truper 101906 - Escalera Multipropósito Plegable 16 Escalones
                         </h3>
 
@@ -1174,7 +1174,7 @@ export default function EscalerasIndustrialesArticle() {
                           enfrentan diversos desafíos de altura.
                         </p>
 
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl mb-6 border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-purple-300">
                           <h4 className="font-bold text-purple-800 mb-3 text-lg flex items-center gap-2">
                             <Package className="h-6 w-6" />
                             Configuraciones Múltiples
@@ -1195,8 +1195,8 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1221,7 +1221,7 @@ export default function EscalerasIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1239,7 +1239,7 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1249,7 +1249,7 @@ export default function EscalerasIndustrialesArticle() {
                               href="https://listado.mercadolibre.com.mx/escalera-truper-101906"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1259,13 +1259,13 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Producto #3 - Cuprum 494-24N */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1273,7 +1273,7 @@ export default function EscalerasIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Cuprum 494-24N - Escalera de Extensión de Aluminio 24 Peldaños
                         </h3>
 
@@ -1299,7 +1299,7 @@ export default function EscalerasIndustrialesArticle() {
                           peldaños en forma de "D" ofrecen una pisada más cómoda y segura durante ascensos prolongados.
                         </p>
 
-                        <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl mb-6 border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-orange-300">
                           <h4 className="font-bold text-orange-800 mb-3 text-lg flex items-center gap-2">
                             <Ruler className="h-6 w-6" />
                             Sistema de Extensión Profesional
@@ -1311,8 +1311,8 @@ export default function EscalerasIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1337,7 +1337,7 @@ export default function EscalerasIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1355,7 +1355,7 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1365,7 +1365,7 @@ export default function EscalerasIndustrialesArticle() {
                               href="https://listado.mercadolibre.com.mx/escalera-cuprum-494-24n"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1375,13 +1375,13 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Producto #4 - Werner con Plataforma */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
+                        className="bg-gradient-to-br from-orange-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-orange-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-orange-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🏆 #4
                           </Badge>
                           <Badge className="bg-orange-100 text-orange-800 px-4 py-2 font-bold">
@@ -1389,7 +1389,7 @@ export default function EscalerasIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Werner - Escalera de Fibra de Vidrio con Plataforma (Uso Pesado)
                         </h3>
 
@@ -1415,7 +1415,7 @@ export default function EscalerasIndustrialesArticle() {
                           cualquier labor donde el operario necesite usar ambas manos con total estabilidad.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Características de Seguridad Premium
@@ -1436,8 +1436,8 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-orange-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                             <h4 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1462,7 +1462,7 @@ export default function EscalerasIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1480,7 +1480,7 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-orange-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1490,7 +1490,7 @@ export default function EscalerasIndustrialesArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-921501835-escalera-de-fibra-de-vidrio-de-uso-pesado-183cm-werner-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1500,13 +1500,13 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Producto #5 - Convertible Económica */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💰 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1514,7 +1514,7 @@ export default function EscalerasIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Escalera Convertible Tipo Tijera/Extensión (Popular en Mercado Libre)
                         </h3>
 
@@ -1541,8 +1541,8 @@ export default function EscalerasIndustrialesArticle() {
                           no intensivos.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1567,7 +1567,7 @@ export default function EscalerasIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1585,7 +1585,7 @@ export default function EscalerasIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1595,7 +1595,7 @@ export default function EscalerasIndustrialesArticle() {
                               href="https://listado.mercadolibre.com.mx/escalera-convertible-tipo-tijera-extencion"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1606,9 +1606,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1624,9 +1624,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1638,17 +1638,17 @@ export default function EscalerasIndustrialesArticle() {
                     <div className="space-y-8">
                       {/* Consejo 1 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             1
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-red-900 mb-3">Priorizar la Seguridad Eléctrica</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">Priorizar la Seguridad Eléctrica</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Elegir <b className="text-red-600">SIEMPRE fibra de vidrio</b> si existe la más mínima posibilidad de trabajar 
                               cerca de cables o instalaciones eléctricas.
@@ -1664,17 +1664,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Consejo 2 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             2
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-3">Calcular la Altura de Alcance Real</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">Calcular la Altura de Alcance Real</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               La altura de la escalera <b className="text-blue-600">NO es la altura a la que se puede trabajar</b>.
                             </p>
@@ -1703,17 +1703,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Consejo 3 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             3
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-3">Verificar la Capacidad de Carga Total</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-3">Verificar la Capacidad de Carga Total</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               La capacidad de carga (en kg) debe soportar el peso del usuario <b className="text-green-600">MÁS el peso de 
                               todas las herramientas y materiales</b> que se utilizarán.
@@ -1729,17 +1729,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* 3 Errores Comunes */}
                       <motion.div 
-                        className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                        className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">
                           ❌ 3 Errores Comunes a Evitar
                         </h3>
                         
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <h4 className="font-bold text-red-900 mb-2">1. Usar Aluminio Cerca de Electricidad</h4>
                             <p className="text-gray-700">
                               Es el error más peligroso. El aluminio es un excelente conductor. <b className="text-red-600">Incluso si una línea 
@@ -1747,7 +1747,7 @@ export default function EscalerasIndustrialesArticle() {
                             </p>
                           </div>
                           
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                             <h4 className="font-bold text-orange-900 mb-2">2. Pararse en el Último Peldaño o en la Tapa Superior</h4>
                             <p className="text-gray-700">
                               La mayoría de las escaleras <b className="text-orange-600">prohíben explícitamente pararse en los dos peldaños superiores</b>. 
@@ -1755,7 +1755,7 @@ export default function EscalerasIndustrialesArticle() {
                             </p>
                           </div>
                           
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                             <h4 className="font-bold text-yellow-900 mb-2">3. Extender el Cuerpo Fuera de los Rieles ("Regla de la Hebilla")</h4>
                             <p className="text-gray-700">
                               Se debe mantener la <b className="text-yellow-600">hebilla del cinturón (el centro del cuerpo) entre los dos rieles laterales</b> 
@@ -1767,17 +1767,17 @@ export default function EscalerasIndustrialesArticle() {
 
                       {/* Mantenimiento Esencial */}
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-3 mb-6">
                           <Wrench className="h-8 w-8 text-purple-600" />
-                          <h3 className="text-2xl font-bold text-purple-900">🔧 Mantenimiento Esencial</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900">🔧 Mantenimiento Esencial</h3>
                         </div>
                         
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <p className="text-gray-700 leading-relaxed mb-4">
                             Una escalera industrial es una <b className="text-purple-700">inversión en seguridad que requiere cuidado constante</b>. 
                             La inspección visual antes de cada uso es obligatoria.
@@ -1810,9 +1810,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1830,7 +1830,7 @@ export default function EscalerasIndustrialesArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -1850,7 +1850,7 @@ export default function EscalerasIndustrialesArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -1862,9 +1862,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1874,7 +1874,7 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -1895,8 +1895,8 @@ export default function EscalerasIndustrialesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <Zap className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor para Electricistas</h3>
@@ -1906,7 +1906,7 @@ export default function EscalerasIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Package className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor Versátil</h3>
@@ -1916,7 +1916,7 @@ export default function EscalerasIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <Ruler className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor Gran Altura</h3>
@@ -1929,13 +1929,13 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Construction className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Analiza, Respeta y Elige Bien</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Analiza, Respeta y Elige Bien</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                 Es imperativo <b>analizar el entorno, respetar las normas de seguridad y elegir una herramienta</b> que brinde 
@@ -1948,11 +1948,11 @@ export default function EscalerasIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-2xl border-2 border-yellow-400"
+                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-yellow-400"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál de estas escaleras será tu compañera de altura? 
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -1962,9 +1962,9 @@ export default function EscalerasIndustrialesArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

@@ -137,7 +137,7 @@ export default function TermometrosIndustrialesArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema temperatura/medición */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -221,7 +221,7 @@ export default function TermometrosIndustrialesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ export default function TermometrosIndustrialesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -248,7 +248,7 @@ export default function TermometrosIndustrialesArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -257,7 +257,7 @@ export default function TermometrosIndustrialesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -307,19 +307,19 @@ export default function TermometrosIndustrialesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -329,7 +329,7 @@ export default function TermometrosIndustrialesArticle() {
                           <Flame className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-red-900 mb-3">🌡️ La Variable Crítica: Temperatura</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">🌡️ La Variable Crítica: Temperatura</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             En el corazón de cualquier proceso industrial exitoso —desde la <strong className="text-red-600">fundición de metales hasta la pasteurización de alimentos</strong>— 
                             se encuentra una variable crítica: la temperatura. Una medición precisa no es un lujo, es un <b className="bg-red-100 px-2 py-1 rounded">pilar fundamental de la eficiencia, 
@@ -351,14 +351,14 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Target className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Tu Guía para la Decisión Correcta</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Tu Guía para la Decisión Correcta</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Esta guía definitiva para 2025 te ayudará a comprender los <b>principios técnicos que definen el rendimiento</b> de un termómetro, 
@@ -369,9 +369,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Tipo de Medición */}
-                  <section id="tipo-medicion" className="mb-16">
+                  <section id="tipo-medicion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -381,7 +381,7 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -390,7 +390,7 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.p>
 
                     {/* Selector de tipo */}
-                    <div className="flex justify-center gap-4 mb-8">
+                    <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
                       <motion.button
                         onClick={() => setSelectedType('infrarrojo')}
                         whileHover={{ scale: 1.05 }}
@@ -437,14 +437,14 @@ export default function TermometrosIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                          className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         >
-                          <h3 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
                             <Radio className="h-8 w-8" />
                             Termómetros Infrarrojos (Pirómetros)
                           </h3>
                           
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-red-800 mb-3">⚡ Principio de Funcionamiento:</h4>
                             <p className="text-gray-700 mb-4">
                               Estos instrumentos operan midiendo la <b className="text-red-700">radiación infrarroja que emite la superficie de un objeto</b> 
@@ -452,8 +452,8 @@ export default function TermometrosIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Principales
@@ -478,7 +478,7 @@ export default function TermometrosIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-400">
                               <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Limitaciones
@@ -500,7 +500,7 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-orange-100 to-red-100 p-6 rounded-xl border-2 border-orange-300">
+                          <div className="bg-gradient-to-r from-orange-100 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                             <p className="text-orange-900 font-bold text-center text-lg">
                               💡 Ideal para: Inspecciones eléctricas, motores en funcionamiento, hornos industriales, superficies inaccesibles
                             </p>
@@ -514,14 +514,14 @@ export default function TermometrosIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         >
-                          <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
                             <Target className="h-8 w-8" />
                             Termómetros de Contacto (Termopares/Sondas RTD)
                           </h3>
                           
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-blue-800 mb-3">🔬 Principio de Funcionamiento:</h4>
                             <p className="text-gray-700 mb-4">
                               Requieren que su sensor entre en <b className="text-blue-700">contacto físico con el objeto</b> hasta alcanzar un equilibrio térmico. 
@@ -545,8 +545,8 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Principales
@@ -571,7 +571,7 @@ export default function TermometrosIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-400">
                               <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Limitaciones
@@ -593,7 +593,7 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                             <p className="text-blue-900 font-bold text-center text-lg">
                               💡 Ideal para: Laboratorios, control de calidad alimentaria/farmacéutica, medición de líquidos/gases, calibración
                             </p>
@@ -607,14 +607,14 @@ export default function TermometrosIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                          className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         >
-                          <h3 className="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
                             <Zap className="h-8 w-8" />
                             Termómetros Híbridos
                           </h3>
                           
-                          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-6 rounded-xl mb-6">
+                          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-yellow-900 mb-3 text-lg">🏆 Lo Mejor de Ambos Mundos</h4>
                             <p className="text-gray-800 leading-relaxed">
                               Estos equipos integran ambas tecnologías, ofreciendo una <b className="text-purple-700">pistola de medición infrarroja</b> junto 
@@ -623,7 +623,7 @@ export default function TermometrosIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-purple-800 mb-4">🎯 Funcionalidad Dual:</h4>
                             <div className="grid md:grid-cols-2 gap-4">
                               <div className="bg-purple-50 p-4 rounded-lg">
@@ -641,8 +641,8 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl">
+                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas
@@ -663,7 +663,7 @@ export default function TermometrosIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-400">
                               <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Consideraciones
@@ -681,7 +681,7 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                          <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                             <p className="text-purple-900 font-bold text-center text-lg">
                               💡 Ideal para: Técnicos HVAC, mantenimiento de edificios, servicios generales, electricistas, fontaneros
                             </p>
@@ -692,9 +692,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Especificaciones Críticas */}
-                  <section id="especificaciones" className="mb-16">
+                  <section id="especificaciones" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -704,17 +704,17 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       Estos tres parámetros definen las <b className="text-green-600">capacidades y limitaciones operativas</b> de un termómetro.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
                       {/* Rango */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-green-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-green-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -730,7 +730,7 @@ export default function TermometrosIndustrialesArticle() {
                           <p className="text-sm text-gray-700 mb-2">
                             <b>Ejemplo - Termopar Tipo K:</b>
                           </p>
-                          <p className="text-center text-2xl font-bold text-green-700">
+                          <p className="text-center text-lg sm:text-xl md:text-2xl font-bold text-green-700">
                             -200°C a +1372°C
                           </p>
                           <p className="text-xs text-gray-600 text-center mt-2">
@@ -741,7 +741,7 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Precisión */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-blue-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-blue-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
@@ -768,7 +768,7 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Resolución */}
                       <motion.div 
-                        className="bg-white p-6 rounded-xl shadow-lg border-2 border-purple-200"
+                        className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-purple-200"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
@@ -781,7 +781,7 @@ export default function TermometrosIndustrialesArticle() {
                           El <b className="text-purple-700">incremento más pequeño</b> que el termómetro puede mostrar en su pantalla.
                         </p>
                         <div className="bg-purple-50 p-4 rounded-lg">
-                          <p className="text-center text-3xl font-bold text-purple-700 mb-2">
+                          <p className="text-center text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-700 mb-2">
                             0.1°C
                           </p>
                           <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400 mt-3">
@@ -796,12 +796,12 @@ export default function TermometrosIndustrialesArticle() {
 
                     {/* Relación D:S */}
                     <motion.div 
-                      className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl shadow-xl border-2 border-orange-300"
+                      className="bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-orange-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6 }}
                     >
-                      <h3 className="text-2xl font-bold text-orange-900 mb-6 flex items-center gap-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-6 flex items-center gap-3">
                         <Activity className="h-8 w-8" />
                         🎯 Relación Distancia-Punto (D:S): El Factor Decisivo en Pirómetros
                       </h3>
@@ -809,8 +809,8 @@ export default function TermometrosIndustrialesArticle() {
                         Este es uno de los conceptos <b className="text-orange-700">más importantes y a menudo malinterpretados</b> en la termometría infrarroja.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-orange-800 mb-4 text-lg">📐 Definición:</h4>
                           <p className="text-gray-700 mb-4">
                             Describe la relación entre la <b>distancia a la que se encuentra el termómetro del objetivo</b> y el <b>diámetro del área circular</b> 
@@ -826,7 +826,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-red-800 mb-4 text-lg">⚠️ Importancia Práctica:</h4>
                           <p className="text-gray-700 mb-4">
                             Para medir con precisión un objeto pequeño, es necesario <b className="text-red-700">acercarse lo suficiente</b> para que el 
@@ -842,7 +842,7 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
                       </div>
 
-                      <div className="mt-6 bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-2 border-yellow-400">
+                      <div className="mt-6 bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-400">
                         <div className="flex items-start gap-3">
                           <Zap className="h-6 w-6 text-yellow-600 flex-shrink-0 mt-1" />
                           <div>
@@ -858,9 +858,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Emisividad */}
-                  <section id="emisividad" className="mb-16">
+                  <section id="emisividad" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -870,14 +870,14 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-yellow-50 to-amber-50 border-4 border-yellow-400 p-8 rounded-2xl mb-8"
+                      className="bg-gradient-to-br from-yellow-50 to-amber-50 border-4 border-yellow-400 p-4 sm:p-6 md:p-8 rounded-2xl mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
                       <div className="flex items-start gap-4">
                         <AlertTriangle className="h-10 w-10 text-yellow-600 flex-shrink-0" />
                         <div>
-                          <h3 className="text-2xl font-bold text-yellow-900 mb-3">⚠️ El Factor que Cambia Todo</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-3">⚠️ El Factor que Cambia Todo</h3>
                           <p className="text-gray-800 leading-relaxed">
                             La emisividad es una característica que <b className="text-yellow-700">distingue las herramientas profesionales de los modelos básicos</b>, 
                             siendo especialmente crítica para las mediciones infrarrojas. Sin entenderla y ajustarla correctamente, tus lecturas pueden estar 
@@ -887,10 +887,10 @@ export default function TermometrosIndustrialesArticle() {
                       </div>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
                       {/* Definición */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-2 border-purple-200"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-purple-200"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
@@ -924,7 +924,7 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Por qué es crucial */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-2xl shadow-xl border-2 border-red-300"
+                        className="bg-gradient-to-br from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-red-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
@@ -934,7 +934,7 @@ export default function TermometrosIndustrialesArticle() {
                           Los termómetros infrarrojos <b className="text-red-700">calculan la temperatura basándose en la energía que reciben</b>. 
                           Si la emisividad no está ajustada correctamente:
                         </p>
-                        <div className="bg-white p-6 rounded-xl mb-4">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                           <h4 className="font-bold text-red-800 mb-3">❌ Ejemplo de Error Común:</h4>
                           <p className="text-gray-700 mb-3">
                             Al medir una superficie metálica brillante (baja emisividad) con un termómetro configurado en <b>emisividad 0.95</b>:
@@ -957,17 +957,17 @@ export default function TermometrosIndustrialesArticle() {
 
                     {/* Funciones adicionales */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl shadow-xl"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7 }}
                     >
-                      <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center gap-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center gap-3">
                         <Settings className="h-8 w-8 text-indigo-600" />
                         Funciones Adicionales Profesionales
                       </h3>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-indigo-50 p-6 rounded-xl">
+                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="bg-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-indigo-800 mb-3">📊 Registro de Datos:</h4>
                 <ul className="text-sm text-gray-700 space-y-2">
                             <li className="flex items-start gap-2">
@@ -984,7 +984,7 @@ export default function TermometrosIndustrialesArticle() {
                             </li>
                           </ul>
                         </div>
-                        <div className="bg-orange-50 p-6 rounded-xl">
+                        <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-orange-800 mb-3">🔔 Alarmas:</h4>
                           <p className="text-sm text-gray-700 mb-3">
                             Alarmas audibles de <b>umbral alto y bajo</b>, extremadamente útiles para:
@@ -1009,9 +1009,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Durabilidad */}
-                  <section id="durabilidad" className="mb-16">
+                  <section id="durabilidad" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1021,7 +1021,7 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1029,10 +1029,10 @@ export default function TermometrosIndustrialesArticle() {
                       como su precisión</b>.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-8 mb-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                       {/* Resistencia a caídas */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
@@ -1040,17 +1040,17 @@ export default function TermometrosIndustrialesArticle() {
                         <div className="flex items-start gap-4 mb-4">
                           <Shield className="h-10 w-10 text-green-600 flex-shrink-0" />
                           <div>
-                            <h3 className="text-2xl font-bold text-green-900">Resistencia a Caídas</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900">Resistencia a Caídas</h3>
                             <p className="text-gray-600 text-sm">Indicador clave de durabilidad</p>
                           </div>
                         </div>
                         <p className="text-gray-700 mb-6 leading-relaxed">
                           La capacidad de un instrumento para soportar caídas accidentales es un <b className="text-green-700">indicador clave de su durabilidad</b>.
                         </p>
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <h4 className="font-bold text-green-800 mb-3 text-center">⭐ Ejemplo: Fluke 62 MAX</h4>
                           <div className="text-center">
-                            <p className="text-5xl font-bold text-green-700 mb-2">3m</p>
+                            <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-green-700 mb-2">3m</p>
                             <p className="text-gray-700">Resistencia probada a caídas</p>
                           </div>
                           <p className="text-sm text-gray-600 mt-4 text-center">
@@ -1061,7 +1061,7 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Grado IP */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
@@ -1069,7 +1069,7 @@ export default function TermometrosIndustrialesArticle() {
                         <div className="flex items-start gap-4 mb-4">
                           <Droplet className="h-10 w-10 text-blue-600 flex-shrink-0" />
                           <div>
-                            <h3 className="text-2xl font-bold text-blue-900">Grado de Protección (IP)</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Grado de Protección (IP)</h3>
                             <p className="text-gray-600 text-sm">Norma IEC 60529</p>
                           </div>
                         </div>
@@ -1104,9 +1104,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Top 6 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1117,7 +1117,7 @@ export default function TermometrosIndustrialesArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -1137,13 +1137,13 @@ export default function TermometrosIndustrialesArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - GOXAWEE */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -1151,7 +1151,7 @@ export default function TermometrosIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           GOXAWEE Termómetro Infrarrojo Digital (-50-600°C)
                         </h3>
 
@@ -1177,8 +1177,8 @@ export default function TermometrosIndustrialesArticle() {
                           lo hace ideal para usuarios principiantes.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1203,7 +1203,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1221,7 +1221,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $200 - $350 MXN</p>
@@ -1231,7 +1231,7 @@ export default function TermometrosIndustrialesArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-1902465067-termometro-infrarrojo-digital-industrial-50-600-c-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1241,13 +1241,13 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Producto #2 - Truper 18229 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1255,7 +1255,7 @@ export default function TermometrosIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Truper 18229 (METE-500) - El Estándar del Taller Mexicano
                         </h3>
 
@@ -1281,7 +1281,7 @@ export default function TermometrosIndustrialesArticle() {
                           una herramienta de una marca con fuerte presencia y respaldo en México.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
                             <TrendingUp className="h-6 w-6" />
                             🏆 La Confianza de una Marca Nacional
@@ -1292,8 +1292,8 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1318,7 +1318,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1336,7 +1336,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Rango de Precio: $400 - $650 MXN</p>
@@ -1346,7 +1346,7 @@ export default function TermometrosIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/termometro-digital-uso-industrial-truper-18229/p/MLM26505365"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1356,13 +1356,13 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Producto #3 - UNI-T UT300S */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1370,7 +1370,7 @@ export default function TermometrosIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           UNI-T UT300S - Funciones Profesionales a Bajo Costo
                         </h3>
 
@@ -1389,7 +1389,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-4 border-green-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-4 border-green-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-green-900 mb-2 flex items-center gap-2">
                             <Star className="h-6 w-6" />
                             ⭐ El Diferenciador: Emisividad Ajustable
@@ -1406,8 +1406,8 @@ export default function TermometrosIndustrialesArticle() {
                           Las funciones de registro MAX/MIN y retención de datos en pantalla complementan un paquete profesional a un precio muy accesible.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1432,7 +1432,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1450,7 +1450,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Rango de Precio: $450 - $750 MXN</p>
@@ -1460,7 +1460,7 @@ export default function TermometrosIndustrialesArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-595344108-termometro-digital-infrarrojo-laser-32c-a-400c-ut300s-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1470,13 +1470,13 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Producto #4 - Fluke 62 MAX */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
+                        className="bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-orange-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-orange-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🏆 #4
                           </Badge>
                           <Badge className="bg-orange-100 text-orange-800 px-4 py-2 font-bold">
@@ -1484,7 +1484,7 @@ export default function TermometrosIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Fluke 62 MAX - Durabilidad y Fiabilidad Sin Compromiso
                         </h3>
 
@@ -1503,7 +1503,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border-4 border-blue-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             🛡️ Diseñado para Sobrevivir y Funcionar
@@ -1530,8 +1530,8 @@ export default function TermometrosIndustrialesArticle() {
                           alarmas Hi/Lo y <b className="bg-orange-100 px-2 py-1 rounded">diseño ergonómico compacto</b>.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-orange-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                             <h4 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1556,7 +1556,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1574,7 +1574,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-orange-100 to-red-100 p-6 rounded-xl border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-100 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-orange-700 mb-2">💰 Rango de Precio: $2,500 - $3,500 MXN</p>
@@ -1584,7 +1584,7 @@ export default function TermometrosIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/fluke-62-max-termometro-inflarrojo-30-a-500-c-pistola/p/MLM24631909"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1594,13 +1594,13 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Producto #5 - Klein Tools IR07 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💪 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1608,7 +1608,7 @@ export default function TermometrosIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Klein Tools IR07 - Termómetro Doble IR/Sonda
                         </h3>
 
@@ -1627,7 +1627,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-4 border-purple-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-4 border-purple-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
                             <Zap className="h-6 w-6" />
                             🔧 2 en 1: Funcionalidad de Bolsillo
@@ -1651,8 +1651,8 @@ export default function TermometrosIndustrialesArticle() {
                           útil para aplicaciones de HVAC donde se necesita medir la diferencia de temperatura entre entrada y salida.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1677,7 +1677,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1695,7 +1695,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Rango de Precio: $1,800 - $2,800 MXN</p>
@@ -1705,7 +1705,7 @@ export default function TermometrosIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/termometro-de-bolsillo-infrarojo-con-sonda-ir07-klein-tools/p/MLM31743207"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1715,13 +1715,13 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Producto #6 - Fluke 51 II */}
                       <motion.div 
-                        className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-3xl shadow-2xl border-2 border-indigo-200"
+                        className="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-indigo-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-indigo-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-indigo-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🔬 #6
                           </Badge>
                           <Badge className="bg-indigo-100 text-indigo-800 px-4 py-2 font-bold">
@@ -1729,7 +1729,7 @@ export default function TermometrosIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Fluke 51 II - Termómetro Digital de Contacto
                         </h3>
 
@@ -1748,7 +1748,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-yellow-900 mb-3 text-lg flex items-center gap-2">
                             <Target className="h-6 w-6" />
                             🎯 Cuando la Exactitud es No Negociable
@@ -1760,7 +1760,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                           <div className="bg-white p-4 rounded-lg">
                             <h5 className="font-bold text-indigo-800 mb-2">📊 Precisión Incomparable:</h5>
-                            <p className="text-center text-3xl font-bold text-indigo-700 mb-2">
+                            <p className="text-center text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-indigo-700 mb-2">
                               ±0.05% + 0.3°C
                             </p>
                             <p className="text-sm text-gray-600 text-center">Nivel de laboratorio certificado</p>
@@ -1773,8 +1773,8 @@ export default function TermometrosIndustrialesArticle() {
                           La batería ofrece una autonomía típica de <b>1000 horas</b>, reduciendo costos operativos.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-indigo-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-indigo-200">
                             <h4 className="font-bold text-indigo-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1799,7 +1799,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1817,7 +1817,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-xl border-2 border-indigo-300">
+                        <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-indigo-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-indigo-700 mb-2">💰 Rango de Precio: $4,500 - $6,500 MXN</p>
@@ -1827,7 +1827,7 @@ export default function TermometrosIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/termometro-digital-de-contacto-fluke-51ii/up/MLMU557593774"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1838,9 +1838,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1856,9 +1856,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1870,22 +1870,22 @@ export default function TermometrosIndustrialesArticle() {
                     <div className="space-y-8">
                       {/* Consejo 1 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-purple-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-purple-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             1
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-purple-900 mb-3">Priorice la Emisividad Ajustable para Superficies Variadas</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-3">Priorice la Emisividad Ajustable para Superficies Variadas</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Si su trabajo diario implica medir la temperatura de <b className="text-purple-700">motores, tuberías metálicas, tableros eléctricos</b> 
                               o cualquier superficie que no seaoscura y mate, un termómetro con emisividad ajustable no es opcional, <b className="bg-purple-200 px-2 py-1 rounded">es una necesidad</b>.
                             </p>
-                            <div className="bg-purple-50 p-6 rounded-xl">
+                            <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl">
                               <p className="text-gray-700 mb-3">
                                 Un modelo con emisividad fija en 0.95 solo proporcionará lecturas fiables en materiales como:
                               </p>
@@ -1913,25 +1913,25 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Consejo 2 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             2
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-3">Calcule su Necesidad de D:S</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">Calcule su Necesidad de D:S</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Antes de comprar, piense en su aplicación más común. <b className="text-blue-700">Mida la distancia típica</b> desde la que necesita 
                               trabajar y el <b className="text-blue-700">tamaño del objetivo más pequeño</b> que debe medir con precisión.
                             </p>
-                            <div className="bg-blue-50 p-6 rounded-xl">
+                            <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-blue-800 mb-3">📐 Fórmula simple:</h4>
                               <div className="bg-white p-4 rounded-lg mb-4">
-                                <p className="text-center text-2xl font-bold text-blue-700 mb-2">
+                                <p className="text-center text-lg sm:text-xl md:text-2xl font-bold text-blue-700 mb-2">
                                   Distancia ÷ Tamaño del objetivo = D:S mínimo
                                 </p>
                               </div>
@@ -1954,22 +1954,22 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Consejo 3 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             3
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-3">Invierta en un Modelo Híbrido para Máxima Versatilidad</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-3">Invierta en un Modelo Híbrido para Máxima Versatilidad</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               Para técnicos de campo, especialmente en <b className="text-green-700">HVAC, mantenimiento de edificios o servicios generales</b>, 
                               un termómetro híbrido (IR + Sonda) es una inversión inteligente.
                             </p>
-                            <div className="bg-green-50 p-6 rounded-xl">
+                            <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-4">🎯 Ventajas del Modelo Híbrido:</h4>
                               <div className="space-y-3">
                                 <div className="bg-white p-4 rounded-lg flex items-start gap-3">
@@ -2006,20 +2006,20 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* 3 Errores Comunes */}
                       <motion.div 
-                        className="bg-gradient-to-r from-red-50 to-pink-50 p-8 rounded-2xl shadow-lg border-4 border-red-300"
+                        className="bg-gradient-to-r from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-4 border-red-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6 text-center flex items-center justify-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center flex items-center justify-center gap-3">
                           <AlertTriangle className="h-8 w-8" />
                           ❌ 3 Errores Comunes a Evitar
                         </h3>
                         
                         <div className="space-y-6">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <div className="flex items-start gap-4">
-                              <span className="text-3xl">1️⃣</span>
+                              <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">1️⃣</span>
                               <div>
                                 <h4 className="font-bold text-red-900 mb-2">Confiar en Lecturas IR sobre Metales Brillantes sin Ajuste</h4>
                                 <p className="text-gray-700">
@@ -2031,9 +2031,9 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                             <div className="flex items-start gap-4">
-                              <span className="text-3xl">2️⃣</span>
+                              <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">2️⃣</span>
                               <div>
                                 <h4 className="font-bold text-orange-900 mb-2">Medir un "Punto" Demasiado Grande</h4>
                                 <p className="text-gray-700 mb-3">
@@ -2050,9 +2050,9 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                             <div className="flex items-start gap-4">
-                              <span className="text-3xl">3️⃣</span>
+                              <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">3️⃣</span>
                               <div>
                                 <h4 className="font-bold text-yellow-900 mb-2">Usar la Sonda de Contacto Incorrecta</h4>
                                 <p className="text-gray-700 mb-3">
@@ -2072,22 +2072,22 @@ export default function TermometrosIndustrialesArticle() {
 
                       {/* Mantenimiento y Calibración */}
                       <motion.div 
-                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg border-2 border-indigo-300"
+                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-indigo-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-3 mb-6">
                           <Settings className="h-8 w-8 text-indigo-600" />
-                          <h3 className="text-2xl font-bold text-indigo-900">🔧 Mantenimiento y Calibración</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900">🔧 Mantenimiento y Calibración</h3>
                         </div>
                         
                         <p className="text-gray-700 mb-6 leading-relaxed">
                           La precisión de un termómetro industrial no solo depende de su calidad inicial, sino de su <b className="text-indigo-700">cuidado continuo</b>.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-indigo-800 mb-4">🧼 Mantenimiento Diario:</h4>
                             <ul className="text-sm text-gray-700 space-y-2">
                               <li className="flex items-start gap-2">
@@ -2105,7 +2105,7 @@ export default function TermometrosIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-purple-800 mb-4">📅 Calibración Periódica:</h4>
                             <div className="space-y-3">
                               <div className="bg-purple-50 p-3 rounded-lg">
@@ -2120,7 +2120,7 @@ export default function TermometrosIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="mt-6 bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-2 border-yellow-400">
+                        <div className="mt-6 bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-400">
                           <p className="text-yellow-900 font-bold text-center text-lg">
                             ⚠️ Con el tiempo y el uso, todos los sensores pueden desviarse. La calibración garantiza mediciones trazables y fiables.
                           </p>
@@ -2130,9 +2130,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2150,7 +2150,7 @@ export default function TermometrosIndustrialesArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-orange-50 hover:from-orange-50 hover:to-red-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -2170,7 +2170,7 @@ export default function TermometrosIndustrialesArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -2182,9 +2182,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2194,7 +2194,7 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -2214,8 +2214,8 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor IR Robusto</h3>
@@ -2225,7 +2225,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Target className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Mejor Precisión</h3>
@@ -2235,7 +2235,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <Zap className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor Valor</h3>
@@ -2248,13 +2248,13 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Flame className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Invierta en la Herramienta Adecuada</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Invierta en la Herramienta Adecuada</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Invierta en la herramienta adecuada y <b>transforme la temperatura de una variable a una constante controlada</b>. 
@@ -2267,11 +2267,11 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-blue-100 to-cyan-100 p-6 rounded-2xl border-2 border-blue-300"
+                      className="mt-8 text-center bg-gradient-to-r from-blue-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-blue-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál será tu instrumento de medición? 
                       </p>
                       <p className="text-lg text-blue-800 font-semibold">
@@ -2281,9 +2281,9 @@ export default function TermometrosIndustrialesArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

@@ -135,7 +135,7 @@ export default function MultimetrosProfesionalesArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-yellow-900 via-orange-900 to-red-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-yellow-900 via-orange-900 to-red-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema eléctrico/medición */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -219,7 +219,7 @@ export default function MultimetrosProfesionalesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -237,7 +237,7 @@ export default function MultimetrosProfesionalesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -246,7 +246,7 @@ export default function MultimetrosProfesionalesArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-yellow-100 mb-8"
+                className="text-xl text-yellow-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -255,7 +255,7 @@ export default function MultimetrosProfesionalesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-yellow-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-yellow-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -305,19 +305,19 @@ export default function MultimetrosProfesionalesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-8 border-yellow-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-8 border-yellow-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -327,7 +327,7 @@ export default function MultimetrosProfesionalesArticle() {
                           <Zap className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-yellow-900 mb-3">⚡ Tus Ojos en el Mundo Invisible</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-3">⚡ Tus Ojos en el Mundo Invisible</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             Para un electricista profesional, el multímetro <strong className="text-yellow-600">no es solo una herramienta; 
                             son sus ojos y oídos en un mundo invisible de voltajes y corrientes</strong>. Es el instrumento que se interpone 
@@ -348,14 +348,14 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 mt-8"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Más que Medición: Inversión en Seguridad</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Más que Medición: Inversión en Seguridad</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Esta guía analiza a fondo <b>las características no negociables</b> que todo electricista profesional 
@@ -367,9 +367,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Seguridad Categorías CAT */}
-                  <section id="categorias-cat" className="mb-16">
+                  <section id="categorias-cat" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -379,7 +379,7 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -389,7 +389,7 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.p>
 
                     {/* Selector de Categoría CAT */}
-                    <div className="flex justify-center gap-4 mb-10">
+                    <div className="flex justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.button
                         onClick={() => setSelectedCAT('cat2')}
                         whileHover={{ scale: 1.05 }}
@@ -436,14 +436,14 @@ export default function MultimetrosProfesionalesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border-2 border-green-300"
+                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-green-300"
                         >
                           <h4 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             CAT II - Circuitos Monofásicos
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h5 className="font-bold text-green-800 mb-3">📍 Aplicación:</h5>
                             <p className="text-gray-700 mb-3">
                               Mediciones en circuitos conectados directamente a un <b className="text-green-700">tomacorriente monofásico</b>, 
@@ -465,14 +465,14 @@ export default function MultimetrosProfesionalesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-blue-300"
                         >
                           <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             CAT III - Distribución Trifásica (Estándar Profesional)
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h5 className="font-bold text-blue-800 mb-3">📍 Aplicación:</h5>
                             <p className="text-gray-700 mb-3">
                               Circuitos de <b className="text-blue-700">distribución trifásica</b>, incluyendo:
@@ -497,7 +497,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-lg border-2 border-blue-400">
+                          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-lg border-2 border-blue-400">
                             <p className="text-blue-900 font-bold text-center text-lg">
                               ✅ <b>CAT III 600V es el MÍNIMO indispensable para trabajo profesional</b>
                             </p>
@@ -511,14 +511,14 @@ export default function MultimetrosProfesionalesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-xl border-2 border-red-300"
+                          className="bg-gradient-to-br from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-red-300"
                         >
                           <h4 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             CAT IV - Fuente de Instalación (Máxima Protección)
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-xl mb-4">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <h5 className="font-bold text-red-800 mb-3">📍 Aplicación:</h5>
                             <p className="text-gray-700 mb-3">
                               Mediciones en la <b className="text-red-700">fuente de la instalación de baja tensión</b>:
@@ -543,7 +543,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-gradient-to-r from-red-100 to-pink-100 p-6 rounded-lg border-2 border-red-400">
+                          <div className="bg-gradient-to-r from-red-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-lg border-2 border-red-400">
                             <p className="text-red-900 font-bold text-center text-lg">
                               🏆 <b>Máxima seguridad y versatilidad - Preparado para cualquier escenario</b>
                             </p>
@@ -554,7 +554,7 @@ export default function MultimetrosProfesionalesArticle() {
 
                     {/* Advertencia sobre energía distribuida */}
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-8 rounded-2xl"
+                      className="mt-8 bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-4 sm:p-6 md:p-8 rounded-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6 }}
@@ -581,9 +581,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* True RMS */}
-                  <section id="true-rms" className="mb-16">
+                  <section id="true-rms" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -593,7 +593,7 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -601,10 +601,10 @@ export default function MultimetrosProfesionalesArticle() {
                       el <b className="text-purple-600">Verdadero Valor Eficaz</b>, o True RMS (TRMS).
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-8 mb-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                       {/* Medidor de Respuesta Promedio */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                        className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
@@ -616,7 +616,7 @@ export default function MultimetrosProfesionalesArticle() {
                           <h3 className="text-xl font-bold text-red-900">❌ Medidor de Respuesta Promedio</h3>
                         </div>
                         
-                        <div className="bg-white p-6 rounded-xl mb-4">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                           <p className="text-gray-700 mb-4">
                             Solo puede medir con precisión <b className="text-red-700">ondas AC perfectamente sinusoidales</b>.
                           </p>
@@ -640,7 +640,7 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Medidor True RMS */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
@@ -652,7 +652,7 @@ export default function MultimetrosProfesionalesArticle() {
                           <h3 className="text-xl font-bold text-green-900">✅ Medidor True RMS</h3>
                         </div>
                         
-                        <div className="bg-white p-6 rounded-xl mb-4">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                           <p className="text-gray-700 mb-4">
                             Mide con precisión <b className="text-green-700">cualquier forma de onda AC</b>, incluso las distorsionadas.
                           </p>
@@ -677,12 +677,12 @@ export default function MultimetrosProfesionalesArticle() {
 
                     {/* Cargas No Lineales Comunes */}
                     <motion.div 
-                      className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                      className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7 }}
                     >
-                      <h3 className="text-2xl font-bold text-purple-900 mb-6 text-center">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 text-center">
                         ⚡ Cargas No Lineales en Sistemas Modernos
                       </h3>
                       
@@ -716,7 +716,7 @@ export default function MultimetrosProfesionalesArticle() {
 
                     {/* Ejemplo Práctico */}
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-yellow-100 to-amber-100 border-4 border-yellow-400 p-8 rounded-2xl"
+                      className="mt-8 bg-gradient-to-r from-yellow-100 to-amber-100 border-4 border-yellow-400 p-4 sm:p-6 md:p-8 rounded-2xl"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.8 }}
@@ -727,7 +727,7 @@ export default function MultimetrosProfesionalesArticle() {
                         </div>
                         <div>
                           <h4 className="text-xl font-bold text-yellow-900 mb-3">📖 Caso Práctico Real</h4>
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-800 leading-relaxed mb-3">
                               <b className="text-yellow-700">Escenario:</b> Un electricista usa un medidor no-TRMS para diagnosticar 
                               un motor controlado por un VFD.
@@ -756,9 +756,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Funcionalidad Esencial */}
-                  <section id="funcionalidad" className="mb-16">
+                  <section id="funcionalidad" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -770,18 +770,18 @@ export default function MultimetrosProfesionalesArticle() {
                     <div className="space-y-8">
                       {/* Funciones Fundamentales */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
-                        <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
                           <Gauge className="h-8 w-8" />
                           Funciones Fundamentales (Obligatorias)
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                               <Zap className="h-5 w-5" />
                               Mediciones Eléctricas
@@ -802,7 +802,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                               <Activity className="h-5 w-5" />
                               Funciones de Diagnóstico
@@ -823,18 +823,18 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Características que Ahorran Tiempo */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <h3 className="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
                           <TrendingUp className="h-8 w-8" />
                           Características que Ahorran Tiempo (Profesionales)
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-green-800 mb-3">🔧 Funciones Avanzadas:</h4>
                             <ul className="space-y-2 text-sm text-gray-700">
                               <li className="flex items-start gap-2">
@@ -852,7 +852,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-green-100 p-6 rounded-xl border-l-4 border-green-500">
+                          <div className="bg-green-100 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                             <h4 className="font-bold text-green-800 mb-3">⚡ Auto-Rango:</h4>
                             <p className="text-gray-700 mb-3">
                               Selecciona automáticamente la escala de medición más apropiada.
@@ -870,18 +870,18 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Funciones Especiales */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
-                        <h3 className="text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
                           <Zap className="h-8 w-8" />
                           Funciones Especiales de Seguridad
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-purple-800 mb-3">⚡ VoltAlert™ / NCV:</h4>
                             <p className="text-gray-700 mb-3">
                               <b>Detección de voltaje sin contacto</b> - Permite identificar cables energizados sin necesidad 
@@ -894,7 +894,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-purple-800 mb-3">🔌 Modo LoZ (Baja Impedancia):</h4>
                             <p className="text-gray-700 mb-3">
                               Elimina <b>lecturas fantasma</b> causadas por voltajes inducidos en circuitos abiertos.
@@ -911,9 +911,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Durabilidad y Construcción */}
-                  <section id="durabilidad" className="mb-16">
+                  <section id="durabilidad" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -923,7 +923,7 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -931,18 +931,18 @@ export default function MultimetrosProfesionalesArticle() {
                       rendimiento fiable día tras día en las duras condiciones de un sitio de trabajo.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                       {/* Protección Física */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border-2 border-orange-300"
+                        className="bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-orange-300"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
-                        <h3 className="text-2xl font-bold text-orange-900 mb-6">🛡️ Protección Física</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-6">🛡️ Protección Física</h3>
 
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-orange-800 mb-3 flex items-center gap-2">
                               <Shield className="h-5 w-5" />
                               Protección contra Caídas
@@ -957,7 +957,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-orange-800 mb-3 flex items-center gap-2">
                               <Package className="h-5 w-5" />
                               Clasificación IP (Protección de Ingreso)
@@ -982,15 +982,15 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Ergonomía y Usabilidad */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <h3 className="text-2xl font-bold text-blue-900 mb-6">🎯 Ergonomía y Usabilidad</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6">🎯 Ergonomía y Usabilidad</h3>
 
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                               <Wrench className="h-5 w-5" />
                               Calidad de Puntas de Prueba
@@ -1011,7 +1011,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                               <Eye className="h-5 w-5" />
                               Pantalla y Características Prácticas
@@ -1042,9 +1042,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Top 6 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1055,7 +1055,7 @@ export default function MultimetrosProfesionalesArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -1075,13 +1075,13 @@ export default function MultimetrosProfesionalesArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - Fluke 117 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
+                        className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-yellow-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 font-bold">
@@ -1089,7 +1089,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Fluke 117 True-RMS para Electricistas
                         </h3>
 
@@ -1116,7 +1116,7 @@ export default function MultimetrosProfesionalesArticle() {
                           y entrada de baja impedancia (LoZ) para eliminar lecturas fantasma.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Zap className="h-6 w-6" />
                             Diseño Compacto Profesional
@@ -1128,8 +1128,8 @@ export default function MultimetrosProfesionalesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1154,7 +1154,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1172,7 +1172,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl border-2 border-yellow-300">
+                        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-yellow-700 mb-2">💰 Disponible en Distribuidores Autorizados</p>
@@ -1182,7 +1182,7 @@ export default function MultimetrosProfesionalesArticle() {
                               href="https://www.amazon.com.mx/Fluke-117-Mult%C3%ADmetro-electricistas-verdadero/dp/B000OCFFMW"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Amazon →
                             </a>
@@ -1192,13 +1192,13 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Producto #2 - UNI-T UT204+ */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -1206,7 +1206,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Pinza Amperimétrica UNI-T UT204+ True RMS
                         </h3>
 
@@ -1232,7 +1232,7 @@ export default function MultimetrosProfesionalesArticle() {
                           de funciones incluyendo <b className="bg-green-100 px-2 py-1 rounded">voltaje, resistencia, capacitancia, frecuencia y temperatura</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl mb-6 border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-purple-300">
                           <h4 className="font-bold text-purple-800 mb-3 text-lg flex items-center gap-2">
                             <Battery className="h-6 w-6" />
                             Versatilidad para Aplicaciones Especializadas
@@ -1244,8 +1244,8 @@ export default function MultimetrosProfesionalesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1270,7 +1270,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1288,7 +1288,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1298,7 +1298,7 @@ export default function MultimetrosProfesionalesArticle() {
                               href="https://www.mercadolibre.com.mx/pinza-amperimetrica-digital-uni-t-ut204-600a-acdc-true-rms-ncv-multimetro-profesional/p/MLM15532755"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1308,13 +1308,13 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Producto #3 - Kaiweets HT118A */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1322,7 +1322,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Kaiweets HT118A True RMS 6000 Cuentas
                         </h3>
 
@@ -1348,7 +1348,7 @@ export default function MultimetrosProfesionalesArticle() {
                           y una pantalla LCD grande de 6000 cuentas, está perfectamente equipado para diagnóstico profesional.
                         </p>
 
-                        <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl mb-6 border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-orange-300">
                           <h4 className="font-bold text-orange-800 mb-3 text-lg flex items-center gap-2">
                             <Thermometer className="h-6 w-6" />
                             Funciones de Valor Añadido
@@ -1365,8 +1365,8 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1391,7 +1391,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1409,7 +1409,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Amazon México</p>
@@ -1419,7 +1419,7 @@ export default function MultimetrosProfesionalesArticle() {
                               href="https://www.amazon.com.mx/KAIWEETS-Mult%C3%ADmetro-digital-autom%C3%A1tico-continuidad/dp/B08D3B44V5"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Amazon →
                             </a>
@@ -1429,13 +1429,13 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Producto #4 - Fluke 101 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             ⭐ #4
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1443,7 +1443,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Fluke 101 - Multímetro Digital de Bolsillo
                         </h3>
 
@@ -1469,7 +1469,7 @@ export default function MultimetrosProfesionalesArticle() {
                           <b className="bg-purple-100 px-2 py-1 rounded"> pruebas eléctricas básicas</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <div className="flex items-start gap-4">
                             <AlertTriangle className="h-8 w-8 text-yellow-600 flex-shrink-0" />
                             <div>
@@ -1483,8 +1483,8 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1505,7 +1505,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1523,7 +1523,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
@@ -1533,7 +1533,7 @@ export default function MultimetrosProfesionalesArticle() {
                               href="https://www.mercadolibre.com.mx/multimetro-profesional-digital-fluke-101/p/MLM21993927"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1543,13 +1543,13 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Producto #5 - AstroAI */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💪 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1557,7 +1557,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Pinza Amperimétrica Digital AstroAI TRMS 6000 Cuentas
                         </h3>
 
@@ -1583,7 +1583,7 @@ export default function MultimetrosProfesionalesArticle() {
                           <b className="bg-teal-100 px-2 py-1 rounded"> herramienta muy versátil</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Package className="h-6 w-6" />
                             Todo-en-Uno Asequible
@@ -1595,8 +1595,8 @@ export default function MultimetrosProfesionalesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1617,7 +1617,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1635,7 +1635,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Disponible en Amazon/Mercado Libre</p>
@@ -1645,7 +1645,7 @@ export default function MultimetrosProfesionalesArticle() {
                               href="https://www.mercadolibre.com.mx/astroai-multimetro-de-gancho-pinza-amperimetrica-multimetro-digital-automatico-medidor-de-corriente-voltaje-acdc-corriente-alternaresistencia-continua-diodos-pinza-indicador-de-seguridad/p/MLM31014690"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1655,13 +1655,13 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Producto #6 - Klein Tools MM400 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
+                        className="bg-gradient-to-br from-orange-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-orange-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-orange-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🔧 #6
                           </Badge>
                           <Badge className="bg-orange-100 text-orange-800 px-4 py-2 font-bold">
@@ -1669,7 +1669,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Klein Tools MM400 - Multímetro Digital
                         </h3>
 
@@ -1695,7 +1695,7 @@ export default function MultimetrosProfesionalesArticle() {
                           diseñada para soportar caídas de 1 metro y el desgaste del sitio de trabajo.
                         </p>
 
-                        <div className="bg-gradient-to-r from-red-50 to-pink-50 border-4 border-red-400 p-6 rounded-xl mb-6">
+                        <div className="bg-gradient-to-r from-red-50 to-pink-50 border-4 border-red-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <div className="flex items-start gap-4">
                             <AlertTriangle className="h-8 w-8 text-red-600 flex-shrink-0" />
                             <div>
@@ -1709,8 +1709,8 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-orange-200">
+                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                             <h4 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1731,7 +1731,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1749,7 +1749,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-300">
+                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-orange-700 mb-2">💰 Disponible en Amazon/Home Depot</p>
@@ -1759,7 +1759,7 @@ export default function MultimetrosProfesionalesArticle() {
                               href="https://www.homedepot.com/p/Klein-Tools-600V-AC-DC-Auto-Ranging-Digital-Multimeter-Drop-Resistant-Temperature-Measurement-MM400/206517333"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Home Depot →
                             </a>
@@ -1770,9 +1770,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1788,11 +1788,11 @@ export default function MultimetrosProfesionalesArticle() {
 
                     {/* Análisis de Tendencia */}
                     <motion.div 
-                      className="mt-12 bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                      className="mt-12 bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <h3 className="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
                         <TrendingUp className="h-8 w-8" />
                         📈 Análisis de Tendencia del Mercado
                       </h3>
@@ -1802,7 +1802,7 @@ export default function MultimetrosProfesionalesArticle() {
                         como UNI-T y Kaiweets están <b className="bg-purple-100 px-2 py-1 rounded">superando en especificaciones y funcionalidades</b> 
                         a los modelos de referencia de la industria.
                       </p>
-                      <div className="bg-white p-6 rounded-xl">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <p className="text-gray-700 leading-relaxed">
                           <b className="text-purple-900">Observación clave:</b> El Kaiweets HT118A ofrece la clasificación de seguridad 
                           más alta del grupo (CAT IV 600V), y tanto este como la pinza UNI-T incluyen medición de temperatura, función 
@@ -1814,9 +1814,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1828,17 +1828,17 @@ export default function MultimetrosProfesionalesArticle() {
                     <div className="space-y-8">
                       {/* Consejo 1 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-red-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             1
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-red-900 mb-3">Nunca Comprometas la Seguridad</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">Nunca Comprometas la Seguridad</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               La primera y más importante verificación debe ser la <b className="text-red-700">Categoría de Seguridad (CAT)</b>. 
                               Para trabajos profesionales en México, no se debe aceptar nada por debajo de <b>CAT III 600V</b>.
@@ -1855,17 +1855,17 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Consejo 2 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             2
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-3">Exige Precisión: True RMS es Obligatorio</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">Exige Precisión: True RMS es Obligatorio</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               En el entorno eléctrico actual, saturado de variadores de velocidad, balastros electrónicos y LEDs, 
                               un medidor sin True RMS <b className="text-blue-700">proporcionará lecturas falsas y potencialmente peligrosas</b>.
@@ -1881,17 +1881,17 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Consejo 3 */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-l-8 border-green-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-2xl">
+                          <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0 text-lg sm:text-xl md:text-2xl">
                             3
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-3">Invierte en un Equipo Robusto y Práctico</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-3">Invierte en un Equipo Robusto y Práctico</h3>
                             <p className="text-gray-700 mb-4 leading-relaxed">
                               La vida en el sitio de trabajo es dura. Busca características de durabilidad como 
                               <b className="text-green-700"> protección contra caídas</b> y una buena clasificación IP si trabajas en 
@@ -1909,17 +1909,17 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* 3 Errores Comunes */}
                       <motion.div 
-                        className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                        className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">
                           ❌ 3 Errores Comunes a Evitar
                         </h3>
                         
                         <div className="space-y-4">
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <h4 className="font-bold text-red-900 mb-2">1. Comprar Multímetros Baratos Sin Certificación de Seguridad</h4>
                             <p className="text-gray-700">
                               Adquirir un multímetro genérico sin una <b className="text-red-700">clasificación CAT clara</b> y emitida por 
@@ -1929,7 +1929,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </p>
                           </div>
                           
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-orange-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                             <h4 className="font-bold text-orange-900 mb-2">2. Medir Corriente con un DMM de Forma Incorrecta</h4>
                             <p className="text-gray-700">
                               Intentar medir la corriente de un circuito conectando el multímetro <b className="text-orange-700">en paralelo</b> 
@@ -1939,7 +1939,7 @@ export default function MultimetrosProfesionalesArticle() {
                             </p>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl border-l-4 border-yellow-500">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                             <h4 className="font-bold text-yellow-900 mb-2">3. No Inspeccionar las Puntas de Prueba Antes de Cada Uso</h4>
                             <p className="text-gray-700">
                               Un cable dañado, una punta de prueba con el <b className="text-yellow-700">aislamiento agrietado</b> o una 
@@ -1952,12 +1952,12 @@ export default function MultimetrosProfesionalesArticle() {
 
                       {/* Mantenimiento */}
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.7 }}
                       >
-                        <h3 className="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
                           <Settings className="h-8 w-8" />
                           🔧 Mantenimiento Básico
                         </h3>
@@ -1976,9 +1976,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1996,7 +1996,7 @@ export default function MultimetrosProfesionalesArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-yellow-50 hover:from-yellow-50 hover:to-orange-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-yellow-50 hover:from-yellow-50 hover:to-orange-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -2016,7 +2016,7 @@ export default function MultimetrosProfesionalesArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -2028,9 +2028,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2040,7 +2040,7 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -2061,8 +2061,8 @@ export default function MultimetrosProfesionalesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Estándar de Oro</h3>
@@ -2073,7 +2073,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-blue-200">
                           <div className="text-center mb-4">
                             <Star className="h-10 w-10 mx-auto text-blue-600 mb-2" />
                             <h3 className="text-lg font-bold text-blue-900">Máximo Valor</h3>
@@ -2084,7 +2084,7 @@ export default function MultimetrosProfesionalesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <Zap className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor Innovación</h3>
@@ -2098,13 +2098,13 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="mt-8 bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">La Clave: Elegir con Sabiduría para Trabajar con Seguridad</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">La Clave: Elegir con Sabiduría para Trabajar con Seguridad</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Para el profesional inteligente que busca el <b>máximo rendimiento por su dinero</b>, el mercado ofrece 
@@ -2116,11 +2116,11 @@ export default function MultimetrosProfesionalesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-2xl border-2 border-yellow-400"
+                      className="mt-8 text-center bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-yellow-400"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¿Cuál será tu compañero de diagnóstico profesional? 
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -2130,9 +2130,9 @@ export default function MultimetrosProfesionalesArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >

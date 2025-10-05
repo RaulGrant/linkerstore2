@@ -287,7 +287,7 @@ export default function RotomartilloTaladroArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {Array.from({ length: 80 }, (_, i) => (
@@ -318,7 +318,7 @@ export default function RotomartilloTaladroArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -336,7 +336,7 @@ export default function RotomartilloTaladroArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -345,7 +345,7 @@ export default function RotomartilloTaladroArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-orange-100 mb-8"
+                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -355,7 +355,7 @@ export default function RotomartilloTaladroArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -404,18 +404,18 @@ export default function RotomartilloTaladroArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-20">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               
               {/* Introducción del Problema */}
               <motion.section
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8">
-                    <p className="text-2xl text-gray-800 leading-relaxed mb-6 text-center font-semibold">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8">
+                    <p className="text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-center font-semibold">
                       🚧 Estás frente a un muro de concreto y tu taladro de siempre solo patina y chilla...
                     </p>
                     <p className="text-xl text-gray-700 leading-relaxed text-center">
@@ -424,19 +424,19 @@ export default function RotomartilloTaladroArticle() {
                     </p>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border-2 border-amber-200 text-center">
-                      <div className="text-5xl mb-3">⚡</div>
+                  <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                    <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-amber-200 text-center">
+                      <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">⚡</div>
                       <p className="font-bold text-amber-900 mb-2">El Problema</p>
                       <p className="text-gray-600 text-sm">No es falta de potencia, es usar la herramienta incorrecta</p>
                     </div>
-                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-200 text-center">
-                      <div className="text-5xl mb-3">💡</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200 text-center">
+                      <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">💡</div>
                       <p className="font-bold text-blue-900 mb-2">La Solución</p>
                       <p className="text-gray-600 text-sm">Entender qué herramienta usar en qué material</p>
                     </div>
-                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200 text-center">
-                      <div className="text-5xl mb-3">💰</div>
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200 text-center">
+                      <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">💰</div>
                       <p className="font-bold text-green-900 mb-2">El Ahorro</p>
                       <p className="text-gray-600 text-sm">Tiempo, esfuerzo y no dañar herramientas costosas</p>
                     </div>
@@ -449,19 +449,19 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
                     🔧 Conoce a los Contendientes
                   </h2>
-                  <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-lg">
+                  <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
                     Aunque parezcan similares, su <strong>funcionamiento interno y aplicación ideal son mundos aparte</strong>. 
                     Explora cada herramienta para entender su verdadera naturaleza.
                   </p>
 
                   {/* Tabs */}
-                  <div className="flex justify-center gap-4 mb-8">
+                  <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
                     <motion.button
                       onClick={() => setActiveTab('percutor')}
                       whileHover={{ scale: 1.05 }}
@@ -499,15 +499,15 @@ export default function RotomartilloTaladroArticle() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="grid md:grid-cols-2 gap-8 items-center"
+                        className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 items-center"
                       >
                         <div>
-                          <h3 className="text-3xl font-bold text-amber-600 mb-4 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-amber-600 mb-4 flex items-center gap-3">
                             <Drill className="h-8 w-8" />
                             Taladro Percutor: El "Golpeteo" Rápido
                           </h3>
                           
-                          <div className="bg-amber-50 p-6 rounded-xl border-2 border-amber-200 mb-6">
+                          <div className="bg-amber-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-amber-200 mb-6">
                             <p className="font-bold text-amber-900 mb-3 text-lg">¿Cómo Funciona?</p>
                             <p className="text-gray-700 leading-relaxed">
                               Su mecanismo es simple y efectivo: <strong>dos discos estriados</strong> en su interior chocan 
@@ -550,7 +550,7 @@ export default function RotomartilloTaladroArticle() {
                         </div>
 
                         <div className="flex flex-col items-center justify-center">
-                          <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-8 rounded-2xl w-full h-80 flex items-center justify-center relative overflow-hidden">
+                          <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-4 sm:p-6 md:p-8 rounded-2xl w-full h-80 flex items-center justify-center relative overflow-hidden">
                             <motion.div
                               animate={{
                                 scale: [1, 1.1, 1],
@@ -585,15 +585,15 @@ export default function RotomartilloTaladroArticle() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="grid md:grid-cols-2 gap-8 items-center"
+                        className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 items-center"
                       >
                         <div>
-                          <h3 className="text-3xl font-bold text-blue-600 mb-4 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-600 mb-4 flex items-center gap-3">
                             <Hammer className="h-8 w-8" />
                             Rotomartillo: El "Martilleo" Poderoso
                           </h3>
                           
-                          <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200 mb-6">
+                          <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200 mb-6">
                             <p className="font-bold text-blue-900 mb-3 text-lg">¿Cómo Funciona?</p>
                             <p className="text-gray-700 leading-relaxed">
                               Utiliza un <strong>mecanismo de pistón electroneumático</strong>. Imagina un pequeño martillo 
@@ -638,7 +638,7 @@ export default function RotomartilloTaladroArticle() {
                         </div>
 
                         <div className="flex flex-col items-center justify-center">
-                          <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-8 rounded-2xl w-full h-80 flex items-center justify-center relative overflow-hidden">
+                          <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-4 sm:p-6 md:p-8 rounded-2xl w-full h-80 flex items-center justify-center relative overflow-hidden">
                             <motion.div
                               animate={{
                                 y: [0, -10, 0],
@@ -673,24 +673,24 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
                     🎯 Asesor de Proyectos: ¿Qué Herramienta Necesitas?
                   </h2>
-                  <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-lg">
+                  <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
                     Esta sección es tu <strong>asesor personal</strong>. Responde a una simple pregunta sobre tu proyecto 
                     y te guiaremos directamente a la herramienta que necesitas, eliminando cualquier duda.
                   </p>
 
-                  <div className="text-center mb-8">
-                    <p className="text-2xl font-bold text-gray-800">
+                  <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">
                       ¿Sobre qué material vas a trabajar principalmente?
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                     {materials.map((material) => (
                       <motion.button
                         key={material.id}
@@ -703,7 +703,7 @@ export default function RotomartilloTaladroArticle() {
                             : `bg-gradient-to-br ${material.color} opacity-90 hover:opacity-100`
                         }`}
                       >
-                        <div className="text-5xl mb-3">{material.icon}</div>
+                        <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">{material.icon}</div>
                         <p className="text-sm">{material.name}</p>
                       </motion.button>
                     ))}
@@ -762,24 +762,24 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
                     ⚡ Cara a Cara: La Diferencia en Números
                   </h2>
-                  <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-lg">
+                  <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
                     La diferencia más importante entre estas herramientas es la <strong className="text-red-600">energía de impacto</strong>, 
                     medida en Joules. Este gráfico muestra la abismal brecha que existe.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                     <div>
-                      <h3 className="text-2xl font-bold mb-6 text-center">Energía de Impacto (Joules)</h3>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-6 text-center">Energía de Impacto (Joules)</h3>
                       <div className="relative w-full" style={{ height: '400px' }}>
                         <Bar data={impactChartData} options={impactChartOptions} />
                       </div>
-                      <div className="mt-6 bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-300">
+                      <div className="mt-6 bg-gradient-to-r from-yellow-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                         <p className="text-center text-gray-800 font-semibold">
                           💡 Un rotomartillo medio tiene <strong className="text-red-600">5-6 veces más</strong> energía 
                           de impacto que un taladro percutor. Esta es la diferencia entre perforar concreto en 
@@ -789,7 +789,7 @@ export default function RotomartilloTaladroArticle() {
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold mb-6 text-center">Comparación Multifactor</h3>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-6 text-center">Comparación Multifactor</h3>
                       <div className="relative w-full" style={{ height: '400px' }}>
                         <Radar data={radarChartData} options={radarChartOptions} />
                       </div>
@@ -817,13 +817,13 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
                     📊 Tabla Comparativa Completa
                   </h2>
-                  <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-lg">
+                  <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
                     Todas las diferencias clave en un solo lugar para que puedas tomar una decisión informada.
                   </p>
 
@@ -879,13 +879,13 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
                     🎬 Escenarios Prácticos del Mundo Real
                   </h2>
-                  <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-lg">
+                  <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
                     Aprende a través de situaciones reales. Cada escenario te muestra <strong>qué herramienta usar y por qué</strong>.
                   </p>
 
@@ -900,7 +900,7 @@ export default function RotomartilloTaladroArticle() {
                       >
                         <button
                           onClick={() => setSelectedScenario(selectedScenario === index ? null : index)}
-                          className="w-full p-6 text-left bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100 transition-colors flex items-center justify-between"
+                          className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100 transition-colors flex items-center justify-between"
                         >
                           <div className="flex items-center gap-4">
                             <div className="bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
@@ -930,7 +930,7 @@ export default function RotomartilloTaladroArticle() {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="p-6 bg-white space-y-4">
+                              <div className="p-3 sm:p-4 md:p-6 bg-white space-y-4">
                                 <div className="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-500">
                                   <p className="font-bold text-blue-900 mb-2 flex items-center gap-2">
                                     <Info className="h-5 w-5" />
@@ -968,20 +968,20 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
                     💰 Guía de Compra: ¿Qué Considerar?
                   </h2>
-                  <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-lg">
+                  <p className="text-center text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto text-lg">
                     Antes de comprar, evalúa estos factores clave para hacer una inversión inteligente.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                     <div className="space-y-6">
                       <motion.div 
-                        className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border-2 border-amber-300"
+                        className="bg-gradient-to-br from-amber-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-amber-300"
                         whileHover={{ scale: 1.02, y: -5 }}
                       >
                         <div className="flex items-start gap-4">
@@ -1005,7 +1005,7 @@ export default function RotomartilloTaladroArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300"
                         whileHover={{ scale: 1.02, y: -5 }}
                       >
                         <div className="flex items-start gap-4">
@@ -1026,7 +1026,7 @@ export default function RotomartilloTaladroArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300"
                         whileHover={{ scale: 1.02, y: -5 }}
                       >
                         <div className="flex items-start gap-4">
@@ -1062,7 +1062,7 @@ export default function RotomartilloTaladroArticle() {
 
                     <div className="space-y-6">
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300"
                         whileHover={{ scale: 1.02, y: -5 }}
                       >
                         <div className="flex items-start gap-4">
@@ -1093,7 +1093,7 @@ export default function RotomartilloTaladroArticle() {
                         </div>
                       </motion.div>
 
-                      <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border-4 border-red-400">
+                      <div className="bg-gradient-to-r from-red-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-red-400">
                         <h3 className="font-bold text-red-900 text-xl mb-4 flex items-center gap-2">
                           <AlertTriangle className="h-6 w-6" />
                           Errores Comunes al Comprar
@@ -1120,7 +1120,7 @@ export default function RotomartilloTaladroArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl border-2 border-yellow-300">
+                      <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                         <h3 className="font-bold text-yellow-900 text-lg mb-3 flex items-center gap-2">
                           <Sparkles className="h-5 w-5" />
                           Marcas Recomendadas
@@ -1146,10 +1146,10 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     ❓ Preguntas Frecuentes
                   </h2>
 
@@ -1164,7 +1164,7 @@ export default function RotomartilloTaladroArticle() {
                       >
                         <button
                           onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                          className="w-full p-6 text-left flex items-center justify-between hover:bg-orange-100 transition-colors"
+                          className="w-full p-3 sm:p-4 md:p-6 text-left flex items-center justify-between hover:bg-orange-100 transition-colors"
                         >
                           <span className="font-bold text-gray-900 pr-4">{faq.question}</span>
                           <motion.div
@@ -1183,7 +1183,7 @@ export default function RotomartilloTaladroArticle() {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="p-6 pt-0 bg-white">
+                              <div className="p-3 sm:p-4 md:p-6 pt-0 bg-white">
                                 <p className="text-gray-700 leading-relaxed whitespace-pre-line">{faq.answer}</p>
                               </div>
                             </motion.div>
@@ -1200,16 +1200,16 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.6 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-10 rounded-3xl shadow-2xl">
+                <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-3xl shadow-2xl">
                   <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-6">🎯 La Regla de Oro</h2>
-                    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl mb-6">
-                      <p className="text-2xl font-bold text-amber-400 mb-4">
+                    <h2 className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold mb-6">🎯 La Regla de Oro</h2>
+                    <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl mb-6">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-amber-400 mb-4">
                         "Si es ladrillo o bloque, un buen taladro percutor es tu aliado."
                       </p>
-                      <p className="text-2xl font-bold text-blue-400">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-blue-400">
                         "Si vas a enfrentar concreto, no lo dudes, necesitas la fuerza de un rotomartillo."
                       </p>
                     </div>
@@ -1227,7 +1227,7 @@ export default function RotomartilloTaladroArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.8 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <RelatedArticles articles={relatedArticles} />
               </motion.section>
