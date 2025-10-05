@@ -201,191 +201,43 @@ export default function GuiaNOM009Article() {
           </div>
         </section>
 
-        {/* Imagen Principal del Artículo - MEJORADA */}
-<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16 relative overflow-hidden">
-  {/* Partículas de fondo para la sección de imagen */}
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: 30 }).map((_, i) => (
-      <motion.div
-        key={`img-particle-${i}`}
-        className="absolute rounded-full"
-        style={{
-          width: `${3 + (i % 4)}px`,
-          height: `${3 + (i % 4)}px`,
-          background: `hsl(${200 + (i * 12)}, 70%, ${60 + (i % 20)}%)`,
-          left: `${(i * 7) % 100}%`,
-          top: `${(i * 11) % 100}%`,
-        }}
-        animate={{
-          y: [0, -30, 0],
-          x: [0, 15, 0],
-          opacity: [0.3, 0.7, 0.3],
-          scale: [0.8, 1.2, 0.8],
-        }}
-        transition={{
-          duration: 8 + (i % 4),
-          repeat: Infinity,
-          delay: i * 0.1,
-          ease: "easeInOut",
-        }}
-      />
-    ))}
-  </div>
-
-  <div className="container mx-auto px-6 relative z-10">
-    <motion.div 
-      className="max-w-5xl mx-auto"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.5 }}
-    >
-      {/* Título antes de la imagen */}
-      <motion.div 
-        className="text-center mb-8"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
-      >
-        <h2 className="text-3xl font-bold text-gray-900 mb-3">
-          📸 Seguridad en Acción
-        </h2>
-      </motion.div>
-
-      {/* Contenedor principal con efecto de profundidad */}
-      <div className="relative">
-        {/* Efectos de fondo decorativos */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
-        <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl opacity-10"></div>
-        
-        {/* Contenedor de la imagen */}
-        <motion.div 
-          className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white"
-          whileHover={{ scale: 1.02, y: -5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          {/* Badge flotante */}
-          <motion.div 
-            className="absolute top-4 left-4 z-10"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1 }}
-          >
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-              <Shield className="h-5 w-5" />
-              <span className="font-bold text-sm">NOM-009-STPS-2011</span>
-            </div>
-          </motion.div>
-
-          {/* Badge flotante derecho */}
-          <motion.div 
-            className="absolute top-4 right-4 z-10"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.1 }}
-          >
-            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5" />
-              <span className="font-bold text-sm">Altura {'>'} 1.8m</span>
-            </div>
-          </motion.div>
-
-          {/* Imagen con aspect ratio cuadrado */}
-          <div className="aspect-square w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-            <motion.img 
-              src="/images/guia-nom-009-trabajos-altura.png" 
-              alt="Trabajadores realizando trabajos en altura con EPP completo según NOM-009-STPS-2011"
-              className="w-full h-full object-cover object-center"
-              initial={{ scale: 1.1 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              whileHover={{ scale: 1.05 }}
-            />
-          </div>
-
-          {/* Overlay con información adicional en hover */}
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
-            initial={false}
-          >
-            <div className="p-8 w-full">
-              <h3 className="text-white font-bold text-2xl mb-2">
-                NOM-009-STPS-2011: 7 puntos vitales para trabajos en altura.
-              </h3>
-              <p className="text-gray-200 text-sm mb-4">
-                Arneses, andamios, y la clave de tu seguridad.
-              </p>
-              <div className="flex gap-3 flex-wrap">
-                <span className="bg-blue-500/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  ✓ Arnés Completo
-                </span>
-                <span className="bg-green-500/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  ✓ Línea de Vida
-                </span>
-                <span className="bg-purple-500/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  ✓ Anclaje Certificado
-                </span>
-                <span className="bg-orange-500/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  ✓ Absorbedor Energía
-                </span>
+        {/* Imagen Principal del Artículo */}
+        <section className="bg-white py-12">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+  <img 
+    src="/images/guia-nom-009-trabajos-altura.png" 
+    alt="Trabajadores realizando trabajos en altura con EPP completo según NOM-009-STPS-2011"
+    className="w-full h-auto"
+  />
+</div>
+                <div className="text-center">
+                  <div className="text-8xl mb-6">🏗️</div>
+                  <h3 className="text-2xl font-bold text-slate-700 mb-4">
+                    Imagen Principal del Artículo
+                  </h3>
+                  <p className="text-slate-600 text-lg mb-4">
+                    Aquí se colocará una imagen representativa de trabajos en altura y seguridad industrial
+                  </p>
+                  <div className="bg-slate-200 rounded-xl p-4 text-slate-600">
+                    <p className="font-semibold mb-2">📸 Imagen sugerida:</p>
+                    <p className="text-sm">
+                      Trabajadores con EPP completo realizando trabajos en altura, andamios seguros, 
+                      o infografía de los elementos de seguridad según NOM-009-STPS-2011
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        </motion.div>
+            </motion.div>
+          </div>
+        </section>
 
-        {/* Elementos decorativos flotantes alrededor */}
-        <motion.div 
-          className="absolute -left-8 top-1/4 w-16 h-16 bg-blue-400 rounded-full opacity-20 blur-xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute -right-8 bottom-1/4 w-20 h-20 bg-purple-400 rounded-full opacity-20 blur-xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-      </div>
-
-      {/* Información adicional debajo de la imagen */}
-      <motion.div 
-        className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2 }}
-      >
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 text-center">
-          <div className="text-4xl mb-3">⚠️</div>
-          <h4 className="font-bold text-gray-900 mb-2">Precaución</h4>
-          <p className="text-gray-600 text-sm">Evita accidentes, cumple la norma. Todo sobre trabajos en altura.</p>
-        </div>
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 text-center">
-          <div className="text-4xl mb-3">📏</div>
-          <h4 className="font-bold text-gray-900 mb-2">Altura {'>'} 1.8m</h4>
-          <p className="text-gray-600 text-sm">Aplicación de la normativa oficial</p>
-        </div>
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 text-center">
-          <div className="text-4xl mb-3">✅</div>
-          <h4 className="font-bold text-gray-900 mb-2">Normativa</h4>
-          <p className="text-gray-600 text-sm">Cada detalle cuenta. La NOM-009-STPS-2011 te protege.</p>
-        </div>
-      </motion.div>
-    </motion.div>
-  </div>
-</section>
         {/* Contenido Principal */}
         <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden min-h-screen">
           {/* Partículas de fondo */}
