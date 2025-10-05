@@ -231,7 +231,7 @@ export default function MantenimientoHerramientasArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -249,7 +249,7 @@ export default function MantenimientoHerramientasArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -738,7 +738,7 @@ export default function MantenimientoHerramientasArticle() {
                         </p>
                       </div>
 
-                      <div className="mt-6 grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="mt-6 grid md:grid-cols-2 gap-3">
                         <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
                           <h5 className="font-bold text-green-900 mb-3">✅ Invierte en Calidad</h5>
                           <ul className="space-y-2 text-gray-700 text-sm">
@@ -852,7 +852,7 @@ export default function MantenimientoHerramientasArticle() {
                         </div>
                       </div>
 
-                      <div className="mt-6 grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="mt-6 grid md:grid-cols-2 gap-3">
                         <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border-l-4 border-purple-500">
                           <h5 className="font-bold text-purple-900 mb-3">📅 Frecuencia de Inspección</h5>
                           <ul className="space-y-2 text-gray-700 text-sm">
@@ -958,7 +958,7 @@ export default function MantenimientoHerramientasArticle() {
                     miles de pesos en reemplazos, sino que garantiza un trabajo de mayor calidad, más seguro y más eficiente.
                   </p>
 
-                  <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                  <div className="grid md:grid-cols-3 gap-3 mt-8">
                     <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl">
                       <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">💰</div>
                       <h3 className="font-bold text-blue-900 mb-2">Ahorro Real</h3>
@@ -995,7 +995,7 @@ export default function MantenimientoHerramientasArticle() {
                 <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   📚 Artículos Relacionados
                 </h2>
-                <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                <div className="grid md:grid-cols-3 gap-3">
                   {relatedArticles.map((article, index) => (
                     <motion.div
                       key={article.id}

@@ -239,7 +239,7 @@ export default function TermometrosIndustrialesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -257,7 +257,7 @@ export default function TermometrosIndustrialesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -452,7 +452,7 @@ export default function TermometrosIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -545,7 +545,7 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -641,7 +641,7 @@ export default function TermometrosIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -711,7 +711,7 @@ export default function TermometrosIndustrialesArticle() {
                       Estos tres parámetros definen las <b className="text-green-600">capacidades y limitaciones operativas</b> de un termómetro.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                    <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                       {/* Rango */}
                       <motion.div 
                         className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-green-200"
@@ -809,7 +809,7 @@ export default function TermometrosIndustrialesArticle() {
                         Este es uno de los conceptos <b className="text-orange-700">más importantes y a menudo malinterpretados</b> en la termometría infrarroja.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-orange-800 mb-4 text-lg">📐 Definición:</h4>
                           <p className="text-gray-700 mb-4">
@@ -887,7 +887,7 @@ export default function TermometrosIndustrialesArticle() {
                       </div>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                    <div className="grid md:grid-cols-2 gap-3 mb-4 sm:mb-6 md:mb-8">
                       {/* Definición */}
                       <motion.div 
                         className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-2 border-purple-200"
@@ -966,7 +966,7 @@ export default function TermometrosIndustrialesArticle() {
                         <Settings className="h-8 w-8 text-indigo-600" />
                         Funciones Adicionales Profesionales
                       </h3>
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-indigo-800 mb-3">📊 Registro de Datos:</h4>
                 <ul className="text-sm text-gray-700 space-y-2">
@@ -1177,7 +1177,7 @@ export default function TermometrosIndustrialesArticle() {
                           lo hace ideal para usuarios principiantes.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1292,7 +1292,7 @@ export default function TermometrosIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1406,7 +1406,7 @@ export default function TermometrosIndustrialesArticle() {
                           Las funciones de registro MAX/MIN y retención de datos en pantalla complementan un paquete profesional a un precio muy accesible.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1530,7 +1530,7 @@ export default function TermometrosIndustrialesArticle() {
                           alarmas Hi/Lo y <b className="bg-orange-100 px-2 py-1 rounded">diseño ergonómico compacto</b>.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                             <h4 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1651,7 +1651,7 @@ export default function TermometrosIndustrialesArticle() {
                           útil para aplicaciones de HVAC donde se necesita medir la diferencia de temperatura entre entrada y salida.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1773,7 +1773,7 @@ export default function TermometrosIndustrialesArticle() {
                           La batería ofrece una autonomía típica de <b>1000 horas</b>, reduciendo costos operativos.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-indigo-200">
                             <h4 className="font-bold text-indigo-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -2086,7 +2086,7 @@ export default function TermometrosIndustrialesArticle() {
                           La precisión de un termómetro industrial no solo depende de su calidad inicial, sino de su <b className="text-indigo-700">cuidado continuo</b>.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-indigo-800 mb-4">🧼 Mantenimiento Diario:</h4>
                             <ul className="text-sm text-gray-700 space-y-2">
@@ -2214,7 +2214,7 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />

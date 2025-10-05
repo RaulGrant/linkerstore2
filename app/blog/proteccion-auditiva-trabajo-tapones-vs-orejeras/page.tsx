@@ -274,7 +274,7 @@ export default function ProteccionAuditivaArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -292,7 +292,7 @@ export default function ProteccionAuditivaArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-purple-200"
+                className="flex items-center justify-center gap-3 text-sm text-purple-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -597,7 +597,7 @@ export default function ProteccionAuditivaArticle() {
                       <p className="text-center text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Protección Real = (NRR - 7) ÷ 2
                       </p>
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mt-6">
+                      <div className="grid md:grid-cols-2 gap-3 mt-6">
                         <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-lg">
                           <p className="font-bold text-blue-900 mb-2">¿Por qué - 7?</p>
                           <p className="text-gray-700 text-sm">
@@ -618,7 +618,7 @@ export default function ProteccionAuditivaArticle() {
                       <h4 className="font-bold text-red-900 mb-4 text-xl text-center">
                         Ejemplo Revelador: La Brecha de 20 dB
                       </h4>
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg text-center">
                           <p className="text-gray-600 mb-2">NRR de Etiqueta</p>
                           <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">33 dB</p>
@@ -687,7 +687,7 @@ export default function ProteccionAuditivaArticle() {
                     <p className="text-gray-700 mb-6 leading-relaxed">
                       NIOSH reconoce que no todos los protectores fallan igual. Sus factores de reducción son más matizados:
                     </p>
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <p className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3 text-center">🎧</p>
                         <p className="font-bold text-gray-900 mb-2 text-center">Orejeras</p>
@@ -888,7 +888,7 @@ export default function ProteccionAuditivaArticle() {
                         <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6 text-center">
                           🎯 Método "Enrollar, Tirar, Sostener" (Para Tapones de Espuma)
                         </h4>
-                        <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-3 gap-3">
                           <motion.div 
                             className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center"
                             whileHover={{ scale: 1.05 }}
@@ -1073,7 +1073,7 @@ export default function ProteccionAuditivaArticle() {
                           <AlertTriangle className="h-8 w-8" />
                           EL TALÓN DE AQUILES: El Sello Comprometido
                         </h4>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="font-bold text-red-800 mb-4 text-lg">
                               Factores que Rompen el Sello:
@@ -1129,7 +1129,7 @@ export default function ProteccionAuditivaArticle() {
                           <Wrench className="h-6 w-6" />
                           Mantenimiento de Orejeras
                         </h4>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div>
                             <p className="font-bold text-blue-800 mb-3">Limpieza Regular:</p>
                             <ul className="space-y-2 text-gray-700 text-sm">
@@ -1354,7 +1354,7 @@ export default function ProteccionAuditivaArticle() {
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-6 text-purple-900">
                       🎬 Escenarios Industriales en Acción
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       <motion.div 
                         className="bg-gradient-to-br from-blue-50 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300"
                         whileHover={{ scale: 1.05, y: -5 }}
@@ -1446,7 +1446,7 @@ export default function ProteccionAuditivaArticle() {
                       <h4 className="font-bold text-red-800 mb-4 text-xl">
                         ⚠️ ERROR COMÚN PELIGROSO
                       </h4>
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-red-100 p-4 rounded-lg border-2 border-red-400">
                           <p className="font-bold text-red-900 mb-2 text-center">❌ INCORRECTO</p>
                           <p className="text-gray-700 text-center">
@@ -1503,7 +1503,7 @@ export default function ProteccionAuditivaArticle() {
                       </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                    <div className="grid md:grid-cols-2 gap-3 mb-6">
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <h4 className="font-bold text-purple-900 mb-4">
                           ☠️ Químicos Ototóxicos Comunes
@@ -1806,7 +1806,7 @@ export default function ProteccionAuditivaArticle() {
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 text-center">
                       Los 3 Pilares de una Conservación Auditiva Eficaz
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       <div className="text-center">
                         <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                           <span className="text-white text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold">1</span>
@@ -1857,7 +1857,7 @@ export default function ProteccionAuditivaArticle() {
                 <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   📚 Artículos Relacionados
                 </h2>
-                <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                <div className="grid md:grid-cols-3 gap-3">
                   {relatedArticles.map((article, index) => (
                     <motion.div
                       key={article.id}

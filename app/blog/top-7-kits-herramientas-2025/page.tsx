@@ -608,7 +608,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -744,7 +744,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -876,7 +876,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -1007,7 +1007,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -1139,7 +1139,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -1271,7 +1271,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -1404,7 +1404,7 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
@@ -1601,7 +1601,7 @@ export default function KitsHerramientasArticle() {
                   </div>
 
                   {/* Casos específicos */}
-                  <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                  <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
                       className="bg-gradient-to-br from-purple-50 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-purple-200"
                       initial={{ opacity: 0, y: 30 }}
@@ -1796,7 +1796,7 @@ export default function KitsHerramientasArticle() {
                       exhaustivamente estas 7 opciones, aquí están nuestras recomendaciones finales:
                     </p>
                     
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-6">
+                    <div className="grid md:grid-cols-3 gap-3 mb-6">
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200 shadow-md">
                         <div className="text-center mb-4">
                           <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>

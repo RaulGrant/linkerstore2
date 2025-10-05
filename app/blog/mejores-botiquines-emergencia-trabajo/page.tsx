@@ -237,7 +237,7 @@ export default function BotiquinesEmergenciaArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -255,7 +255,7 @@ export default function BotiquinesEmergenciaArticle() {
               </motion.p>
 
               <motion.div 
-                className="flex flex-wrap items-center justify-center gap-3 sm:p-4 md:p-6 text-sm"
+                className="flex flex-wrap items-center justify-center gap-3 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -877,7 +877,7 @@ export default function BotiquinesEmergenciaArticle() {
                       </span>
                     </motion.h2>
 
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                    <div className="grid md:grid-cols-2 gap-3 mb-4 sm:mb-6 md:mb-8">
                       {/* 3 Consejos Clave */}
                       <motion.div
                         className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"

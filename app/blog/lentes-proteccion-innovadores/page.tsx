@@ -234,7 +234,7 @@ export default function LentesProteccionArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -252,7 +252,7 @@ export default function LentesProteccionArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-cyan-200"
+                className="flex items-center justify-center gap-3 text-sm text-cyan-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -410,7 +410,7 @@ export default function LentesProteccionArticle() {
                           <AlertTriangle className="h-6 w-6" />
                           La Diferencia Crucial: Z87 vs Z87+
                         </h4>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-4 rounded-lg">
                             <p className="font-bold text-orange-800 mb-2">⚠️ Certificación Básica "Z87":</p>
                             <p className="text-sm text-gray-700">
@@ -835,7 +835,7 @@ export default function LentesProteccionArticle() {
                           estética moderna</b> elimina la apariencia de equipo de seguridad tradicional, lo que fomenta un uso constante.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -950,7 +950,7 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1066,7 +1066,7 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1204,7 +1204,7 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1321,7 +1321,7 @@ export default function LentesProteccionArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1442,7 +1442,7 @@ export default function LentesProteccionArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1806,7 +1806,7 @@ export default function LentesProteccionArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <Sparkles className="h-10 w-10 mx-auto text-purple-600 mb-2" />

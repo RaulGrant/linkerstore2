@@ -238,7 +238,7 @@ export default function OverolesTrabajoArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -256,7 +256,7 @@ export default function OverolesTrabajoArticle() {
               </motion.p>
 
               <motion.div 
-                className="flex flex-wrap items-center justify-center gap-3 sm:p-4 md:p-6 text-sm"
+                className="flex flex-wrap items-center justify-center gap-3 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -883,7 +883,7 @@ export default function OverolesTrabajoArticle() {
                       </span>
                     </motion.h2>
 
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <motion.div
                         className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         initial={{ opacity: 0, x: -30 }}

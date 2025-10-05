@@ -165,7 +165,7 @@ export default function GuiaNOM009Article() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -183,7 +183,7 @@ export default function GuiaNOM009Article() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-blue-200"
+                className="flex items-center justify-center gap-3 text-sm text-blue-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -299,7 +299,7 @@ export default function GuiaNOM009Article() {
                   </motion.div>
 
                   {/* Grid de Costos */}
-                  <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                  <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
                       className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-purple-200"
                       initial={{ opacity: 0, y: 30 }}
@@ -774,7 +774,7 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Comparativa de Mentalidades */}
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-red-50 border-2 border-red-300 rounded-xl p-3 sm:p-4 md:p-6">
                             <h5 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
                               <XCircle className="h-6 w-6" />
@@ -919,7 +919,7 @@ export default function GuiaNOM009Article() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="grid md:grid-cols-2 gap-3">
                             <div className="bg-green-50 border-2 border-green-400 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-green-900 mb-4 text-lg flex items-center gap-2">
                                 <CheckCircle className="h-6 w-6" />
@@ -1737,7 +1737,7 @@ export default function GuiaNOM009Article() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="grid md:grid-cols-2 gap-3">
                             <div className="space-y-4">
                               <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                                 <div className="flex items-center gap-3 mb-3">
@@ -1954,7 +1954,7 @@ export default function GuiaNOM009Article() {
                       📚 Artículos Relacionados
                     </h2>
                     
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       {relatedArticles.map((article, index) => (
                         <motion.div
                           key={article.id}

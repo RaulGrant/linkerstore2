@@ -439,7 +439,7 @@ export default function ExtintoresArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -458,7 +458,7 @@ export default function ExtintoresArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-red-200"
+                className="flex items-center justify-center gap-3 text-sm text-red-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -527,7 +527,7 @@ export default function ExtintoresArticle() {
                     </p>
                   </div>
 
-                  <div className="mt-8 grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                  <div className="mt-8 grid md:grid-cols-3 gap-3">
                     <div className="bg-gradient-to-br from-red-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200 text-center">
                       <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-3">⏱️</div>
                       <p className="font-bold text-red-900 mb-2">10-20 segundos</p>
@@ -667,7 +667,7 @@ export default function ExtintoresArticle() {
                   </AnimatePresence>
 
                   {/* Grid de Extintores */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     {extinguishers.map((ex) => {
                       const isEffective = selectedFireClass && ex.effective.includes(selectedFireClass);
                       const isIneffective = selectedFireClass && ex.ineffective.includes(selectedFireClass);
@@ -753,7 +753,7 @@ export default function ExtintoresArticle() {
                     <Bar data={versatilityChartData} options={versatilityChartOptions} />
                   </div>
 
-                  <div className="mt-8 grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                  <div className="mt-8 grid md:grid-cols-2 gap-3">
                     <div className="bg-gradient-to-r from-red-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                       <h3 className="font-bold text-red-900 mb-3 text-lg flex items-center gap-2">
                         <TrendingUp className="h-6 w-6" />
@@ -793,7 +793,7 @@ export default function ExtintoresArticle() {
                     Recordar este acrónimo universal puede salvar vidas. Actúa con <strong>rapidez y precisión</strong> bajo presión.
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4 sm:mb-6 md:mb-8">
                     {[
                       {
                         letter: 'P',
@@ -847,7 +847,7 @@ export default function ExtintoresArticle() {
                       <AlertTriangle className="h-6 w-6" />
                       Reglas de Oro para Usar un Extintor
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <div className="space-y-3">
                         <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
                           <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
@@ -1001,7 +1001,7 @@ export default function ExtintoresArticle() {
                     )}
                   </AnimatePresence>
 
-                  <div className="mt-8 grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                  <div className="mt-8 grid md:grid-cols-3 gap-3">
                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                       <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3 text-center">👁️</div>
                       <h4 className="font-bold text-blue-900 mb-2 text-center">Visibilidad</h4>
@@ -1043,7 +1043,7 @@ export default function ExtintoresArticle() {
                     Puede fallar justo cuando más lo necesitas.
                   </p>
 
-                  <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                  <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
                       className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300"
                       whileHover={{ scale: 1.05, y: -5 }}
@@ -1140,7 +1140,7 @@ export default function ExtintoresArticle() {
                       <AlertTriangle className="h-8 w-8" />
                       Señales de que tu Extintor DEBE Reemplazarse
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <div className="space-y-3">
                         <div className="flex items-start gap-3 bg-white p-4 rounded-lg border-2 border-red-200">
                           <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-0.5" />
@@ -1357,7 +1357,7 @@ export default function ExtintoresArticle() {
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
                       Las 3 Reglas de Oro para Extintores
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       <div className="text-center">
                         <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                           <span className="text-white text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold">1</span>

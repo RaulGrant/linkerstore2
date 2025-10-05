@@ -294,7 +294,7 @@ export default function MonitoresGasesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -317,7 +317,7 @@ export default function MonitoresGasesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex flex-wrap items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-sky-200"
+                className="flex flex-wrap items-center justify-center gap-3 text-sm text-sky-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -381,7 +381,7 @@ export default function MonitoresGasesArticle() {
                 className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-sky-100">
-                  <div className="flex items-start gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                  <div className="flex items-start gap-3 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl">
                       <Skull className="h-10 w-10 text-white" />
                     </div>
@@ -405,7 +405,7 @@ export default function MonitoresGasesArticle() {
                         <AlertTriangle className="h-6 w-6" />
                         Las Estadísticas No Mienten
                       </h3>
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-6">
+                      <div className="grid md:grid-cols-3 gap-3 mb-6">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
                           <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl font-bold text-red-600 mb-2">1,030</div>
                           <div className="text-sm text-gray-700">Muertes en espacios confinados (2011-2018, EE.UU.)</div>
@@ -567,7 +567,7 @@ export default function MonitoresGasesArticle() {
                           )}
 
                           {(gas.id === 'co' || gas.id === 'h2s') && gas.mechanism && (
-                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="grid md:grid-cols-2 gap-3">
                               <div className="bg-white p-3 sm:p-4 md:p-6 rounded-2xl border border-gray-200">
                                 <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                                   <TestTube className="h-5 w-5" />
@@ -1091,7 +1091,7 @@ export default function MonitoresGasesArticle() {
                     Este cambio representa una transición de la seguridad personal a la seguridad en red.
                   </p>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:p-4 md:p-6 mb-4 sm:mb-6 md:mb-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
                       className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-300"
                       whileHover={{ scale: 1.05, y: -5 }}
@@ -1331,7 +1331,7 @@ export default function MonitoresGasesArticle() {
                         </p>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-3 gap-3">
                         <div className="bg-white/20 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-2xl text-center">
                           <div className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl mb-3">🔍</div>
                           <h3 className="font-bold text-xl mb-2">Entender</h3>

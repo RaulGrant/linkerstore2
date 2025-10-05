@@ -238,7 +238,7 @@ export default function MonitoresGasesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -256,7 +256,7 @@ export default function MonitoresGasesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-gray-400"
+                className="flex items-center justify-center gap-3 text-sm text-gray-400"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -393,7 +393,7 @@ export default function MonitoresGasesArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-blue-500 rounded-2xl p-4 flex-shrink-0">
                             <Wind className="h-10 w-10 text-white" />
                           </div>
@@ -403,7 +403,7 @@ export default function MonitoresGasesArticle() {
                               El oxígeno es el gas más fundamental para la vida. El aire normal contiene aproximadamente <b>20.8% de oxígeno</b>. 
                               Cualquier desviación significativa presenta un peligro inmediato.
                             </p>
-                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="grid md:grid-cols-2 gap-3">
                               <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                                 <h4 className="font-bold text-red-800 mb-3">❌ Deficiencia (&lt;19.5%)</h4>
                                 <p className="text-gray-700 text-sm">
@@ -432,7 +432,7 @@ export default function MonitoresGasesArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-orange-500 rounded-2xl p-4 flex-shrink-0">
                             <Flame className="h-10 w-10 text-white" />
                           </div>
@@ -473,7 +473,7 @@ export default function MonitoresGasesArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-gray-600 rounded-2xl p-4 flex-shrink-0">
                             <Activity className="h-10 w-10 text-white" />
                           </div>
@@ -508,7 +508,7 @@ export default function MonitoresGasesArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-yellow-600 rounded-2xl p-4 flex-shrink-0">
                             <Droplets className="h-10 w-10 text-white" />
                           </div>
@@ -638,7 +638,7 @@ export default function MonitoresGasesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="grid md:grid-cols-2 gap-3">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-800 mb-3">✅ Ventajas</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
@@ -730,7 +730,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                          <div className="grid md:grid-cols-2 gap-3">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-800 mb-3">✅ Ventajas</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
@@ -815,7 +815,7 @@ export default function MonitoresGasesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-800 mb-3">✅ Ventajas Superiores</h4>
                               <ul className="space-y-2 text-sm text-gray-700">
@@ -951,7 +951,7 @@ export default function MonitoresGasesArticle() {
                           <b className="bg-blue-100 px-2 py-1 rounded">sensor Ex catalítico con alta resistencia al envenenamiento</b> minimizan los costos operativos a largo plazo.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1080,7 +1080,7 @@ export default function MonitoresGasesArticle() {
                           </ul>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1200,7 +1200,7 @@ export default function MonitoresGasesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1324,7 +1324,7 @@ export default function MonitoresGasesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1448,7 +1448,7 @@ export default function MonitoresGasesArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1686,7 +1686,7 @@ export default function MonitoresGasesArticle() {
                           programa de seguridad. Se basa en dos prácticas complementarias y obligatorias:
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                             <h4 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
                               <Activity className="h-5 w-5" />
@@ -1823,7 +1823,7 @@ export default function MonitoresGasesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />

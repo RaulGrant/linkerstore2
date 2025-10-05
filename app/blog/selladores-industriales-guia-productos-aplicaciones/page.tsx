@@ -243,7 +243,7 @@ export default function SelladoresIndustrialesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -261,7 +261,7 @@ export default function SelladoresIndustrialesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-blue-200"
+                className="flex items-center justify-center gap-3 text-sm text-blue-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -492,7 +492,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                               <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -598,7 +598,7 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                               <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -704,7 +704,7 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                               <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -810,7 +810,7 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                               <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -912,7 +912,7 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                               <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
@@ -1203,7 +1203,7 @@ export default function SelladoresIndustrialesArticle() {
                           <Shield className="h-8 w-8" />
                           <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Certificaciones y Normativas Clave en México</h3>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
                             <h4 className="font-bold mb-2">🚰 NSF/ANSI 61:</h4>
                             <p className="text-sm">
@@ -1334,7 +1334,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1464,7 +1464,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1599,7 +1599,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1722,7 +1722,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1857,7 +1857,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1987,7 +1987,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-amber-200">
                             <h4 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -2413,7 +2413,7 @@ export default function SelladoresIndustrialesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />

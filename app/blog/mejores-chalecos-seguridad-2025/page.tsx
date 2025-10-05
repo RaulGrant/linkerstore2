@@ -310,7 +310,7 @@ export default function ChalecosSeguridadArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 relative z-10"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 relative z-10"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -328,7 +328,7 @@ export default function ChalecosSeguridadArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-blue-200"
+                className="flex items-center justify-center gap-3 text-sm text-blue-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
@@ -701,14 +701,14 @@ export default function ChalecosSeguridadArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-green-500 rounded-2xl p-4 flex-shrink-0">
                             <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🧵</span>
                           </div>
                           <div className="flex-1">
                             <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-green-900">Materiales y Construcción</h3>
                             <p className="text-gray-700 mb-4 text-lg">Los dos materiales más comunes son el <strong>poliéster</strong> y la <strong>gabardina</strong> (una mezcla de poliéster y algodón).</p>
-                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="grid md:grid-cols-2 gap-3">
                               <div className="bg-white/70 p-4 rounded-xl">
                                 <h4 className="font-bold text-green-800 mb-2">💨 Poliéster:</h4>
                                 <p className="text-gray-700">Es ligero, transpirable y de secado rápido. Ideal para climas cálidos y uso general donde la comodidad es clave.</p>
@@ -728,7 +728,7 @@ export default function ChalecosSeguridadArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-yellow-500 rounded-2xl p-4 flex-shrink-0">
                             <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">👁️</span>
                           </div>
@@ -749,7 +749,7 @@ export default function ChalecosSeguridadArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-blue-500 rounded-2xl p-4 flex-shrink-0">
                             <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🔧</span>
                           </div>
@@ -770,7 +770,7 @@ export default function ChalecosSeguridadArticle() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.1, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-purple-500 rounded-2xl p-4 flex-shrink-0">
                             <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">📏</span>
                           </div>
@@ -791,7 +791,7 @@ export default function ChalecosSeguridadArticle() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1.3, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-3 sm:p-4 md:p-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-orange-500 rounded-2xl p-4 flex-shrink-0">
                             <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🎨</span>
                           </div>
@@ -883,7 +883,7 @@ export default function ChalecosSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Uso general, logística, eventos, y cualquiera que busque el mejor balance entre costo y beneficio.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.2/5 estrellas (55 reseñas)</p>
@@ -948,7 +948,7 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Brigadistas, construcción, minería, y cualquier trabajo que exija máxima resistencia.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.5/5 estrellas (150+ reseñas)</p>
@@ -1013,7 +1013,7 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Empresas de construcción, seguridad, logística y control de tráfico que buscan uniformes personalizados.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.0/5 estrellas (200+ reseñas)</p>
@@ -1079,7 +1079,7 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Pequeños equipos, voluntarios, vigilantes de estacionamiento.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon (paquete de 2 unidades)</p>
@@ -1144,7 +1144,7 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Equipos que buscan una alternativa de personalización con una calificación muy alta.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
@@ -1209,7 +1209,7 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Uso industrial general, mantenimiento, brigadas con presupuesto moderado.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
@@ -1274,7 +1274,7 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Usuarios que necesitan la funcionalidad de un brigadista sin el alto costo.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
@@ -1489,7 +1489,7 @@ export default function ChalecosSeguridadArticle() {
                         📚 Artículos Relacionados que Te Pueden Interesar
                       </h2>
                       
-                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
                         {relatedArticles.map((article, index) => (
                           <motion.div
                             key={article.id}

@@ -255,7 +255,7 @@ export default function ArnesesSeguridadArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -273,7 +273,7 @@ export default function ArnesesSeguridadArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -428,7 +428,7 @@ export default function ArnesesSeguridadArticle() {
                         Su cumplimiento es obligatorio para todas las empresas y establece los requisitos mínimos para prevenir accidentes.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4">
+                      <div className="grid md:grid-cols-2 gap-3 mb-4">
                         <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-red-800 mb-3">📐 Ámbito de Aplicación:</h4>
                           <p className="text-gray-700 text-sm">
@@ -476,7 +476,7 @@ export default function ArnesesSeguridadArticle() {
                         <b className="text-blue-700"> sello de calidad y rendimiento superior</b>.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-blue-800 mb-3">🇺🇸 ANSI/ASSP Z359.11</h4>
                           <p className="text-gray-700 text-sm">
@@ -586,7 +586,7 @@ export default function ArnesesSeguridadArticle() {
                         de las partes más fuertes del cuerpo.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">🧵 Materiales Comunes</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
@@ -682,7 +682,7 @@ export default function ArnesesSeguridadArticle() {
                         Se debe buscar:
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-purple-800 mb-3">✓ Características Clave</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
@@ -1123,7 +1123,7 @@ export default function ArnesesSeguridadArticle() {
                           es el <b>precio accesible</b>, pero presenta serias deficiencias en certificación.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1258,7 +1258,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1383,7 +1383,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1508,7 +1508,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1634,7 +1634,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-indigo-200">
                             <h4 className="font-bold text-indigo-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1761,7 +1761,7 @@ export default function ArnesesSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -2009,7 +2009,7 @@ export default function ArnesesSeguridadArticle() {
                               riguroso de inspección es un requisito legal y una práctica de seguridad indispensable.
                             </p>
                             
-                            <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                            <div className="grid md:grid-cols-2 gap-3">
                               <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl">
                                 <h4 className="font-bold text-orange-800 mb-3">🔍 Inspección Pre-Uso (Diaria)</h4>
                                 <ul className="space-y-2 text-sm text-gray-700">
@@ -2194,7 +2194,7 @@ export default function ArnesesSeguridadArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />

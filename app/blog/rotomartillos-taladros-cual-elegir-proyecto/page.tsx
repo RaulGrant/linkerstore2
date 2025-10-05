@@ -239,7 +239,7 @@ export default function RotomartillosTaladrosArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -257,7 +257,7 @@ export default function RotomartillosTaladrosArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -655,7 +655,7 @@ export default function RotomartillosTaladrosArticle() {
                           Con Cable vs. Inalámbrico
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <Power className="h-5 w-5" />
@@ -723,7 +723,7 @@ export default function RotomartillosTaladrosArticle() {
                           Motores con Carbones vs. Sin Carbones (Brushless)
                         </h3>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-300">
                             <h4 className="font-bold text-gray-800 mb-4">⚙️ Con Carbones (Brushed)</h4>
                             <p className="text-sm text-gray-700 mb-3">
@@ -791,7 +791,7 @@ export default function RotomartillosTaladrosArticle() {
                       Entender los números te ayudará a <b className="text-green-600">elegir la herramienta correcta</b> para tus necesidades específicas.
                     </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                    <div className="grid md:grid-cols-2 gap-3">
                       {/* Velocidad (RPM) */}
                       <motion.div 
                         className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border-2 border-green-200"
@@ -1002,7 +1002,7 @@ export default function RotomartillosTaladrosArticle() {
                           mampostería ligera como ladrillo</b>, haciéndolo extremadamente versátil.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1106,7 +1106,7 @@ export default function RotomartillosTaladrosArticle() {
                           mampostería. Es una herramienta robusta, fiable y con el respaldo de una de las marcas líderes para profesionales.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1221,7 +1221,7 @@ export default function RotomartillosTaladrosArticle() {
                           sin realizar una gran inversión.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1325,7 +1325,7 @@ export default function RotomartillosTaladrosArticle() {
                           y su capacidad para operar durante largas jornadas sin sobrecalentarse.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1437,7 +1437,7 @@ export default function RotomartillosTaladrosArticle() {
                           profesionales que no aceptan concesiones en rendimiento o seguridad.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1551,7 +1551,7 @@ export default function RotomartillosTaladrosArticle() {
                           donde un taladro percutor convencional <b className="bg-orange-100 px-2 py-1 rounded">simplemente no es una opción viable</b>.
                         </p>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                             <h4 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1879,7 +1879,7 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />

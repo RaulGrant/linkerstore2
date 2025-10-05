@@ -235,7 +235,7 @@ export default function ExtintoresGuiaArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -253,7 +253,7 @@ export default function ExtintoresGuiaArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 sm:p-4 md:p-6 text-sm text-orange-200"
+                className="flex items-center justify-center gap-3 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -632,7 +632,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                             <h4 className="font-bold text-yellow-800 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -707,7 +707,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -790,7 +790,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1029,7 +1029,7 @@ export default function ExtintoresGuiaArticle() {
                         en los centros de trabajo. Obliga a los empleadores a:
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-4">
+                      <div className="grid md:grid-cols-2 gap-3 mb-4">
                         <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-red-800 mb-3">📋 Obligaciones del Patrón:</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
@@ -1096,7 +1096,7 @@ export default function ExtintoresGuiaArticle() {
                         </p>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                           <h4 className="font-bold text-blue-800 mb-3">🔧 Mantenimiento Anual:</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
@@ -1258,7 +1258,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1388,7 +1388,7 @@ export default function ExtintoresGuiaArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1515,7 +1515,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1640,7 +1640,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1765,7 +1765,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -1888,7 +1888,7 @@ export default function ExtintoresGuiaArticle() {
                           </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-amber-200">
                             <h4 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
@@ -2153,7 +2153,7 @@ export default function ExtintoresGuiaArticle() {
                         💡 3 Consejos Clave para Acertar
                       </h3>
                       
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-3 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md">
                           <div className="text-center mb-4">
                             <span className="text-lg sm:text-xl md:text-2xl sm:text-xl sm:text-2xl md:text-3xl md:text-4xl">🎯</span>
@@ -2264,7 +2264,7 @@ export default function ExtintoresGuiaArticle() {
                         y que no haya golpes, óxido o fugas.
                       </p>
 
-                      <div className="grid md:grid-cols-2 gap-3 sm:p-4 md:p-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                           <h4 className="font-bold text-green-800 mb-3">📅 Inspección Mensual (Tú mismo):</h4>
                           <ul className="space-y-2 text-sm text-gray-700">
@@ -2396,7 +2396,7 @@ export default function ExtintoresGuiaArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-3 sm:p-4 md:p-6 mt-8">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
                         <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
