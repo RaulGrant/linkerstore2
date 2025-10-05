@@ -267,7 +267,7 @@ export default function ProductComparison({
                 className="font-bold"
                 whileHover={{ scale: 1.05 }}
               >
-                Ver en Amazon
+                {product.amazonLink.includes('mercadolibre.com') ? 'Comprar en Mercado Libre' : 'Ver en Amazon'}
               </motion.span>
               
               <span className="text-sm opacity-90">{product.name}</span>
