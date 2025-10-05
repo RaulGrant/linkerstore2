@@ -307,7 +307,7 @@ export default function ProductComparison({
         transition={{ delay: 1.2 }}
       >
         <p className="text-sm text-blue-800">
-          <strong>📢 Divulgación:</strong> Los enlaces anteriores son enlaces de afiliados de Amazon. 
+          <strong>📢 Divulgación:</strong> Los enlaces anteriores son enlaces de afiliados de Amazon y Mercado Libre. 
           Podemos recibir una comisión si realizas una compra, sin costo adicional para ti. 💙
         </p>
       </motion.div>
