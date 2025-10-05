@@ -90,7 +90,7 @@ export default function KitsHerramientasArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section con partículas animadas */}
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas extendido por toda la sección */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (80 partículas - distribuidas por toda la sección) */}
@@ -209,7 +209,7 @@ export default function KitsHerramientasArticle() {
               transition={{ duration: 1 }}
             >
               <motion.h1 
-                className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -225,7 +225,7 @@ export default function KitsHerramientasArticle() {
                 Top 7 Kits de Herramientas 2025
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed"
+                className="text-xl md:text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 md:mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.5 }}
@@ -447,12 +447,12 @@ export default function KitsHerramientasArticle() {
           
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="w-full">
-              <motion.article className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50 relative z-10">
+              <motion.article className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50 relative z-10">
                 
                 {/* Sección introductoria con mejor diseño */}
-                <section id="introduccion-principal" className="mb-16">
+                <section id="introduccion-principal" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.div 
-                    className="bg-gradient-to-br from-slate-50 to-indigo-50 p-8 rounded-2xl shadow-lg border border-indigo-100 relative overflow-hidden"
+                    className="bg-gradient-to-br from-slate-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-100 relative overflow-hidden"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -467,9 +467,9 @@ export default function KitsHerramientasArticle() {
                     
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
-                        <span className="text-2xl">🔧</span>
+                        <span className="text-lg sm:text-xl md:text-2xl">🔧</span>
                       </div>
-                      <h2 className="text-3xl font-bold text-gray-900">La Importancia de Elegir el Kit Correcto</h2>
+                      <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900">La Importancia de Elegir el Kit Correcto</h2>
                     </div>
                     
                     <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -481,7 +481,7 @@ export default function KitsHerramientasArticle() {
                         Pero, <b>¿cómo elegir el kit perfecto entre un mar de opciones?</b> El mercado está saturado de juegos que prometen ser la solución definitiva, pero la realidad es que la calidad, durabilidad y funcionalidad varían enormemente. Un kit inadecuado puede convertirse en una fuente de frustración, con piezas que se rompen en el primer uso o la ausencia de esa punta de destornillador específica que necesitas con urgencia.
                       </p>
                       
-                      <div className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 p-6 rounded-2xl border border-blue-200">
+                      <div className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 p-3 sm:p-4 md:p-6 rounded-2xl border border-blue-200">
                         <p className="font-semibold text-blue-900 mb-2">
                           💡 <b>En esta guía definitiva, hemos hecho el trabajo pesado por ti.</b>
                         </p>
@@ -494,9 +494,9 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Top 7 Kits de Herramientas */}
-                <section id="top-kits" className="mb-16">
+                <section id="top-kits" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -30, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -525,7 +525,7 @@ export default function KitsHerramientasArticle() {
                   
                   {/* Nota importante sobre calificaciones */}
                   <motion.div 
-                    className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-8"
+                    className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-4 sm:mb-6 md:mb-8"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
@@ -545,7 +545,7 @@ export default function KitsHerramientasArticle() {
                   <div className="space-y-12">
                     {/* Producto #1 - DEWALT DWMT81535 */}
                     <motion.div 
-                      className="bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 p-8 rounded-3xl shadow-2xl border-2 border-yellow-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.2 }}
@@ -557,7 +557,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">DEWALT DWMT81535: El Kit Profesional para Mecánica</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">DEWALT DWMT81535: El Kit Profesional para Mecánica</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(5)].map((_, i) => (
@@ -583,7 +583,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-xl mb-6 border border-yellow-200">
+                        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-yellow-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -608,9 +608,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -640,7 +640,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -663,14 +663,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-xl border-2 border-orange-200">
+                        <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors cursor-pointer">
+                              <div className="bg-yellow-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -681,7 +681,7 @@ export default function KitsHerramientasArticle() {
 
                     {/* Producto #2 - Pretul SET-83 */}
                     <motion.div 
-                      className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-8 rounded-3xl shadow-2xl border-2 border-emerald-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-emerald-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
@@ -693,7 +693,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">Pretul SET-83: La Opción Económica Confiable</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Pretul SET-83: La Opción Económica Confiable</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(4)].map((_, i) => (
@@ -719,7 +719,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-emerald-100 to-green-100 p-6 rounded-xl mb-6 border border-emerald-200">
+                        <div className="bg-gradient-to-r from-emerald-100 to-green-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-emerald-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -744,9 +744,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -772,7 +772,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -795,14 +795,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-emerald-100 to-green-100 p-6 rounded-xl border-2 border-emerald-200">
+                        <div className="bg-gradient-to-r from-emerald-100 to-green-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-emerald-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-emerald-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors cursor-pointer">
+                              <div className="bg-emerald-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -813,7 +813,7 @@ export default function KitsHerramientasArticle() {
 
                     {/* Producto #3 - CARTMAN 238 Piezas */}
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
@@ -825,7 +825,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">CARTMAN 238 Piezas: El Favorito del Bricolaje</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">CARTMAN 238 Piezas: El Favorito del Bricolaje</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(4)].map((_, i) => (
@@ -851,7 +851,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl mb-6 border border-blue-200">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-blue-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -876,9 +876,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -904,7 +904,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -927,14 +927,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-200">
+                        <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-blue-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600 transition-colors cursor-pointer">
+                              <div className="bg-blue-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -945,7 +945,7 @@ export default function KitsHerramientasArticle() {
 
                     {/* Producto #4 - KIROGILY 150 en 1 */}
                     <motion.div 
-                      className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.5 }}
@@ -957,7 +957,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">KIROGILY 150 en 1: El Especialista en Electrónica</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">KIROGILY 150 en 1: El Especialista en Electrónica</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(5)].map((_, i) => (
@@ -982,7 +982,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl mb-6 border border-purple-200">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-purple-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -1007,9 +1007,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -1035,7 +1035,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -1058,14 +1058,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-200">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-purple-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors cursor-pointer">
+                              <div className="bg-purple-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -1076,7 +1076,7 @@ export default function KitsHerramientasArticle() {
 
                     {/* Producto #5 - ANMIEN Kit 220 Piezas */}
                     <motion.div 
-                      className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-8 rounded-3xl shadow-2xl border-2 border-orange-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.6 }}
@@ -1088,7 +1088,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">ANMIEN 220 Piezas: El Todoterreno Versátil</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">ANMIEN 220 Piezas: El Todoterreno Versátil</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(4)].map((_, i) => (
@@ -1114,7 +1114,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl mb-6 border border-orange-200">
+                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-orange-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -1139,9 +1139,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -1167,7 +1167,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -1190,14 +1190,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-200">
+                        <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors cursor-pointer">
+                              <div className="bg-orange-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -1208,7 +1208,7 @@ export default function KitsHerramientasArticle() {
 
                     {/* Producto #6 - MOYAC 111 Piezas */}
                     <motion.div 
-                      className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.7 }}
@@ -1220,7 +1220,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">MOYAC 111 Piezas: El Compacto Inteligente</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">MOYAC 111 Piezas: El Compacto Inteligente</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(4)].map((_, i) => (
@@ -1246,7 +1246,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl mb-6 border border-teal-200">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-teal-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -1271,9 +1271,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -1299,7 +1299,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -1322,14 +1322,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-200">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-teal-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors cursor-pointer">
+                              <div className="bg-teal-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -1340,7 +1340,7 @@ export default function KitsHerramientasArticle() {
 
                     {/* Producto #7 - ZAWELIYO 253 Piezas */}
                     <motion.div 
-                      className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-red-200 relative overflow-hidden"
+                      className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.8 }}
@@ -1352,7 +1352,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">ZAWELIYO 253 Piezas: El Gigante Económico</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">ZAWELIYO 253 Piezas: El Gigante Económico</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(3)].map((_, i) => (
@@ -1379,7 +1379,7 @@ export default function KitsHerramientasArticle() {
                         </p>
                         
                         {/* Especificaciones técnicas */}
-                        <div className="bg-gradient-to-r from-red-100 to-rose-100 p-6 rounded-xl mb-6 border border-red-200">
+                        <div className="bg-gradient-to-r from-red-100 to-rose-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-red-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <span className="mr-2">⚙️</span>
                             Especificaciones Técnicas
@@ -1404,9 +1404,9 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
                           {/* Ventajas */}
-                          <div className="bg-green-50 p-6 rounded-xl border border-green-200">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                               <CheckCircle className="w-5 h-5 mr-2" />
                               Ventajas
@@ -1432,7 +1432,7 @@ export default function KitsHerramientasArticle() {
                           </div>
 
                           {/* Desventajas */}
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
                               <AlertTriangle className="w-5 h-5 mr-2" />
                               Contras
@@ -1455,14 +1455,14 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         {/* Disponibilidad y CTA */}
-                        <div className="bg-gradient-to-r from-red-100 to-rose-100 p-6 rounded-xl border-2 border-red-200">
+                        <div className="bg-gradient-to-r from-red-100 to-rose-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-red-600 mb-2">Disponible en Amazon</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-red-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors cursor-pointer">
+                              <div className="bg-red-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors cursor-pointer">
                                 🛒 Ver en Amazon →
                               </div>
                             </div>
@@ -1475,9 +1475,9 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Comparación de productos */}
-                <section id="comparacion" className="mb-16">
+                <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, x: -50, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1511,9 +1511,9 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Guía de compra */}
-                <section id="guia-compra" className="mb-16">
+                <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: 30, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1540,19 +1540,19 @@ export default function KitsHerramientasArticle() {
                     🎯 Guía de Compra: ¿Cuál Elegir?
                   </motion.h2>
                   
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                     {/* Para Profesionales */}
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl shadow-lg border border-blue-200"
+                      className="bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-blue-200"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8 }}
                     >
                       <div className="flex items-center mb-6">
                         <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
-                          <span className="text-2xl">👔</span>
+                          <span className="text-lg sm:text-xl md:text-2xl">👔</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900">Para Profesionales</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Para Profesionales</h3>
                       </div>
                       
                       <div className="space-y-4">
@@ -1572,16 +1572,16 @@ export default function KitsHerramientasArticle() {
 
                     {/* Para Aficionados */}
                     <motion.div 
-                      className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl shadow-lg border border-green-200"
+                      className="bg-gradient-to-br from-green-50 to-emerald-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-green-200"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8 }}
                     >
                       <div className="flex items-center mb-6">
                         <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
-                          <span className="text-2xl">🏠</span>
+                          <span className="text-lg sm:text-xl md:text-2xl">🏠</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900">Para Aficionados</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Para Aficionados</h3>
                       </div>
                       
                       <div className="space-y-4">
@@ -1601,15 +1601,15 @@ export default function KitsHerramientasArticle() {
                   </div>
 
                   {/* Casos específicos */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
-                      className="bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-xl shadow-lg border border-purple-200"
+                      className="bg-gradient-to-br from-purple-50 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-purple-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.2 }}
                     >
                       <div className="text-center mb-4">
-                        <span className="text-4xl">📱</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">📱</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Reparación de Electrónicos</h4>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-purple-100">
@@ -1619,13 +1619,13 @@ export default function KitsHerramientasArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl shadow-lg border border-orange-200"
+                      className="bg-gradient-to-br from-orange-50 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-orange-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
                     >
                       <div className="text-center mb-4">
-                        <span className="text-4xl">🔧</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🔧</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Kit Todo-en-Uno</h4>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-orange-100">
@@ -1635,13 +1635,13 @@ export default function KitsHerramientasArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-red-50 to-rose-100 p-6 rounded-xl shadow-lg border border-red-200"
+                      className="bg-gradient-to-br from-red-50 to-rose-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-red-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.6 }}
                     >
                       <div className="text-center mb-4">
-                        <span className="text-4xl">💰</span>
+                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">💰</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Presupuesto Limitado</h4>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-red-100">
@@ -1653,9 +1653,9 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Factores clave a considerar */}
-                <section id="factores-clave" className="mb-16">
+                <section id="factores-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, rotateX: -20, scale: 0.9 }}
                     animate={{ 
                       opacity: 1, 
@@ -1683,14 +1683,14 @@ export default function KitsHerramientasArticle() {
                     ⚡ Factores Clave a Considerar
                   </motion.h2>
                   
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                     <motion.div 
                       className="space-y-6"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8 }}
                     >
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                         <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center">
                           <span className="mr-3">🎯</span>
                           Tipo de Uso
@@ -1711,7 +1711,7 @@ export default function KitsHerramientasArticle() {
                         </ul>
                       </div>
 
-                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                         <h3 className="text-xl font-bold text-green-900 mb-4 flex items-center">
                           <span className="mr-3">🔧</span>
                           Calidad del Material
@@ -1739,7 +1739,7 @@ export default function KitsHerramientasArticle() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8 }}
                     >
-                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                         <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center">
                           <span className="mr-3">📦</span>
                           Portabilidad
@@ -1760,7 +1760,7 @@ export default function KitsHerramientasArticle() {
                         </ul>
                       </div>
 
-                      <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                      <div className="bg-gradient-to-r from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-orange-200">
                         <h3 className="text-xl font-bold text-orange-900 mb-4 flex items-center">
                           <span className="mr-3">💰</span>
                           Presupuesto vs. Necesidades
@@ -1785,21 +1785,21 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Conclusión */}
-                <section id="conclusion" className="mb-16">
-                  <motion.h2 className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
+                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                     🎯 Conclusión: Tu Decisión Final
                   </motion.h2>
-                  <div className="bg-gradient-to-r from-indigo-50 to-purple-100 p-8 rounded-2xl shadow-lg border border-indigo-200">
+                  <div className="bg-gradient-to-r from-indigo-50 to-purple-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-200">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
                       Elegir un kit de herramientas es una <b>decisión personal que depende del tipo de trabajo que realizas</b>. 
                       No existe un "mejor kit" universal, pero sí existe el "mejor kit para ti". Después de analizar 
                       exhaustivamente estas 7 opciones, aquí están nuestras recomendaciones finales:
                     </p>
                     
-                    <div className="grid md:grid-cols-3 gap-6 mb-6">
-                      <div className="bg-white p-6 rounded-xl border border-yellow-200 shadow-md">
+                    <div className="grid md:grid-cols-3 gap-3 mb-6">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200 shadow-md">
                         <div className="text-center mb-4">
-                          <span className="text-3xl">🏆</span>
+                          <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           <h3 className="text-lg font-bold text-gray-900">Para Profesionales</h3>
                         </div>
                         <p className="text-gray-700 text-center">
@@ -1807,9 +1807,9 @@ export default function KitsHerramientasArticle() {
                         </p>
                       </div>
                       
-                      <div className="bg-white p-6 rounded-xl border border-blue-200 shadow-md">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200 shadow-md">
                         <div className="text-center mb-4">
-                          <span className="text-3xl">🏠</span>
+                          <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏠</span>
                           <h3 className="text-lg font-bold text-gray-900">Para Bricolaje</h3>
                         </div>
                         <p className="text-gray-700 text-center">
@@ -1817,9 +1817,9 @@ export default function KitsHerramientasArticle() {
                         </p>
                       </div>
                       
-                      <div className="bg-white p-6 rounded-xl border border-purple-200 shadow-md">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200 shadow-md">
                         <div className="text-center mb-4">
-                          <span className="text-3xl">📱</span>
+                          <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">📱</span>
                           <h3 className="text-lg font-bold text-gray-900">Para Electrónica</h3>
                         </div>
                         <p className="text-gray-700 text-center">
@@ -1828,7 +1828,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-200">
+                    <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                       <p className="font-semibold text-blue-900 mb-2 text-center">
                         💡 <b>Nuestro Consejo Final</b>
                       </p>
@@ -1842,14 +1842,14 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Preguntas frecuentes */}
-                <section id="faq" className="mb-16">
-                  <motion.h2 className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
+                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                     ❓ Preguntas Frecuentes
                   </motion.h2>
                   
                   <div className="space-y-6">
                     <motion.div 
-                      className="bg-white p-6 rounded-xl shadow-lg border border-gray-200"
+                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.1 }}
@@ -1863,7 +1863,7 @@ export default function KitsHerramientasArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-white p-6 rounded-xl shadow-lg border border-gray-200"
+                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.2 }}
@@ -1877,7 +1877,7 @@ export default function KitsHerramientasArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-white p-6 rounded-xl shadow-lg border border-gray-200"
+                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
@@ -1891,7 +1891,7 @@ export default function KitsHerramientasArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-white p-6 rounded-xl shadow-lg border border-gray-200"
+                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
@@ -1907,8 +1907,8 @@ export default function KitsHerramientasArticle() {
                 </section>
 
                 {/* Artículos relacionados */}
-                <section id="articulos-relacionados" className="mb-16">
-                  <motion.h2 className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+                <section id="articulos-relacionados" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
+                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
                     📚 Artículos Relacionados
                   </motion.h2>
                   <RelatedArticles articles={relatedArticles} />

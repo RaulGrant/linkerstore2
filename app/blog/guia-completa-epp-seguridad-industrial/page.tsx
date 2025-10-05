@@ -206,7 +206,7 @@ export default function GuiaEPPIndustrialArticle() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-red-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-red-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {Array.from({ length: 100 }, (_, i) => (
@@ -237,7 +237,7 @@ export default function GuiaEPPIndustrialArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -245,7 +245,7 @@ export default function GuiaEPPIndustrialArticle() {
               className="text-center max-w-5xl mx-auto"
             >
               <motion.div
-                className="inline-flex items-center gap-2 bg-orange-600/20 border border-orange-400/30 rounded-full px-6 py-3 text-orange-100 text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 bg-orange-600/20 border border-orange-400/30 rounded-full px-4 sm:px-6 py-3 text-orange-100 text-sm font-medium mb-6"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
@@ -255,7 +255,7 @@ export default function GuiaEPPIndustrialArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -267,7 +267,7 @@ export default function GuiaEPPIndustrialArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2xl text-orange-100 mb-8 leading-relaxed"
+                className="text-xl md:text-lg sm:text-xl md:text-2xl text-orange-100 mb-4 sm:mb-6 md:mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -277,7 +277,7 @@ export default function GuiaEPPIndustrialArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex flex-wrap items-center justify-center gap-6 text-sm text-orange-200"
+                className="flex flex-wrap items-center justify-center gap-3 text-sm text-orange-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -331,22 +331,22 @@ export default function GuiaEPPIndustrialArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-16 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-8 sm:py-10 md:py-12 md:py-16 relative z-10">
             <div className="max-w-6xl mx-auto">
               
               {/* Historia de Impacto - Introducción */}
               <motion.section
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-orange-100">
-                  <div className="flex items-start gap-6 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-orange-100">
+                  <div className="flex items-start gap-3 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl">
                       <AlertTriangle className="h-10 w-10 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                         El Momento que lo Cambia Todo
                       </h2>
                       <p className="text-gray-600 text-sm italic mb-4">
@@ -365,9 +365,9 @@ export default function GuiaEPPIndustrialArticle() {
                       un susto y una tragedia.
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="grid md:grid-cols-2 gap-3 my-8">
                       <motion.div 
-                        className="p-6 bg-green-50 border-l-4 border-green-500 rounded-r-xl"
+                        className="p-3 sm:p-4 md:p-6 bg-green-50 border-l-4 border-green-500 rounded-r-xl"
                         whileHover={{ scale: 1.02, x: 4 }}
                       >
                         <div className="flex items-center gap-3 mb-3">
@@ -381,7 +381,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-red-50 border-l-4 border-red-500 rounded-r-xl"
+                        className="p-3 sm:p-4 md:p-6 bg-red-50 border-l-4 border-red-500 rounded-r-xl"
                         whileHover={{ scale: 1.02, x: 4 }}
                       >
                         <div className="flex items-center gap-3 mb-3">
@@ -396,7 +396,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-orange-100 to-red-100 p-8 rounded-2xl border-2 border-orange-300">
+                    <div className="bg-gradient-to-r from-orange-100 to-red-100 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-orange-300">
                       <p className="text-gray-900 text-xl font-semibold mb-4">
                         💡 El EPP es mucho más que una obligación burocrática
                       </p>
@@ -416,67 +416,67 @@ export default function GuiaEPPIndustrialArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-red-100">
-                  <h2 className="text-4xl font-bold text-center mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-red-100">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
                     <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                       Los Números No Mienten
                     </span>
                   </h2>
-                  <p className="text-center text-gray-600 text-lg mb-10 max-w-3xl mx-auto">
+                  <p className="text-center text-gray-600 text-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto">
                     Los accidentes laborales no son eventos aleatorios. Son un patrón estadístico con costos 
                     humanos y económicos devastadores que pueden, en gran medida, <b>prevenirse</b>.
                   </p>
 
                   {/* Estadísticas de México */}
-                  <div className="mb-12">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <div className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                       <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                        <span className="text-2xl">🇲🇽</span>
+                        <span className="text-lg sm:text-xl md:text-2xl">🇲🇽</span>
                       </div>
                       El Panorama en México: Una Realidad Ineludible
                     </h3>
                     
-                    <div className="grid md:grid-cols-4 gap-6 mb-8">
+                    <div className="grid md:grid-cols-4 gap-3 mb-4 sm:mb-6 md:mb-8">
                       <motion.div 
-                        className="p-6 bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl border border-red-200"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl border border-red-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl font-bold text-red-600 mb-2">290,527</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">290,527</div>
                         <div className="text-sm text-gray-700">Riesgos de trabajo (2023)</div>
                         <div className="text-xs text-gray-500 mt-2">STPS</div>
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl border border-orange-200"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl border border-orange-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl font-bold text-orange-600 mb-2">796</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">796</div>
                         <div className="text-sm text-gray-700">Defunciones (Q3 2024)</div>
                         <div className="text-xs text-gray-500 mt-2">IMSS</div>
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl border border-yellow-200"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl border border-yellow-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl font-bold text-yellow-600 mb-2">38.77%</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-2">38.77%</div>
                         <div className="text-sm text-gray-700">Lesiones en manos/muñecas</div>
                         <div className="text-xs text-gray-500 mt-2">Región más afectada</div>
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-gradient-to-br from-amber-50 to-red-50 rounded-2xl border border-amber-200"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-amber-50 to-red-50 rounded-2xl border border-amber-200"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl font-bold text-amber-600 mb-2">550+</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-600 mb-2">550+</div>
                         <div className="text-sm text-gray-700">Accidentes de mano/día</div>
                         <div className="text-xs text-gray-500 mt-2">201,000 al año</div>
                       </motion.div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                       <div>
                         <h4 className="font-bold text-gray-800 mb-4 text-center">
                           Distribución de Accidentes por Región Anatómica
@@ -498,15 +498,15 @@ export default function GuiaEPPIndustrialArticle() {
                   </div>
 
                   {/* Estadísticas Globales */}
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border border-blue-200">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                       <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                        <span className="text-2xl">🌍</span>
+                        <span className="text-lg sm:text-xl md:text-2xl">🌍</span>
                       </div>
                       Perspectiva Global: Riesgos Sin Fronteras
                     </h3>
                     
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-3">
                       <div className="space-y-4">
                         <div className="flex items-start gap-3">
                           <Eye className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
@@ -544,7 +544,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </div>
                     </div>
 
-                    <div className="mt-6 p-6 bg-white rounded-xl">
+                    <div className="mt-6 p-3 sm:p-4 md:p-6 bg-white rounded-xl">
                       <p className="text-gray-700 text-center italic">
                         <b>2.93 millones</b> de muertes relacionadas con el trabajo a nivel mundial en 2024. 
                         La seguridad no es un gasto que se opone a la producción, es un <b>prerrequisito para la productividad sostenible</b>.
@@ -559,20 +559,20 @@ export default function GuiaEPPIndustrialArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-orange-100">
-                  <h2 className="text-4xl font-bold text-center mb-6">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-orange-100">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6">
                     <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                       El Arsenal de Protección
                     </span>
                   </h2>
-                  <p className="text-center text-gray-600 text-lg mb-10 max-w-3xl mx-auto">
+                  <p className="text-center text-gray-600 text-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10 max-w-3xl mx-auto">
                     Decodificando el EPP de pies a cabeza. Cada pieza es una herramienta de alta ingeniería 
                     diseñada para contrarrestar peligros específicos.
                   </p>
 
-                  <div className="grid md:grid-cols-5 gap-4 mb-10">
+                  <div className="grid md:grid-cols-5 gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                     {eppSections.map((section) => (
                       <motion.button
                         key={section.id}
@@ -607,21 +607,21 @@ export default function GuiaEPPIndustrialArticle() {
                             <Eye className="h-10 w-10 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-900">
+                            <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900">
                               Protección Ocular y Facial
                             </h3>
                             <p className="text-gray-600">Más que un simple plástico: Ciencia de impactos</p>
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-200">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-2xl border border-blue-200">
                           <h4 className="font-bold text-blue-900 mb-4 text-lg flex items-center gap-2">
                             <Shield className="h-5 w-5" />
                             Norma ANSI Z87.1: La Diferencia Crítica entre Z87 y Z87+
                           </h4>
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-xl">
-                              <div className="text-blue-600 font-bold text-2xl mb-2">Z87</div>
+                          <div className="grid md:grid-cols-2 gap-3">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
+                              <div className="text-blue-600 font-bold text-lg sm:text-xl md:text-2xl mb-2">Z87</div>
                               <p className="text-sm text-gray-700 mb-4">Protección básica contra impactos</p>
                               <ul className="space-y-2 text-sm text-gray-600">
                                 <li>✓ Uso general en almacenes</li>
@@ -630,8 +630,8 @@ export default function GuiaEPPIndustrialArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-6 rounded-xl border-2 border-blue-400">
-                              <div className="text-blue-900 font-bold text-2xl mb-2 flex items-center gap-2">
+                            <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-400">
+                              <div className="text-blue-900 font-bold text-lg sm:text-xl md:text-2xl mb-2 flex items-center gap-2">
                                 Z87+ <Badge className="bg-blue-600">RECOMENDADO</Badge>
                               </div>
                               <p className="text-sm text-gray-800 mb-4 font-semibold">Protección de alto impacto certificada</p>
@@ -659,7 +659,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-500">
+                        <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                           <p className="text-yellow-900 font-semibold flex items-center gap-2">
                             <Info className="h-5 w-5" />
                             Novedad ANSI/ISEA Z87.1-2020
@@ -686,14 +686,14 @@ export default function GuiaEPPIndustrialArticle() {
                             <Ear className="h-10 w-10 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-900">
+                            <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900">
                               Protección Auditiva
                             </h3>
                             <p className="text-gray-600">El silencio es oro: 85 dB es el umbral crítico</p>
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300">
                           <h4 className="font-bold text-red-900 mb-4 text-xl flex items-center gap-2">
                             <AlertTriangle className="h-6 w-6" />
                             ¿Por Qué 85 dB es el Punto Crítico?
@@ -706,20 +706,20 @@ export default function GuiaEPPIndustrialArticle() {
 
                           <div className="grid md:grid-cols-3 gap-4 mb-6">
                             <div className="bg-white p-4 rounded-xl text-center">
-                              <div className="text-3xl font-bold text-purple-600 mb-2">85 dB</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-600 mb-2">85 dB</div>
                               <div className="text-xs text-gray-600">NOM-011-STPS-2001 (México)</div>
                             </div>
                             <div className="bg-white p-4 rounded-xl text-center">
-                              <div className="text-3xl font-bold text-blue-600 mb-2">85 dB</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-600 mb-2">85 dB</div>
                               <div className="text-xs text-gray-600">OSHA 1910.95 (EE.UU.)</div>
                             </div>
                             <div className="bg-white p-4 rounded-xl text-center">
-                              <div className="text-3xl font-bold text-green-600 mb-2">85 dB</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-green-600 mb-2">85 dB</div>
                               <div className="text-xs text-gray-600">Directiva 2003/10/EC (UE)</div>
                             </div>
                           </div>
 
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="font-semibold text-gray-800 mb-3">Tasa de Intercambio: El Factor Crítico</p>
                             <div className="grid md:grid-cols-2 gap-4">
                               <div className="p-4 bg-orange-50 rounded-lg">
@@ -734,7 +734,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-purple-50 p-6 rounded-2xl border border-purple-200">
+                        <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-2xl border border-purple-200">
                           <h4 className="font-bold text-purple-900 mb-4">Escala de Ruido en el Trabajo</h4>
                           <div className="space-y-3">
                             <div className="flex items-center gap-4">
@@ -777,14 +777,14 @@ export default function GuiaEPPIndustrialArticle() {
                             <Wind className="h-10 w-10 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-900">
+                            <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900">
                               Protección Respiratoria
                             </h3>
                             <p className="text-gray-600">Lo que no ves puede lastimarte</p>
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-2xl border border-green-200">
                           <h4 className="font-bold text-green-900 mb-4 text-lg">
                             Código de Colores NIOSH para Cartuchos
                           </h4>
@@ -827,7 +827,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-2xl border border-gray-200">
                           <h4 className="font-bold text-gray-800 mb-4 text-lg">
                             Clasificación de Filtros de Partículas NIOSH
                           </h4>
@@ -837,19 +837,19 @@ export default function GuiaEPPIndustrialArticle() {
 
                           <div className="grid md:grid-cols-3 gap-4 mb-6">
                             <div className="p-4 bg-blue-50 rounded-xl border-2 border-blue-300">
-                              <div className="text-2xl font-bold text-blue-600 mb-2">N</div>
+                              <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 mb-2">N</div>
                               <div className="text-sm font-semibold text-blue-800 mb-1">No resistente al aceite</div>
                               <div className="text-xs text-gray-600">Para partículas no basadas en aceite (polvo, neblinas acuosas)</div>
                             </div>
 
                             <div className="p-4 bg-orange-50 rounded-xl border-2 border-orange-300">
-                              <div className="text-2xl font-bold text-orange-600 mb-2">R</div>
+                              <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 mb-2">R</div>
                               <div className="text-sm font-semibold text-orange-800 mb-1">Resistente al aceite</div>
                               <div className="text-xs text-gray-600">Hasta 8 horas con aerosoles de aceite</div>
                             </div>
 
                             <div className="p-4 bg-green-50 rounded-xl border-2 border-green-300">
-                              <div className="text-2xl font-bold text-green-600 mb-2">P</div>
+                              <div className="text-lg sm:text-xl md:text-2xl font-bold text-green-600 mb-2">P</div>
                               <div className="text-sm font-semibold text-green-800 mb-1">A prueba de aceite</div>
                               <div className="text-xs text-gray-600">Uso prolongado (&gt;8h) con aerosoles de aceite</div>
                             </div>
@@ -857,15 +857,15 @@ export default function GuiaEPPIndustrialArticle() {
 
                           <div className="grid md:grid-cols-3 gap-4">
                             <div className="p-4 bg-gray-100 rounded-xl text-center">
-                              <div className="text-3xl font-bold text-gray-700 mb-2">95</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-700 mb-2">95</div>
                               <div className="text-sm text-gray-600">Filtra el 95% de partículas</div>
                             </div>
                             <div className="p-4 bg-gray-200 rounded-xl text-center">
-                              <div className="text-3xl font-bold text-gray-700 mb-2">99</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-700 mb-2">99</div>
                               <div className="text-sm text-gray-600">Filtra el 99% de partículas</div>
                             </div>
                             <div className="p-4 bg-purple-100 rounded-xl text-center border-2 border-purple-400">
-                              <div className="text-3xl font-bold text-purple-700 mb-2">100</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-700 mb-2">100</div>
                               <div className="text-sm text-purple-800 font-semibold">Filtra el 99.97% ⭐</div>
                             </div>
                           </div>
@@ -896,29 +896,29 @@ export default function GuiaEPPIndustrialArticle() {
                             <Hand className="h-10 w-10 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-900">
+                            <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900">
                               Protección de Manos
                             </h3>
                             <p className="text-gray-600">Tu herramienta más valiosa: 38.77% de todos los accidentes</p>
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300">
                           <h4 className="font-bold text-red-900 mb-4 text-xl flex items-center gap-2">
                             <AlertTriangle className="h-6 w-6" />
                             El Punto Más Vulnerable del Sistema
                           </h4>
-                          <div className="grid md:grid-cols-3 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl text-center">
-                              <div className="text-4xl font-bold text-red-600 mb-2">201,000</div>
+                          <div className="grid md:grid-cols-3 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
+                              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">201,000</div>
                               <div className="text-sm text-gray-700">Bajas por accidentes de mano (2023)</div>
                             </div>
-                            <div className="bg-white p-6 rounded-xl text-center">
-                              <div className="text-4xl font-bold text-orange-600 mb-2">3.9M</div>
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
+                              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">3.9M</div>
                               <div className="text-sm text-gray-700">Días de trabajo perdidos</div>
                             </div>
-                            <div className="bg-white p-6 rounded-xl text-center">
-                              <div className="text-4xl font-bold text-amber-600 mb-2">550+</div>
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
+                              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-600 mb-2">550+</div>
                               <div className="text-sm text-gray-700">Accidentes de mano por día</div>
                             </div>
                           </div>
@@ -928,7 +928,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-2xl border border-gray-200">
                           <h4 className="font-bold text-gray-800 mb-6 text-lg">
                             Niveles de Resistencia al Corte ANSI/ISEA 105
                           </h4>
@@ -990,8 +990,8 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="p-6 bg-blue-50 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div className="p-3 sm:p-4 md:p-6 bg-blue-50 rounded-xl border border-blue-200">
                             <h5 className="font-bold text-blue-900 mb-3">Materiales de Alta Resistencia</h5>
                             <ul className="space-y-2 text-sm text-gray-700">
                               <li className="flex items-start gap-2">
@@ -1009,7 +1009,7 @@ export default function GuiaEPPIndustrialArticle() {
                             </ul>
                           </div>
 
-                          <div className="p-6 bg-green-50 rounded-xl border border-green-200">
+                          <div className="p-3 sm:p-4 md:p-6 bg-green-50 rounded-xl border border-green-200">
                             <h5 className="font-bold text-green-900 mb-3">Recubrimientos Especiales</h5>
                             <ul className="space-y-2 text-sm text-gray-700">
                               <li className="flex items-start gap-2">
@@ -1028,7 +1028,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-500">
+                        <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-yellow-500">
                           <p className="text-yellow-900 font-semibold flex items-center gap-2">
                             <AlertTriangle className="h-5 w-5" />
                             Protección Química: No Existe un Guante Universal
@@ -1057,14 +1057,14 @@ export default function GuiaEPPIndustrialArticle() {
                             <Footprints className="h-10 w-10 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-900">
+                            <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900">
                               Protección de Pies
                             </h3>
                             <p className="text-gray-600">La base de tu seguridad: 60,000 lesiones anuales</p>
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-2xl border border-indigo-200">
+                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-3 sm:p-4 md:p-6 rounded-2xl border border-indigo-200">
                           <h4 className="font-bold text-indigo-900 mb-4 text-lg">
                             Requisitos OSHA 1910.136 para Calzado de Seguridad
                           </h4>
@@ -1072,8 +1072,8 @@ export default function GuiaEPPIndustrialArticle() {
                             La protección debe seleccionarse según los <b>peligros específicos</b> del entorno de trabajo.
                           </p>
 
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-xl border-2 border-indigo-300">
+                          <div className="grid md:grid-cols-2 gap-3">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-indigo-300">
                               <div className="flex items-center gap-3 mb-3">
                                 <div className="p-2 bg-indigo-100 rounded-lg">
                                   <Shield className="h-6 w-6 text-indigo-600" />
@@ -1099,7 +1099,7 @@ export default function GuiaEPPIndustrialArticle() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-purple-300">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                               <div className="flex items-center gap-3 mb-3">
                                 <div className="p-2 bg-purple-100 rounded-lg">
                                   <AlertTriangle className="h-6 w-6 text-purple-600" />
@@ -1114,7 +1114,7 @@ export default function GuiaEPPIndustrialArticle() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-green-300">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                               <div className="flex items-center gap-3 mb-3">
                                 <div className="p-2 bg-green-100 rounded-lg">
                                   <Zap className="h-6 w-6 text-green-600" />
@@ -1136,7 +1136,7 @@ export default function GuiaEPPIndustrialArticle() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-blue-300">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                               <div className="flex items-center gap-3 mb-3">
                                 <div className="p-2 bg-blue-100 rounded-lg">
                                   <Activity className="h-6 w-6 text-blue-600" />
@@ -1153,8 +1153,8 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="p-6 bg-yellow-50 rounded-xl border-2 border-yellow-400">
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div className="p-3 sm:p-4 md:p-6 bg-yellow-50 rounded-xl border-2 border-yellow-400">
                             <h5 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
                               <Zap className="h-5 w-5" />
                               Calzado Dieléctrico (EH)
@@ -1169,7 +1169,7 @@ export default function GuiaEPPIndustrialArticle() {
                             </ul>
                           </div>
 
-                          <div className="p-6 bg-orange-50 rounded-xl border-2 border-orange-400">
+                          <div className="p-3 sm:p-4 md:p-6 bg-orange-50 rounded-xl border-2 border-orange-400">
                             <h5 className="font-bold text-orange-900 mb-3 flex items-center gap-2">
                               <Radio className="h-5 w-5" />
                               Calzado Conductivo (CD)
@@ -1185,7 +1185,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                        <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                           <p className="text-red-900 font-semibold flex items-center gap-2 mb-2">
                             <AlertTriangle className="h-5 w-5" />
                             El EPP Funciona Como un Sistema Integrado
@@ -1207,23 +1207,23 @@ export default function GuiaEPPIndustrialArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-blue-100">
-                  <div className="flex items-center gap-4 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
+                  <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl">
                       <Brain className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         El Factor Humano
                       </h2>
                       <p className="text-gray-600 text-lg">¿Por qué no usamos el EPP y cómo solucionarlo?</p>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300 mb-8">
-                    <h3 className="text-2xl font-bold text-red-900 mb-4">
+                  <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300 mb-4 sm:mb-6 md:mb-8">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4">
                       La Raíz del Problema: Cuando la Incomodidad Supera al Miedo
                     </h3>
                     <p className="text-gray-700 text-lg mb-6">
@@ -1231,8 +1231,8 @@ export default function GuiaEPPIndustrialArticle() {
                       Las razones son casi siempre prácticas y profundamente humanas.
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="bg-white p-6 rounded-xl">
+                    <div className="grid md:grid-cols-2 gap-3">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                           <Thermometer className="h-5 w-5 text-red-600" />
                           Barreras Físicas
@@ -1257,7 +1257,7 @@ export default function GuiaEPPIndustrialArticle() {
                         </ul>
                       </div>
 
-                      <div className="bg-white p-6 rounded-xl">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                           <Brain className="h-5 w-5 text-purple-600" />
                           Barreras Psicológicas
@@ -1283,7 +1283,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </div>
                     </div>
 
-                    <div className="mt-6 p-6 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl border-2 border-yellow-400">
+                    <div className="mt-6 p-3 sm:p-4 md:p-6 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl border-2 border-yellow-400">
                       <p className="text-gray-900 font-semibold text-lg">
                         💡 El Problema Fundamental
                       </p>
@@ -1295,14 +1295,14 @@ export default function GuiaEPPIndustrialArticle() {
                     </div>
                   </div>
 
-                  <div className="mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  <div className="mb-4 sm:mb-6 md:mb-8">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6">
                       Estrategias para el Éxito: Construyendo una Cultura de Seguridad
                     </h3>
 
                     <div className="space-y-6">
                       <motion.div 
-                        className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500"
                         whileHover={{ x: 4 }}
                       >
                         <h4 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
@@ -1318,7 +1318,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-500"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-500"
                         whileHover={{ x: 4 }}
                       >
                         <h4 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
@@ -1335,7 +1335,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-500"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-500"
                         whileHover={{ x: 4 }}
                       >
                         <h4 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
@@ -1352,7 +1352,7 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border-l-4 border-orange-500"
+                        className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border-l-4 border-orange-500"
                         whileHover={{ x: 4 }}
                       >
                         <h4 className="font-bold text-orange-900 mb-3 text-lg flex items-center gap-2">
@@ -1384,29 +1384,29 @@ export default function GuiaEPPIndustrialArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-purple-100">
-                  <div className="flex items-center gap-4 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-purple-100">
+                  <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl">
                       <Zap className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         El Futuro es Ahora
                       </h2>
                       <p className="text-gray-600 text-lg">EPP Inteligente y Materiales de Próxima Generación</p>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 text-lg mb-8 text-center max-w-4xl mx-auto">
+                  <p className="text-gray-700 text-lg mb-4 sm:mb-6 md:mb-8 text-center max-w-4xl mx-auto">
                     Impulsado por avances en microelectrónica, ciencia de materiales y conectividad, 
                     el EPP está evolucionando de una <b>armadura pasiva</b> a un <b>sistema de seguridad activo e inteligente</b>.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                         <Smartphone className="h-8 w-8 text-purple-600" />
                         El EPP se Vuelve Inteligente
                       </h3>
@@ -1463,13 +1463,13 @@ export default function GuiaEPPIndustrialArticle() {
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                         <Activity className="h-8 w-8 text-green-600" />
                         La Ciencia de los Materiales
                       </h3>
                       
                       <div className="space-y-6">
-                        <div className="p-6 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl border border-yellow-200">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl border border-yellow-200">
                           <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
                             <CheckCircle className="h-5 w-5" />
                             Fibras Avanzadas
@@ -1483,7 +1483,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </div>
                         </div>
 
-                        <div className="p-6 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200">
                           <h4 className="font-bold text-green-900 mb-3 flex items-center gap-2">
                             <CheckCircle className="h-5 w-5" />
                             Diseño Ergonómico y Sostenibilidad
@@ -1494,7 +1494,7 @@ export default function GuiaEPPIndustrialArticle() {
                           </p>
                         </div>
 
-                        <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-400">
+                        <div className="p-3 sm:p-4 md:p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-400">
                           <h4 className="font-bold text-blue-900 mb-3 flex items-center gap-2">
                             <Zap className="h-5 w-5" />
                             Personalización con Impresión 3D
@@ -1515,8 +1515,8 @@ export default function GuiaEPPIndustrialArticle() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-2xl border-2 border-purple-300">
-                    <h3 className="text-2xl font-bold text-purple-900 mb-4 text-center">
+                  <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 text-center">
                       El Verdadero Poder: De Reactivo a Predictivo
                     </h3>
                     <p className="text-gray-700 text-center max-w-3xl mx-auto mb-4">
@@ -1524,7 +1524,7 @@ export default function GuiaEPPIndustrialArticle() {
                       seguridad basado en análisis de accidentes pasados a uno <b>predictivo</b>, que identifica patrones 
                       de riesgo y permite corregirlos antes de que se materialice un incidente.
                     </p>
-                    <div className="bg-white p-6 rounded-xl">
+                    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                       <p className="text-sm text-gray-700 text-center">
                         <b>Consideración Importante:</b> La recopilación de datos biométricos y de ubicación plantea 
                         cuestiones sobre la <b>privacidad del trabajador</b>. Se requieren políticas claras y transparentes 
@@ -1540,10 +1540,10 @@ export default function GuiaEPPIndustrialArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-blue-100">
-                  <h2 className="text-4xl font-bold text-center mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-blue-100">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8">
                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       Preguntas Frecuentes
                     </span>
@@ -1558,7 +1558,7 @@ export default function GuiaEPPIndustrialArticle() {
                       >
                         <button
                           onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                          className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-purple-50 transition-all flex items-center justify-between gap-4"
+                          className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-purple-50 transition-all flex items-center justify-between gap-4"
                         >
                           <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                           <motion.div
@@ -1578,7 +1578,7 @@ export default function GuiaEPPIndustrialArticle() {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                              <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                 {faq.answer}
                               </div>
                             </motion.div>
@@ -1595,9 +1595,9 @@ export default function GuiaEPPIndustrialArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 text-white rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+                <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 text-white rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
                   {/* Partículas decorativas */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {Array.from({ length: 30 }, (_, i) => (
@@ -1626,11 +1626,11 @@ export default function GuiaEPPIndustrialArticle() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
                       Su Seguridad, Su Responsabilidad, Su Futuro
                     </h2>
                     
-                    <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed mb-10">
+                    <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <p>
                         El viaje a través del mundo del EPP revela una verdad fundamental: 
                         <b className="text-yellow-300"> la seguridad no es un producto que se compra, es un sistema que se construye</b>.
@@ -1641,7 +1641,7 @@ export default function GuiaEPPIndustrialArticle() {
                         demostrando que cada pieza de EPP es una herramienta de ingeniería respaldada por ciencia y estándares rigurosos.
                       </p>
 
-                      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                      <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 md:p-6 rounded-2xl border border-white/20">
                         <p className="font-semibold mb-2">💡 La Lección Más Importante:</p>
                         <p>
                           El éxito de cualquier programa de seguridad depende de un <b>enfoque profundamente centrado en el ser humano</b>. 
@@ -1656,12 +1656,12 @@ export default function GuiaEPPIndustrialArticle() {
                       </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6 mb-10">
+                    <div className="grid md:grid-cols-3 gap-3 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.div 
-                        className="p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
+                        className="p-3 sm:p-4 md:p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl mb-3">👔</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">👔</div>
                         <h3 className="font-bold text-xl mb-2">Para Gerentes</h3>
                         <p className="text-sm text-white/90">
                           Revisen programas de EPP como oportunidad de mejora. Involucren equipos en selección e inviertan en capacitación de calidad.
@@ -1669,10 +1669,10 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
+                        className="p-3 sm:p-4 md:p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl mb-3">👷</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">👷</div>
                         <h3 className="font-bold text-xl mb-2">Para Trabajadores</h3>
                         <p className="text-sm text-white/90">
                           Sean guardianes proactivos de su seguridad. Inspeccionen su equipo. Si algo no se ajusta bien, levanten la voz.
@@ -1680,10 +1680,10 @@ export default function GuiaEPPIndustrialArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
+                        className="p-3 sm:p-4 md:p-6 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <div className="text-4xl mb-3">🎯</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3">🎯</div>
                         <h3 className="font-bold text-xl mb-2">Para Líderes</h3>
                         <p className="text-sm text-white/90">
                           Lideren con el ejemplo. Las reglas de seguridad se aplican a todos. Cero excepciones para niveles superiores.
@@ -1692,7 +1692,7 @@ export default function GuiaEPPIndustrialArticle() {
                     </div>
 
                     <div className="text-center">
-                      <p className="text-2xl font-bold mb-6">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold mb-6">
                         🛡️ Invertir en seguridad es invertir en el activo más valioso: su gente
                       </p>
                       <motion.a

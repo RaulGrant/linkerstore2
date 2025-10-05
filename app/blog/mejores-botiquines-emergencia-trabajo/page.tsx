@@ -139,7 +139,7 @@ export default function BotiquinesEmergenciaArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema médico/emergencia */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -224,10 +224,10 @@ export default function BotiquinesEmergenciaArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div 
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -237,7 +237,7 @@ export default function BotiquinesEmergenciaArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -246,7 +246,7 @@ export default function BotiquinesEmergenciaArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-red-100 mb-8"
+                className="text-xl text-red-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -255,7 +255,7 @@ export default function BotiquinesEmergenciaArticle() {
               </motion.p>
 
               <motion.div 
-                className="flex flex-wrap items-center justify-center gap-6 text-sm"
+                className="flex flex-wrap items-center justify-center gap-3 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -309,7 +309,7 @@ export default function BotiquinesEmergenciaArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
@@ -318,9 +318,9 @@ export default function BotiquinesEmergenciaArticle() {
                   transition={{ duration: 0.8 }}
                   className="prose prose-lg max-w-none"
                 >                  {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-red-50 to-pink-50 p-8 rounded-2xl border-2 border-red-200 mb-8"
+                      className="bg-gradient-to-r from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-200 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -340,7 +340,7 @@ export default function BotiquinesEmergenciaArticle() {
 
                   {/* Advertencia de reseñas */}
                   <motion.div 
-                    className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-6 rounded-2xl mb-12"
+                    className="bg-gradient-to-r from-yellow-50 to-amber-50 border-4 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-2xl mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
@@ -358,9 +358,9 @@ export default function BotiquinesEmergenciaArticle() {
                   </motion.div>
 
                   {/* Guía de Características Clave */}
-                  <section id="caracteristicas-clave" className="mb-16">
+                  <section id="caracteristicas-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -370,7 +370,7 @@ export default function BotiquinesEmergenciaArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -381,20 +381,20 @@ export default function BotiquinesEmergenciaArticle() {
 
                     {/* Cumplimiento Normativo */}
                     <motion.div 
-                      className="bg-white p-8 rounded-2xl border-2 border-red-200 mb-8"
+                      className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-200 mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-6">
                         <FileText className="h-8 w-8 text-red-600" />
-                        <h3 className="text-2xl font-bold text-gray-900">Cumplimiento Normativo en México</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Cumplimiento Normativo en México</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Un error común es buscar un botiquín "certificado" que garantice el cumplimiento total. En la práctica, 
                         <b className="text-red-600"> no existe tal certificación unificada</b>. La responsabilidad final recae en 
                         el empleador, quien debe ensamblar un sistema de respuesta basado en un análisis de riesgos.
                       </p>
-                      <div className="bg-red-50 p-6 rounded-xl mb-4">
+                      <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                         <h4 className="font-bold text-red-900 mb-3">Normativas Relevantes:</h4>
                         <ul className="space-y-2 text-gray-700">
                           <li className="flex items-start gap-2">
@@ -421,18 +421,18 @@ export default function BotiquinesEmergenciaArticle() {
 
                     {/* Adecuación al Nivel de Riesgo */}
                     <motion.div 
-                      className="mb-8"
+                      className="mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}
                     >
-                      <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                         <AlertTriangle className="h-7 w-7 text-red-600" />
                         Adecuación al Nivel de Riesgo
                       </h3>
 
                       {/* Selector de nivel de riesgo */}
-                      <div className="flex justify-center gap-4 mb-8">
+                      <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
                         <button
                           onClick={() => setSelectedRisk('bajo')}
                           className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -472,11 +472,11 @@ export default function BotiquinesEmergenciaArticle() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
-                            className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                            className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                           >
-                            <h4 className="text-2xl font-bold text-green-900 mb-4">Entornos de Bajo Riesgo</h4>
+                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-4">Entornos de Bajo Riesgo</h4>
                             <p className="text-gray-700 mb-4"><b>Ejemplos:</b> Oficinas, comercios, servicios profesionales</p>
-                            <div className="bg-white p-6 rounded-xl mb-4">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                               <h5 className="font-bold text-green-800 mb-3">Incidentes más comunes:</h5>
                               <ul className="space-y-2 text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -512,11 +512,11 @@ export default function BotiquinesEmergenciaArticle() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
-                            className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl border-2 border-yellow-300"
+                            className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-yellow-300"
                           >
-                            <h4 className="text-2xl font-bold text-yellow-900 mb-4">Entornos de Riesgo Medio</h4>
+                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-900 mb-4">Entornos de Riesgo Medio</h4>
                             <p className="text-gray-700 mb-4"><b>Ejemplos:</b> Restaurantes, talleres mecánicos, manufactura ligera</p>
-                            <div className="bg-white p-6 rounded-xl mb-4">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                               <h5 className="font-bold text-yellow-800 mb-3">Riesgos incrementados:</h5>
                               <ul className="space-y-2 text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -552,11 +552,11 @@ export default function BotiquinesEmergenciaArticle() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
-                            className="bg-gradient-to-br from-red-50 to-rose-50 p-8 rounded-2xl border-2 border-red-300"
+                            className="bg-gradient-to-br from-red-50 to-rose-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                           >
-                            <h4 className="text-2xl font-bold text-red-900 mb-4">Entornos de Alto Riesgo</h4>
+                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4">Entornos de Alto Riesgo</h4>
                             <p className="text-gray-700 mb-4"><b>Ejemplos:</b> Construcción, industria pesada, minería, seguridad privada</p>
-                            <div className="bg-white p-6 rounded-xl mb-4">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                               <h5 className="font-bold text-red-800 mb-3">Emergencias críticas:</h5>
                               <ul className="space-y-2 text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -589,9 +589,9 @@ export default function BotiquinesEmergenciaArticle() {
                     </motion.div>
                   </section>
                   {/* Top 6 Productos */}
-                  <section id="top-productos" className="mb-16">
+                  <section id="top-productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -600,10 +600,10 @@ export default function BotiquinesEmergenciaArticle() {
                       </span>
                     </motion.h2>
 
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid gap-4 sm:p-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
                       {/* Producto 1: Jaloma */}
                       <motion.div
-                        className="bg-white rounded-2xl border-2 border-red-200 p-6 hover:shadow-2xl transition-all"
+                        className="bg-white rounded-2xl border-2 border-red-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.02 }}
@@ -642,7 +642,7 @@ export default function BotiquinesEmergenciaArticle() {
 
                       {/* Producto 2: Gabinete Surtek */}
                       <motion.div
-                        className="bg-white rounded-2xl border-2 border-red-200 p-6 hover:shadow-2xl transition-all"
+                        className="bg-white rounded-2xl border-2 border-red-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
@@ -682,7 +682,7 @@ export default function BotiquinesEmergenciaArticle() {
 
                       {/* Producto 3: Botiquín Metálico Mediano */}
                       <motion.div
-                        className="bg-white rounded-2xl border-2 border-red-200 p-6 hover:shadow-2xl transition-all"
+                        className="bg-white rounded-2xl border-2 border-red-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
@@ -722,7 +722,7 @@ export default function BotiquinesEmergenciaArticle() {
 
                       {/* Producto 4: Matein 1233 */}
                       <motion.div
-                        className="bg-white rounded-2xl border-2 border-red-200 p-6 hover:shadow-2xl transition-all"
+                        className="bg-white rounded-2xl border-2 border-red-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -762,7 +762,7 @@ export default function BotiquinesEmergenciaArticle() {
 
                       {/* Producto 5: Blekrasi Táctico */}
                       <motion.div
-                        className="bg-white rounded-2xl border-2 border-red-200 p-6 hover:shadow-2xl transition-all"
+                        className="bg-white rounded-2xl border-2 border-red-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
@@ -802,7 +802,7 @@ export default function BotiquinesEmergenciaArticle() {
 
                       {/* Producto 6: Industrial Num.5 */}
                       <motion.div
-                        className="bg-white rounded-2xl border-2 border-red-200 p-6 hover:shadow-2xl transition-all"
+                        className="bg-white rounded-2xl border-2 border-red-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
@@ -843,9 +843,9 @@ export default function BotiquinesEmergenciaArticle() {
                   </section>
 
                   {/* Tabla Comparativa */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -857,7 +857,7 @@ export default function BotiquinesEmergenciaArticle() {
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mb-8"
+                      className="mb-4 sm:mb-6 md:mb-8"
                     >
                       <ProductComparison 
                         products={comparisonProducts}
@@ -866,9 +866,9 @@ export default function BotiquinesEmergenciaArticle() {
                     </motion.div>
                   </section>
                   {/* Guía de Compra Rápida */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -877,14 +877,14 @@ export default function BotiquinesEmergenciaArticle() {
                       </span>
                     </motion.h2>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid md:grid-cols-2 gap-3 mb-4 sm:mb-6 md:mb-8">
                       {/* 3 Consejos Clave */}
                       <motion.div
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                       >
-                        <h3 className="text-2xl font-bold text-green-900 mb-6">✅ 3 Consejos Clave</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6">✅ 3 Consejos Clave</h3>
                         <div className="space-y-4">
                           <div className="flex items-start gap-3">
                             <div className="bg-green-500 rounded-full p-2 flex-shrink-0">
@@ -926,11 +926,11 @@ export default function BotiquinesEmergenciaArticle() {
 
                       {/* 3 Errores a Evitar */}
                       <motion.div
-                        className="bg-gradient-to-br from-red-50 to-rose-50 p-8 rounded-2xl border-2 border-red-300"
+                        className="bg-gradient-to-br from-red-50 to-rose-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                       >
-                        <h3 className="text-2xl font-bold text-red-900 mb-6">❌ 3 Errores Comunes</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6">❌ 3 Errores Comunes</h3>
                         <div className="space-y-4">
                           <div className="flex items-start gap-3">
                             <AlertTriangle className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
@@ -968,13 +968,13 @@ export default function BotiquinesEmergenciaArticle() {
 
                     {/* Mantenimiento */}
                     <motion.div
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Package className="h-8 w-8 text-blue-600" />
-                        <h3 className="text-2xl font-bold text-blue-900">Mantenimiento del Botiquín</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Mantenimiento del Botiquín</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Un botiquín es un recurso dinámico, no estático. Es crucial designar a una persona responsable de su 
@@ -986,9 +986,9 @@ export default function BotiquinesEmergenciaArticle() {
                   </section>
 
                   {/* Preguntas Frecuentes */}
-                  <section id="faqs" className="mb-16">
+                  <section id="faqs" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1008,7 +1008,7 @@ export default function BotiquinesEmergenciaArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left flex items-center justify-between hover:bg-red-50 transition-colors"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left flex items-center justify-between hover:bg-red-50 transition-colors"
                           >
                             <span className="font-bold text-gray-900 text-lg pr-8">{faq.question}</span>
                             <motion.div
@@ -1028,7 +1028,7 @@ export default function BotiquinesEmergenciaArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed border-t border-red-100">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed border-t border-red-100">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -1040,9 +1040,9 @@ export default function BotiquinesEmergenciaArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1052,13 +1052,13 @@ export default function BotiquinesEmergenciaArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-red-500 to-pink-600 text-white p-8 rounded-2xl shadow-2xl"
+                      className="bg-gradient-to-r from-red-500 to-pink-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">La Seguridad No Puede Esperar</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">La Seguridad No Puede Esperar</h3>
                       </div>
                       <p className="text-lg leading-relaxed mb-4">
                         Contar con el botiquín de primeros auxilios adecuado es <b>mucho más que cumplir con una obligación legal</b>. 
@@ -1071,7 +1071,7 @@ export default function BotiquinesEmergenciaArticle() {
                         a los <b>riesgos específicos identificados en tu análisis de seguridad</b>, que es accesible en segundos, 
                         y cuyo personal sabe usar correctamente.
                       </p>
-                      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                      <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 md:p-6 rounded-xl">
                         <p className="text-xl font-bold text-center">
                           💚 Invierte en preparación hoy. Tu equipo te lo agradecerá mañana.
                         </p>
@@ -1085,7 +1085,7 @@ export default function BotiquinesEmergenciaArticle() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.8 }}
-                    className="mb-16"
+                    className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
                   >
                     <RelatedArticles articles={relatedArticles} />
                   </motion.section>

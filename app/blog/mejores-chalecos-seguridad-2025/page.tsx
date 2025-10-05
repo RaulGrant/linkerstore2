@@ -93,7 +93,7 @@ export default function ChalecosSeguridadArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas extendido por toda la sección */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (80 partículas - distribuidas por toda la sección) */}
@@ -292,7 +292,7 @@ export default function ChalecosSeguridadArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -310,7 +310,7 @@ export default function ChalecosSeguridadArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6 relative z-10"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 relative z-10"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -319,7 +319,7 @@ export default function ChalecosSeguridadArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-blue-100 mb-8 relative z-10"
+                className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-8 relative z-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -328,7 +328,7 @@ export default function ChalecosSeguridadArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-blue-200"
+                className="flex items-center justify-center gap-3 text-sm text-blue-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
@@ -539,7 +539,7 @@ export default function ChalecosSeguridadArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-20">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               {/* Contenido del Artículo */}
               <div className="w-full">
@@ -547,12 +547,12 @@ export default function ChalecosSeguridadArticle() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50 relative z-10"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50 relative z-10"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h1 
-                      className="text-5xl font-bold mb-6 text-gray-900 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                      className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
@@ -561,7 +561,7 @@ export default function ChalecosSeguridadArticle() {
                     </motion.h1>
                     
                     <motion.div 
-                      className="text-sm text-gray-600 mb-8 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400"
+                      className="text-sm text-gray-600 mb-4 sm:mb-6 md:mb-8 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
@@ -571,14 +571,14 @@ export default function ChalecosSeguridadArticle() {
 
                     {/* Texto principal mejorado */}
                     <motion.div 
-                      className="bg-gradient-to-r from-orange-50 to-red-50 border-l-8 border-orange-400 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-orange-50 to-red-50 border-l-8 border-orange-400 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4, duration: 0.8 }}
                     >
                       <div className="flex items-start gap-4">
                         <div className="bg-orange-500 rounded-full p-3 flex-shrink-0">
-                          <span className="text-white text-2xl">⚠️</span>
+                          <span className="text-white text-lg sm:text-xl md:text-2xl">⚠️</span>
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-orange-900 mb-3">¡La Visibilidad Puede Salvar Tu Vida!</h3>
@@ -604,7 +604,7 @@ export default function ChalecosSeguridadArticle() {
                           className="relative rounded-3xl shadow-2xl mx-auto max-w-full border-4 border-white"
                           style={{ maxHeight: '600px', width: 'auto' }}
                         />
-                        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-lg border">
+                        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-4 sm:px-6 py-2 rounded-full shadow-lg border">
                           <span className="text-sm font-semibold text-gray-700">🔍 Análisis Completo 2025</span>
                         </div>
                       </div>
@@ -617,7 +617,7 @@ export default function ChalecosSeguridadArticle() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6, duration: 0.8 }}
                     >
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8">
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-4 sm:p-6 md:p-8">
                         <div className="flex items-start gap-4">
                           <div className="bg-blue-500 rounded-full p-3 flex-shrink-0">
                             <span className="text-white text-xl">🛡️</span>
@@ -631,7 +631,7 @@ export default function ChalecosSeguridadArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-8">
+                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-4 sm:p-6 md:p-8">
                         <div className="flex items-start gap-4">
                           <div className="bg-purple-500 rounded-full p-3 flex-shrink-0">
                             <span className="text-white text-xl">🤔</span>
@@ -657,16 +657,16 @@ export default function ChalecosSeguridadArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl p-8 mt-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.7, duration: 0.8 }}
                     >
                       <div className="flex items-center gap-4 mb-4">
                         <div className="bg-green-500 rounded-full p-3">
-                          <span className="text-white text-2xl">📋</span>
+                          <span className="text-white text-lg sm:text-xl md:text-2xl">📋</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-green-900">Tu Guía Definitiva</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900">Tu Guía Definitiva</h3>
                       </div>
                       <p className="text-gray-800 font-medium text-lg leading-relaxed">
                         En esta guía definitiva, hemos analizado a fondo <strong className="bg-green-200 px-2 py-1 rounded">7 de los chalecos de seguridad más populares y mejor calificados en Amazon para 2025</strong>. Desglosaremos sus características, compararemos sus pros y contras, y te daremos todas las herramientas para que tomes una decisión informada y protejas lo más importante: <strong className="text-green-700">tu seguridad y la de tu equipo</strong>.
@@ -675,9 +675,9 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* Guía de Características */}
-                  <section id="guia-caracteristicas" className="mb-16">
+                  <section id="guia-caracteristicas" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent text-center"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 }}
@@ -686,7 +686,7 @@ export default function ChalecosSeguridadArticle() {
                     </motion.h2>
                     
                     <motion.p 
-                      className="text-xl text-gray-700 leading-relaxed mb-8 text-center font-medium"
+                      className="text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6 md:mb-8 text-center font-medium"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
@@ -696,19 +696,19 @@ export default function ChalecosSeguridadArticle() {
 
                     <div className="space-y-8">
                       <motion.div 
-                        className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 p-8 rounded-2xl shadow-lg"
+                        className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-green-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">🧵</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🧵</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-4 text-green-900">Materiales y Construcción</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-green-900">Materiales y Construcción</h3>
                             <p className="text-gray-700 mb-4 text-lg">Los dos materiales más comunes son el <strong>poliéster</strong> y la <strong>gabardina</strong> (una mezcla de poliéster y algodón).</p>
-                            <div className="grid md:grid-cols-2 gap-6">
+                            <div className="grid md:grid-cols-2 gap-3">
                               <div className="bg-white/70 p-4 rounded-xl">
                                 <h4 className="font-bold text-green-800 mb-2">💨 Poliéster:</h4>
                                 <p className="text-gray-700">Es ligero, transpirable y de secado rápido. Ideal para climas cálidos y uso general donde la comodidad es clave.</p>
@@ -723,18 +723,18 @@ export default function ChalecosSeguridadArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-300 p-8 rounded-2xl shadow-lg"
+                        className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-300 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-yellow-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">👁️</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">👁️</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-4 text-yellow-900">Visibilidad y Reflectividad</h3>
-                            <div className="bg-white/70 p-6 rounded-xl">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-yellow-900">Visibilidad y Reflectividad</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                               <p className="text-gray-700 text-lg leading-relaxed">
                                 La característica principal. Busca chalecos con <strong className="bg-yellow-200 px-2 py-1 rounded">bandas reflectantes anchas (generalmente de 2 pulgadas)</strong> que cubran el torso, hombros y espalda para garantizar una <strong className="bg-yellow-200 px-2 py-1 rounded">visibilidad de 360°</strong>. Algunos modelos, como el de Greaxid, cumplen con la <strong className="bg-orange-200 px-2 py-1 rounded">Clase 2</strong>, un estándar que exige una mayor cantidad de material fluorescente y reflectante, haciéndolos visibles desde más de 300 metros.
                               </p>
@@ -744,18 +744,18 @@ export default function ChalecosSeguridadArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 p-8 rounded-2xl shadow-lg"
+                        className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-blue-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">🔧</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🔧</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-4 text-blue-900">Funcionalidad y Bolsillos</h3>
-                            <div className="bg-white/70 p-6 rounded-xl">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-blue-900">Funcionalidad y Bolsillos</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                               <p className="text-gray-700 text-lg leading-relaxed">
                                 Un buen chaleco es también una herramienta de trabajo. Evalúa la cantidad y tipo de bolsillos. ¿Necesitas un compartimento para radio, un bolsillo transparente para tu identificación, espacios para plumas o bolsillos grandes para herramientas? Los chalecos tipo brigadista suelen ofrecer la mayor capacidad de carga.
                               </p>
@@ -765,18 +765,18 @@ export default function ChalecosSeguridadArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-300 p-8 rounded-2xl shadow-lg"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-300 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.1, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-purple-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">📏</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">📏</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-4 text-purple-900">Ajuste y Comodidad</h3>
-                            <div className="bg-white/70 p-6 rounded-xl">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-purple-900">Ajuste y Comodidad</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                               <p className="text-gray-700 text-lg leading-relaxed">
                                 Un chaleco mal ajustado puede ser incómodo e incluso peligroso. Los modelos vienen con cierre de cremallera frontal o con sistemas de ajuste lateral (cintas o broches tipo "samsonite"). Los de ajuste lateral ofrecen mayor versatilidad para adaptarse a diferentes complexiones o para usarse sobre ropa gruesa.
                               </p>
@@ -786,18 +786,18 @@ export default function ChalecosSeguridadArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-r from-orange-50 to-red-50 border-2 border-orange-300 p-8 rounded-2xl shadow-lg"
+                        className="bg-gradient-to-r from-orange-50 to-red-50 border-2 border-orange-300 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1.3, duration: 0.8 }}
                       >
-                        <div className="flex items-start gap-6">
+                        <div className="flex items-start gap-3">
                           <div className="bg-orange-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">🎨</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🎨</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold mb-4 text-orange-900">Personalización</h3>
-                            <div className="bg-white/70 p-6 rounded-xl">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-orange-900">Personalización</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                               <p className="text-gray-700 text-lg leading-relaxed">
                                 Si buscas uniformar a tu equipo, varios chalecos ofrecen servicios de personalización para añadir logotipos, texto o imágenes. Esto no solo mejora la imagen de tu empresa, sino que también ayuda a identificar roles en el lugar de trabajo.
                               </p>
@@ -809,9 +809,9 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* Top 7 Productos */}
-                  <section id="top-7-productos" className="mb-16">
+                  <section id="top-7-productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-center"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 }}
@@ -828,7 +828,7 @@ export default function ChalecosSeguridadArticle() {
                       Hemos seleccionado una variedad de chalecos para cubrir todas las necesidades y presupuestos.
                     </motion.p>
                     <motion.p 
-                      className="text-sm text-gray-600 mb-12 italic text-center bg-blue-50 p-4 rounded-lg border border-blue-200"
+                      className="text-sm text-gray-600 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 italic text-center bg-blue-50 p-4 rounded-lg border border-blue-200"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.6 }}
@@ -839,7 +839,7 @@ export default function ChalecosSeguridadArticle() {
                     <div className="space-y-10">
                       {/* Producto 1 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
@@ -847,7 +847,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-yellow-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-yellow-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.8, type: "spring", stiffness: 500 }}
@@ -863,7 +863,7 @@ export default function ChalecosSeguridadArticle() {
                             MEJOR FUNCIONALIDAD
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Simonetta Vespetti - Mejor Opción en Funcionalidad</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">Simonetta Vespetti - Mejor Opción en Funcionalidad</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Con una calificación estelar y siendo el #1 más vendido en su categoría, este chaleco de Simonetta Vespetti es la prueba de que no necesitas gastar una fortuna para obtener calidad. Fabricado en 100% poliéster, es ligero, cómodo y perfecto para una amplia gama de actividades. Sus 5 bolsillos, incluyendo uno transparente para identificación, lo hacen increíblemente funcional para el uso diario.
@@ -883,12 +883,12 @@ export default function ChalecosSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Uso general, logística, eventos, y cualquiera que busque el mejor balance entre costo y beneficio.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.2/5 estrellas (55 reseñas)</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Excelente relación calidad-funcionalidad, muy popular y bien calificado, ligero, funcional con bolsillo para ID.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> El poliéster puede ser menos duradero que la gabardina para uso industrial pesado.</p>
                           </div>
@@ -898,7 +898,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/bw2qd4o" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -906,7 +906,7 @@ export default function ChalecosSeguridadArticle() {
 
                       {/* Producto 2 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
@@ -914,7 +914,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-blue-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-blue-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 1.0, type: "spring", stiffness: 500 }}
@@ -930,7 +930,7 @@ export default function ChalecosSeguridadArticle() {
                             MÁXIMA DURABILIDAD
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Señor Seguridad - El Más Duradero y Profesional</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">Señor Seguridad - El Más Duradero y Profesional</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Cuando la durabilidad es la máxima prioridad, el chaleco de Señor Seguridad es el claro ganador. Su construcción en gabardina (80% algodón) y su diseño tipo brigadista están pensados para el uso rudo. Cuenta con múltiples bolsillos especializados, incluyendo uno para radio y una bolsa trasera de gran capacidad. Los costados abiertos con ajuste garantizan que se adapte a cualquier usuario.
@@ -948,12 +948,12 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Brigadistas, construcción, minería, y cualquier trabajo que exija máxima resistencia.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.5/5 estrellas (150+ reseñas)</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Extremadamente duradero, múltiples bolsillos funcionales, ajuste universal, excelente para cargar equipo.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> Es más pesado y costoso que los modelos de poliéster.</p>
                           </div>
@@ -963,7 +963,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/2eQjkvK" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -971,7 +971,7 @@ export default function ChalecosSeguridadArticle() {
 
                       {/* Producto 3 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.1, duration: 0.8 }}
@@ -979,7 +979,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-purple-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-purple-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 1.2, type: "spring", stiffness: 500 }}
@@ -995,7 +995,7 @@ export default function ChalecosSeguridadArticle() {
                             MEJOR PARA EQUIPOS
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Greaxid Personalizable - Mejor para Equipos y Empresas</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">Greaxid Personalizable - Mejor para Equipos y Empresas</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Si necesitas equipar a tu equipo y reforzar tu marca, el chaleco de Greaxid es la opción perfecta. No solo ofrece personalización completa con logos o texto, sino que también cumple con el estándar de alta visibilidad Clase 2. Con 5 bolsillos, clips para micrófono y un anillo en D, está diseñado para la eficiencia en el trabajo.
@@ -1013,12 +1013,12 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Empresas de construcción, seguridad, logística y control de tráfico que buscan uniformes personalizados.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>⭐ Calificación:</strong> 4.0/5 estrellas (200+ reseñas)</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Totalmente personalizable, alta visibilidad Clase 2, muy funcional, excelente valor.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> El proceso de personalización requiere un paso extra antes de la compra.</p>
                           </div>
@@ -1028,7 +1028,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/cZ8m0fH" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -1037,7 +1037,7 @@ export default function ChalecosSeguridadArticle() {
                       {/* Productos adicionales con diseño expandido */}
                       {/* Producto 4 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-teal-50 to-cyan-50 border-2 border-teal-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-teal-50 to-cyan-50 border-2 border-teal-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.3, duration: 0.8 }}
@@ -1045,7 +1045,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-teal-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-teal-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 1.4, type: "spring", stiffness: 500 }}
@@ -1061,7 +1061,7 @@ export default function ChalecosSeguridadArticle() {
                             MEJOR PACK ECONÓMICO
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Límite-MX (Pack de 2) - Mejor Oferta por Volumen</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">Límite-MX (Pack de 2) - Mejor Oferta por Volumen</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Para quienes necesitan equipar a un pequeño equipo con un presupuesto ajustado, esta oferta de Límite-MX es insuperable. Con una alta relación calidad-funcionalidad, obtienes dos chalecos de poliéster con 5 bolsillos, incluyendo el práctico porta-identificación transparente. Es una solución económica y funcional para necesidades básicas de visibilidad.
@@ -1079,12 +1079,12 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Pequeños equipos, voluntarios, vigilantes de estacionamiento.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon (paquete de 2 unidades)</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Increíble relación calidad-funcionalidad (2 chalecos), funcional con 5 bolsillos.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> Diseño básico y talla única que puede no ajustarse a todos.</p>
                           </div>
@@ -1094,7 +1094,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/bSAfSbb" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -1102,7 +1102,7 @@ export default function ChalecosSeguridadArticle() {
 
                       {/* Producto 5 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.5, duration: 0.8 }}
@@ -1110,7 +1110,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-emerald-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-emerald-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 1.6, type: "spring", stiffness: 500 }}
@@ -1126,7 +1126,7 @@ export default function ChalecosSeguridadArticle() {
                             ALTA CALIFICACIÓN
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">WolunLi Personalizable - La Opción Más Versátil para Personalizar</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">WolunLi Personalizable - La Opción Más Versátil para Personalizar</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Similar al de Greaxid, el chaleco de WolunLi es otra excelente alternativa para la personalización. Con una calificación casi perfecta (4.8 estrellas), destaca por su calidad y la facilidad para añadir logos o texto. Fabricado en poliéster ligero y con 5 bolsillos, es una opción cómoda y profesional para cualquier equipo.
@@ -1144,12 +1144,12 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Equipos que buscan una alternativa de personalización con una calificación muy alta.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Calificación de usuario excepcional, totalmente personalizable, ligero y cómodo.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> Ligeramente más caro que otras opciones personalizables.</p>
                           </div>
@@ -1159,7 +1159,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/5aP2Ibi" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -1167,7 +1167,7 @@ export default function ChalecosSeguridadArticle() {
 
                       {/* Producto 6 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.7, duration: 0.8 }}
@@ -1175,7 +1175,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-amber-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-amber-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 1.8, type: "spring", stiffness: 500 }}
@@ -1191,7 +1191,7 @@ export default function ChalecosSeguridadArticle() {
                             BRIGADISTA EQUILIBRADO
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Genérico (Axo Click) - El Brigadista de Gabardina Equilibrado</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">Genérico (Axo Click) - El Brigadista de Gabardina Equilibrado</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Este chaleco tipo brigadista ofrece la durabilidad de la tela de gabardina a un valor más accesible que las opciones premium. Con 5 bolsillos bien distribuidos (incluyendo uno trasero) y ajuste lateral, es una opción robusta y versátil para trabajos industriales que no requieren la máxima especialización.
@@ -1209,12 +1209,12 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Uso industrial general, mantenimiento, brigadas con presupuesto moderado.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Material de gabardina duradero, buen número de bolsillos, valor competitivo para su tipo.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> Menos calificaciones de usuarios que otras marcas.</p>
                           </div>
@@ -1224,7 +1224,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/8aWIMYC" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -1232,7 +1232,7 @@ export default function ChalecosSeguridadArticle() {
 
                       {/* Producto 7 */}
                       <motion.div 
-                        className="bg-gradient-to-r from-rose-50 to-pink-50 border-2 border-rose-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+                        className="bg-gradient-to-r from-rose-50 to-pink-50 border-2 border-rose-300 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.9, duration: 0.8 }}
@@ -1240,7 +1240,7 @@ export default function ChalecosSeguridadArticle() {
                       >
                         <div className="flex items-center gap-4 mb-6">
                           <motion.span 
-                            className="bg-rose-500 text-white px-6 py-3 rounded-full text-xl font-bold shadow-lg"
+                            className="bg-rose-500 text-white px-4 sm:px-6 py-3 rounded-full text-xl font-bold shadow-lg"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 2.0, type: "spring", stiffness: 500 }}
@@ -1256,7 +1256,7 @@ export default function ChalecosSeguridadArticle() {
                             ECONÓMICO BRIGADISTA
                           </motion.span>
                         </div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900">Genérico (Mexsafe) - Opción Económica de Brigadista</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900">Genérico (Mexsafe) - Opción Económica de Brigadista</h3>
                         
                         <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                           Si te gusta el estilo y la funcionalidad de un chaleco brigadista pero tu presupuesto es limitado, esta opción de Mexsafe es para ti. Ofrece las características esenciales, como 5 bolsillos frontales y ajuste lateral, en una mezcla de poliéster y algodón. Es un punto de entrada funcional al mundo de los chalecos de trabajo más serios.
@@ -1274,12 +1274,12 @@ export default function ChalecosSeguridadArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white/70 p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-gray-700 mb-3 text-lg"><strong>🎯 Ideal para:</strong> Usuarios que necesitan la funcionalidad de un brigadista sin el alto costo.</p>
                             <p className="text-gray-700 mb-3 text-lg"><strong>� Disponibilidad:</strong> Disponible en Amazon</p>
                           </div>
-                          <div className="bg-white/70 p-6 rounded-xl">
+                          <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-green-700 mb-3 text-lg"><strong>✅ Pros:</strong> Muy asequible para un chaleco tipo brigadista, funcional.</p>
                             <p className="text-red-700 mb-3 text-lg"><strong>❌ Contras:</strong> La calidad de los materiales puede no ser tan alta como en modelos más caros.</p>
                           </div>
@@ -1289,7 +1289,7 @@ export default function ChalecosSeguridadArticle() {
                           href="https://a.co/d/5SDZaw8" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-block bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          className="inline-block bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                           Ver en Amazon →
                         </a>
@@ -1298,9 +1298,9 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* Comparativa Detallada */}
-                  <section id="comparativa" className="mb-12">
+                  <section id="comparativa" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-3xl font-bold mb-6 text-gray-900"
+                      className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 }}
@@ -1357,9 +1357,9 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* Guía de Compra */}
-                  <section id="guia-compra" className="mb-12">
+                  <section id="guia-compra" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-3xl font-bold mb-6 text-gray-900"
+                      className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 }}
@@ -1368,7 +1368,7 @@ export default function ChalecosSeguridadArticle() {
                     </motion.h2>
                     
                     <div className="space-y-6">
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <ul className="space-y-3 text-gray-700">
                           <li><strong>🎯 Define tu Necesidad:</strong> ¿Es para uso diario intensivo (construcción) o esporádico (eventos)? Esto definirá si necesitas gabardina o poliéster.</li>
                           <li><strong>🔧 No ignores los Bolsillos:</strong> Haz una lista de lo que necesitas llevar contigo. Un bolsillo para radio o para ID puede ser un factor decisivo.</li>
@@ -1376,7 +1376,7 @@ export default function ChalecosSeguridadArticle() {
                         </ul>
                       </div>
 
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <h3 className="text-xl font-semibold mb-3 text-red-900">❌ Errores Comunes a Evitar:</h3>
                         <ul className="space-y-2 text-gray-700">
                           <li>• Comprar solo por valor bajo, ignorando la durabilidad.</li>
@@ -1385,7 +1385,7 @@ export default function ChalecosSeguridadArticle() {
                         </ul>
                       </div>
 
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <h3 className="text-xl font-semibold mb-3 text-green-900">🧽 Mantenimiento es Clave:</h3>
                         <p className="text-gray-700">
                           Lava tu chaleco según las indicaciones (mano o máquina) para preservar las propiedades reflectantes. Reemplázalo si las bandas están desgastadas, rotas o sucias permanentemente. <strong>La vida útil promedio con uso regular es de 6 meses a 1 año.</strong>
@@ -1395,9 +1395,9 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-12">
+                  <section id="faq" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-3xl font-bold mb-6 text-gray-900"
+                      className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.6 }}
@@ -1406,22 +1406,22 @@ export default function ChalecosSeguridadArticle() {
                     </motion.h2>
                     
                     <div className="space-y-4">
-                      <div className="bg-white border border-gray-200 rounded-lg p-6">
+                      <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <h3 className="font-semibold text-lg mb-2">¿Cuál es la diferencia entre un chaleco de poliéster y uno de gabardina?</h3>
                         <p className="text-gray-700">El poliéster es ligero y transpirable, ideal para comodidad. La gabardina es una mezcla con algodón, mucho más gruesa y resistente, diseñada para trabajos pesados.</p>
                       </div>
                       
-                      <div className="bg-white border border-gray-200 rounded-lg p-6">
+                      <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <h3 className="font-semibold text-lg mb-2">¿Qué significa "Clase 2" en un chaleco de seguridad?</h3>
                         <p className="text-gray-700">Es un estándar de la norma ANSI/ISEA 107 que certifica un mayor nivel de visibilidad. Requiere una cantidad mínima de material de fondo fluorescente y de material reflectante, haciéndolo adecuado para trabajar cerca de tráfico que supera los 40 km/h.</p>
                       </div>
                       
-                      <div className="bg-white border border-gray-200 rounded-lg p-6">
+                      <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <h3 className="font-semibold text-lg mb-2">¿Puedo lavar mi chaleco reflectante en la lavadora?</h3>
                         <p className="text-gray-700">Depende del fabricante. Algunos modelos de poliéster lo permiten, pero la mayoría, especialmente los de gabardina o con estampados, recomiendan lavado a mano para no dañar las bandas reflectantes. Siempre revisa la etiqueta.</p>
                       </div>
 
-                      <div className="bg-white border border-gray-200 rounded-lg p-6">
+                      <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6">
                         <h3 className="font-semibold text-lg mb-2">¿Cada cuánto tiempo debo reemplazar mi chaleco de seguridad?</h3>
                         <p className="text-gray-700">No hay una regla fija, pero se recomienda inspeccionarlo regularmente. Si está roto, descolorido o las cintas reflectantes están dañadas, es hora de reemplazarlo. Con uso diario, su vida útil efectiva suele ser de 6 a 12 meses.</p>
                       </div>
@@ -1429,9 +1429,9 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-3xl font-bold mb-6 text-gray-900 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
+                      className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-6 text-gray-900 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.7 }}
@@ -1439,20 +1439,20 @@ export default function ChalecosSeguridadArticle() {
                       🎯 Conclusión: Tu Mejor Inversión en Seguridad
                     </motion.h2>
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-400 p-8 rounded-r-2xl shadow-lg"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-400 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.8, duration: 0.8 }}
                     >
                       <div className="flex items-start gap-4">
                         <div className="bg-green-500 rounded-full p-4 flex-shrink-0">
-                          <span className="text-white text-3xl">🏆</span>
+                          <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                         </div>
                         <div>
                           <p className="text-xl text-gray-800 leading-relaxed mb-4 font-medium">
                             Elegir el chaleco de seguridad correcto es una de las decisiones más simples y rentables que puedes tomar para protegerte en el trabajo. No se trata solo de cumplir una norma, sino de garantizar que vuelvas a casa sano y salvo cada día.
                           </p>
-                          <div className="bg-white/80 p-6 rounded-xl mb-4">
+                          <div className="bg-white/80 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                             <p className="text-gray-700 leading-relaxed mb-3 text-lg">
                               Después de nuestro análisis, nuestra recomendación principal para la <strong className="bg-yellow-200 px-2 py-1 rounded">mejor opción general es el Chaleco Simonetta Vespetti</strong>. Ofrece una combinación inmejorable de funcionalidad, altas calificaciones y un valor accesible que lo hace perfecto para la mayoría de los usuarios.
                             </p>
@@ -1464,12 +1464,12 @@ export default function ChalecosSeguridadArticle() {
                       </div>
                     </motion.div>
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-orange-100 to-red-100 p-6 rounded-2xl border-2 border-orange-200"
+                      className="mt-8 text-center bg-gradient-to-r from-orange-100 to-red-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-orange-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.9, duration: 0.8 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         ¡Esperamos que esta guía te haya sido de gran utilidad! 
                       </p>
                       <p className="text-lg text-orange-800 font-semibold">
@@ -1479,21 +1479,21 @@ export default function ChalecosSeguridadArticle() {
                   </section>
 
                   {/* Sección de Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.div
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.0, duration: 0.8 }}
                     >
-                      <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         📚 Artículos Relacionados que Te Pueden Interesar
                       </h2>
                       
-                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
                         {relatedArticles.map((article, index) => (
                           <motion.div
                             key={article.id}
-                            className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                            className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.1 + index * 0.1, duration: 0.6 }}
@@ -1556,8 +1556,8 @@ export default function ChalecosSeguridadArticle() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1.5, duration: 0.8 }}
                       >
-                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-2xl p-8">
-                          <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-2xl p-4 sm:p-6 md:p-8">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             🔍 ¿Quieres Ver Más Contenido de Seguridad Industrial?
                           </h3>
                           <p className="text-gray-700 mb-6 text-lg">

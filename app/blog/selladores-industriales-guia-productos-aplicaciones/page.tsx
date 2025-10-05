@@ -141,7 +141,7 @@ export default function SelladoresIndustrialesArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-gray-900 via-slate-900 to-blue-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-gray-900 via-slate-900 to-blue-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas - Tema industrial/químico */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (100 partículas) */}
@@ -225,7 +225,7 @@ export default function SelladoresIndustrialesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -243,7 +243,7 @@ export default function SelladoresIndustrialesArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -252,7 +252,7 @@ export default function SelladoresIndustrialesArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-blue-100 mb-8"
+                className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -261,7 +261,7 @@ export default function SelladoresIndustrialesArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-blue-200"
+                className="flex items-center justify-center gap-3 text-sm text-blue-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -311,19 +311,19 @@ export default function SelladoresIndustrialesArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
                 <motion.article
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                  className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
                   {/* Introducción */}
-                  <section id="introduccion" className="mb-16">
+                  <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-8 border-blue-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                      className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-8 border-blue-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
@@ -333,7 +333,7 @@ export default function SelladoresIndustrialesArticle() {
                           <Droplets className="h-8 w-8 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-blue-900 mb-3">🔬 Más que un Simple Pegamento</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-3">🔬 Más que un Simple Pegamento</h3>
                           <p className="text-lg text-gray-800 leading-relaxed">
                             La selección de un sellador industrial trasciende la simple elección de un producto; es una 
                             <strong className="text-blue-600"> decisión de ingeniería</strong> que impacta la durabilidad, 
@@ -357,14 +357,14 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.p>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-200 mt-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-200 mt-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Shield className="h-8 w-8 text-green-600" />
-                        <h3 className="text-2xl font-bold text-green-900">Tu Hoja de Ruta Técnica</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900">Tu Hoja de Ruta Técnica</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed">
                         Esta guía para 2025 desglosa el mercado mexicano desde la <b>química fundamental</b> hasta los 
@@ -375,9 +375,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* La Química Detrás del Sello */}
-                  <section id="quimica-selladores" className="mb-16">
+                  <section id="quimica-selladores" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -387,7 +387,7 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -397,7 +397,7 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.p>
 
                     {/* Selector de Material */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-10">
+                    <div className="flex flex-wrap justify-center gap-4 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-10">
                       <motion.button
                         onClick={() => setSelectedMaterial('silicona')}
                         whileHover={{ scale: 1.05 }}
@@ -468,14 +468,14 @@ export default function SelladoresIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300"
+                          className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300"
                         >
-                          <h3 className="text-3xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-900 mb-6 flex items-center gap-3">
                             <Droplets className="h-8 w-8" />
                             Selladores de Silicona
                           </h3>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-blue-800 mb-3 text-lg">📖 Descripción</h4>
                             <p className="text-gray-700 leading-relaxed">
                               Los selladores de silicona son <b className="text-blue-700">polímeros inorgánicos basados en una cadena 
@@ -492,8 +492,8 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl border border-blue-200">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                               <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Clave
@@ -518,7 +518,7 @@ export default function SelladoresIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                               <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Limitaciones Críticas
@@ -540,7 +540,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-400">
+                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-400">
                             <h4 className="font-bold text-green-900 mb-3 text-lg">🏭 Aplicaciones Industriales Típicas</h4>
                             <div className="grid md:grid-cols-2 gap-4">
                               <ul className="space-y-2 text-sm text-gray-700">
@@ -582,14 +582,14 @@ export default function SelladoresIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300"
+                          className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300"
                         >
-                          <h3 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
                             <Construction className="h-8 w-8" />
                             Selladores de Poliuretano (PU)
                           </h3>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-green-800 mb-3 text-lg">📖 Descripción</h4>
                             <p className="text-gray-700 leading-relaxed">
                               Son <b className="text-green-700">polímeros orgánicos</b> conocidos por su notable tenacidad, 
@@ -598,8 +598,8 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl border border-green-200">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                               <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Clave
@@ -624,7 +624,7 @@ export default function SelladoresIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                               <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Limitaciones Críticas
@@ -646,7 +646,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-400">
+                          <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-400">
                             <h4 className="font-bold text-blue-900 mb-3 text-lg">🏭 Aplicaciones Industriales Típicas</h4>
                             <div className="grid md:grid-cols-2 gap-4">
                               <ul className="space-y-2 text-sm text-gray-700">
@@ -688,14 +688,14 @@ export default function SelladoresIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300"
+                          className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300"
                         >
-                          <h3 className="text-3xl font-bold text-red-900 mb-6 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-red-900 mb-6 flex items-center gap-3">
                             <Wrench className="h-8 w-8" />
                             Selladores y Adhesivos Epóxicos
                           </h3>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-red-800 mb-3 text-lg">📖 Descripción</h4>
                             <p className="text-gray-700 leading-relaxed">
                               Son sistemas de <b className="text-red-700">dos componentes (resina + endurecedor)</b> que, al mezclarse, 
@@ -704,8 +704,8 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl border border-red-200">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                               <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Clave
@@ -730,7 +730,7 @@ export default function SelladoresIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-yellow-50 p-6 rounded-xl border-4 border-yellow-400">
+                            <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-yellow-400">
                               <h4 className="font-bold text-yellow-900 mb-4 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Limitaciones Críticas
@@ -752,7 +752,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-400">
+                          <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-400">
                             <h4 className="font-bold text-purple-900 mb-3 text-lg">🏭 Aplicaciones Industriales Típicas</h4>
                             <div className="grid md:grid-cols-2 gap-4">
                               <ul className="space-y-2 text-sm text-gray-700">
@@ -794,14 +794,14 @@ export default function SelladoresIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl border-2 border-yellow-300"
+                          className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-yellow-300"
                         >
-                          <h3 className="text-3xl font-bold text-yellow-900 mb-6 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-yellow-900 mb-6 flex items-center gap-3">
                             <Package className="h-8 w-8" />
                             Selladores Acrílicos
                           </h3>
 
-                          <div className="bg-white p-6 rounded-xl mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-yellow-800 mb-3 text-lg">📖 Descripción</h4>
                             <p className="text-gray-700 leading-relaxed">
                               Son formulaciones <b className="text-yellow-700">base agua</b> que utilizan resinas acrílicas como aglutinante, 
@@ -810,8 +810,8 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl border border-yellow-200">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-yellow-200">
                               <h4 className="font-bold text-yellow-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Clave
@@ -836,7 +836,7 @@ export default function SelladoresIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                               <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5" />
                                 Limitaciones Críticas
@@ -862,7 +862,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-400">
+                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-400">
                             <h4 className="font-bold text-green-900 mb-3 text-lg">🏭 Aplicaciones Industriales Típicas</h4>
                             <div className="bg-white/70 p-4 rounded-lg">
                               <p className="text-gray-700 mb-3">
@@ -893,14 +893,14 @@ export default function SelladoresIndustrialesArticle() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 20 }}
-                          className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300"
+                          className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300"
                         >
-                          <h3 className="text-3xl font-bold text-purple-900 mb-6 flex items-center gap-3">
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-900 mb-6 flex items-center gap-3">
                             <Zap className="h-8 w-8" />
                             Polímeros Híbridos (MS - Silano Modificado)
                           </h3>
 
-                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 p-6 rounded-xl mb-6">
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <h4 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
                               <Star className="h-5 w-5" />
                               🚀 Tecnología de Próxima Generación
@@ -912,8 +912,8 @@ export default function SelladoresIndustrialesArticle() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div className="bg-white p-6 rounded-xl border border-purple-200">
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                               <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                                 <CheckCircle className="h-5 w-5" />
                                 Ventajas Revolucionarias
@@ -942,7 +942,7 @@ export default function SelladoresIndustrialesArticle() {
                               </ul>
                             </div>
 
-                            <div className="bg-yellow-50 p-6 rounded-xl border-4 border-yellow-400">
+                            <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-yellow-400">
                               <h4 className="font-bold text-yellow-900 mb-4 flex items-center gap-2">
                                 <Info className="h-5 w-5" />
                                 Consideraciones
@@ -960,7 +960,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-400">
+                          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-400">
                             <h4 className="font-bold text-green-900 mb-3 text-lg">🏭 Aplicaciones Industriales en Expansión</h4>
                             <p className="text-gray-700 mb-4">
                               Se están consolidando como la <b className="text-green-700">solución "todo en uno"</b> para:
@@ -997,7 +997,7 @@ export default function SelladoresIndustrialesArticle() {
                             </div>
                           </div>
 
-                          <div className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 rounded-xl">
+                          <div className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="text-center text-lg font-bold">
                               🌟 El futuro del sellado industrial está aquí 🌟
                             </p>
@@ -1006,9 +1006,9 @@ export default function SelladoresIndustrialesArticle() {
                       )}
                     </AnimatePresence>
                   </section>                  {/* Parámetros de Rendimiento Críticos */}
-                  <section id="parametros-rendimiento" className="mb-16">
+                  <section id="parametros-rendimiento" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1018,7 +1018,7 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1030,18 +1030,18 @@ export default function SelladoresIndustrialesArticle() {
                     <div className="space-y-8">
                       {/* Capacidad de Movimiento */}
                       <motion.div 
-                        className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg border-2 border-blue-200"
+                        className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-blue-200"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-blue-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">📏</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">📏</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-4">Capacidad de Movimiento (%)</h3>
-                            <div className="bg-white/70 p-6 rounded-xl mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-4">Capacidad de Movimiento (%)</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                               <h4 className="font-bold text-blue-800 mb-2">📖 Definición:</h4>
                               <p className="text-gray-700 leading-relaxed">
                                 Este parámetro cuantifica la <b className="text-blue-700">deformación máxima</b> que un sellador puede 
@@ -1067,18 +1067,18 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Dureza Shore A */}
                       <motion.div 
-                        className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg border-2 border-green-200"
+                        className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-green-200"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-green-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">💪</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">💪</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-4">Dureza (Shore A)</h3>
-                            <div className="bg-white/70 p-6 rounded-xl mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-4">Dureza (Shore A)</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                               <h4 className="font-bold text-green-800 mb-2">📖 Definición:</h4>
                               <p className="text-gray-700 leading-relaxed mb-3">
                                 Mide la <b className="text-green-700">resistencia a la indentación</b> en una escala de 0 a 100. 
@@ -1108,17 +1108,17 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Tiempos de Curado */}
                       <motion.div 
-                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg border-2 border-purple-200"
+                        className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-purple-200"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-purple-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">⏱️</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">⏱️</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-purple-900 mb-4">Tiempos de Curado</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4">Tiempos de Curado</h3>
                             <div className="grid md:grid-cols-2 gap-4 mb-4">
                               <div className="bg-white/70 p-4 rounded-xl">
                                 <h4 className="font-bold text-purple-800 mb-2">⏰ Tiempo de Formación de Piel:</h4>
@@ -1150,18 +1150,18 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Resistencia Ambiental */}
                       <motion.div 
-                        className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-2xl shadow-lg border-2 border-orange-200"
+                        className="bg-gradient-to-r from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border-2 border-orange-200"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8 }}
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-orange-500 rounded-2xl p-4 flex-shrink-0">
-                            <span className="text-white text-3xl">🌡️</span>
+                            <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🌡️</span>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-orange-900 mb-4">Resistencia Ambiental, Química y de Temperatura</h3>
-                            <div className="bg-white/70 p-6 rounded-xl mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-4">Resistencia Ambiental, Química y de Temperatura</h3>
+                            <div className="bg-white/70 p-3 sm:p-4 md:p-6 rounded-xl mb-4">
                               <p className="text-gray-700 leading-relaxed">
                                 Se refiere a la capacidad del sellador para <b className="text-orange-700">mantener su integridad y propiedades</b> 
                                 después de exposición prolongada a factores ambientales como radiación UV, agua, productos químicos 
@@ -1194,16 +1194,16 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Certificaciones */}
                       <motion.div 
-                        className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-2xl shadow-2xl"
+                        className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.9 }}
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <Shield className="h-8 w-8" />
-                          <h3 className="text-2xl font-bold">Certificaciones y Normativas Clave en México</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Certificaciones y Normativas Clave en México</h3>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
                             <h4 className="font-bold mb-2">🚰 NSF/ANSI 61:</h4>
                             <p className="text-sm">
@@ -1232,9 +1232,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* Top 6 Productos */}
-                  <section id="productos" className="mb-16">
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -1245,7 +1245,7 @@ export default function SelladoresIndustrialesArticle() {
 
                     {/* Nota importante sobre calificaciones */}
                     <motion.div 
-                      className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-12"
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
@@ -1265,13 +1265,13 @@ export default function SelladoresIndustrialesArticle() {
                     <div className="space-y-12">
                       {/* Producto #1 - Sika Sikaflex-1a Purform */}
                       <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-2xl border-2 border-green-200"
+                        className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-green-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-green-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-green-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥇 #1
                           </Badge>
                           <Badge className="bg-green-100 text-green-800 px-4 py-2 font-bold">
@@ -1279,7 +1279,7 @@ export default function SelladoresIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Sika Sikaflex-1a Purform
                         </h3>
 
@@ -1305,7 +1305,7 @@ export default function SelladoresIndustrialesArticle() {
                           <b className="text-green-700"> significativamente más seguro</b> para el aplicador sin comprometer el rendimiento.
                         </p>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl mb-6 border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-blue-300">
                           <h4 className="font-bold text-blue-800 mb-3 text-lg flex items-center gap-2">
                             <Zap className="h-6 w-6" />
                             Rendimiento Mecánico Superior
@@ -1334,8 +1334,8 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1364,7 +1364,7 @@ export default function SelladoresIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1386,7 +1386,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $250 - $350 MXN</p>
@@ -1396,7 +1396,7 @@ export default function SelladoresIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/sika-sikaflex-sellador-elastico-poliuretano-1a-300ml-color-negro/p/MLM24156214"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1406,13 +1406,13 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Producto #2 - Loctite SI 596 RTV Rojo */}
                       <motion.div 
-                        className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-3xl shadow-2xl border-2 border-red-200"
+                        className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-red-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-red-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥈 #2
                           </Badge>
                           <Badge className="bg-red-100 text-red-800 px-4 py-2 font-bold">
@@ -1420,7 +1420,7 @@ export default function SelladoresIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Loctite SI 596 RTV Rojo
                         </h3>
 
@@ -1445,7 +1445,7 @@ export default function SelladoresIndustrialesArticle() {
                           sobre las bridas de la maquinaria. Su color rojo característico facilita la inspección visual.
                         </p>
 
-                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl mb-6 border-2 border-yellow-300">
+                        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-yellow-300">
                           <h4 className="font-bold text-yellow-900 mb-3 text-lg flex items-center gap-2">
                             <Flame className="h-6 w-6" />
                             Resistencia Térmica Extrema
@@ -1464,8 +1464,8 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-red-200">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1494,7 +1494,7 @@ export default function SelladoresIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-yellow-50 p-6 rounded-xl border-4 border-yellow-400">
+                          <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-yellow-400">
                             <h4 className="font-bold text-yellow-900 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1520,7 +1520,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-300">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-red-700 mb-2">💰 Rango de Precio: $80 - $120 MXN</p>
@@ -1530,7 +1530,7 @@ export default function SelladoresIndustrialesArticle() {
                               href="https://articulo.mercadolibre.com.mx/MLM-2120536951-silicon-alta-temp-formador-juntas-rtv-rojo-70-ml-loctite-596-_JM"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1540,13 +1540,13 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Producto #3 - Sika AnchorFix-2+ Tropical */}
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
+                        className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-purple-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-purple-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🥉 #3
                           </Badge>
                           <Badge className="bg-purple-100 text-purple-800 px-4 py-2 font-bold">
@@ -1554,7 +1554,7 @@ export default function SelladoresIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Sika AnchorFix-2+ Tropical
                         </h3>
 
@@ -1580,7 +1580,7 @@ export default function SelladoresIndustrialesArticle() {
                           y está diseñado para soportar cargas medias a altas.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                             <Wrench className="h-6 w-6" />
                             Alto Rendimiento Estructural
@@ -1599,8 +1599,8 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-purple-200">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                             <h4 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1629,7 +1629,7 @@ export default function SelladoresIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1651,7 +1651,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300">
+                        <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-purple-700 mb-2">💰 Rango de Precio: $400 - $550 MXN</p>
@@ -1661,7 +1661,7 @@ export default function SelladoresIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/sika-anchorfix2-tropical-adhesivo-para-anclajes-300-ml/up/MLMU562396917"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1669,13 +1669,13 @@ export default function SelladoresIndustrialesArticle() {
                         </div>
                       </motion.div>                      {/* Producto #4 - DAP Alex Plus */}
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
+                        className="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-blue-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-blue-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             ⭐ #4
                           </Badge>
                           <Badge className="bg-blue-100 text-blue-800 px-4 py-2 font-bold">
@@ -1683,7 +1683,7 @@ export default function SelladoresIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           DAP Alex Plus (Acrílico con Silicona)
                         </h3>
 
@@ -1708,7 +1708,7 @@ export default function SelladoresIndustrialesArticle() {
                           enfoque principal en ser <b className="bg-blue-100 px-2 py-1 rounded">pintable rápidamente</b>.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                             <Zap className="h-6 w-6" />
                             Velocidad de Acabado Profesional
@@ -1722,8 +1722,8 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-blue-200">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                             <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1752,7 +1752,7 @@ export default function SelladoresIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Limitaciones
@@ -1778,7 +1778,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-blue-700 mb-2">💰 Rango de Precio: $80 - $120 MXN</p>
@@ -1788,7 +1788,7 @@ export default function SelladoresIndustrialesArticle() {
                               href="https://www.mercadolibre.com.mx/sellador-acrilico-siliconado-pintable-grietas-alex-plus-dap-color-blanco/p/MLM25204286"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1798,13 +1798,13 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Producto #5 - DOWSIL 732 */}
                       <motion.div 
-                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
+                        className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-teal-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-teal-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             🏆 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
@@ -1812,7 +1812,7 @@ export default function SelladoresIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           DOWSIL 732 Multi-Purpose Sealant
                         </h3>
 
@@ -1837,7 +1837,7 @@ export default function SelladoresIndustrialesArticle() {
                           por DOW (anteriormente Dow Corning), líder global en tecnología de siliconas.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                             <Shield className="h-6 w-6" />
                             Certificación para Contacto con Alimentos
@@ -1857,8 +1857,8 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-teal-200">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-teal-200">
                             <h4 className="font-bold text-teal-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -1887,7 +1887,7 @@ export default function SelladoresIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Contras
@@ -1913,7 +1913,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-6 rounded-xl border-2 border-teal-300">
+                        <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-teal-700 mb-2">💰 Rango de Precio: Variable</p>
@@ -1923,7 +1923,7 @@ export default function SelladoresIndustrialesArticle() {
                               href="https://listado.mercadolibre.com.mx/silicon-dow-corning-732"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Buscar en Mercado Libre →
                             </a>
@@ -1933,13 +1933,13 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Producto #6 - Pennsylvania Duretán */}
                       <motion.div 
-                        className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-3xl shadow-2xl border-2 border-amber-200"
+                        className="bg-gradient-to-br from-amber-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-amber-200"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
                       >
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-amber-500 text-white font-bold text-lg px-6 py-3">
+                          <Badge className="bg-amber-500 text-white font-bold text-lg px-4 sm:px-6 py-3">
                             💪 #6
                           </Badge>
                           <Badge className="bg-amber-100 text-amber-800 px-4 py-2 font-bold">
@@ -1947,7 +1947,7 @@ export default function SelladoresIndustrialesArticle() {
                           </Badge>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                           Pennsylvania Duretán
                         </h3>
 
@@ -1973,7 +1973,7 @@ export default function SelladoresIndustrialesArticle() {
                           excelente relación calidad-precio.
                         </p>
 
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-300">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border-2 border-green-300">
                           <h4 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                             <TrendingUp className="h-6 w-6" />
                             Fuerte Presencia en el Mercado Mexicano
@@ -1987,8 +1987,8 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                          <div className="bg-white p-6 rounded-xl border border-amber-200">
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-amber-200">
                             <h4 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5" />
                               Ventajas
@@ -2017,7 +2017,7 @@ export default function SelladoresIndustrialesArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                               <AlertTriangle className="h-5 w-5" />
                               Limitaciones
@@ -2039,7 +2039,7 @@ export default function SelladoresIndustrialesArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-amber-100 to-orange-100 p-6 rounded-xl border-2 border-amber-300">
+                        <div className="bg-gradient-to-r from-amber-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-amber-300">
                           <div className="flex items-center justify-between">
                             <div>
                               <p className="text-xl font-bold text-amber-700 mb-2">💰 Rango de Precio: $150 - $250 MXN</p>
@@ -2049,7 +2049,7 @@ export default function SelladoresIndustrialesArticle() {
                               href="https://listado.mercadolibre.com.mx/sellador-duretan"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
                               🛒 Buscar en Mercado Libre →
                             </a>
@@ -2060,9 +2060,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* Comparación de Productos */}
-                  <section id="comparacion" className="mb-16">
+                  <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2078,9 +2078,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* Guía de Compra Rápida por Aplicación */}
-                  <section id="guia-compra" className="mb-16">
+                  <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2090,7 +2090,7 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.p 
-                      className="text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto"
+                      className="text-xl text-gray-700 text-center mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2101,7 +2101,7 @@ export default function SelladoresIndustrialesArticle() {
                     <div className="space-y-8">
                       {/* Juntas de Expansión */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-blue-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-blue-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
@@ -2111,7 +2111,7 @@ export default function SelladoresIndustrialesArticle() {
                             <Construction className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-4">
                               Si necesita sellar JUNTAS DE EXPANSIÓN EN PISOS Y FACHADAS
                             </h3>
                             <p className="text-gray-600 text-sm mb-4">(Alto movimiento y exposición a la intemperie)</p>
@@ -2145,7 +2145,7 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Alta Temperatura */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-red-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-red-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6 }}
@@ -2155,7 +2155,7 @@ export default function SelladoresIndustrialesArticle() {
                             <Flame className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-red-900 mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4">
                               Si necesita formar JUNTAS EN MAQUINARIA, MOTORES O SISTEMAS DE ALTA TEMPERATURA
                             </h3>
                             
@@ -2184,7 +2184,7 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Anclajes Estructurales */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-purple-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-purple-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7 }}
@@ -2194,7 +2194,7 @@ export default function SelladoresIndustrialesArticle() {
                             <Wrench className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-purple-900 mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4">
                               Si necesita realizar ANCLAJES ESTRUCTURALES
                             </h3>
                             <p className="text-gray-600 text-sm mb-4">(Fijar varillas, pernos, maquinaria pesada)</p>
@@ -2229,7 +2229,7 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Grietas Pintables */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-green-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-green-500"
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8 }}
@@ -2239,7 +2239,7 @@ export default function SelladoresIndustrialesArticle() {
                             <Package className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-green-900 mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-4">
                               Si necesita sellar GRIETAS Y JUNTAS INTERIORES QUE SERÁN PINTADAS
                             </h3>
                             
@@ -2268,7 +2268,7 @@ export default function SelladoresIndustrialesArticle() {
 
                       {/* Industria Alimentaria */}
                       <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-teal-500"
+                        className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border-l-8 border-teal-500"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.9 }}
@@ -2278,7 +2278,7 @@ export default function SelladoresIndustrialesArticle() {
                             <Shield className="h-8 w-8 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-teal-900 mb-4">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-teal-900 mb-4">
                               Si trabaja en la INDUSTRIA ALIMENTARIA O SISTEMAS DE AGUA POTABLE
                             </h3>
                             
@@ -2327,9 +2327,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* FAQ */}
-                  <section id="faq" className="mb-16">
+                  <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2347,7 +2347,7 @@ export default function SelladoresIndustrialesArticle() {
                         >
                           <button
                             onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                            className="w-full p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-indigo-50 transition-all flex items-center justify-between gap-4"
+                            className="w-full p-3 sm:p-4 md:p-6 text-left bg-gradient-to-r from-gray-50 to-blue-50 hover:from-blue-50 hover:to-indigo-50 transition-all flex items-center justify-between gap-4"
                           >
                             <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
                             <motion.div
@@ -2367,7 +2367,7 @@ export default function SelladoresIndustrialesArticle() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                               >
-                                <div className="p-6 bg-white text-gray-700 leading-relaxed">
+                                <div className="p-3 sm:p-4 md:p-6 bg-white text-gray-700 leading-relaxed">
                                   {faq.answer}
                                 </div>
                               </motion.div>
@@ -2379,9 +2379,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* Conclusión */}
-                  <section id="conclusion" className="mb-16">
+                  <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
@@ -2391,7 +2391,7 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.h2>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-2xl shadow-lg mb-8"
+                      className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-2xl shadow-lg mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
@@ -2413,8 +2413,8 @@ export default function SelladoresIndustrialesArticle() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-3 gap-6 mt-8">
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-green-200">
+                      <div className="grid md:grid-cols-3 gap-3 mt-8">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-green-200">
                           <div className="text-center mb-4">
                             <TrendingUp className="h-10 w-10 mx-auto text-green-600 mb-2" />
                             <h3 className="text-lg font-bold text-green-900">Mejor Alto Rendimiento</h3>
@@ -2425,7 +2425,7 @@ export default function SelladoresIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-red-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-red-200">
                           <div className="text-center mb-4">
                             <Flame className="h-10 w-10 mx-auto text-red-600 mb-2" />
                             <h3 className="text-lg font-bold text-red-900">Mejor Alta Temperatura</h3>
@@ -2436,7 +2436,7 @@ export default function SelladoresIndustrialesArticle() {
                           </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-purple-200">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-md border border-purple-200">
                           <div className="text-center mb-4">
                             <Wrench className="h-10 w-10 mx-auto text-purple-600 mb-2" />
                             <h3 className="text-lg font-bold text-purple-900">Mejor Estructural</h3>
@@ -2450,13 +2450,13 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-8 rounded-2xl shadow-2xl mb-8"
+                      className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl mb-4 sm:mb-6 md:mb-8"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <FileText className="h-8 w-8" />
-                        <h3 className="text-2xl font-bold">Antes de su Próxima Compra</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold">Antes de su Próxima Compra</h3>
                       </div>
                       <ul className="space-y-3 text-lg">
                         <li className="flex items-start gap-3">
@@ -2475,13 +2475,13 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-300 p-8 rounded-2xl"
+                      className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-300 p-4 sm:p-6 md:p-8 rounded-2xl"
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <Zap className="h-8 w-8 text-purple-600" />
-                        <h3 className="text-2xl font-bold text-purple-900">Visión a Futuro</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900">Visión a Futuro</h3>
                       </div>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Mientras que las siliconas y los poliuretanos siguen siendo los pilares del sellado industrial, 
@@ -2498,11 +2498,11 @@ export default function SelladoresIndustrialesArticle() {
                     </motion.div>
 
                     <motion.div 
-                      className="mt-8 text-center bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-2xl border-2 border-blue-300"
+                      className="mt-8 text-center bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-blue-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <p className="text-2xl font-bold text-gray-800 mb-2">
+                      <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
                         🔧 La unión perfecta es aquella que resiste el tiempo
                       </p>
                       <p className="text-lg text-blue-800 font-semibold">
@@ -2512,9 +2512,9 @@ export default function SelladoresIndustrialesArticle() {
                   </section>
 
                   {/* Artículos Relacionados */}
-                  <section id="articulos-relacionados" className="mb-12">
+                  <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                     <motion.h2 
-                      className="text-4xl font-bold mb-8 text-center"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
