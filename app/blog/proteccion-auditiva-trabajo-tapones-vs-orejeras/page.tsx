@@ -225,7 +225,7 @@ export default function ProteccionAuditivaArticle() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {Array.from({ length: 80 }, (_, i) => (
@@ -256,7 +256,7 @@ export default function ProteccionAuditivaArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -274,7 +274,7 @@ export default function ProteccionAuditivaArticle() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -283,7 +283,7 @@ export default function ProteccionAuditivaArticle() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-purple-100 mb-8"
+                className="text-xl text-purple-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -292,7 +292,7 @@ export default function ProteccionAuditivaArticle() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-purple-200"
+                className="flex items-center justify-center gap-3 text-sm text-purple-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -341,29 +341,29 @@ export default function ProteccionAuditivaArticle() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-20">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               
               {/* Sección 1: La Amenaza Invisible */}
               <motion.section
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <div className="flex items-center gap-4 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl">
                       <AlertTriangle className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         La Amenaza Invisible del Ruido Laboral
                       </h2>
                       <p className="text-gray-600 text-lg">El enemigo silencioso que destruye tu audición</p>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-400 p-8 rounded-r-2xl mb-8">
+                  <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-400 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8">
                     <p className="text-xl text-gray-800 leading-relaxed mb-4">
                       Imagina el entorno de una fábrica o construcción: el chillido de la sierra cortando metal, 
                       el impacto del martillo neumático, el zumbido constante de la maquinaria. Este sonido, 
@@ -376,9 +376,9 @@ export default function ProteccionAuditivaArticle() {
                     </p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                     <div>
-                      <h3 className="text-2xl font-bold text-purple-600 mb-6">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-600 mb-6">
                         Efectos Sistémicos del Ruido
                       </h3>
                       <div className="space-y-4">
@@ -437,7 +437,7 @@ export default function ProteccionAuditivaArticle() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200">
                     <div className="flex items-start gap-4">
                       <Info className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
                       <div>
@@ -463,14 +463,14 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     🔊 El Lenguaje del Ruido: Decibelios y Límites
                   </h2>
 
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                     <div>
                       <div className="relative w-full" style={{ height: '400px' }}>
                         <Bar data={decibelChartData} options={decibelChartOptions} />
@@ -478,7 +478,7 @@ export default function ProteccionAuditivaArticle() {
                     </div>
 
                     <div className="space-y-6">
-                      <div className="bg-green-50 p-6 rounded-xl border-2 border-green-300">
+                      <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                         <h4 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                           <CheckCircle className="h-5 w-5" />
                           Zona Segura (&lt; 85 dBA)
@@ -488,7 +488,7 @@ export default function ProteccionAuditivaArticle() {
                         </p>
                       </div>
 
-                      <div className="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-300">
+                      <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                         <h4 className="font-bold text-yellow-900 mb-3 text-lg flex items-center gap-2">
                           <AlertTriangle className="h-5 w-5" />
                           Nivel de Acción (85 dBA)
@@ -504,7 +504,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-red-50 p-6 rounded-xl border-2 border-red-300">
+                      <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                         <h4 className="font-bold text-red-900 mb-3 text-lg flex items-center gap-2">
                           <X className="h-5 w-5" />
                           Zona Peligrosa (&gt; 100 dBA)
@@ -517,8 +517,8 @@ export default function ProteccionAuditivaArticle() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300">
-                    <h3 className="text-2xl font-bold text-purple-900 mb-6 text-center">
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 text-center">
                       La Regla de Oro: Tiempo vs. Intensidad
                     </h3>
                     <div className="grid md:grid-cols-3 gap-4">
@@ -539,7 +539,7 @@ export default function ProteccionAuditivaArticle() {
                           }`}
                           whileHover={{ scale: 1.05 }}
                         >
-                          <p className="text-3xl font-bold mb-2">{item.db}</p>
+                          <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-2">{item.db}</p>
                           <p className="text-lg font-semibold">↓</p>
                           <p className="text-xl font-bold">{item.time}</p>
                           <p className="text-sm text-gray-600 mt-2">permitidas</p>
@@ -558,23 +558,23 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <div className="flex items-center gap-4 mb-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <div className="flex items-center gap-4 mb-4 sm:mb-6 md:mb-8">
                     <div className="p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl">
                       <Calculator className="h-10 w-10 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-4xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                         Decodificando el NRR: De la Etiqueta a la Realidad
                       </h2>
                       <p className="text-gray-600 text-lg">La verdad matemática detrás de los números</p>
                     </div>
                   </div>
 
-                  <div className="bg-blue-50 border-l-8 border-blue-400 p-8 rounded-r-2xl mb-8">
-                    <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                  <div className="bg-blue-50 border-l-8 border-blue-400 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-4">
                       ¿Qué es el NRR?
                     </h3>
                     <p className="text-gray-700 text-lg leading-relaxed mb-4">
@@ -582,29 +582,29 @@ export default function ProteccionAuditivaArticle() {
                       "29 dB" o "33 dB". Representa la atenuación teórica lograda en un <strong>laboratorio perfecto</strong> 
                       con condiciones ideales que rara vez existen en el trabajo real.
                     </p>
-                    <div className="bg-white p-6 rounded-xl">
+                    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                       <p className="text-red-800 font-bold text-lg">
                         ⚠️ ALERTA CRÍTICA: El NRR de la etiqueta NO es tu protección real
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-2xl border-2 border-orange-300 mb-8">
-                    <h3 className="text-2xl font-bold text-orange-900 mb-6 text-center">
+                  <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-orange-300 mb-4 sm:mb-6 md:mb-8">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-6 text-center">
                       La Fórmula del Experto (OSHA)
                     </h3>
-                    <div className="bg-white p-8 rounded-xl mb-6">
-                      <p className="text-center text-4xl font-bold text-gray-900 mb-4">
+                    <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl mb-6">
+                      <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                         Protección Real = (NRR - 7) ÷ 2
                       </p>
-                      <div className="grid md:grid-cols-2 gap-6 mt-6">
-                        <div className="bg-blue-50 p-6 rounded-lg">
+                      <div className="grid md:grid-cols-2 gap-3 mt-6">
+                        <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-lg">
                           <p className="font-bold text-blue-900 mb-2">¿Por qué - 7?</p>
                           <p className="text-gray-700 text-sm">
                             Ajuste técnico de la escala C (laboratorio) a la escala A (riesgo real para el oído humano)
                           </p>
                         </div>
-                        <div className="bg-purple-50 p-6 rounded-lg">
+                        <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-lg">
                           <p className="font-bold text-purple-900 mb-2">¿Por qué ÷ 2?</p>
                           <p className="text-gray-700 text-sm">
                             Reducción del 50% para compensar uso real: ajuste imperfecto, sudor, movimiento, 
@@ -614,19 +614,19 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-red-100 p-6 rounded-xl border-2 border-red-400">
+                    <div className="bg-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-400">
                       <h4 className="font-bold text-red-900 mb-4 text-xl text-center">
                         Ejemplo Revelador: La Brecha de 20 dB
                       </h4>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-lg text-center">
+                      <div className="grid md:grid-cols-2 gap-3">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg text-center">
                           <p className="text-gray-600 mb-2">NRR de Etiqueta</p>
-                          <p className="text-5xl font-bold text-gray-900 mb-2">33 dB</p>
+                          <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">33 dB</p>
                           <p className="text-sm text-gray-500">Lo que el trabajador espera</p>
                         </div>
-                        <div className="bg-white p-6 rounded-lg text-center">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg text-center">
                           <p className="text-gray-600 mb-2">Protección Real (OSHA)</p>
-                          <p className="text-5xl font-bold text-red-600 mb-2">13 dB</p>
+                          <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl font-bold text-red-600 mb-2">13 dB</p>
                           <p className="text-sm text-gray-500">(33-7)/2 = 13</p>
                         </div>
                       </div>
@@ -637,11 +637,11 @@ export default function ProteccionAuditivaArticle() {
                   </div>
 
                   {/* Calculadora interactiva */}
-                  <div className="bg-gray-50 p-8 rounded-2xl border-2 border-gray-300">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  <div className="bg-gray-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-gray-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
                       🧮 Calculadora de Protección Real
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
                       <div>
                         <label className="block font-bold text-gray-700 mb-3">
                           NRR de la Etiqueta
@@ -654,17 +654,17 @@ export default function ProteccionAuditivaArticle() {
                           onChange={(e) => setNrrValue(Number(e.target.value))}
                           className="w-full h-3 bg-gradient-to-r from-blue-200 to-purple-500 rounded-lg appearance-none cursor-pointer"
                         />
-                        <p className="text-center text-4xl font-bold text-purple-600 mt-4">
+                        <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-purple-600 mt-4">
                           {nrrValue} dB
                         </p>
                       </div>
-                      <div className="bg-white p-6 rounded-xl text-center">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center">
                         <p className="text-gray-600 mb-2">Tu Protección Real Estimada</p>
                         <motion.p 
                           key={calculateRealNRR()}
                           initial={{ scale: 0.8, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
-                          className="text-6xl font-bold text-green-600 mb-2"
+                          className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-600 mb-2"
                         >
                           {calculateRealNRR()} dB
                         </motion.p>
@@ -680,16 +680,16 @@ export default function ProteccionAuditivaArticle() {
                     </div>
                   </div>
 
-                  <div className="mt-8 bg-gradient-to-r from-purple-50 to-indigo-50 p-8 rounded-2xl border-2 border-purple-300">
-                    <h3 className="text-2xl font-bold text-purple-900 mb-6">
+                  <div className="mt-8 bg-gradient-to-r from-purple-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6">
                       Perspectiva Avanzada: El Método NIOSH
                     </h3>
                     <p className="text-gray-700 mb-6 leading-relaxed">
                       NIOSH reconoce que no todos los protectores fallan igual. Sus factores de reducción son más matizados:
                     </p>
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="bg-white p-6 rounded-xl">
-                        <p className="text-4xl mb-3 text-center">🎧</p>
+                    <div className="grid md:grid-cols-3 gap-3">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 text-center">🎧</p>
                         <p className="font-bold text-gray-900 mb-2 text-center">Orejeras</p>
                         <p className="text-gray-700 text-sm text-center">
                           Reducir <strong className="text-green-600">25%</strong>
@@ -698,8 +698,8 @@ export default function ProteccionAuditivaArticle() {
                           Más consistentes entre usuarios
                         </p>
                       </div>
-                      <div className="bg-white p-6 rounded-xl">
-                        <p className="text-4xl mb-3 text-center">🔌</p>
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 text-center">🔌</p>
                         <p className="font-bold text-gray-900 mb-2 text-center">Tapones de Espuma</p>
                         <p className="text-gray-700 text-sm text-center">
                           Reducir <strong className="text-yellow-600">50%</strong>
@@ -708,8 +708,8 @@ export default function ProteccionAuditivaArticle() {
                           Alta variabilidad de ajuste
                         </p>
                       </div>
-                      <div className="bg-white p-6 rounded-xl">
-                        <p className="text-4xl mb-3 text-center">🎯</p>
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 text-center">🎯</p>
                         <p className="font-bold text-gray-900 mb-2 text-center">Otros Tapones</p>
                         <p className="text-gray-700 text-sm text-center">
                           Reducir <strong className="text-red-600">70%</strong>
@@ -728,14 +728,14 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   ⚔️ La Batalla: Tapones vs. Orejeras
                 </h2>
 
                 {/* Navegación de tabs */}
-                <div className="flex justify-center gap-4 mb-8">
+                <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
                   <motion.button
                     onClick={() => setActiveTab('tapones')}
                     whileHover={{ scale: 1.05 }}
@@ -746,7 +746,7 @@ export default function ProteccionAuditivaArticle() {
                         : 'bg-white text-blue-600 border-2 border-blue-300 hover:bg-blue-50'
                     }`}
                   >
-                    <span className="text-2xl">🔌</span>
+                    <span className="text-lg sm:text-xl md:text-2xl">🔌</span>
                     Tapones Auditivos
                   </motion.button>
                   <motion.button
@@ -759,7 +759,7 @@ export default function ProteccionAuditivaArticle() {
                         : 'bg-white text-purple-600 border-2 border-purple-300 hover:bg-purple-50'
                     }`}
                   >
-                    <span className="text-2xl">🎧</span>
+                    <span className="text-lg sm:text-xl md:text-2xl">🎧</span>
                     Orejeras
                   </motion.button>
                 </div>
@@ -773,11 +773,11 @@ export default function ProteccionAuditivaArticle() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.3 }}
-                      className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                      className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                     >
-                      <div className="text-center mb-8">
-                        <p className="text-6xl mb-4">🔌</p>
-                        <h3 className="text-3xl font-bold text-blue-900 mb-2">
+                      <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                        <p className="text-4xl sm:text-5xl md:text-6xl mb-4">🔌</p>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-900 mb-2">
                           Tapones Auditivos (Protectores Intraurales)
                         </h3>
                         <p className="text-gray-600 text-lg">
@@ -785,13 +785,13 @@ export default function ProteccionAuditivaArticle() {
                         </p>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-8 mb-8">
+                      <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                         <div>
-                          <h4 className="text-2xl font-bold text-blue-800 mb-6">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-6">
                             Tipos de Tapones
                           </h4>
                           <div className="space-y-4">
-                            <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+                            <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                               <p className="font-bold text-blue-900 mb-2">🧽 Espuma Desechables</p>
                               <p className="text-gray-700 text-sm mb-2">
                                 Los más comunes. Se comprimen ("enrollan") antes de insertar. 
@@ -800,7 +800,7 @@ export default function ProteccionAuditivaArticle() {
                               <p className="text-xs text-blue-600 font-semibold">UN SOLO USO</p>
                             </div>
 
-                            <div className="bg-green-50 p-6 rounded-xl border-2 border-green-200">
+                            <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                               <p className="font-bold text-green-900 mb-2">♻️ Premoldeados Reutilizables</p>
                               <p className="text-gray-700 text-sm mb-2">
                                 Silicona o plástico flexible con "aletas". No se enrollan. 
@@ -809,7 +809,7 @@ export default function ProteccionAuditivaArticle() {
                               <p className="text-xs text-green-600 font-semibold">REUTILIZABLES</p>
                             </div>
 
-                            <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-200">
+                            <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                               <p className="font-bold text-purple-900 mb-2">🎯 Con Banda / Semi-insertados</p>
                               <p className="text-gray-700 text-sm mb-2">
                                 Tapones en los extremos de una banda flexible. Ideales para uso intermitente.
@@ -817,7 +817,7 @@ export default function ProteccionAuditivaArticle() {
                               <p className="text-xs text-purple-600 font-semibold">USO INTERMITENTE</p>
                             </div>
 
-                            <div className="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-200">
+                            <div className="bg-yellow-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-200">
                               <p className="font-bold text-yellow-900 mb-2">✨ Moldeados a Medida</p>
                               <p className="text-gray-700 text-sm mb-2">
                                 Impresión del canal auditivo. Ajuste perfecto y máxima comodidad.
@@ -828,7 +828,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
 
                         <div>
-                          <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500 mb-6">
                             <h4 className="font-bold text-green-900 mb-4 text-xl flex items-center gap-2">
                               <CheckCircle className="h-6 w-6" />
                               Ventajas Clave
@@ -857,7 +857,7 @@ export default function ProteccionAuditivaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <h4 className="font-bold text-red-900 mb-4 text-xl flex items-center gap-2">
                               <AlertTriangle className="h-6 w-6" />
                               Riesgos y Desafíos
@@ -884,43 +884,43 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300">
-                        <h4 className="text-2xl font-bold text-blue-900 mb-6 text-center">
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300">
+                        <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6 text-center">
                           🎯 Método "Enrollar, Tirar, Sostener" (Para Tapones de Espuma)
                         </h4>
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-3">
                           <motion.div 
-                            className="bg-white p-6 rounded-xl text-center"
+                            className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center"
                             whileHover={{ scale: 1.05 }}
                           >
-                            <p className="text-5xl mb-4">1️⃣</p>
+                            <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-4">1️⃣</p>
                             <p className="font-bold text-blue-900 mb-3">ENROLLAR</p>
                             <p className="text-gray-700 text-sm">
                               Con manos LIMPIAS, enrolla el tapón hasta formar un cilindro delgado sin pliegues
                             </p>
                           </motion.div>
                           <motion.div 
-                            className="bg-white p-6 rounded-xl text-center"
+                            className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center"
                             whileHover={{ scale: 1.05 }}
                           >
-                            <p className="text-5xl mb-4">2️⃣</p>
+                            <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-4">2️⃣</p>
                             <p className="font-bold text-blue-900 mb-3">TIRAR</p>
                             <p className="text-gray-700 text-sm">
                               Con la mano opuesta, pasa el brazo por encima de la cabeza y tira de la oreja hacia arriba y atrás
                             </p>
                           </motion.div>
                           <motion.div 
-                            className="bg-white p-6 rounded-xl text-center"
+                            className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center"
                             whileHover={{ scale: 1.05 }}
                           >
-                            <p className="text-5xl mb-4">3️⃣</p>
+                            <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl mb-4">3️⃣</p>
                             <p className="font-bold text-blue-900 mb-3">SOSTENER</p>
                             <p className="text-gray-700 text-sm">
                               Inserta rápidamente y sostén con el dedo durante 20-40 segundos mientras la espuma se expande
                             </p>
                           </motion.div>
                         </div>
-                        <div className="mt-6 p-6 bg-yellow-100 rounded-xl border-2 border-yellow-400">
+                        <div className="mt-6 p-3 sm:p-4 md:p-6 bg-yellow-100 rounded-xl border-2 border-yellow-400">
                           <p className="text-center text-yellow-900 font-bold mb-2">
                             ✅ Verificación del Ajuste Correcto
                           </p>
@@ -937,7 +937,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                       </div>
 
-                      <div className="mt-8 bg-red-100 p-6 rounded-xl border-l-4 border-red-500">
+                      <div className="mt-8 bg-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                         <p className="text-red-900 font-bold text-lg mb-3">
                           ⚠️ RESPONSABILIDAD LEGAL DEL EMPLEADOR
                         </p>
@@ -958,11 +958,11 @@ export default function ProteccionAuditivaArticle() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.3 }}
-                      className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                      className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                     >
-                      <div className="text-center mb-8">
-                        <p className="text-6xl mb-4">🎧</p>
-                        <h3 className="text-3xl font-bold text-purple-900 mb-2">
+                      <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                        <p className="text-4xl sm:text-5xl md:text-6xl mb-4">🎧</p>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-900 mb-2">
                           Orejeras (Protectores Tipo Copa)
                         </h3>
                         <p className="text-gray-600 text-lg">
@@ -970,34 +970,34 @@ export default function ProteccionAuditivaArticle() {
                         </p>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-8 mb-8">
+                      <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                         <div>
-                          <h4 className="text-2xl font-bold text-purple-800 mb-6">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-800 mb-6">
                             Tipos de Orejeras
                           </h4>
                           <div className="space-y-4">
-                            <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-200">
+                            <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                               <p className="font-bold text-purple-900 mb-2">👤 Diadema Estándar</p>
                               <p className="text-gray-700 text-sm">
                                 El diseño clásico. Copas rellenas de espuma acústica unidas por diadema ajustable sobre la cabeza.
                               </p>
                             </div>
 
-                            <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+                            <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                               <p className="font-bold text-blue-900 mb-2">⛑️ Acoplables a Casco</p>
                               <p className="text-gray-700 text-sm">
                                 Diseñadas para encajar en ranuras de cascos industriales. Integración perfecta.
                               </p>
                             </div>
 
-                            <div className="bg-green-50 p-6 rounded-xl border-2 border-green-200">
+                            <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                               <p className="font-bold text-green-900 mb-2">🔄 De Nuca / Tras la Cabeza</p>
                               <p className="text-gray-700 text-sm">
                                 Banda detrás del cuello. Permite uso con caretas de soldar o sombreros de ala ancha.
                               </p>
                             </div>
 
-                            <div className="bg-orange-50 p-6 rounded-xl border-2 border-orange-200">
+                            <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                               <p className="font-bold text-orange-900 mb-2">⚡ Electrónicas / Dependientes del Nivel</p>
                               <p className="text-gray-700 text-sm mb-2">
                                 <strong>LA INNOVACIÓN:</strong> Micrófonos externos + circuito electrónico
@@ -1012,7 +1012,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
 
                         <div>
-                          <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
+                          <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-green-500 mb-6">
                             <h4 className="font-bold text-green-900 mb-4 text-xl flex items-center gap-2">
                               <CheckCircle className="h-6 w-6" />
                               Ventajas Clave
@@ -1041,7 +1041,7 @@ export default function ProteccionAuditivaArticle() {
                             </ul>
                           </div>
 
-                          <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                          <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                             <h4 className="font-bold text-red-900 mb-4 text-xl flex items-center gap-2">
                               <AlertTriangle className="h-6 w-6" />
                               Desafíos y Limitaciones
@@ -1068,13 +1068,13 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-4 border-red-400">
-                        <h4 className="text-2xl font-bold text-red-900 mb-6 text-center flex items-center justify-center gap-3">
+                      <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-red-400">
+                        <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center flex items-center justify-center gap-3">
                           <AlertTriangle className="h-8 w-8" />
                           EL TALÓN DE AQUILES: El Sello Comprometido
                         </h4>
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-white p-6 rounded-xl">
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="font-bold text-red-800 mb-4 text-lg">
                               Factores que Rompen el Sello:
                             </p>
@@ -1097,7 +1097,7 @@ export default function ProteccionAuditivaArticle() {
                               </li>
                             </ul>
                           </div>
-                          <div className="bg-white p-6 rounded-xl">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                             <p className="font-bold text-orange-800 mb-4 text-lg">
                               Consecuencia:
                             </p>
@@ -1112,7 +1112,7 @@ export default function ProteccionAuditivaArticle() {
                             </div>
                           </div>
                         </div>
-                        <div className="mt-6 p-6 bg-yellow-100 rounded-xl border-2 border-yellow-400">
+                        <div className="mt-6 p-3 sm:p-4 md:p-6 bg-yellow-100 rounded-xl border-2 border-yellow-400">
                           <p className="text-yellow-900 font-bold text-center text-lg">
                             ⚠️ CONFLICTO DE SISTEMAS EPP
                           </p>
@@ -1124,12 +1124,12 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                       </div>
 
-                      <div className="mt-8 bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                      <div className="mt-8 bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-blue-500">
                         <h4 className="font-bold text-blue-900 mb-4 text-lg flex items-center gap-2">
                           <Wrench className="h-6 w-6" />
                           Mantenimiento de Orejeras
                         </h4>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 gap-3">
                           <div>
                             <p className="font-bold text-blue-800 mb-3">Limpieza Regular:</p>
                             <ul className="space-y-2 text-gray-700 text-sm">
@@ -1158,14 +1158,14 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     🎯 La Matriz de Decisión: ¿Cuál Elegir?
                   </h2>
 
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl border-2 border-purple-300 mb-8">
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300 mb-4 sm:mb-6 md:mb-8">
                     <p className="text-center text-xl text-gray-800 mb-6">
                       <strong>No hay un "ganador" absoluto.</strong> La elección inteligente se basa en una evaluación 
                       de la situación específica: trabajador, tarea, entorno y perfil del ruido.
@@ -1173,7 +1173,7 @@ export default function ProteccionAuditivaArticle() {
                   </div>
 
                   {/* Tabla comparativa interactiva */}
-                  <div className="overflow-x-auto mb-8">
+                  <div className="overflow-x-auto mb-4 sm:mb-6 md:mb-8">
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
@@ -1193,10 +1193,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Ruido Constante (+8 horas)</td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Comodidad superior a largo plazo, evita tentación de quitárselos
@@ -1205,10 +1205,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Ruido Intermitente / Fluctuante</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Fáciles y rápidos de poner/quitar según necesidad
@@ -1217,10 +1217,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Ruido de Alto Impacto</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Orejeras electrónicas bloquean sonidos repentinos sin aislar
@@ -1236,10 +1236,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Condiciones de Calor/Humedad</td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Orejeras provocan sudoración y malestar
@@ -1248,10 +1248,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Condiciones de Suciedad/Polvo</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Evita introducir contaminantes en el canal auditivo
@@ -1260,10 +1260,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Espacios Confinados</td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Menos voluminosos, mejor movimiento de cabeza
@@ -1281,10 +1281,10 @@ export default function ProteccionAuditivaArticle() {
                             <strong>Uso con Casco Y Gafas</strong>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             <strong className="text-red-600">FACTOR DECISIVO:</strong> No interfiere con sello de otros EPP
@@ -1293,10 +1293,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Uso con Casco SOLAMENTE</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl">⚖️</span>
+                            <span className="text-lg sm:text-xl md:text-2xl">⚖️</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl">⚖️</span>
+                            <span className="text-lg sm:text-xl md:text-2xl">⚖️</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Empate. Orejeras acoplables al casco se integran bien; tapones también compatibles
@@ -1312,10 +1312,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Necesidad de Comunicación</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Orejeras electrónicas son superiores. Estándar fáciles de levantar
@@ -1324,10 +1324,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Higiene (Manos Sucias)</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             Aplicación sin tocar el oído
@@ -1336,10 +1336,10 @@ export default function ProteccionAuditivaArticle() {
                         <tr className="hover:bg-blue-50 transition-colors">
                           <td className="p-4 border">Afecciones Auditivas Preexistentes</td>
                           <td className="p-4 text-center border">
-                            <span className="text-2xl text-gray-300">-</span>
+                            <span className="text-lg sm:text-xl md:text-2xl text-gray-300">-</span>
                           </td>
                           <td className="p-4 text-center border">
-                            <span className="text-3xl">🏆</span>
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏆</span>
                           </td>
                           <td className="p-4 border text-gray-700">
                             No entra ni irrita el canal auditivo
@@ -1350,16 +1350,16 @@ export default function ProteccionAuditivaArticle() {
                   </div>
 
                   {/* Escenarios Prácticos */}
-                  <div className="mb-8">
-                    <h3 className="text-2xl font-bold text-center mb-6 text-purple-900">
+                  <div className="mb-4 sm:mb-6 md:mb-8">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-6 text-purple-900">
                       🎬 Escenarios Industriales en Acción
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       <motion.div 
-                        className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl border-2 border-blue-300"
+                        className="bg-gradient-to-br from-blue-50 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <p className="text-4xl mb-3 text-center">👨‍🏭</p>
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 text-center">👨‍🏭</p>
                         <h4 className="font-bold text-blue-900 mb-3 text-center">El Soldador</h4>
                         <div className="space-y-2 text-sm text-gray-700 mb-4">
                           <p>• Ruido moderado pero constante</p>
@@ -1368,7 +1368,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                         <div className="bg-white p-4 rounded-lg">
                           <p className="font-bold text-green-900 text-center">✅ VEREDICTO</p>
-                          <p className="text-center text-2xl my-2">🔌</p>
+                          <p className="text-center text-lg sm:text-xl md:text-2xl my-2">🔌</p>
                           <p className="text-xs text-gray-600 text-center">
                             Tapones auditivos. Cero interferencia con equipo facial crítico.
                           </p>
@@ -1376,10 +1376,10 @@ export default function ProteccionAuditivaArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-xl border-2 border-purple-300"
+                        className="bg-gradient-to-br from-purple-50 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <p className="text-4xl mb-3 text-center">👷‍♂️</p>
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 text-center">👷‍♂️</p>
                         <h4 className="font-bold text-purple-900 mb-3 text-center">Supervisor de Construcción</h4>
                         <div className="space-y-2 text-sm text-gray-700 mb-4">
                           <p>• Se mueve entre zona ruidosa y oficina</p>
@@ -1388,7 +1388,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                         <div className="bg-white p-4 rounded-lg">
                           <p className="font-bold text-green-900 text-center">✅ VEREDICTO</p>
-                          <p className="text-center text-2xl my-2">🎧⚡</p>
+                          <p className="text-center text-lg sm:text-xl md:text-2xl my-2">🎧⚡</p>
                           <p className="text-xs text-gray-600 text-center">
                             Orejeras electrónicas. Filtran ruido peligroso sin aislar del entorno.
                           </p>
@@ -1396,10 +1396,10 @@ export default function ProteccionAuditivaArticle() {
                       </motion.div>
 
                       <motion.div 
-                        className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl border-2 border-orange-300"
+                        className="bg-gradient-to-br from-orange-50 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300"
                         whileHover={{ scale: 1.05, y: -5 }}
                       >
-                        <p className="text-4xl mb-3 text-center">🏭</p>
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 text-center">🏭</p>
                         <h4 className="font-bold text-orange-900 mb-3 text-center">Operario de Fábrica</h4>
                         <div className="space-y-2 text-sm text-gray-700 mb-4">
                           <p>• Ruido elevado y constante 10 horas</p>
@@ -1408,7 +1408,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                         <div className="bg-white p-4 rounded-lg">
                           <p className="font-bold text-green-900 text-center">✅ VEREDICTO</p>
-                          <p className="text-center text-2xl my-2">🔌</p>
+                          <p className="text-center text-lg sm:text-xl md:text-2xl my-2">🔌</p>
                           <p className="text-xs text-gray-600 text-center">
                             Tapones de espuma. Máxima protección y comodidad en calor.
                           </p>
@@ -1424,16 +1424,16 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     🔬 Estrategias Avanzadas y Peligros Ocultos
                   </h2>
 
                   {/* Doble Protección */}
-                  <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-300 mb-8">
-                    <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300 mb-4 sm:mb-6 md:mb-8">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 flex items-center gap-3">
                       <Shield className="h-8 w-8" />
                       Doble Protección: Cuando Uno No Es Suficiente
                     </h3>
@@ -1442,16 +1442,16 @@ export default function ProteccionAuditivaArticle() {
                       La doble protección (tapones + orejeras) es la solución.
                     </p>
 
-                    <div className="bg-white p-6 rounded-xl mb-6">
+                    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                       <h4 className="font-bold text-red-800 mb-4 text-xl">
                         ⚠️ ERROR COMÚN PELIGROSO
                       </h4>
-                      <div className="grid md:grid-cols-2 gap-6">
+                      <div className="grid md:grid-cols-2 gap-3">
                         <div className="bg-red-100 p-4 rounded-lg border-2 border-red-400">
                           <p className="font-bold text-red-900 mb-2 text-center">❌ INCORRECTO</p>
                           <p className="text-gray-700 text-center">
                             Tapones NRR 32 + Orejeras NRR 25 = 
-                            <span className="text-2xl font-bold text-red-600"> 57 dB</span>
+                            <span className="text-lg sm:text-xl md:text-2xl font-bold text-red-600"> 57 dB</span>
                           </p>
                           <p className="text-xs text-red-600 text-center mt-2">
                             ¡NO SE SUMAN!
@@ -1464,7 +1464,7 @@ export default function ProteccionAuditivaArticle() {
                           </p>
                           <p className="text-gray-700 text-center">
                             (37 - 7) ÷ 2 = 
-                            <span className="text-2xl font-bold text-green-600"> 15 dB</span>
+                            <span className="text-lg sm:text-xl md:text-2xl font-bold text-green-600"> 15 dB</span>
                           </p>
                           <p className="text-xs text-green-600 text-center mt-2">
                             Protección real
@@ -1473,7 +1473,7 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-yellow-100 p-6 rounded-xl border-2 border-yellow-400">
+                    <div className="bg-yellow-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-400">
                       <p className="font-bold text-yellow-900 mb-3">
                         💡 Fórmula de Doble Protección (OSHA):
                       </p>
@@ -1486,13 +1486,13 @@ export default function ProteccionAuditivaArticle() {
                   </div>
 
                   {/* Químicos Ototóxicos */}
-                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-4 border-purple-400 shadow-xl">
-                    <h3 className="text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-purple-400 shadow-xl">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
                       <AlertTriangle className="h-8 w-8" />
                       El Peligro Oculto: Químicos Ototóxicos
                     </h3>
                     
-                    <div className="bg-red-100 p-6 rounded-xl border-2 border-red-400 mb-6">
+                    <div className="bg-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-400 mb-6">
                       <p className="text-red-900 font-bold text-xl mb-3">
                         🧪 CONCEPTO CRÍTICO QUE POCOS CONOCEN
                       </p>
@@ -1503,8 +1503,8 @@ export default function ProteccionAuditivaArticle() {
                       </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
-                      <div className="bg-white p-6 rounded-xl">
+                    <div className="grid md:grid-cols-2 gap-3 mb-6">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <h4 className="font-bold text-purple-900 mb-4">
                           ☠️ Químicos Ototóxicos Comunes
                         </h4>
@@ -1533,7 +1533,7 @@ export default function ProteccionAuditivaArticle() {
                         </div>
                       </div>
 
-                      <div className="bg-white p-6 rounded-xl">
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                         <h4 className="font-bold text-purple-900 mb-4">
                           🏭 Industrias de Alto Riesgo
                         </h4>
@@ -1562,7 +1562,7 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-red-100 to-orange-100 p-6 rounded-xl border-2 border-red-400">
+                    <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-400">
                       <p className="font-bold text-red-900 text-lg mb-3 text-center">
                         🎯 Cambio de Paradigma Necesario
                       </p>
@@ -1585,15 +1585,15 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     ⚠️ Anatomía del Fracaso: Errores Comunes
                   </h2>
 
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                  <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
+                    <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-red-500">
                       <h3 className="font-bold text-red-900 mb-4 text-xl flex items-center gap-2">
                         <X className="h-6 w-6" />
                         La Falsa Sensación de Seguridad
@@ -1611,7 +1611,7 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500">
+                    <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-l-4 border-orange-500">
                       <h3 className="font-bold text-orange-900 mb-4 text-xl flex items-center gap-2">
                         <Clock className="h-6 w-6" />
                         El Peligro del "Solo un Minuto"
@@ -1631,7 +1631,7 @@ export default function ProteccionAuditivaArticle() {
                   </div>
 
                   <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-400">
+                    <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-400">
                       <h4 className="font-bold text-yellow-900 mb-4 text-lg">
                         🚫 Errores Críticos en el Uso
                       </h4>
@@ -1688,7 +1688,7 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-xl border-2 border-purple-400">
+                    <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-400">
                       <h4 className="font-bold text-purple-900 mb-4 text-lg flex items-center gap-2">
                         <AlertTriangle className="h-6 w-6" />
                         El Peligro de la Sobreprotección
@@ -1699,17 +1699,17 @@ export default function ProteccionAuditivaArticle() {
                       </p>
                       <div className="grid md:grid-cols-3 gap-4">
                         <div className="bg-white p-4 rounded-lg text-center">
-                          <p className="text-3xl mb-2">🚨</p>
+                          <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl mb-2">🚨</p>
                           <p className="font-bold text-gray-900 mb-1">Alarmas</p>
                           <p className="text-xs text-gray-600">De seguridad o emergencia</p>
                         </div>
                         <div className="bg-white p-4 rounded-lg text-center">
-                          <p className="text-3xl mb-2">🚗</p>
+                          <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl mb-2">🚗</p>
                           <p className="font-bold text-gray-900 mb-1">Vehículos</p>
                           <p className="text-xs text-gray-600">Marcha atrás u operando</p>
                         </div>
                         <div className="bg-white p-4 rounded-lg text-center">
-                          <p className="text-3xl mb-2">📢</p>
+                          <p className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl mb-2">📢</p>
                           <p className="font-bold text-gray-900 mb-1">Advertencias</p>
                           <p className="text-xs text-gray-600">Gritos de compañeros</p>
                         </div>
@@ -1729,10 +1729,10 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50">
-                  <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                     ❓ Preguntas Frecuentes (FAQ)
                   </h2>
 
@@ -1747,7 +1747,7 @@ export default function ProteccionAuditivaArticle() {
                       >
                         <button
                           onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                          className="w-full p-6 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          className="w-full p-3 sm:p-4 md:p-6 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
                         >
                           <span className="font-bold text-gray-900 pr-4">{faq.question}</span>
                           <motion.div
@@ -1766,7 +1766,7 @@ export default function ProteccionAuditivaArticle() {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="p-6 pt-0 bg-white">
+                              <div className="p-3 sm:p-4 md:p-6 pt-0 bg-white">
                                 <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                               </div>
                             </motion.div>
@@ -1783,15 +1783,15 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.6 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-10 rounded-r-3xl shadow-2xl">
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 lg:p-10 rounded-r-3xl shadow-2xl">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="bg-green-500 rounded-full p-4 flex-shrink-0">
                       <Shield className="text-white h-12 w-12" />
                     </div>
                     <div>
-                      <h2 className="text-4xl font-bold text-green-900 mb-4">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green-900 mb-4">
                         Conclusión: Tu Audición es Irremplazable
                       </h2>
                       <p className="text-xl text-gray-800 leading-relaxed mb-6">
@@ -1802,14 +1802,14 @@ export default function ProteccionAuditivaArticle() {
                     </div>
                   </div>
 
-                  <div className="bg-white p-8 rounded-2xl mb-6">
-                    <h3 className="text-2xl font-bold text-green-900 mb-6 text-center">
+                  <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl mb-6">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 text-center">
                       Los 3 Pilares de una Conservación Auditiva Eficaz
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       <div className="text-center">
                         <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                          <span className="text-white text-4xl font-bold">1</span>
+                          <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">1</span>
                         </div>
                         <h4 className="font-bold text-gray-900 mb-2">La Elección Correcta</h4>
                         <p className="text-gray-700 text-sm">
@@ -1818,7 +1818,7 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                       <div className="text-center">
                         <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                          <span className="text-white text-4xl font-bold">2</span>
+                          <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">2</span>
                         </div>
                         <h4 className="font-bold text-gray-900 mb-2">El Ajuste Correcto</h4>
                         <p className="text-gray-700 text-sm">
@@ -1827,7 +1827,7 @@ export default function ProteccionAuditivaArticle() {
                       </div>
                       <div className="text-center">
                         <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                          <span className="text-white text-4xl font-bold">3</span>
+                          <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">3</span>
                         </div>
                         <h4 className="font-bold text-gray-900 mb-2">La Actitud Correcta</h4>
                         <p className="text-gray-700 text-sm">
@@ -1837,7 +1837,7 @@ export default function ProteccionAuditivaArticle() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-xl border-2 border-blue-300">
+                  <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                     <p className="text-center text-xl text-gray-900 leading-relaxed">
                       <strong className="text-blue-900">La elección que haces cada día en el trabajo determina tu futuro sonoro.</strong> 
                       Un equipo de protección de última generación es inútil en manos de alguien que no sabe cómo usarlo. 
@@ -1852,16 +1852,16 @@ export default function ProteccionAuditivaArticle() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.8 }}
-                className="mb-16"
+                className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16"
               >
-                <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+                <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-gray-900">
                   📚 Artículos Relacionados
                 </h2>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-3">
                   {relatedArticles.map((article, index) => (
                     <motion.div
                       key={article.id}
-                      className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+                      className="bg-white rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.9 + index * 0.1 }}

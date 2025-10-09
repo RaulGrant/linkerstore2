@@ -80,7 +80,7 @@ export default function GuiaNOM009Article() {
     <BlogLayout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (80 partículas) */}
@@ -167,7 +167,7 @@ export default function GuiaNOM009Article() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ export default function GuiaNOM009Article() {
               </motion.div>
               
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -194,7 +194,7 @@ export default function GuiaNOM009Article() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl text-blue-100 mb-8"
+                className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -203,7 +203,7 @@ export default function GuiaNOM009Article() {
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-6 text-sm text-blue-200"
+                className="flex items-center justify-center gap-3 text-sm text-blue-200"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -222,8 +222,8 @@ export default function GuiaNOM009Article() {
         </section>
 
         {/* Imagen Principal del Artículo */}
-        <section className="bg-white py-12">
-          <div className="container mx-auto px-6">
+        <section className="bg-white py-8 sm:py-10 md:py-12">
+          <div className="container mx-auto px-4 sm:px-6">
             <motion.div 
               className="max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
@@ -239,7 +239,7 @@ export default function GuiaNOM009Article() {
               </div>
               <div className="text-center">
                 <div className="text-8xl mb-6">🏗️</div>
-                <h3 className="text-2xl font-bold text-slate-700 mb-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-700 mb-4">
                   Imagen Principal del Artículo
                 </h3>
                 <p className="text-slate-600 text-lg mb-4">
@@ -288,18 +288,18 @@ export default function GuiaNOM009Article() {
             ))}
           </div>
 
-          <div className="container mx-auto px-6 py-12 relative z-20">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               <motion.article
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/50"
+                className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
               >
                 {/* Introducción con Estadísticas */}
-                <section id="introduccion" className="mb-16">
+                <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.div 
-                    className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-8 shadow-lg"
+                    className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2 }}
@@ -309,7 +309,7 @@ export default function GuiaNOM009Article() {
                         <AlertTriangle className="text-white h-8 w-8" />
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-red-900 mb-3">El Costo Real de una Caída</h2>
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">El Costo Real de una Caída</h2>
                         <p className="text-lg text-gray-800 leading-relaxed">
                           Las estadísticas son contundentes: en México, <strong className="bg-red-200 px-2 py-1 rounded">las caídas representan el 27% de todos los accidentes de trabajo</strong>. 
                           Esto se traduce en una realidad trágica de casi <strong className="text-red-700">cuatro muertes diarias</strong> por riesgos laborales en el país.
@@ -319,42 +319,42 @@ export default function GuiaNOM009Article() {
                   </motion.div>
 
                   {/* Grid de Costos */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
                     <motion.div 
-                      className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border-2 border-purple-200"
+                      className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-purple-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
                     >
                       <div className="text-center">
-                        <div className="text-4xl mb-2">💰</div>
-                        <div className="text-3xl font-bold text-purple-700 mb-2">$535,350</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">💰</div>
+                        <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-700 mb-2">$535,350</div>
                         <p className="text-sm text-gray-700">Multa máxima STPS por incumplimiento</p>
                       </div>
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-200"
+                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-blue-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
                     >
                       <div className="text-center">
-                        <div className="text-4xl mb-2">📈</div>
-                        <div className="text-3xl font-bold text-blue-700 mb-2">+$$$$</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">📈</div>
+                        <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-700 mb-2">+$$$$</div>
                         <p className="text-sm text-gray-700">Incremento en Prima de Riesgo IMSS</p>
                       </div>
                     </motion.div>
 
                     <motion.div 
-                      className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl border-2 border-orange-200"
+                      className="bg-gradient-to-br from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-orange-200"
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5 }}
                     >
                       <div className="text-center">
-                        <div className="text-4xl mb-2">⚖️</div>
-                        <div className="text-3xl font-bold text-orange-700 mb-2">Legal</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">⚖️</div>
+                        <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-orange-700 mb-2">Legal</div>
                         <p className="text-sm text-gray-700">Responsabilidad Civil y Penal</p>
                       </div>
                     </motion.div>
@@ -362,33 +362,33 @@ export default function GuiaNOM009Article() {
 
                   {/* Gráfico de Estadísticas de Accidentes */}
                   <motion.div 
-                    className="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-2xl p-8 mt-8 mb-8"
+                    className="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8 mb-4 sm:mb-6 md:mb-8"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6 }}
                   >
-                    <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">📊 Estadísticas de Accidentes en México</h3>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">📊 Estadísticas de Accidentes en México</h3>
                     <div className="grid md:grid-cols-4 gap-4 mb-6">
-                      <div className="bg-white p-6 rounded-xl border-2 border-red-200 text-center">
-                        <div className="text-4xl font-bold text-red-600 mb-2">27%</div>
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200 text-center">
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-600 mb-2">27%</div>
                         <p className="text-sm text-gray-700">Accidentes por caídas</p>
                       </div>
-                      <div className="bg-white p-6 rounded-xl border-2 border-orange-200 text-center">
-                        <div className="text-4xl font-bold text-orange-600 mb-2">~4</div>
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200 text-center">
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">~4</div>
                         <p className="text-sm text-gray-700">Muertes laborales diarias</p>
                       </div>
-                      <div className="bg-white p-6 rounded-xl border-2 border-yellow-200 text-center">
-                        <div className="text-4xl font-bold text-yellow-600 mb-2">1.8m</div>
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-200 text-center">
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-2">1.8m</div>
                         <p className="text-sm text-gray-700">Altura mínima NOM-009</p>
                       </div>
-                      <div className="bg-white p-6 rounded-xl border-2 border-purple-200 text-center">
-                        <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                      <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200 text-center">
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-purple-600 mb-2">100%</div>
                         <p className="text-sm text-gray-700">Accidentes prevenibles</p>
                       </div>
                     </div>
                     
                     {/* Gráfico Visual Simple */}
-                    <div className="bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-200">
                       <h4 className="font-bold text-gray-900 mb-4 text-center">Distribución de Accidentes Laborales</h4>
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
@@ -424,7 +424,7 @@ export default function GuiaNOM009Article() {
                   </motion.div>
 
                   <motion.div 
-                    className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-8 mt-8"
+                    className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7 }}
@@ -433,7 +433,7 @@ export default function GuiaNOM009Article() {
                       <div className="bg-blue-500 rounded-full p-3">
                         <Shield className="text-white h-6 w-6" />
                       </div>
-                      <h3 className="text-2xl font-bold text-blue-900">La NOM-009-STPS-2011 es su Herramienta de Gestión</h3>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">La NOM-009-STPS-2011 es su Herramienta de Gestión</h3>
                     </div>
                     <p className="text-gray-800 text-lg leading-relaxed">
                       Aplica a toda actividad realizada a <strong className="bg-blue-200 px-2 py-1 rounded">más de 1.8 metros de altura</strong> sobre un nivel de referencia. 
@@ -444,7 +444,7 @@ export default function GuiaNOM009Article() {
 
                 {/* Nota Importante sobre Calificaciones */}
                 <motion.div 
-                  className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-8 mb-12 shadow-lg"
+                  className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 shadow-lg"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.7 }}
@@ -466,9 +466,9 @@ export default function GuiaNOM009Article() {
                 </motion.div>
 
                 {/* Sistema de Tabs para los 7 Puntos Clave */}
-                <section id="puntos-clave" className="mb-16">
+                <section id="puntos-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
@@ -476,7 +476,7 @@ export default function GuiaNOM009Article() {
                   </motion.h2>
 
                   {/* Tabs Navigation */}
-                  <div className="flex flex-wrap gap-3 mb-8 justify-center">
+                  <div className="flex flex-wrap gap-3 mb-4 sm:mb-6 md:mb-8 justify-center">
                     {tabs.map((tab) => (
                       <button
                         key={tab.id}
@@ -499,26 +499,26 @@ export default function GuiaNOM009Article() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-200"
+                    className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border-2 border-gray-200"
                   >
                     {activeTab === 0 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">🔍</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🔍</span>
                           Punto Clave 1: Análisis de Condiciones Prevalecientes
                         </h3>
                         
-                        <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-xl mb-6">
+                        <div className="bg-yellow-50 border-l-4 border-yellow-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-6">
                           <p className="text-gray-800 text-lg">
                             <strong>La improvisación es el enemigo mortal de la seguridad en alturas.</strong> El numeral 5.1 de la norma obliga a contar con un análisis previo 
                             de las condiciones prevalecientes para identificar los factores de riesgo existentes.
                           </p>
                         </div>
 
-                        <h4 className="text-2xl font-bold text-gray-900 mb-4">Factores Críticos a Revisar:</h4>
+                        <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4">Factores Críticos a Revisar:</h4>
                         
-                        <div className="space-y-4 mb-8">
-                          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+                        <div className="space-y-4 mb-4 sm:mb-6 md:mb-8">
+                          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                             <h5 className="font-bold text-green-900 mb-2 text-lg">🏗️ Superficie de Trabajo y Estructura</h5>
                             <ul className="list-disc list-inside text-gray-700 space-y-2">
                               <li>Evaluar estabilidad y compactación del suelo</li>
@@ -527,7 +527,7 @@ export default function GuiaNOM009Article() {
                             </ul>
                           </div>
 
-                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-200">
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                             <h5 className="font-bold text-blue-900 mb-2 text-lg">🌤️ Condiciones Climáticas</h5>
                             <p className="text-gray-700">
                               La norma es inequívoca: <strong className="bg-blue-200 px-2 py-1 rounded">suspender actividades cuando hay lluvia intensa, 
@@ -535,7 +535,7 @@ export default function GuiaNOM009Article() {
                             </p>
                           </div>
 
-                          <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border-2 border-red-200">
+                          <div className="bg-gradient-to-r from-red-50 to-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200">
                             <h5 className="font-bold text-red-900 mb-2 text-lg">⚡ Proximidad a Líneas Eléctricas</h5>
                             <p className="text-gray-700 mb-3">
                               Identificar líneas eléctricas energizadas. Medidas de control:
@@ -550,7 +550,7 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Checklist Interactivo Mejorado */}
-                        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 border-2 border-gray-300">
+                        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-gray-300">
                           <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                             <div className="bg-green-500 rounded-full p-2">
                               <CheckCircle className="text-white h-5 w-5" />
@@ -650,7 +650,7 @@ export default function GuiaNOM009Article() {
                           </div>
 
                           {/* Firmas de Autorización */}
-                          <div className="mt-6 bg-white p-6 rounded-xl border-2 border-blue-200">
+                          <div className="mt-6 bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                             <h5 className="font-bold text-blue-900 mb-4">📝 Firmas de Autorización</h5>
                             <div className="grid md:grid-cols-3 gap-4">
                               <div className="text-center">
@@ -679,30 +679,30 @@ export default function GuiaNOM009Article() {
 
                     {activeTab === 1 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">⚡</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">⚡</span>
                           Punto Clave 2: La Jerarquía de Controles
                         </h3>
                         
-                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl mb-6">
+                        <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-6">
                           <p className="text-gray-800 text-lg">
                             <strong>Error común:</strong> Saltar directamente al EPP (arnés). Un enfoque profesional exige una estrategia más robusta. 
                             Aunque la NOM-009 no usa el término explícitamente, se alinea con este principio fundamental reconocido por OSHA e ISO 45001.
                           </p>
                         </div>
 
-                        <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                        <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
                           📊 Orden de Prioridad: De Más Efectivo a Menos Efectivo
                         </h4>
 
                         {/* Pirámide Invertida */}
-                        <div className="space-y-4 mb-8">
-                          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-4 border-green-400 shadow-lg">
+                        <div className="space-y-4 mb-4 sm:mb-6 md:mb-8">
+                          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-green-400 shadow-lg">
                             <div className="flex items-center gap-4 mb-4">
                               <div className="bg-green-500 rounded-full p-4 flex-shrink-0">
-                                <span className="text-white text-3xl font-bold">1</span>
+                                <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold">1</span>
                               </div>
-                              <h5 className="text-2xl font-bold text-green-900">Eliminación</h5>
+                              <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900">Eliminación</h5>
                             </div>
                             <p className="text-gray-800 text-lg mb-3">
                               <strong>La medida más eficaz:</strong> Eliminar el riesgo por completo.
@@ -715,12 +715,12 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-4 border-blue-400 shadow-lg">
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-blue-400 shadow-lg">
                             <div className="flex items-center gap-4 mb-4">
                               <div className="bg-blue-500 rounded-full p-4 flex-shrink-0">
-                                <span className="text-white text-3xl font-bold">2</span>
+                                <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold">2</span>
                               </div>
-                              <h5 className="text-2xl font-bold text-blue-900">Sustitución</h5>
+                              <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Sustitución</h5>
                             </div>
                             <p className="text-gray-800 text-lg mb-3">
                               Reemplazar el peligro por algo menos riesgoso.
@@ -732,12 +732,12 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-4 border-purple-400 shadow-lg">
+                          <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-purple-400 shadow-lg">
                             <div className="flex items-center gap-4 mb-4">
                               <div className="bg-purple-500 rounded-full p-4 flex-shrink-0">
-                                <span className="text-white text-3xl font-bold">3</span>
+                                <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold">3</span>
                               </div>
-                              <h5 className="text-2xl font-bold text-purple-900">Controles de Ingeniería (Protección Colectiva)</h5>
+                              <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900">Controles de Ingeniería (Protección Colectiva)</h5>
                             </div>
                             <p className="text-gray-800 text-lg mb-3">
                               <strong className="bg-purple-200 px-2 py-1 rounded">Primera línea de defensa física y prioridad explícita en la norma.</strong>
@@ -754,12 +754,12 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-8 rounded-2xl border-4 border-orange-400 shadow-lg">
+                          <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-orange-400 shadow-lg">
                             <div className="flex items-center gap-4 mb-4">
                               <div className="bg-orange-500 rounded-full p-4 flex-shrink-0">
-                                <span className="text-white text-3xl font-bold">4</span>
+                                <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold">4</span>
                               </div>
-                              <h5 className="text-2xl font-bold text-orange-900">Controles Administrativos</h5>
+                              <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900">Controles Administrativos</h5>
                             </div>
                             <p className="text-gray-800 text-lg mb-3">
                               Modifican la manera en que las personas trabajan.
@@ -774,12 +774,12 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          <div className="bg-gradient-to-r from-red-50 to-rose-50 p-8 rounded-2xl border-4 border-red-400 shadow-lg">
+                          <div className="bg-gradient-to-r from-red-50 to-rose-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-red-400 shadow-lg">
                             <div className="flex items-center gap-4 mb-4">
                               <div className="bg-red-500 rounded-full p-4 flex-shrink-0">
-                                <span className="text-white text-3xl font-bold">5</span>
+                                <span className="text-white text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold">5</span>
                               </div>
-                              <h5 className="text-2xl font-bold text-red-900">Equipo de Protección Personal (EPP)</h5>
+                              <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900">Equipo de Protección Personal (EPP)</h5>
                             </div>
                             <p className="text-gray-800 text-lg mb-3">
                               <strong className="text-red-700">Último recurso.</strong> Es fundamental entender que un arnés no previene la caída; 
@@ -794,8 +794,8 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Comparativa de Mentalidades */}
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-red-50 border-2 border-red-300 rounded-xl p-6">
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div className="bg-red-50 border-2 border-red-300 rounded-xl p-3 sm:p-4 md:p-6">
                             <h5 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
                               <XCircle className="h-6 w-6" />
                               Supervisor Reactivo
@@ -805,7 +805,7 @@ export default function GuiaNOM009Article() {
                             </p>
                           </div>
 
-                          <div className="bg-green-50 border-2 border-green-300 rounded-xl p-6">
+                          <div className="bg-green-50 border-2 border-green-300 rounded-xl p-3 sm:p-4 md:p-6">
                             <h5 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
                               <CheckCircle className="h-6 w-6" />
                               Supervisor Proactivo
@@ -820,12 +820,12 @@ export default function GuiaNOM009Article() {
 
 {activeTab === 2 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">🛡️</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🛡️</span>
                           Punto Clave 3: Selección y Uso Correcto de EPP
                         </h3>
                         
-                        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
+                        <div className="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-6">
                           <p className="text-gray-800 text-lg">
                             Cuando los controles superiores no son factibles, es imperativo que cada componente del 
                             <strong className="bg-blue-200 px-2 py-1 rounded mx-1">Sistema Personal para Detención de Caídas (SPDC)</strong> 
@@ -834,9 +834,9 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Arnés de Cuerpo Completo */}
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300 mb-6">
-                          <h4 className="text-2xl font-bold text-green-900 mb-4 flex items-center gap-3">
-                            <span className="text-3xl">👤</span>
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300 mb-6">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-4 flex items-center gap-3">
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">👤</span>
                             Arnés de Cuerpo Completo
                           </h4>
                           <p className="text-gray-800 mb-4">
@@ -844,7 +844,7 @@ export default function GuiaNOM009Article() {
                           </p>
                           
                           <div className="grid md:grid-cols-2 gap-4">
-                            <div className="bg-white p-6 rounded-xl border-2 border-blue-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                               <h5 className="font-bold text-blue-900 mb-3 text-lg">🔴 Detención de Caídas</h5>
                               <p className="text-gray-700 mb-2">
                                 <strong>Exclusivamente:</strong> Anillo "D" dorsal (espalda, entre omóplatos)
@@ -856,7 +856,7 @@ export default function GuiaNOM009Article() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-purple-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                               <h5 className="font-bold text-purple-900 mb-3 text-lg">🟣 Posicionamiento y Restricción</h5>
                               <p className="text-gray-700 mb-2">
                                 Anillos "D" laterales (altura de cadera)
@@ -871,14 +871,14 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Conectores y Líneas de Vida */}
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300 mb-6">
-                          <h4 className="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
-                            <span className="text-3xl">🔗</span>
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300 mb-6">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-4 flex items-center gap-3">
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🔗</span>
                             Conectores y Líneas de Vida
                           </h4>
                           
                           <div className="space-y-4">
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-gray-900 mb-3">📏 Líneas de Vida</h5>
                               <ul className="space-y-2 text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -896,7 +896,7 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-gray-900 mb-3">🔒 Conectores (Ganchos y Mosquetones)</h5>
                               <ul className="space-y-2 text-gray-700">
                                 <li className="flex items-center gap-2">
@@ -910,7 +910,7 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-orange-300">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                               <h5 className="font-bold text-orange-900 mb-3">⚡ Absorbedor de Energía - COMPONENTE VITAL</h5>
                               <p className="text-gray-700">
                                 En caso de caída, se despliega para <strong className="bg-orange-200 px-2 py-1 rounded">disipar la energía cinética</strong>, 
@@ -921,26 +921,26 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Punto de Anclaje - EL MÁS CRÍTICO */}
-                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-4 border-red-500 shadow-xl">
-                          <h4 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-3">
+                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-red-500 shadow-xl">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-3">
                             <AlertTriangle className="h-8 w-8" />
                             El Punto de Anclaje: El Eslabón MÁS CRÍTICO
                           </h4>
                           
-                          <div className="bg-yellow-50 border-2 border-yellow-400 p-6 rounded-xl mb-6">
+                          <div className="bg-yellow-50 border-2 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                             <p className="text-xl font-bold text-yellow-900 mb-2">
                               ⚠️ Elemento más subestimado y origen de fallas catastróficas
                             </p>
                             <p className="text-lg text-gray-800">
-                              <strong className="bg-yellow-200 px-3 py-1 rounded text-2xl">Regla de Oro:</strong>
+                              <strong className="bg-yellow-200 px-3 py-1 rounded text-lg sm:text-xl md:text-2xl">Regla de Oro:</strong>
                             </p>
-                            <p className="text-2xl font-bold text-red-700 mt-3">
+                            <p className="text-lg sm:text-xl md:text-2xl font-bold text-red-700 mt-3">
                               5,000 libras (22.2 kN) por trabajador conectado
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-green-50 border-2 border-green-400 p-6 rounded-xl">
+                          <div className="grid md:grid-cols-2 gap-3">
+                            <div className="bg-green-50 border-2 border-green-400 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-green-900 mb-4 text-lg flex items-center gap-2">
                                 <CheckCircle className="h-6 w-6" />
                                 Anclajes VÁLIDOS
@@ -961,7 +961,7 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
 
-                            <div className="bg-red-50 border-2 border-red-400 p-6 rounded-xl">
+                            <div className="bg-red-50 border-2 border-red-400 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-red-900 mb-4 text-lg flex items-center gap-2">
                                 <XCircle className="h-6 w-6" />
                                 Anclajes PROHIBIDOS
@@ -987,7 +987,7 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          <div className="bg-blue-50 border-2 border-blue-400 p-6 rounded-xl mt-6">
+                          <div className="bg-blue-50 border-2 border-blue-400 p-3 sm:p-4 md:p-6 rounded-xl mt-6">
                             <h5 className="font-bold text-blue-900 mb-3 text-lg">📍 Ubicación Ideal del Anclaje</h5>
                             <p className="text-gray-800">
                               <strong>Siempre que sea posible:</strong> Por encima de la cabeza del trabajador.
@@ -1009,19 +1009,19 @@ export default function GuiaNOM009Article() {
 
                     {activeTab === 3 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">🏗️</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🏗️</span>
                           Punto Clave 4: Sistemas de Andamios Seguros
                         </h3>
                         
-                        <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-xl mb-6">
+                        <div className="bg-orange-50 border-l-4 border-orange-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-6">
                           <p className="text-gray-800 text-lg">
                             Los andamios son plataformas temporales esenciales, pero <strong className="text-orange-700">su montaje incorrecto los convierte en estructuras peligrosas</strong>. 
                             La norma establece requisitos estrictos para garantizar su estabilidad.
                           </p>
                         </div>
 
-                        <div className="bg-yellow-50 border-2 border-yellow-400 p-6 rounded-xl mb-8">
+                        <div className="bg-yellow-50 border-2 border-yellow-400 p-3 sm:p-4 md:p-6 rounded-xl mb-4 sm:mb-6 md:mb-8">
                           <h4 className="text-xl font-bold text-yellow-900 mb-3">⚠️ Requisito Universal para Todos los Andamios</h4>
                           <p className="text-lg text-gray-800">
                             La estructura completa debe <strong className="bg-yellow-200 px-2 py-1 rounded text-xl">resistir al menos 4 veces la carga máxima</strong> a la que será sometida 
@@ -1030,14 +1030,14 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Andamios Tubulares */}
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300 mb-6">
-                          <h4 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
-                            <span className="text-3xl">🏗️</span>
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300 mb-6">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🏗️</span>
                             Andamios Tubulares (Tipo Torre o Estructura)
                           </h4>
 
                           <div className="space-y-6">
-                            <div className="bg-white p-6 rounded-xl border-2 border-green-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                               <h5 className="font-bold text-green-900 mb-4 text-lg">🔧 Estabilización - LA BASE ES FUNDAMENTAL</h5>
                               <div className="space-y-4">
                                 <div className="bg-green-50 p-4 rounded-lg">
@@ -1061,7 +1061,7 @@ export default function GuiaNOM009Article() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-purple-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                               <h5 className="font-bold text-purple-900 mb-4 text-lg">📏 Plataformas de Trabajo</h5>
                               <ul className="space-y-3 text-gray-700">
                                 <li className="flex items-start gap-2">
@@ -1079,7 +1079,7 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-red-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200">
                               <h5 className="font-bold text-red-900 mb-4 text-lg">🛡️ Protección Colectiva - OBLIGATORIA desde 1.8m</h5>
                               <div className="grid md:grid-cols-2 gap-4">
                                 <div className="bg-red-50 p-4 rounded-lg">
@@ -1102,14 +1102,14 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Andamios Colgantes */}
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300 mb-6">
-                          <h4 className="text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
-                            <span className="text-3xl">⬇️</span>
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300 mb-6">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">⬇️</span>
                             Andamios Colgantes
                           </h4>
 
                           <div className="space-y-6">
-                            <div className="bg-white p-6 rounded-xl border-2 border-blue-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                               <h5 className="font-bold text-blue-900 mb-4 text-lg">🔍 Sistemas de Suspensión y Seguridad</h5>
                               <p className="text-gray-800 mb-3">
                                 Inspección exhaustiva obligatoria de:
@@ -1126,7 +1126,7 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-orange-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                               <h5 className="font-bold text-orange-900 mb-4 text-lg">⚖️ Contrapesos - Operación de Ingeniería</h5>
                               <div className="space-y-4">
                                 <div className="bg-orange-50 p-4 rounded-lg">
@@ -1150,7 +1150,7 @@ export default function GuiaNOM009Article() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-red-300">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                               <h5 className="font-bold text-red-900 mb-4 text-lg">🦺 EPP OBLIGATORIO - Sin Excepción</h5>
                               <div className="bg-red-50 p-4 rounded-lg">
                                 <p className="text-gray-800 text-lg">
@@ -1176,8 +1176,8 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Responsabilidad del Supervisor */}
-                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl border-4 border-indigo-400 shadow-xl">
-                          <h4 className="text-2xl font-bold text-indigo-900 mb-4 flex items-center gap-3">
+                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-indigo-400 shadow-xl">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900 mb-4 flex items-center gap-3">
                             <Users className="h-8 w-8" />
                             Rol Intransferible del Supervisor
                           </h4>
@@ -1206,12 +1206,12 @@ export default function GuiaNOM009Article() {
 
                     {activeTab === 4 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">🚨</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🚨</span>
                           Punto Clave 5: El Plan de Atención a Emergencias
                         </h3>
                         
-                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl mb-8">
+                        <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-4 sm:mb-6 md:mb-8">
                           <p className="text-gray-800 text-lg">
                             <strong className="text-red-700 text-xl">Un sistema de detención que funciona correctamente no es el final; es el comienzo de una emergencia médica crítica.</strong> 
                             El numeral 5.11 de la NOM-009 exige disponer de un plan de atención a emergencias. La ausencia de este plan no es una falta menor; 
@@ -1220,22 +1220,22 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* TRAUMA POR SUSPENSIÓN - SECCIÓN EXPANDIDA */}
-                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-8 rounded-3xl border-4 border-red-500 shadow-2xl mb-8">
+                        <div className="bg-gradient-to-r from-red-100 to-orange-100 p-4 sm:p-6 md:p-8 rounded-3xl border-4 border-red-500 shadow-2xl mb-4 sm:mb-6 md:mb-8">
                           <div className="flex items-center gap-4 mb-6">
                             <div className="bg-red-600 rounded-full p-4">
                               <AlertTriangle className="text-white h-10 w-10" />
                             </div>
                             <div>
-                              <h4 className="text-3xl font-bold text-red-900">El Trauma por Suspensión: El Enemigo Silencioso</h4>
+                              <h4 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-red-900">El Trauma por Suspensión: El Enemigo Silencioso</h4>
                               <p className="text-red-700 text-lg font-semibold">También conocido como Shock Ortostático</p>
                             </div>
                           </div>
 
                           {/* Imagen Explicativa del Trauma por Suspensión */}
                           <div className="mb-6">
-                            <div className="bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl p-6 border-4 border-dashed border-red-300 shadow-inner">
+                            <div className="bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl p-3 sm:p-4 md:p-6 border-4 border-dashed border-red-300 shadow-inner">
                               <div className="text-center">
-                                <div className="text-6xl mb-4">🩺</div>
+                                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🩺</div>
                                 <h5 className="text-xl font-bold text-red-700 mb-3">
                                   Imagen Médica Explicativa
                                 </h5>
@@ -1254,13 +1254,13 @@ export default function GuiaNOM009Article() {
                           </div>
 
                           {/* Fisiopatología */}
-                          <div className="bg-white p-8 rounded-2xl border-2 border-red-300 mb-6">
-                            <h5 className="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300 mb-6">
+                            <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
                               <Activity className="h-7 w-7" />
                               Fisiopatología: ¿Qué Sucede en el Cuerpo?
                             </h5>
                             <div className="space-y-4">
-                              <div className="bg-red-50 p-6 rounded-xl">
+                              <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl">
                                 <p className="text-gray-800 text-lg mb-3">
                                   <strong className="text-red-800">Al quedar suspendido e inmóvil:</strong>
                                 </p>
@@ -1276,8 +1276,8 @@ export default function GuiaNOM009Article() {
                           </div>
 
                           {/* Consecuencias Mortales con Timeline */}
-                          <div className="bg-white p-8 rounded-2xl border-2 border-orange-300 mb-6">
-                            <h5 className="text-2xl font-bold text-orange-900 mb-6">⏱️ Línea de Tiempo: Consecuencias Mortales</h5>
+                          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-orange-300 mb-6">
+                            <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-orange-900 mb-6">⏱️ Línea de Tiempo: Consecuencias Mortales</h5>
                             
                             <div className="space-y-4">
                               <div className="flex items-start gap-4 p-4 bg-yellow-50 rounded-xl border-2 border-yellow-400">
@@ -1324,15 +1324,15 @@ export default function GuiaNOM009Article() {
                           </div>
 
                           {/* Procedimientos de Rescate y Primeros Auxilios CRÍTICOS */}
-                          <div className="bg-white p-8 rounded-2xl border-4 border-green-400">
-                            <h5 className="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
-                              <span className="text-3xl">🚑</span>
+                          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-green-400">
+                            <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                              <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🚑</span>
                               Rescate y Primeros Auxilios CRÍTICOS
                             </h5>
 
                             <div className="space-y-6">
                               {/* Ventana de Tiempo */}
-                              <div className="bg-red-50 p-6 rounded-xl border-2 border-red-400">
+                              <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-400">
                                 <h6 className="font-bold text-red-900 text-xl mb-3">⏰ Ventana de Tiempo: Rescate INMEDIATO</h6>
                                 <div className="space-y-3 text-gray-800">
                                   <p className="text-lg">
@@ -1350,7 +1350,7 @@ export default function GuiaNOM009Article() {
                               </div>
 
                               {/* Auto-ayuda */}
-                              <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-400">
+                              <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-400">
                                 <h6 className="font-bold text-blue-900 text-xl mb-3">👤 Auto-ayuda: Si el Trabajador Está Consciente</h6>
                                 <ol className="list-decimal list-inside space-y-3 text-gray-700">
                                   <li className="text-lg">
@@ -1366,14 +1366,14 @@ export default function GuiaNOM009Article() {
                               </div>
 
                               {/* Manejo Post-Rescate - CRÍTICO */}
-                              <div className="bg-purple-50 p-6 rounded-xl border-4 border-purple-500">
+                              <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-purple-500">
                                 <h6 className="font-bold text-purple-900 text-xl mb-4 flex items-center gap-2">
                                   <AlertTriangle className="h-7 w-7 text-red-600" />
                                   Manejo Post-Rescate: ¡VITAL PARA EVITAR LA MUERTE!
                                 </h6>
                                 
-                                <div className="bg-red-100 p-6 rounded-xl border-4 border-red-600 mb-4">
-                                  <p className="text-red-900 font-bold text-2xl mb-3">
+                                <div className="bg-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-red-600 mb-4">
+                                  <p className="text-red-900 font-bold text-lg sm:text-xl md:text-2xl mb-3">
                                     ❌ NUNCA ACOSTAR EN POSICIÓN HORIZONTAL DE INMEDIATO
                                   </p>
                                   <p className="text-red-800 text-lg">
@@ -1387,8 +1387,8 @@ export default function GuiaNOM009Article() {
                                   </div>
                                 </div>
 
-                                <div className="bg-green-100 p-6 rounded-xl border-4 border-green-600">
-                                  <p className="text-green-900 font-bold text-2xl mb-4">
+                                <div className="bg-green-100 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-green-600">
+                                  <p className="text-green-900 font-bold text-lg sm:text-xl md:text-2xl mb-4">
                                     ✅ POSICIÓN CORRECTA: "W" (Sentado con rodillas al pecho)
                                   </p>
                                   <div className="grid md:grid-cols-2 gap-4">
@@ -1417,17 +1417,17 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Pregunta Operativa Decisiva */}
-                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl border-4 border-indigo-500 shadow-xl">
-                          <h4 className="text-2xl font-bold text-indigo-900 mb-4 flex items-center gap-3">
-                            <span className="text-3xl">🎯</span>
+                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-indigo-500 shadow-xl">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900 mb-4 flex items-center gap-3">
+                            <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🎯</span>
                             El Plan de Rescate como Filtro Operativo
                           </h4>
-                          <div className="bg-white p-6 rounded-xl border-2 border-purple-300">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                             <p className="text-xl font-bold text-purple-900 mb-4">
                               Pregunta Fundamental antes de Autorizar CUALQUIER Tarea en Altura:
                             </p>
-                            <div className="bg-purple-100 p-6 rounded-xl">
-                              <p className="text-2xl font-bold text-purple-800 text-center mb-4">
+                            <div className="bg-purple-100 p-3 sm:p-4 md:p-6 rounded-xl">
+                              <p className="text-lg sm:text-xl md:text-2xl font-bold text-purple-800 text-center mb-4">
                                 "Si un trabajador cae en este punto exacto..."
                               </p>
                               <p className="text-xl text-center text-gray-800">
@@ -1456,12 +1456,12 @@ export default function GuiaNOM009Article() {
 
                     {activeTab === 5 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">📋</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">📋</span>
                           Punto Clave 6: La Capacitación y Adiestramiento - DC-3
                         </h3>
                         
-                        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-8">
+                        <div className="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-4 sm:mb-6 md:mb-8">
                           <p className="text-gray-800 text-lg">
                             <strong className="text-blue-800 text-xl">Un equipo de protección de última generación es inútil en manos de alguien que no sabe cómo usarlo.</strong> 
                             La norma exige que los trabajadores reciban capacitación, adiestramiento e información específica. 
@@ -1470,13 +1470,13 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* ¿Qué es la DC-3? */}
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-300 mb-8">
-                          <h4 className="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300 mb-4 sm:mb-6 md:mb-8">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
                             <FileText className="h-8 w-8" />
                             ¿Qué es la Constancia DC-3?
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-xl border-2 border-green-200 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200 mb-6">
                             <p className="text-gray-800 text-lg mb-4">
                               La <strong className="bg-green-200 px-2 py-1 rounded">Constancia de Competencias o de Habilidades Laborales (DC-3)</strong> es el 
                               formato oficial reconocido por la STPS que certifica que un trabajador ha completado y aprobado un curso de capacitación sobre una materia específica.
@@ -1490,17 +1490,17 @@ export default function GuiaNOM009Article() {
 
                           <div className="grid md:grid-cols-3 gap-4">
                             <div className="bg-blue-50 p-4 rounded-xl text-center">
-                              <div className="text-3xl mb-2">✅</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl mb-2">✅</div>
                               <p className="font-bold text-blue-900 mb-2">Documento Oficial</p>
                               <p className="text-sm text-gray-700">Reconocido por STPS</p>
                             </div>
                             <div className="bg-purple-50 p-4 rounded-xl text-center">
-                              <div className="text-3xl mb-2">🎓</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl mb-2">🎓</div>
                               <p className="font-bold text-purple-900 mb-2">Certifica Competencia</p>
                               <p className="text-sm text-gray-700">Aprobó el curso específico</p>
                             </div>
                             <div className="bg-orange-50 p-4 rounded-xl text-center">
-                              <div className="text-3xl mb-2">⚖️</div>
+                              <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl mb-2">⚖️</div>
                               <p className="font-bold text-orange-900 mb-2">Requisito Legal</p>
                               <p className="text-sm text-gray-700">Obligatorio para trabajar en altura</p>
                             </div>
@@ -1508,11 +1508,11 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Responsabilidades del Supervisor */}
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-300 mb-8">
-                          <h4 className="text-2xl font-bold text-purple-900 mb-6">👔 Responsabilidades del Supervisor</h4>
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300 mb-4 sm:mb-6 md:mb-8">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6">👔 Responsabilidades del Supervisor</h4>
                           
                           <div className="space-y-4">
-                            <div className="bg-white p-6 rounded-xl border-2 border-blue-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                               <h5 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
                                 <CheckCircle className="h-6 w-6" />
                                 1. Validez de la Capacitación
@@ -1532,7 +1532,7 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-green-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                               <h5 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                                 <CheckCircle className="h-6 w-6" />
                                 2. Verificación de Competencias
@@ -1543,7 +1543,7 @@ export default function GuiaNOM009Article() {
                               </p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-orange-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                               <h5 className="font-bold text-orange-900 mb-3 text-lg flex items-center gap-2">
                                 <CheckCircle className="h-6 w-6" />
                                 3. Vigencia y Actualización
@@ -1569,7 +1569,7 @@ export default function GuiaNOM009Article() {
                               </div>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl border-2 border-purple-200">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                               <h5 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
                                 <CheckCircle className="h-6 w-6" />
                                 4. Contenido Integral de la Capacitación
@@ -1602,36 +1602,36 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Proceso de Obtención DC-3 */}
-                        <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-8 rounded-2xl border-4 border-indigo-400 shadow-xl">
-                          <h4 className="text-2xl font-bold text-indigo-900 mb-6">🎯 Proceso de Obtención de DC-3</h4>
+                        <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-indigo-400 shadow-xl">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900 mb-6">🎯 Proceso de Obtención de DC-3</h4>
                           
                           <div className="grid md:grid-cols-4 gap-4">
-                            <div className="bg-white p-6 rounded-xl text-center border-2 border-green-300">
-                              <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-2xl mx-auto mb-3">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center border-2 border-green-300">
+                              <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl mx-auto mb-3">
                                 1
                               </div>
                               <p className="font-bold text-green-900 mb-2">Inscripción</p>
                               <p className="text-sm text-gray-700">Curso con agente capacitador registrado</p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl text-center border-2 border-blue-300">
-                              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-2xl mx-auto mb-3">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center border-2 border-blue-300">
+                              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl mx-auto mb-3">
                                 2
                               </div>
                               <p className="font-bold text-blue-900 mb-2">Capacitación</p>
                               <p className="text-sm text-gray-700">Teoría + Práctica sobre NOM-009</p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl text-center border-2 border-purple-300">
-                              <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-2xl mx-auto mb-3">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center border-2 border-purple-300">
+                              <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl mx-auto mb-3">
                                 3
                               </div>
                               <p className="font-bold text-purple-900 mb-2">Evaluación</p>
                               <p className="text-sm text-gray-700">Aprobar examen teórico y práctico</p>
                             </div>
 
-                            <div className="bg-white p-6 rounded-xl text-center border-2 border-orange-300">
-                              <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-2xl mx-auto mb-3">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl text-center border-2 border-orange-300">
+                              <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl mx-auto mb-3">
                                 4
                               </div>
                               <p className="font-bold text-orange-900 mb-2">Constancia</p>
@@ -1644,13 +1644,13 @@ export default function GuiaNOM009Article() {
 
                     {activeTab === 6 && (
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                          <span className="text-4xl">✅</span>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">✅</span>
                           Punto Clave 7: El Registro y la Supervisión Continua
                         </h3>
                         
-                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl mb-8">
-                          <p className="text-gray-800 text-2xl font-bold mb-4 text-red-900">
+                        <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 md:p-6 rounded-r-xl mb-4 sm:mb-6 md:mb-8">
+                          <p className="text-gray-800 text-lg sm:text-xl md:text-2xl font-bold mb-4 text-red-900">
                             "Lo que no está escrito, no se hizo"
                           </p>
                           <p className="text-gray-800 text-lg">
@@ -1661,12 +1661,12 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Evidencia Documental Clave */}
-                        <div className="space-y-6 mb-8">
-                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-300">
-                            <h4 className="text-2xl font-bold text-blue-900 mb-6">📄 Evidencia Documental Clave</h4>
+                        <div className="space-y-6 mb-4 sm:mb-6 md:mb-8">
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-300">
+                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-6">📄 Evidencia Documental Clave</h4>
                             
                             <div className="space-y-4">
-                              <div className="bg-white p-6 rounded-xl border-2 border-green-200">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                                 <h5 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
                                   <FileText className="h-6 w-6" />
                                   1. Permisos de Trabajo en Altura
@@ -1692,7 +1692,7 @@ export default function GuiaNOM009Article() {
                                 </div>
                               </div>
 
-                              <div className="bg-white p-6 rounded-xl border-2 border-purple-200">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                                 <h5 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
                                   <FileText className="h-6 w-6" />
                                   2. Análisis de Riesgos Documentado
@@ -1703,7 +1703,7 @@ export default function GuiaNOM009Article() {
                                 </p>
                               </div>
 
-                              <div className="bg-white p-6 rounded-xl border-2 border-orange-200">
+                              <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                                 <h5 className="font-bold text-orange-900 mb-3 text-lg flex items-center gap-2">
                                   <FileText className="h-6 w-6" />
                                   3. Registros de Inspección y Mantenimiento
@@ -1741,13 +1741,13 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Supervisión Activa y Competente */}
-                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-4 border-green-400 shadow-xl mb-8">
-                          <h4 className="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-green-400 shadow-xl mb-4 sm:mb-6 md:mb-8">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
                             <Users className="h-8 w-8" />
                             Supervisión Activa y Competente: Cierra el Círculo
                           </h4>
                           
-                          <div className="bg-white p-6 rounded-xl border-2 border-green-300 mb-6">
+                          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300 mb-6">
                             <p className="text-gray-800 text-lg mb-4">
                               La norma exige <strong className="bg-green-200 px-2 py-1 rounded">supervisión constante</strong> para asegurar que las medidas de seguridad 
                               planificadas se apliquen correctamente en el campo.
@@ -1757,9 +1757,9 @@ export default function GuiaNOM009Article() {
                             </p>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-6">
+                          <div className="grid md:grid-cols-2 gap-3">
                             <div className="space-y-4">
-                              <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300">
+                              <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                                 <div className="flex items-center gap-3 mb-3">
                                   <CheckCircle className="h-7 w-7 text-blue-600" />
                                   <h5 className="font-bold text-blue-900 text-lg">Estar Presente</h5>
@@ -1769,7 +1769,7 @@ export default function GuiaNOM009Article() {
                                 </p>
                               </div>
 
-                              <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-300">
+                              <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                                 <div className="flex items-center gap-3 mb-3">
                                   <CheckCircle className="h-7 w-7 text-purple-600" />
                                   <h5 className="font-bold text-purple-900 text-lg">Observar Continuamente</h5>
@@ -1781,7 +1781,7 @@ export default function GuiaNOM009Article() {
                             </div>
 
                             <div className="space-y-4">
-                              <div className="bg-orange-50 p-6 rounded-xl border-2 border-orange-300">
+                              <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                                 <div className="flex items-center gap-3 mb-3">
                                   <CheckCircle className="h-7 w-7 text-orange-600" />
                                   <h5 className="font-bold text-orange-900 text-lg">Corregir de Inmediato</h5>
@@ -1791,7 +1791,7 @@ export default function GuiaNOM009Article() {
                                 </p>
                               </div>
 
-                              <div className="bg-red-50 p-6 rounded-xl border-2 border-red-300">
+                              <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                                 <div className="flex items-center gap-3 mb-3">
                                   <CheckCircle className="h-7 w-7 text-red-600" />
                                   <h5 className="font-bold text-red-900 text-lg">Autoridad para Detener</h5>
@@ -1805,8 +1805,8 @@ export default function GuiaNOM009Article() {
                         </div>
 
                         {/* Ciclo Completo de Seguridad */}
-                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-3xl border-4 border-indigo-500 shadow-xl">
-                          <h4 className="text-2xl font-bold text-indigo-900 mb-6 text-center">
+                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-3xl border-4 border-indigo-500 shadow-xl">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900 mb-6 text-center">
                             🔄 El Ciclo Completo de Seguridad
                           </h4>
                           
@@ -1868,7 +1868,7 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          <div className="mt-6 bg-white p-6 rounded-xl border-2 border-indigo-300">
+                          <div className="mt-6 bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-indigo-300">
                             <p className="text-center text-lg text-gray-800">
                               <strong className="text-indigo-900">Esta supervisión activa cierra el ciclo:</strong> Comienza con la Planificación, 
                               se ejecuta con Controles y EPP adecuados, se respalda con Plan de Emergencia y Personal Competente, 
@@ -1882,16 +1882,16 @@ export default function GuiaNOM009Article() {
                 </section>
 
                 {/* Conclusión */}
-                <section id="conclusion" className="mb-16">
+                <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
                   <motion.h2 
-                    className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
                     🎯 Conclusión: La Seguridad es la Mejor Inversión
                   </motion.h2>
 
-                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-8 rounded-r-3xl shadow-xl">
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-3xl shadow-xl">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="bg-green-500 rounded-full p-4 flex-shrink-0">
                         <Shield className="text-white h-10 w-10" />
@@ -1903,7 +1903,7 @@ export default function GuiaNOM009Article() {
                           Los 7 puntos clave forman un sistema de seguridad robusto y coherente.
                         </p>
                         
-                        <div className="bg-white p-6 rounded-xl mb-6">
+                        <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl mb-6">
                           <h4 className="font-bold text-green-900 mb-4 text-lg">📊 Sistema de Seguridad Integral:</h4>
                           <ul className="space-y-2 text-gray-700">
                             <li className="flex items-start gap-2">
@@ -1937,7 +1937,7 @@ export default function GuiaNOM009Article() {
                           </ul>
                         </div>
 
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-300">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <h4 className="font-bold text-blue-900 mb-3 text-lg">💼 Transformación de Paradigma:</h4>
                           <p className="text-gray-800 leading-relaxed">
                             La implementación rigurosa de estos principios <strong className="text-blue-800">transforma la percepción de la seguridad</strong>. 
@@ -1953,7 +1953,7 @@ export default function GuiaNOM009Article() {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-2xl border-2 border-orange-300 mt-6">
+                    <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-orange-300 mt-6">
                       <p className="text-center text-xl font-bold text-orange-900">
                         🏆 Un supervisor que internaliza y aplica estos 7 pilares no solo cumple con una norma; 
                         se erige como un <span className="bg-orange-200 px-2 py-1 rounded">verdadero líder</span>, 
@@ -1964,21 +1964,21 @@ export default function GuiaNOM009Article() {
                 </section>
 
                 {/* Sección de Artículos Relacionados */}
-                <section id="articulos-relacionados" className="mb-12">
+                <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
                   <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       📚 Artículos Relacionados
                     </h2>
                     
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-3 gap-3">
                       {relatedArticles.map((article, index) => (
                         <motion.div
                           key={article.id}
-                          className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                          className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6 + index * 0.1 }}
