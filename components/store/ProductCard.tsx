@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Star, Heart, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { AmazonProduct } from '@/lib/types/store';
+import { trackAffiliateClick, trackProductView, trackAddToCart, generateTrackingId } from '@/lib/meta-pixel';
 
 // Crear una referencia lazy del modal para evitar problemas de imports
 let ProductQuickViewModal: any = null;
@@ -21,6 +22,23 @@ function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [ModalComponent, setModalComponent] = useState<any>(null);
   const router = useRouter();
+
+  // Funciones de tracking
+  const handleProductView = () => {
+    const productId = generateTrackingId('product', product.asin);
+    trackProductView(productId, product.title, product.category || 'tienda');
+  };
+
+  const handleAddToCart = () => {
+    const productId = generateTrackingId('product', product.asin);
+    trackAddToCart(productId, product.title);
+  };
+
+  // Track view al hacer hover (primera interacción)
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    handleProductView();
+  };
 
   // Cargar el modal de forma asíncrona cuando se necesite
   const loadModal = async () => {
@@ -41,12 +59,20 @@ function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
 
   const handleViewOnAmazon = (e: React.MouseEvent) => {
     e.stopPropagation();
+    
+    // Track affiliate click
+    const productId = generateTrackingId('product', product.asin);
+    trackAffiliateClick('amazon', productId, product.title, product.category || 'tienda');
+    
     window.open(product.amazon_url, '_blank');
   };
 
   const handleViewDetails = async (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     if (showViewDetails) {
+      // Track interaction with product details
+      handleAddToCart(); // Simulated "add to cart" for interest tracking
+      
       await loadModal();
       setIsModalOpen(true);
     }
@@ -63,7 +89,7 @@ function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
       className={`group cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 ${
         isHovered ? 'ring-2 ring-blue-500' : ''
       }`}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setIsHovered(false)}
     >
       <CardContent className="p-4">

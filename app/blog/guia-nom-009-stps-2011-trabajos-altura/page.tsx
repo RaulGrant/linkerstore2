@@ -4,10 +4,30 @@ import { motion } from 'framer-motion';
 import BlogLayout from '@/components/blog/BlogLayout';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Shield, AlertTriangle, CheckCircle, XCircle, FileText, Users, Activity, Star, Info } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { trackBlogView, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
+import { useScrollTracking } from '@/hooks/useScrollTracking';
 
 export default function GuiaNOM009Article() {
   const [activeTab, setActiveTab] = useState(0);
+  
+  // Enable scroll and engagement tracking
+  useScrollTracking({ 
+    pageTitle: 'Guía Completa NOM-009-STPS-2011 Trabajos en Altura',
+    trackTimeOnPage: true 
+  });
+
+  // Track guide view on component mount
+  useEffect(() => {
+    const guideId = generateTrackingId('guide', 'nom-009-stps-2011');
+    trackBlogView(guideId, 'Guía Completa NOM-009-STPS-2011 Trabajos en Altura', 'guia_seguridad');
+  }, []);
+
+  // Handle tab interactions
+  const handleTabChange = (tabIndex: number, tabName: string) => {
+    setActiveTab(tabIndex);
+    trackInteraction('guide_tab_click', `tab_${tabIndex}_${tabName}`, 'nom_009_guide');
+  };
 
   // Datos para artículos relacionados
   const relatedArticles = [
@@ -460,7 +480,7 @@ export default function GuiaNOM009Article() {
                     {tabs.map((tab) => (
                       <button
                         key={tab.id}
-                        onClick={() => setActiveTab(tab.id)}
+                        onClick={() => handleTabChange(tab.id, tab.title)}
                         className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                           activeTab === tab.id
                             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'

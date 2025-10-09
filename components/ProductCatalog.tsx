@@ -1,5 +1,6 @@
-// ProductFicha.tsx
+// ProductCatalog.tsx
 import React from 'react';
+import { trackAffiliateClick, generateTrackingId } from '@/lib/meta-pixel';
 
 interface ProductFichaProps {
   customTitle: string;
@@ -12,7 +13,7 @@ interface ProductFichaProps {
   amazon_url: string;
 }
 
-export const ProductFicha: React.FC<ProductFichaProps> = ({
+const ProductFicha: React.FC<ProductFichaProps> = ({
   customTitle,
   icon,
   technicalAnalysis,
@@ -57,16 +58,16 @@ export const ProductFicha: React.FC<ProductFichaProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block bg-yellow-500 text-white px-8 py-3 rounded font-bold hover:bg-yellow-600 transition text-lg shadow"
+        onClick={() => {
+          const productId = generateTrackingId('product', customTitle);
+          trackAffiliateClick('amazon', productId, customTitle, 'seguridad_industrial');
+        }}
       >
         Comprar en Amazon
       </a>
     </div>
   </section>
 );
-
-// ProductCatalog.tsx
-import React from 'react';
-import { ProductFicha } from './ProductFicha';
 
 export const ProductCatalog: React.FC = () => {
   const products = [

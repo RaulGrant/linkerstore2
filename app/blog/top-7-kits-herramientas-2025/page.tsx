@@ -7,8 +7,22 @@ import RelatedArticles from "@/components/blog/RelatedArticles";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Shield, Star, CheckCircle, AlertTriangle } from "lucide-react";
 import Image from "next/image";
+import { trackAffiliateClick, trackBlogView, generateTrackingId } from '@/lib/meta-pixel';
+import { useEffect } from 'react';
 
 export default function KitsHerramientasArticle() {
+  // Track article view on component mount
+  useEffect(() => {
+    const articleId = generateTrackingId('article', 'top-7-kits-herramientas-2025');
+    trackBlogView(articleId, 'Top 7 Kits de Herramientas Mecánicas 2025', 'herramientas_mecanicas');
+  }, []);
+
+  // Función para manejar clicks en enlaces de Amazon
+  const handleAmazonClick = (productName: string, amazonUrl: string) => {
+    const productId = generateTrackingId('product', productName);
+    trackAffiliateClick('amazon', productId, productName, 'herramientas_mecanicas');
+  };
+
   // Datos para la comparación de productos (Solo los 3 primeros con información completa)
   const comparisonProducts = [
     {

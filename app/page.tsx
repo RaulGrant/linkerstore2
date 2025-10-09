@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { trackEvent, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
+import { useScrollTracking } from '@/hooks/useScrollTracking';
 
 interface CountdownProps {
   targetDate: Date;
@@ -136,6 +138,28 @@ function CountdownTimer({ targetDate }: CountdownProps) {
 
 export default function HomePage() {
   const router = useRouter();
+  
+  // Enable scroll and time tracking for homepage
+  useScrollTracking({ 
+    pageTitle: 'LinkerStore Homepage',
+    trackTimeOnPage: true 
+  });
+
+  // Track homepage view on component mount
+  useEffect(() => {
+    const pageId = generateTrackingId('page', 'homepage');
+    trackEvent('ViewContent', {
+      content_type: 'page',
+      content_ids: [pageId],
+      content_name: 'LinkerStore Homepage',
+      content_category: 'homepage'
+    });
+  }, []);
+
+  // Function to track button clicks
+  const handleCTAClick = (ctaName: string) => {
+    trackInteraction('button_click', ctaName, 'homepage');
+  };
 
   // Fecha objetivo: 3 meses desde ahora (1 de noviembre, 2025)
   const targetDate = new Date('2025-11-01T00:00:00');
@@ -277,6 +301,7 @@ export default function HomePage() {
                   asChild 
                   size="lg" 
                   className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => handleCTAClick('blog_cta')}
                 >
                   <Link href="/blog" className="flex items-center gap-2">
                     <ShoppingBag className="w-5 h-5" />

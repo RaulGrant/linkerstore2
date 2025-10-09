@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, XCircle, Star, ExternalLink, Info, Shield } from 'lucide-react';
+import { trackAffiliateClick, generateTrackingId } from '@/lib/meta-pixel';
 
 interface ProductFeature {
   name: string;
@@ -36,6 +37,13 @@ export default function ProductComparison({
   features,
   className = ''
 }: ProductComparisonProps) {
+  // Función para manejar clicks en enlaces de Amazon/Mercado Libre
+  const handleProductClick = (product: ComparisonProduct) => {
+    const productId = generateTrackingId('product', product.name);
+    const platform = product.amazonLink.includes('mercadolibre.com') ? 'mercadolibre' : 'amazon';
+    trackAffiliateClick(platform as 'amazon' | 'mercadolibre', productId, product.name, 'product_comparison');
+    window.open(product.amazonLink, '_blank');
+  };
   const renderFeatureValue = (value: boolean | string) => {
     if (typeof value === 'boolean') {
       return value ? (
@@ -253,7 +261,7 @@ export default function ProductComparison({
                   ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl' 
                   : 'hover:border-blue-400 hover:bg-blue-50 hover:shadow-lg'
               }`}
-              onClick={() => window.open(product.amazonLink, '_blank')}
+              onClick={() => handleProductClick(product)}
             >
               <motion.div 
                 className="text-2xl mb-2"

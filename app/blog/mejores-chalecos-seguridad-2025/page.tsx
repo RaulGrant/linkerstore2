@@ -6,8 +6,22 @@ import ProductComparison from '@/components/blog/ProductComparison';
 import RelatedArticles from '@/components/blog/RelatedArticles';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Shield, Star, CheckCircle, AlertTriangle } from 'lucide-react';
+import { trackAffiliateClick, trackBlogView, generateTrackingId } from '@/lib/meta-pixel';
+import { useEffect } from 'react';
 
 export default function ChalecosSeguridadArticle() {
+  // Track article view on component mount
+  useEffect(() => {
+    const articleId = generateTrackingId('article', 'mejores-chalecos-seguridad-2025');
+    trackBlogView(articleId, 'Los 7 Mejores Chalecos Reflectantes de Seguridad 2025', 'chaleco_seguridad');
+  }, []);
+
+  // Función para manejar clicks en enlaces de Amazon
+  const handleAmazonClick = (productName: string, amazonUrl: string) => {
+    const productId = generateTrackingId('product', productName);
+    trackAffiliateClick('amazon', productId, productName, 'chaleco_seguridad');
+  };
+
   // Datos para la comparación de productos
   const comparisonData = {
     title: "Análisis Cara a Cara: Top 3 Chalecos",
@@ -899,6 +913,7 @@ export default function ChalecosSeguridadArticle() {
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                          onClick={() => handleAmazonClick('Simonetta Vespetti Chaleco Reflectante', 'https://a.co/d/bw2qd4o')}
                         >
                           Ver en Amazon →
                         </a>

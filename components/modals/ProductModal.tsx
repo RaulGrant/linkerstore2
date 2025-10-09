@@ -10,6 +10,7 @@ import { AmazonProduct } from '@/lib/types/store'
 import Image from 'next/image'
 import FavoritesModal from './FavoritesModal'
 import { getProductImageUrls, hasMultipleImages } from '@/lib/utils/productImageMapping'
+import { trackAffiliateClick, trackProductView, trackInitiateCheckout, trackInteraction, generateTrackingId } from '@/lib/meta-pixel'
 
 interface ProductModalProps {
   product: AmazonProduct | null
@@ -28,6 +29,23 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
   const [isZoomed, setIsZoomed] = useState(false)
   const [isFavorite, setIsFavorite] = useState(false)
   const [showFavoritesModal, setShowFavoritesModal] = useState(false)
+
+  // Tracking functions
+  const handleAmazonClick = () => {
+    if (product) {
+      const productId = generateTrackingId('product', product.asin);
+      trackInitiateCheckout('amazon', productId, product.title);
+      trackAffiliateClick('amazon', productId, product.title, product.category || 'product_modal');
+      window.open(product.amazon_url, '_blank');
+    }
+  };
+
+  const handleTabInteraction = (tabValue: string) => {
+    if (product) {
+      const productId = generateTrackingId('product', product.asin);
+      trackInteraction('tab_click', tabValue, `product_modal_${product.asin}`);
+    }
+  };
 
   useEffect(() => {
     if (product) {
@@ -284,7 +302,7 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
               <div className="flex gap-3">
                 <Button 
                   className="flex-1"
-                  onClick={() => window.open(product.amazon_url, '_blank')}
+                  onClick={handleAmazonClick}
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
                   Comprar en Amazon

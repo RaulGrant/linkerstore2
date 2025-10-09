@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { trackInteraction } from '@/lib/meta-pixel';
 
 interface NavigationProps {
   user?: {
@@ -39,6 +40,11 @@ export default function Navigation({ user }: NavigationProps) {
 
   const isAuthenticated = !!user;
   const isCompany = user?.role === 'company';
+
+  // Function to track navigation clicks
+  const handleNavClick = (linkName: string, linkPath: string) => {
+    trackInteraction('nav_click', linkName, `navigation_to_${linkPath}`);
+  };
   const isFreelancer = user?.role === 'freelancer';
 
   const mainNavItems = [
@@ -87,7 +93,11 @@ export default function Navigation({ user }: NavigationProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link 
+            href="/" 
+            className="flex items-center gap-2"
+            onClick={() => handleNavClick('logo', '/')}
+          >
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
               <span className="text-sm font-bold text-white">LP</span>
             </div>
