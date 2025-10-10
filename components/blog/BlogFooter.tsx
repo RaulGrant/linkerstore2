@@ -26,6 +26,8 @@ export default function BlogFooter() {
     { name: 'Inicio', href: '/', icon: FileText },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Guías Técnicas', href: '/guias', icon: Shield },
+    { name: 'Servicios', href: '/servicios', icon: Users },
+    { name: 'Contacto', href: '/contacto', icon: Users },
     { name: 'Sobre Nosotros', href: '/sobre-nosotros', icon: Users }
   ];
 

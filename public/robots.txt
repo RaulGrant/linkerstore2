@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Permitir todos los bots en páginas principales
+Allow: /blog/
+Allow: /guias/
+Allow: /sobre-nosotros/
+Allow: /servicios/
+Allow: /contacto/
+Allow: /ayuda/
+Allow: /legal/
+
+# Bloquear páginas de desarrollo y temporales
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /admin/
+
+# Permitir archivos importantes para SEO
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /robots.txt
+
+# Configuración de crawl delay para ser amigables
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://linkerpro.com/sitemap.xml

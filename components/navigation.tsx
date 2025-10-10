@@ -19,10 +19,12 @@ import {
   GraduationCap,
   CreditCard,
   Wallet,
-  LogOut
+  LogOut,
+  HelpCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Separator } from '@/components/ui/separator';
 import { trackInteraction } from '@/lib/meta-pixel';
 
 interface NavigationProps {
@@ -51,6 +53,8 @@ export default function Navigation({ user }: NavigationProps) {
     { name: 'Inicio', href: '/', icon: Home },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Guías', href: '/guias', icon: GraduationCap },
+    { name: 'Servicios', href: '/servicios', icon: Building2 },
+    { name: 'Ayuda', href: '/ayuda', icon: HelpCircle },
     // { name: 'Tienda', href: '/store', icon: Store },
     // { name: 'Freelancers', href: '/map-freelancers', icon: Users }, // Temporalmente oculto
     // { name: 'Empresas', href: '/map-empresas', icon: Building2 }, // Temporalmente oculto
@@ -146,10 +150,7 @@ export default function Navigation({ user }: NavigationProps) {
             ) : (
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild>
-                  <Link href="/login">Iniciar Sesión</Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href="/register">Registrarse</Link>
+                  <Link href="/contacto">Contacto</Link>
                 </Button>
               </div>
             )}
@@ -213,11 +214,8 @@ export default function Navigation({ user }: NavigationProps) {
                       </Button>
                     ) : (
                       <div className="space-y-2">
-                        <Button variant="ghost" className="w-full" asChild>
-                          <Link href="/login">Iniciar Sesión</Link>
-                        </Button>
                         <Button className="w-full" asChild>
-                          <Link href="/register">Registrarse</Link>
+                          <Link href="/contacto">Contactar Expertos</Link>
                         </Button>
                       </div>
                     )}

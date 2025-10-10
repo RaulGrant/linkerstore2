@@ -177,6 +177,7 @@ export default function GuideModal({ isOpen, onClose, guide }: GuideModalProps) 
                           <div key={index} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
                             <h5 className="font-medium text-gray-900">{product.name}</h5>
                             <p className="text-sm text-gray-600 mt-1">{product.description}</p>
+                            {/* TEMPORALMENTE COMENTADO - TIENDA EN DESARROLLO
                             {product.asin && (
                               <Button 
                                 variant="outline" 
@@ -188,6 +189,7 @@ export default function GuideModal({ isOpen, onClose, guide }: GuideModalProps) 
                                 Ver Producto
                               </Button>
                             )}
+                            */}
                           </div>
                         ))}
                       </div>

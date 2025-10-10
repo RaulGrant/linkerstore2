@@ -1,14 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
-import { ContactFormModal } from "@/components/modals/contact-form-modal"
 
 export function Footer() {
-  const [contactModalOpen, setContactModalOpen] = useState(false)
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -52,14 +49,17 @@ export function Footer() {
               <Link href="/guias" className="block text-gray-300 hover:text-white text-sm transition-colors">
                 Guías Técnicas
               </Link>
+              <Link href="/servicios" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Servicios
+              </Link>
+              <Link href="/sobre-nosotros" className="block text-gray-300 hover:text-white text-sm transition-colors">
+                Sobre Nosotros
+              </Link>
               {/* Temporalmente oculto
               <Link href="/store" className="block text-gray-300 hover:text-white text-sm transition-colors">
                 Catálogo de Productos
               </Link>
               */}
-              <Link href="/sobre-nosotros" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Sobre Nosotros
-              </Link>
             </div>
           </div>
 
@@ -99,18 +99,14 @@ export function Footer() {
                 <span className="text-gray-300">Ciudad de México, México</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <button
-                  onClick={() => setContactModalOpen(true)}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Formulario de Contacto
-                </button>
+                <Link href="/contacto" className="text-gray-300 hover:text-white transition-colors">
+                  Contacto
+                </Link>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-               
-               {/* <Link href="/help" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/ayuda" className="text-gray-300 hover:text-white transition-colors">
                   Centro de Ayuda
-                </Link> */}
+                </Link>
               </div>
             </div>
           </div>
@@ -133,8 +129,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      <ContactFormModal open={contactModalOpen} onOpenChange={setContactModalOpen} />
     </footer>
   )
 }
