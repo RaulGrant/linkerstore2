@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from '@/components/navigation'
 import ConditionalFooter from '@/components/ConditionalFooter'
 import SchemaMarkup from '@/components/seo/SchemaMarkup'
+import AnalyticsProvider from '@/components/analytics/AnalyticsProvider'
 
 export const metadata: Metadata = {
   title: 'LinkerPro - Blog de Seguridad Industrial | Equipos de Protección Personal',
@@ -36,6 +37,28 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        {/* Google Analytics 4 Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-405TQL3C9G"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-405TQL3C9G', {
+                page_title: document.title,
+                page_location: window.location.href,
+                send_page_view: true
+              });
+            `,
+          }}
+        />
+        
         {/* Meta Pixel Script */}
         <Script
           id="meta-pixel"
@@ -71,9 +94,11 @@ export default function RootLayout({
         <SchemaMarkup type="Organization" />
         <SchemaMarkup type="WebSite" />
         
-        <Navigation />
-        {children}
-        <ConditionalFooter />
+        <AnalyticsProvider>
+          <Navigation />
+          {children}
+          <ConditionalFooter />
+        </AnalyticsProvider>
       </body>
     </html>
   )

@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowRight, Eye, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { ContentLinkTracker } from '@/components/analytics/ClickTracker';
+import { trackEvent } from '@/lib/analytics/ga4';
 
 interface ArticleCardProps {
   title: string;
@@ -49,6 +51,20 @@ export default function ArticleCard({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Función para trackear clics en artículos
+  const handleArticleClick = () => {
+    trackEvent('article_click', {
+      category: 'content',
+      article_title: title,
+      article_category: category,
+      article_slug: slug,
+      article_views: views,
+      is_popular: isPopular,
+      is_new: isNew,
+      read_time: readTime,
+    });
+  };
 
   // Función para obtener emoji según la categoría
   const getCategoryEmoji = (category: string) => {
@@ -281,39 +297,52 @@ export default function ArticleCard({
             transition={{ delay: 0.6 }}
             className="w-full"
           >
-            <Button 
-              asChild
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+            <ContentLinkTracker
+              category="content"
+              label={`Leer Artículo: ${title}`}
+              location="/blog"
+              onClick={handleArticleClick}
+              additionalData={{
+                article_category: category,
+                article_slug: slug,
+                is_popular: isPopular,
+                is_new: isNew
+              }}
             >
-              <Link href={`/blog/${slug}`} className="flex items-center justify-center gap-2 relative z-10">
-                {/* Efecto de ondas en el botón */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
-                  whileHover={{
-                    x: [-100, 100],
-                    transition: { duration: 0.6 }
-                  }}
-                  style={{ transform: "skewX(-20deg)" }}
-                />
-                
-                <motion.span
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  Leer Artículo
-                </motion.span>
-                
-                <motion.div
-                  whileHover={{ 
-                    x: 3,
-                    scale: 1.1,
-                    transition: { type: "spring", stiffness: 400 }
-                  }}
-                >
-                  <ArrowRight className="h-4 w-4" />
-                </motion.div>
-              </Link>
-            </Button>
+              <Button 
+                asChild
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+              >
+                <Link href={`/blog/${slug}`} className="flex items-center justify-center gap-2 relative z-10">
+                  {/* Efecto de ondas en el botón */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
+                    whileHover={{
+                      x: [-100, 100],
+                      transition: { duration: 0.6 }
+                    }}
+                    style={{ transform: "skewX(-20deg)" }}
+                  />
+                  
+                  <motion.span
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    Leer Artículo
+                  </motion.span>
+                  
+                  <motion.div
+                    whileHover={{ 
+                      x: 3,
+                      scale: 1.1,
+                      transition: { type: "spring", stiffness: 400 }
+                    }}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </motion.div>
+                </Link>
+              </Button>
+            </ContentLinkTracker>
           </motion.div>
         </CardFooter>
       </Card>

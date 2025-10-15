@@ -9,6 +9,9 @@ import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { trackEvent, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
+import { usePageAnalytics } from '@/hooks/usePageAnalytics';
+import { CTATracker, NavLinkTracker } from '@/components/analytics/ClickTracker';
+import { trackEvent as trackGA4Event } from '@/lib/analytics/ga4';
 
 interface CountdownProps {
   targetDate: Date;
@@ -145,6 +148,14 @@ export default function HomePage() {
     trackTimeOnPage: true 
   });
 
+  // Enhanced analytics tracking for homepage
+  const { timeSpent } = usePageAnalytics('/', {
+    trackTimeOnPage: true,
+    trackScrollDepth: true,
+    scrollThresholds: [25, 50, 75, 100],
+    heartbeatInterval: 15,
+  });
+
   // Track homepage view on component mount
   useEffect(() => {
     const pageId = generateTrackingId('page', 'homepage');
@@ -159,6 +170,12 @@ export default function HomePage() {
   // Function to track button clicks
   const handleCTAClick = (ctaName: string) => {
     trackInteraction('button_click', ctaName, 'homepage');
+    trackGA4Event('cta_click', {
+      category: 'conversion',
+      cta_name: ctaName,
+      page_location: '/',
+      time_on_page: timeSpent,
+    });
   };
 
   // Fecha objetivo: 3 meses desde ahora (1 de noviembre, 2025)
@@ -297,34 +314,46 @@ export default function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                <CTATracker
+                  category="cta"
+                  label="Explora Nuestro Blog de Seguridad"
+                  location="homepage"
                   onClick={() => handleCTAClick('blog_cta')}
                 >
-                  <Link href="/blog" className="flex items-center gap-2">
-                    <ShoppingBag className="w-5 h-5" />
-                    Explora Nuestro Blog de Seguridad
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
+                  <Button 
+                    asChild 
+                    size="lg" 
+                    className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <Link href="/blog" className="flex items-center gap-2">
+                      <ShoppingBag className="w-5 h-5" />
+                      Explora Nuestro Blog de Seguridad
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                </CTATracker>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
-                  asChild 
-                  variant="secondary" 
-                  size="lg" 
-                  className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
+                <NavLinkTracker
+                  category="navigation"
+                  label="Ver Guías de Seguridad"
+                  location="homepage"
                 >
-                  <Link href="/guias" className="flex items-center gap-2">
-                    <Target className="w-5 h-5" />
-                    Ver Guías de Seguridad
-                  </Link>
-                </Button>
+                  <Button 
+                    asChild 
+                    variant="secondary" 
+                    size="lg" 
+                    className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
+                  >
+                    <Link href="/guias" className="flex items-center gap-2">
+                      <Target className="w-5 h-5" />
+                      Ver Guías de Seguridad
+                    </Link>
+                  </Button>
+                </NavLinkTracker>
               </motion.div>
             </motion.div>
 

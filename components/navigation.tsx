@@ -26,6 +26,8 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { trackInteraction } from '@/lib/meta-pixel';
+import { NavLinkTracker } from '@/components/analytics/ClickTracker';
+import { trackClick } from '@/lib/analytics/ga4';
 
 interface NavigationProps {
   user?: {
@@ -46,6 +48,11 @@ export default function Navigation({ user }: NavigationProps) {
   // Function to track navigation clicks
   const handleNavClick = (linkName: string, linkPath: string) => {
     trackInteraction('nav_click', linkName, `navigation_to_${linkPath}`);
+    trackClick(linkName, 'navigation', {
+      category: 'navigation',
+      destination: linkPath,
+      link_text: linkName,
+    });
   };
   const isFreelancer = user?.role === 'freelancer';
 
