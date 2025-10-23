@@ -88,11 +88,11 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">soporte@linkerstore.com</span>
+                <span className="text-gray-300">linkerpro.notifications@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">+52 55 3486 3278</span>
+                <span className="text-gray-300">+52 246 793 4968</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4 text-blue-400" />

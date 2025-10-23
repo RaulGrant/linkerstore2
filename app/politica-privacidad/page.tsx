@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import BlogLayout from '@/components/blog/BlogLayout';
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidad | LinkerPro',
-  description: 'Política de privacidad de LinkerPro. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.',
+  title: 'Política de Privacidad | LinkerStore',
+  description: 'Política de privacidad de LinkerStore. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.',
 };
 
 export default function PoliticaPrivacidadPage() {
@@ -21,7 +21,7 @@ export default function PoliticaPrivacidadPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Información que Recopilamos</h2>
               <p className="text-gray-700 mb-4">
-                En LinkerPro, recopilamos la siguiente información:
+                En LinkerStore, recopilamos la siguiente información:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>Información de navegación (cookies, dirección IP, tipo de navegador)</li>
@@ -79,8 +79,8 @@ export default function PoliticaPrivacidadPage() {
                 Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos en:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Email: privacidad@linkerpro.com</li>
-                <li>Teléfono: +34 900 123 456</li>
+                <li>Email: linkerpro.notifications@gmail.com</li>
+                <li>Teléfono: +52 246 793 4968</li>
               </ul>
             </section>
           </div>

@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { BookOpen, Shield, HardHat, Users, Award, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Guías de Seguridad Industrial | LinkerPro',
+  title: 'Guías de Seguridad Industrial | LinkerStore',
   description: 'Guías completas y detalladas sobre seguridad industrial, equipos de protección personal y normativas laborales.',
   keywords: 'guías seguridad industrial, manuales EPP, normativas seguridad, protocolos trabajo',
 };

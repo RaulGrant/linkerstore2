@@ -19,9 +19,9 @@ import {
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros - Expertos en Seguridad Industrial | LinkerPro',
-  description: 'Conoce a LinkerPro, tu fuente confiable de información sobre seguridad industrial y equipos de protección personal. Expertos comprometidos con tu seguridad.',
-  keywords: 'sobre linkerpo, equipo seguridad industrial, expertos EPP, misión seguridad laboral',
+  title: 'Sobre Nosotros - Expertos en Seguridad Industrial | LinkerStore',
+  description: 'Conoce a LinkerStore, tu fuente confiable de información sobre seguridad industrial y equipos de protección personal. Expertos comprometidos con tu seguridad.',
+  keywords: 'sobre linkerstore, equipo seguridad industrial, expertos EPP, misión seguridad laboral',
 };
 
 const teamMembers = [
@@ -114,7 +114,7 @@ export default function SobreNosotrosPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Sobre 
               <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
-                {' '}LinkerPro
+                {' '}LinkerStore
               </span>
             </h1>
             
@@ -132,7 +132,7 @@ export default function SobreNosotrosPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Nuestra Misión</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              En LinkerPro, nos dedicamos a proporcionar información confiable, 
+              En LinkerStore, nos dedicamos a proporcionar información confiable, 
               actualizada y práctica sobre seguridad industrial. Nuestro objetivo 
               es ayudar a profesionales y empresas a crear ambientes de trabajo 
               más seguros a través del conocimiento especializado.
@@ -200,44 +200,7 @@ export default function SobreNosotrosPage() {
           </div>
         </div>
 
-        {/* Equipo */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Equipo</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Profesionales experimentados y certificados en seguridad industrial
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-12 w-12 text-gray-400" />
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-2">{member.role}</p>
-                  
-                  <Badge variant="secondary" className="mb-4">
-                    {member.experience} experiencia
-                  </Badge>
-                  
-                  <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                  
-                  <div className="flex flex-wrap gap-1 justify-center">
-                    {member.certifications.map((cert, certIndex) => (
-                      <Badge key={certIndex} className="text-xs bg-blue-100 text-blue-800">
-                        {cert}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+      
 
         {/* Certificaciones */}
         <div className="mb-20">
@@ -274,7 +237,7 @@ export default function SobreNosotrosPage() {
                   <Mail className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">info@linkerpro.com</p>
+                <p className="text-gray-600">linkerpro.notifications@gmail.com</p>
               </div>
 
               <div className="text-center">
@@ -282,7 +245,7 @@ export default function SobreNosotrosPage() {
                   <Phone className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Teléfono</h3>
-                <p className="text-gray-600">+34 900 123 456</p>
+                <p className="text-gray-600">+52 246 793 4968</p>
               </div>
 
               <div className="text-center">

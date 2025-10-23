@@ -314,7 +314,7 @@ export default function AyudaPage() {
                   <Mail className="h-6 w-6" />
                 </div>
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-sm text-blue-100">info@linkerpro.com</p>
+                <p className="text-sm text-blue-100">linkerpro.notifications@gmail.com</p>
               </div>
               
               <div className="text-center">
@@ -322,7 +322,7 @@ export default function AyudaPage() {
                   <Phone className="h-6 w-6" />
                 </div>
                 <h3 className="font-semibold mb-1">Teléfono</h3>
-                <p className="text-sm text-blue-100">+34 900 123 456</p>
+                <p className="text-sm text-blue-100">+52 246 793 4968</p>
               </div>
               
               <div className="text-center">
@@ -356,9 +356,9 @@ export default function AyudaPage() {
               <div className="flex items-start gap-3">
                 <AlertCircle className="h-5 w-5 text-yellow-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-yellow-800 mb-2">Estado del Proyecto LinkerPro</h3>
+                  <h3 className="font-semibold text-yellow-800 mb-2">Estado del Proyecto LinkerStore</h3>
                   <p className="text-yellow-700 text-sm mb-3">
-                    Actualmente LinkerPro está en desarrollo. El blog y las guías están completamente funcionales, 
+                    Actualmente LinkerStore está en desarrollo. El blog y las guías están completamente funcionales, 
                     pero algunas funcionalidades avanzadas como cuentas de usuario y servicios premium estarán 
                     disponibles próximamente.
                   </p>

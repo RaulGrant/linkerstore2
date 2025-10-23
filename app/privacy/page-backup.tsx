@@ -15,9 +15,9 @@ export default function PrivacyPolicyPage() {
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">LP</span>
+              <span className="text-white font-bold text-sm">LS</span>
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">LinkerPro</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">LinkerStore</span>
           </Link>
         </div>
       </header>
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
               </CardHeader>
               <CardContent className="text-orange-700">
                 <p className="font-medium text-lg mb-2">
-                  LinkerPro es participante del Programa de Afiliados de Amazon.
+                  LinkerStore es participante del Programa de Afiliados de Amazon.
                 </p>
                 <p>
                   Como afiliado de Amazon, obtenemos ingresos por las compras que califican realizadas 
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
                   <CardTitle className="text-2xl">1. Información que Recopilamos</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-600">En LinkerPro Industrial Store, recopilamos la siguiente información:</p>
+                  <p className="text-gray-600">En LinkerStore, recopilamos la siguiente información:</p>
                   <ul className="list-disc pl-6 space-y-2 text-gray-700">
                     <li><strong>Información de navegación:</strong> Productos que visualizas, tiempo en el sitio, páginas visitadas.</li>
                     <li><strong>Información de cuenta (opcional):</strong> Email, nombre, preferencias de productos.</li>
@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <p className="font-semibold text-blue-800 mb-2">Declaración de Afiliación</p>
                     <p className="text-blue-700">
-                      "LinkerPro Industrial Store es participante del Programa de Afiliados de Amazon Services LLC, 
+                      "LinkerStore Industrial Store es participante del Programa de Afiliados de Amazon Services LLC, 
                       un programa de publicidad de afiliados diseñado para proporcionar un medio para que los sitios 
                       web ganen tarifas de publicidad mediante la publicidad y enlaces a Amazon.com."
                     </p>
@@ -190,7 +190,7 @@ export default function PrivacyPolicyPage() {
                   <p className="text-green-700">
                     Si tienes preguntas sobre esta política de privacidad o quieres ejercer tus derechos, 
                     puedes contactarnos a través de nuestro formulario de contacto o enviando un email a 
-                    privacy@linkerpro.com
+                    linkerpro.notifications@gmail.com
                   </p>
                 </CardContent>
               </Card>
@@ -211,8 +211,8 @@ export default function PrivacyPolicyPage() {
                 Para cualquier consulta sobre nuestra política de privacidad, puede contactarnos en:
               </p>
               <ul className="list-none mb-4">
-                <li>Email: privacidad@linkerpro.com</li>
-                <li>Teléfono: +52 55 1234 5678</li>
+                <li>Email: linkerpro.notifications@gmail.com</li>
+                <li>Teléfono: +52 246 793 4968</li>
                 <li>Dirección: Ciudad de México, México</li>
               </ul>
             </section>

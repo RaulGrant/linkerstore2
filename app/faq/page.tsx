@@ -38,7 +38,7 @@ export default function FAQPage() {
               <span className="text-white font-bold text-sm">LP</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              LinkerPro
+              LinkerStore
             </span>
           </Link>
 
@@ -102,9 +102,9 @@ export default function FAQPage() {
                   <CardContent className="space-y-6">
                     
                     <div className="space-y-3">
-                      <h3 className="font-semibold text-gray-900">¿Qué es LinkerPro Store?</h3>
+                      <h3 className="font-semibold text-gray-900">¿Qué es LinkerStore?</h3>
                       <p className="text-gray-600">
-                        Somos una tienda especializada en productos industriales con reseñas detalladas 
+                        Somos un blog especializado en productos industriales con reseñas detalladas 
                         y comparativas profesionales. Nos enfocamos en equipos de protección personal (EPP) 
                         y herramientas industriales de alta calidad.
                       </p>
@@ -156,7 +156,7 @@ export default function FAQPage() {
                       <h3 className="font-semibold text-gray-900">¿Puedo ver mi historial de pedidos?</h3>
                       <p className="text-gray-600">
                         Los pedidos se realizan directamente en Amazon, por lo que el historial 
-                        está disponible en tu cuenta de Amazon. En LinkerPro puedes ver tu 
+                        está disponible en tu cuenta de Amazon. En LinkerStore puedes ver tu 
                         historial de productos vistos y favoritos.
                       </p>
                     </div>

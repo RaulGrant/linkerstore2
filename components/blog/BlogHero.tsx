@@ -144,7 +144,7 @@ export default function BlogHero({ title, subtitle, ctaText }: BlogHeroProps) {
           >
             <div className="flex items-center gap-2 text-blue-100">
               <span className="text-xl">📚</span>
-              <span className="text-lg font-semibold">15+ Artículos</span>
+              <span className="text-lg font-semibold">30+ Artículos</span>
             </div>
             <div className="flex items-center gap-2 text-blue-100">
               <span className="text-xl">🎯</span>

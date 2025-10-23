@@ -151,7 +151,7 @@ export default function ServiciosPage() {
       name: 'Carlos Ruiz',
       position: 'Director de RRHH',
       company: 'MetalCorp Industrias',
-      text: 'La auditoría de LinkerPro nos ayudó a identificar 15 puntos de mejora críticos. Su enfoque profesional y conocimiento técnico son excepcionales.',
+      text: 'La auditoría de LinkerStore nos ayudó a identificar 15 puntos de mejora críticos. Su enfoque profesional y conocimiento técnico son excepcionales.',
       rating: 5
     },
     {
@@ -434,13 +434,13 @@ export default function ServiciosPage() {
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
               <a href="tel:+34900123456" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                Llamar Ahora: +34 900 123 456
+                Llamar Ahora: +52 246 793 4968
               </a>
             </Button>
           </div>
 
           <div className="text-sm text-blue-200">
-            📧 info@linkerpro.com | 🕒 Lunes a Viernes, 9:00 - 18:00 CET
+            📧 linkerpro.notifications@gmail.com | 🕒 Lunes a Viernes, 9:00 - 18:00 GMT-6
           </div>
         </motion.section>
 
@@ -458,7 +458,7 @@ export default function ServiciosPage() {
                 <div>
                   <h3 className="font-semibold text-yellow-800 mb-2">Estado de los Servicios</h3>
                   <p className="text-yellow-700 text-sm">
-                    Los servicios de consultoría están siendo preparados como parte del lanzamiento completo de LinkerPro. 
+                    Los servicios de consultoría están siendo preparados como parte del lanzamiento completo de LinkerStore. 
                     Actualmente puedes contactar con nuestro equipo para consultas informales y orientación gratuita 
                     sobre seguridad industrial.
                   </p>

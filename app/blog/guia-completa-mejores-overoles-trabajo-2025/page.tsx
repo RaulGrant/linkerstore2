@@ -812,7 +812,6 @@ export default function OverolesTrabajoArticle() {
                       className="mb-4 sm:mb-6 md:mb-8"
                     >
                       <ProductComparison 
-                        title="Comparativa detallada de overoles 2025"
                         products={comparisonProducts}
                         features={comparisonFeatures}
                       />

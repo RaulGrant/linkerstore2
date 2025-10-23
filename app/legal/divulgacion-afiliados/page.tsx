@@ -47,7 +47,7 @@ export default function DivulgacionAfiliados() {
                   Declaración de Afiliación
                 </h2>
                 <p className="text-orange-800 text-lg">
-                  <strong>LinkerPro participa en programas de afiliación de Amazon Associates y Mercado Libre Afiliados que nos permiten ganar comisiones por las compras realizadas a través de nuestros enlaces.</strong> Esta página explica cómo funcionan estas relaciones y cómo nos comprometemos a mantener la transparencia y objetividad en nuestras recomendaciones.
+                  <strong>LinkerStore participa en programas de afiliación de Amazon Associates y Mercado Libre Afiliados que nos permiten ganar comisiones por las compras realizadas a través de nuestros enlaces.</strong> Esta página explica cómo funcionan estas relaciones y cómo nos comprometemos a mantener la transparencia y objetividad en nuestras recomendaciones.
                 </p>
               </div>
 
@@ -60,7 +60,7 @@ export default function DivulgacionAfiliados() {
                   Amazon Associates Program
                 </h3>
                 <p className="text-blue-800 mb-3">
-                  LinkerPro es participante del Programa de Afiliados de Amazon Services LLC, un programa de publicidad de afiliados diseñado para proporcionar un medio para que los sitios ganen tarifas de publicidad mediante la publicidad y los enlaces a:
+                  LinkerStore es participante del Programa de Afiliados de Amazon Services LLC, un programa de publicidad de afiliados diseñado para proporcionar un medio para que los sitios ganen tarifas de publicidad mediante la publicidad y los enlaces a:
                 </p>
                 <ul className="list-disc list-inside text-blue-800 space-y-1">
                   <li>Amazon.com (Estados Unidos)</li>
@@ -77,7 +77,7 @@ export default function DivulgacionAfiliados() {
                   Mercado Libre Afiliados
                 </h3>
                 <p className="text-yellow-800 mb-3">
-                  LinkerPro también participa en el Programa de Afiliados de Mercado Libre, la plataforma de e-commerce líder en América Latina. Esto nos permite ofrecer alternativas locales y facilitar el acceso a productos de seguridad industrial en:
+                  LinkerStore también participa en el Programa de Afiliados de Mercado Libre, la plataforma de e-commerce líder en América Latina. Esto nos permite ofrecer alternativas locales y facilitar el acceso a productos de seguridad industrial en:
                 </p>
                 <ul className="list-disc list-inside text-yellow-800 space-y-1">
                   <li>MercadoLibre.com.mx (México)</li>
@@ -108,14 +108,14 @@ export default function DivulgacionAfiliados() {
                 <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
                   <h3 className="font-semibold text-purple-900 mb-3 flex items-center gap-2">
                     <Shield className="h-5 w-5" />
-                    Para LinkerPro
+                    Para LinkerStore
                   </h3>
                   <ul className="text-purple-800 space-y-2 text-sm">
                     <li>📈 <strong>Amazon:</strong> Comisión 1-10% según categoría</li>
                     <li>🛒 <strong>Mercado Libre:</strong> Comisión 1-8% según categoría</li>
                     <li>⏰ <strong>Plazo de cookie:</strong> 24h Amazon, 30 días Mercado Libre</li>
                     <li>🎯 <strong>Solo productos enlazados:</strong> Productos que recomendamos</li>
-                    <li>💰 <strong>Financiación del sitio:</strong> Mantiene LinkerPro gratuito</li>
+                    <li>💰 <strong>Financiación del sitio:</strong> Mantiene LinkerStore gratuito</li>
                   </ul>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function DivulgacionAfiliados() {
                   Las comisiones de afiliación nos permiten:
                 </p>
                 <ul className="list-disc list-inside text-blue-800 space-y-1">
-                  <li>Mantener LinkerPro completamente gratuito para los usuarios</li>
+                  <li>Mantener LinkerStore completamente gratuito para los usuarios</li>
                   <li>Financiar investigación independiente de productos</li>
                   <li>Crear contenido de alta calidad sin publicidad intrusiva</li>
                   <li>Mantener un equipo de expertos en seguridad industrial</li>
@@ -217,7 +217,7 @@ export default function DivulgacionAfiliados() {
               <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg">
                 <p className="mb-3">Si tiene preguntas sobre nuestras relaciones de afiliación o desea más información sobre un producto específico:</p>
                 <div className="space-y-2">
-                  <p><strong>Email:</strong> afiliados@linkerpro.com</p>
+                  <p><strong>Email:</strong> linkerpro.notifications@gmail.com</p>
                   <p><strong>Respuesta:</strong> Dentro de 48 horas</p>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function DivulgacionAfiliados() {
               <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mt-8">
                 <h3 className="font-semibold text-green-900 mb-2">Agradecimiento</h3>
                 <p className="text-green-800">
-                  Gracias por su confianza y por apoyar a LinkerPro a través de sus compras. Su apoyo nos permite continuar proporcionando contenido gratuito y de alta calidad sobre seguridad industrial.
+                  Gracias por su confianza y por apoyar a LinkerStore a través de sus compras. Su apoyo nos permite continuar proporcionando contenido gratuito y de alta calidad sobre seguridad industrial.
                 </p>
               </div>
             </motion.div>

@@ -3,7 +3,7 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Divulgación de Afiliados | LinkerPro',
+  title: 'Divulgación de Afiliados | LinkerStore',
   description: 'Información sobre nuestro programa de afiliados de Amazon y cómo funcionan nuestras comisiones.',
 };
 
@@ -20,7 +20,7 @@ export default function DivulgacionAfiliadosPage() {
               <div>
                 <h2 className="text-xl font-bold text-blue-900 mb-2">Transparencia Total</h2>
                 <p className="text-blue-800">
-                  En LinkerPro creemos en la transparencia total. Esta página explica 
+                  En LinkerStore creemos en la transparencia total. Esta página explica 
                   cómo funcionan nuestros enlaces de afiliados y cómo esto nos ayuda 
                   a mantener nuestro contenido gratuito y de calidad.
                 </p>
@@ -35,7 +35,7 @@ export default function DivulgacionAfiliadosPage() {
               <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">Amazon Associates</h3>
                 <p className="text-blue-800 mb-2">
-                  LinkerPro es un participante del Programa de Afiliados de Amazon Services LLC, 
+                  LinkerStore es un participante del Programa de Afiliados de Amazon Services LLC, 
                   un programa de publicidad de afiliados diseñado para proporcionar un medio 
                   para que los sitios web ganen tarifas de publicidad mediante publicidad 
                   y enlaces a Amazon.com, Amazon.com.mx y Amazon.es.
@@ -140,7 +140,7 @@ export default function DivulgacionAfiliadosPage() {
                 Si tienes preguntas sobre nuestro programa de afiliados, puedes contactarnos:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Email: afiliados@linkerpro.com</li>
+                <li>Email: linkerpro.notifications@gmail.com</li>
                 <li>Página de contacto: <a href="/sobre-nosotros" className="text-blue-600 hover:underline">Sobre Nosotros</a></li>
               </ul>
             </section>

@@ -53,9 +53,9 @@ export default function BlogFooter() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">LP</span>
+                <span className="text-white font-bold text-sm">LS</span>
               </div>
-              <span className="text-xl font-bold">LinkerPro</span>
+              <span className="text-xl font-bold">LinkerStore</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Tu fuente confiable de información sobre seguridad industrial y equipos de protección personal. 
@@ -88,11 +88,11 @@ export default function BlogFooter() {
               <div className="space-y-1">
                 <div className="flex items-center gap-2 text-xs text-gray-400">
                   <Mail className="h-3 w-3" />
-                  <span>info@linkerpro.com</span>
+                  <span>linkerpro.notifications@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-gray-400">
                   <Phone className="h-3 w-3" />
-                  <span>+34 900 123 456</span>
+                  <span>+52 246 793 4968</span>
                 </div>
               </div>
             </div>
@@ -118,14 +118,14 @@ export default function BlogFooter() {
             
             {/* Estadísticas rápidas */}
             <div className="mt-6 pt-4 border-t border-gray-700">
-              <h4 className="text-sm font-medium text-gray-200 mb-3">En LinkerPro</h4>
+              <h4 className="text-sm font-medium text-gray-200 mb-3">En LinkerStore</h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="text-center">
-                  <div className="text-lg font-bold text-blue-400">50+</div>
+                  <div className="text-lg font-bold text-blue-400">30+</div>
                   <div className="text-xs text-gray-400">Artículos</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-green-400">15+</div>
+                  <div className="text-lg font-bold text-green-400">10+</div>
                   <div className="text-xs text-gray-400">Guías</div>
                 </div>
               </div>
@@ -176,14 +176,14 @@ export default function BlogFooter() {
         {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-gray-400">
-            © 2025 LinkerPro. Todos los derechos reservados. 
+            © 2025 LinkerStore. Todos los derechos reservados. 
             <span className="block md:inline md:ml-2">
               Información verificada por expertos certificados en seguridad industrial.
             </span>
           </div>
           <div className="flex items-center space-x-4">
             <div className="text-xs text-gray-500">
-              Contenido actualizado: Agosto 2025
+              Contenido actualizado: Octubre 2025
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default function BlogFooter() {
         {/* Disclaimer sobre afiliados */}
         <div className="mt-6 p-4 bg-gray-800 rounded-lg">
           <p className="text-xs text-gray-400 text-center">
-            <strong>Divulgación:</strong> LinkerPro participa en los programas de afiliados de Amazon Associates y Mercado Libre Afiliados. 
+            <strong>Divulgación:</strong> LinkerStore participa en los programas de afiliados de Amazon Associates y Mercado Libre Afiliados. 
             Podemos recibir comisiones por compras realizadas a través de nuestros enlaces, sin costo adicional para ti. 
             Esto nos ayuda a mantener nuestro contenido gratuito y de calidad.
           </p>

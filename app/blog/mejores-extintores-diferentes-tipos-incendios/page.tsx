@@ -358,7 +358,7 @@ export default function ExtintoresArticle() {
   // Artículos relacionados
   const relatedArticles = [
     {
-      id: 'article-1',
+      id: 1,
       title: 'Guía Definitiva de EPP',
       excerpt: 'Todo sobre Equipos de Protección Personal para tu seguridad',
       category: 'Seguridad',
@@ -367,7 +367,7 @@ export default function ExtintoresArticle() {
       slug: 'guia-completa-epp-seguridad-industrial'
     },
     {
-      id: 'article-2',
+      id: 2,
       title: 'Protección Auditiva: Tapones vs Orejeras',
       excerpt: 'Análisis completo con ciencia y matriz de decisión',
       category: 'EPP',
@@ -376,7 +376,7 @@ export default function ExtintoresArticle() {
       slug: 'proteccion-auditiva-trabajo-tapones-vs-orejeras'
     },
     {
-      id: 'article-3',
+      id: 3,
       title: 'NOM-009-STPS: Trabajos en Altura',
       excerpt: '7 puntos clave para supervisores de seguridad',
       category: 'Normatividad',

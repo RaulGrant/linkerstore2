@@ -157,11 +157,11 @@ export default function TerminosCondiciones() {
                 <div className="space-y-2 text-blue-800">
                   <p className="flex items-center gap-2">
                     <Mail className="h-4 w-4" />
-                    <strong>Email:</strong> legal.linkerstore@gmail.com
+                    <strong>Email:</strong> linkerpro.notifications@gmail.com
                   </p>
                   <p className="flex items-center gap-2">
                     <Globe className="h-4 w-4" />
-                    <strong>Sitio web:</strong> www.linkerstore.com
+                    <strong>Sitio web:</strong> www.linkerstore.com.mx
                   </p>
                 </div>
               </div>

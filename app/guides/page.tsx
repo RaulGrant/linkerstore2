@@ -45,7 +45,7 @@ export default function GuidesPage() {
               <span className="text-white font-bold text-sm">LP</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              LinkerPro
+              LinkerStore
             </span>
           </Link>
 

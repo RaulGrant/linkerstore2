@@ -29,7 +29,7 @@ export default function PoliticaCookies() {
                 Política de Cookies
               </h1>
               <p className="text-xl text-blue-100 mb-8">
-                Información sobre el uso de cookies y tecnologías similares en LinkerPro
+                Información sobre el uso de cookies y tecnologías similares en LinkerStore
               </p>
             </motion.div>
           </div>
@@ -236,7 +236,7 @@ export default function PoliticaCookies() {
                 <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg">
                   <p className="mb-3">Para preguntas sobre nuestra Política de Cookies:</p>
                   <div className="space-y-2">
-                    <p><strong>Email:</strong> cookies@linkerpro.com</p>
+                    <p><strong>Email:</strong> linkerpro.notifications@gmail.com</p>
                     <p><strong>Asunto:</strong> "Consulta sobre Cookies"</p>
                   </div>
                 </div>

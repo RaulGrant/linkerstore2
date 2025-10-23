@@ -64,25 +64,13 @@ export default function ContactoPage() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'info@linkerpro.com',
+      value: 'linkerpro.notifications@gmail.com',
       description: 'Respuesta en menos de 24 horas'
-    },
-    {
-      icon: Phone,
-      title: 'Teléfono',
-      value: '+34 900 123 456',
-      description: 'Lunes a Viernes, 9:00 - 18:00'
-    },
-    {
-      icon: MapPin,
-      title: 'Oficina Central',
-      value: 'Madrid, España',
-      description: 'Cita previa requerida'
     },
     {
       icon: Clock,
       title: 'Horario de Atención',
-      value: '9:00 - 18:00 CET',
+      value: '9:00 - 18:00 GMT-6',
       description: 'Lunes a Viernes'
     }
   ];

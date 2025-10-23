@@ -65,9 +65,7 @@ export default function MonitoresGasesArticle() {
           borderColor: '#ffffff',
           borderWidth: 3
         }]
-      },
-      mechanism: null,
-      examples: [],
+      }
     },
     lel: {
       id: 'lel',
@@ -87,7 +85,6 @@ export default function MonitoresGasesArticle() {
         { gas: 'Propano (C₃H₈)', lel: '2.1% vol', use: 'Gas LP' },
         { gas: 'Gasolina', lel: '1.4% vol', use: 'Combustible' }
       ],
-      effects: [],
       chartData: {
         labels: ['0-10% LEL (Seguro)', '10-25% LEL (Alarma)', '25-100% LEL (Peligro)', '>100% LEL (Explosivo)'],
         datasets: [{
@@ -96,8 +93,7 @@ export default function MonitoresGasesArticle() {
           backgroundColor: ['#22c55e', '#f97316', '#ef4444', '#7f1d1d'],
           borderWidth: 0
         }]
-      },
-      mechanism: null
+      }
     },
     co: {
       id: 'co',
@@ -118,10 +114,7 @@ export default function MonitoresGasesArticle() {
         description: 'Se adhiere a la hemoglobina de la sangre 220 veces más fácilmente que el oxígeno, formando carboxihemoglobina (COHb) e impidiendo el transporte de oxígeno.',
         symptoms: ['Dolor de cabeza', 'Náuseas', 'Mareos', 'Confusión', 'Pérdida de conciencia']
       },
-      effects: [],
-    sources: ['Motores de combustión', 'Calderas y hornos', 'Carretillas elevadoras', 'Generadores', 'Calentadores'],
-      examples: [],
-      chartData: null
+      sources: ['Motores de combustión', 'Calderas y hornos', 'Carretillas elevadoras', 'Generadores', 'Calentadores']
     },
     h2s: {
       id: 'h2s',
@@ -142,10 +135,7 @@ export default function MonitoresGasesArticle() {
         description: 'A concentraciones superiores a 100-150 ppm, el H₂S paraliza el nervio olfativo, eliminando la capacidad de olerlo. El trabajador cree que el peligro ha pasado cuando en realidad está en niveles letales.',
         symptoms: ['Irritación ocular', 'Irritación respiratoria', 'Colapso súbito ("knockdown")', 'Parálisis respiratoria', 'Convulsiones']
       },
-      effects: [],
-    sources: ['Industria petrolera ("gas agrio")', 'Plantas de pulpa y papel', 'Alcantarillado', 'Tratamiento de aguas residuales', 'Fosas de estiércol'],
-      examples: [],
-      chartData: null
+      sources: ['Industria petrolera ("gas agrio")', 'Plantas de pulpa y papel', 'Alcantarillado', 'Tratamiento de aguas residuales', 'Fosas de estiércol']
     }
   };
 

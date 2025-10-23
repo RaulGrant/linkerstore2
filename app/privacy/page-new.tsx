@@ -15,9 +15,9 @@ export default function PrivacyPolicyPage() {
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">LP</span>
+              <span className="text-white font-bold text-sm">LS</span>
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">LinkerPro</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">LinkerStore</span>
           </Link>
         </div>
       </header>
@@ -218,8 +218,7 @@ export default function PrivacyPolicyPage() {
                     Si tienes preguntas sobre esta política de privacidad o nuestras prácticas de datos, puedes contactarnos:
                   </p>
                   <div className="space-y-2 text-gray-700">
-                    <p><strong>Email:</strong> privacidad@linkerstore.com</p>
-                    <p><strong>Dirección:</strong> Ciudad de México, México</p>
+                    <p><strong>Email:</strong> linkerpro.notifications@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>

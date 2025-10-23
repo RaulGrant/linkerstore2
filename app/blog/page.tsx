@@ -189,7 +189,7 @@ export default function BlogPage() {
     <BlogLayout>
       {/* Hero Section */}
       <BlogHero 
-        title="Blog LinkerPro"
+        title="Blog LinkerStore"
         subtitle="Encuentra lo que necesitas fácil y rápido"
         ctaText="Explorar Artículos"
       />

@@ -51,15 +51,15 @@ export default function PoliticaPrivacidad() {
                   Responsable del Sitio Web
                 </h2>
                 <div className="text-blue-800">
-                  <p><strong>LinkerPro</strong></p>
-                  <p className="flex items-center gap-2"><Globe className="h-4 w-4" /> www.linkerpro.com</p>
+                  <p><strong>LinkerStore</strong></p>
+                  <p className="flex items-center gap-2"><Globe className="h-4 w-4" /> www.linkerstore.com.mx</p>
                   <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> linkerpro.notifications@gmail.com</p>
                 </div>
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Nuestro Compromiso Principal</h2>
               <p className="mb-6 text-xl">
-                En LinkerPro, tu privacidad es fundamental. Nuestra política es simple: <strong>No recopilamos, no almacenamos y no compartimos tus datos personales.</strong> No necesitas registrarte y tu visita es completamente anónima.
+                En LinkerStore, tu privacidad es fundamental. Nuestra política es simple: <strong>No recopilamos, no almacenamos y no compartimos tus datos personales.</strong> No necesitas registrarte y tu visita es completamente anónima.
               </p>
 
               <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
@@ -80,7 +80,7 @@ export default function PoliticaPrivacidad() {
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Cookies</h2>
               <p className="mb-6">
-                LinkerPro <strong>no utiliza cookies de seguimiento, publicitarias ni analíticas</strong>. Es posible que se usen cookies técnicas esenciales, completamente anónimas, solo para asegurar el funcionamiento básico del sitio, pero estas no almacenan ninguna información personal.
+                LinkerStore <strong> utiliza cookies de seguimiento por parte de meta y de google analitycs con el fin de mejorar las analíticas del sitio web </strong>. Estas cookies son completamente anónimas y no almacenan información personal.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Programas de Afiliados y Enlaces a Terceros</h2>
@@ -90,7 +90,7 @@ export default function PoliticaPrivacidad() {
                     Importante sobre Enlaces Externos
                 </h3>
                 <p className="text-orange-800 mb-3">
-                    LinkerPro participa en los programas de afiliados de <strong>Amazon Associates</strong> y <strong>Mercado Libre Afiliados</strong>. Cuando haces clic en un enlace de afiliado, eres redirigido al sitio web correspondiente:
+                    LinkerStore participa en los programas de afiliados de <strong>Amazon Associates</strong> y <strong>Mercado Libre Afiliados</strong>. Cuando haces clic en un enlace de afiliado, eres redirigido al sitio web correspondiente:
                 </p>
                 <ul className="list-disc list-inside text-orange-800 space-y-2 mb-3">
                   <li><strong>Amazon:</strong> amazon.com, amazon.com.mx, amazon.es y otros sitios de Amazon</li>
@@ -103,7 +103,7 @@ export default function PoliticaPrivacidad() {
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Tus Derechos (Derechos ARCO)</h2>
               <p className="mb-6">
-                La legislación mexicana te otorga derechos sobre tus datos (Acceso, Rectificación, Cancelación y Oposición). En LinkerPro, garantizamos estos derechos de la forma más efectiva: <strong>al no recopilar ningún dato personal, no existe información que acceder, rectificar o cancelar.</strong>
+                La legislación mexicana te otorga derechos sobre tus datos (Acceso, Rectificación, Cancelación y Oposición). En LinkerStore, garantizamos estos derechos de la forma más efectiva: <strong>al no recopilar ningún dato personal, no existe información que acceder, rectificar o cancelar.</strong>
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Cambios a esta Política</h2>
