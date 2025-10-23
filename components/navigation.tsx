@@ -26,8 +26,6 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { trackInteraction } from '@/lib/meta-pixel';
-import { NavLinkTracker } from '@/components/analytics/ClickTracker';
-import { trackClick } from '@/lib/analytics/ga4';
 
 interface NavigationProps {
   user?: {
@@ -48,11 +46,6 @@ export default function Navigation({ user }: NavigationProps) {
   // Function to track navigation clicks
   const handleNavClick = (linkName: string, linkPath: string) => {
     trackInteraction('nav_click', linkName, `navigation_to_${linkPath}`);
-    trackClick(linkName, 'navigation', {
-      category: 'navigation',
-      destination: linkPath,
-      link_text: linkName,
-    });
   };
   const isFreelancer = user?.role === 'freelancer';
 
@@ -110,9 +103,9 @@ export default function Navigation({ user }: NavigationProps) {
             onClick={() => handleNavClick('logo', '/')}
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
-              <span className="text-sm font-bold text-white">LP</span>
+              <span className="text-sm font-bold text-white">LS</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">LinkerPro</span>
+            <span className="text-xl font-bold text-gray-900">LinkerStore</span>
           </Link>
 
           {/* Desktop Navigation */}

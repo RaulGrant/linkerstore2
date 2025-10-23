@@ -50,9 +50,11 @@ export default function GuidesPage() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6">
+            {/*
             <Link href="/store" className="text-gray-600 hover:text-blue-600 transition-colors">
               Tienda Industrial
             </Link>
+            */}
             <Link href="/guides" className="text-blue-600 font-medium">
               Guías de Compra
             </Link>
@@ -400,12 +402,14 @@ export default function GuidesPage() {
             <p className="text-xl mb-8 opacity-90">
               Explora nuestra tienda con productos cuidadosamente seleccionados y reseñados
             </p>
+            {/*
             <Link href="/store">
               <Button size="lg" variant="secondary" className="text-blue-600">
                 Ver Tienda Industrial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+            */}
           </div>
         </section>
       </main>

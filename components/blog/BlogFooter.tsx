@@ -4,13 +4,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Mail, 
-  Phone, 
-  MapPin,
+import {
+  FileText,
+  Shield,
+  Users,
+  Mail,
+  Phone,
   ExternalLink,
   ChevronRight
 } from 'lucide-react';
@@ -18,7 +17,7 @@ import {
 export default function BlogFooter() {
   const router = useRouter();
 
-  const handleNavigation = (href: string, name: string) => {
+  const handleNavigation = (href: string) => {
     router.push(href);
   };
 
@@ -71,14 +70,14 @@ export default function BlogFooter() {
               Accesos Rápidos
             </h3>
             <div className="space-y-3">
-              {quickLinks.map((link) => (
+              {quickLinks.map(({ name, href, icon: Icon }) => (
                 <div
-                  key={link.name}
-                  onClick={() => handleNavigation(link.href, link.name)}
+                  key={name}
+                  onClick={() => handleNavigation(href)}
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors group cursor-pointer"
                 >
-                  <link.icon className="h-4 w-4 text-blue-400 group-hover:text-blue-300" />
-                  <span className="text-sm">{link.name}</span>
+                  <Icon className="h-4 w-4 text-blue-400 group-hover:text-blue-300" />
+                  <span className="text-sm">{name}</span>
                 </div>
               ))}
             </div>
@@ -109,7 +108,7 @@ export default function BlogFooter() {
               {categories.map((category) => (
                 <div
                   key={category.name}
-                  onClick={() => handleNavigation(category.href, category.name)}
+                  onClick={() => handleNavigation(category.href)}
                   className="block text-gray-300 hover:text-white text-sm transition-colors hover:pl-2 duration-200 cursor-pointer"
                 >
                   {category.name}
@@ -143,7 +142,7 @@ export default function BlogFooter() {
               {legalPages.map((page) => (
                 <div
                   key={page.name}
-                  onClick={() => handleNavigation(page.href, page.name)}
+                  onClick={() => handleNavigation(page.href)}
                   className="block text-gray-300 hover:text-white text-sm transition-colors hover:pl-2 duration-200 cursor-pointer"
                 >
                   {page.name}
@@ -161,7 +160,7 @@ export default function BlogFooter() {
                 size="sm" 
                 variant="secondary" 
                 className="w-full bg-white text-blue-600 hover:bg-gray-100 cursor-pointer"
-                onClick={() => handleNavigation('/sobre-nosotros', 'Contactar Expertos')}
+                onClick={() => handleNavigation('/sobre-nosotros')}
               >
                 <div className="flex items-center justify-center gap-1">
                   <span>Contactar Expertos</span>

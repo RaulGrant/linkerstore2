@@ -642,6 +642,7 @@ export function ProductQuickViewModal({ product, isOpen, onClose, onAddToCart }:
               </div>
               
               <div className="flex gap-2">
+                {/*
                 <Button 
                   variant="outline" 
                   className="flex-1"
@@ -649,6 +650,7 @@ export function ProductQuickViewModal({ product, isOpen, onClose, onAddToCart }:
                 >
                   Ver página completa
                 </Button>
+                */}
                 <Button 
                   variant="outline" 
                   className="flex-1"

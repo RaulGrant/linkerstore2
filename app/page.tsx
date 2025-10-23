@@ -6,12 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { trackEvent, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
-import { usePageAnalytics } from '@/hooks/usePageAnalytics';
-import { CTATracker, NavLinkTracker } from '@/components/analytics/ClickTracker';
-import { trackEvent as trackGA4Event } from '@/lib/analytics/ga4';
 
 interface CountdownProps {
   targetDate: Date;
@@ -140,20 +136,11 @@ function CountdownTimer({ targetDate }: CountdownProps) {
 }
 
 export default function HomePage() {
-  const router = useRouter();
   
   // Enable scroll and time tracking for homepage
   useScrollTracking({ 
     pageTitle: 'LinkerStore Homepage',
     trackTimeOnPage: true 
-  });
-
-  // Enhanced analytics tracking for homepage
-  const { timeSpent } = usePageAnalytics('/', {
-    trackTimeOnPage: true,
-    trackScrollDepth: true,
-    scrollThresholds: [25, 50, 75, 100],
-    heartbeatInterval: 15,
   });
 
   // Track homepage view on component mount
@@ -170,12 +157,6 @@ export default function HomePage() {
   // Function to track button clicks
   const handleCTAClick = (ctaName: string) => {
     trackInteraction('button_click', ctaName, 'homepage');
-    trackGA4Event('cta_click', {
-      category: 'conversion',
-      cta_name: ctaName,
-      page_location: '/',
-      time_on_page: timeSpent,
-    });
   };
 
   // Fecha objetivo: 3 meses desde ahora (1 de noviembre, 2025)
@@ -314,46 +295,34 @@ export default function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <CTATracker
-                  category="cta"
-                  label="Explora Nuestro Blog de Seguridad"
-                  location="homepage"
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => handleCTAClick('blog_cta')}
                 >
-                  <Button 
-                    asChild 
-                    size="lg" 
-                    className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    <Link href="/blog" className="flex items-center gap-2">
-                      <ShoppingBag className="w-5 h-5" />
-                      Explora Nuestro Blog de Seguridad
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </Button>
-                </CTATracker>
+                  <Link href="/blog" className="flex items-center gap-2">
+                    <ShoppingBag className="w-5 h-5" />
+                    Explora Nuestro Blog de Seguridad
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <NavLinkTracker
-                  category="navigation"
-                  label="Ver Guías de Seguridad"
-                  location="homepage"
+                <Button 
+                  asChild 
+                  variant="secondary" 
+                  size="lg" 
+                  className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
                 >
-                  <Button 
-                    asChild 
-                    variant="secondary" 
-                    size="lg" 
-                    className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
-                  >
-                    <Link href="/guias" className="flex items-center gap-2">
-                      <Target className="w-5 h-5" />
-                      Ver Guías de Seguridad
-                    </Link>
-                  </Button>
-                </NavLinkTracker>
+                  <Link href="/guias" className="flex items-center gap-2">
+                    <Target className="w-5 h-5" />
+                    Ver Guías de Seguridad
+                  </Link>
+                </Button>
               </motion.div>
             </motion.div>
 
@@ -411,112 +380,107 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Hero Section LinkerStore (TEMPORALMENTE OCULTO) */}
-      {/*
-      <motion.section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <motion.div
-            initial={{ y: 100, opacity: 0, scale: 0.8 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.div 
-              className="relative inline-block mb-8"
-              whileHover={{ scale: 1.2 }}
-              animate={{ 
-                rotate: [0, 5, -5, 0],
-                y: [0, -10, 0]
-              }}
-              transition={{ 
-                rotate: { duration: 4, repeat: Infinity, type: "tween" },
-                y: { duration: 2, repeat: Infinity, type: "tween" }
-              }}
+      {/* Hero Section LinkerStore (temporalmente oculto) */}
+      {false && (
+        <motion.section 
+          className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <div className="container mx-auto px-6 text-center relative z-10">
+            <motion.div
+              initial={{ y: 100, opacity: 0, scale: 0.8 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="max-w-4xl mx-auto"
             >
-              <motion.div
-                className="text-8xl relative z-10"
-                animate={{
-                  filter: [
-                    'drop-shadow(0 0 20px rgba(59, 130, 246, 0.8))',
-                    'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
-                    'drop-shadow(0 0 20px rgba(219, 39, 119, 0.8))',
-                    'drop-shadow(0 0 30px rgba(59, 130, 246, 0.8))'
-                  ]
+              <motion.div 
+                className="relative inline-block mb-8"
+                whileHover={{ scale: 1.2 }}
+                animate={{ 
+                  rotate: [0, 5, -5, 0],
+                  y: [0, -10, 0]
                 }}
-                transition={{ duration: 3, repeat: Infinity, type: "tween" }}
+                transition={{ 
+                  rotate: { duration: 4, repeat: Infinity, type: "tween" },
+                  y: { duration: 2, repeat: Infinity, type: "tween" }
+                }}
               >
-                🏭
+                <motion.div
+                  className="text-8xl relative z-10"
+                  animate={{
+                    filter: [
+                      'drop-shadow(0 0 20px rgba(59, 130, 246, 0.8))',
+                      'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
+                      'drop-shadow(0 0 20px rgba(219, 39, 119, 0.8))',
+                      'drop-shadow(0 0 30px rgba(59, 130, 246, 0.8))'
+                    ]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, type: "tween" }}
+                >
+                  🏭
+                </motion.div>
+              </motion.div>
+
+              <motion.h1 
+                className="text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  textShadow: '0 0 30px rgba(147, 51, 234, 0.8)'
+                }}
+              >
+                LinkerStore
+              </motion.h1>
+
+              <motion.p 
+                className="text-xl lg:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed"
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.6 }}
+              >
+                La plataforma más avanzada para equipos industriales y de protección personal. 
+                Calidad premium, precios competitivos y entregas confiables.
+              </motion.p>
+
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <div className="bg-white/10 border border-white/20 text-blue-100 px-6 py-4 rounded-full backdrop-blur-sm">
+                    Catálogo disponible próximamente.
+                  </div>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button 
+                    asChild
+                    variant="outline" 
+                    size="lg"
+                    className="border-2 border-purple-400 bg-purple-400 text-purple-900 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg font-bold"
+                  >
+                    <Link href="/guides" className="flex items-center gap-2">
+                      <Target className="mr-2 h-5 w-5" />
+                      Ver Guías
+                    </Link>
+                  </Button>
+                </motion.div>
               </motion.div>
             </motion.div>
-
-            <motion.h1 
-              className="text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              whileHover={{ 
-                scale: 1.05,
-                textShadow: '0 0 30px rgba(147, 51, 234, 0.8)'
-              }}
-            >
-              LinkerStore
-            </motion.h1>
-
-            <motion.p 
-              className="text-xl lg:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-            >
-              La plataforma más avanzada para equipos industriales y de protección personal. 
-              Calidad premium, precios competitivos y entregas confiables.
-            </motion.p>
-
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold shadow-xl"
-                  onClick={() => router.push('/store')}
-                >
-                  <ShoppingBag className="mr-2 h-5 w-5" />
-                  Explorar Productos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </motion.div>
-              
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-purple-400 bg-purple-400 text-purple-900 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg font-bold"
-                  onClick={() => router.push('/guides')}
-                >
-                  <Target className="mr-2 h-5 w-5" />
-                  Ver Guías
-                </Button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.section>
-      */}
+          </div>
+        </motion.section>
+      )}
 
       {/* Simple Categories Section */}
       <motion.section 
@@ -673,7 +637,7 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
+              <Button asChild size="lg" variant="outline" className="border-white text-blue-900 hover:bg-white hover:text-blue-900">
                 <Link href="/guias" className="flex items-center gap-2">
                   <Target className="w-5 h-5" />
                   Ver Guías

@@ -250,7 +250,7 @@ export default function RotomartilloTaladroArticle() {
   // Artículos relacionados
   const relatedArticles = [
     {
-      id: 1,
+      id: 'article-1',
       title: 'Top 7 Kits de Herramientas 2025',
       excerpt: 'La guía definitiva para elegir el kit perfecto según tu profesión',
       category: 'Herramientas',
@@ -259,7 +259,7 @@ export default function RotomartilloTaladroArticle() {
       slug: 'top-7-kits-herramientas-2025'
     },
     {
-      id: 2,
+      id: 'article-2',
       title: 'Los 5 Errores que Destruyen tus Herramientas Eléctricas',
       excerpt: 'Guía de mantenimiento para ahorrar miles de pesos',
       category: 'Mantenimiento',
@@ -268,7 +268,7 @@ export default function RotomartilloTaladroArticle() {
       slug: 'ahorra-mantenimiento-herramientas-electricas'
     },
     {
-      id: 3,
+      id: 'article-3',
       title: 'Guía Definitiva de Extintores',
       excerpt: 'Matriz interactiva para elegir el extintor correcto en cada tipo de fuego',
       category: 'Seguridad',

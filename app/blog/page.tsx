@@ -1,5 +1,3 @@
-'use client';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -8,11 +6,12 @@ import ArticleCard from '@/components/blog/ArticleCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { TrendingUp, Clock, Calendar } from 'lucide-react';
-import { usePageAnalytics } from '@/hooks/usePageAnalytics';
-import { CTATracker, ContentLinkTracker } from '@/components/analytics/ClickTracker';
-import { trackEvent } from '@/lib/analytics/ga4';
 
-// Se movió metadata al layout por ser una página client component
+export const metadata: Metadata = {
+  title: 'Blog de Seguridad Industrial | LinkerPro',
+  description: 'Guías completas, reseñas de productos y consejos de expertos en seguridad industrial y equipos de protección personal.',
+  keywords: 'seguridad industrial, EPP, equipos protección personal, guías seguridad, reseñas productos',
+};
 
 // Datos de los 15 artículos del plan maestro con fechas desde el 8 de agosto
 const featuredArticles = [
@@ -186,30 +185,6 @@ const categories = [
 ];
 
 export default function BlogPage() {
-  // Inicializar analytics para la página del blog
-  const { timeSpent } = usePageAnalytics('/blog', {
-    trackTimeOnPage: true,
-    trackScrollDepth: true,
-  });
-
-  // Función para manejar clics en filtros de categorías
-  const handleCategoryFilter = (categoryName: string) => {
-    trackEvent('category_filter', {
-      category: 'blog_interaction',
-      filter_name: categoryName,
-      page_location: '/blog',
-    });
-  };
-
-  // Función para manejar clic en "cargar más"
-  const handleLoadMore = () => {
-    trackEvent('load_more_articles', {
-      category: 'content_interaction',
-      page_location: '/blog',
-      articles_loaded: featuredArticles.length,
-    });
-  };
-
   return (
     <BlogLayout>
       {/* Hero Section */}
@@ -267,25 +242,17 @@ export default function BlogPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Explora por Categorías</h2>
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
-              <ContentLinkTracker
+              <Badge
                 key={category.name}
-                eventName="category_filter_click"
-                category="content"
-                label={category.name}
-                location="/blog"
-                onClick={() => handleCategoryFilter(category.name)}
+                variant={category.active ? "default" : "secondary"}
+                className={`px-4 py-2 cursor-pointer transition-all duration-200 ${
+                  category.active 
+                    ? 'bg-blue-600 text-white shadow-lg' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
               >
-                <Badge
-                  variant={category.active ? "default" : "secondary"}
-                  className={`px-4 py-2 cursor-pointer transition-all duration-200 ${
-                    category.active 
-                      ? 'bg-blue-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </Badge>
-              </ContentLinkTracker>
+                {category.name} ({category.count})
+              </Badge>
             ))}
           </div>
         </div>
@@ -305,20 +272,12 @@ export default function BlogPage() {
 
         {/* Botón cargar más */}
         <div className="text-center mb-16">
-          <CTATracker
-            eventName="load_more_articles"
-            category="cta"
-            label="Cargar Más Artículos"
-            location="/blog"
-            onClick={handleLoadMore}
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
           >
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-            >
-              Cargar Más Artículos
-            </Button>
-          </CTATracker>
+            Cargar Más Artículos
+          </Button>
         </div>
 
         {/* Enlaces rápidos y CTA */}
@@ -328,15 +287,9 @@ export default function BlogPage() {
             <p className="text-gray-600 mb-4">
               Manuales detallados y paso a paso para profesionales de seguridad industrial.
             </p>
-            <ContentLinkTracker
-              category="navigation"
-              label="Ver Todas las Guías"
-              location="/blog"
-            >
-              <Button variant="outline" className="w-full" asChild>
-                <Link href="/guias">Ver Todas las Guías</Link>
-              </Button>
-            </ContentLinkTracker>
+            <Button variant="outline" className="w-full" asChild>
+              <Link href="/guias">Ver Todas las Guías</Link>
+            </Button>
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-lg border-0">
@@ -344,15 +297,9 @@ export default function BlogPage() {
             <p className="text-gray-600 mb-4">
               Información sobre equipos de protección personal certificados y normativas.
             </p>
-            <ContentLinkTracker
-              category="navigation"
-              label="Artículos sobre EPP"
-              location="/blog"
-            >
-              <Button variant="outline" className="w-full" asChild>
-                <Link href="/blog?category=EPP">Artículos sobre EPP</Link>
-              </Button>
-            </ContentLinkTracker>
+            <Button variant="outline" className="w-full" asChild>
+              <Link href="/blog?category=EPP">Artículos sobre EPP</Link>
+            </Button>
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-lg border-0">
@@ -360,15 +307,9 @@ export default function BlogPage() {
             <p className="text-gray-600 mb-4">
               Conoce a los expertos certificados que crean nuestro contenido especializado.
             </p>
-            <ContentLinkTracker
-              category="navigation"
-              label="Conocer Equipo"
-              location="/blog"
-            >
-              <Button variant="outline" className="w-full" asChild>
-                <Link href="/sobre-nosotros">Conocer Equipo</Link>
-              </Button>
-            </ContentLinkTracker>
+            <Button variant="outline" className="w-full" asChild>
+              <Link href="/sobre-nosotros">Conocer Equipo</Link>
+            </Button>
           </div>
         </div>
       </div>

@@ -11,16 +11,16 @@ export async function GET(request: NextRequest) {
     const filters: ProductFilters = {
       search: searchParams.get('search') || undefined,
       category: searchParams.get('category') || undefined,
-      priceRange: searchParams.get('minPrice') && searchParams.get('maxPrice') ? {
-        min: parseFloat(searchParams.get('minPrice')!),
-        max: parseFloat(searchParams.get('maxPrice')!)
-      } : undefined,
       rating: searchParams.get('rating') ? parseFloat(searchParams.get('rating')!) : undefined,
       isPrime: searchParams.get('isPrime') === 'true' || undefined,
       brand: searchParams.get('brand') || undefined,
     };
-    
-    const sortBy = searchParams.get('sortBy') as 'price' | 'rating' | 'name' | 'newest' || 'newest';
+
+    const sortParam = searchParams.get('sortBy');
+    const sortBy: Parameters<typeof sortProducts>[1] =
+      sortParam === 'rating' || sortParam === 'name' || sortParam === 'newest'
+        ? sortParam
+        : 'newest';
     const page = parseInt(searchParams.get('page') || '1');
     const limit = parseInt(searchParams.get('limit') || '12');
     

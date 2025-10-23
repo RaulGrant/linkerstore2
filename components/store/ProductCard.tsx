@@ -194,6 +194,7 @@ function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
           </div>
           
           <div className="flex gap-2 w-full">
+            {/*
             <Button 
               variant="outline" 
               className="flex-1"
@@ -201,6 +202,7 @@ function ProductCard({ product, showViewDetails = true }: ProductCardProps) {
             >
               Ver página completa
             </Button>
+            */}
             <Button 
               variant="outline" 
               className="flex-1"

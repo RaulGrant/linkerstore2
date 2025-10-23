@@ -1,10 +1,8 @@
 'use client'
 
-import { useState } from "react";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 import { ArrowRight, ShoppingBag, Target } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -95,6 +93,7 @@ export default function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                {/*
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold shadow-xl"
@@ -104,6 +103,7 @@ export default function HomePage() {
                   Explorar Productos
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
+                */}
               </motion.div>
               
               <motion.div
@@ -155,26 +155,23 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.4 }}
           >
-            {[
+            {[ 
               {
                 name: "Equipos de Protección",
                 description: "EPP certificado OSHA/ANSI para seguridad laboral",
                 count: "50+ productos",
-                href: "/store?category=epp",
                 color: "bg-gradient-to-r from-green-500 to-emerald-600"
               },
               {
                 name: "Herramientas Industriales",
                 description: "Equipos profesionales para proyectos industriales",
                 count: "100+ productos",
-                href: "/store?category=herramientas",
                 color: "bg-gradient-to-r from-blue-500 to-cyan-600"
               },
               {
                 name: "Seguridad y Mantenimiento",
                 description: "Sistemas de prevención y mantenimiento industrial",
                 count: "75+ productos",
-                href: "/store?category=seguridad",
                 color: "bg-gradient-to-r from-red-500 to-orange-600"
               }
             ].map((category, index) => (
@@ -195,7 +192,8 @@ export default function HomePage() {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href={category.href} className="group block">
+                {/* TODO: Rehabilitar navegación a /store cuando la sección vuelva a estar activa */}
+                <div className="group block">
                   <motion.div 
                     className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 relative overflow-hidden"
                     whileHover={{
@@ -225,7 +223,7 @@ export default function HomePage() {
                       </div>
                     </div>
                   </motion.div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -269,12 +267,10 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                <Link href="/store" className="flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5" />
-                  Explorar Catálogo
-                </Link>
-              </Button>
+              {/* CTA suspendida hasta reactivar la tienda */}
+              <div className="bg-white/10 border border-white/20 text-blue-100 px-6 py-4 rounded-xl">
+                Catálogo disponible próximamente.
+              </div>
             </motion.div>
           </motion.div>
         </div>

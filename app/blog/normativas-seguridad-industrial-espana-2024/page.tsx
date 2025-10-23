@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+'use client';
+
 import BlogLayout from '@/components/blog/BlogLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -7,7 +8,8 @@ import { Separator } from '@/components/ui/separator';
 import { CheckCircle, AlertTriangle, FileText, Scale, Info, ExternalLink, Gavel } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+// Moved metadata to layout.tsx since this is now a client component
+const pageMetadata = {
   title: 'Normativas de Seguridad Industrial en España: Marco Legal 2024 | Guía Actualizada',
   description: 'Guía actualizada sobre legislación española en prevención de riesgos laborales, Real Decreto 773/1997 y normativas europeas aplicables. Todo lo que necesitas saber para cumplir con la ley.',
   keywords: 'normativas seguridad industrial España, Real Decreto 773/1997, prevención riesgos laborales, legislación EPP, cumplimiento normativo',
@@ -637,7 +639,7 @@ export default function NormativasSeguridadEspanaPage() {
                       <li>• Suspensión de actividad: 30 días</li>
                       <li>• Exclusión de contratos públicos: 1 año</li>
                       <li>• Recargo de prestaciones: 50%</li>
-                    </li>
+                    </ul>
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">Lecciones Aprendidas</h4>

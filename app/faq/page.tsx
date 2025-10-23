@@ -43,9 +43,11 @@ export default function FAQPage() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/store" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Tienda Industrial
-            </Link>
+              {/*
+              <Link href="/store" className="text-gray-600 hover:text-blue-600 transition-colors">
+                Tienda Industrial
+              </Link>
+              */}
             <Link href="/guides" className="text-gray-600 hover:text-blue-600 transition-colors">
               Guías de Compra
             </Link>
@@ -348,12 +350,14 @@ export default function FAQPage() {
               Estamos aquí para ayudarte. Explora nuestra tienda o contáctanos directamente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/store">
-                <Button size="lg" variant="secondary" className="text-blue-600">
-                  <Store className="mr-2 h-5 w-5" />
-                  Ver Tienda
-                </Button>
-              </Link>
+                {/*
+                <Link href="/store">
+                  <Button size="lg" variant="secondary" className="text-blue-600">
+                    <Store className="mr-2 h-5 w-5" />
+                    Ver Tienda
+                  </Button>
+                </Link>
+                */}
               <Link href="/guides">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
                   Guías de Compra

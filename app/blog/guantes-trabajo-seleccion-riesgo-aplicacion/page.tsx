@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { CheckCircle, AlertTriangle, Shield, Wrench, Eye, Info, ExternalLink, Star } from 'lucide-react';
+import { CheckCircle, AlertTriangle, Shield, Wrench, Eye, Info, ExternalLink, Star, Hand, Zap } from 'lucide-react';
 import Link from 'next/link';
 import SchemaMarkup from '@/components/seo/SchemaMarkup';
 

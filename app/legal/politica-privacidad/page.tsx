@@ -29,7 +29,7 @@ export default function PoliticaPrivacidad() {
               </p>
               <div className="flex items-center justify-center gap-2 text-sm text-blue-200">
                 <FileText className="h-4 w-4" />
-                Última actualización: 10 de octubre de 2025
+                Última actualización: 10 de septiembre de 2025
               </div>
             </motion.div>
           </div>
@@ -78,43 +78,9 @@ export default function PoliticaPrivacidad() {
                 </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Herramientas de Analytics y Seguimiento</h2>
-              
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                    <AlertTriangle className="h-5 w-5" />
-                    Meta Pixel de Facebook
-                </h3>
-                <p className="text-blue-800 mb-3">
-                    Utilizamos Meta Pixel (ID: 2002160850545438) para mejorar nuestro contenido y mostrar información relevante. Esta herramienta:
-                </p>
-                <ul className="list-disc list-inside text-blue-800 space-y-1 mb-3">
-                    <li>Recopila información anónima sobre tu navegación en nuestro sitio</li>
-                    <li>No almacena datos personales identificables en nuestros servidores</li>
-                    <li>Se rige por la política de privacidad de Meta/Facebook</li>
-                    <li>Puedes deshabilitarlo usando herramientas como uBlock Origin o AdBlock</li>
-                </ul>
-                <p className="text-blue-800 text-sm">
-                    Para más información: <a href="https://www.facebook.com/privacy/policy/" className="text-blue-600 underline">Política de Privacidad de Meta</a>
-                </p>
-              </div>
-
-              <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-green-900 mb-3">Google Analytics (Próximamente)</h3>
-                <p className="text-green-800 mb-2">
-                    Estamos preparando la implementación de Google Analytics 4 para entender mejor cómo mejorar nuestro contenido. Cuando se implemente:
-                </p>
-                <ul className="list-disc list-inside text-green-800 space-y-1">
-                    <li>Solo recopilaremos datos de navegación anónimos</li>
-                    <li>Implementaremos consentimiento explícito según GDPR</li>
-                    <li>Proporcionaremos controles para opt-out</li>
-                    <li>Actualizaremos esta política antes de la activación</li>
-                </ul>
-              </div>
-
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cookies Técnicas</h3>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Cookies</h2>
               <p className="mb-6">
-                Utilizamos únicamente cookies técnicas esenciales para el funcionamiento del sitio. Estas son completamente anónimas y no almacenan información personal identificable.
+                LinkerPro <strong>no utiliza cookies de seguimiento, publicitarias ni analíticas</strong>. Es posible que se usen cookies técnicas esenciales, completamente anónimas, solo para asegurar el funcionamiento básico del sitio, pero estas no almacenan ninguna información personal.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Programas de Afiliados y Enlaces a Terceros</h2>
@@ -135,32 +101,10 @@ export default function PoliticaPrivacidad() {
                 </p>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Cumplimiento GDPR y Tus Derechos</h2>
-              
-              <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-purple-900 mb-3">Derechos bajo GDPR (Reglamento General de Protección de Datos)</h3>
-                <p className="text-purple-800 mb-3">
-                    Aunque no recopilamos datos personales directamente, respetamos tus derechos según GDPR:
-                </p>
-                <ul className="list-disc list-inside text-purple-800 space-y-1">
-                    <li><strong>Derecho de acceso:</strong> Puedes solicitar información sobre datos que pudieran procesarse</li>
-                    <li><strong>Derecho de rectificación:</strong> Corrección de datos inexactos</li>
-                    <li><strong>Derecho de supresión:</strong> Eliminación de datos personales</li>
-                    <li><strong>Derecho de oposición:</strong> Oposición al procesamiento de datos</li>
-                    <li><strong>Derecho a la portabilidad:</strong> Transferencia de datos a otros servicios</li>
-                </ul>
-              </div>
-
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Control de Cookies y Seguimiento</h3>
-              <p className="mb-4">
-                Tienes control total sobre las herramientas de seguimiento:
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Tus Derechos (Derechos ARCO)</h2>
+              <p className="mb-6">
+                La legislación mexicana te otorga derechos sobre tus datos (Acceso, Rectificación, Cancelación y Oposición). En LinkerPro, garantizamos estos derechos de la forma más efectiva: <strong>al no recopilar ningún dato personal, no existe información que acceder, rectificar o cancelar.</strong>
               </p>
-              <ul className="list-disc list-inside mb-6 space-y-2">
-                <li><strong>Navegador:</strong> Configura tu navegador para bloquear cookies de terceros</li>
-                <li><strong>Extensions:</strong> Usa uBlock Origin, AdBlock Plus o Privacy Badger</li>
-                <li><strong>Do Not Track:</strong> Respetamos la señal "Do Not Track" del navegador</li>
-                <li><strong>Opt-out de Meta:</strong> Visita la configuración de anuncios de Facebook</li>
-              </ul>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Cambios a esta Política</h2>
               <p className="mb-6">

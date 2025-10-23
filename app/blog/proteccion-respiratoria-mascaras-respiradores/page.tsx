@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { CheckCircle, AlertTriangle, Shield, Zap, Eye, Info, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import SchemaMarkup from '@/components/seo/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Protección Respiratoria: Máscaras y Respiradores Industriales | Guía Completa 2024',
@@ -136,27 +135,8 @@ const selectionFactors = [
 ];
 
 export default function ProteccionRespiratoriaPage() {
-  const articleData = {
-    title: 'Protección Respiratoria: Máscaras y Respiradores Industriales',
-    description: 'Guía completa sobre equipos de protección respiratoria: tipos de filtros, factores de protección, normativas EN 149 y EN 140.',
-    category: 'Seguridad Industrial',
-    publishDate: '2024-10-10',
-    keywords: 'protección respiratoria, máscaras industriales, respiradores, filtros, EN 149, EN 140, seguridad industrial',
-    tags: ['protección respiratoria', 'máscaras industriales', 'respiradores', 'filtros', 'seguridad industrial']
-  };
-
-  const breadcrumbs = [
-    { name: 'Inicio', url: '/' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Protección Respiratoria', url: '/blog/proteccion-respiratoria-mascaras-respiradores' }
-  ];
-
   return (
     <BlogLayout>
-      {/* Schema Markup */}
-      <SchemaMarkup type="BlogPosting" data={articleData} />
-      <SchemaMarkup type="BreadcrumbList" data={{ breadcrumbs }} />
-      
       <article className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <div className="mb-8">
@@ -479,12 +459,10 @@ export default function ProteccionRespiratoriaPage() {
                     <span className="font-medium">$250-400 MXN</span>
                   </div>
                 </div>
-                {/* TEMPORALMENTE COMENTADO - TIENDA EN DESARROLLO
                 <Button className="w-full mt-4" variant="outline">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Ver en Tienda
                 </Button>
-                */}
               </CardContent>
             </Card>
 
@@ -508,12 +486,10 @@ export default function ProteccionRespiratoriaPage() {
                     <span className="font-medium">$1,200-2,000 MXN</span>
                   </div>
                 </div>
-                {/* TEMPORALMENTE COMENTADO - TIENDA EN DESARROLLO
                 <Button className="w-full mt-4" variant="outline">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Ver en Tienda
                 </Button>
-                */}
               </CardContent>
             </Card>
 
@@ -537,12 +513,10 @@ export default function ProteccionRespiratoriaPage() {
                     <span className="font-medium">$4,000-8,000 MXN</span>
                   </div>
                 </div>
-                {/* TEMPORALMENTE COMENTADO - TIENDA EN DESARROLLO
                 <Button className="w-full mt-4" variant="outline">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Ver en Tienda
                 </Button>
-                */}
               </CardContent>
             </Card>
           </div>

@@ -44,7 +44,7 @@ const categories = [
     name: "Equipos de Protección",
     description: "EPP certificado OSHA/ANSI para seguridad laboral",
     count: products.filter((p: AmazonProduct) => p.category === "EPP").length,
-    href: "/store?category=epp",
+  // href: "/store?category=epp",
     color: "bg-gradient-to-r from-green-500 to-emerald-600",
     icon: Shield
   },
@@ -52,7 +52,7 @@ const categories = [
     name: "Herramientas Industriales",
     description: "Equipos profesionales para proyectos industriales",
     count: products.filter((p: AmazonProduct) => p.category === "Herramientas").length,
-    href: "/store?category=herramientas",
+  // href: "/store?category=herramientas",
     color: "bg-gradient-to-r from-blue-500 to-cyan-600",
     icon: Zap
   },
@@ -60,7 +60,7 @@ const categories = [
     name: "Seguridad y Mantenimiento",
     description: "Equipos para detección, monitoreo y mantenimiento",
     count: products.filter((p: AmazonProduct) => p.category === "Seguridad").length,
-    href: "/store?category=seguridad",
+  // href: "/store?category=seguridad",
     color: "bg-gradient-to-r from-yellow-500 to-orange-500",
     icon: Award
   }
@@ -341,30 +341,7 @@ export default function HomePage() {
                 🏭
               </motion.div>
               
-              {/* Rotating Rings */}
-              {[...Array(3)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute inset-0 rounded-full border-2 border-gradient-to-r from-blue-400 to-purple-600"
-                  style={{
-                    width: `${120 + i * 30}px`,
-                    height: `${120 + i * 30}px`,
-                    left: '50%',
-                    top: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    borderImage: 'linear-gradient(45deg, #60a5fa, #a855f7, #ec4899) 1'
-                  }}
-                  animate={{ rotate: 360 }}
-                  transition={{ 
-                    duration: 4 + i * 2, 
-                    repeat: Infinity, 
-                    ease: "linear"
-                  }}
-                  style={{
-                    animationDirection: i % 2 === 0 ? "normal" : "reverse"
-                  }}
-                />
-              ))}
+              {/* Animación de aros suspendida para evitar referencias innecesarias */}
             </motion.div>
 
             <motion.h1 
@@ -409,6 +386,7 @@ export default function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                {/*
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold shadow-xl"
@@ -418,6 +396,7 @@ export default function HomePage() {
                   Explorar Productos
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
+                */}
               </motion.div>
               
               <motion.div
@@ -475,13 +454,10 @@ export default function HomePage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <Link href="/store" className="flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5" />
-                  Explora Nuestra Tienda Industrial
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
+              {/* CTA suspendida hasta reactivar la tienda */}
+              <div className="bg-white/10 border border-white/20 text-blue-100 px-6 py-4 rounded-full backdrop-blur-sm">
+                Catálogo disponible próximamente.
+              </div>
               <Button asChild variant="secondary" size="lg" className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300">
                 <Link href="/guides" className="flex items-center gap-2">
                   <Target className="w-5 h-5" />
@@ -506,7 +482,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          </motion.div>
         </div>
       </motion.section>
 
@@ -651,7 +626,7 @@ export default function HomePage() {
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Link href={category.href} className="group block">
+                  <div className="group block cursor-default">
                     <motion.div 
                       className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 relative overflow-hidden"
                       whileHover={{
@@ -724,7 +699,7 @@ export default function HomePage() {
                         </motion.div>
                       </div>
                     </motion.div>
-                  </Link>
+                  </div>
                 </motion.div>
               );
             })}
@@ -840,13 +815,13 @@ export default function HomePage() {
                   transition: { type: "spring", bounce: 0.4 }
                 }}
                 whileTap={{ scale: 0.95 }}
-                role="link"
+                role="button"
                 tabIndex={0}
-                onClick={() => router.push(`/store/${product.asin}`)}
+                onClick={() => openProductModal(product)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    router.push(`/store/${product.asin}`);
+                    openProductModal(product);
                   }
                 }}
                 className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer relative"
@@ -973,10 +948,10 @@ export default function HomePage() {
                       transition={{ delay: 1.8 + index * 0.1 }}
                     >
                       <motion.div 
-                        className="text-2xl font-bold text-blue-600"
-                        whileHover={{ scale: 1.1 }}
+                        className="text-sm font-semibold text-blue-600"
+                        whileHover={{ scale: 1.05 }}
                       >
-                        ${(product.price || 0).toLocaleString('es-MX')}
+                        Precio disponible en Amazon.
                       </motion.div>
                       <motion.div
                         whileHover={{ scale: 1.05 }}
@@ -985,14 +960,9 @@ export default function HomePage() {
                         <Button 
                           size="sm" 
                           className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-                          asChild
+                          onClick={() => openProductModal(product)}
                         >
-                          <Link 
-                            href={`/store/${product.asin}`} 
-                            className="flex items-center gap-1"
-                          >
-                            Ver más
-                          </Link>
+                          Conocer detalles
                         </Button>
                       </motion.div>
                     </motion.div>
@@ -1015,22 +985,16 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button 
-                asChild 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-              >
-                <Link href="/store" className="flex items-center gap-2">
-                  Ver todos los {products.length} productos
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.div>
-                </Link>
-              </Button>
+              {/* Navegación a /store suspendida temporalmente */}
+              <div className="border-2 border-blue-600 text-blue-600 px-6 py-4 rounded-full inline-flex items-center justify-center gap-2 bg-white">
+                Catálogo completo disponible próximamente.
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -1102,12 +1066,10 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                <Link href="/store" className="flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5" />
-                  Explorar Catálogo
-                </Link>
-              </Button>
+              {/* CTA a /store suspendida */}
+              <div className="bg-white/10 border border-white/30 text-blue-100 px-6 py-4 rounded-xl">
+                Estamos preparando el nuevo catálogo.
+              </div>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}

@@ -15,9 +15,9 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">LP</span>
+                <span className="text-white font-bold text-sm">LS</span>
               </div>
-              <span className="text-xl font-bold">LinkerPro</span>
+              <span className="text-xl font-bold">LinkerStore</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Tu fuente confiable de información sobre seguridad industrial y equipos de protección personal. 
@@ -88,11 +88,11 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">soporte@linkerpro.com</span>
+                <span className="text-gray-300">soporte@linkerstore.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">+52 55 1234 5678</span>
+                <span className="text-gray-300">+52 55 3486 3278</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4 text-blue-400" />
@@ -115,7 +115,7 @@ export function Footer() {
         <Separator className="my-8 bg-gray-700" />
 
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="text-sm text-gray-400">© 2025 LinkerPro. Todos los derechos reservados.</div>
+          <div className="text-sm text-gray-400">© 2025 LinkerStore. Todos los derechos reservados.</div>
           <div className="flex items-center space-x-6 text-sm text-gray-400">
             <Link href="/legal/politica-privacidad" className="hover:text-white transition-colors">
               Política de Privacidad

@@ -3,30 +3,12 @@ import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/navigation'
 import ConditionalFooter from '@/components/ConditionalFooter'
-import SchemaMarkup from '@/components/seo/SchemaMarkup'
-import AnalyticsProvider from '@/components/analytics/AnalyticsProvider'
 
 export const metadata: Metadata = {
   title: 'LinkerPro - Blog de Seguridad Industrial | Equipos de Protección Personal',
   description: 'Tu fuente confiable de información sobre seguridad industrial y EPP. Guías, reseñas y consejos de expertos para crear ambientes de trabajo más seguros.',
   generator: 'v0.dev',
   keywords: 'seguridad industrial, EPP, equipos protección personal, blog seguridad, guías seguridad laboral, LinkerPro',
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
-  authors: [{ name: 'LinkerPro Team' }],
-  openGraph: {
-    type: 'website',
-    locale: 'es_ES',
-    url: 'https://linkerpro.com',
-    title: 'LinkerPro - Blog de Seguridad Industrial',
-    description: 'Tu fuente confiable de información sobre seguridad industrial y EPP.',
-    siteName: 'LinkerPro',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'LinkerPro - Blog de Seguridad Industrial',
-    description: 'Tu fuente confiable de información sobre seguridad industrial y EPP.',
-  }
 }
 
 export default function RootLayout({
@@ -37,28 +19,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Google Analytics 4 Script */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-405TQL3C9G"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-405TQL3C9G', {
-                page_title: document.title,
-                page_location: window.location.href,
-                send_page_view: true
-              });
-            `,
-          }}
-        />
-        
         {/* Meta Pixel Script */}
         <Script
           id="meta-pixel"
@@ -90,15 +50,9 @@ export default function RootLayout({
         </noscript>
       </head>
       <body>
-        {/* Schema Markup para Organization y WebSite */}
-        <SchemaMarkup type="Organization" />
-        <SchemaMarkup type="WebSite" />
-        
-        <AnalyticsProvider>
-          <Navigation />
-          {children}
-          <ConditionalFooter />
-        </AnalyticsProvider>
+        <Navigation />
+        {children}
+        <ConditionalFooter />
       </body>
     </html>
   )
