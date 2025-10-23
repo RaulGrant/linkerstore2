@@ -3,11 +3,72 @@
 import { motion } from 'framer-motion';
 import BlogLayout from '@/components/blog/BlogLayout';
 import { Cookie, Settings, Shield, Info, ToggleLeft, ToggleRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { CookiesManager, type CookieConsent } from '@/lib/cookies-manager';
+import { initializeGA } from '@/lib/google-analytics';
 
 export default function PoliticaCookies() {
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
-  const [marketingEnabled, setMarketingEnabled] = useState(false);
+  const [consent, setConsent] = useState<CookieConsent | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const currentConsent = CookiesManager.getConsent();
+    setConsent(currentConsent);
+  }, []);
+
+  const handleSavePreferences = () => {
+    if (consent) {
+      CookiesManager.setConsent({
+        necessary: true,
+        analytics: consent.analytics,
+        marketing: consent.marketing
+      });
+
+      // Inicializar Google Analytics si se acepta
+      if (consent.analytics) {
+        initializeGA();
+      }
+
+      alert('Preferencias guardadas correctamente');
+    }
+  };
+
+  const handleAcceptAll = () => {
+    const newConsent = {
+      necessary: true,
+      analytics: true,
+      marketing: true
+    };
+    
+    CookiesManager.setConsent(newConsent);
+    setConsent({ ...newConsent, timestamp: Date.now() });
+    initializeGA();
+    alert('Todas las cookies han sido aceptadas');
+  };
+
+  const toggleAnalytics = () => {
+    if (consent) {
+      setConsent({
+        ...consent,
+        analytics: !consent.analytics
+      });
+    }
+  };
+
+  const toggleMarketing = () => {
+    if (consent) {
+      setConsent({
+        ...consent,
+        marketing: !consent.marketing
+      });
+    }
+  };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <BlogLayout>
@@ -83,16 +144,16 @@ export default function PoliticaCookies() {
                     </div>
                     <div className="ml-4">
                       <button
-                        onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
+                        onClick={toggleAnalytics}
                         className="focus:outline-none"
                       >
-                        {analyticsEnabled ? (
+                        {consent?.analytics ? (
                           <ToggleRight className="h-6 w-6 text-green-600" />
                         ) : (
                           <ToggleLeft className="h-6 w-6 text-gray-400" />
                         )}
                         <span className="sr-only">
-                          {analyticsEnabled ? 'Activado' : 'Desactivado'}
+                          {consent?.analytics ? 'Activado' : 'Desactivado'}
                         </span>
                       </button>
                     </div>
@@ -106,16 +167,16 @@ export default function PoliticaCookies() {
                     </div>
                     <div className="ml-4">
                       <button
-                        onClick={() => setMarketingEnabled(!marketingEnabled)}
+                        onClick={toggleMarketing}
                         className="focus:outline-none"
                       >
-                        {marketingEnabled ? (
+                        {consent?.marketing ? (
                           <ToggleRight className="h-6 w-6 text-green-600" />
                         ) : (
                           <ToggleLeft className="h-6 w-6 text-gray-400" />
                         )}
                         <span className="sr-only">
-                          {marketingEnabled ? 'Activado' : 'Desactivado'}
+                          {consent?.marketing ? 'Activado' : 'Desactivado'}
                         </span>
                       </button>
                     </div>
@@ -123,12 +184,12 @@ export default function PoliticaCookies() {
                 </div>
 
                 <div className="mt-6 flex gap-3">
-                  <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  <Button onClick={handleSavePreferences} className="bg-blue-600 hover:bg-blue-700">
                     Guardar Preferencias
-                  </button>
-                  <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  </Button>
+                  <Button onClick={handleAcceptAll} variant="outline">
                     Aceptar Todas
-                  </button>
+                  </Button>
                 </div>
               </div>
 
@@ -143,12 +204,13 @@ export default function PoliticaCookies() {
                   <p className="text-green-800"><strong>Información almacenada:</strong> Preferencias de idioma, estado de sesión, configuraciones básicas</p>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">2. Cookies Analíticas</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">2. Cookies Analíticas (Google Analytics)</h3>
                 <div className="bg-blue-50 p-4 rounded-lg mb-4">
-                  <p className="text-blue-800 mb-2"><strong>Proveedor:</strong> Google Analytics, Adobe Analytics</p>
-                  <p className="text-blue-800 mb-2"><strong>Finalidad:</strong> Análisis de tráfico y comportamiento de usuarios</p>
+                  <p className="text-blue-800 mb-2"><strong>Proveedor:</strong> Google Analytics (G-405TQL3C9G)</p>
+                  <p className="text-blue-800 mb-2"><strong>Finalidad:</strong> Análisis de tráfico, comportamiento de usuarios y mejora de la experiencia</p>
                   <p className="text-blue-800 mb-2"><strong>Duración:</strong> 2 años</p>
-                  <p className="text-blue-800"><strong>Datos recopilados:</strong> Páginas visitadas, tiempo de permanencia, dispositivo utilizado, ubicación aproximada</p>
+                  <p className="text-blue-800"><strong>Datos recopilados:</strong> Páginas visitadas, tiempo de permanencia, dispositivo utilizado, ubicación aproximada, fuente de tráfico</p>
+                  <p className="text-blue-800"><strong>Base legal:</strong> Consentimiento del usuario</p>
                 </div>
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">3. Cookies de Afiliación</h3>
@@ -159,12 +221,13 @@ export default function PoliticaCookies() {
                   <p className="text-orange-800"><strong>Información:</strong> Productos visitados, clics en enlaces de afiliación, referencias de ventas</p>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">4. Cookies de Redes Sociales</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">4. Cookies de Marketing (Meta Pixel)</h3>
                 <div className="bg-purple-50 p-4 rounded-lg mb-6">
-                  <p className="text-purple-800 mb-2"><strong>Proveedor:</strong> Facebook, Twitter, LinkedIn</p>
-                  <p className="text-purple-800 mb-2"><strong>Finalidad:</strong> Integración con redes sociales y botones de compartir</p>
-                  <p className="text-purple-800 mb-2"><strong>Duración:</strong> Variable según el proveedor</p>
-                  <p className="text-purple-800"><strong>Funcionalidad:</strong> Compartir contenido, mostrar feeds sociales</p>
+                  <p className="text-purple-800 mb-2"><strong>Proveedor:</strong> Meta (Facebook) - Pixel ID: 2002160850545438</p>
+                  <p className="text-purple-800 mb-2"><strong>Finalidad:</strong> Medición de conversiones, optimización de anuncios y remarketing</p>
+                  <p className="text-purple-800 mb-2"><strong>Duración:</strong> 90 días</p>
+                  <p className="text-purple-800 mb-2"><strong>Datos recopilados:</strong> Eventos de navegación, interacciones con productos, conversiones</p>
+                  <p className="text-purple-800"><strong>Base legal:</strong> Consentimiento del usuario</p>
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Gestión de Cookies</h2>
@@ -172,10 +235,10 @@ export default function PoliticaCookies() {
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">En su Navegador:</h3>
                 <ul className="list-disc list-inside mb-4 space-y-1">
-                  <li><strong>Chrome:</strong> Configuración > Privacidad y seguridad > Cookies</li>
-                  <li><strong>Firefox:</strong> Opciones > Privacidad y seguridad > Cookies</li>
-                  <li><strong>Safari:</strong> Preferencias > Privacidad > Cookies</li>
-                  <li><strong>Edge:</strong> Configuración > Cookies y permisos del sitio</li>
+                  <li><strong>Chrome:</strong> Configuración {'>'}  Privacidad y seguridad {'>'} Cookies</li>
+                  <li><strong>Firefox:</strong> Opciones {'>'} Privacidad y seguridad {'>'} Cookies</li>
+                  <li><strong>Safari:</strong> Preferencias {'>'} Privacidad {'>'} Cookies</li>
+                  <li><strong>Edge:</strong> Configuración {'>'} Cookies y permisos del sitio</li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Herramientas de Terceros:</h3>
@@ -205,6 +268,14 @@ export default function PoliticaCookies() {
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Análisis web</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
                           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="hover:underline">Ver política</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Meta Pixel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Meta (Facebook)</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Marketing y conversiones</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
+                          <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="hover:underline">Ver política</a>
                         </td>
                       </tr>
                       <tr>

@@ -3,6 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/navigation'
 import ConditionalFooter from '@/components/ConditionalFooter'
+import CookieConsent from '@/components/cookies/CookieConsent'
 
 export const metadata: Metadata = {
   title: 'LinkerPro - Blog de Seguridad Industrial | Equipos de Protección Personal',
@@ -19,9 +20,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Meta Pixel Script */}
+        {/* Google Analytics */}
         <Script
-          id="meta-pixel"
+          src="https://www.googletagmanager.com/gtag/js?id=G-405TQL3C9G"
+          strategy="afterInteractive"
+        />
+        
+        {/* Meta Pixel Script - Conditional loading handled by CookieConsent */}
+        <Script
+          id="meta-pixel-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -34,7 +41,6 @@ export default function RootLayout({
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '2002160850545438');
-              fbq('track', 'PageView');
             `,
           }}
         />
@@ -53,6 +59,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <ConditionalFooter />
+        <CookieConsent />
       </body>
     </html>
   )

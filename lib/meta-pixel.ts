@@ -1,6 +1,8 @@
 // Meta Pixel Tracking Utilities
 // Pixel ID: 2002160850545438
 
+import { CookiesManager } from './cookies-manager';
+
 declare global {
   interface Window {
     fbq: any;
@@ -8,9 +10,21 @@ declare global {
 }
 
 /**
+ * Check if marketing cookies are allowed
+ */
+const canTrack = (): boolean => {
+  return CookiesManager.allowsMarketing();
+};
+
+/**
  * Track a standard Facebook event
  */
 export const trackEvent = (eventName: string, parameters?: any) => {
+  if (!canTrack()) {
+    console.log(`🚫 Meta Pixel blocked (cookies not accepted): ${eventName}`);
+    return;
+  }
+  
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', eventName, parameters);
     console.log(`🔵 Meta Pixel Event: ${eventName}`, parameters);
@@ -21,6 +35,11 @@ export const trackEvent = (eventName: string, parameters?: any) => {
  * Track a custom Facebook event
  */
 export const trackCustomEvent = (eventName: string, parameters?: any) => {
+  if (!canTrack()) {
+    console.log(`🚫 Meta Pixel Custom blocked (cookies not accepted): ${eventName}`);
+    return;
+  }
+  
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('trackCustom', eventName, parameters);
     console.log(`🟣 Meta Pixel Custom Event: ${eventName}`, parameters);

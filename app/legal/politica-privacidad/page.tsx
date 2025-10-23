@@ -78,9 +78,37 @@ export default function PoliticaPrivacidad() {
                 </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Cookies</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Uso de Cookies y Tecnologías de Seguimiento</h2>
+              
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r-lg">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">Cookies que Utilizamos</h3>
+                <div className="text-blue-800 space-y-3">
+                  <div>
+                    <p><strong>Google Analytics (G-405TQL3C9G):</strong></p>
+                    <p className="text-sm">Utilizamos Google Analytics para entender cómo los usuarios interactúan con nuestro sitio web, qué páginas visitan más y cómo llegan a nosotros. Esta información nos ayuda a mejorar nuestro contenido y la experiencia de usuario.</p>
+                  </div>
+                  <div>
+                    <p><strong>Meta Pixel (ID: 2002160850545438):</strong></p>
+                    <p className="text-sm">El Meta Pixel nos permite medir la efectividad de nuestros anuncios en Facebook e Instagram, optimizar nuestras campañas publicitarias y mostrar anuncios relevantes a personas interesadas en seguridad industrial.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-6 rounded-r-lg">
+                <h3 className="text-lg font-semibold text-green-900 mb-3">Tu Control Total</h3>
+                <p className="text-green-800 mb-2">
+                  <strong>Tienes control completo sobre estas cookies:</strong>
+                </p>
+                <ul className="list-disc list-inside text-green-800 space-y-1">
+                  <li>Puedes aceptar o rechazar cookies analíticas y de marketing</li>
+                  <li>Cambiar tus preferencias en cualquier momento desde nuestro banner de cookies</li>
+                  <li>Si rechazas las cookies, aún puedes usar el sitio normalmente</li>
+                  <li>Consultar información detallada en nuestra <a href="/legal/cookies" className="text-green-700 underline font-medium">Política de Cookies</a></li>
+                </ul>
+              </div>
+
               <p className="mb-6">
-                LinkerStore <strong> utiliza cookies de seguimiento por parte de meta y de google analitycs con el fin de mejorar las analíticas del sitio web </strong>. Estas cookies son completamente anónimas y no almacenan información personal.
+                <strong>Base legal:</strong> Utilizamos estas tecnologías únicamente con tu consentimiento explícito. Puedes retirar tu consentimiento en cualquier momento.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Programas de Afiliados y Enlaces a Terceros</h2>
