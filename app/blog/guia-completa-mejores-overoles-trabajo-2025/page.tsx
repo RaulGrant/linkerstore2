@@ -41,21 +41,21 @@ export default function OverolesTrabajoArticle() {
   const comparisonProducts = [
     {
       id: 'red-kap-ct10',
-      name: 'Red Kap CT10 Twill',
-      rating: 4.9,
-      reviewCount: 150,
+      name: 'Overol Industrial Alta Visibilidad Reflejante Capucha',
+      rating: 4.2,
+      reviewCount: 163,
       isRecommended: true,
       bestFor: 'Profesional Premium',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-852643194-red-kap-ct10-overol-trabajo-manga-larga-mecanico-industrial-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/2fgbB41'
     },
     {
       id: 'dickies-peto',
-      name: 'Dickies Peto Mezclilla',
-      rating: 4.8,
-      reviewCount: 200,
+      name: 'Overol Industrial Bolsas Cargo Seguridad Uso Rudo Trabajo',
+      rating: 4.3,
+      reviewCount: 68,
       isRecommended: true,
-      bestFor: 'Uso Rudo Clásico',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-1358999335-overol-peto-dickies-8329-mezclilla-uso-rudo-resistente-_JM'
+      bestFor: 'Resistencia Extrema',
+      amazonLink: 'https://mercadolibre.com/sec/1ugpCn6'
     },
     {
       id: 'guigua-taller',
@@ -64,7 +64,7 @@ export default function OverolesTrabajoArticle() {
       reviewCount: 450,
       isRecommended: false,
       bestFor: 'Mejor Precio',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-3632338520-mono-de-mecanico-de-reparacion-trajes-de-trabajo-uniformes-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/1z6GYqc'
     }
   ];
 
@@ -555,18 +555,18 @@ export default function OverolesTrabajoArticle() {
                         whileHover={{ scale: 1.02 }}
                       >
                         <Badge className="bg-purple-500 mb-3">Premium Profesional</Badge>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Red Kap CT10 Twill Action Back</h3>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Overol Industrial Alta Visibilidad Reflejante Capucha</h3>
                         <div className="flex items-center gap-2 mb-3">
                           <div className="flex">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-600">4.9 (150+ reseñas)</span>
+                          <span className="text-sm text-gray-600">4.2 (150+ reseñas)</span>
                         </div>
                         <p className="text-gray-700 mb-4">
-                          El estándar industrial global. Poliéster/algodón 65/35, diseño Action Back para movilidad superior. 
-                          ZeroSkratch para industria automotriz.
+                          Ropa de trabajo integrada reflectante con sombrero, resistente a la suciedad y al polvo.
+                          El overol es de buena calidad, con una tela resistente que supera las expectativas y es útil para trabajos que requieren protección contra polvo y sustancias. 
                         </p>
                         <div className="space-y-2 mb-4">
                           <div className="flex items-start gap-2">
@@ -580,7 +580,7 @@ export default function OverolesTrabajoArticle() {
                         </div>
                         <Button 
                           className="w-full bg-green-600 hover:bg-green-700"
-                          onClick={() => window.open('https://articulo.mercadolibre.com.mx/MLM-852643194-red-kap-ct10-overol-trabajo-manga-larga-mecanico-industrial-_JM', '_blank')}
+                          onClick={() => window.open('https://mercadolibre.com/sec/2fgbB41', '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Comprar en Mercado Libre
@@ -595,33 +595,32 @@ export default function OverolesTrabajoArticle() {
                         transition={{ delay: 0.1 }}
                         whileHover={{ scale: 1.02 }}
                       >
-                        <Badge className="bg-blue-500 mb-3">Clásico Rudo</Badge>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Dickies Peto Mezclilla 8329</h3>
+                        <Badge className="bg-blue-500 mb-3">Clásico</Badge>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Overol Industrial Con Cintas Reflejantes Unisex</h3>
                         <div className="flex items-center gap-2 mb-3">
                           <div className="flex">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-600">4.8 (200+ reseñas)</span>
+                          <span className="text-sm text-gray-600">4.0 (15+ reseñas)</span>
                         </div>
                         <p className="text-gray-700 mb-4">
-                          Ícono del workwear. Mezclilla 100% algodón de 11.75 oz. Resistencia extrema con triple pespunte. 
-                          Peto frontal con múltiples bolsillos.
+                           trabajo compacto con 2 bolsillos seguros en todo el cuerpo para un amplio almacenamiento, incluyendo bolsillos designados para teléfono y reglas para máxima seguridad.
                         </p>
                         <div className="space-y-2 mb-4">
                           <div className="flex items-start gap-2">
                             <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                            <span className="text-sm text-gray-700">Casi indestructible</span>
+                            <span className="text-sm text-gray-700">Diseño cómodo y conveniente</span>
                           </div>
                           <div className="flex items-start gap-2">
                             <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                            <span className="text-sm text-gray-700">Alta transpirabilidad</span>
+                            <span className="text-sm text-gray-700">Durabilidad garantizada</span>
                           </div>
                         </div>
                         <Button 
                           className="w-full bg-green-600 hover:bg-green-700"
-                          onClick={() => window.open('https://articulo.mercadolibre.com.mx/MLM-1358999335-overol-peto-dickies-8329-mezclilla-uso-rudo-resistente-_JM', '_blank')}
+                          onClick={() => window.open('https://mercadolibre.com/sec/1sD7aUv', '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Comprar en Mercado Libre
@@ -662,14 +661,14 @@ export default function OverolesTrabajoArticle() {
                         </div>
                         <Button 
                           className="w-full bg-green-600 hover:bg-green-700"
-                          onClick={() => window.open('https://articulo.mercadolibre.com.mx/MLM-3632338520-mono-de-mecanico-de-reparacion-trajes-de-trabajo-uniformes-_JM', '_blank')}
+                          onClick={() => window.open('https://mercadolibre.com/sec/1z6GYqc', '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Comprar en Mercado Libre
                         </Button>
                       </motion.div>
 
-                      {/* Producto 4: CODYTAVAREZ Cargo */}
+                      {/* Producto 4: Sanfu Uniforme */}
                       <motion.div
                         className="bg-white rounded-2xl border-2 border-blue-200 p-3 sm:p-4 md:p-6 hover:shadow-2xl transition-all"
                         initial={{ opacity: 0, y: 30 }}
@@ -678,18 +677,17 @@ export default function OverolesTrabajoArticle() {
                         whileHover={{ scale: 1.02 }}
                       >
                         <Badge className="bg-orange-500 mb-3">Máximo Almacenamiento</Badge>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">CODYTAVAREZ Overol Cargo</h3>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Sanfu® uniforme De Trabajo De Una Sola Pieza Multibolsillos</h3>
                         <div className="flex items-center gap-2 mb-3">
                           <div className="flex">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-600">4.7 (180+ reseñas)</span>
+                          <span className="text-sm text-gray-600">4.3 (300+ reseñas)</span>
                         </div>
                         <p className="text-gray-700 mb-4">
-                          Amplios bolsillos cargo en las piernas. Algodón satinado cómodo y transpirable. Cintura elástica 
-                          para mejor ajuste.
+                          El uniforme de trabajo es de buena calidad y cómodo, con tela resistente y múltiples bolsillos útiles para el trabajo.
                         </p>
                         <div className="space-y-2 mb-4">
                           <div className="flex items-start gap-2">
@@ -703,7 +701,7 @@ export default function OverolesTrabajoArticle() {
                         </div>
                         <Button 
                           className="w-full bg-green-600 hover:bg-green-700"
-                          onClick={() => window.open('https://articulo.mercadolibre.com.mx/MLM-1598245245-overol-industrial-bolsas-cargo-seguridad-uso-rudo-trabajo-_JM', '_blank')}
+                          onClick={() => window.open('https://mercadolibre.com/sec/1JKomB9', '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Comprar en Mercado Libre
@@ -726,7 +724,7 @@ export default function OverolesTrabajoArticle() {
                               <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-600">4.8 (120+ reseñas)</span>
+                          <span className="text-sm text-gray-600">5 (5+ reseñas)</span>
                         </div>
                         <p className="text-gray-700 mb-4">
                           Máxima seguridad visual con cintas reflectantes de 2". Gabardina poliéster/algodón robusta. 
@@ -744,7 +742,7 @@ export default function OverolesTrabajoArticle() {
                         </div>
                         <Button 
                           className="w-full bg-green-600 hover:bg-green-700"
-                          onClick={() => window.open('https://articulo.mercadolibre.com.mx/MLM-963468347-overol-industrial-alta-visibilidad-con-reflejantes-uso-rudo-_JM', '_blank')}
+                          onClick={() => window.open('https://mercadolibre.com/sec/2bXCQGF', '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Comprar en Mercado Libre
@@ -759,33 +757,32 @@ export default function OverolesTrabajoArticle() {
                         transition={{ delay: 0.5 }}
                         whileHover={{ scale: 1.02 }}
                       >
-                        <Badge className="bg-gray-700 mb-3">Barrera Química</Badge>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">PRO-TEX 6003 Tipo Tyvek</h3>
+                        <Badge className="bg-gray-700 mb-3">Seguridad</Badge>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Overol Industrial Bolsas Cargo Seguridad Uso Rudo Trabajo</h3>
                         <div className="flex items-center gap-2 mb-3">
                           <div className="flex">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-600">4.7 (95+ reseñas)</span>
+                          <span className="text-sm text-gray-600">4.3 (60+ reseñas)</span>
                         </div>
                         <p className="text-gray-700 mb-4">
-                          Overol desechable tipo Tyvek. Protección contra líquidos, polvos y químicos. Resistente pero 
-                          transpirable. Uso único.
+                          Mono con capucha. Cinta reflectante de alta visibilidad, cremallera de dos vías en la parte delantera de la prenda. Dos bolsillos en el pecho con cierre de cremallera. Dos bolsillos laterales. Un bolsillo trasero. Diseñado para llevar todo el día en todo flexible para ajustar el tamaño. 
                         </p>
                         <div className="space-y-2 mb-4">
                           <div className="flex items-start gap-2">
                             <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                            <span className="text-sm text-gray-700">Protección química</span>
+                            <span className="text-sm text-gray-700">Diseño cómodo y conveniente </span>
                           </div>
                           <div className="flex items-start gap-2">
                             <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                            <span className="text-sm text-gray-700">Económico por uso</span>
+                            <span className="text-sm text-gray-700">Durabilidad Garantizada</span>
                           </div>
                         </div>
                         <Button 
                           className="w-full bg-green-600 hover:bg-green-700"
-                          onClick={() => window.open('https://articulo.mercadolibre.com.mx/MLM-1353220802-overol-blanco-desechable-pro-tex-6003-tipo-tyvek-_JM', '_blank')}
+                          onClick={() => window.open('https://mercadolibre.com/sec/1ugpCn6', '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Comprar en Mercado Libre
@@ -955,8 +952,8 @@ export default function OverolesTrabajoArticle() {
                         los materiales expuestos y las normativas aplicables.
                       </p>
                       <p className="text-lg leading-relaxed mb-4">
-                        Ya sea que necesites la <b>durabilidad legendaria del Dickies</b>, la <b>movilidad superior del Red Kap</b>, 
-                        la <b>visibilidad del BRISCO</b> o la <b>protección química del PRO-TEX</b>, existe un overol diseñado específicamente 
+                        Ya sea que necesites una <b>durabilidad excepcional</b>, la <b>movilidad superior del GUIGUA</b>, 
+                        la <b>visibilidad del BRISCO</b> o la <b>comodidad de los overoles aquí presentados</b>, existe un overol diseñado específicamente 
                         para tu oficio y tus riesgos.
                       </p>
                       <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 md:p-6 rounded-xl">

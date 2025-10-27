@@ -41,7 +41,7 @@ export default function BotiquinesTrabajoArticle() {
       reviewCount: 69,
       isRecommended: true,
       bestFor: 'Oficinas y Comercios',
-      amazonLink: 'https://www.mercadolibre.com.mx/botiquin-metalico-extra-grande-mayor-capacidad-y-seguridad/p/MLM2040441748'
+      amazonLink: 'https://mercadolibre.com/sec/1dq6Lfe'
     },
     {
       id: 'industrial-num5',
@@ -50,7 +50,7 @@ export default function BotiquinesTrabajoArticle() {
       reviewCount: 43,
       isRecommended: false,
       bestFor: 'Industria Pesada',
-      amazonLink: 'https://www.mercadolibre.com.mx/botiquin-industrial-primeros-auxilios-urgencias-medico-num5/up/MLMU513224577'
+      amazonLink: 'https://mercadolibre.com/sec/2yRYKpK'
     },
     {
       id: 'matein-1233',
@@ -59,7 +59,7 @@ export default function BotiquinesTrabajoArticle() {
       reviewCount: 284,
       isRecommended: true,
       bestFor: 'Brigadistas y Móviles',
-      amazonLink: 'https://www.mercadolibre.com.mx/botiquin-multicompartimiento-de-primeros-auxilios-matein-1233-impermeable-color-negro/p/MLM37682961'
+      amazonLink: 'https://mercadolibre.com/sec/1GCdYb6'
     }
   ];
 
@@ -1052,7 +1052,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/jaloma-botiquin-en-caja-plastica-primeros-auxilios-22-pzas/p/MLM35212740"
+                              href="https://mercadolibre.com/sec/17VWdsg"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1155,7 +1155,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/caja-para-botiquin-de-primeros-auxilios-surtek/p/MLM23015343"
+                              href="https://mercadolibre.com/sec/2wiufhR"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1258,7 +1258,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/botiquin-metalico-extra-grande-mayor-capacidad-y-seguridad/p/MLM2040441748"
+                              href="https://mercadolibre.com/sec/1dq6Lfe"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1362,7 +1362,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/botiquin-multicompartimiento-de-primeros-auxilios-matein-1233-impermeable-color-negro/p/MLM37682961"
+                              href="https://mercadolibre.com/sec/1GCdYb6"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1479,7 +1479,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/blekrasi-kit-tactico-de-primeros-auxilios-de-emergencia-kit-de-supervivencia-de-primeros-auxilios-verde/p/MLM45691097"
+                              href="https://mercadolibre.com/sec/2D1XM9U"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1583,7 +1583,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/botiquin-industrial-primeros-auxilios-urgencias-medico-num5/up/MLMU513224577"
+                              href="https://mercadolibre.com/sec/2yRYKpK"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
