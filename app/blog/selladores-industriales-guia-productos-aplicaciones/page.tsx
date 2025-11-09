@@ -43,7 +43,7 @@ export default function SelladoresIndustrialesArticle() {
       reviewCount: 100,
       isRecommended: true,
       bestFor: 'Alto Desempeño Industrial',
-      amazonLink: 'https://www.mercadolibre.com.mx/sika-sikaflex-sellador-elastico-poliuretano-1a-300ml-color-negro/p/MLM24156214'
+      amazonLink: 'https://mercadolibre.com/sec/144sYAn'
     },
     {
       id: 'loctite-596',
@@ -52,7 +52,7 @@ export default function SelladoresIndustrialesArticle() {
       reviewCount: 85,
       isRecommended: false,
       bestFor: 'Altas Temperaturas',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-2120536951-silicon-alta-temp-formador-juntas-rtv-rojo-70-ml-loctite-596-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/1Lo35Ha'
     },
     {
       id: 'sika-anchorfix',
@@ -61,7 +61,7 @@ export default function SelladoresIndustrialesArticle() {
       reviewCount: 45,
       isRecommended: true,
       bestFor: 'Anclajes Estructurales',
-      amazonLink: 'https://www.mercadolibre.com.mx/sika-anchorfix2-tropical-adhesivo-para-anclajes-300-ml/up/MLMU562396917'
+      amazonLink: 'https://mercadolibre.com/sec/2J6An4L'
     }
   ];
 
@@ -1389,11 +1389,11 @@ export default function SelladoresIndustrialesArticle() {
                         <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $250 - $350 MXN</p>
+                              <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $279 - $350 MXN</p>
                               <p className="text-sm text-gray-600">* Cartucho 300ml - Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/sika-sikaflex-sellador-elastico-poliuretano-1a-300ml-color-negro/p/MLM24156214"
+                              href="https://mercadolibre.com/sec/144sYAn"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1527,7 +1527,7 @@ export default function SelladoresIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Tubo 70ml - Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-2120536951-silicon-alta-temp-formador-juntas-rtv-rojo-70-ml-loctite-596-_JM"
+                              href="https://mercadolibre.com/sec/1Lo35Ha"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1658,7 +1658,7 @@ export default function SelladoresIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Cartucho 300ml - Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/sika-anchorfix2-tropical-adhesivo-para-anclajes-300-ml/up/MLMU562396917"
+                              href="https://mercadolibre.com/sec/2Zz4qFv"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1785,7 +1785,7 @@ export default function SelladoresIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Cartucho 162ml - Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/sellador-acrilico-siliconado-pintable-grietas-alex-plus-dap-color-blanco/p/MLM25204286"
+                              href="https://mercadolibre.com/sec/1tjE5LE"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1796,7 +1796,7 @@ export default function SelladoresIndustrialesArticle() {
                         </div>
                       </motion.div>
 
-                      {/* Producto #5 - DOWSIL 732 */}
+                      {/* Producto #5 - DOWSIL 732 (antes)     Sellador Poliuretano 310ml Blanc tekbond  (ahora) */}
                       <motion.div 
                         className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200"
                         initial={{ opacity: 0, y: 50 }}
@@ -1808,12 +1808,12 @@ export default function SelladoresIndustrialesArticle() {
                             🏆 #5
                           </Badge>
                           <Badge className="bg-teal-100 text-teal-800 px-4 py-2 font-bold">
-                            CERTIFICACIÓN ALIMENTICIA
+                             
                           </Badge>
                         </div>
 
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                          DOWSIL 732 Multi-Purpose Sealant
+                          Sellador Poliuretano 310ml Blanc tekbond 
                         </h3>
 
                         <div className="flex items-center mb-4">
@@ -1920,7 +1920,7 @@ export default function SelladoresIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Buscar en Mercado Libre - Precio varía por vendedor</p>
                             </div>
                             <a 
-                              href="https://listado.mercadolibre.com.mx/silicon-dow-corning-732"
+                              href="https://mercadolibre.com/sec/1uqNhFp"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -2046,7 +2046,7 @@ export default function SelladoresIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Variable por color y formato - Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://listado.mercadolibre.com.mx/sellador-duretan"
+                              href="https://mercadolibre.com/sec/2mfa3UR"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

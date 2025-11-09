@@ -56,7 +56,7 @@ export default function CalzadoSeguridadArticle() {
       reviewCount: 266,
       isRecommended: true,
       bestFor: 'Electricistas y Mantenimiento',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-868680633-botas-seguridad-berrendo-3017-casco-policarbon-trabajo-puma-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/2VaKvc7'
     },
     {
       id: 'puma-p664',
@@ -1128,7 +1128,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-868680633-botas-seguridad-berrendo-3017-casco-policarbon-trabajo-puma-_JM"
+                              href="https://mercadolibre.com/sec/2VaKvc7"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1251,7 +1251,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-2132681711-botas-caterpillar-second-shift-wp-steel-toe-p91660-_JM"
+                              href="https://mercadolibre.com/sec/1KmV8U4"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1359,12 +1359,20 @@ export default function CalzadoSeguridadArticle() {
                           </div>
                         </div>
 
-                        <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
+                       <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-green-700 mb-2">💰 Buscar en tiendas especializadas</p>
-                              <p className="text-sm text-gray-600">* Disponibilidad limitada en marketplace mexicano</p>
+                              <p className="text-xl font-bold text-yellow-700 mb-2">💰 Disponible en Mercado Libre</p>
+                              <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
+                            <a 
+                              href="https://mercadolibre.com/sec/2FZYzJG"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                            >
+                              🛒 Ver en Mercado Libre →
+                            </a>
                           </div>
                         </div>
                       </motion.div>
@@ -1473,7 +1481,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-634787353-calzado-de-seguridad-riverline-spyg2-spyder-negro-y-azul-_JM"
+                              href="https://mercadolibre.com/sec/2hp3jwz"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1484,7 +1492,7 @@ export default function CalzadoSeguridadArticle() {
                         </div>
                       </motion.div>
 
-                      {/* Producto #5 - Puma Safety P664 */}
+                      {/* Producto #5 - Puma Safety P664 (ahora es Timberland Pro Pit 6 Botas Industriales Dieléctricas Seguridad) */}
                       <motion.div 
                         className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200"
                         initial={{ opacity: 0, y: 50 }}
@@ -1496,12 +1504,12 @@ export default function CalzadoSeguridadArticle() {
                             🔥 #5
                           </Badge>
                           <Badge className="bg-red-100 text-red-800 px-4 py-2 font-bold">
-                            MEJOR DISEÑO DEPORTIVO
+                            MEJOR DISEÑO 
                           </Badge>
                         </div>
 
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                          Puma Safety P664 Dieléctrico
+                          Timberland Pro Pit 6 Botas Industriales Dieléctricas Seguridad
                         </h3>
 
                         <div className="flex items-center mb-4">

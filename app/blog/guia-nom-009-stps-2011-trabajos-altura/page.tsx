@@ -236,22 +236,7 @@ export default function GuiaNOM009Article() {
                   alt="Trabajadores realizando trabajos en altura con EPP completo según NOM-009-STPS-2011"
                   className="w-full h-auto"
                 />
-              </div>
-              <div className="text-center">
-                <div className="text-8xl mb-6">🏗️</div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-700 mb-4">
-                  Imagen Principal del Artículo
-                </h3>
-                <p className="text-slate-600 text-lg mb-4">
-                  Aquí se colocará una imagen representativa de trabajos en altura y seguridad industrial
-                </p>
-                <div className="bg-slate-200 rounded-xl p-4 text-slate-600">
-                  <p className="font-semibold mb-2">📸 Imagen sugerida:</p>
-                  <p className="text-sm">
-                    Trabajadores con EPP completo realizando trabajos en altura, andamios seguros, 
-                    o infografía de los elementos de seguridad según NOM-009-STPS-2011
-                  </p>
-                </div>
+               
               </div>
             </motion.div>
           </div>
