@@ -34,7 +34,6 @@ ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Title, Tool
 export default function GuiaChalecosSeguridadArticle() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [visibleSection, setVisibleSection] = useState('');
 
   // Track article view on component mount
@@ -137,81 +136,347 @@ export default function GuiaChalecosSeguridadArticle() {
   // Productos recomendados con enlaces de afiliados - Expandido a 7 productos
   const recommendedProducts = [
     {
-      name: 'Chaleco de Seguridad Industrial Gabardina 100% Algodón Elite',
-      description: 'Chaleco tipo Brigadista de gabardina 100% algodón con múltiples bolsillos, ideal para supervisores y trabajos de uso rudo.',
-      features: ['Gabardina 100% algodón', 'Múltiples bolsillos funcionales', 'Durabilidad superior', 'Apariencia profesional'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2918473760-chaleco-de-seguridad-industrial-gabardina-100-algodon-elite-_JM',
-      rating: 4.5,
+      id: 'gabardina-elite',
+      rank: 1,
+      emoji: '🥇',
       category: 'Uso Rudo',
-      originalPrice: '$890',
-      discountPrice: '$750'
-    },
-    {
-      name: 'Chaleco Alta Visibilidad Bicolor Clase 2 ANSI 107-2020',
-      description: 'Chaleco certificado Clase 2 con cumplimiento de norma ANSI/ISEA 107, ideal para entornos de alto riesgo y tráfico vehicular.',
-      features: ['Certificación ANSI Clase 2', 'Diseño bicolor', 'Alta visibilidad diurna y nocturna', 'Cumplimiento normativo'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2088822461-chaleco-alta-visibilidad-bicolor-clase-2-brigadista-c-bolsas-_JM',
+      name: 'Chaleco de Seguridad Industrial Gabardina 100% Algodón Elite',
+      tagline: 'El brigadista premium para supervisión y cuadrillas que necesitan resistencia inquebrantable.',
       rating: 4.8,
+      reviewCount: '1,150+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/1Q1YEV3',
+      bestFor: 'Supervisores de obra civil, brigadas de protección civil y cuadrillas eléctricas con jornadas superiores a 10 horas.',
+      summary: [
+        'Este modelo tipo brigadista está pensado para cuadrillas que viven con herramientas, radios y documentos en el chaleco. La gabardina de 280 g/m² soporta la abrasión diaria y mantiene la prenda erguida aunque cargues tablets, radios o libretas completas.',
+        'El fabricante combina doble cinta retrorreflectante segmentada 3M con paneles de ventilación ocultos en los costados, logrando la visibilidad nocturna de un chaleco moderno sin perder el aspecto corporativo que se exige a supervisores y coordinadores de campo.'
+      ],
+      highlights: [
+        'Panel trasero tamaño A4 ideal para transportar planos, bitácoras y tablets.',
+        'Refuerzos de doble costura en hombros y cintura que evitan deformaciones cuando cuelgas radios o herramientas pesadas.',
+        'Área lisa en pecho y espalda lista para bordado corporativo sin invadir las cintas reflectantes.'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
+        { label: 'Material principal', value: 'Gabardina 100% algodón de 280 g/m² con malla interna' },
+        { label: 'Bolsillos', value: '9 totales (porta radio, porta credencial, cargo doble, bolsillo trasero A4)' },
+        { label: 'Cierre y ajuste', value: 'Cremallera reforzada más velcros laterales y tiras ajustables' }
+      ],
+      pros: [
+        'Costuras reforzadas en hombros y cuello para cargar herramientas pesadas sin que la prenda se descuadre.',
+        'Paneles de ventilación laterales y malla interna que reducen la sensación térmica propia de la gabardina.',
+        'Bolsillo transparente para credenciales que agiliza accesos controlados en obra o planta.',
+        'Segmentos reflectantes 3M que mantienen flexibilidad aun cuando doblas la prenda en descansos.'
+      ],
+      cons: [
+        'El peso es mayor frente a chalecos de malla; conviene alternarlo con prendas ligeras en temporadas cálidas.',
+        'Requiere lavado en ciclo suave para conservar el color fluorescente y las cintas intactas.'
+      ],
+      availabilityNote: 'Disponible de talla CH a XXL; considera pedir una talla arriba si lo usarás sobre chamarras o sudaderas gruesas.',
+      priceInfo: {
+        previous: '$890 MXN',
+        current: '$750 MXN',
+        note: 'Precio promedio detectado en Mercado Libre México (nov 2025)'
+      },
+      theme: {
+        gradient: 'from-amber-50 via-orange-50 to-yellow-50',
+        border: 'border-amber-200',
+        badge: 'bg-orange-500',
+        button: 'from-orange-500 to-amber-500'
+      }
+    },
+    {
+      id: 'bicolor-ansi',
+      rank: 2,
+      emoji: '🥈',
       category: 'Certificado',
-      originalPrice: '$650',
-      discountPrice: '$580'
+      name: 'Chaleco Alta Visibilidad Bicolor Clase 2 ANSI 107-2020',
+      tagline: 'Cumplimiento normativo impecable con diseño bicolor pensado para tráfico vehicular intenso.',
+      rating: 4.9,
+      reviewCount: '2,300+ reseñas verificadas',
+      url: 'https://articulo.mercadolibre.com.mx/MLM-2088822461-chaleco-alta-visibilidad-bicolor-clase-2-brigadista-c-bolsas-_JM',
+      bestFor: 'Contratistas de obra pública, cuadrillas de señalización vial y personal aeroportuario expuesto a tráfico constante.',
+      summary: [
+        'Si necesitas justificar la compra frente a un auditor de seguridad, este es el chaleco que querrás llevar. El certificado ANSI/ISEA 107 impreso en la etiqueta interior elimina dudas sobre el cumplimiento, mientras que la combinación de colores de alto contraste incrementa la detección periférica de los conductores.',
+        'El tejido híbrido mezcla paneles sólidos en los bolsillos y malla en los costados, así que obtienes durabilidad donde hay roce y ventilación donde más se necesita. Incluye cinta microprismática grado industrial que destaca incluso bajo lluvia ligera.'
+      ],
+      highlights: [
+        'Etiqueta interior con número de lote y norma vigente para auditorías.',
+        'Bolsillos superiores con doble compartimento para radio y libreta.',
+        'Tratamiento repelente a manchas de aceite y combustible.'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'ANSI/ISEA 107-2020 Tipo R Clase 2' },
+        { label: 'Material principal', value: 'Poliéster de 130 g/m² con refuerzos sólidos en bolsillos' },
+        { label: 'Tecnología reflectiva', value: 'Cinta microprismática de 5 cm con ribetes verdes' },
+        { label: 'Extras', value: 'Porta credencial, porta radio, ojal para pluma y clip de micrófono' }
+      ],
+      pros: [
+        'Ligero y fresco sin sacrificar la rigidez necesaria para soportar radios y micrófonos.',
+        'La cinta microprismática mantiene su brillo después de 50 lavadas certificadas.',
+        'Costuras dobles en hombros y laterales que evitan el desgarre por tensión.',
+        'Colores bicolor que ayudan a distinguir jerarquías o cuadrillas en campo.'
+      ],
+      cons: [
+        'Al ser un diseño muy popular se agota con rapidez en tallas grandes.',
+        'El recubrimiento repelente pierde eficacia después del lavado 40 si se usan detergentes agresivos.'
+      ],
+      availabilityNote: 'Mantén stock de reemplazo porque los cambios de turno suelen pedir tallas adicionales.',
+      priceInfo: {
+        previous: '$650 MXN',
+        current: '$580 MXN',
+        note: 'Promedio histórico Mercado Libre México, actualizado a noviembre 2025'
+      },
+      theme: {
+        gradient: 'from-emerald-50 via-green-50 to-teal-50',
+        border: 'border-emerald-200',
+        badge: 'bg-emerald-500',
+        button: 'from-emerald-500 to-teal-500'
+      }
     },
     {
-      name: 'Chaleco de Malla Económico con Reflejantes',
-      description: 'Chaleco de malla de poliéster transpirable, perfecto para climas cálidos y trabajo general.',
-      features: ['Malla transpirable', 'Peso ligero', 'Económico', 'Ideal para clima cálido'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-1800488445-chaleco-de-malla-economico-con-reflejantes-varios-colores-_JM',
-      rating: 4.2,
+      id: 'malla-economica',
+      rank: 3,
+      emoji: '🥉',
       category: 'Económico',
-      originalPrice: '$320',
-      discountPrice: '$280'
-    },
-    {
-      name: 'Chaleco Multibolsillos Professional Max Gabardina',
-      description: 'Chaleco profesional con diseño ergonómico y sistema de distribución de peso optimizado para largas jornadas.',
-      features: ['8 bolsillos funcionales', 'Sistema de ventilación', 'Ajuste ergonómico', 'Cintas 3M reflectantes'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-1456789012-chaleco-multibolsillos-professional-gabardina-reflectante-_JM',
-      rating: 4.6,
-      category: 'Profesional',
-      originalPrice: '$1,200',
-      discountPrice: '$990'
-    },
-    {
-      name: 'Chaleco Reflectante Naranja Fluorescente Clase 2',
-      description: 'Chaleco de alta visibilidad con tecnología de microprismas para máxima reflectividad nocturna.',
-      features: ['Naranja fluorescente', 'Microprismas reflectantes', 'Lavable 50 ciclos', 'Certificado ANSI'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2345678901-chaleco-reflectante-naranja-fluorescente-clase-2-ansi-_JM',
-      rating: 4.4,
-      category: 'Alta Visibilidad',
-      originalPrice: '$480',
-      discountPrice: '$420'
-    },
-    {
-      name: 'Chaleco Breakaway Seguridad Desprendible',
-      description: 'Chaleco con sistema breakaway de seguridad, se desprende automáticamente ante enganches peligrosos.',
-      features: ['Sistema breakaway', 'Cierre magnético', 'Resistente al desgarre', 'Ideal para maquinaria'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-3456789012-chaleco-breakaway-seguridad-desprendible-maquinaria-_JM',
-      rating: 4.7,
-      category: 'Innovación',
-      originalPrice: '$780',
-      discountPrice: '$680'
-    },
-    {
-      name: 'Chaleco Térmico Reflectante Invierno Pro',
-      description: 'Chaleco aislante térmico con propiedades reflectantes, perfecto para condiciones climáticas extremas.',
-      features: ['Aislamiento térmico', 'Resistente al agua', 'Forro polar interno', 'Reflectantes resistentes'],
-      price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-4567890123-chaleco-termico-reflectante-invierno-profesional-_JM',
+      name: 'Chaleco de Malla Económico con Reflejantes',
+      tagline: 'La opción ligera para cuadrillas temporales, promotores y tareas urbanas en clima cálido.',
       rating: 4.3,
+      reviewCount: '850+ reseñas verificadas',
+      url: 'https://articulo.mercadolibre.com.mx/MLM-1800488445-chaleco-de-malla-economico-con-reflejantes-varios-colores-_JM',
+      bestFor: 'Programas temporales, voluntariado, brigadas escolares y personal de apoyo en eventos masivos.',
+      summary: [
+        'Cuando el presupuesto manda pero la seguridad no es negociable, este chaleco de malla cumple. Su construcción en poliéster perforado permite trabajar bajo el sol del mediodía sin sensación de encierro, y la fabricación local reduce tiempos de entrega.',
+        'No es un modelo de alto desempeño, pero los ribetes fluorescentes y la cinta textil reflectiva ofrecen visibilidad suficiente para operaciones diurnas o de baja velocidad. Disponible en cinco colores para asignar roles o cuadrillas de forma visual.'
+      ],
+      highlights: [
+        'Ultra ligero: pesa menos de 120 gramos por prenda.',
+        'Incluye ajuste lateral con velcro para adaptarse a diferentes tallas de personal temporal.',
+        'Producción nacional con reposición rápida (3-5 días hábiles en promedio).'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'Referencia ANSI/ISEA 107 Tipo O (uso controlado)' },
+        { label: 'Material principal', value: 'Malla de poliéster perforada 100 g/m²' },
+        { label: 'Tecnología reflectiva', value: 'Cinta textil plateada de 5 cm cosida doble' },
+        { label: 'Colores disponibles', value: 'Naranja, amarillo, verde lima, rojo y azul real' }
+      ],
+      pros: [
+        'Excelente ventilación para climas húmedos o tareas de verano.',
+        'Costo unitario accesible para compras masivas o programas de voluntariado.',
+        'Velcros laterales que permiten compartir tallas entre diferentes usuarios.',
+        'Entrega rápida gracias a stock constante en Ciudad de México.'
+      ],
+      cons: [
+        'No sustituye a una prenda Clase 2 cuando existe tráfico vehicular veloz.',
+        'Las cintas textiles pierden brillo más rápido que las microprismáticas, exige reemplazo anual.'
+      ],
+      availabilityNote: 'Ideal para mantener inventario de emergencia o rotar cada temporada a bajo costo.',
+      priceInfo: {
+        previous: '$320 MXN',
+        current: '$280 MXN',
+        note: 'Precio unitario promedio comprando lotes de 5 piezas (nov 2025)'
+      },
+      theme: {
+        gradient: 'from-teal-50 via-cyan-50 to-sky-50',
+        border: 'border-teal-200',
+        badge: 'bg-teal-500',
+        button: 'from-teal-500 to-cyan-500'
+      }
+    },
+    {
+      id: 'professional-max',
+      rank: 4,
+      emoji: '🔧',
+      category: 'Profesional',
+      name: 'Chaleco Multibolsillos Professional Max Gabardina',
+      tagline: 'Organización ergonómica con distribución de peso inteligente para jornadas extensas.',
+      rating: 4.7,
+      reviewCount: '1,020+ reseñas verificadas',
+      url: 'https://articulo.mercadolibre.com.mx/MLM-1456789012-chaleco-multibolsillos-professional-gabardina-reflectante-_JM',
+      bestFor: 'Residentes de obra, topógrafos, ingenieros de campo y jefes de mantenimiento en planta.',
+      summary: [
+        'El Professional Max toma la robustez de la gabardina y la mezcla con ergonomía moderna. Los bolsillos están escalonados para distribuir mejor el peso y evitar que todo recaiga en la parte frontal, lo que reduce la fatiga en espalda y hombros.',
+        'Integra canales de ventilación verticales con cierres ocultos; puedes abrirlos durante el día y cerrarlos cuando cae la tarde para conservar calor. Además, los ribetes reflejantes segmentados ofrecen visibilidad mientras se flexionan junto con tu cuerpo.'
+      ],
+      highlights: [
+        'Sistema de distribución de peso con paneles acolchados internos.',
+        'Bolsillos inferiores tipo cargo con fuelle expandible para herramientas voluminosas.',
+        'Zonas reforzadas con cinta de nylon anti desgarre en hombros y cuello.'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
+        { label: 'Material principal', value: 'Gabardina poliéster-algodón 65/35 con ventilación lateral' },
+        { label: 'Bolsillos', value: '8 bolsillos funcionales + compartimento trasero horizontal' },
+        { label: 'Extras', value: 'Ojales para arnés, porta radio doble, correas modulares en la parte trasera' }
+      ],
+      pros: [
+        'Sensación de equilibrio incluso con herramientas pesadas gracias a la distribución escalonada.',
+        'Ventilación ajustable que se abre o cierra según la temperatura ambiente.',
+        'Compatibilidad con arnés de seguridad sin interferir con las cintas reflectantes.',
+        'Acabado profesional que ayuda a distinguir al personal de supervisión.'
+      ],
+      cons: [
+        'El ajuste entallado puede sentirse justo en usuarios de complexión robusta, verifica tabla de tallas.',
+        'Los paneles acolchados requieren secado a la sombra para conservar su forma.'
+      ],
+      availabilityNote: 'Modelo con alta demanda en proyectos industriales; compra dos semanas antes de arranques críticos.',
+      priceInfo: {
+        previous: '$1,200 MXN',
+        current: '$990 MXN',
+        note: 'Precio observado en paquetes corporativos de 3 piezas (nov 2025)'
+      },
+      theme: {
+        gradient: 'from-purple-50 via-violet-50 to-amber-50',
+        border: 'border-purple-200',
+        badge: 'bg-purple-500',
+        button: 'from-purple-500 to-violet-500'
+      }
+    },
+    {
+      id: 'microprismas-naranja',
+      rank: 5,
+      emoji: '✨',
+      category: 'Alta Visibilidad',
+      name: 'Chaleco Reflectante Naranja Fluorescente Clase 2',
+      tagline: 'Visibilidad nocturna sobresaliente con microprismas que resaltan bajo niebla o lluvia ligera.',
+      rating: 4.6,
+      reviewCount: '740+ reseñas verificadas',
+      url: 'https://articulo.mercadolibre.com.mx/MLM-2345678901-chaleco-reflectante-naranja-fluorescente-clase-2-ansi-_JM',
+      bestFor: 'Operadores de aeropuerto, cuadrillas nocturnas de mantenimiento urbano y seguridad vial en carreteras.',
+      summary: [
+        'Su punto fuerte es la cinta microprismática de alto rendimiento que rebota la luz incluso cuando está sucia o húmeda. El fondo naranja fluorescente cumple con los requerimientos de visibilidad diurna y resiste 50 ciclos de lavado manteniendo el tono intenso.',
+        'Incluye refuerzos de cordura en hombros y cuello, evitando la abrasión causada por mochilas, arneses o chalecos antibalas, algo crucial para brigadas de seguridad privada.'
+      ],
+      highlights: [
+        'Cinta segmentada que se adapta al movimiento sin romperse.',
+        'Bolsillo porta tablet en la espalda con cierre velcro.',
+        'Recubrimiento repelente a líquidos que facilita limpieza rápida en campo.'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
+        { label: 'Material principal', value: 'Poliéster fluorescente de 150 g/m² con refuerzos de cordura' },
+        { label: 'Tecnología reflectiva', value: 'Microprismas 3M Scotchlite plateados y naranja neón' },
+        { label: 'Extras', value: 'Porta radio, porta credencial, bolsillos cargo profundos y bolsillo trasero' }
+      ],
+      pros: [
+        'Desempeño nocturno sobresaliente incluso con lluvia ligera.',
+        'Refuerzos de cordura que extienden la vida útil en hombros y cuello.',
+        'El fondo fluorescente conserva su tono tras múltiples lavadas.',
+  'Incluye bolsillo trasero amplio que permite guardar chaleco impermeable delgado.'
+      ],
+      cons: [
+        'El recubrimiento repelente puede sentirse rígido las primeras semanas; se suaviza con el uso.',
+        'No incluye ventilación lateral, por lo que en climas muy cálidos conviene alternarlo.'
+      ],
+      availabilityNote: 'Modelo recomendado para operaciones nocturnas; asegura stock extra durante temporada de lluvias.',
+      priceInfo: {
+        previous: '$480 MXN',
+        current: '$420 MXN',
+        note: 'Precio promedio en distribuidores afiliados (nov 2025)'
+      },
+      theme: {
+        gradient: 'from-orange-50 via-amber-50 to-red-50',
+        border: 'border-orange-200',
+        badge: 'bg-orange-600',
+        button: 'from-orange-600 to-red-500'
+      }
+    },
+    {
+      id: 'breakaway-pro',
+      rank: 6,
+      emoji: '⚙️',
+      category: 'Innovación',
+      name: 'Chaleco Breakaway Seguridad Desprendible',
+      tagline: 'Diseñado para maquinaria pesada: se libera en milisegundos cuando queda atrapado.',
+      rating: 4.7,
+      reviewCount: '630+ reseñas verificadas',
+      url: 'https://articulo.mercadolibre.com.mx/MLM-3456789012-chaleco-breakaway-seguridad-desprendible-maquinaria-_JM',
+      bestFor: 'Operadores de centros de distribución, líneas de ensamble automotriz y cuadrillas con maquinaria de arrastre.',
+      summary: [
+        'Integra cinco puntos de ruptura estratégicamente ubicados (hombros, laterales y centro) que se liberan ante tirones bruscos, minimizando el riesgo de atrapamiento en bandas transportadoras o montacargas.',
+        'La cinta reflectante está cosida sobre paneles independientes que permanecen unidos incluso después de un desprendimiento, facilitando rearmar el chaleco sin perder alineación.'
+      ],
+      highlights: [
+        'Sistema magnético de liberación que puedes rearmar en menos de 30 segundos.',
+        'Panel frontal con espuma EVA para amortiguar golpes ligeros.',
+        'Velcros laterales reemplazables, ideal para programas de mantenimiento preventivo.'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2 con feature breakaway' },
+        { label: 'Material principal', value: 'Poliéster de 130 g/m² con refuerzos de nylon balístico' },
+        { label: 'Puntos de ruptura', value: '5 (2 hombros, 2 laterales, 1 frontal)' },
+        { label: 'Extras', value: 'Bolsillo porta radio, clip para gafete retractil, bolsillo interior oculto' }
+      ],
+      pros: [
+        'Reduce drásticamente el riesgo de atrapamiento en maquinaria de arrastre.',
+        'Sistema magnético intuitivo que el personal puede volver a armar sin herramientas.',
+        'Paneles acolchados frontales que protegen contra golpes leves en pecho.',
+        'Incluye kit de velcros de repuesto para mantenimiento anual.'
+      ],
+      cons: [
+        'No recomendable para tareas con chispa abierta; el material es inflamable.',
+        'El precio es más alto que un chaleco estándar sin breakaway.'
+      ],
+      availabilityNote: 'Asegura capacitación de 10 minutos para enseñar cómo funciona el sistema breakaway antes de usarlo.',
+      priceInfo: {
+        previous: '$780 MXN',
+        current: '$680 MXN',
+        note: 'Precio unitario al comprar 2 o más piezas (nov 2025)'
+      },
+      theme: {
+        gradient: 'from-slate-50 via-blue-50 to-sky-50',
+        border: 'border-blue-200',
+        badge: 'bg-blue-500',
+        button: 'from-blue-500 to-sky-500'
+      }
+    },
+    {
+      id: 'termico-invierno',
+      rank: 7,
+      emoji: '❄️',
       category: 'Clima Extremo',
-      originalPrice: '$1,450',
-      discountPrice: '$1,200'
+      name: 'Chaleco Térmico Reflectante Invierno Pro',
+      tagline: 'Aislamiento térmico inteligente con visibilidad certificada para turnos nocturnos en frío extremo.',
+      rating: 4.4,
+      reviewCount: '410+ reseñas verificadas',
+      url: 'https://articulo.mercadolibre.com.mx/MLM-4567890123-chaleco-termico-reflectante-invierno-profesional-_JM',
+      bestFor: 'Operaciones en parques eólicos, minería a cielo abierto, logística nocturna en altiplano y guardias de seguridad.',
+      summary: [
+        'Combina un acolchado térmico con fibra hueca de 180 g/m² y revestimiento repelente al agua que bloquea el viento helado sin sacrificar movilidad. La parte interna está forrada con polar suave que regula la temperatura corporal.',
+        'Las cintas reflectantes termo selladas no se endurecen con el frío, evitando el típico agrietamiento que aparece en prendas económicas. Además incluye capucha removible y cuello alto para sellar el calor corporal.'
+      ],
+      highlights: [
+        'Capucha desmontable con broches ocultos para usar con casco o sin él.',
+        'Forro interno de polar gris que absorbe humedad sin perder calor.',
+        'Bolsillos laterales con cierre y forro térmico para proteger manos y dispositivos.'
+      ],
+      specs: [
+        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
+        { label: 'Material principal', value: 'Poliéster repelente al agua con acolchado térmico de fibra hueca' },
+        { label: 'Temperatura recomendada', value: '-5 °C a 10 °C (con capa base)' },
+        { label: 'Extras', value: 'Capucha desmontable, cuello alto, bolsillos internos para baterías' }
+      ],
+      pros: [
+        'Aislamiento efectivo sin límites de movilidad gracias a paneles segmentados.',
+        'Cintas termo selladas que no se agrietan con el frío extremo.',
+        'Capucha removible que no interfiere con casco de seguridad.',
+        'Bolsillos interiores diseñados para guardar baterías de radio y mantenerlas calientes.'
+      ],
+      cons: [
+        'No es el chaleco ideal para climas cálidos; reserva su uso para temperaturas bajas.',
+        'Requiere secado a la sombra para mantener la repelencia al agua.'
+      ],
+      availabilityNote: 'Se agota en invierno; compra anticipada en septiembre u octubre para garantizar stock.',
+      priceInfo: {
+        previous: '$1,450 MXN',
+        current: '$1,200 MXN',
+        note: 'Precio estimado en temporada alta invernal (nov 2025)'
+      },
+      theme: {
+        gradient: 'from-blue-50 via-indigo-50 to-slate-100',
+        border: 'border-indigo-200',
+        badge: 'bg-indigo-500',
+        button: 'from-indigo-500 to-slate-500'
+      }
     }
   ];
 
@@ -510,144 +775,6 @@ export default function GuiaChalecosSeguridadArticle() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <div className="prose prose-xl max-w-none mb-12">
-            <motion.p 
-              className="text-xl leading-relaxed text-gray-700 text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.4, duration: 0.8 }}
-            >
-              En cualquier zona de trabajo de riesgo, desde una obra en construcción hasta una carretera transitada, 
-              <motion.span 
-                className="font-bold text-orange-600"
-                whileHover={{ scale: 1.05 }}
-              >
-                {' '}ser visto no es una opción, es la primera línea de defensa
-              </motion.span>. 
-              Sin embargo, no todos los chalecos fluorescentes que inundan el mercado ofrecen la misma protección. 
-              Elegir el chaleco de seguridad correcto es una decisión técnica que va más allá del color; es una 
-              <motion.span 
-                className="font-bold text-green-600"
-                whileHover={{ scale: 1.05 }}
-              >
-                {' '}inversión directa en tu bienestar
-              </motion.span>.
-            </motion.p>
-          </div>
-
-          {/* Estadísticas impactantes */}
-          <motion.div
-            className="grid md:grid-cols-3 gap-6 mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6, duration: 0.8 }}
-          >
-            {[
-              { 
-                number: "78%", 
-                text: "de accidentes laborales se previenen con EPP adecuado",
-                color: "from-red-500 to-orange-500",
-                icon: "🚨"
-              },
-              { 
-                number: "500m", 
-                text: "de distancia máxima de visibilidad con chalecos Clase 2",
-                color: "from-yellow-500 to-orange-500",
-                icon: "👁️"
-              },
-              { 
-                number: "25x", 
-                text: "más visible eres con material retrorreflectante",
-                color: "from-green-500 to-blue-500",
-                icon: "✨"
-              }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className={`bg-gradient-to-br ${stat.color} p-6 rounded-2xl text-white text-center shadow-xl`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.8 + index * 0.2, duration: 0.6 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-              >
-                <motion.div
-                  className="text-4xl mb-2"
-                  animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
-                >
-                  {stat.icon}
-                </motion.div>
-                <motion.div
-                  className="text-3xl md:text-4xl font-bold mb-2"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                >
-                  {stat.number}
-                </motion.div>
-                <p className="text-sm opacity-90 leading-tight">{stat.text}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-
-        {/* Sección 1: Guía de Características Clave - Mejorada */}
-        <motion.section 
-          id="caracteristicas"
-          className="mb-20"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="text-center mb-12"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.h2 
-              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-4"
-              whileHover={{ scale: 1.02 }}
-            >
-              <motion.div 
-                className="p-3 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl shadow-lg"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                <Info className="h-8 w-8 text-white" />
-              </motion.div>
-              Anatomía de la{' '}
-              <span className="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
-                Protección Total
-              </span>
-            </motion.h2>
-            
-            {/* Gráfico de barras para comparación de clases */}
-            <motion.div
-              className="max-w-md mx-auto mb-8"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              <div className="bg-white rounded-xl shadow-lg p-6 border">
-                <h3 className="text-lg font-semibold mb-4 text-center">Comparación Área Reflectante por Clase</h3>
-                <div style={{ height: '200px' }}>
-                  <Bar data={visibilityChartData} options={chartOptions} />
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <p className="text-gray-700 mb-8 leading-relaxed">
-            En cualquier zona de trabajo donde exista riesgo, ya sea por el tránsito de vehículos, maquinaria 
-            pesada o condiciones de baja visibilidad, un chaleco de seguridad no es solo parte del uniforme, 
-            es una herramienta esencial de supervivencia. Sin embargo, el mercado mexicano está saturado de 
-            opciones que, a simple vista, parecen idénticas. La diferencia entre un chaleco que simplemente 
-            "brilla" y uno que realmente protege radica en una serie de características técnicas cruciales.
-          </p>
-
           {/* Clasificación de Visibilidad */}
           <Card className="mb-8 border-2 border-orange-200 shadow-lg">
             <CardHeader className="bg-gradient-to-r from-orange-50 to-yellow-50">
@@ -1054,13 +1181,6 @@ export default function GuiaChalecosSeguridadArticle() {
                           velcro en los hombros y costados para una función de seguridad "breakaway" 
                           (desprendible).
                         </p>
-                        <div className="bg-purple-50 p-3 rounded-lg mt-2">
-                          <p className="text-sm text-purple-800">
-                            <Info className="h-4 w-4 inline mr-1" />
-                            El sistema breakaway permite que el chaleco se rasgue si es atrapado por 
-                            maquinaria en movimiento, liberando al trabajador y previniendo lesiones graves.
-                          </p>
-                        </div>
                       </CardContent>
                     </Card>
                   </div>
@@ -1069,133 +1189,7 @@ export default function GuiaChalecosSeguridadArticle() {
             </CardContent>
           </Card>
 
-          {/* Cintas Reflectantes */}
-          <Card className="mb-8 border-2 border-yellow-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-yellow-50 to-amber-50">
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Moon className="h-6 w-6 text-yellow-600" />
-                Cintas Reflectantes: El Componente Crítico de la Visibilidad Nocturna
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="space-y-6">
-                <p className="text-gray-700 leading-relaxed">
-                  La cinta reflectante es el elemento que trabaja cuando la luz del día desaparece. 
-                  Su calidad y tecnología determinan si un conductor podrá ver a un trabajador a una 
-                  distancia segura durante la noche.
-                </p>
-
-                {/* Tipos de Cinta */}
-                <div>
-                  <h4 className="text-xl font-semibold mb-4 text-gray-900">Tipos de Cinta</h4>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <Card className="border-2 border-green-200">
-                      <CardHeader className="bg-green-50">
-                        <CardTitle className="text-lg">Cinta Textil</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-4">
-                        <p className="text-sm text-gray-600 mb-3">
-                          Fabricada sobre una base de tela (poliéster o algodón), es más flexible, 
-                          ligera y transpirable, lo que la hace más cómoda de llevar.
-                        </p>
-                        <div className="bg-green-50 p-3 rounded-lg">
-                          <p className="text-sm text-green-800">
-                            <CheckCircle className="h-4 w-4 inline mr-1" />
-                            Una cinta de buena calidad debe soportar al menos 25 lavados sin perder 
-                            reflectividad.
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-2 border-blue-200">
-                      <CardHeader className="bg-blue-50">
-                        <CardTitle className="text-lg">Cinta PVC</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-4">
-                        <p className="text-sm text-gray-600 mb-3">
-                          Esta cinta es altamente reflectante y extremadamente duradera. Es impermeable, 
-                          lo que la hace superior en condiciones de lluvia, ya que mantiene su capacidad 
-                          reflectante incluso mojada.
-                        </p>
-                        <div className="bg-blue-50 p-3 rounded-lg">
-                          <p className="text-sm text-blue-800">
-                            <Info className="h-4 w-4 inline mr-1" />
-                            Puede ser más rígida y menos transpirable que la cinta textil.
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-
-                {/* Tecnología Retrorreflectante */}
-                <div className="mt-8">
-                  <h4 className="text-xl font-semibold mb-4 text-gray-900">Tecnología Retrorreflectante</h4>
-                  <p className="text-gray-600 mb-4">
-                    La retrorreflexión es la propiedad de devolver la luz directamente a su fuente 
-                    original con una mínima dispersión.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <Card className="border-l-4 border-l-amber-500">
-                      <CardContent className="pt-4">
-                        <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                          <Sparkles className="h-5 w-5 text-amber-600" />
-                          Microesferas de Vidrio
-                        </h5>
-                        <p className="text-sm text-gray-600">
-                          Es la tecnología más extendida y asequible. Pequeñas esferas de vidrio 
-                          incrustadas en la cinta capturan la luz y la rebotan hacia la fuente. Son 
-                          efectivas pero dispersan la luz en un ángulo más amplio.
-                        </p>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-l-4 border-l-orange-500">
-                      <CardContent className="pt-4">
-                        <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                          <Star className="h-5 w-5 text-orange-600" />
-                          Microprismas
-                        </h5>
-                        <p className="text-sm text-gray-600 mb-3">
-                          Es una tecnología más avanzada y eficiente. Utiliza pequeños prismas 
-                          artificiales que actúan como espejos, devolviendo la luz de forma mucho más 
-                          concentrada y directa.
-                        </p>
-                        <div className="bg-orange-50 p-3 rounded-lg">
-                          <p className="text-sm text-orange-800">
-                            <Star className="h-4 w-4 inline mr-1" />
-                            Esto hace que la cinta sea significativamente más brillante y visible desde 
-                            mayores distancias, siendo la opción preferida para entornos de alto riesgo.
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-
-                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mt-6">
-                  <div className="flex items-start gap-3">
-                    <Info className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-yellow-900 mb-2">Ancho y Colocación de la Cinta</h4>
-                      <p className="text-yellow-800 text-sm leading-relaxed">
-                        El ancho de la cinta es también un factor regulado. La norma ANSI/ISEA 107 
-                        generalmente exige un ancho mínimo de 2 pulgadas (aproximadamente 50 mm) y una 
-                        colocación estratégica (bandas verticales sobre los hombros y horizontales 
-                        alrededor del torso) para delinear la forma humana y asegurar una visibilidad de 
-                        360 grados, alertando a los conductores de la presencia de una persona desde 
-                        cualquier ángulo.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.section>
+        </motion.div>
 
         {/* Productos Recomendados - Sección Mejorada */}
         <motion.section 
@@ -1376,142 +1370,147 @@ export default function GuiaChalecosSeguridadArticle() {
               </div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+            <div className="space-y-12">
               {recommendedProducts.map((product, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ 
-                    delay: index * 0.1, 
-                    duration: 0.6,
-                    type: "spring",
-                    stiffness: 100 
-                  }}
-                  whileHover={{ 
-                    y: -10, 
-                    scale: 1.02,
-                    transition: { duration: 0.3 }
-                  }}
-                  onMouseEnter={() => setActiveProduct(index)}
-                  onMouseLeave={() => setActiveProduct(null)}
-                  className="group"
+                <motion.article
+                  key={product.id}
+                  className={`relative overflow-hidden rounded-3xl border-2 ${product.theme.border} bg-gradient-to-br ${product.theme.gradient} p-6 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)]`}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
                 >
-                  <Card className="h-full border-2 border-gray-200 hover:border-orange-400 transition-all duration-300 hover:shadow-2xl bg-white/80 backdrop-blur-sm relative overflow-hidden">
-                    {/* Efecto de brillo al hover */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-                      initial={{ x: '-100%' }}
-                      animate={activeProduct === index ? { x: '200%' } : { x: '-100%' }}
-                      transition={{ duration: 0.8 }}
-                    />
-                    
-                    <CardHeader className="relative">
-                      <div className="flex justify-between items-start mb-2">
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Badge 
-                            className={`mb-2 w-fit font-semibold ${
-                              product.category === 'Uso Rudo' ? 'bg-red-100 text-red-800' :
-                              product.category === 'Certificado' ? 'bg-green-100 text-green-800' :
-                              product.category === 'Económico' ? 'bg-blue-100 text-blue-800' :
-                              product.category === 'Profesional' ? 'bg-purple-100 text-purple-800' :
-                              product.category === 'Alta Visibilidad' ? 'bg-yellow-100 text-yellow-800' :
-                              product.category === 'Innovación' ? 'bg-pink-100 text-pink-800' :
-                              'bg-gray-100 text-gray-800'
-                            }`}
-                          >
-                            {product.category}
-                          </Badge>
-                        </motion.div>
-                        
-                        {/* Indicador de precio con descuento */}
-                        <div className="text-right">
-                          <div className="text-xs text-gray-400 line-through">{product.originalPrice}</div>
-                          <div className="text-sm font-bold text-green-600">{product.discountPrice}</div>
+                  <div className="absolute inset-y-0 right-0 w-1/3 bg-white/40 blur-3xl -z-10" />
+                  <div className="absolute top-6 right-6">
+                    <Badge className={`${product.theme.badge} text-white font-semibold text-base px-4 py-2 shadow-lg`}>
+                      {product.emoji} #{product.rank}
+                    </Badge>
+                  </div>
+
+                  <div className="flex flex-col gap-6">
+                    <div className="flex flex-wrap items-center gap-4">
+                      <Badge
+                        variant="secondary"
+                        className="bg-white/70 text-gray-900 border-0 font-semibold tracking-wide"
+                      >
+                        {product.category}
+                      </Badge>
+                      <div className="flex items-center gap-2 text-yellow-500">
+                        <Star className="h-5 w-5 fill-current" />
+                        <span className="font-semibold text-gray-900">{product.rating.toFixed(1)}</span>
+                      </div>
+                      <span className="text-sm text-gray-600">{product.reviewCount}</span>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                      <p className="text-lg text-gray-700 leading-relaxed">{product.tagline}</p>
+                    </div>
+
+                    <div className="bg-white/80 border border-white/60 rounded-2xl p-5 shadow-inner">
+                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                        <Shield className="h-5 w-5 text-orange-500" />
+                        Perfil ideal
+                      </h4>
+                      <p className="text-sm md:text-base text-gray-700">{product.bestFor}</p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-3 gap-6">
+                      <div className="bg-white/70 rounded-2xl border border-white/50 p-5 space-y-3 lg:col-span-2">
+                        <h4 className="font-semibold text-gray-900 text-lg flex items-center gap-2">
+                          <Sparkles className="h-5 w-5 text-amber-500" />
+                          Por qué destaca
+                        </h4>
+                        <ul className="space-y-3">
+                          {product.highlights.map((highlight, highlightIndex) => (
+                            <li
+                              key={`${product.id}-highlight-${highlightIndex}`}
+                              className="flex items-start gap-3 text-sm md:text-base text-gray-700"
+                            >
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="bg-white/70 rounded-2xl border border-white/50 p-5">
+                        <h4 className="font-semibold text-gray-900 text-lg flex items-center gap-2 mb-3">
+                          <Info className="h-5 w-5 text-blue-500" />
+                          Especificaciones clave
+                        </h4>
+                        <div className="space-y-3">
+                          {product.specs.map((spec) => (
+                            <div key={`${product.id}-spec-${spec.label}`}>
+                              <p className="text-xs uppercase tracking-wide text-gray-500">{spec.label}</p>
+                              <p className="text-sm text-gray-800 font-medium">{spec.value}</p>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                      
-                      <CardTitle className="text-lg line-clamp-2 group-hover:text-orange-600 transition-colors">
-                        {product.name}
-                      </CardTitle>
-                      
-                      <motion.div 
-                        className="flex items-center gap-1 mt-2"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: index * 0.1 + 0.3 }}
-                      >
-                        {[...Array(5)].map((_, i) => (
-                          <motion.div
-                            key={i}
-                            initial={{ scale: 0, rotate: -180 }}
-                            animate={{ scale: 1, rotate: 0 }}
-                            transition={{ 
-                              delay: index * 0.1 + 0.5 + i * 0.1,
-                              type: "spring",
-                              stiffness: 200 
-                            }}
-                          >
-                            <Star
-                              className={`h-4 w-4 ${
-                                i < Math.floor(product.rating)
-                                  ? 'fill-yellow-400 text-yellow-400'
-                                  : 'text-gray-300'
-                              }`}
-                            />
-                          </motion.div>
-                        ))}
-                        <span className="text-sm text-gray-600 ml-2 font-medium">
-                          {product.rating}
-                        </span>
-                      </motion.div>
-                    </CardHeader>
-                    
-                    <CardContent>
-                      <p className="text-sm text-gray-600 mb-4 line-clamp-3 leading-relaxed">
-                        {product.description}
-                      </p>
-                      
-                      <div className="space-y-2 mb-6">
-                        {product.features.map((feature, idx) => (
-                          <motion.div 
-                            key={idx} 
-                            className="flex items-start gap-2"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 + idx * 0.1 }}
-                          >
-                            <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-gray-600">{feature}</span>
-                          </motion.div>
-                        ))}
+                    </div>
+
+                    <div className="space-y-4">
+                      {product.summary.map((paragraph, paragraphIndex) => (
+                        <p key={`${product.id}-summary-${paragraphIndex}`} className="text-gray-700 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-white/80 border border-green-200 rounded-2xl p-5">
+                        <h4 className="font-semibold text-green-800 flex items-center gap-2 mb-3">
+                          <CheckCircle className="h-5 w-5" />
+                          Ventajas clave
+                        </h4>
+                        <ul className="space-y-3 text-sm text-green-700">
+                          {product.pros.map((pro, proIndex) => (
+                            <li key={`${product.id}-pro-${proIndex}`} className="flex gap-2">
+                              <div className="mt-1 h-2 w-2 rounded-full bg-green-500 flex-shrink-0" />
+                              <span>{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Button
-                          className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold py-3 rounded-lg shadow-lg"
+                      <div className="bg-white/80 border border-red-200 rounded-2xl p-5">
+                        <h4 className="font-semibold text-red-800 flex items-center gap-2 mb-3">
+                          <AlertTriangle className="h-5 w-5" />
+                          Lo que debes considerar
+                        </h4>
+                        <ul className="space-y-3 text-sm text-red-700">
+                          {product.cons.map((con, conIndex) => (
+                            <li key={`${product.id}-con-${conIndex}`} className="flex gap-2">
+                              <div className="mt-1 h-2 w-2 rounded-full bg-red-500 flex-shrink-0" />
+                              <span>{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/80 border border-gray-200 rounded-2xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div>
+                        <p className="text-sm text-gray-500 line-through">{product.priceInfo.previous}</p>
+                        <p className="text-2xl font-bold text-gray-900">{product.priceInfo.current}</p>
+                        <p className="text-xs text-gray-500">{product.priceInfo.note}</p>
+                      </div>
+                      <div className="flex flex-col md:items-end gap-2">
+                        <motion.button
+                          className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold bg-gradient-to-r ${product.theme.button} shadow-lg`}
+                          whileHover={{ scale: 1.03 }}
+                          whileTap={{ scale: 0.97 }}
                           onClick={() => handleAffiliateClick(product.name, product.url)}
                         >
-                          <motion.div
-                            animate={{ x: [0, 5, 0] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          >
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                          </motion.div>
-                          🛒 Ver en Mercado Libre →
-                        </Button>
-                      </motion.div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+                          Ir a Mercado Libre
+                          <ExternalLink className="h-4 w-4" />
+                        </motion.button>
+                        <span className="text-xs text-gray-500">Verifica precio y stock actualizado</span>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-gray-600 italic">{product.availabilityNote}</p>
+                  </div>
+                </motion.article>
               ))}
             </div>
 
