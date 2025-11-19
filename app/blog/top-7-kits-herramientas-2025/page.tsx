@@ -32,7 +32,7 @@ export default function KitsHerramientasArticle() {
       reviewCount: 3200,
       isRecommended: true,
       bestFor: "Mecánica Profesional",
-      amazonLink: "https://a.co/d/5N9DGsg",
+      amazonLink: "https://mercadolibre.com/sec/2naVqQs",
     },
     {
       id: "pretul-83",
@@ -41,7 +41,7 @@ export default function KitsHerramientasArticle() {
       reviewCount: 850,
       isRecommended: false,
       bestFor: "Mecánica Básica",
-      amazonLink: "https://a.co/d/eT7dePl",
+      amazonLink: "https://mercadolibre.com/sec/1GQ24Dg",
     },
     {
       id: "cartman",
@@ -50,7 +50,7 @@ export default function KitsHerramientasArticle() {
       reviewCount: 2100,
       isRecommended: true,
       bestFor: "Bricolaje / Hogar",
-      amazonLink: "https://a.co/d/79C1aAG",
+      amazonLink: "https://mercadolibre.com/sec/2Du7866",
     },
   ];
 
@@ -680,13 +680,18 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-orange-100 to-yellow-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-yellow-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                              <a 
+                href="https://mercadolibre.com/sec/2naVqQs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-yellow-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors inline-block"
+              >
+                🛒 Ver en Mercado Libre →
+              </a>
                             </div>
                           </div>
                         </div>
@@ -816,9 +821,14 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-emerald-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                              <a 
+                href="https://mercadolibre.com/sec/1GQ24Dg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors inline-block"
+              >
+                🛒 Ver en Mercado Libre →
+              </a>
                             </div>
                           </div>
                         </div>
@@ -948,9 +958,14 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-blue-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                              <a 
+                              href="https://mercadolibre.com/sec/2Du7866"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-blue-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600    transition-colors inline-block"
+                              >
+                                🛒 Ver en Mercado Libre →
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -1075,20 +1090,26 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-purple-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-purple-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-purple-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                             <a 
+                href="https://mercadolibre.com/sec/1tT2HL7" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors inline-block"
+              >
+                🛒 Ver en Mercado Libre →
+              </a>
+
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
 
-                    {/* Producto #5 - ANMIEN Kit 220 Piezas */}
+                    {/* Producto #5 - Juego De Herramientas Mecanica Dados 216 Pcs Kit Estuche Color Variation */}
                     <motion.div 
                       className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
@@ -1102,7 +1123,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">ANMIEN 220 Piezas: El Todoterreno Versátil</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Juego De Herramientas Mecanica Dados 216 Pcs Kit Estuche Color Variation</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(4)].map((_, i) => (
@@ -1110,17 +1131,17 @@ export default function KitsHerramientasArticle() {
                             ))}
                             <Star className="w-5 h-5 text-gray-300" />
                           </div>
-                          <span className="ml-2 text-gray-600">(1,500+ reseñas)</span>
+                          <span className="ml-2 text-gray-600">(160+ reseñas)</span>
                         </div>
                         
                         <div className="bg-orange-50 p-4 rounded-xl mb-6">
                           <p className="text-orange-800 font-semibold">
-                            <b>Mejor para:</b> Usuarios que buscan un kit completo para múltiples aplicaciones.
+                            <b>Mejor para:</b> Quienes buscan la máxima cantidad de herramientas por el mejor precio.
                           </p>
                         </div>
 
                         <p className="text-gray-700 leading-relaxed mb-6">
-                          El ANMIEN de <b>220 piezas</b> es la definición de versatilidad. Combina herramientas 
+                          Este masivo set de <b>216 piezas</b> es la definición de versatilidad. Combina herramientas 
                           para mecánica, electrónica y bricolaje en un solo kit bien organizado. Incluye desde 
                           <b>dados y matracas para mecánica</b> hasta puntas de precisión para dispositivos electrónicos. 
                           Su fortaleza está en ser el <b>"kit único"</b> que puedes tener si solo quieres comprar una 
