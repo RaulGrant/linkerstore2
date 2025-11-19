@@ -1141,12 +1141,10 @@ export default function KitsHerramientasArticle() {
                         </div>
 
                         <p className="text-gray-700 leading-relaxed mb-6">
-                          Este masivo set de <b>216 piezas</b> es la definición de versatilidad. Combina herramientas 
-                          para mecánica, electrónica y bricolaje en un solo kit bien organizado. Incluye desde 
-                          <b>dados y matracas para mecánica</b> hasta puntas de precisión para dispositivos electrónicos. 
-                          Su fortaleza está en ser el <b>"kit único"</b> que puedes tener si solo quieres comprar una 
-                          vez y cubrir el 90% de tus necesidades de herramientas.
-                        </p>
+                          Este masivo set de <b>216 piezas</b>es uno de los más completos del mercado en su rango de precio. 
+                          Su gran ventaja es que incluye <b>3 matracas (1/4", 3/8" y 1/2")</b>, cubriendo desde trabajos de precisión hasta mecánica general. 
+                          Fabricadas en acero al cromo vanadio (Cr-V), ofrece una inmensa variedad de dados, puntas y llaves combinadas, 
+                          todo organizado en un maletín rígido que, aunque voluminoso (10.5 kg), mantiene cada pieza en su lugar.
                         
                         {/* Especificaciones técnicas */}
                         <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-orange-200">
@@ -1157,15 +1155,19 @@ export default function KitsHerramientasArticle() {
                           <div className="grid grid-cols-2 gap-4 text-sm">
                             <div>
                               <span className="font-semibold text-gray-700">Piezas totales:</span>
-                              <span className="ml-2 text-gray-600">220 piezas</span>
+                              <span className="ml-2 text-gray-600">216 piezas</span>
                             </div>
                             <div>
                               <span className="font-semibold text-gray-700">Material:</span>
-                              <span className="ml-2 text-gray-600">Acero CR-V tratado</span>
+                              <span className="ml-2 text-gray-600">Acero Cromo Vanadio</span>
                             </div>
                             <div>
-                              <span className="font-semibold text-gray-700">Aplicaciones:</span>
-                              <span className="ml-2 text-gray-600">Mecánica + Electrónica</span>
+                              <span className="font-semibold text-gray-700">Matracas:</span>
+                              <span className="ml-2 text-gray-600">3 (1/4", 3/8", 1/2")</span>
+                            </div>
+                            <div>
+                              <span className="font-semibold text-gray-700">Estuche:</span>
+                              <span className="ml-2 text-gray-600">Maletín rígido (10.5 kg)</span>
                             </div>
                             <div>
                               <span className="font-semibold text-gray-700">Estuche:</span>
@@ -1184,19 +1186,19 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Muy completo</b> para múltiples usos</span>
+                                <span className="text-green-700 text-sm"><b>Increíble variedad</b> de piezas</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Excelente organización</b> modular</span>
+                                <span className="text-green-700 text-sm"><b>Incluye 3 medidas</b> de matracas</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Buena calidad general</b> de construcción</span>
+                                <span className="text-green-700 text-sm"><b>Relación precio-cantidad</b> imbatible</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Opción económica</b> para lo que incluye</span>
+                                <span className="text-green-700 text-sm"><b>Ideal para iniciar</b> un taller casero</span>
                               </div>
                             </div>
                           </div>
@@ -1210,15 +1212,15 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>No se especializa</b> en ningún área específica</span>
+                                <span className="text-red-700 text-sm"><b>Calidad media</b> (no uso industrial)</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Voluminoso</b> para transporte frecuente</span>
+                                <span className="text-red-700 text-sm"><b>Piezas pueden soltarse</b> dentro del estuche</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Algunas piezas</b> de calidad variable</span>
+                                <span className="text-red-700 text-sm"><b>Bastante pesado</b> para transportar</span>
                               </div>
                             </div>
                           </div>
@@ -1228,20 +1230,26 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-orange-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-orange-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                              <a 
+                                href="https://mercadolibre.com/sec/2KHakLi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-orange-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors inline-block"
+                              >
+                                🛒 Ver en Mercado Libre →
+                              </a>
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
 
-                    {/* Producto #6 - MOYAC 111 Piezas */}
+                  
+                    {/* Producto #6 - Kit Herramientas Eléctricas Nanwei */}
                     <motion.div 
                       className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
@@ -1255,29 +1263,28 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">MOYAC 111 Piezas: El Compacto Inteligente</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Kit Nanwei: El Híbrido con Taladro Inalámbrico</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
                             {[...Array(4)].map((_, i) => (
                               <Star key={i} className="w-5 h-5 fill-current" />
                             ))}
-                            <Star className="w-5 h-5 text-gray-300" />
+                            <Star className="w-5 h-5 fill-current text-yellow-200" /> {/* 4.5 estrellas promedio */}
                           </div>
-                          <span className="ml-2 text-gray-600">(980+ reseñas)</span>
+                          <span className="ml-2 text-gray-600">(500+ reseñas)</span>
                         </div>
                         
                         <div className="bg-teal-50 p-4 rounded-xl mb-6">
                           <p className="text-teal-800 font-semibold">
-                            <b>Mejor para:</b> Técnicos móviles que priorizan portabilidad sin sacrificar funcionalidad.
+                            <b>Mejor para:</b> Quienes necesitan empezar desde cero y requieren un taladro de inmediato.
                           </p>
                         </div>
 
                         <p className="text-gray-700 leading-relaxed mb-6">
-                          Con <b>111 piezas cuidadosamente seleccionadas</b>, el MOYAC demuestra que menos puede ser más. 
-                          Este kit se enfoca en <b>herramientas de uso frecuente</b> eliminando piezas redundantes. 
-                          Su diseño ultra-compacto y su <b>estuche de alta resistencia</b> lo hacen perfecto para 
-                          profesionales que necesitan movilidad constante. Incluye extensiones flexibles y universales 
-                          que multiplican la versatilidad de cada herramienta.
+                          El kit Nanwei se diferencia de todos los anteriores por una razón clave: <b>incluye un taladro inalámbrico</b>. 
+                          No es solo un juego de dados, es una estación de trabajo completa para el hogar. Además de la herramienta eléctrica, 
+                          viene equipado con lo esencial manual: martillo, pinzas, destornilladores, arco de sierra y cinta métrica. 
+                          Es la opción ideal para "mudanza nueva" donde necesitas colgar cuadros, armar muebles y hacer reparaciones ligeras sin comprar todo por separado.
                         </p>
                         
                         {/* Especificaciones técnicas */}
@@ -1288,20 +1295,20 @@ export default function KitsHerramientasArticle() {
                           </h4>
                           <div className="grid grid-cols-2 gap-4 text-sm">
                             <div>
-                              <span className="font-semibold text-gray-700">Piezas totales:</span>
-                              <span className="ml-2 text-gray-600">111 piezas</span>
+                              <span className="font-semibold text-gray-700">Pieza principal:</span>
+                              <span className="ml-2 text-gray-600">Taladro Inalámbrico</span>
                             </div>
                             <div>
-                              <span className="font-semibold text-gray-700">Material:</span>
-                              <span className="ml-2 text-gray-600">Acero aleado CrV</span>
+                              <span className="font-semibold text-gray-700">Batería:</span>
+                              <span className="ml-2 text-gray-600">Litio Recargable</span>
+                            </div>
+                            <div>
+                              <span className="font-semibold text-gray-700">Herramientas:</span>
+                              <span className="ml-2 text-gray-600">Manuales + Eléctrica</span>
                             </div>
                             <div>
                               <span className="font-semibold text-gray-700">Enfoque:</span>
-                              <span className="ml-2 text-gray-600">Portabilidad + Funcionalidad</span>
-                            </div>
-                            <div>
-                              <span className="font-semibold text-gray-700">Estuche:</span>
-                              <span className="ml-2 text-gray-600">Ultra-compacto resistente</span>
+                              <span className="ml-2 text-gray-600">Mantenimiento del Hogar</span>
                             </div>
                           </div>
                         </div>
@@ -1316,19 +1323,19 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Extremadamente portátil</b> y liviano</span>
+                                <span className="text-green-700 text-sm"><b>Gran valor</b> al incluir taladro</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Selección inteligente</b> de herramientas</span>
+                                <span className="text-green-700 text-sm"><b>Solución "todo en uno"</b> real</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Extensiones flexibles</b> muy útiles</span>
+                                <span className="text-green-700 text-sm"><b>Incluye básicos manuales</b> (martillo, metro)</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Estuche muy resistente</b> para transporte</span>
+                                <span className="text-green-700 text-sm"><b>Estuche compacto</b> y fácil de guardar</span>
                               </div>
                             </div>
                           </div>
@@ -1342,15 +1349,15 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Limitado en variedad</b> de piezas</span>
+                                <span className="text-red-700 text-sm"><b>Taladro de uso ligero</b> (no industrial)</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>No incluye herramientas</b> especializadas</span>
+                                <span className="text-red-700 text-sm"><b>Herramientas manuales</b> de calidad básica</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Menor variedad</b> de herramientas por kit</span>
+                                <span className="text-red-700 text-sm"><b>Batería</b> de duración moderada</span>
                               </div>
                             </div>
                           </div>
@@ -1360,20 +1367,25 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-teal-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-teal-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-teal-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                              <a 
+                                href="https://mercadolibre.com/sec/1miMzDg"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-teal-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors inline-block"
+                              >
+                                🛒 Ver en Mercado Libre →
+                              </a>
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
 
-                    {/* Producto #7 - ZAWELIYO 253 Piezas */}
+                   {/* Producto #7 - Deppon 168 Piezas */}
                     <motion.div 
                       className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200 relative overflow-hidden"
                       initial={{ opacity: 0, y: 50 }}
@@ -1387,30 +1399,29 @@ export default function KitsHerramientasArticle() {
                       </div>
                       
                       <div className="w-full">
-                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">ZAWELIYO 253 Piezas: El Gigante Económico</h3>
+                        <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Deppon 168 Piezas: Kit de Emergencia Híbrido</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(3)].map((_, i) => (
+                            {[...Array(4)].map((_, i) => (
                               <Star key={i} className="w-5 h-5 fill-current" />
                             ))}
-                            <Star className="w-5 h-5 fill-current opacity-50" />
                             <Star className="w-5 h-5 text-gray-300" />
                           </div>
-                          <span className="ml-2 text-gray-600">(740+ reseñas)</span>
+                          <span className="ml-2 text-gray-600">(100+ ventas)</span>
                         </div>
                         
                         <div className="bg-red-50 p-4 rounded-xl mb-6">
                           <p className="text-red-800 font-semibold">
-                            <b>Mejor para:</b> Usuarios que buscan el máximo número de piezas al menor costo.
+                            <b>Mejor para:</b> Uso doméstico general y kit de emergencia para la cajuela del auto.
                           </p>
                         </div>
 
                         <p className="text-gray-700 leading-relaxed mb-6">
-                          El ZAWELIYO de <b>253 piezas</b> es para quienes creen que "más es mejor" y buscan 
-                          valor en la cantidad. Con una <b>cantidad impresionante de herramientas</b> que incluye 
-                          desde dados hasta puntas especializadas, ofrece una variedad que pocas marcas pueden igualar 
-                          en su categoría. Es perfecto para <b>talleres nuevos</b> o personas que están 
-                          empezando a construir su colección de herramientas.
+                          Este kit de <b>168 piezas</b> destaca por su enfoque práctico para el hogar y el auto. 
+                          A diferencia de los kits puramente mecánicos, este incluye herramientas de uso general como 
+                          <b>pinzas de electricista, martillo, cúter y cinta métrica</b>, además de dos matracas (1/4" y 1/2"). 
+                          Es importante notar que el conteo de piezas incluye insumos de primeros auxilios (curitas), 
+                          lo que lo hace un excelente "kit de supervivencia" para tener en casa o en el coche.
                         </p>
                         
                         {/* Especificaciones técnicas */}
@@ -1422,19 +1433,19 @@ export default function KitsHerramientasArticle() {
                           <div className="grid grid-cols-2 gap-4 text-sm">
                             <div>
                               <span className="font-semibold text-gray-700">Piezas totales:</span>
-                              <span className="ml-2 text-gray-600">253 piezas</span>
+                              <span className="ml-2 text-gray-600">168 piezas*</span>
                             </div>
                             <div>
                               <span className="font-semibold text-gray-700">Material:</span>
-                              <span className="ml-2 text-gray-600">Acero básico tratado</span>
+                              <span className="ml-2 text-gray-600">Acero y Plástico</span>
                             </div>
                             <div>
-                              <span className="font-semibold text-gray-700">Enfoque:</span>
-                              <span className="ml-2 text-gray-600">Cantidad máxima</span>
+                              <span className="font-semibold text-gray-700">Matracas:</span>
+                              <span className="ml-2 text-gray-600">2 (1/4" y 1/2")</span>
                             </div>
                             <div>
-                              <span className="font-semibold text-gray-700">Estuche:</span>
-                              <span className="ml-2 text-gray-600">Plástico básico moldeado</span>
+                              <span className="font-semibold text-gray-700">Extras:</span>
+                              <span className="ml-2 text-gray-600">Guantes y Curitas</span>
                             </div>
                           </div>
                         </div>
@@ -1449,19 +1460,19 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Gran cantidad de piezas</b> incluidas</span>
+                                <span className="text-green-700 text-sm"><b>Gran variedad</b> de herramientas manuales</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Excelente cantidad</b> de herramientas</span>
+                                <span className="text-green-700 text-sm"><b>Incluye llaves combinadas</b> (9 pzs)</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Bueno para empezar</b> una colección</span>
+                                <span className="text-green-700 text-sm"><b>Estuche naranja</b> de alta visibilidad</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-green-700 text-sm"><b>Incluye muchas especialidades</b></span>
+                                <span className="text-green-700 text-sm"><b>Precio muy accesible</b></span>
                               </div>
                             </div>
                           </div>
@@ -1475,15 +1486,15 @@ export default function KitsHerramientasArticle() {
                             <div className="space-y-3">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Calidad inconsistente</b> en las piezas</span>
+                                <span className="text-red-700 text-sm"><b>*Conteo inflado:</b> Incluye 100 curitas</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>Muchas piezas redundantes</b> o innecesarias</span>
+                                <span className="text-red-700 text-sm"><b>Calidad genérica</b> (marca Deppon)</span>
                               </div>
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span className="text-red-700 text-sm"><b>No es para uso profesional</b> intensivo</span>
+                                <span className="text-red-700 text-sm"><b>Acabados básicos</b> en los mangos</span>
                               </div>
                             </div>
                           </div>
@@ -1493,13 +1504,18 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-red-100 to-rose-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-red-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-red-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <div className="bg-red-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors cursor-pointer">
-                                🛒 Ver en Amazon →
-                              </div>
+                              <a 
+                                href="https://mercadolibre.com/sec/2tACX4Z"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-red-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors inline-block"
+                              >
+                                🛒 Ver en Mercado Libre →
+                              </a>
                             </div>
                           </div>
                         </div>
