@@ -139,42 +139,41 @@ export default function GuiaChalecosSeguridadArticle() {
       id: 'gabardina-elite',
       rank: 1,
       emoji: '🥇',
-      category: 'Uso Rudo',
-      name: 'Chaleco de Seguridad Industrial Gabardina 100% Algodón Elite',
-      tagline: 'El brigadista premium para supervisión y cuadrillas que necesitan resistencia inquebrantable.',
-      rating: 4.8,
-      reviewCount: '1,150+ reseñas verificadas',
-      url: 'https://mercadolibre.com/sec/1Q1YEV3',
-      bestFor: 'Supervisores de obra civil, brigadas de protección civil y cuadrillas eléctricas con jornadas superiores a 10 horas.',
+      category: 'Alta Visibilidad',
+      name: 'Chaleco De Seguridad Radians Sv46oxl Clase 2 Extra, Naranja Fluorescente',
+      tagline: 'Visibilidad máxima con doble banda reflectante para turnos nocturnos.',
+      rating: 4.5,
+      reviewCount: '500+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/2RznHsW',
+      bestFor: 'Supervisores de obra civil, brigadas de protección civil, cuadrillas eléctricas con jornadas superiores a 10 horas, Guardias de seguridad, personal de almacén nocturno y control de tráfico.',
       summary: [
-        'Este modelo tipo brigadista está pensado para cuadrillas que viven con herramientas, radios y documentos en el chaleco. La gabardina de 280 g/m² soporta la abrasión diaria y mantiene la prenda erguida aunque cargues tablets, radios o libretas completas.',
-        'El fabricante combina doble cinta retrorreflectante segmentada 3M con paneles de ventilación ocultos en los costados, logrando la visibilidad nocturna de un chaleco moderno sin perder el aspecto corporativo que se exige a supervisores y coordinadores de campo.'
+        'A diferencia de los chalecos básicos, este modelo "Superbrillante" incorpora 4 bandas reflectantes (2 en pecho y 2 en abdomen) sobre un tejido de punto de poliéster de alta visibilidad.',
+       'Es un chaleco ligero y funcional con cierre frontal, diseñado para cumplir con la función principal: ser visto a larga distancia bajo la luz de los faros.'
       ],
       highlights: [
-        'Panel trasero tamaño A4 ideal para transportar planos, bitácoras y tablets.',
-        'Refuerzos de doble costura en hombros y cintura que evitan deformaciones cuando cuelgas radios o herramientas pesadas.',
-        'Área lisa en pecho y espalda lista para bordado corporativo sin invadir las cintas reflectantes.'
+       '4 líneas de cinta reflectante de alta ganancia.',
+      'Tejido de punto 100% poliéster (más duradero que la malla simple).',
+      'Bolsillo frontal para identificación o celular.'
       ],
-      specs: [
-        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
-        { label: 'Material principal', value: 'Gabardina 100% algodón de 280 g/m² con malla interna' },
-        { label: 'Bolsillos', value: '9 totales (porta radio, porta credencial, cargo doble, bolsillo trasero A4)' },
-        { label: 'Cierre y ajuste', value: 'Cremallera reforzada más velcros laterales y tiras ajustables' }
-      ],
+   specs: [
+      { label: 'Material', value: 'Poliéster tejido de punto (Tricot)' },
+      { label: 'Cintas', value: '4 Cintas horizontales plateadas' },
+      { label: 'Cierre', value: 'Cremallera central reforzada' },
+      { label: 'Bolsillos', value: '1 bolsillo superior básico' }
+    ],
       pros: [
-        'Costuras reforzadas en hombros y cuello para cargar herramientas pesadas sin que la prenda se descuadre.',
-        'Paneles de ventilación laterales y malla interna que reducen la sensación térmica propia de la gabardina.',
-        'Bolsillo transparente para credenciales que agiliza accesos controlados en obra o planta.',
-        'Segmentos reflectantes 3M que mantienen flexibilidad aun cuando doblas la prenda en descansos.'
+        'Mayor área reflectante que el promedio gracias a sus 4 cintas.',
+      'Secado rápido y fácil lavado.',
+      'Precio accesible para la cantidad de material reflectante que ofrece.'
       ],
       cons: [
-        'El peso es mayor frente a chalecos de malla; conviene alternarlo con prendas ligeras en temporadas cálidas.',
-        'Requiere lavado en ciclo suave para conservar el color fluorescente y las cintas intactas.'
+        'No es de gabardina, por lo que no se recomienda para soldadura.',
+      'Bolsillos limitados en comparación con modelos brigadista.'
       ],
-      availabilityNote: 'Disponible de talla CH a XXL; considera pedir una talla arriba si lo usarás sobre chamarras o sudaderas gruesas.',
+      availabilityNote: 'Alta disponibilidad en colores neón (Naranja/Amarillo).',
       priceInfo: {
-        previous: '$890 MXN',
-        current: '$750 MXN',
+        previous: '$150 MXN',
+        current: '$135 MXN',
         note: 'Precio promedio detectado en Mercado Libre México (nov 2025)'
       },
       theme: {
@@ -189,41 +188,40 @@ export default function GuiaChalecosSeguridadArticle() {
       rank: 2,
       emoji: '🥈',
       category: 'Certificado',
-      name: 'Chaleco Alta Visibilidad Bicolor Clase 2 ANSI 107-2020',
+      name: 'Chaleco Alta Visibilidad Bicolor Clase 2 Brigadista C Bolsas',
       tagline: 'Cumplimiento normativo impecable con diseño bicolor pensado para tráfico vehicular intenso.',
-      rating: 4.9,
-      reviewCount: '2,300+ reseñas verificadas',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2088822461-chaleco-alta-visibilidad-bicolor-clase-2-brigadista-c-bolsas-_JM',
+      rating: 4.7,
+      reviewCount: '10+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/26Kem4U',
       bestFor: 'Contratistas de obra pública, cuadrillas de señalización vial y personal aeroportuario expuesto a tráfico constante.',
       summary: [
-        'Si necesitas justificar la compra frente a un auditor de seguridad, este es el chaleco que querrás llevar. El certificado ANSI/ISEA 107 impreso en la etiqueta interior elimina dudas sobre el cumplimiento, mientras que la combinación de colores de alto contraste incrementa la detección periférica de los conductores.',
-        'El tejido híbrido mezcla paneles sólidos en los bolsillos y malla en los costados, así que obtienes durabilidad donde hay roce y ventilación donde más se necesita. Incluye cinta microprismática grado industrial que destaca incluso bajo lluvia ligera.'
+      'Este modelo destaca por su diseño "Two-Tone" (Bicolor), que utiliza un contraste entre el color neón de fondo y las cintas para mejorar la definición de la silueta humana a distancia.',
+      'Fabricado bajo estándares Clase 2, ofrece bolsillos multifuncionales y una apariencia mucho más ejecutiva y profesional que los chalecos estándar.'
       ],
       highlights: [
-        'Etiqueta interior con número de lote y norma vigente para auditorías.',
-        'Bolsillos superiores con doble compartimento para radio y libreta.',
-        'Tratamiento repelente a manchas de aceite y combustible.'
+       'Diseño Bicolor para máximo contraste diurno.',
+      'Bolsa porta radio y bolsas cargo inferiores.',
+      'Soporte para micrófono en hombros.'
       ],
       specs: [
-        { label: 'Certificación', value: 'ANSI/ISEA 107-2020 Tipo R Clase 2' },
-        { label: 'Material principal', value: 'Poliéster de 130 g/m² con refuerzos sólidos en bolsillos' },
-        { label: 'Tecnología reflectiva', value: 'Cinta microprismática de 5 cm con ribetes verdes' },
-        { label: 'Extras', value: 'Porta credencial, porta radio, ojal para pluma y clip de micrófono' }
+   { label: 'Norma', value: 'Cumple especificaciones Clase 2' },
+      { label: 'Material', value: 'Malla de poliéster respirable Heavy Duty' },
+      { label: 'Visibilidad', value: 'Cinta reflectante sobre base de contraste' },
+      { label: 'Extras', value: 'Porta radio y bolsillos con solapa' }
       ],
       pros: [
-        'Ligero y fresco sin sacrificar la rigidez necesaria para soportar radios y micrófonos.',
-        'La cinta microprismática mantiene su brillo después de 50 lavadas certificadas.',
-        'Costuras dobles en hombros y laterales que evitan el desgarre por tensión.',
-        'Colores bicolor que ayudan a distinguir jerarquías o cuadrillas en campo.'
+        'Excelente ventilación gracias a su construcción en malla premium.',
+        'Apariencia jerárquica superior para mandos.',
+        'Cierre reforzado de alta durabilidad.'
       ],
       cons: [
-        'Al ser un diseño muy popular se agota con rapidez en tallas grandes.',
-        'El recubrimiento repelente pierde eficacia después del lavado 40 si se usan detergentes agresivos.'
+       'Al ser de malla, permite el paso de viento frío en invierno.',
+      'Tallas suelen venir amplias para usar sobre ropa.'
       ],
-      availabilityNote: 'Mantén stock de reemplazo porque los cambios de turno suelen pedir tallas adicionales.',
+      availabilityNote: 'Revisar guía de tallas antes de comprar.',
       priceInfo: {
-        previous: '$650 MXN',
-        current: '$580 MXN',
+        previous: '$320 MXN',
+        current: '$297 MXN',
         note: 'Promedio histórico Mercado Libre México, actualizado a noviembre 2025'
       },
       theme: {
@@ -240,40 +238,44 @@ export default function GuiaChalecosSeguridadArticle() {
       category: 'Económico',
       name: 'Chaleco de Malla Económico con Reflejantes',
       tagline: 'La opción ligera para cuadrillas temporales, promotores y tareas urbanas en clima cálido.',
-      rating: 4.3,
-      reviewCount: '850+ reseñas verificadas',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-1800488445-chaleco-de-malla-economico-con-reflejantes-varios-colores-_JM',
-      bestFor: 'Programas temporales, voluntariado, brigadas escolares y personal de apoyo en eventos masivos.',
+      rating: 4.7,
+      reviewCount: '720+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/23uTvh2',
+      bestFor: 'Programas temporales, voluntariado, brigadas escolares, personal de apoyo en eventos masivos, eventos, visitas a obra, brigadas escolares y uso temporal.',
       summary: [
-        'Cuando el presupuesto manda pero la seguridad no es negociable, este chaleco de malla cumple. Su construcción en poliéster perforado permite trabajar bajo el sol del mediodía sin sensación de encierro, y la fabricación local reduce tiempos de entrega.',
-        'No es un modelo de alto desempeño, pero los ribetes fluorescentes y la cinta textil reflectiva ofrecen visibilidad suficiente para operaciones diurnas o de baja velocidad. Disponible en cinco colores para asignar roles o cuadrillas de forma visual.'
+        'Un chaleco de batalla. Simple, extremadamente ligero y muy ventilado. Es la prenda ideal para tener en stock para visitas o para trabajadores temporales donde la inversión debe ser mínima.',
+        'Fabricado en malla abierta de poliéster con cintas reflectantes básicas cosidas.'
       ],
       highlights: [
-        'Ultra ligero: pesa menos de 120 gramos por prenda.',
-        'Incluye ajuste lateral con velcro para adaptarse a diferentes tallas de personal temporal.',
-        'Producción nacional con reposición rápida (3-5 días hábiles en promedio).'
+        'El precio más bajo del mercado.',
+        'Máxima frescura, es básicamente pura ventilación.',
+        'Elásticos laterales para ajuste universal.'
       ],
       specs: [
-        { label: 'Certificación', value: 'Referencia ANSI/ISEA 107 Tipo O (uso controlado)' },
-        { label: 'Material principal', value: 'Malla de poliéster perforada 100 g/m²' },
-        { label: 'Tecnología reflectiva', value: 'Cinta textil plateada de 5 cm cosida doble' },
-        { label: 'Colores disponibles', value: 'Naranja, amarillo, verde lima, rojo y azul real' }
+        { label: 'Material', value: 'Malla abierta de poliéster' },
+      { label: 'Ajuste', value: 'Elásticos laterales o velcro frontal' },
+      { label: 'Peso', value: 'Ultra ligero (< 100g)' },
+      { label: 'Talla', value: 'Unitalla adaptable' }
       ],
       pros: [
         'Excelente ventilación para climas húmedos o tareas de verano.',
         'Costo unitario accesible para compras masivas o programas de voluntariado.',
         'Velcros laterales que permiten compartir tallas entre diferentes usuarios.',
-        'Entrega rápida gracias a stock constante en Ciudad de México.'
+        'Entrega rápida gracias a stock constante en Ciudad de México.','Extremadamente barato.',
+      'No ocupa espacio al guardarse.',
+      'Variedad de colores para distinguir equipos.'
       ],
       cons: [
         'No sustituye a una prenda Clase 2 cuando existe tráfico vehicular veloz.',
-        'Las cintas textiles pierden brillo más rápido que las microprismáticas, exige reemplazo anual.'
+        'Las cintas textiles pierden brillo más rápido que las microprismáticas, exige reemplazo anual.',
+        'Poca durabilidad ante rasgaduras.',
+      'Cintas reflectantes básicas (no alto desempeño).'
       ],
       availabilityNote: 'Ideal para mantener inventario de emergencia o rotar cada temporada a bajo costo.',
       priceInfo: {
-        previous: '$320 MXN',
-        current: '$280 MXN',
-        note: 'Precio unitario promedio comprando lotes de 5 piezas (nov 2025)'
+        previous: '$60 MXN',
+        current: '$57 MXN',
+        note: 'Precio ideal para mayoreo (nov 2025)'
       },
       theme: {
         gradient: 'from-teal-50 via-cyan-50 to-sky-50',
@@ -287,42 +289,55 @@ export default function GuiaChalecosSeguridadArticle() {
       rank: 4,
       emoji: '🔧',
       category: 'Profesional',
-      name: 'Chaleco Multibolsillos Professional Max Gabardina',
+      name: 'Chaleco Brigadista Reflejante Gabardina',
       tagline: 'Organización ergonómica con distribución de peso inteligente para jornadas extensas.',
-      rating: 4.7,
-      reviewCount: '1,020+ reseñas verificadas',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-1456789012-chaleco-multibolsillos-professional-gabardina-reflectante-_JM',
-      bestFor: 'Residentes de obra, topógrafos, ingenieros de campo y jefes de mantenimiento en planta.',
+      rating: 4.6,
+      reviewCount: '900+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/26CEJyr',
+      bestFor: 'Residentes de obra, topógrafos, ingenieros de campo,  jefes de mantenimiento en planta, jefes de brigada, almacén industrial y construcción.',
       summary: [
-        'El Professional Max toma la robustez de la gabardina y la mezcla con ergonomía moderna. Los bolsillos están escalonados para distribuir mejor el peso y evitar que todo recaiga en la parte frontal, lo que reduce la fatiga en espalda y hombros.',
-        'Integra canales de ventilación verticales con cierres ocultos; puedes abrirlos durante el día y cerrarlos cuando cae la tarde para conservar calor. Además, los ribetes reflejantes segmentados ofrecen visibilidad mientras se flexionan junto con tu cuerpo.'
+        'El Profesional toma la robustez de la gabardina y la mezcla con ergonomía moderna. Los bolsillos están escalonados para distribuir mejor el peso y evitar que todo recaiga en la parte frontal, lo que reduce la fatiga en espalda y hombros.',
+        'Integra canales de ventilación verticales con cierres ocultos; puedes abrirlos durante el día y cerrarlos cuando cae la tarde para conservar calor. Además, los ribetes reflejantes segmentados ofrecen visibilidad mientras se flexionan junto con tu cuerpo.',
+        'Fabricado en tela de Gabardina (mezcla algodón/poliéster), este chaleco ofrece una resistencia muy superior a las mallas plásticas. Es capaz de soportar roces, lavados frecuentes y carga de herramientas.',
+      'Su diseño incluye el clásico set de bolsillos de brigadista, permitiendo llevar radio, plumas y libreta de forma segura.'
       ],
       highlights: [
         'Sistema de distribución de peso con paneles acolchados internos.',
         'Bolsillos inferiores tipo cargo con fuelle expandible para herramientas voluminosas.',
-        'Zonas reforzadas con cinta de nylon anti desgarre en hombros y cuello.'
+        'Zonas reforzadas con cinta de nylon anti desgarre en hombros y cuello.',
+        'Tela Gabardina resistente y lavable.',
+      'Bolsa porta radio ajustable.',
+      'Cierre reforzado.'
       ],
       specs: [
         { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
         { label: 'Material principal', value: 'Gabardina poliéster-algodón 65/35 con ventilación lateral' },
-        { label: 'Bolsillos', value: '8 bolsillos funcionales + compartimento trasero horizontal' },
-        { label: 'Extras', value: 'Ojales para arnés, porta radio doble, correas modulares en la parte trasera' }
+        { label: 'Bolsillos', value: '5 bolsillos funcionales + compartimento trasero horizontal' },
+        { label: 'Extras', value: 'Ojales para arnés, porta radio doble, correas modulares en la parte trasera' }, 
+        { label: 'Reflejante', value: 'Cinta textil 2 pulgadas' },
+      { label: 'Bolsillos', value: 'Frontales con cierre + Porta radio' },
+      { label: 'Cierre', value: 'Cremallera completa' }
       ],
       pros: [
         'Sensación de equilibrio incluso con herramientas pesadas gracias a la distribución escalonada.',
-        'Ventilación ajustable que se abre o cierra según la temperatura ambiente.',
+        'Ventilación ajustable que se abre o se cierra según la temperatura ambiente.',
         'Compatibilidad con arnés de seguridad sin interferir con las cintas reflectantes.',
-        'Acabado profesional que ayuda a distinguir al personal de supervisión.'
+        'Acabado profesional que ayuda a distinguir al personal de supervisión.',
+        'Tela robusta que protege la ropa.',
+      'Apariencia profesional y limpia.',
+      'Bolsillos seguros con cierre.'
       ],
       cons: [
         'El ajuste entallado puede sentirse justo en usuarios de complexión robusta, verifica tabla de tallas.',
-        'Los paneles acolchados requieren secado a la sombra para conservar su forma.'
+        'Los paneles acolchados requieren secado a la sombra para conservar su forma.',
+        'Más caluroso que la malla en verano.',
+      'Requiere planchado para verse impecable.'
       ],
-      availabilityNote: 'Modelo con alta demanda en proyectos industriales; compra dos semanas antes de arranques críticos.',
+      availabilityNote: 'Modelo con alta disponibilidad, disponible en tallas CH a XL.',
       priceInfo: {
-        previous: '$1,200 MXN',
-        current: '$990 MXN',
-        note: 'Precio observado en paquetes corporativos de 3 piezas (nov 2025)'
+        previous: '$200 MXN',
+        current: '$190 MXN',
+        note: 'Excelente relación calidad-precio (nov 2025)'
       },
       theme: {
         gradient: 'from-purple-50 via-violet-50 to-amber-50',
@@ -336,42 +351,49 @@ export default function GuiaChalecosSeguridadArticle() {
       rank: 5,
       emoji: '✨',
       category: 'Alta Visibilidad',
-      name: 'Chaleco Reflectante Naranja Fluorescente Clase 2',
-      tagline: 'Visibilidad nocturna sobresaliente con microprismas que resaltan bajo niebla o lluvia ligera.',
-      rating: 4.6,
-      reviewCount: '740+ reseñas verificadas',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2345678901-chaleco-reflectante-naranja-fluorescente-clase-2-ansi-_JM',
-      bestFor: 'Operadores de aeropuerto, cuadrillas nocturnas de mantenimiento urbano y seguridad vial en carreteras.',
+      name: 'Chaleco Seguridad Trabajo Industrial Brigadista Reflectante',
+      tagline: 'Visibilidad nocturna sobresaliente que resaltan bajo niebla o lluvia ligera.',
+      rating: 4.7,
+      reviewCount: '350+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/1GK5aRk',
+      bestFor: 'Ingenieros, topógrafos, ideal para uso diario en aeropuertos, cuadrillas nocturnas de mantenimiento urbano y seguridad vial en carreteras, uso general en planta, brigadas de emergencia y contratistas.',
       summary: [
-        'Su punto fuerte es la cinta microprismática de alto rendimiento que rebota la luz incluso cuando está sucia o húmeda. El fondo naranja fluorescente cumple con los requerimientos de visibilidad diurna y resiste 50 ciclos de lavado manteniendo el tono intenso.',
+        'Similar al modelo anterior pero enfocado en la funcionalidad operativa diaria. Ofrece una configuración clásica de brigadista con cintas reflejantes textiles sobre tela resistente.',
+      'Ideal para uniformar cuadrillas completas con una prenda duradera que ofrece visibilidad tanto diurna (por el color de la tela) como nocturna.',
+      'Su punto fuerte es la cinta de alto rendimiento que rebota la luz incluso cuando está sucia o húmeda. El fondo naranja fluorescente cumple con los requerimientos de visibilidad diurna y resiste 50 ciclos de lavado manteniendo el tono intenso.',
         'Incluye refuerzos de cordura en hombros y cuello, evitando la abrasión causada por mochilas, arneses o chalecos antibalas, algo crucial para brigadas de seguridad privada.'
       ],
       highlights: [
         'Cinta segmentada que se adapta al movimiento sin romperse.',
         'Bolsillo porta tablet en la espalda con cierre velcro.',
-        'Recubrimiento repelente a líquidos que facilita limpieza rápida en campo.'
+        'Recubrimiento repelente a líquidos que facilita limpieza rápida en campo.',
+        'Colores sólidos y resistentes al deslavado.',
+      'Refuerzos en costuras críticas.',
+      'Bolsillos de fácil acceso.'
       ],
       specs: [
         { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
-        { label: 'Material principal', value: 'Poliéster fluorescente de 150 g/m² con refuerzos de cordura' },
-        { label: 'Tecnología reflectiva', value: 'Microprismas 3M Scotchlite plateados y naranja neón' },
-        { label: 'Extras', value: 'Porta radio, porta credencial, bolsillos cargo profundos y bolsillo trasero' }
+       { label: 'Material', value: 'Tela Poliéster/Algodón' },
+        { label: 'Tecnología reflectiva', value: ' Scotchlite plateados y naranja neón' },
+        { label: 'Extras', value: 'Porta radio, porta credencial y bolsillos cargo profundos' }
       ],
       pros: [
         'Desempeño nocturno sobresaliente incluso con lluvia ligera.',
         'Refuerzos de cordura que extienden la vida útil en hombros y cuello.',
-        'El fondo fluorescente conserva su tono tras múltiples lavadas.',
-  'Incluye bolsillo trasero amplio que permite guardar chaleco impermeable delgado.'
+        'El fondo fluorescente conserva su tono tras múltiples lavadas.','Muy resistente al uso diario.',
+      'Fácil de lavar.',
+      'Bolsillos funcionales.'
       ],
       cons: [
         'El recubrimiento repelente puede sentirse rígido las primeras semanas; se suaviza con el uso.',
-        'No incluye ventilación lateral, por lo que en climas muy cálidos conviene alternarlo.'
+        'No incluye ventilación lateral, por lo que en climas muy cálidos conviene alternarlo.','Rigidez inicial de la tela.',
+      'Peso medio.'
       ],
-      availabilityNote: 'Modelo recomendado para operaciones nocturnas; asegura stock extra durante temporada de lluvias.',
+      availabilityNote: 'Verificar colores disponibles en la publicación.',
       priceInfo: {
-        previous: '$480 MXN',
-        current: '$420 MXN',
-        note: 'Precio promedio en distribuidores afiliados (nov 2025)'
+        previous: '$90 MXN',
+        current: '$84 MXN',
+        note: 'Precio competitivo (nov 2025)'
       },
       theme: {
         gradient: 'from-orange-50 via-amber-50 to-red-50',
@@ -385,42 +407,52 @@ export default function GuiaChalecosSeguridadArticle() {
       rank: 6,
       emoji: '⚙️',
       category: 'Innovación',
-      name: 'Chaleco Breakaway Seguridad Desprendible',
-      tagline: 'Diseñado para maquinaria pesada: se libera en milisegundos cuando queda atrapado.',
+      name: 'Chaleco Radians SV46 Heavy Duty Surveyor',
+      tagline: 'Calidad americana importada para topógrafos y exigencia máxima.',
       rating: 4.7,
-      reviewCount: '630+ reseñas verificadas',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-3456789012-chaleco-breakaway-seguridad-desprendible-maquinaria-_JM',
-      bestFor: 'Operadores de centros de distribución, líneas de ensamble automotriz y cuadrillas con maquinaria de arrastre.',
+      reviewCount: '10+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/2Xzhw76',
+      bestFor: 'Operadores de centros de distribución, líneas de ensamble automotriz, cuadrillas con maquinaria de arrastre, ingenieros topógrafos, directores de proyecto y usuarios que conocen la marca Radians.',
       summary: [
+        'El Radians SV46 no es un chaleco común; es un chaleco tipo "Surveyor" (Topógrafo) de grado industrial importado. Cuenta con una estructura Heavy Duty con frente sólido para durabilidad y espalda de malla para ventilación.',
+      'Incorpora un cierre "Heavy Duty" #8, bolsillos grandes para planos o tablets, y ojales para cinta de señalización. Es una prenda de nivel superior a lo nacional promedio.',
         'Integra cinco puntos de ruptura estratégicamente ubicados (hombros, laterales y centro) que se liberan ante tirones bruscos, minimizando el riesgo de atrapamiento en bandas transportadoras o montacargas.',
         'La cinta reflectante está cosida sobre paneles independientes que permanecen unidos incluso después de un desprendimiento, facilitando rearmar el chaleco sin perder alineación.'
       ],
       highlights: [
+        'Marca Radians (Líder en EPP en USA).',
+      'Frente sólido / Espalda de malla (Lo mejor de dos mundos).',
+      'Bolsillo trasero pasante para planos/documentos.',
         'Sistema magnético de liberación que puedes rearmar en menos de 30 segundos.',
         'Panel frontal con espuma EVA para amortiguar golpes ligeros.',
         'Velcros laterales reemplazables, ideal para programas de mantenimiento preventivo.'
       ],
       specs: [
+        { label: 'Modelo', value: 'Radians SV46-2ZOD (o similar)' },
         { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2 con feature breakaway' },
-        { label: 'Material principal', value: 'Poliéster de 130 g/m² con refuerzos de nylon balístico' },
-        { label: 'Puntos de ruptura', value: '5 (2 hombros, 2 laterales, 1 frontal)' },
-        { label: 'Extras', value: 'Bolsillo porta radio, clip para gafete retractil, bolsillo interior oculto' }
+      { label: 'Material', value: 'Frente Poliéster Sólido / Espalda Malla' },
+      { label: 'Bolsillos', value: 'iPad/Tablet pocket + Bolsillo trasero planos' }
       ],
       pros: [
         'Reduce drásticamente el riesgo de atrapamiento en maquinaria de arrastre.',
         'Sistema magnético intuitivo que el personal puede volver a armar sin herramientas.',
         'Paneles acolchados frontales que protegen contra golpes leves en pecho.',
-        'Incluye kit de velcros de repuesto para mantenimiento anual.'
+        'Incluye kit de velcros de repuesto para mantenimiento anual.',
+        'Calidad de construcción muy superior a lo genérico.',
+      'Bolsillo trasero enorme ideal para planos.',
+      'Cierre gigante resistente a la tierra y polvo.'
       ],
       cons: [
         'No recomendable para tareas con chispa abierta; el material es inflamable.',
-        'El precio es más alto que un chaleco estándar sin breakaway.'
+        'El precio es más alto que un chaleco estándar sin breakaway.',
+        'Precio elevado por ser importado.',
+      'Tallas americanas (suelen ser más grandes que las nacionales).'
       ],
-      availabilityNote: 'Asegura capacitación de 10 minutos para enseñar cómo funciona el sistema breakaway antes de usarlo.',
+      availabilityNote: 'Producto importado, stock limitado.',
       priceInfo: {
-        previous: '$780 MXN',
-        current: '$680 MXN',
-        note: 'Precio unitario al comprar 2 o más piezas (nov 2025)'
+        previous: '$1400 MXN',
+        current: '$1215 MXN',
+        note: 'Precio Premium por marca importada (nov 2025)'
       },
       theme: {
         gradient: 'from-slate-50 via-blue-50 to-sky-50',
@@ -433,43 +465,43 @@ export default function GuiaChalecosSeguridadArticle() {
       id: 'termico-invierno',
       rank: 7,
       emoji: '❄️',
-      category: 'Clima Extremo',
-      name: 'Chaleco Térmico Reflectante Invierno Pro',
-      tagline: 'Aislamiento térmico inteligente con visibilidad certificada para turnos nocturnos en frío extremo.',
-      rating: 4.4,
-      reviewCount: '410+ reseñas verificadas',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-4567890123-chaleco-termico-reflectante-invierno-profesional-_JM',
-      bestFor: 'Operaciones en parques eólicos, minería a cielo abierto, logística nocturna en altiplano y guardias de seguridad.',
+      category: 'Uso Rudo / Ejecutivo',
+      name: 'Chaleco Reflejante Seguridad Industrial Ejecutivo Gabardina',
+      tagline: 'Durabilidad superior y presentación profesional con tela de gabardina 100% algodón.',
+      rating: 4.8,
+      reviewCount: '700+ reseñas verificadas',
+      url: 'https://mercadolibre.com/sec/16xjRYw',
+      bestFor: 'Supervisores, arquitectos, ingenieros de campo y brigadistas que requieren resistencia y bolsillos funcionales.',
       summary: [
-        'Combina un acolchado térmico con fibra hueca de 180 g/m² y revestimiento repelente al agua que bloquea el viento helado sin sacrificar movilidad. La parte interna está forrada con polar suave que regula la temperatura corporal.',
-        'Las cintas reflectantes termo selladas no se endurecen con el frío, evitando el típico agrietamiento que aparece en prendas económicas. Además incluye capucha removible y cuello alto para sellar el calor corporal.'
+        'Confeccionado en gabardina 100% algodón, este chaleco ofrece una resistencia superior a rasgaduras comparado con los de malla, manteniendo la frescura gracias a su tejido natural.',
+        'Diseño tipo brigadista con cintas reflejantes textiles de alta visibilidad (incluso en la espalda) y cierre reforzado, ideal para quienes necesitan portar herramientas ligeras y documentos.'
       ],
       highlights: [
-        'Capucha desmontable con broches ocultos para usar con casco o sin él.',
-        'Forro interno de polar gris que absorbe humedad sin perder calor.',
-        'Bolsillos laterales con cierre y forro térmico para proteger manos y dispositivos.'
+        'Tela Gabardina 100% Algodón de alta resistencia.',
+        'Múltiples bolsillos frontales con cierre y velcro para herramientas.',
+        'Cintas reflejantes textiles de 2 pulgadas para máxima visibilidad.'
       ],
       specs: [
-        { label: 'Certificación', value: 'ANSI/ISEA 107 Tipo R Clase 2' },
-        { label: 'Material principal', value: 'Poliéster repelente al agua con acolchado térmico de fibra hueca' },
-        { label: 'Temperatura recomendada', value: '-5 °C a 10 °C (con capa base)' },
-        { label: 'Extras', value: 'Capucha desmontable, cuello alto, bolsillos internos para baterías' }
+        { label: 'Material', value: 'Gabardina 100% Algodón' },
+        { label: 'Visibilidad', value: 'Cintas reflejantes textiles (frente y espalda)' },
+        { label: 'Cierre', value: 'Cierre central reforzado' },
+        { label: 'Tallas', value: 'Ajuste estándar (Unitalla o por tallas según stock)' }
       ],
       pros: [
-        'Aislamiento efectivo sin límites de movilidad gracias a paneles segmentados.',
-        'Cintas termo selladas que no se agrietan con el frío extremo.',
-        'Capucha removible que no interfiere con casco de seguridad.',
-        'Bolsillos interiores diseñados para guardar baterías de radio y mantenerlas calientes.'
+        'Material mucho más duradero y elegante que la malla simple.',
+        'El algodón permite que la piel respire, reduciendo la sudoración.',
+        'Bolsas funcionales para radio, celular y libreta.',
+        'Acabado profesional ideal para mandos medios y altos.'
       ],
       cons: [
-        'No es el chaleco ideal para climas cálidos; reserva su uso para temperaturas bajas.',
-        'Requiere secado a la sombra para mantener la repelencia al agua.'
+        'No es impermeable (absorbe agua si llueve fuerte).',
+        'Es más pesado que un chaleco de malla simple.'
       ],
-      availabilityNote: 'Se agota en invierno; compra anticipada en septiembre u octubre para garantizar stock.',
+      availabilityNote: 'Stock constante, verifique colores disponibles (Azul, Naranja, Kaki, etc).',
       priceInfo: {
-        previous: '$1,450 MXN',
-        current: '$1,200 MXN',
-        note: 'Precio estimado en temporada alta invernal (nov 2025)'
+        previous: '$550 MXN',
+        current: '$522 MXN',
+        note: 'Precio estimado promedio para modelo Gabardina 100% Algodón (nov 2025)'
       },
       theme: {
         gradient: 'from-blue-50 via-indigo-50 to-slate-100',
