@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import BlogLayout from '@/components/blog/BlogLayout';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Shield, AlertTriangle, CheckCircle, XCircle, FileText, Users, Activity, Star, Info } from 'lucide-react';
+import {ShoppingBag, Calendar, Clock, Shield, AlertTriangle, CheckCircle, XCircle, FileText, Users, Activity, Star, Info } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { trackBlogView, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
@@ -533,7 +533,42 @@ export default function GuiaNOM009Article() {
                             </ul>
                           </div>
                         </div>
-
+                        {/* RECOMENDACIÓN DE PRODUCTOS: SUPERVISIÓN */}
+                        <div className="my-8">
+                          <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <ShoppingBag className="h-5 w-5 text-blue-600" />
+                            Herramientas Esenciales para el Supervisor
+                          </h4>
+                          <div className="grid md:grid-cols-3 gap-4">
+                            {/* Anemómetro */}
+                            <a href="https://mercadolibre.com/sec/2PnRGPZ" target="_blank" rel="noopener noreferrer" 
+                               className="group bg-white p-4 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:border-blue-400 flex flex-col">
+                              <div className="font-bold text-gray-900 mb-1 group-hover:text-blue-600">Anemómetro Digital</div>
+                              <p className="text-sm text-gray-600 flex-grow mb-3">Indispensable para cumplir la regla de suspensión por vientos &gt; 40 km/h.</p>
+                              <div className="text-blue-600 text-sm font-semibold flex items-center gap-1">
+                                Ver en Mercado Libre →
+                              </div>
+                            </a>
+                            {/* Cinta Barricada */}
+                            <a href="https://mercadolibre.com/sec/2eFk373" target="_blank" rel="noopener noreferrer" 
+                               className="group bg-white p-4 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:border-yellow-400 flex flex-col">
+                              <div className="font-bold text-gray-900 mb-1 group-hover:text-yellow-600">Cinta de Barricada</div>
+                              <p className="text-sm text-gray-600 flex-grow mb-3">Para delimitación obligatoria de áreas de riesgo y caída de objetos.</p>
+                              <div className="text-yellow-600 text-sm font-semibold flex items-center gap-1">
+                                Ver en Mercado Libre →
+                              </div>
+                            </a>
+                            {/* Conos */}
+                            <a href="https://mercadolibre.com/sec/1XHP4JG" target="_blank" rel="noopener noreferrer" 
+                               className="group bg-white p-4 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:border-orange-400 flex flex-col">
+                              <div className="font-bold text-gray-900 mb-1 group-hover:text-orange-600">Conos de Seguridad</div>
+                              <p className="text-sm text-gray-600 flex-grow mb-3">Señalización visual robusta para zonas de trabajo en altura.</p>
+                              <div className="text-orange-600 text-sm font-semibold flex items-center gap-1">
+                                Ver en Mercado Libre →
+                              </div>
+                            </a>
+                          </div>
+                        </div>
                         {/* Checklist Interactivo Mejorado */}
                         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-gray-300">
                           <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -738,6 +773,30 @@ export default function GuiaNOM009Article() {
                               </ul>
                             </div>
                           </div>
+                          {/* RECOMENDACIÓN DE PRODUCTOS: INGENIERÍA */}
+                          <div className="my-6 bg-purple-50/50 p-4 rounded-xl border border-purple-100">
+                            <h5 className="text-sm font-bold text-purple-900 uppercase tracking-wider mb-3 flex items-center gap-2">
+                              <ShoppingBag className="h-4 w-4" /> Soluciones de Ingeniería Disponibles
+                            </h5>
+                            <div className="grid md:grid-cols-2 gap-4">
+                              <a href="https://mercadolibre.com/sec/27tsLrn" target="_blank" rel="noopener noreferrer" 
+                                 className="bg-white p-3 rounded-lg border border-purple-200 hover:border-purple-500 transition-colors flex items-center justify-between group">
+                                <div>
+                                  <div className="font-bold text-gray-900 text-sm">Redes de Seguridad (Safety Nets)</div>
+                                  <div className="text-xs text-gray-500">Protección colectiva efectiva</div>
+                                </div>
+                                <span className="text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                              </a>
+                              <a href="https://mercadolibre.com/sec/1zxq3ZX" target="_blank" rel="noopener noreferrer" 
+                                 className="bg-white p-3 rounded-lg border border-purple-200 hover:border-purple-500 transition-colors flex items-center justify-between group">
+                                <div>
+                                  <div className="font-bold text-gray-900 text-sm">Línea de Vida Horizontal</div>
+                                  <div className="text-xs text-gray-500">Sistema portátil entre puntos estructurales</div>
+                                </div>
+                                <span className="text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                              </a>
+                            </div>
+                          </div>
 
                           <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-orange-400 shadow-lg">
                             <div className="flex items-center gap-4 mb-4">
@@ -853,6 +912,32 @@ export default function GuiaNOM009Article() {
                               </div>
                             </div>
                           </div>
+
+                          {/* PRODUCTOS: ARNÉS Y CASCO (Ahora fuera del grid anterior para que se vea bien) */}
+                          <div className="mt-6 grid md:grid-cols-2 gap-4">
+                            <a href="https://mercadolibre.com/sec/1aR5CWc" target="_blank" rel="noopener noreferrer" 
+                               className="bg-white p-4 rounded-xl border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-all">
+                              <div className="flex justify-between items-start">
+                                <div>
+                                  <h6 className="font-bold text-gray-900">Arnés de Cuerpo Completo Certificado</h6>
+                                  <p className="text-sm text-gray-600 mt-1">Marcas recomendadas (3M, MSA). Verifica anillo "D" dorsal.</p>
+                                </div>
+                                <ShoppingBag className="h-5 w-5 text-blue-500" />
+                              </div>
+                              <div className="mt-3 text-blue-600 text-sm font-medium hover:underline">Ver opciones certificadas →</div>
+                            </a>
+                            <a href="https://mercadolibre.com/sec/1yZQSU9" target="_blank" rel="noopener noreferrer" 
+                               className="bg-white p-4 rounded-xl border-l-4 border-yellow-500 shadow-sm hover:shadow-md transition-all">
+                              <div className="flex justify-between items-start">
+                                <div>
+                                  <h6 className="font-bold text-gray-900">Casco con Barboquejo</h6>
+                                  <p className="text-sm text-gray-600 mt-1">Estilo montaña (Kask/Petzl). No se cae al mirar arriba.</p>
+                                </div>
+                                <ShoppingBag className="h-5 w-5 text-yellow-500" />
+                              </div>
+                              <div className="mt-3 text-yellow-600 text-sm font-medium hover:underline">Ver cascos de altura →</div>
+                            </a>
+                          </div>
                         </div>
 
                         {/* Conectores y Líneas de Vida */}
@@ -905,6 +990,19 @@ export default function GuiaNOM009Article() {
                           </div>
                         </div>
 
+                        {/* PRODUCTOS: LÍNEAS DE VIDA */}
+                        <div className="mt-4 mb-6">
+                           <a href="https://mercadolibre.com/sec/18FXEdR" target="_blank" rel="noopener noreferrer" 
+                              className="block bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-xl border border-orange-200 hover:border-orange-400 transition-all group">
+                             <div className="flex items-center gap-3 mb-2">
+                               <span className="bg-orange-100 p-2 rounded-full text-orange-600 group-hover:bg-orange-200">⚡</span>
+                               <span className="font-bold text-gray-900">Recomendado: Línea de Vida con Amortiguador</span>
+                             </div>
+                             <p className="text-sm text-gray-700 mb-2">Vital para disipar la energía cinética. Elige tipo "Y" para progresión constante.</p>
+                             <span className="text-orange-700 font-semibold text-sm">Ver disponibilidad y precios →</span>
+                           </a>
+                        </div>
+
                         {/* Punto de Anclaje - EL MÁS CRÍTICO */}
                         <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-red-500 shadow-xl">
                           <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-3">
@@ -922,6 +1020,20 @@ export default function GuiaNOM009Article() {
                             <p className="text-lg sm:text-xl md:text-2xl font-bold text-red-700 mt-3">
                               5,000 libras (22.2 kN) por trabajador conectado
                             </p>
+                          </div>
+
+                          {/* PRODUCTOS: ANCLAJES */}
+                          <div className="mt-4 mb-6">
+                             <a href="https://mercadolibre.com/sec/2H47uQG" target="_blank" rel="noopener noreferrer" 
+                                className="flex items-center justify-between bg-white p-4 rounded-xl border border-green-200 hover:border-green-500 transition-all shadow-sm">
+                               <div>
+                                 <div className="font-bold text-gray-900">Puntos de Anclaje Portátiles (Tie-Off)</div>
+                                 <div className="text-sm text-gray-500">Cintas de anclaje cruzado certificadas 5,000 lbs.</div>
+                               </div>
+                               <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-bold hover:bg-green-200">
+                                 Ver Oferta
+                               </div>
+                             </a>
                           </div>
 
                           <div className="grid md:grid-cols-2 gap-3">
@@ -1085,7 +1197,14 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
                         </div>
-
+                        {/* PRODUCTO: ANDAMIOS */}
+                          <div className="mb-6 flex justify-end">
+                            <a href="https://mercadolibre.com/sec/25LEiT4" target="_blank" rel="noopener noreferrer" 
+                               className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold hover:bg-blue-100 transition-colors border border-blue-200">
+                              <ShoppingBag className="h-4 w-4" />
+                              Ver Andamios y Escaleras Certificadas
+                            </a>
+                          </div>
                         {/* Andamios Colgantes */}
                         <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-purple-300 mb-6">
                           <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
@@ -1216,28 +1335,56 @@ export default function GuiaNOM009Article() {
                             </div>
                           </div>
 
-                          {/* Imagen Explicativa del Trauma por Suspensión */}
-                          <div className="mb-6">
-                            <div className="bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl p-3 sm:p-4 md:p-6 border-4 border-dashed border-red-300 shadow-inner">
-                              <div className="text-center">
-                                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🩺</div>
-                                <h5 className="text-xl font-bold text-red-700 mb-3">
-                                  Imagen Médica Explicativa
-                                </h5>
-                                <p className="text-red-600 mb-4">
-                                  Diagrama médico del trauma por suspensión y sus efectos en el sistema circulatorio
-                                </p>
-                                <div className="bg-red-200 rounded-xl p-4 text-red-700">
-                                  <p className="font-semibold mb-2">🔬 Imagen sugerida:</p>
-                                  <p className="text-sm">
-                                    Diagrama anatómico mostrando el flujo sanguíneo bloqueado por las correas del arnés, 
-                                    acumulación de sangre en extremidades y efectos en el cerebro
+                        {/* Imagen Explicativa del Trauma por Suspensión */}
+<div className="mb-6">
+  <div className="bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl p-3 sm:p-4 md:p-6 border-4 border-dashed border-red-300 shadow-inner">
+    <div className="text-center">
+      <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🩺</div>
+      <h5 className="text-xl font-bold text-red-700 mb-3">
+        Imagen Médica Explicativa
+      </h5>
+      <p className="text-red-600 mb-4">
+        Diagrama médico del trauma por suspensión y sus efectos en el sistema circulatorio
+      </p>
+
+      {/* --- INICIO DEL CAMBIO: Se inserta la imagen aquí --- */}
+      {/* Contenedor extra para darle un marco bonito a la imagen */}
+      <div className="rounded-xl overflow-hidden shadow-md border border-red-200 mx-auto bg-white">
+        <img
+          src="/images/sindromedelarnes.webp"
+          alt="Diagrama anatómico mostrando el flujo sanguíneo bloqueado por las correas del arnés y acumulación de sangre"
+          className="w-full h-auto object-cover"
+          loading="lazy" 
+        />
+      </div>
+      {/* --- FIN DEL CAMBIO --- */}
+
+    </div>
+  </div>
+</div>
+{/* PRODUCTO ESTRELLA: CINTAS ANTI-TRAUMA */}
+                          <div className="my-8 transform hover:scale-[1.02] transition-transform duration-300">
+                            <a href="https://mercadolibre.com/sec/1ZzRV5u" target="_blank" rel="noopener noreferrer" 
+                               className="block bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-6 shadow-xl border border-slate-700 overflow-hidden relative">
+                              <div className="absolute top-0 right-0 bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                SALVA VIDAS
+                              </div>
+                              <div className="flex flex-col sm:flex-row items-center gap-6">
+                                <div className="bg-white/10 p-4 rounded-full">
+                                  <Shield className="h-8 w-8 text-yellow-400" />
+                                </div>
+                                <div className="flex-1 text-center sm:text-left">
+                                  <h3 className="text-xl font-bold text-white mb-2">Cintas Anti-Trauma (Suspension Straps)</h3>
+                                  <p className="text-slate-300 text-sm mb-4">
+                                    Previenen el shock ortostático permitiendo al trabajador pararse sobre el arnés mientras espera el rescate. Baratas, ligeras y vitales.
                                   </p>
+                                  <div className="inline-block bg-yellow-400 text-slate-900 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition-colors">
+                                    Adquirir Kit de Cintas Ahora →
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </a>
                           </div>
-
                           {/* Fisiopatología */}
                           <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300 mb-6">
                             <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
@@ -1314,7 +1461,25 @@ export default function GuiaNOM009Article() {
                               <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🚑</span>
                               Rescate y Primeros Auxilios CRÍTICOS
                             </h5>
-
+{/* PRODUCTOS: RESCATE */}
+                            <div className="grid md:grid-cols-2 gap-4 mb-6">
+                              <a href="https://mercadolibre.com/sec/1e6m8NF" target="_blank" rel="noopener noreferrer" 
+                                 className="flex items-center gap-3 p-3 rounded-lg border border-green-200 bg-green-50/50 hover:bg-green-100 transition-colors">
+                                <ShoppingBag className="h-5 w-5 text-green-600" />
+                                <div>
+                                  <div className="font-bold text-gray-900 text-sm">Kit de Rescate (Polipastos)</div>
+                                  <div className="text-xs text-gray-600">Descenso controlado de víctimas</div>
+                                </div>
+                              </a>
+                              <a href="https://mercadolibre.com/sec/1vACEKy" target="_blank" rel="noopener noreferrer" 
+                                 className="flex items-center gap-3 p-3 rounded-lg border border-red-200 bg-red-50/50 hover:bg-red-100 transition-colors">
+                                <ShoppingBag className="h-5 w-5 text-red-600" />
+                                <div>
+                                  <div className="font-bold text-gray-900 text-sm">Botiquín Industrial</div>
+                                  <div className="text-xs text-gray-600">Atención inmediata post-rescate</div>
+                                </div>
+                              </a>
+                            </div>
                             <div className="space-y-6">
                               {/* Ventana de Tiempo */}
                               <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-400">
@@ -1997,7 +2162,7 @@ export default function GuiaNOM009Article() {
                           
                           <a 
                             href={`/blog/${article.slug}`}
-                            className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm tran sition-colors
+                            className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-colors
                               ${index === 0 ? 'bg-orange-500 hover:bg-orange-600 text-white' :
                                 index === 1 ? 'bg-purple-500 hover:bg-purple-600 text-white' :
                                 'bg-blue-500 hover:bg-blue-600 text-white'}`}
