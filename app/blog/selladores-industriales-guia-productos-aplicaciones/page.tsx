@@ -61,7 +61,7 @@ export default function SelladoresIndustrialesArticle() {
       reviewCount: 45,
       isRecommended: true,
       bestFor: 'Anclajes Estructurales',
-      amazonLink: 'https://mercadolibre.com/sec/2J6An4L'
+      amazonLink: 'https://mercadolibre.com/sec/2Zz4qFv'
     }
   ];
 

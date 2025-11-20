@@ -47,7 +47,7 @@ export default function CalzadoSeguridadArticle() {
       reviewCount: 3,
       isRecommended: true,
       bestFor: 'Construcción y Trabajo Rudo',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-2132681711-botas-caterpillar-second-shift-wp-steel-toe-p91660-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/1KmV8U4'
     },
     {
       id: 'berrendo-3017',
@@ -65,7 +65,7 @@ export default function CalzadoSeguridadArticle() {
       reviewCount: 79,
       isRecommended: false,
       bestFor: 'Diseño Deportivo Moderno',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-2669668266-tenis-de-seguridad-puma-safety-p664-dielectrico-para-hombre-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/2LrJRAz'
     }
   ];
 
@@ -1366,7 +1366,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://mercadolibre.com/sec/2FZYzJG"
+                              href="https://mercadolibre.com/sec/2hukoND"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1481,7 +1481,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://mercadolibre.com/sec/2hp3jwz"
+                              href="https://mercadolibre.com/sec/1Tpzibx"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1600,7 +1600,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-2669668266-tenis-de-seguridad-puma-safety-p664-dielectrico-para-hombre-_JM"
+                              href="https://mercadolibre.com/sec/2LrJRAz"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1721,7 +1721,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-1371896349-zapatos-de-seguridad-tenis-sport-industriale-de-fibra-nieion-_JM"
+                              href="https://mercadolibre.com/sec/32PaSVu"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1836,7 +1836,7 @@ export default function CalzadoSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-1711411513-tenis-de-seguridad-zapatos-industrial-trabajo-botas-ekinio-_JM"
+                              href="https://mercadolibre.com/sec/2jknq7Q"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

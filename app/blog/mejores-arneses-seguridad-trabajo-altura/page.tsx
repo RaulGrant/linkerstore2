@@ -43,7 +43,7 @@ export default function ArnesesSeguridadArticle() {
       reviewCount: 120,
       isRecommended: true,
       bestFor: 'Mejor Básico Certificado',
-      amazonLink: 'https://www.mercadolibre.com.mx/arnes-con-anillo-d-espalda-trabajo-alturas-jyrsa-jyr-10a-verde-alta-visibilidad/p/MLM43738470'
+      amazonLink: 'https://mercadolibre.com/sec/2wp8Rg7'
     },
     {
       id: 'truper-14434',
@@ -52,7 +52,7 @@ export default function ArnesesSeguridadArticle() {
       reviewCount: 200,
       isRecommended: true,
       bestFor: 'Mejor Versátil',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-833998590-arnes-cuerpo-completo-5-anillos-truper-14434-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/1KPATiG'
     },
     {
       id: 'msa-vform',
@@ -61,7 +61,7 @@ export default function ArnesesSeguridadArticle() {
       reviewCount: 85,
       isRecommended: false,
       bestFor: 'Mejor Premium',
-      amazonLink: 'https://articulo.mercadolibre.com.mx/MLM-1663193802-arnes-v-form-msa-argolla-d-en-espalda-y-cadera-contra-caidas-_JM'
+      amazonLink: 'https://mercadolibre.com/sec/31fDL5v'
     }
   ];
 
@@ -1178,7 +1178,7 @@ export default function ArnesesSeguridadArticle() {
                               <p className="text-sm text-red-600 font-semibold">Solo para uso doméstico de muy bajo riesgo</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/arnes-seguridad-contra-caidas-con-cuerda-doble-y-gancho-3-m/p/MLM53473765"
+                              href="https://mercadolibre.com/sec/1xH4X5C"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1309,7 +1309,7 @@ export default function ArnesesSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/arnes-con-anillo-d-espalda-trabajo-alturas-jyrsa-jyr-10a-verde-alta-visibilidad/p/MLM43738470"
+                              href="https://mercadolibre.com/sec/2wp8Rg7"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1434,7 +1434,7 @@ export default function ArnesesSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-833998590-arnes-cuerpo-completo-5-anillos-truper-14434-_JM"
+                              href="https://mercadolibre.com/sec/1KPATiG"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1559,7 +1559,7 @@ export default function ArnesesSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-594033466-lica-kit-kit-de-arnes-amortiguador-y-punto-fijo-_JM"
+                              href="https://mercadolibre.com/sec/1KjyJwP"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1689,7 +1689,7 @@ export default function ArnesesSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-1663193802-arnes-v-form-msa-argolla-d-en-espalda-y-cadera-contra-caidas-_JM"
+                              href="https://mercadolibre.com/sec/31fDL5v"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1812,7 +1812,7 @@ export default function ArnesesSeguridadArticle() {
                               <p className="text-sm text-gray-600">* Verificar especificaciones del modelo exacto</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/arnes-seguridad-anti-caidas-warthog-safety-5-puntos-ajuste-color-verdenegro/p/MLM35606995"
+                              href="https://mercadolibre.com/sec/2pRdC1u"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

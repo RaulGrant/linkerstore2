@@ -40,7 +40,7 @@ export default function LentesProteccionArticle() {
       reviewCount: 2300,
       isRecommended: true,
       bestFor: 'Mejor Diseño y Estilo',
-      amazonLink: 'https://www.mercadolibre.com.mx/gafas-de-seguridad-kleenguard-v30-nemesis-14481/p/MLM2022204992'
+      amazonLink: 'https://mercadolibre.com/sec/31zmde5'
     },
     {
       id: '3m-securefit',
@@ -49,7 +49,7 @@ export default function LentesProteccionArticle() {
       reviewCount: 850,
       isRecommended: true,
       bestFor: 'Mejor Tecnología Antiempañante',
-      amazonLink: 'https://www.amazon.com.mx/3M-SecureFit-400-Safety-Glasses/dp/B00AZ8B57S'
+      amazonLink: 'https://mercadolibre.com/sec/2DmnYrR'
     },
     {
       id: 'hexarmor-vs250',
@@ -58,7 +58,7 @@ export default function LentesProteccionArticle() {
       reviewCount: 45,
       isRecommended: false,
       bestFor: 'Opción Más Innovadora',
-      amazonLink: 'https://www.mercadolibre.com.mx/lentes-de-seguridad-fotocromaticos'
+      amazonLink: 'https://mercadolibre.com/sec/14dSX7w'
     }
   ];
 
@@ -886,7 +886,7 @@ export default function LentesProteccionArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/gafas-de-seguridad-kleenguard-v30-nemesis-14481/p/MLM2022204992"
+                              href="https://mercadolibre.com/sec/31zmde5"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1001,7 +1001,7 @@ export default function LentesProteccionArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/lentes-seguridad-claras-antirayas-milwaukee-48-73-2010/p/MLM27892719"
+                              href="https://mercadolibre.com/sec/2MKekSP"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1113,11 +1113,11 @@ export default function LentesProteccionArticle() {
                         <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Amazon México</p>
+                              <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.amazon.com.mx/3M-SecureFit-400-Safety-Glasses/dp/B00AZ8B57S"
+                              href="https://mercadolibre.com/sec/2DmnYrR"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1255,7 +1255,7 @@ export default function LentesProteccionArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/lentes-de-seguridad-fotocromaticos"
+                              href="https://mercadolibre.com/sec/14dSX7w"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1372,7 +1372,7 @@ export default function LentesProteccionArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/lentes-de-seguridad-mica-transparente-truper-14252/p/MLM39874983"
+                              href="https://mercadolibre.com/sec/1oqjT22"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1493,7 +1493,7 @@ export default function LentesProteccionArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-3382861608-sobre-lente-de-seguridad-bolle-swift-otg-antiempano-_JM"
+                              href="https://mercadolibre.com/sec/1MnYQJQ"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

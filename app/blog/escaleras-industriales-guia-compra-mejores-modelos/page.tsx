@@ -40,7 +40,7 @@ export default function EscalerasIndustrialesArticle() {
       reviewCount: 72,
       isRecommended: true,
       bestFor: 'Electricistas y Mantenimiento',
-      amazonLink: 'https://listado.mercadolibre.com.mx/escalera-cuprum-c-3217-06'
+      amazonLink: 'https://mercadolibre.com/sec/1UNJ4FY'
     },
     {
       id: 'truper-101906',
@@ -49,7 +49,7 @@ export default function EscalerasIndustrialesArticle() {
       reviewCount: 344,
       isRecommended: true,
       bestFor: 'Múltiples Trabajos',
-      amazonLink: 'https://listado.mercadolibre.com.mx/escalera-truper-101906'
+      amazonLink: 'https://mercadolibre.com/sec/148UFBt'
     },
     {
       id: 'cuprum-494-24n',
@@ -58,7 +58,7 @@ export default function EscalerasIndustrialesArticle() {
       reviewCount: 18,
       isRecommended: false,
       bestFor: 'Gran Altura',
-      amazonLink: 'https://listado.mercadolibre.com.mx/escalera-cuprum-494-24n'
+      amazonLink: 'https://mercadolibre.com/sec/31nsUtj'
     }
   ];
 
@@ -1121,7 +1121,7 @@ export default function EscalerasIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://listado.mercadolibre.com.mx/escalera-cuprum-c-3217-06"
+                              href="https://mercadolibre.com/sec/1UNJ4FY"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1246,7 +1246,7 @@ export default function EscalerasIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://listado.mercadolibre.com.mx/escalera-truper-101906"
+                              href="https://mercadolibre.com/sec/148UFBt"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1362,7 +1362,7 @@ export default function EscalerasIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://listado.mercadolibre.com.mx/escalera-cuprum-494-24n"
+                              href="https://mercadolibre.com/sec/31nsUtj"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1487,7 +1487,7 @@ export default function EscalerasIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-921501835-escalera-de-fibra-de-vidrio-de-uso-pesado-183cm-werner-_JM"
+                              href="https://mercadolibre.com/sec/1YWK8fm"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1592,7 +1592,7 @@ export default function EscalerasIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://listado.mercadolibre.com.mx/escalera-convertible-tipo-tijera-extencion"
+                              href="https://mercadolibre.com/sec/2SF8EY2"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

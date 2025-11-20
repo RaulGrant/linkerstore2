@@ -42,7 +42,7 @@ export default function RotomartillosTaladrosArticle() {
       reviewCount: 381,
       isRecommended: true,
       bestFor: 'Mejor Taladro Inalámbrico Versátil',
-      amazonLink: 'https://www.mercadolibre.com.mx/juego-de-taladro-percutor-atornillador-de-12-brushless-20v-max-dewalt-dcd7781d2/p/MLM18373456'
+      amazonLink: 'https://mercadolibre.com/sec/2Gqknap'
     },
     {
       id: 'truper-roto',
@@ -51,7 +51,7 @@ export default function RotomartillosTaladrosArticle() {
       reviewCount: 5027,
       isRecommended: false,
       bestFor: 'Mejor Calidad-Precio con Cable',
-      amazonLink: 'https://www.mercadolibre.com.mx/rotomartillo-truper-roto-12a8-750w-220v-naranja-y-negro/p/MLM15160653'
+      amazonLink: 'https://mercadolibre.com/sec/1VQWQVd'
     },
     {
       id: 'dewalt-dch133',
@@ -60,7 +60,7 @@ export default function RotomartillosTaladrosArticle() {
       reviewCount: 130,
       isRecommended: true,
       bestFor: 'Mejor Rotomartillo SDS Plus',
-      amazonLink: 'https://www.mercadolibre.com.mx/rotomartillo-electroneumatico-dewalt-dch133m2-b2-inalambrico-amarillo-y-negro-con-16kw-de-potencia/p/MLM44712352'
+      amazonLink: 'https://mercadolibre.com/sec/1Dkr9c6'
     }
   ];
 
@@ -985,7 +985,7 @@ export default function RotomartillosTaladrosArticle() {
                               <Star key={i} className="w-5 h-5 fill-current" />
                             ))}
                           </div>
-                          <span className="ml-2 text-gray-600">(381+ reseñas) - 4.8/5</span>
+                          <span className="ml-2 text-gray-600">(10+ reseñas) - 4.6/5</span>
                         </div>
 
                         <div className="bg-yellow-50 p-4 rounded-xl mb-6">
@@ -1053,7 +1053,7 @@ export default function RotomartillosTaladrosArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/juego-de-taladro-percutor-atornillador-de-12-brushless-20v-max-dewalt-dcd7781d2/p/MLM18373456"
+                              href="https://mercadolibre.com/sec/2Gqknap"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1157,7 +1157,7 @@ export default function RotomartillosTaladrosArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/taladro-rotomartillo-bosch-gsb-18v-50-professional-inalambrico-18v-azul-220v/p/MLM25024759"
+                              href="https://mercadolibre.com/sec/2tmyRVs"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1194,7 +1194,7 @@ export default function RotomartillosTaladrosArticle() {
                               <Star key={i} className="w-5 h-5 fill-current" />
                             ))}
                           </div>
-                          <span className="ml-2 text-gray-600">(5,027+ reseñas) - 4.8/5</span>
+                          <span className="ml-2 text-gray-600">(115+ reseñas) - 4.8/5</span>
                         </div>
 
                         <div className="bg-green-50 p-4 rounded-xl mb-6">
@@ -1272,7 +1272,7 @@ export default function RotomartillosTaladrosArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/rotomartillo-truper-roto-12a8-750w-220v-naranja-y-negro/p/MLM15160653"
+                              href="https://mercadolibre.com/sec/2tmyRVs"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1602,7 +1602,7 @@ export default function RotomartillosTaladrosArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/rotomartillo-electroneumatico-dewalt-dch133m2-b2-inalambrico-amarillo-y-negro-con-16kw-de-potencia/p/MLM44712352"
+                              href="https://mercadolibre.com/sec/1Dkr9c6"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

@@ -41,7 +41,7 @@ export default function MultimetrosProfesionalesArticle() {
       reviewCount: 1500,
       isRecommended: true,
       bestFor: 'Estándar de la Industria',
-      amazonLink: 'https://www.amazon.com.mx/Fluke-117-Mult%C3%ADmetro-electricistas-verdadero/dp/B000OCFFMW'
+      amazonLink: 'https://mercadolibre.com/sec/1RmPMSC'
     },
     {
       id: 'unit-ut204',
@@ -50,7 +50,7 @@ export default function MultimetrosProfesionalesArticle() {
       reviewCount: 422,
       isRecommended: true,
       bestFor: 'Mejor Calidad-Precio',
-      amazonLink: 'https://www.mercadolibre.com.mx/pinza-amperimetrica-digital-uni-t-ut204-600a-acdc-true-rms-ncv-multimetro-profesional/p/MLM15532755'
+      amazonLink: 'https://mercadolibre.com/sec/12VAjv4'
     },
     {
       id: 'kaiweets-ht118a',
@@ -59,7 +59,7 @@ export default function MultimetrosProfesionalesArticle() {
       reviewCount: 10000,
       isRecommended: false,
       bestFor: 'Alto Valor',
-      amazonLink: 'https://www.amazon.com.mx/KAIWEETS-Mult%C3%ADmetro-digital-autom%C3%A1tico-continuidad/dp/B08D3B44V5'
+      amazonLink: 'https://mercadolibre.com/sec/2zf6CQZ'
     }
   ];
 
@@ -1179,12 +1179,12 @@ export default function MultimetrosProfesionalesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.amazon.com.mx/Fluke-117-Mult%C3%ADmetro-electricistas-verdadero/dp/B000OCFFMW"
+                              href="https://mercadolibre.com/sec/1RmPMSC"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
-                              🛒 Ver en Amazon →
+                              🛒 Ver en Mercado Libre →
                             </a>
                           </div>
                         </div>
@@ -1416,12 +1416,12 @@ export default function MultimetrosProfesionalesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.amazon.com.mx/KAIWEETS-Mult%C3%ADmetro-digital-autom%C3%A1tico-continuidad/dp/B08D3B44V5"
+                              href="https://mercadolibre.com/sec/2zf6CQZ"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
-                              🛒 Ver en Amazon →
+                              🛒 Ver en Mercado Libre →
                             </a>
                           </div>
                         </div>
@@ -1530,7 +1530,7 @@ export default function MultimetrosProfesionalesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/multimetro-profesional-digital-fluke-101/p/MLM21993927"
+                              href="https://mercadolibre.com/sec/1zvfg2j"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1642,7 +1642,7 @@ export default function MultimetrosProfesionalesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/astroai-multimetro-de-gancho-pinza-amperimetrica-multimetro-digital-automatico-medidor-de-corriente-voltaje-acdc-corriente-alternaresistencia-continua-diodos-pinza-indicador-de-seguridad/p/MLM31014690"
+                              href="https://mercadolibre.com/sec/2ZeSdgH"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1752,16 +1752,16 @@ export default function MultimetrosProfesionalesArticle() {
                         <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-orange-700 mb-2">💰 Disponible en Amazon/Home Depot</p>
+                              <p className="text-xl font-bold text-orange-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
-                              href="https://www.homedepot.com/p/Klein-Tools-600V-AC-DC-Auto-Ranging-Digital-Multimeter-Drop-Resistant-Temperature-Measurement-MM400/206517333"
+                              href="https://mercadolibre.com/sec/1aqEm5C"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                             >
-                              🛒 Ver en Home Depot →
+                              🛒 Ver en Mercado Libre →
                             </a>
                           </div>
                         </div>

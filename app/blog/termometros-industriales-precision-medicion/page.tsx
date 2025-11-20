@@ -43,7 +43,7 @@ export default function TermometrosIndustrialesArticle() {
       reviewCount: 23,
       isRecommended: true,
       bestFor: 'Estándar Oro en Durabilidad',
-      amazonLink: 'https://www.mercadolibre.com.mx/fluke-62-max-termometro-inflarrojo-30-a-500-c-pistola/p/MLM24631909'
+      amazonLink: 'https://mercadolibre.com/sec/29G733y'
     },
     {
       id: 'fluke-51-ii',
@@ -52,7 +52,7 @@ export default function TermometrosIndustrialesArticle() {
       reviewCount: 0,
       isRecommended: false,
       bestFor: 'Alta Precisión por Contacto',
-      amazonLink: 'https://www.mercadolibre.com.mx/termometro-digital-de-contacto-fluke-51ii/up/MLMU557593774'
+      amazonLink: 'https://mercadolibre.com/sec/2p3xDDQ'
     },
     {
       id: 'klein-ir07',
@@ -61,7 +61,7 @@ export default function TermometrosIndustrialesArticle() {
       reviewCount: 0,
       isRecommended: true,
       bestFor: 'Mejor Híbrido Compacto',
-      amazonLink: 'https://www.mercadolibre.com.mx/termometro-de-bolsillo-infrarojo-con-sonda-ir07-klein-tools/p/MLM31743207'
+      amazonLink: 'https://mercadolibre.com/sec/216huMe'
     }
   ];
 
@@ -1228,7 +1228,7 @@ export default function TermometrosIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-1902465067-termometro-infrarrojo-digital-industrial-50-600-c-_JM"
+                              href="https://mercadolibre.com/sec/1hXZobU"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1343,7 +1343,7 @@ export default function TermometrosIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/termometro-digital-uso-industrial-truper-18229/p/MLM26505365"
+                              href="https://mercadolibre.com/sec/2RDXrZJ"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1457,7 +1457,7 @@ export default function TermometrosIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://articulo.mercadolibre.com.mx/MLM-595344108-termometro-digital-infrarrojo-laser-32c-a-400c-ut300s-_JM"
+                              href="https://mercadolibre.com/sec/12o5LsV"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1581,7 +1581,7 @@ export default function TermometrosIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/fluke-62-max-termometro-inflarrojo-30-a-500-c-pistola/p/MLM24631909"
+                              href="https://mercadolibre.com/sec/29G733y"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1702,7 +1702,7 @@ export default function TermometrosIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/termometro-de-bolsillo-infrarojo-con-sonda-ir07-klein-tools/p/MLM31743207"
+                              href="https://mercadolibre.com/sec/216huMe"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
@@ -1824,7 +1824,7 @@ export default function TermometrosIndustrialesArticle() {
                               <p className="text-sm text-gray-600">* Consultar con distribuidores autorizados</p>
                             </div>
                             <a 
-                              href="https://www.mercadolibre.com.mx/termometro-digital-de-contacto-fluke-51ii/up/MLMU557593774"
+                              href="https://mercadolibre.com/sec/2p3xDDQ"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"

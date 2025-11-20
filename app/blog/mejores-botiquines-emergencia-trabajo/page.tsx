@@ -41,7 +41,7 @@ export default function BotiquinesTrabajoArticle() {
       reviewCount: 69,
       isRecommended: true,
       bestFor: 'Oficinas y Comercios',
-      amazonLink: 'https://mercadolibre.com/sec/1dq6Lfe'
+      amazonLink: 'https://mercadolibre.com/sec/1fCNzj2'
     },
     {
       id: 'industrial-num5',
@@ -1258,7 +1258,7 @@ export default function BotiquinesTrabajoArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <a 
-                              href="https://mercadolibre.com/sec/1dq6Lfe"
+                              href="https://mercadolibre.com/sec/1fCNzj2"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
