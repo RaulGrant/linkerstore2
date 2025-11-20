@@ -1,253 +1,210 @@
 "use client";
-
-import { motion } from "framer-motion";
-import BlogLayout from "@/components/blog/BlogLayout";
-import ProductComparison from "@/components/blog/ProductComparison";
-import RelatedArticles from "@/components/blog/RelatedArticles";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, Shield, Star, CheckCircle, AlertTriangle } from "lucide-react";
-import Image from "next/image";
-import { trackAffiliateClick, trackBlogView, generateTrackingId } from '@/lib/meta-pixel';
-import { useEffect } from 'react';
-
-export default function KitsHerramientasArticle() {
-  // Track article view on component mount
-  useEffect(() => {
-    const articleId = generateTrackingId('article', 'top-7-kits-herramientas-2025');
-    trackBlogView(articleId, 'Top 7 Kits de Herramientas Mecánicas 2025', 'herramientas_mecanicas');
-  }, []);
-
-  // Función para manejar clicks en enlaces de Amazon
-  const handleAmazonClick = (productName: string, amazonUrl: string) => {
-    const productId = generateTrackingId('product', productName);
-    trackAffiliateClick('amazon', productId, productName, 'herramientas_mecanicas');
-  };
-
-  // Datos para la comparación de productos (Solo los 3 primeros con información completa)
-  const comparisonProducts = [
-    {
-      id: "dewalt",
-      name: "DEWALT DWMT81535",
-      rating: 4.8,
-      reviewCount: 3200,
-      isRecommended: true,
-      bestFor: "Mecánica Profesional",
-      amazonLink: "https://mercadolibre.com/sec/2naVqQs",
-    },
-    {
-      id: "pretul-83",
-      name: "Pretul SET-83",
-      rating: 4.2,
-      reviewCount: 850,
-      isRecommended: false,
-      bestFor: "Mecánica Básica",
-      amazonLink: "https://mercadolibre.com/sec/1GQ24Dg",
-    },
-    {
-      id: "cartman",
-      name: "CARTMAN 238 Piezas",
-      rating: 4.5,
-      reviewCount: 2100,
-      isRecommended: true,
-      bestFor: "Bricolaje / Hogar",
-      amazonLink: "https://mercadolibre.com/sec/2Du7866",
-    },
-  ];
-
-  const comparisonFeatures = [
-    { name: "Piezas Totales", product1: "247", product2: "83", product3: "238" },
-    { name: "Uso Principal", product1: "Mecánica Profesional", product2: "Mecánica Básica", product3: "Bricolaje / Hogar" },
-    { name: "Material", product1: "Acero CR-V Pulido", product2: "Acero al Carbono", product3: "Acero Aleado" },
-    { name: "Tipo de Estuche", product1: "Plástico Rígido", product2: "Tela", product3: "Plástico Rígido" },
-    { name: "Puntas Magnéticas", product1: "No (Dados)", product2: "Sí (Desarmador)", product3: "Sí (Algunos)" },
-    { name: "Disponibilidad", product1: "Amazon Prime", product2: "Amazon Prime", product3: "Envío Estándar" },
-  ];
-
-  // Artículos relacionados
-  const relatedArticles = [
-    {
-      id: "1",
-      title: "Los Mejores Chalecos de Seguridad Reflectantes de 2025",
-      excerpt: "Guía y comparativa de los mejores chalecos de seguridad para el trabajo y la industria.",
-      description: "Guía y comparativa de los mejores chalecos de seguridad para el trabajo y la industria.",
-      category: "EPP",
-      publishDate: "29 Ago 2025",
-      readTime: "12 min",
-      image: "/images/chalecos-seguridad.jpg",
-      slug: "mejores-chalecos-seguridad-2025",
-    },
-    {
-      id: "2",
-      title: "Guantes de Seguridad: Cómo Elegir la Protección Adecuada",
-      excerpt: "Todo lo que necesitas saber sobre guantes de trabajo y protección.",
-      description: "Todo lo que necesitas saber sobre guantes de trabajo y protección.",
-      category: "EPP",
-      publishDate: "8 Nov 2023",
-      readTime: "10 min",
-      image: "/images/safety-gloves.jpg",
-      slug: "guia-guantes-seguridad-trabajo",
-    },
-    {
-      id: "3",
-      title: "Calzado de Seguridad: Las Mejores Botas Industriales",
-      excerpt: "Análisis detallado de las botas de seguridad más resistentes.",
-      description: "Análisis detallado de las botas de seguridad más resistentes.",
-      category: "EPP",
-      publishDate: "5 Nov 2023",
-      readTime: "15 min",
-      image: "/images/safety-boots.jpg",
-      slug: "mejor-calzado-industrial-botas-seguridad",
-    },
-  ];
-
-  return (
-    <BlogLayout>
+"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = KitsHerramientasArticle;
+var framer_motion_1 = require("framer-motion");
+var BlogLayout_1 = require("@/components/blog/BlogLayout");
+var ProductComparison_1 = require("@/components/blog/ProductComparison");
+var RelatedArticles_1 = require("@/components/blog/RelatedArticles");
+var badge_1 = require("@/components/ui/badge");
+var lucide_react_1 = require("lucide-react");
+var meta_pixel_1 = require("@/lib/meta-pixel");
+var react_1 = require("react");
+function KitsHerramientasArticle() {
+    // Track article view on component mount
+    (0, react_1.useEffect)(function () {
+        var articleId = (0, meta_pixel_1.generateTrackingId)('article', 'top-7-kits-herramientas-2025');
+        (0, meta_pixel_1.trackBlogView)(articleId, 'Top 7 Kits de Herramientas Mecánicas 2025', 'herramientas_mecanicas');
+    }, []);
+    // Función para manejar clicks en enlaces de Amazon
+    var handleAmazonClick = function (productName, amazonUrl) {
+        var productId = (0, meta_pixel_1.generateTrackingId)('product', productName);
+        (0, meta_pixel_1.trackAffiliateClick)('amazon', productId, productName, 'herramientas_mecanicas');
+    };
+    // Datos para la comparación de productos (Solo los 3 primeros con información completa)
+    var comparisonProducts = [
+        {
+            id: "dewalt",
+            name: "DEWALT DWMT81535",
+            rating: 4.8,
+            reviewCount: 3200,
+            isRecommended: true,
+            bestFor: "Mecánica Profesional",
+            amazonLink: "https://mercadolibre.com/sec/2naVqQs",
+        },
+        {
+            id: "pretul-83",
+            name: "Pretul SET-83",
+            rating: 4.2,
+            reviewCount: 850,
+            isRecommended: false,
+            bestFor: "Mecánica Básica",
+            amazonLink: "https://mercadolibre.com/sec/1GQ24Dg",
+        },
+        {
+            id: "cartman",
+            name: "CARTMAN 238 Piezas",
+            rating: 4.5,
+            reviewCount: 2100,
+            isRecommended: true,
+            bestFor: "Bricolaje / Hogar",
+            amazonLink: "https://mercadolibre.com/sec/2Du7866",
+        },
+    ];
+    var comparisonFeatures = [
+        { name: "Piezas Totales", product1: "247", product2: "83", product3: "238" },
+        { name: "Uso Principal", product1: "Mecánica Profesional", product2: "Mecánica Básica", product3: "Bricolaje / Hogar" },
+        { name: "Material", product1: "Acero CR-V Pulido", product2: "Acero al Carbono", product3: "Acero Aleado" },
+        { name: "Tipo de Estuche", product1: "Plástico Rígido", product2: "Tela", product3: "Plástico Rígido" },
+        { name: "Puntas Magnéticas", product1: "No (Dados)", product2: "Sí (Desarmador)", product3: "Sí (Algunos)" },
+        { name: "Disponibilidad", product1: "Amazon Prime", product2: "Amazon Prime", product3: "Envío Estándar" },
+    ];
+    // Artículos relacionados
+    var relatedArticles = [
+        {
+            id: "1",
+            title: "Los Mejores Chalecos de Seguridad Reflectantes de 2025",
+            excerpt: "Guía y comparativa de los mejores chalecos de seguridad para el trabajo y la industria.",
+            description: "Guía y comparativa de los mejores chalecos de seguridad para el trabajo y la industria.",
+            category: "EPP",
+            publishDate: "29 Ago 2025",
+            readTime: "12 min",
+            image: "/images/chalecos-seguridad.jpg",
+            slug: "mejores-chalecos-seguridad-2025",
+        },
+        {
+            id: "2",
+            title: "Guantes de Seguridad: Cómo Elegir la Protección Adecuada",
+            excerpt: "Todo lo que necesitas saber sobre guantes de trabajo y protección.",
+            description: "Todo lo que necesitas saber sobre guantes de trabajo y protección.",
+            category: "EPP",
+            publishDate: "8 Nov 2023",
+            readTime: "10 min",
+            image: "/images/safety-gloves.jpg",
+            slug: "guia-guantes-seguridad-trabajo",
+        },
+        {
+            id: "3",
+            title: "Calzado de Seguridad: Las Mejores Botas Industriales",
+            excerpt: "Análisis detallado de las botas de seguridad más resistentes.",
+            description: "Análisis detallado de las botas de seguridad más resistentes.",
+            category: "EPP",
+            publishDate: "5 Nov 2023",
+            readTime: "15 min",
+            image: "/images/safety-boots.jpg",
+            slug: "mejor-calzado-industrial-botas-seguridad",
+        },
+    ];
+    return (<BlogLayout_1.default>
       <div className="min-h-screen">
         {/* Hero Section con partículas animadas */}
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas extendido por toda la sección */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (80 partículas - distribuidas por toda la sección) */}
-            {Array.from({ length: 80 }, (_, i) => (
-              <motion.div
-                key={`section-large-particle-${i}`}
-                className="absolute rounded-full opacity-70"
-                style={{
-                  width: 4 + (i % 6),
-                  height: 4 + (i % 6),
-                  backgroundColor: `hsl(${45 + (i * 8)}, 85%, ${65 + (i % 25)}%)`,
-                  left: `${(i * 2.5) % 100}%`,
-                  top: `${(i * 3.7) % 100}%`,
-                }}
-                animate={{
-                  x: [0, 100 + (i % 50), -80 + (i % 30), 0],
-                  y: [0, -120 + (i % 40), 100 + (i % 35), 0],
-                  scale: [0.3, 1.2, 0.5, 1],
-                  opacity: [0.2, 0.8, 0.3, 0.7],
-                  rotate: [0, 180 + (i % 180), 360]
-                }}
-                transition={{
-                  duration: 12 + (i % 8),
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
+            {Array.from({ length: 80 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-large-particle-".concat(i)} className="absolute rounded-full opacity-70" style={{
+                width: 4 + (i % 6),
+                height: 4 + (i % 6),
+                backgroundColor: "hsl(".concat(45 + (i * 8), ", 85%, ").concat(65 + (i % 25), "%)"),
+                left: "".concat((i * 2.5) % 100, "%"),
+                top: "".concat((i * 3.7) % 100, "%"),
+            }} animate={{
+                x: [0, 100 + (i % 50), -80 + (i % 30), 0],
+                y: [0, -120 + (i % 40), 100 + (i % 35), 0],
+                scale: [0.3, 1.2, 0.5, 1],
+                opacity: [0.2, 0.8, 0.3, 0.7],
+                rotate: [0, 180 + (i % 180), 360]
+            }} transition={{
+                duration: 12 + (i % 8),
+                repeat: Infinity,
+                delay: i * 0.3,
+                ease: "easeInOut"
+            }}/>); })}
 
             {/* Partículas medianas rápidas (120 partículas) */}
-            {Array.from({ length: 120 }, (_, i) => (
-              <motion.div
-                key={`section-medium-particle-${i}`}
-                className="absolute rounded-full opacity-60"
-                style={{
-                  width: 2 + (i % 4),
-                  height: 2 + (i % 4),
-                  backgroundColor: `hsl(${200 + (i * 4)}, 75%, ${70 + (i % 20)}%)`,
-                  left: `${(i * 1.67) % 100}%`,
-                  top: `${(i * 2.33) % 100}%`,
-                }}
-                animate={{
-                  x: [0, 60 + (i % 30), -40 + (i % 20)],
-                  y: [0, -80 + (i % 25), 60 + (i % 30)],
-                  scale: [0, 1, 0.2, 1, 0],
-                  opacity: [0, 0.9, 0.1, 0.6, 0]
-                }}
-                transition={{
-                  duration: 6 + (i % 4),
-                  repeat: Infinity,
-                  delay: i * 0.15,
-                  ease: "linear"
-                }}
-              />
-            ))}
+            {Array.from({ length: 120 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-medium-particle-".concat(i)} className="absolute rounded-full opacity-60" style={{
+                width: 2 + (i % 4),
+                height: 2 + (i % 4),
+                backgroundColor: "hsl(".concat(200 + (i * 4), ", 75%, ").concat(70 + (i % 20), "%)"),
+                left: "".concat((i * 1.67) % 100, "%"),
+                top: "".concat((i * 2.33) % 100, "%"),
+            }} animate={{
+                x: [0, 60 + (i % 30), -40 + (i % 20)],
+                y: [0, -80 + (i % 25), 60 + (i % 30)],
+                scale: [0, 1, 0.2, 1, 0],
+                opacity: [0, 0.9, 0.1, 0.6, 0]
+            }} transition={{
+                duration: 6 + (i % 4),
+                repeat: Infinity,
+                delay: i * 0.15,
+                ease: "linear"
+            }}/>); })}
 
             {/* Micropartículas súper rápidas (160 partículas) */}
-            {Array.from({ length: 160 }, (_, i) => (
-              <motion.div
-                key={`section-micro-particle-${i}`}
-                className="absolute rounded-full opacity-50"
-                style={{
-                  width: 1 + (i % 2),
-                  height: 1 + (i % 2),
-                  backgroundColor: `hsl(${280 + (i * 3)}, 80%, ${75 + (i % 15)}%)`,
-                  left: `${(i * 1.25) % 100}%`,
-                  top: `${(i * 1.75) % 100}%`,
-                }}
-                animate={{
-                  x: [0, 30 + (i % 15), -20 + (i % 10)],
-                  y: [0, -40 + (i % 12), 30 + (i % 15)],
-                  scale: [0, 0.8, 0.1, 1, 0],
-                  opacity: [0, 0.7, 0.05, 0.5, 0],
-                  rotate: [0, 360 + (i % 180)]
-                }}
-                transition={{
-                  duration: 3 + (i % 2),
-                  repeat: Infinity,
-                  delay: i * 0.05,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
+            {Array.from({ length: 160 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-micro-particle-".concat(i)} className="absolute rounded-full opacity-50" style={{
+                width: 1 + (i % 2),
+                height: 1 + (i % 2),
+                backgroundColor: "hsl(".concat(280 + (i * 3), ", 80%, ").concat(75 + (i % 15), "%)"),
+                left: "".concat((i * 1.25) % 100, "%"),
+                top: "".concat((i * 1.75) % 100, "%"),
+            }} animate={{
+                x: [0, 30 + (i % 15), -20 + (i % 10)],
+                y: [0, -40 + (i % 12), 30 + (i % 15)],
+                scale: [0, 0.8, 0.1, 1, 0],
+                opacity: [0, 0.7, 0.05, 0.5, 0],
+                rotate: [0, 360 + (i % 180)]
+            }} transition={{
+                duration: 3 + (i % 2),
+                repeat: Infinity,
+                delay: i * 0.05,
+                ease: "easeInOut"
+            }}/>); })}
 
             {/* Líneas conectoras con gradientes (40 líneas) */}
-            {Array.from({ length: 40 }, (_, i) => (
-              <motion.div
-                key={`section-line-particle-${i}`}
-                className="absolute h-px bg-gradient-to-r from-transparent via-yellow-300 to-transparent opacity-40"
-                style={{
-                  width: 80 + (i * 15),
-                  left: `${(i * 5) % 100}%`,
-                  top: `${(i * 4.5) % 100}%`,
-                  transformOrigin: 'center center'
-                }}
-                animate={{
-                  scale: [0.2, 1.5, 0.3, 1],
-                  rotate: [0, 360 + (i % 90)],
-                  opacity: [0.1, 0.6, 0.05, 0.4]
-                }}
-                transition={{
-                  duration: 10 + (i % 5),
-                  repeat: Infinity,
-                  delay: i * 0.5,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
+            {Array.from({ length: 40 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-line-particle-".concat(i)} className="absolute h-px bg-gradient-to-r from-transparent via-yellow-300 to-transparent opacity-40" style={{
+                width: 80 + (i * 15),
+                left: "".concat((i * 5) % 100, "%"),
+                top: "".concat((i * 4.5) % 100, "%"),
+                transformOrigin: 'center center'
+            }} animate={{
+                scale: [0.2, 1.5, 0.3, 1],
+                rotate: [0, 360 + (i % 90)],
+                opacity: [0.1, 0.6, 0.05, 0.4]
+            }} transition={{
+                duration: 10 + (i % 5),
+                repeat: Infinity,
+                delay: i * 0.5,
+                ease: "easeInOut"
+            }}/>); })}
           </div>
 
           <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <motion.h1 
-                className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                style={{
-                  backgroundSize: "200% 200%"
-                }}
-              >
+            <framer_motion_1.motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+              <framer_motion_1.motion.h1 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent" animate={{
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+        }} transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+        }} style={{
+            backgroundSize: "200% 200%"
+        }}>
                 Top 7 Kits de Herramientas 2025
-              </motion.h1>
-              <motion.p 
-                className="text-xl md:text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 md:mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.5 }}
-              >
+              </framer_motion_1.motion.h1>
+              <framer_motion_1.motion.p className="text-xl md:text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 md:mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.5 }}>
                 La guía definitiva para elegir el kit perfecto. Desde profesionales hasta aficionados, 
                 descubre cuál es la caja de herramientas que transformará tu trabajo.
-              </motion.p>
-            </motion.div>
+              </framer_motion_1.motion.p>
+            </framer_motion_1.motion.div>
           </div>
         </section>
 
@@ -258,219 +215,155 @@ export default function KitsHerramientasArticle() {
           {/* Sistema masivo de partículas mejorado para el artículo 2 */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas flotantes principales (120 partículas) */}
-            {Array.from({ length: 120 }, (_, i) => (
-              <motion.div
-                key={`main-particle-${i}`}
-                className="absolute rounded-full"
-                style={{
-                  width: `${3 + (i % 8)}px`,
-                  height: `${3 + (i % 8)}px`,
-                  backgroundColor: `hsl(${210 + (i * 3)}, 65%, ${65 + (i % 20)}%)`,
-                  left: `${(i * 8.33) % 100}%`,
-                  top: `${(i * 12.5) % 100}%`,
-                  opacity: 0.4 + (i % 4) * 0.1,
-                }}
-                animate={{
-                  y: [0, -25, 0],
-                  x: [0, 12, 0],
-                  scale: [1, 1.3, 1],
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 18 + (i % 12),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.05,
-                }}
-              />
-            ))}
+            {Array.from({ length: 120 }, function (_, i) { return (<framer_motion_1.motion.div key={"main-particle-".concat(i)} className="absolute rounded-full" style={{
+                width: "".concat(3 + (i % 8), "px"),
+                height: "".concat(3 + (i % 8), "px"),
+                backgroundColor: "hsl(".concat(210 + (i * 3), ", 65%, ").concat(65 + (i % 20), "%)"),
+                left: "".concat((i * 8.33) % 100, "%"),
+                top: "".concat((i * 12.5) % 100, "%"),
+                opacity: 0.4 + (i % 4) * 0.1,
+            }} animate={{
+                y: [0, -25, 0],
+                x: [0, 12, 0],
+                scale: [1, 1.3, 1],
+                rotate: [0, 360],
+            }} transition={{
+                duration: 18 + (i % 12),
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.05,
+            }}/>); })}
             
             {/* Partículas medianas orbitales (80 partículas) */}
-            {Array.from({ length: 80 }, (_, i) => (
-              <motion.div
-                key={`orbital-particle-${i}`}
-                className="absolute rounded-full"
-                style={{
-                  width: `${6 + (i % 5)}px`,
-                  height: `${6 + (i % 5)}px`,
-                  backgroundColor: `hsl(${190 + (i * 4)}, 70%, ${55 + (i % 25)}%)`,
-                  left: `${(i * 12.5) % 100}%`,
-                  top: `${(i * 18.75) % 100}%`,
-                  opacity: 0.25,
-                }}
-                animate={{
-                  y: [0, -40, 0],
-                  x: [0, 20, 0],
-                  rotate: [0, -180, 0],
-                  scale: [1, 1.4, 1],
-                }}
-                transition={{
-                  duration: 22 + (i % 8),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.08,
-                }}
-              />
-            ))}
+            {Array.from({ length: 80 }, function (_, i) { return (<framer_motion_1.motion.div key={"orbital-particle-".concat(i)} className="absolute rounded-full" style={{
+                width: "".concat(6 + (i % 5), "px"),
+                height: "".concat(6 + (i % 5), "px"),
+                backgroundColor: "hsl(".concat(190 + (i * 4), ", 70%, ").concat(55 + (i % 25), "%)"),
+                left: "".concat((i * 12.5) % 100, "%"),
+                top: "".concat((i * 18.75) % 100, "%"),
+                opacity: 0.25,
+            }} animate={{
+                y: [0, -40, 0],
+                x: [0, 20, 0],
+                rotate: [0, -180, 0],
+                scale: [1, 1.4, 1],
+            }} transition={{
+                duration: 22 + (i % 8),
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.08,
+            }}/>); })}
             
             {/* Partículas grandes flotantes especiales (40 partículas) */}
-            {Array.from({ length: 40 }, (_, i) => (
-              <motion.div
-                key={`special-particle-${i}`}
-                className="absolute rounded-full"
-                style={{
-                  width: `${10 + (i % 6)}px`,
-                  height: `${10 + (i % 6)}px`,
-                  backgroundColor: `hsl(${240 + (i * 5)}, 60%, ${70 + (i % 15)}%)`,
-                  left: `${(i * 25) % 100}%`,
-                  top: `${(i * 31.25) % 100}%`,
-                  opacity: 0.15,
-                }}
-                animate={{
-                  y: [0, -60, 0],
-                  x: [0, 30, 0],
-                  rotate: [0, 270, 360],
-                  scale: [1, 1.6, 1],
-                }}
-                transition={{
-                  duration: 28 + (i % 10),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.15,
-                }}
-              />
-            ))}
+            {Array.from({ length: 40 }, function (_, i) { return (<framer_motion_1.motion.div key={"special-particle-".concat(i)} className="absolute rounded-full" style={{
+                width: "".concat(10 + (i % 6), "px"),
+                height: "".concat(10 + (i % 6), "px"),
+                backgroundColor: "hsl(".concat(240 + (i * 5), ", 60%, ").concat(70 + (i % 15), "%)"),
+                left: "".concat((i * 25) % 100, "%"),
+                top: "".concat((i * 31.25) % 100, "%"),
+                opacity: 0.15,
+            }} animate={{
+                y: [0, -60, 0],
+                x: [0, 30, 0],
+                rotate: [0, 270, 360],
+                scale: [1, 1.6, 1],
+            }} transition={{
+                duration: 28 + (i % 10),
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.15,
+            }}/>); })}
             
             {/* Partículas pequeñas rápidas (200 partículas) */}
-            {Array.from({ length: 200 }, (_, i) => (
-              <motion.div
-                key={`fast-particle-${i}`}
-                className="absolute rounded-full"
-                style={{
-                  width: `${1 + (i % 3)}px`,
-                  height: `${1 + (i % 3)}px`,
-                  backgroundColor: `hsl(${200 + (i * 2)}, 50%, ${75 + (i % 10)}%)`,
-                  left: `${(i * 5) % 100}%`,
-                  top: `${(i * 7.5) % 100}%`,
-                  opacity: 0.6,
-                }}
-                animate={{
-                  y: [0, -15, 0],
-                  x: [0, 8, 0],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 12 + (i % 6),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.02,
-                }}
-              />
-            ))}
+            {Array.from({ length: 200 }, function (_, i) { return (<framer_motion_1.motion.div key={"fast-particle-".concat(i)} className="absolute rounded-full" style={{
+                width: "".concat(1 + (i % 3), "px"),
+                height: "".concat(1 + (i % 3), "px"),
+                backgroundColor: "hsl(".concat(200 + (i * 2), ", 50%, ").concat(75 + (i % 10), "%)"),
+                left: "".concat((i * 5) % 100, "%"),
+                top: "".concat((i * 7.5) % 100, "%"),
+                opacity: 0.6,
+            }} animate={{
+                y: [0, -15, 0],
+                x: [0, 8, 0],
+                scale: [1, 1.2, 1],
+            }} transition={{
+                duration: 12 + (i % 6),
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.02,
+            }}/>); })}
           </div>
 
           {/* Animaciones de fondo del contenido - copiadas del artículo 1 */}
           <div className="absolute inset-0 pointer-events-none">
             {/* Ondas expansivas (30 ondas) */}
-            {Array.from({ length: 30 }, (_, i) => (
-              <motion.div
-                key={`section-wave-particle-${i}`}
-                className="absolute border-2 border-blue-400 rounded-full opacity-30"
-                style={{
-                  width: 80,
-                  height: 80,
-                  left: `${15 + (i * 6)}%`,
-                  top: `${10 + (i * 5.5)}%`,
-                }}
-                animate={{
-                  scale: [0, 2.5, 0.1, 1],
-                  borderWidth: [3, 0.1, 3],
-                  opacity: [0.5, 0.05, 0.3]
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  delay: i * 0.8,
-                  ease: "easeOut"
-                }}
-              />
-            ))}
+            {Array.from({ length: 30 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-wave-particle-".concat(i)} className="absolute border-2 border-blue-400 rounded-full opacity-30" style={{
+                width: 80,
+                height: 80,
+                left: "".concat(15 + (i * 6), "%"),
+                top: "".concat(10 + (i * 5.5), "%"),
+            }} animate={{
+                scale: [0, 2.5, 0.1, 1],
+                borderWidth: [3, 0.1, 3],
+                opacity: [0.5, 0.05, 0.3]
+            }} transition={{
+                duration: 8,
+                repeat: Infinity,
+                delay: i * 0.8,
+                ease: "easeOut"
+            }}/>); })}
 
             {/* Partículas de destello (60 partículas) */}
-            {Array.from({ length: 60 }, (_, i) => (
-              <motion.div
-                key={`section-sparkle-particle-${i}`}
-                className="absolute"
-                style={{
-                  left: `${(i * 3.33) % 100}%`,
-                  top: `${(i * 2.67) % 100}%`,
-                }}
-                animate={{
-                  scale: [0, 1, 0.1, 1, 0],
-                  rotate: [0, 360 + (i % 180)]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: i * 0.2,
-                  ease: "easeInOut"
-                }}
-              >
-                <div 
-                  className="w-2 h-2 bg-yellow-300 rounded-full"
-                  style={{
-                    boxShadow: `0 0 ${6 + (i % 8)}px hsl(${45 + (i * 12)}, 85%, 55%)`
-                  }}
-                />
-              </motion.div>
-            ))}
+            {Array.from({ length: 60 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-sparkle-particle-".concat(i)} className="absolute" style={{
+                left: "".concat((i * 3.33) % 100, "%"),
+                top: "".concat((i * 2.67) % 100, "%"),
+            }} animate={{
+                scale: [0, 1, 0.1, 1, 0],
+                rotate: [0, 360 + (i % 180)]
+            }} transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: i * 0.2,
+                ease: "easeInOut"
+            }}>
+                <div className="w-2 h-2 bg-yellow-300 rounded-full" style={{
+                boxShadow: "0 0 ".concat(6 + (i % 8), "px hsl(").concat(45 + (i * 12), ", 85%, 55%)")
+            }}/>
+              </framer_motion_1.motion.div>); })}
 
             {/* Partículas orbitales (50 partículas) */}
-            {Array.from({ length: 50 }, (_, i) => (
-              <motion.div
-                key={`section-orbital-particle-${i}`}
-                className="absolute w-3 h-3 rounded-full opacity-60"
-                style={{
-                  backgroundColor: `hsl(${180 + (i * 7)}, 70%, ${60 + (i % 25)}%)`,
-                  left: '50%',
-                  top: '50%',
-                }}
-                animate={{
-                  x: [
+            {Array.from({ length: 50 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-orbital-particle-".concat(i)} className="absolute w-3 h-3 rounded-full opacity-60" style={{
+                backgroundColor: "hsl(".concat(180 + (i * 7), ", 70%, ").concat(60 + (i % 25), "%)"),
+                left: '50%',
+                top: '50%',
+            }} animate={{
+                x: [
                     Math.cos((i / 50) * 2 * Math.PI) * (80 + i * 1.5),
                     Math.cos((i / 50) * 2 * Math.PI + Math.PI) * (80 + i * 1.5),
                     Math.cos((i / 50) * 2 * Math.PI) * (80 + i * 1.5)
-                  ],
-                  y: [
+                ],
+                y: [
                     Math.sin((i / 50) * 2 * Math.PI) * (60 + i * 1),
                     Math.sin((i / 50) * 2 * Math.PI + Math.PI) * (60 + i * 1),
                     Math.sin((i / 50) * 2 * Math.PI) * (60 + i * 1)
-                  ],
-                  scale: [0.5, 1.2, 0.3, 1],
-                  opacity: [0.2, 0.8, 0.1, 0.6]
-                }}
-                transition={{
-                  duration: 15 + (i % 5),
-                  repeat: Infinity,
-                  delay: i * 0.6,
-                  ease: "linear"
-                }}
-              />
-            ))}
+                ],
+                scale: [0.5, 1.2, 0.3, 1],
+                opacity: [0.2, 0.8, 0.1, 0.6]
+            }} transition={{
+                duration: 15 + (i % 5),
+                repeat: Infinity,
+                delay: i * 0.6,
+                ease: "linear"
+            }}/>); })}
           </div>
           
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="w-full">
-              <motion.article className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50 relative z-10">
+              <framer_motion_1.motion.article className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50 relative z-10">
                 
                 {/* Sección introductoria con mejor diseño */}
                 <section id="introduccion-principal" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.div 
-                    className="bg-gradient-to-br from-slate-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-100 relative overflow-hidden"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                  >
+                  <framer_motion_1.motion.div className="bg-gradient-to-br from-slate-50 to-indigo-50 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-100 relative overflow-hidden" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                     {/* Elementos decorativos flotantes */}
                     <div className="absolute top-4 right-4 opacity-20">
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-full"></div>
@@ -504,46 +397,34 @@ export default function KitsHerramientasArticle() {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </framer_motion_1.motion.div>
                 </section>
 
                 {/* Top 7 Kits de Herramientas */}
                 <section id="top-kits" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                    animate={{ 
-                      opacity: 1, 
-                      y: 0, 
-                      scale: 1,
-                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                    }}
-                    transition={{ 
-                      duration: 1.2,
-                      backgroundPosition: {
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }
-                    }}
-                    whileHover={{
-                      scale: 1.05,
-                      transition: { duration: 0.3 }
-                    }}
-                    style={{
-                      backgroundSize: "200% 200%"
-                    }}
-                  >
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent" initial={{ opacity: 0, y: -30, scale: 0.9 }} animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+        }} transition={{
+            duration: 1.2,
+            backgroundPosition: {
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }
+        }} whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.3 }
+        }} style={{
+            backgroundSize: "200% 200%"
+        }}>
                     🏆 Top 7 Kits de Herramientas Recomendados de 2025
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
                   
                   {/* Nota importante sobre calificaciones */}
-                  <motion.div 
-                    className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-4 sm:mb-6 md:mb-8"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                  >
+                  <framer_motion_1.motion.div className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-4 sm:mb-6 md:mb-8" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
                     <div className="flex items-start">
                       <div className="flex-shrink-0">
                         <span className="text-blue-400 text-xl">📋</span>
@@ -554,29 +435,22 @@ export default function KitsHerramientasArticle() {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </framer_motion_1.motion.div>
                   
                   <div className="space-y-12">
                     {/* Producto #1 - DEWALT DWMT81535 */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-yellow-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-yellow-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-yellow-500 text-white font-bold text-lg px-4 py-2">
                           🥇 #1
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">DEWALT DWMT81535: El Kit Profesional para Mecánica</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
+                            {__spreadArray([], Array(5), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
                           </div>
                           <span className="ml-2 text-gray-600">(3,200+ reseñas)</span>
                         </div>
@@ -626,7 +500,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -656,7 +530,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -684,41 +558,29 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <a 
-                href="https://mercadolibre.com/sec/2naVqQs" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-yellow-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors inline-block"
-              >
+                              <a href="https://mercadolibre.com/sec/2naVqQs" target="_blank" rel="noopener noreferrer" className="bg-yellow-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors inline-block">
                 🛒 Ver en Mercado Libre →
               </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                     {/* Producto #2 - Pretul SET-83 */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-emerald-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.3 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-emerald-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-emerald-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-emerald-500 text-white font-bold text-lg px-4 py-2">
                           🥈 #2
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Pretul SET-83: La Opción Económica Confiable</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(4)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
-                            <Star className="w-5 h-5 text-gray-300" />
+                            {__spreadArray([], Array(4), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
+                            <lucide_react_1.Star className="w-5 h-5 text-gray-300"/>
                           </div>
                           <span className="ml-2 text-gray-600">(850+ reseñas)</span>
                         </div>
@@ -767,7 +629,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -793,7 +655,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -821,41 +683,29 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <a 
-                href="https://mercadolibre.com/sec/1GQ24Dg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-emerald-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors inline-block"
-              >
+                              <a href="https://mercadolibre.com/sec/1GQ24Dg" target="_blank" rel="noopener noreferrer" className="bg-emerald-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors inline-block">
                 🛒 Ver en Mercado Libre →
               </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                     {/* Producto #3 - CARTMAN 238 Piezas */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-blue-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-blue-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-blue-500 text-white font-bold text-lg px-4 py-2">
                           🥉 #3
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">CARTMAN 238 Piezas: El Favorito del Bricolaje</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(4)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
-                            <Star className="w-5 h-5 fill-current opacity-50" />
+                            {__spreadArray([], Array(4), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
+                            <lucide_react_1.Star className="w-5 h-5 fill-current opacity-50"/>
                           </div>
                           <span className="ml-2 text-gray-600">(2,100+ reseñas)</span>
                         </div>
@@ -904,7 +754,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -930,7 +780,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -958,40 +808,28 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <a 
-                              href="https://mercadolibre.com/sec/2Du7866"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="bg-blue-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600    transition-colors inline-block"
-                              >
+                              <a href="https://mercadolibre.com/sec/2Du7866" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-blue-600    transition-colors inline-block">
                                 🛒 Ver en Mercado Libre →
                               </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                     {/* Producto #4 - KIROGILY 150 en 1 */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-purple-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-purple-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-purple-500 text-white font-bold text-lg px-4 py-2">
                           #4
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">KIROGILY 150 en 1: El Especialista en Electrónica</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
+                            {__spreadArray([], Array(5), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
                           </div>
                           <span className="ml-2 text-gray-600">(1,800+ reseñas)</span>
                         </div>
@@ -1040,7 +878,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -1066,7 +904,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -1094,12 +932,7 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                             <a 
-                href="https://mercadolibre.com/sec/1tT2HL7" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-purple-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors inline-block"
-              >
+                             <a href="https://mercadolibre.com/sec/1tT2HL7" target="_blank" rel="noopener noreferrer" className="bg-purple-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-purple-600 transition-colors inline-block">
                 🛒 Ver en Mercado Libre →
               </a>
 
@@ -1107,29 +940,22 @@ export default function KitsHerramientasArticle() {
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                     {/* Producto #5 - Juego De Herramientas Mecanica Dados 216 Pcs Kit Estuche Color Variation */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-orange-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-orange-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-orange-500 text-white font-bold text-lg px-4 py-2">
                           #5
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Juego De Herramientas Mecanica Dados 216 Pcs Kit Estuche Color Variation</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(4)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
-                            <Star className="w-5 h-5 text-gray-300" />
+                            {__spreadArray([], Array(4), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
+                            <lucide_react_1.Star className="w-5 h-5 text-gray-300"/>
                           </div>
                           <span className="ml-2 text-gray-600">(160+ reseñas)</span>
                         </div>
@@ -1145,7 +971,7 @@ export default function KitsHerramientasArticle() {
                           Su gran ventaja es que incluye <b>3 matracas (1/4", 3/8" y 1/2")</b>, cubriendo desde trabajos de precisión hasta mecánica general. 
                           Fabricadas en acero al cromo vanadio (Cr-V), ofrece una inmensa variedad de dados, puntas y llaves combinadas, 
                           todo organizado en un maletín rígido que, aunque voluminoso (10.5 kg), mantiene cada pieza en su lugar.
-                        </p>
+                        
                         {/* Especificaciones técnicas */}
                         <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl mb-6 border border-orange-200">
                           <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
@@ -1180,7 +1006,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -1206,7 +1032,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -1234,42 +1060,30 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <a 
-                                href="https://mercadolibre.com/sec/2KHakLi"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-orange-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors inline-block"
-                              >
+                              <a href="https://mercadolibre.com/sec/2KHakLi" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors inline-block">
                                 🛒 Ver en Mercado Libre →
                               </a>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </motion.div>
+                      </></div>
+                    </framer_motion_1.motion.div>
 
                   
                     {/* Producto #6 - Kit Herramientas Eléctricas Nanwei */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.7 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-teal-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.7 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-teal-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-teal-500 text-white font-bold text-lg px-4 py-2">
                           #6
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Kit Nanwei: El Híbrido con Taladro Inalámbrico</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(4)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
-                            <Star className="w-5 h-5 fill-current text-yellow-200" /> {/* 4.5 estrellas promedio */}
+                            {__spreadArray([], Array(4), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
+                            <lucide_react_1.Star className="w-5 h-5 fill-current text-yellow-200"/> {/* 4.5 estrellas promedio */}
                           </div>
                           <span className="ml-2 text-gray-600">(500+ reseñas)</span>
                         </div>
@@ -1317,7 +1131,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -1343,7 +1157,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -1371,41 +1185,29 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <a 
-                                href="https://mercadolibre.com/sec/1miMzDg"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-teal-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors inline-block"
-                              >
+                              <a href="https://mercadolibre.com/sec/1miMzDg" target="_blank" rel="noopener noreferrer" className="bg-teal-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-teal-600 transition-colors inline-block">
                                 🛒 Ver en Mercado Libre →
                               </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                    {/* Producto #7 - Deppon 168 Piezas */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200 relative overflow-hidden"
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.8 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-red-200 relative overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-red-500 text-white font-bold text-lg px-4 py-2">
+                        <badge_1.Badge className="bg-red-500 text-white font-bold text-lg px-4 py-2">
                           #7
-                        </Badge>
+                        </badge_1.Badge>
                       </div>
                       
                       <div className="w-full">
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">Deppon 168 Piezas: Kit de Emergencia Híbrido</h3>
                         <div className="flex items-center mb-4">
                           <div className="flex text-yellow-400">
-                            {[...Array(4)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-current" />
-                            ))}
-                            <Star className="w-5 h-5 text-gray-300" />
+                            {__spreadArray([], Array(4), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-5 h-5 fill-current"/>); })}
+                            <lucide_react_1.Star className="w-5 h-5 text-gray-300"/>
                           </div>
                           <span className="ml-2 text-gray-600">(100+ ventas)</span>
                         </div>
@@ -1454,7 +1256,7 @@ export default function KitsHerramientasArticle() {
                           {/* Ventajas */}
                           <div className="bg-green-50 p-3 sm:p-4 md:p-6 rounded-xl border border-green-200">
                             <h4 className="text-lg font-bold text-green-800 mb-4 flex items-center">
-                              <CheckCircle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.CheckCircle className="w-5 h-5 mr-2"/>
                               Ventajas
                             </h4>
                             <div className="space-y-3">
@@ -1480,7 +1282,7 @@ export default function KitsHerramientasArticle() {
                           {/* Desventajas */}
                           <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
                             <h4 className="text-lg font-bold text-red-800 mb-4 flex items-center">
-                              <AlertTriangle className="w-5 h-5 mr-2" />
+                              <lucide_react_1.AlertTriangle className="w-5 h-5 mr-2"/>
                               Contras
                             </h4>
                             <div className="space-y-3">
@@ -1508,97 +1310,69 @@ export default function KitsHerramientasArticle() {
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
-                              <a 
-                                href="https://mercadolibre.com/sec/2tACX4Z"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-red-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors inline-block"
-                              >
+                              <a href="https://mercadolibre.com/sec/2tACX4Z" target="_blank" rel="noopener noreferrer" className="bg-red-500 text-white px-4 sm:px-6 py-3 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors inline-block">
                                 🛒 Ver en Mercado Libre →
                               </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                   </div>
                 </section>
 
                 {/* Comparación de productos */}
                 <section id="comparacion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, x: -50, scale: 0.9 }}
-                    animate={{ 
-                      opacity: 1, 
-                      x: 0, 
-                      scale: 1,
-                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                    }}
-                    transition={{ 
-                      duration: 1.0,
-                      backgroundPosition: {
-                        duration: 10,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }
-                    }}
-                    whileHover={{
-                      scale: 1.03,
-                      transition: { duration: 0.3 }
-                    }}
-                    style={{
-                      backgroundSize: "200% 200%"
-                    }}
-                  >
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent" initial={{ opacity: 0, x: -50, scale: 0.9 }} animate={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+        }} transition={{
+            duration: 1.0,
+            backgroundPosition: {
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }
+        }} whileHover={{
+            scale: 1.03,
+            transition: { duration: 0.3 }
+        }} style={{
+            backgroundSize: "200% 200%"
+        }}>
                     📊 Comparación Detallada: Cara a Cara
-                  </motion.h2>
-                  <ProductComparison 
-                    title="Análisis Cara a Cara: Top 3 Kits de Herramientas"
-                    products={comparisonProducts}
-                    features={comparisonFeatures}
-                  />
+                  </framer_motion_1.motion.h2>
+                  <ProductComparison_1.default title="Análisis Cara a Cara: Top 3 Kits de Herramientas" products={comparisonProducts} features={comparisonFeatures}/>
                 </section>
 
                 {/* Guía de compra */}
                 <section id="guia-compra" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                    animate={{ 
-                      opacity: 1, 
-                      y: 0, 
-                      scale: 1,
-                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                    }}
-                    transition={{ 
-                      duration: 1.1,
-                      backgroundPosition: {
-                        duration: 7,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }
-                    }}
-                    whileHover={{
-                      scale: 1.04,
-                      transition: { duration: 0.3 }
-                    }}
-                    style={{
-                      backgroundSize: "200% 200%"
-                    }}
-                  >
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent" initial={{ opacity: 0, y: 30, scale: 0.9 }} animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+        }} transition={{
+            duration: 1.1,
+            backgroundPosition: {
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }
+        }} whileHover={{
+            scale: 1.04,
+            transition: { duration: 0.3 }
+        }} style={{
+            backgroundSize: "200% 200%"
+        }}>
                     🎯 Guía de Compra: ¿Cuál Elegir?
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
                   
                   <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8 mb-4 sm:mb-6 md:mb-8">
                     {/* Para Profesionales */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-blue-200"
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-blue-200" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                       <div className="flex items-center mb-6">
                         <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
                           <span className="text-lg sm:text-xl md:text-2xl">👔</span>
@@ -1619,15 +1393,10 @@ export default function KitsHerramientasArticle() {
                           <p className="text-gray-600 text-sm">Para técnicos móviles que priorizan portabilidad sin sacrificar calidad.</p>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
                     {/* Para Aficionados */}
-                    <motion.div 
-                      className="bg-gradient-to-br from-green-50 to-emerald-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-green-200"
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-green-50 to-emerald-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-green-200" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                       <div className="flex items-center mb-6">
                         <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
                           <span className="text-lg sm:text-xl md:text-2xl">🏠</span>
@@ -1648,17 +1417,12 @@ export default function KitsHerramientasArticle() {
                           <p className="text-gray-600 text-sm">Lo esencial para mecánica básica con excelente funcionalidad.</p>
                         </div>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
                   </div>
 
                   {/* Casos específicos */}
                   <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
-                    <motion.div 
-                      className="bg-gradient-to-br from-purple-50 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-purple-200"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-purple-50 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-purple-200" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                       <div className="text-center mb-4">
                         <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">📱</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Reparación de Electrónicos</h4>
@@ -1667,14 +1431,9 @@ export default function KitsHerramientasArticle() {
                         <p className="font-semibold text-purple-800">KIROGILY 150 en 1</p>
                         <p className="text-gray-600 text-sm">Especialista en dispositivos, puntas de precisión, ideal para smartphones y laptops.</p>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-gradient-to-br from-orange-50 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-orange-200"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-orange-50 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-orange-200" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
                       <div className="text-center mb-4">
                         <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🔧</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Kit Todo-en-Uno</h4>
@@ -1683,14 +1442,9 @@ export default function KitsHerramientasArticle() {
                         <p className="font-semibold text-orange-800">ANMIEN 220 Piezas</p>
                         <p className="text-gray-600 text-sm">Versátil para múltiples aplicaciones, mecánica + electrónica en un solo kit.</p>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-gradient-to-br from-red-50 to-rose-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-red-200"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-red-50 to-rose-100 p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-red-200" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
                       <div className="text-center mb-4">
                         <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">💰</span>
                         <h4 className="text-lg font-bold text-gray-900 mt-2">Presupuesto Limitado</h4>
@@ -1699,48 +1453,36 @@ export default function KitsHerramientasArticle() {
                         <p className="font-semibold text-red-800">ZAWELIYO 253 Piezas</p>
                         <p className="text-gray-600 text-sm">Máxima cantidad de piezas al menor costo, ideal para empezar.</p>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
                   </div>
                 </section>
 
                 {/* Factores clave a considerar */}
                 <section id="factores-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, rotateX: -20, scale: 0.9 }}
-                    animate={{ 
-                      opacity: 1, 
-                      rotateX: 0, 
-                      scale: 1,
-                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                    }}
-                    transition={{ 
-                      duration: 1.3,
-                      backgroundPosition: {
-                        duration: 9,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }
-                    }}
-                    whileHover={{
-                      scale: 1.06,
-                      rotateX: 5,
-                      transition: { duration: 0.3 }
-                    }}
-                    style={{
-                      backgroundSize: "200% 200%"
-                    }}
-                  >
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent" initial={{ opacity: 0, rotateX: -20, scale: 0.9 }} animate={{
+            opacity: 1,
+            rotateX: 0,
+            scale: 1,
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+        }} transition={{
+            duration: 1.3,
+            backgroundPosition: {
+                duration: 9,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }
+        }} whileHover={{
+            scale: 1.06,
+            rotateX: 5,
+            transition: { duration: 0.3 }
+        }} style={{
+            backgroundSize: "200% 200%"
+        }}>
                     ⚡ Factores Clave a Considerar
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
                   
                   <div className="grid md:grid-cols-2 gap-4 sm:p-6 md:p-8">
-                    <motion.div 
-                      className="space-y-6"
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
+                    <framer_motion_1.motion.div className="space-y-6" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-xl border border-blue-200">
                         <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center">
                           <span className="mr-3">🎯</span>
@@ -1782,14 +1524,9 @@ export default function KitsHerramientasArticle() {
                           </li>
                         </ul>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="space-y-6"
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
+                    <framer_motion_1.motion.div className="space-y-6" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                       <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-xl border border-purple-200">
                         <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center">
                           <span className="mr-3">📦</span>
@@ -1831,15 +1568,15 @@ export default function KitsHerramientasArticle() {
                           </li>
                         </ul>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
                   </div>
                 </section>
 
                 {/* Conclusión */}
                 <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                     🎯 Conclusión: Tu Decisión Final
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
                   <div className="bg-gradient-to-r from-indigo-50 to-purple-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-200">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
                       Elegir un kit de herramientas es una <b>decisión personal que depende del tipo de trabajo que realizas</b>. 
@@ -1894,82 +1631,61 @@ export default function KitsHerramientasArticle() {
 
                 {/* Preguntas frecuentes */}
                 <section id="faq" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
                     ❓ Preguntas Frecuentes
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
                   
                   <div className="space-y-6">
-                    <motion.div 
-                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.1 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}>
                       <h3 className="text-xl font-bold text-gray-900 mb-3">¿Qué tipo de kit de herramientas necesito?</h3>
                       <p className="text-gray-700">
                         Depende del uso que le darás. Para <b>uso profesional</b>, busca kits completos con herramientas de alta calidad y resistencia. 
                         Para <b>bricolaje doméstico</b>, kits versátiles con herramientas básicas son suficientes. Para <b>uso ocasional</b>, 
                         kits compactos con herramientas esenciales pueden cubrir tus necesidades básicas.
                       </p>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                       <h3 className="text-xl font-bold text-gray-900 mb-3">¿Es mejor un kit completo o comprar herramientas individuales?</h3>
                       <p className="text-gray-700">
                         Para <b>empezar, un kit es más económico</b> y te asegura tener lo básico. Una vez que identifiques 
                         qué herramientas usas más, puedes invertir en versiones individuales de mayor calidad. 
                         Los kits son perfectos para tener una <b>base sólida</b> desde el principio.
                       </p>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.3 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
                       <h3 className="text-xl font-bold text-gray-900 mb-3">¿Qué diferencia hay entre el acero CR-V y el acero común?</h3>
                       <p className="text-gray-700">
                         El <b>acero CR-V (Cromo-Vanadio)</b> es mucho más resistente y duradero. Resiste mejor la corrosión, 
                         mantiene el filo por más tiempo y soporta mayor torque sin deformarse. Es la diferencia entre 
                         herramientas que duran años vs. herramientas que se desgastan en meses.
                       </p>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-lg border border-gray-200" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
                       <h3 className="text-xl font-bold text-gray-900 mb-3">¿Las puntas magnéticas realmente hacen la diferencia?</h3>
                       <p className="text-gray-700">
                         <b>Absolutamente</b>. Las puntas magnéticas evitan que los tornillos se caigan, especialmente útil 
                         cuando trabajas en espacios reducidos o con componentes pequeños. Para electrónicos es prácticamente 
                         indispensable, y para mecánica general es una gran comodidad.
                       </p>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
                   </div>
                 </section>
 
                 {/* Artículos relacionados */}
                 <section id="articulos-relacionados" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
                     📚 Artículos Relacionados
-                  </motion.h2>
-                  <RelatedArticles articles={relatedArticles} />
+                  </framer_motion_1.motion.h2>
+                  <RelatedArticles_1.default articles={relatedArticles}/>
                 </section>
 
-              </motion.article>
+              </framer_motion_1.motion.article>
             </div>
           </div>
         </div>
       </div>
-    </BlogLayout>
-  );
+    </BlogLayout_1.default>);
 }

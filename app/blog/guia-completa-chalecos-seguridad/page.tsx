@@ -86,7 +86,7 @@ export default function GuiaChalecosSeguridadArticle() {
       description: 'Chaleco tipo Brigadista de gabardina 100% algodón con múltiples bolsillos, ideal para supervisores y trabajos de uso rudo.',
       features: ['Gabardina 100% algodón', 'Múltiples bolsillos funcionales', 'Durabilidad superior', 'Apariencia profesional'],
       price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2918473760-chaleco-de-seguridad-industrial-gabardina-100-algodon-elite-_JM',
+      url: 'https://mercadolibre.com/sec/1Q1YEV3',
       rating: 4.5,
       category: 'Uso Rudo'
     },
@@ -95,7 +95,7 @@ export default function GuiaChalecosSeguridadArticle() {
       description: 'Chaleco certificado Clase 2 con cumplimiento de norma ANSI/ISEA 107, ideal para entornos de alto riesgo y tráfico vehicular.',
       features: ['Certificación ANSI Clase 2', 'Diseño bicolor', 'Alta visibilidad diurna y nocturna', 'Cumplimiento normativo'],
       price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-2088822461-chaleco-alta-visibilidad-bicolor-clase-2-brigadista-c-bolsas-_JM',
+      url: 'https://mercadolibre.com/sec/26Kem4U ',
       rating: 4.8,
       category: 'Certificado'
     },
@@ -104,7 +104,7 @@ export default function GuiaChalecosSeguridadArticle() {
       description: 'Chaleco de malla de poliéster transpirable, perfecto para climas cálidos y trabajo general.',
       features: ['Malla transpirable', 'Peso ligero', 'Económico', 'Ideal para clima cálido'],
       price: 'Ver precio',
-      url: 'https://articulo.mercadolibre.com.mx/MLM-1800488445-chaleco-de-malla-economico-con-reflejantes-varios-colores-_JM',
+      url: 'https://mercadolibre.com/sec/23uTvh2',
       rating: 4.2,
       category: 'Económico'
     }
