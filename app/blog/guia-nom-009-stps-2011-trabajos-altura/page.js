@@ -1,34 +1,37 @@
 'use client';
-
-import { motion } from 'framer-motion';
-import BlogLayout from '@/components/blog/BlogLayout';
-import { Badge } from '@/components/ui/badge';
-import {ShoppingBag, Calendar, Clock, Shield, AlertTriangle, CheckCircle, XCircle, FileText, Users, Activity, Star, Info } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { trackBlogView, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
-import { useScrollTracking } from '@/hooks/useScrollTracking';
-
-const AnemometerHighlight = () => (
-  <div className="my-8">
+"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = GuiaNOM009Article;
+var framer_motion_1 = require("framer-motion");
+var BlogLayout_1 = require("@/components/blog/BlogLayout");
+var badge_1 = require("@/components/ui/badge");
+var lucide_react_1 = require("lucide-react");
+var react_1 = require("react");
+var meta_pixel_1 = require("@/lib/meta-pixel");
+var useScrollTracking_1 = require("@/hooks/useScrollTracking");
+var AnemometerHighlight = function () { return (<div className="my-8">
     <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-      <ShoppingBag className="h-5 w-5 text-blue-600" />
+      <lucide_react_1.ShoppingBag className="h-5 w-5 text-blue-600"/>
       Herramienta Crítica para el Supervisor
     </h4>
 
-    <motion.div 
-      className="bg-gradient-to-br from-slate-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-xl border-2 border-blue-100"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2 }}
-    >
+    <framer_motion_1.motion.div className="bg-gradient-to-br from-slate-50 to-blue-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-xl border-2 border-blue-100" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
       <div className="flex flex-wrap items-center gap-2 mb-4">
-        <Badge className="bg-blue-600 text-white font-bold text-md px-3 py-1">
+        <badge_1.Badge className="bg-blue-600 text-white font-bold text-md px-3 py-1">
           🏆 INDISPENSABLE NOM-009
-        </Badge>
-        <Badge className="bg-sky-100 text-sky-800 px-3 py-1 font-bold border border-sky-200">
+        </badge_1.Badge>
+        <badge_1.Badge className="bg-sky-100 text-sky-800 px-3 py-1 font-bold border border-sky-200">
           MEDICIÓN VIENTO + TEMP
-        </Badge>
+        </badge_1.Badge>
       </div>
 
       <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
@@ -37,9 +40,7 @@ const AnemometerHighlight = () => (
 
       <div className="flex items-center mb-4">
         <div className="flex text-yellow-400">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-current" />
-          ))}
+          {__spreadArray([], Array(5), true).map(function (_, i) { return (<lucide_react_1.Star key={i} className="w-4 h-4 fill-current"/>); })}
         </div>
         <span className="ml-2 text-sm text-gray-600 font-medium">Opción preferida por supervisores STPS</span>
       </div>
@@ -51,7 +52,7 @@ const AnemometerHighlight = () => (
       <div className="grid md:grid-cols-2 gap-4 mb-6">
         <div className="bg-white/80 p-3 rounded-xl border border-green-200">
           <h4 className="font-bold text-green-800 text-sm mb-2 flex items-center gap-1">
-            <CheckCircle className="h-4 w-4" /> Ventajas
+            <lucide_react_1.CheckCircle className="h-4 w-4"/> Ventajas
           </h4>
           <ul className="space-y-1 text-xs text-gray-700">
             <li>• Lectura instantánea en m/s o km/h</li>
@@ -69,12 +70,7 @@ const AnemometerHighlight = () => (
         </div>
       </div>
 
-      <a 
-        href="https://mercadolibre.com/sec/2PnRGPZ"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all hover:scale-[1.02] shadow-lg text-center"
-      >
+      <a href="https://mercadolibre.com/sec/2PnRGPZ" target="_blank" rel="noopener noreferrer" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all hover:scale-[1.02] shadow-lg text-center">
         🛒 Ver Disponibilidad en Mercado Libre →
       </a>
       
@@ -83,22 +79,14 @@ const AnemometerHighlight = () => (
         <span className="text-gray-300">|</span>
         <a href="https://mercadolibre.com/sec/1XHP4JG" target="_blank" className="hover:underline font-medium">• Conos de Seguridad</a>
       </div>
-    </motion.div>
-  </div>
-);
-
-const HarnessHighlight = () => (
-  <motion.div 
-    className="my-8 bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-xl border-2 border-orange-200"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-  >
+    </framer_motion_1.motion.div>
+  </div>); };
+var HarnessHighlight = function () { return (<framer_motion_1.motion.div className="my-8 bg-gradient-to-br from-orange-50 to-red-50 p-4 sm:p-6 md:p-8 rounded-3xl shadow-xl border-2 border-orange-200" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
       <div className="flex items-center gap-3">
-        <Badge className="bg-orange-500 text-white font-bold text-lg px-4 py-2">
+        <badge_1.Badge className="bg-orange-500 text-white font-bold text-lg px-4 py-2">
           🛡️ EPP CRÍTICO
-        </Badge>
+        </badge_1.Badge>
         <span className="text-orange-800 font-bold text-sm tracking-wider">NORMA ANSI/OSHA</span>
       </div>
     </div>
@@ -109,9 +97,7 @@ const HarnessHighlight = () => (
 
     <div className="flex items-center mb-4 gap-2">
       <div className="flex text-yellow-500">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <Star key={index} className="w-5 h-5 fill-current" />
-        ))}
+        {Array.from({ length: 5 }).map(function (_, index) { return (<lucide_react_1.Star key={index} className="w-5 h-5 fill-current"/>); })}
       </div>
       <span className="text-sm font-medium text-gray-600">4.8/5 Calificación Promedio</span>
     </div>
@@ -122,8 +108,8 @@ const HarnessHighlight = () => (
 
     <div className="bg-white p-4 rounded-xl border border-orange-100 mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
       <ul className="space-y-2 text-sm text-gray-700">
-        <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500"/> 3 Puntos de anclaje (Dorsal/Laterales)</li>
-        <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500"/> Capacidad industrial (140kg+)</li>
+        <li className="flex items-center gap-2"><lucide_react_1.CheckCircle className="w-4 h-4 text-green-500"/> 3 Puntos de anclaje (Dorsal/Laterales)</li>
+        <li className="flex items-center gap-2"><lucide_react_1.CheckCircle className="w-4 h-4 text-green-500"/> Capacidad industrial (140kg+)</li>
       </ul>
       <div className="flex items-center justify-center sm:justify-end">
         <p className="text-orange-700 font-bold text-xl">$800 - $1,200 MXN</p>
@@ -131,9 +117,8 @@ const HarnessHighlight = () => (
     </div>
 
     <div className="grid gap-3">
-      <a href="https://mercadolibre.com/sec/1aR5CWc" target="_blank" rel="noopener noreferrer" 
-        className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors shadow-md flex items-center justify-center gap-2">
-        <ShoppingBag className="w-5 h-5"/> Ver Oferta en Mercado Libre
+      <a href="https://mercadolibre.com/sec/1aR5CWc" target="_blank" rel="noopener noreferrer" className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors shadow-md flex items-center justify-center gap-2">
+        <lucide_react_1.ShoppingBag className="w-5 h-5"/> Ver Oferta en Mercado Libre
       </a>
       
       <div className="grid grid-cols-2 gap-3 mt-2">
@@ -145,240 +130,173 @@ const HarnessHighlight = () => (
         </a>
       </div>
     </div>
-  </motion.div>
-);
-
-export default function GuiaNOM009Article() {
-  const [activeTab, setActiveTab] = useState(0);
-  
-  // Enable scroll and engagement tracking
-  useScrollTracking({ 
-    pageTitle: 'Guía Completa NOM-009-STPS-2011 Trabajos en Altura',
-    trackTimeOnPage: true 
-  });
-
-  // Track guide view on component mount
-  useEffect(() => {
-    const guideId = generateTrackingId('guide', 'nom-009-stps-2011');
-    trackBlogView(guideId, 'Guía Completa NOM-009-STPS-2011 Trabajos en Altura', 'guia_seguridad');
-  }, []);
-
-  // Handle tab interactions
-  const handleTabChange = (tabIndex: number, tabName: string) => {
-    setActiveTab(tabIndex);
-    trackInteraction('guide_tab_click', `tab_${tabIndex}_${tabName}`, 'nom_009_guide');
-  };
-
-  // Datos para artículos relacionados
-  const relatedArticles = [
-    {
-      id: 1,
-      title: 'Los Mejores Chalecos de Seguridad Reflectantes de 2025',
-      excerpt: 'Guía completa de chalecos de seguridad reflectantes para el trabajo.',
-      description: 'Guía completa de chalecos de seguridad reflectantes para el trabajo.',
-      category: 'EPP',
-      publishDate: '29 Ago 2025',
-      readTime: '12 min',
-      image: '/images/chalecos-seguridad.jpg',
-      slug: 'mejores-chalecos-seguridad-2025'
-    },
-    {
-      id: 2,
-      title: 'Los Mejores Arneses de Seguridad para Trabajo en Altura',
-      excerpt: 'Equipos de protección anticaídas certificados y seguros.',
-      description: 'Equipos de protección anticaídas certificados y seguros.',
-      category: 'Seguridad',
-      publishDate: '14 Ago 2025',
-      readTime: '10 min',
-      image: '/images/arneses-seguridad.jpg',
-      slug: 'mejores-arneses-seguridad-trabajo-altura'
-    },
-    {
-      id: 3,
-      title: 'Top 7 Kits de Herramientas para Profesionales',
-      excerpt: 'Herramientas esenciales para trabajos industriales y de construcción.',
-      description: 'Herramientas esenciales para trabajos industriales y de construcción.',
-      category: 'Herramientas',
-      publishDate: '30 Ago 2025',
-      readTime: '13 min',
-      image: '/images/kits-herramientas.jpg',
-      slug: 'top-7-kits-herramientas-2025'
-    }
-  ];
-
-const tabs = [
-    { id: 0, title: 'Análisis de Riesgos', icon: '🔍' },
-    { id: 1, title: 'Jerarquía de Controles', icon: '⚡' },
-    { id: 2, title: 'Selección de EPP', icon: '🛡️' },
-    { id: 3, title: 'Andamios Seguros', icon: '🏗️' },
-    { id: 4, title: 'Plan de Emergencia', icon: '🚨' },
-    { id: 5, title: 'Capacitación DC-3', icon: '📋' },
-    { id: 6, title: 'Registro y Supervisión', icon: '✅' }
-  ];
-
-  return (
-    <BlogLayout>
+  </framer_motion_1.motion.div>); };
+function GuiaNOM009Article() {
+    var _a = (0, react_1.useState)(0), activeTab = _a[0], setActiveTab = _a[1];
+    // Enable scroll and engagement tracking
+    (0, useScrollTracking_1.useScrollTracking)({
+        pageTitle: 'Guía Completa NOM-009-STPS-2011 Trabajos en Altura',
+        trackTimeOnPage: true
+    });
+    // Track guide view on component mount
+    (0, react_1.useEffect)(function () {
+        var guideId = (0, meta_pixel_1.generateTrackingId)('guide', 'nom-009-stps-2011');
+        (0, meta_pixel_1.trackBlogView)(guideId, 'Guía Completa NOM-009-STPS-2011 Trabajos en Altura', 'guia_seguridad');
+    }, []);
+    // Handle tab interactions
+    var handleTabChange = function (tabIndex, tabName) {
+        setActiveTab(tabIndex);
+        (0, meta_pixel_1.trackInteraction)('guide_tab_click', "tab_".concat(tabIndex, "_").concat(tabName), 'nom_009_guide');
+    };
+    // Datos para artículos relacionados
+    var relatedArticles = [
+        {
+            id: 1,
+            title: 'Los Mejores Chalecos de Seguridad Reflectantes de 2025',
+            excerpt: 'Guía completa de chalecos de seguridad reflectantes para el trabajo.',
+            description: 'Guía completa de chalecos de seguridad reflectantes para el trabajo.',
+            category: 'EPP',
+            publishDate: '29 Ago 2025',
+            readTime: '12 min',
+            image: '/images/chalecos-seguridad.jpg',
+            slug: 'mejores-chalecos-seguridad-2025'
+        },
+        {
+            id: 2,
+            title: 'Los Mejores Arneses de Seguridad para Trabajo en Altura',
+            excerpt: 'Equipos de protección anticaídas certificados y seguros.',
+            description: 'Equipos de protección anticaídas certificados y seguros.',
+            category: 'Seguridad',
+            publishDate: '14 Ago 2025',
+            readTime: '10 min',
+            image: '/images/arneses-seguridad.jpg',
+            slug: 'mejores-arneses-seguridad-trabajo-altura'
+        },
+        {
+            id: 3,
+            title: 'Top 7 Kits de Herramientas para Profesionales',
+            excerpt: 'Herramientas esenciales para trabajos industriales y de construcción.',
+            description: 'Herramientas esenciales para trabajos industriales y de construcción.',
+            category: 'Herramientas',
+            publishDate: '30 Ago 2025',
+            readTime: '13 min',
+            image: '/images/kits-herramientas.jpg',
+            slug: 'top-7-kits-herramientas-2025'
+        }
+    ];
+    var tabs = [
+        { id: 0, title: 'Análisis de Riesgos', icon: '🔍' },
+        { id: 1, title: 'Jerarquía de Controles', icon: '⚡' },
+        { id: 2, title: 'Selección de EPP', icon: '🛡️' },
+        { id: 3, title: 'Andamios Seguros', icon: '🏗️' },
+        { id: 4, title: 'Plan de Emergencia', icon: '🚨' },
+        { id: 5, title: 'Capacitación DC-3', icon: '📋' },
+        { id: 6, title: 'Registro y Supervisión', icon: '✅' }
+    ];
+    return (<BlogLayout_1.default>
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
           {/* Sistema masivo de partículas */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Partículas grandes flotantes (80 partículas) */}
-            {Array.from({ length: 80 }, (_, i) => (
-              <motion.div
-                key={`section-large-particle-${i}`}
-                className="absolute rounded-full opacity-70"
-                style={{
-                  width: 4 + (i % 6),
-                  height: 4 + (i % 6),
-                  backgroundColor: `hsl(${45 + (i * 8)}, 85%, ${65 + (i % 25)}%)`,
-                  left: `${(i * 2.5) % 100}%`,
-                  top: `${(i * 3.7) % 100}%`,
-                }}
-                animate={{
-                  x: [0, 100 + (i % 50), -80 + (i % 30), 0],
-                  y: [0, -120 + (i % 40), 100 + (i % 35), 0],
-                  scale: [0.3, 1.2, 0.5, 1],
-                  opacity: [0.2, 0.8, 0.3, 0.7],
-                  rotate: [0, 180 + (i % 180), 360]
-                }}
-                transition={{
-                  duration: 12 + (i % 8),
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
+            {Array.from({ length: 80 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-large-particle-".concat(i)} className="absolute rounded-full opacity-70" style={{
+                width: 4 + (i % 6),
+                height: 4 + (i % 6),
+                backgroundColor: "hsl(".concat(45 + (i * 8), ", 85%, ").concat(65 + (i % 25), "%)"),
+                left: "".concat((i * 2.5) % 100, "%"),
+                top: "".concat((i * 3.7) % 100, "%"),
+            }} animate={{
+                x: [0, 100 + (i % 50), -80 + (i % 30), 0],
+                y: [0, -120 + (i % 40), 100 + (i % 35), 0],
+                scale: [0.3, 1.2, 0.5, 1],
+                opacity: [0.2, 0.8, 0.3, 0.7],
+                rotate: [0, 180 + (i % 180), 360]
+            }} transition={{
+                duration: 12 + (i % 8),
+                repeat: Infinity,
+                delay: i * 0.3,
+                ease: "easeInOut"
+            }}/>); })}
 
             {/* Partículas medianas (120 partículas) */}
-            {Array.from({ length: 120 }, (_, i) => (
-              <motion.div
-                key={`section-medium-particle-${i}`}
-                className="absolute rounded-full opacity-60"
-                style={{
-                  width: 2 + (i % 4),
-                  height: 2 + (i % 4),
-                  backgroundColor: `hsl(${200 + (i * 4)}, 75%, ${70 + (i % 20)}%)`,
-                  left: `${(i * 1.67) % 100}%`,
-                  top: `${(i * 2.33) % 100}%`,
-                }}
-                animate={{
-                  x: [0, 60 + (i % 30), -40 + (i % 20)],
-                  y: [0, -80 + (i % 25), 60 + (i % 30)],
-                  scale: [0, 1, 0.2, 1, 0],
-                  opacity: [0, 0.9, 0.1, 0.6, 0]
-                }}
-                transition={{
-                  duration: 6 + (i % 4),
-                  repeat: Infinity,
-                  delay: i * 0.15,
-                  ease: "linear"
-                }}
-              />
-            ))}
+            {Array.from({ length: 120 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-medium-particle-".concat(i)} className="absolute rounded-full opacity-60" style={{
+                width: 2 + (i % 4),
+                height: 2 + (i % 4),
+                backgroundColor: "hsl(".concat(200 + (i * 4), ", 75%, ").concat(70 + (i % 20), "%)"),
+                left: "".concat((i * 1.67) % 100, "%"),
+                top: "".concat((i * 2.33) % 100, "%"),
+            }} animate={{
+                x: [0, 60 + (i % 30), -40 + (i % 20)],
+                y: [0, -80 + (i % 25), 60 + (i % 30)],
+                scale: [0, 1, 0.2, 1, 0],
+                opacity: [0, 0.9, 0.1, 0.6, 0]
+            }} transition={{
+                duration: 6 + (i % 4),
+                repeat: Infinity,
+                delay: i * 0.15,
+                ease: "linear"
+            }}/>); })}
 
             {/* Micropartículas (160 partículas) */}
-            {Array.from({ length: 160 }, (_, i) => (
-              <motion.div
-                key={`section-micro-particle-${i}`}
-                className="absolute rounded-full opacity-50"
-                style={{
-                  width: 1 + (i % 2),
-                  height: 1 + (i % 2),
-                  backgroundColor: `hsl(${280 + (i * 3)}, 80%, ${75 + (i % 15)}%)`,
-                  left: `${(i * 1.25) % 100}%`,
-                  top: `${(i * 1.75) % 100}%`,
-                }}
-                animate={{
-                  x: [0, 30 + (i % 15), -20 + (i % 10)],
-                  y: [0, -40 + (i % 12), 30 + (i % 15)],
-                  scale: [0, 0.8, 0.1, 1, 0],
-                  opacity: [0, 0.7, 0.05, 0.5, 0],
-                  rotate: [0, 360 + (i % 180)]
-                }}
-                transition={{
-                  duration: 3 + (i % 2),
-                  repeat: Infinity,
-                  delay: i * 0.05,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
+            {Array.from({ length: 160 }, function (_, i) { return (<framer_motion_1.motion.div key={"section-micro-particle-".concat(i)} className="absolute rounded-full opacity-50" style={{
+                width: 1 + (i % 2),
+                height: 1 + (i % 2),
+                backgroundColor: "hsl(".concat(280 + (i * 3), ", 80%, ").concat(75 + (i % 15), "%)"),
+                left: "".concat((i * 1.25) % 100, "%"),
+                top: "".concat((i * 1.75) % 100, "%"),
+            }} animate={{
+                x: [0, 30 + (i % 15), -20 + (i % 10)],
+                y: [0, -40 + (i % 12), 30 + (i % 15)],
+                scale: [0, 0.8, 0.1, 1, 0],
+                opacity: [0, 0.7, 0.05, 0.5, 0],
+                rotate: [0, 360 + (i % 180)]
+            }} transition={{
+                duration: 3 + (i % 2),
+                repeat: Infinity,
+                delay: i * 0.05,
+                ease: "easeInOut"
+            }}/>); })}
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <motion.div
-                className="inline-flex items-center gap-2 bg-red-600/20 border border-red-400/30 rounded-full px-4 py-2 text-red-100 text-sm font-medium mb-6"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                <Shield className="h-4 w-4" />
+            <framer_motion_1.motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center max-w-4xl mx-auto">
+              <framer_motion_1.motion.div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-400/30 rounded-full px-4 py-2 text-red-100 text-sm font-medium mb-6" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
+                <lucide_react_1.Shield className="h-4 w-4"/>
                 ⚠️ Seguridad en Trabajos de Altura
-              </motion.div>
+              </framer_motion_1.motion.div>
               
-              <motion.h1 
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-              >
+              <framer_motion_1.motion.h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                 Guía Definitiva NOM-009-STPS-2011: 7 Puntos Clave para Trabajos en Altura
-              </motion.h1>
+              </framer_motion_1.motion.h1>
               
-              <motion.p 
-                className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-              >
+              <framer_motion_1.motion.p className="text-xl text-blue-100 mb-4 sm:mb-6 md:mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
                 📋 Todo lo que todo supervisor debe dominar para garantizar la seguridad en trabajos de altura
-              </motion.p>
+              </framer_motion_1.motion.p>
               
-              <motion.div 
-                className="flex items-center justify-center gap-3 text-sm text-blue-200"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
+              <framer_motion_1.motion.div className="flex items-center justify-center gap-3 text-sm text-blue-200" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
                 <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
+                  <lucide_react_1.Calendar className="h-4 w-4"/>
                   1 de Octubre, 2025
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
+                  <lucide_react_1.Clock className="h-4 w-4"/>
                   18 min de lectura
                 </div>
-              </motion.div>
-            </motion.div>
+              </framer_motion_1.motion.div>
+            </framer_motion_1.motion.div>
           </div>
         </section>
 
         {/* Imagen Principal del Artículo */}
         <section className="bg-white py-8 sm:py-10 md:py-12">
           <div className="container mx-auto px-4 sm:px-6">
-            <motion.div 
-              className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-            >
+            <framer_motion_1.motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/guia-nom-009-trabajos-altura.png" 
-                  alt="Trabajadores realizando trabajos en altura con EPP completo según NOM-009-STPS-2011"
-                  className="w-full h-auto"
-                />
+                <img src="/images/guia-nom-009-trabajos-altura.png" alt="Trabajadores realizando trabajos en altura con EPP completo según NOM-009-STPS-2011" className="w-full h-auto"/>
                
               </div>
-            </motion.div>
+            </framer_motion_1.motion.div>
           </div>
         </section>
 
@@ -386,52 +304,34 @@ const tabs = [
         <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden min-h-screen">
           {/* Partículas de fondo */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {Array.from({ length: 100 }).map((_, i) => (
-              <motion.div
-                key={`content-particle-${i}`}
-                className="absolute rounded-full"
-                style={{
-                  width: `${4 + (i % 8)}px`,
-                  height: `${4 + (i % 8)}px`,
-                  background: `hsl(${200 + (i * 15) % 80}, 60%, ${50 + (i % 30)}%)`,
-                  left: `${(i * 13) % 100}%`,
-                  top: `${(i * 17) % 100}%`,
-                }}
-                animate={{
-                  y: [0, -60, 0],
-                  x: [0, 40, -20, 0],
-                  opacity: [0.3, 0.8, 0.3],
-                  scale: [0.8, 1.4, 0.8],
-                }}
-                transition={{
-                  duration: 8 + (i % 8),
-                  repeat: Infinity,
-                  delay: i * 0.05,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
+            {Array.from({ length: 100 }).map(function (_, i) { return (<framer_motion_1.motion.div key={"content-particle-".concat(i)} className="absolute rounded-full" style={{
+                width: "".concat(4 + (i % 8), "px"),
+                height: "".concat(4 + (i % 8), "px"),
+                background: "hsl(".concat(200 + (i * 15) % 80, ", 60%, ").concat(50 + (i % 30), "%)"),
+                left: "".concat((i * 13) % 100, "%"),
+                top: "".concat((i * 17) % 100, "%"),
+            }} animate={{
+                y: [0, -60, 0],
+                x: [0, 40, -20, 0],
+                opacity: [0.3, 0.8, 0.3],
+                scale: [0.8, 1.4, 0.8],
+            }} transition={{
+                duration: 8 + (i % 8),
+                repeat: Infinity,
+                delay: i * 0.05,
+                ease: "easeInOut",
+            }}/>); })}
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-20">
             <div className="max-w-6xl mx-auto">
-              <motion.article
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
-              >
+              <framer_motion_1.motion.article initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50">
                 {/* Introducción con Estadísticas */}
                 <section id="introduccion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.div 
-                    className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.2 }}
-                  >
+                  <framer_motion_1.motion.div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-4 sm:p-6 md:p-8 rounded-r-2xl mb-4 sm:mb-6 md:mb-8 shadow-lg" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
                     <div className="flex items-start gap-4">
                       <div className="bg-red-500 rounded-full p-3 flex-shrink-0">
-                        <AlertTriangle className="text-white h-8 w-8" />
+                        <lucide_react_1.AlertTriangle className="text-white h-8 w-8"/>
                       </div>
                       <div>
                         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-3">El Costo Real de una Caída</h2>
@@ -441,57 +341,37 @@ const tabs = [
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </framer_motion_1.motion.div>
 
                   {/* Grid de Costos */}
                   <div className="grid md:grid-cols-3 gap-3 mb-4 sm:mb-6 md:mb-8">
-                    <motion.div 
-                      className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-purple-200"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-purple-50 to-pink-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-purple-200" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                       <div className="text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">💰</div>
                         <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-purple-700 mb-2">$535,350</div>
                         <p className="text-sm text-gray-700">Multa máxima STPS por incumplimiento</p>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-blue-200"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-blue-200" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
                       <div className="text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">📈</div>
                         <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-blue-700 mb-2">+$$$$</div>
                         <p className="text-sm text-gray-700">Incremento en Prima de Riesgo IMSS</p>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
 
-                    <motion.div 
-                      className="bg-gradient-to-br from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-orange-200"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 }}
-                    >
+                    <framer_motion_1.motion.div className="bg-gradient-to-br from-orange-50 to-red-50 p-3 sm:p-4 md:p-6 rounded-2xl border-2 border-orange-200" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                       <div className="text-center">
                         <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2">⚖️</div>
                         <div className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-orange-700 mb-2">Legal</div>
                         <p className="text-sm text-gray-700">Responsabilidad Civil y Penal</p>
                       </div>
-                    </motion.div>
+                    </framer_motion_1.motion.div>
                   </div>
 
                   {/* Gráfico de Estadísticas de Accidentes */}
-                  <motion.div 
-                    className="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8 mb-4 sm:mb-6 md:mb-8"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.6 }}
-                  >
+                  <framer_motion_1.motion.div className="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8 mb-4 sm:mb-6 md:mb-8" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 }}>
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-6 text-center">📊 Estadísticas de Accidentes en México</h3>
                     <div className="grid md:grid-cols-4 gap-4 mb-6">
                       <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-200 text-center">
@@ -546,17 +426,12 @@ const tabs = [
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </framer_motion_1.motion.div>
 
-                  <motion.div 
-                    className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.7 }}
-                  >
+                  <framer_motion_1.motion.div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-4 sm:p-6 md:p-8 mt-8" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.7 }}>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="bg-blue-500 rounded-full p-3">
-                        <Shield className="text-white h-6 w-6" />
+                        <lucide_react_1.Shield className="text-white h-6 w-6"/>
                       </div>
                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">La NOM-009-STPS-2011 es su Herramienta de Gestión</h3>
                     </div>
@@ -564,19 +439,14 @@ const tabs = [
                       Aplica a toda actividad realizada a <strong className="bg-blue-200 px-2 py-1 rounded">más de 1.8 metros de altura</strong> sobre un nivel de referencia. 
                       El supervisor moderno es un gestor de riesgos de primera línea, y dominar esta norma es una competencia gerencial indispensable.
                     </p>
-                  </motion.div>
+                  </framer_motion_1.motion.div>
                 </section>
 
                 {/* Nota Importante sobre Calificaciones */}
-                <motion.div 
-                  className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 shadow-lg"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 }}
-                >
+                <framer_motion_1.motion.div className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12 shadow-lg" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.7 }}>
                   <div className="flex items-start gap-4">
                     <div className="bg-amber-500 rounded-full p-3 flex-shrink-0">
-                      <Info className="text-white h-6 w-6" />
+                      <lucide_react_1.Info className="text-white h-6 w-6"/>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-amber-900 mb-3">📝 Nota Importante sobre Referencias de Productos</h3>
@@ -588,46 +458,27 @@ const tabs = [
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </framer_motion_1.motion.div>
 
                 {/* Sistema de Tabs para los 7 Puntos Clave */}
                 <section id="puntos-clave" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                  >
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
                     🎯 Los 7 Puntos Clave que Debes Dominar
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
 
                   {/* Tabs Navigation */}
                   <div className="flex flex-wrap gap-3 mb-4 sm:mb-6 md:mb-8 justify-center">
-                    {tabs.map((tab) => (
-                      <button
-                        key={tab.id}
-                        onClick={() => handleTabChange(tab.id, tab.title)}
-                        className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                          activeTab === tab.id
-                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                        }`}
-                      >
+                    {tabs.map(function (tab) { return (<button key={tab.id} onClick={function () { return handleTabChange(tab.id, tab.title); }} className={"px-6 py-3 rounded-xl font-semibold transition-all duration-300 ".concat(activeTab === tab.id
+                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200')}>
                         <span className="mr-2">{tab.icon}</span>
                         {tab.title}
-                      </button>
-                    ))}
+                      </button>); })}
                   </div>
 
                   {/* Tab Content */}
-                  <motion.div
-                    key={activeTab}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border-2 border-gray-200"
-                  >
-                    {activeTab === 0 && (
-                      <div>
+                  <framer_motion_1.motion.div key={activeTab} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border-2 border-gray-200">
+                    {activeTab === 0 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🔍</span>
                           Punto Clave 1: Análisis de Condiciones Prevalecientes
@@ -678,7 +529,7 @@ const tabs = [
                         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-3 sm:p-4 md:p-6 border-2 border-gray-300">
                           <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                             <div className="bg-green-500 rounded-full p-2">
-                              <CheckCircle className="text-white h-5 w-5" />
+                              <lucide_react_1.CheckCircle className="text-white h-5 w-5"/>
                             </div>
                             Checklist Diario de Inspección Pre-Trabajo
                           </h4>
@@ -799,11 +650,9 @@ const tabs = [
                             </div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>)}
 
-                    {activeTab === 1 && (
-                      <div>
+                    {activeTab === 1 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">⚡</span>
                           Punto Clave 2: La Jerarquía de Controles
@@ -881,19 +730,17 @@ const tabs = [
                           {/* RECOMENDACIÓN DE PRODUCTOS: INGENIERÍA */}
                           <div className="my-6 bg-purple-50/50 p-4 rounded-xl border border-purple-100">
                             <h5 className="text-sm font-bold text-purple-900 uppercase tracking-wider mb-3 flex items-center gap-2">
-                              <ShoppingBag className="h-4 w-4" /> Soluciones de Ingeniería Disponibles
+                              <lucide_react_1.ShoppingBag className="h-4 w-4"/> Soluciones de Ingeniería Disponibles
                             </h5>
                             <div className="grid md:grid-cols-2 gap-4">
-                              <a href="https://mercadolibre.com/sec/27tsLrn" target="_blank" rel="noopener noreferrer" 
-                                 className="bg-white p-3 rounded-lg border border-purple-200 hover:border-purple-500 transition-colors flex items-center justify-between group">
+                              <a href="https://mercadolibre.com/sec/27tsLrn" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-lg border border-purple-200 hover:border-purple-500 transition-colors flex items-center justify-between group">
                                 <div>
                                   <div className="font-bold text-gray-900 text-sm">Redes de Seguridad (Safety Nets)</div>
                                   <div className="text-xs text-gray-500">Protección colectiva efectiva</div>
                                 </div>
                                 <span className="text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                               </a>
-                              <a href="https://mercadolibre.com/sec/1zxq3ZX" target="_blank" rel="noopener noreferrer" 
-                                 className="bg-white p-3 rounded-lg border border-purple-200 hover:border-purple-500 transition-colors flex items-center justify-between group">
+                              <a href="https://mercadolibre.com/sec/1zxq3ZX" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-lg border border-purple-200 hover:border-purple-500 transition-colors flex items-center justify-between group">
                                 <div>
                                   <div className="font-bold text-gray-900 text-sm">Línea de Vida Horizontal</div>
                                   <div className="text-xs text-gray-500">Sistema portátil entre puntos estructurales</div>
@@ -946,7 +793,7 @@ const tabs = [
                         <div className="grid md:grid-cols-2 gap-3">
                           <div className="bg-red-50 border-2 border-red-300 rounded-xl p-3 sm:p-4 md:p-6">
                             <h5 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
-                              <XCircle className="h-6 w-6" />
+                              <lucide_react_1.XCircle className="h-6 w-6"/>
                               Supervisor Reactivo
                             </h5>
                             <p className="text-gray-700 text-lg italic">
@@ -956,7 +803,7 @@ const tabs = [
 
                           <div className="bg-green-50 border-2 border-green-300 rounded-xl p-3 sm:p-4 md:p-6">
                             <h5 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
-                              <CheckCircle className="h-6 w-6" />
+                              <lucide_react_1.CheckCircle className="h-6 w-6"/>
                               Supervisor Proactivo
                             </h5>
                             <p className="text-gray-700 text-lg italic">
@@ -964,11 +811,9 @@ const tabs = [
                             </p>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>)}
 
-{activeTab === 2 && (
-                      <div>
+        {activeTab === 2 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🛡️</span>
                           Punto Clave 3: Selección y Uso Correcto de EPP
@@ -1052,11 +897,11 @@ const tabs = [
                               <h5 className="font-bold text-gray-900 mb-3">🔒 Conectores (Ganchos y Mosquetones)</h5>
                               <ul className="space-y-2 text-gray-700">
                                 <li className="flex items-center gap-2">
-                                  <CheckCircle className="h-5 w-5 text-green-600" />
+                                  <lucide_react_1.CheckCircle className="h-5 w-5 text-green-600"/>
                                   Acero forjado con mecanismo de doble seguro
                                 </li>
                                 <li className="flex items-center gap-2">
-                                  <CheckCircle className="h-5 w-5 text-green-600" />
+                                  <lucide_react_1.CheckCircle className="h-5 w-5 text-green-600"/>
                                   Compatibilidad con punto de anclaje (evitar "roll-out")
                                 </li>
                               </ul>
@@ -1074,8 +919,7 @@ const tabs = [
 
                         {/* PRODUCTOS: LÍNEAS DE VIDA */}
                         <div className="mt-4 mb-6">
-                           <a href="https://mercadolibre.com/sec/18FXEdR" target="_blank" rel="noopener noreferrer" 
-                              className="block bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-xl border border-orange-200 hover:border-orange-400 transition-all group">
+                           <a href="https://mercadolibre.com/sec/18FXEdR" target="_blank" rel="noopener noreferrer" className="block bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-xl border border-orange-200 hover:border-orange-400 transition-all group">
                              <div className="flex items-center gap-3 mb-2">
                                <span className="bg-orange-100 p-2 rounded-full text-orange-600 group-hover:bg-orange-200">⚡</span>
                                <span className="font-bold text-gray-900">Recomendado: Línea de Vida con Amortiguador</span>
@@ -1088,7 +932,7 @@ const tabs = [
                         {/* Punto de Anclaje - EL MÁS CRÍTICO */}
                         <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-red-500 shadow-xl">
                           <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-3">
-                            <AlertTriangle className="h-8 w-8" />
+                            <lucide_react_1.AlertTriangle className="h-8 w-8"/>
                             El Punto de Anclaje: El Eslabón MÁS CRÍTICO
                           </h4>
                           
@@ -1106,8 +950,7 @@ const tabs = [
 
                           {/* PRODUCTOS: ANCLAJES */}
                           <div className="mt-4 mb-6">
-                             <a href="https://mercadolibre.com/sec/2H47uQG" target="_blank" rel="noopener noreferrer" 
-                                className="flex items-center justify-between bg-white p-4 rounded-xl border border-green-200 hover:border-green-500 transition-all shadow-sm">
+                             <a href="https://mercadolibre.com/sec/2H47uQG" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between bg-white p-4 rounded-xl border border-green-200 hover:border-green-500 transition-all shadow-sm">
                                <div>
                                  <div className="font-bold text-gray-900">Puntos de Anclaje Portátiles (Tie-Off)</div>
                                  <div className="text-sm text-gray-500">Cintas de anclaje cruzado certificadas 5,000 lbs.</div>
@@ -1121,7 +964,7 @@ const tabs = [
                           <div className="grid md:grid-cols-2 gap-3">
                             <div className="bg-green-50 border-2 border-green-400 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-green-900 mb-4 text-lg flex items-center gap-2">
-                                <CheckCircle className="h-6 w-6" />
+                                <lucide_react_1.CheckCircle className="h-6 w-6"/>
                                 Anclajes VÁLIDOS
                               </h5>
                               <ul className="space-y-2 text-gray-700">
@@ -1142,7 +985,7 @@ const tabs = [
 
                             <div className="bg-red-50 border-2 border-red-400 p-3 sm:p-4 md:p-6 rounded-xl">
                               <h5 className="font-bold text-red-900 mb-4 text-lg flex items-center gap-2">
-                                <XCircle className="h-6 w-6" />
+                                <lucide_react_1.XCircle className="h-6 w-6"/>
                                 Anclajes PROHIBIDOS
                               </h5>
                               <ul className="space-y-2 text-gray-700">
@@ -1183,11 +1026,9 @@ const tabs = [
                             </div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>)}
 
-                    {activeTab === 3 && (
-                      <div>
+                    {activeTab === 3 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🏗️</span>
                           Punto Clave 4: Sistemas de Andamios Seguros
@@ -1244,15 +1085,15 @@ const tabs = [
                               <h5 className="font-bold text-purple-900 mb-4 text-lg">📏 Plataformas de Trabajo</h5>
                               <ul className="space-y-3 text-gray-700">
                                 <li className="flex items-start gap-2">
-                                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                                  <lucide_react_1.CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1"/>
                                   <span>Completas, cubriendo toda la superficie (sin huecos)</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                                  <lucide_react_1.CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1"/>
                                   <span>Tablones: <strong>Espesor mínimo 5 cm</strong></span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                                  <lucide_react_1.CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1"/>
                                   <span>Espacios entre tablones: <strong>No exceder 2.5 cm</strong></span>
                                 </li>
                               </ul>
@@ -1281,9 +1122,8 @@ const tabs = [
                         </div>
                         {/* PRODUCTO: ANDAMIOS */}
                           <div className="mb-6 flex justify-end">
-                            <a href="https://mercadolibre.com/sec/25LEiT4" target="_blank" rel="noopener noreferrer" 
-                               className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold hover:bg-blue-100 transition-colors border border-blue-200">
-                              <ShoppingBag className="h-4 w-4" />
+                            <a href="https://mercadolibre.com/sec/25LEiT4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold hover:bg-blue-100 transition-colors border border-blue-200">
+                              <lucide_react_1.ShoppingBag className="h-4 w-4"/>
                               Ver Andamios y Escaleras Certificadas
                             </a>
                           </div>
@@ -1344,15 +1184,15 @@ const tabs = [
                                 </p>
                                 <ul className="mt-3 space-y-2 text-gray-700">
                                   <li className="flex items-start gap-2">
-                                    <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                                    <lucide_react_1.CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-1"/>
                                     <span>Sistema personal de detención de caídas</span>
                                   </li>
                                   <li className="flex items-start gap-2">
-                                    <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                                    <lucide_react_1.CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-1"/>
                                     <span>Conectado a línea de vida vertical</span>
                                   </li>
                                   <li className="flex items-start gap-2">
-                                    <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                                    <lucide_react_1.CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-1"/>
                                     <span><strong>Anclada a punto independiente</strong> de estructura de suspensión</span>
                                   </li>
                                 </ul>
@@ -1364,7 +1204,7 @@ const tabs = [
                         {/* Responsabilidad del Supervisor */}
                         <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-indigo-400 shadow-xl">
                           <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-900 mb-4 flex items-center gap-3">
-                            <Users className="h-8 w-8" />
+                            <lucide_react_1.Users className="h-8 w-8"/>
                             Rol Intransferible del Supervisor
                           </h4>
                           <p className="text-gray-800 text-lg mb-4">
@@ -1387,11 +1227,9 @@ const tabs = [
                             </div>
                           </div>
                                            </div>
-                      </div>
-                    )}
+                      </div>)}
 
-                    {activeTab === 4 && (
-                      <div>
+                    {activeTab === 4 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🚨</span>
                           Punto Clave 5: El Plan de Atención a Emergencias
@@ -1409,7 +1247,7 @@ const tabs = [
                         <div className="bg-gradient-to-r from-red-100 to-orange-100 p-4 sm:p-6 md:p-8 rounded-3xl border-4 border-red-500 shadow-2xl mb-4 sm:mb-6 md:mb-8">
                           <div className="flex items-center gap-4 mb-6">
                             <div className="bg-red-600 rounded-full p-4">
-                              <AlertTriangle className="text-white h-10 w-10" />
+                              <lucide_react_1.AlertTriangle className="text-white h-10 w-10"/>
                             </div>
                             <div>
                               <h4 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-red-900">El Trauma por Suspensión: El Enemigo Silencioso</h4>
@@ -1418,7 +1256,7 @@ const tabs = [
                           </div>
 
                         {/* Imagen Explicativa del Trauma por Suspensión */}
-<div className="mb-6">
+        <div className="mb-6">
   <div className="bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl p-3 sm:p-4 md:p-6 border-4 border-dashed border-red-300 shadow-inner">
     <div className="text-center">
       <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🩺</div>
@@ -1432,25 +1270,15 @@ const tabs = [
       {/* --- INICIO DEL CAMBIO: Se inserta la imagen aquí --- */}
       {/* Contenedor extra para darle un marco bonito a la imagen */}
       <div className="rounded-xl overflow-hidden shadow-md border border-red-200 mx-auto bg-white">
-        <img
-          src="/images/sindromedelarnes.webp"
-          alt="Diagrama anatómico mostrando el flujo sanguíneo bloqueado por las correas del arnés y acumulación de sangre"
-          className="w-full h-auto object-cover"
-          loading="lazy" 
-        />
+        <img src="/images/sindromedelarnes.webp" alt="Diagrama anatómico mostrando el flujo sanguíneo bloqueado por las correas del arnés y acumulación de sangre" className="w-full h-auto object-cover" loading="lazy"/>
       </div>
       {/* --- FIN DEL CAMBIO --- */}
 
     </div>
   </div>
-</div>
-{/* PRODUCTO ESTRELLA: CINTAS ANTI-TRAUMA */}
-<motion.div 
-  className="my-8 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 p-1 rounded-3xl shadow-2xl"
-  initial={{ opacity: 0, scale: 0.95 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  viewport={{ once: true }}
->
+        </div>
+        {/* PRODUCTO ESTRELLA: CINTAS ANTI-TRAUMA */}
+        <framer_motion_1.motion.div className="my-8 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 p-1 rounded-3xl shadow-2xl" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
   <div className="bg-slate-900 rounded-[22px] p-6 sm:p-8 relative overflow-hidden">
     {/* Glow Effect */}
     <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
@@ -1458,11 +1286,11 @@ const tabs = [
     <div className="flex flex-col md:flex-row gap-6 items-center relative z-10">
       <div className="flex-1">
         <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-yellow-500/30">
-          <Shield className="w-3 h-3" /> Accesorio Vital
+          <lucide_react_1.Shield className="w-3 h-3"/> Accesorio Vital
         </div>
         
         <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
-          Cintas Anti-Trauma <br/> <span className="text-yellow-400">Evita la "Muerte por Rescate"</span>
+          Cintas Anti-Trauma <br /> <span className="text-yellow-400">Evita la "Muerte por Rescate"</span>
         </h3>
         
         <p className="text-slate-300 text-sm sm:text-base mb-6 leading-relaxed">
@@ -1471,19 +1299,18 @@ const tabs = [
 
         <div className="flex flex-wrap gap-4 mb-6">
            <div className="flex items-center gap-2 text-yellow-200 text-sm">
-             <CheckCircle className="w-4 h-4 text-yellow-500" /> Ligeras y compactas
+             <lucide_react_1.CheckCircle className="w-4 h-4 text-yellow-500"/> Ligeras y compactas
            </div>
            <div className="flex items-center gap-2 text-yellow-200 text-sm">
-             <CheckCircle className="w-4 h-4 text-yellow-500" /> Fácil instalación
+             <lucide_react_1.CheckCircle className="w-4 h-4 text-yellow-500"/> Fácil instalación
            </div>
            <div className="flex items-center gap-2 text-yellow-200 text-sm">
-             <CheckCircle className="w-4 h-4 text-yellow-500" /> Universal
+             <lucide_react_1.CheckCircle className="w-4 h-4 text-yellow-500"/> Universal
            </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <a href="https://mercadolibre.com/sec/1ZzRV5u" target="_blank" rel="noopener noreferrer" 
-             className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-xl transition-all hover:shadow-[0_0_20px_rgba(234,179,8,0.4)] flex items-center justify-center gap-2">
+          <a href="https://mercadolibre.com/sec/1ZzRV5u" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-xl transition-all hover:shadow-[0_0_20px_rgba(234,179,8,0.4)] flex items-center justify-center gap-2">
              Adquirir Kit de Seguridad →
           </a>
           <p className="text-slate-400 text-xs">
@@ -1494,17 +1321,17 @@ const tabs = [
       
       {/* Visual de soporte (Icono grande) */}
       <div className="hidden md:flex items-center justify-center w-32 h-32 bg-white/5 rounded-full border border-white/10">
-         <Activity className="w-16 h-16 text-yellow-500" />
+         <lucide_react_1.Activity className="w-16 h-16 text-yellow-500"/>
       </div>
     </div>
   </div>
-</motion.div>
+        </framer_motion_1.motion.div>
 
-{/* Kits Adicionales */}
-<div className="grid md:grid-cols-2 gap-4 mb-8">
+        {/* Kits Adicionales */}
+        <div className="grid md:grid-cols-2 gap-4 mb-8">
   <a href="https://mercadolibre.com/sec/1e6m8NF" target="_blank" className="group bg-white p-4 rounded-xl border border-gray-200 hover:border-green-400 transition-all hover:shadow-md flex items-center gap-4">
     <div className="bg-green-100 p-3 rounded-full group-hover:bg-green-200 transition-colors">
-      <Users className="w-6 h-6 text-green-700" />
+      <lucide_react_1.Users className="w-6 h-6 text-green-700"/>
     </div>
     <div>
       <h5 className="font-bold text-gray-900 group-hover:text-green-700 transition-colors">Kit de Rescate (Polipastos)</h5>
@@ -1514,18 +1341,18 @@ const tabs = [
 
   <a href="https://mercadolibre.com/sec/1vACEKy" target="_blank" className="group bg-white p-4 rounded-xl border border-gray-200 hover:border-red-400 transition-all hover:shadow-md flex items-center gap-4">
     <div className="bg-red-100 p-3 rounded-full group-hover:bg-red-200 transition-colors">
-      <ShoppingBag className="w-6 h-6 text-red-700" />
+      <lucide_react_1.ShoppingBag className="w-6 h-6 text-red-700"/>
     </div>
     <div>
       <h5 className="font-bold text-gray-900 group-hover:text-red-700 transition-colors">Botiquín Industrial</h5>
       <p className="text-xs text-gray-500">Cumple norma STPS para emergencias.</p>
     </div>
   </a>
-</div>
+        </div>
                           {/* Fisiopatología */}
                           <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-red-300 mb-6">
                             <h5 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
-                              <Activity className="h-7 w-7" />
+                              <lucide_react_1.Activity className="h-7 w-7"/>
                               Fisiopatología: ¿Qué Sucede en el Cuerpo?
                             </h5>
                             <div className="space-y-4">
@@ -1551,7 +1378,7 @@ const tabs = [
                             <div className="space-y-4">
                               <div className="flex items-start gap-4 p-4 bg-yellow-50 rounded-xl border-2 border-yellow-400">
                                 <div className="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                                  3-5<br/>min
+                                  3-5<br />min
                                 </div>
                                 <div>
                                   <p className="font-bold text-yellow-900 text-lg mb-2">Pérdida de Conciencia</p>
@@ -1563,7 +1390,7 @@ const tabs = [
 
                               <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl border-2 border-orange-400">
                                 <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                                  10-15<br/>min
+                                  10-15<br />min
                                 </div>
                                 <div>
                                   <p className="font-bold text-orange-900 text-lg mb-2">Sangre Estancada se Vuelve Tóxica</p>
@@ -1580,7 +1407,7 @@ const tabs = [
 
                               <div className="flex items-start gap-4 p-4 bg-red-50 rounded-xl border-4 border-red-500">
                                 <div className="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                                  {'<'}30<br/>min
+                                  {'<'}30<br />min
                                 </div>
                                 <div>
                                   <p className="font-bold text-red-900 text-xl mb-2">⚠️ MUERTE por Fallo Multiorgánico</p>
@@ -1598,19 +1425,17 @@ const tabs = [
                               <span className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl">🚑</span>
                               Rescate y Primeros Auxilios CRÍTICOS
                             </h5>
-{/* PRODUCTOS: RESCATE */}
+        {/* PRODUCTOS: RESCATE */}
                             <div className="grid md:grid-cols-2 gap-4 mb-6">
-                              <a href="https://mercadolibre.com/sec/1e6m8NF" target="_blank" rel="noopener noreferrer" 
-                                 className="flex items-center gap-3 p-3 rounded-lg border border-green-200 bg-green-50/50 hover:bg-green-100 transition-colors">
-                                <ShoppingBag className="h-5 w-5 text-green-600" />
+                              <a href="https://mercadolibre.com/sec/1e6m8NF" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg border border-green-200 bg-green-50/50 hover:bg-green-100 transition-colors">
+                                <lucide_react_1.ShoppingBag className="h-5 w-5 text-green-600"/>
                                 <div>
                                   <div className="font-bold text-gray-900 text-sm">Kit de Rescate (Polipastos)</div>
                                   <div className="text-xs text-gray-600">Descenso controlado de víctimas</div>
                                 </div>
                               </a>
-                              <a href="https://mercadolibre.com/sec/1vACEKy" target="_blank" rel="noopener noreferrer" 
-                                 className="flex items-center gap-3 p-3 rounded-lg border border-red-200 bg-red-50/50 hover:bg-red-100 transition-colors">
-                                <ShoppingBag className="h-5 w-5 text-red-600" />
+                              <a href="https://mercadolibre.com/sec/1vACEKy" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg border border-red-200 bg-red-50/50 hover:bg-red-100 transition-colors">
+                                <lucide_react_1.ShoppingBag className="h-5 w-5 text-red-600"/>
                                 <div>
                                   <div className="font-bold text-gray-900 text-sm">Botiquín Industrial</div>
                                   <div className="text-xs text-gray-600">Atención inmediata post-rescate</div>
@@ -1655,7 +1480,7 @@ const tabs = [
                               {/* Manejo Post-Rescate - CRÍTICO */}
                               <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-4 border-purple-500">
                                 <h6 className="font-bold text-purple-900 text-xl mb-4 flex items-center gap-2">
-                                  <AlertTriangle className="h-7 w-7 text-red-600" />
+                                  <lucide_react_1.AlertTriangle className="h-7 w-7 text-red-600"/>
                                   Manejo Post-Rescate: ¡VITAL PARA EVITAR LA MUERTE!
                                 </h6>
                                 
@@ -1738,11 +1563,9 @@ const tabs = [
                             </div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>)}
 
-                    {activeTab === 5 && (
-                      <div>
+                    {activeTab === 5 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">📋</span>
                           Punto Clave 6: La Capacitación y Adiestramiento - DC-3
@@ -1759,7 +1582,7 @@ const tabs = [
                         {/* ¿Qué es la DC-3? */}
                         <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-300 mb-4 sm:mb-6 md:mb-8">
                           <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
-                            <FileText className="h-8 w-8" />
+                            <lucide_react_1.FileText className="h-8 w-8"/>
                             ¿Qué es la Constancia DC-3?
                           </h4>
                           
@@ -1801,7 +1624,7 @@ const tabs = [
                           <div className="space-y-4">
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                               <h5 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
-                                <CheckCircle className="h-6 w-6" />
+                                <lucide_react_1.CheckCircle className="h-6 w-6"/>
                                 1. Validez de la Capacitación
                               </h5>
                               <p className="text-gray-700 mb-3">
@@ -1821,7 +1644,7 @@ const tabs = [
 
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                               <h5 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
-                                <CheckCircle className="h-6 w-6" />
+                                <lucide_react_1.CheckCircle className="h-6 w-6"/>
                                 2. Verificación de Competencias
                               </h5>
                               <p className="text-gray-700">
@@ -1832,7 +1655,7 @@ const tabs = [
 
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                               <h5 className="font-bold text-orange-900 mb-3 text-lg flex items-center gap-2">
-                                <CheckCircle className="h-6 w-6" />
+                                <lucide_react_1.CheckCircle className="h-6 w-6"/>
                                 3. Vigencia y Actualización
                               </h5>
                               <div className="bg-yellow-50 p-4 rounded-lg mb-3">
@@ -1858,7 +1681,7 @@ const tabs = [
 
                             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                               <h5 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
-                                <CheckCircle className="h-6 w-6" />
+                                <lucide_react_1.CheckCircle className="h-6 w-6"/>
                                 4. Contenido Integral de la Capacitación
                               </h5>
                               <p className="text-gray-700 mb-4">
@@ -1926,11 +1749,9 @@ const tabs = [
                             </div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>)}
 
-                    {activeTab === 6 && (
-                      <div>
+                    {activeTab === 6 && (<div>
                         <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">✅</span>
                           Punto Clave 7: El Registro y la Supervisión Continua
@@ -1955,7 +1776,7 @@ const tabs = [
                             <div className="space-y-4">
                               <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-200">
                                 <h5 className="font-bold text-green-900 mb-3 text-lg flex items-center gap-2">
-                                  <FileText className="h-6 w-6" />
+                                  <lucide_react_1.FileText className="h-6 w-6"/>
                                   1. Permisos de Trabajo en Altura
                                 </h5>
                                 <p className="text-gray-700 mb-3">
@@ -1981,7 +1802,7 @@ const tabs = [
 
                               <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-200">
                                 <h5 className="font-bold text-purple-900 mb-3 text-lg flex items-center gap-2">
-                                  <FileText className="h-6 w-6" />
+                                  <lucide_react_1.FileText className="h-6 w-6"/>
                                   2. Análisis de Riesgos Documentado
                                 </h5>
                                 <p className="text-gray-700">
@@ -1992,7 +1813,7 @@ const tabs = [
 
                               <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-200">
                                 <h5 className="font-bold text-orange-900 mb-3 text-lg flex items-center gap-2">
-                                  <FileText className="h-6 w-6" />
+                                  <lucide_react_1.FileText className="h-6 w-6"/>
                                   3. Registros de Inspección y Mantenimiento
                                 </h5>
                                 <p className="text-gray-700 mb-4">
@@ -2030,7 +1851,7 @@ const tabs = [
                         {/* Supervisión Activa y Competente */}
                         <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-2xl border-4 border-green-400 shadow-xl mb-4 sm:mb-6 md:mb-8">
                           <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
-                            <Users className="h-8 w-8" />
+                            <lucide_react_1.Users className="h-8 w-8"/>
                             Supervisión Activa y Competente: Cierra el Círculo
                           </h4>
                           
@@ -2048,7 +1869,7 @@ const tabs = [
                             <div className="space-y-4">
                               <div className="bg-blue-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
                                 <div className="flex items-center gap-3 mb-3">
-                                  <CheckCircle className="h-7 w-7 text-blue-600" />
+                                  <lucide_react_1.CheckCircle className="h-7 w-7 text-blue-600"/>
                                   <h5 className="font-bold text-blue-900 text-lg">Estar Presente</h5>
                                 </div>
                                 <p className="text-gray-700">
@@ -2058,7 +1879,7 @@ const tabs = [
 
                               <div className="bg-purple-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
                                 <div className="flex items-center gap-3 mb-3">
-                                  <CheckCircle className="h-7 w-7 text-purple-600" />
+                                  <lucide_react_1.CheckCircle className="h-7 w-7 text-purple-600"/>
                                   <h5 className="font-bold text-purple-900 text-lg">Observar Continuamente</h5>
                                 </div>
                                 <p className="text-gray-700">
@@ -2070,7 +1891,7 @@ const tabs = [
                             <div className="space-y-4">
                               <div className="bg-orange-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
                                 <div className="flex items-center gap-3 mb-3">
-                                  <CheckCircle className="h-7 w-7 text-orange-600" />
+                                  <lucide_react_1.CheckCircle className="h-7 w-7 text-orange-600"/>
                                   <h5 className="font-bold text-orange-900 text-lg">Corregir de Inmediato</h5>
                                 </div>
                                 <p className="text-gray-700">
@@ -2080,7 +1901,7 @@ const tabs = [
 
                               <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
                                 <div className="flex items-center gap-3 mb-3">
-                                  <CheckCircle className="h-7 w-7 text-red-600" />
+                                  <lucide_react_1.CheckCircle className="h-7 w-7 text-red-600"/>
                                   <h5 className="font-bold text-red-900 text-lg">Autoridad para Detener</h5>
                                 </div>
                                 <p className="text-gray-700">
@@ -2163,25 +1984,20 @@ const tabs = [
                             </p>
                           </div>
                         </div>
-                      </div>
-                    )}
-                  </motion.div>
+                      </div>)}
+                  </framer_motion_1.motion.div>
                 </section>
 
                 {/* Conclusión */}
                 <section id="conclusion" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
-                  <motion.h2 
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                  >
+                  <framer_motion_1.motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
                     🎯 Conclusión: La Seguridad es la Mejor Inversión
-                  </motion.h2>
+                  </framer_motion_1.motion.h2>
 
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-8 border-green-500 p-4 sm:p-6 md:p-8 rounded-r-3xl shadow-xl">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="bg-green-500 rounded-full p-4 flex-shrink-0">
-                        <Shield className="text-white h-10 w-10" />
+                        <lucide_react_1.Shield className="text-white h-10 w-10"/>
                       </div>
                       <div>
                         <p className="text-xl text-gray-800 leading-relaxed mb-4 font-medium">
@@ -2252,36 +2068,24 @@ const tabs = [
 
                 {/* Sección de Artículos Relacionados */}
                 <section id="articulos-relacionados" className="mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12">
-                  <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                  >
+                  <framer_motion_1.motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                     <h2 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       📚 Artículos Relacionados
                     </h2>
                     
                     <div className="grid md:grid-cols-3 gap-3">
-                      {relatedArticles.map((article, index) => (
-                        <motion.div
-                          key={article.id}
-                          className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
-                          initial={{ opacity: 0, y: 30 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.6 + index * 0.1 }}
-                        >
+                      {relatedArticles.map(function (article, index) { return (<framer_motion_1.motion.div key={article.id} className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + index * 0.1 }}>
                           <div className="flex items-center gap-3 mb-4">
-                            <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold
-                              ${index === 0 ? 'bg-gradient-to-r from-orange-500 to-red-600' :
-                                index === 1 ? 'bg-gradient-to-r from-purple-500 to-pink-600' :
-                                'bg-gradient-to-r from-blue-500 to-indigo-600'}`}>
+                            <div className={"w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold\n                              ".concat(index === 0 ? 'bg-gradient-to-r from-orange-500 to-red-600' :
+                index === 1 ? 'bg-gradient-to-r from-purple-500 to-pink-600' :
+                    'bg-gradient-to-r from-blue-500 to-indigo-600')}>
                               {index === 0 ? '🦺' : index === 1 ? '🧗' : '🔧'}
                             </div>
-                            <Badge className={`${index === 0 ? 'bg-orange-100 text-orange-800' :
-                              index === 1 ? 'bg-purple-100 text-purple-800' :
-                              'bg-blue-100 text-blue-800'}`}>
+                            <badge_1.Badge className={"".concat(index === 0 ? 'bg-orange-100 text-orange-800' :
+                index === 1 ? 'bg-purple-100 text-purple-800' :
+                    'bg-blue-100 text-blue-800')}>
                               {article.category}
-                            </Badge>
+                            </badge_1.Badge>
                           </div>
                           
                           <h3 className="text-lg font-bold mb-3 text-gray-900 line-clamp-2">
@@ -2297,26 +2101,19 @@ const tabs = [
                             <span>⏱️ {article.readTime}</span>
                           </div>
                           
-                          <a 
-                            href={`/blog/${article.slug}`}
-                            className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-colors
-                              ${index === 0 ? 'bg-orange-500 hover:bg-orange-600 text-white' :
-                                index === 1 ? 'bg-purple-500 hover:bg-purple-600 text-white' :
-                                'bg-blue-500 hover:bg-blue-600 text-white'}`}
-                          >
+                          <a href={"/blog/".concat(article.slug)} className={"inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-colors\n                              ".concat(index === 0 ? 'bg-orange-500 hover:bg-orange-600 text-white' :
+                index === 1 ? 'bg-purple-500 hover:bg-purple-600 text-white' :
+                    'bg-blue-500 hover:bg-blue-600 text-white')}>
                             Leer Artículo →
                           </a>
-                        </motion.div>
-                      ))}
+                        </framer_motion_1.motion.div>); })}
                     </div>
-                  </motion.div>
+                  </framer_motion_1.motion.div>
                 </section>
-              </motion.article>
+              </framer_motion_1.motion.article>
             </div>
           </div>
         </div>
       </div>
-    </BlogLayout>
-  );
+    </BlogLayout_1.default>);
 }
-            
