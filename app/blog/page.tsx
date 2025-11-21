@@ -7,7 +7,6 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import ArticleCard from '@/components/blog/ArticleCard';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { TrendingUp, Clock, Calendar } from 'lucide-react';
 
 // Nota: Los metadatos se moverán a layout.tsx o se manejará el SEO de otra forma
@@ -271,18 +270,19 @@ export default function BlogPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Explora por Categorías</h2>
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
-              <Badge
+              <Button
                 key={category.name}
                 variant={category.active ? "default" : "secondary"}
                 onClick={() => setSelectedCategory(category.name)}
-                className={`px-4 py-2 cursor-pointer transition-all duration-200 hover:scale-105 ${
+                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 hover:scale-105 ${
                   category.active 
-                    ? 'bg-blue-600 text-white shadow-lg' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-blue-600 text-white shadow-lg border-transparent' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-transparent'
                 }`}
+                size="sm"
               >
                 {category.name} ({category.count})
-              </Badge>
+              </Button>
             ))}
           </div>
         </div>

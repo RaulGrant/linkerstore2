@@ -100,15 +100,16 @@ const featuredGuides = [
     views: 987
   },
   {
-    title: 'Normativas de Seguridad Industrial en España: Marco Legal 2024',
-    excerpt: 'Guía actualizada sobre legislación española en prevención de riesgos laborales, Real Decreto 773/1997 y normativas europeas aplicables.',
+    title: 'Normativas de Seguridad Industrial en México: Marco Legal NOM-STPS 2024',
+    excerpt: 'Guía completa sobre legislación mexicana en prevención de riesgos laborales, NOM-STPS vigentes y obligaciones patronales aplicables.',
     category: 'Normativas',
-    readTime: '15 min',
-    publishDate: '3 Nov 2024',
-    slug: 'normativas-seguridad-industrial-espana-2024',
-    featuredImage: '/images/blog/normativas-espana.jpg',
-    views: 2156,
-    isPopular: true
+    readTime: '28 min',
+    publishDate: '21 Nov 2024',
+    slug: 'normativas-seguridad-industrial-mexico',
+    featuredImage: '/images/blog/normativas-mexico.jpg',
+    views: 8950,
+    isPopular: true,
+    isNew: true
   }
 ];
 
@@ -219,18 +220,19 @@ export default function GuiasPage() {
               if (count === 0 && categoryName !== 'Todas') return null;
 
               return (
-                <Badge
+                <Button
                   key={categoryName}
                   variant={selectedCategory === categoryName ? "default" : "secondary"}
                   onClick={() => setSelectedCategory(categoryName)}
-                  className={`px-4 py-2 cursor-pointer transition-all duration-200 hover:scale-105 ${
+                  className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 hover:scale-105 ${
                     selectedCategory === categoryName
-                      ? 'bg-blue-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? 'bg-blue-600 text-white shadow-lg border-transparent' 
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-transparent'
                   }`}
+                  size="sm"
                 >
                   {categoryName === 'Todas' ? 'Todas las Guías' : categoryData?.title || categoryName} ({count})
-                </Badge>
+                </Button>
               );
             })}
           </div>
