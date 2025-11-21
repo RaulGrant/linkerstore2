@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useMemo } from 'react';
 import { Metadata } from 'next';
 import BlogLayout from '@/components/blog/BlogLayout';
 import ArticleCard from '@/components/blog/ArticleCard';
@@ -5,42 +8,41 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Shield, HardHat, Users, Award, CheckCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Guías de Seguridad Industrial | LinkerStore',
-  description: 'Guías completas y detalladas sobre seguridad industrial, equipos de protección personal y normativas laborales.',
-  keywords: 'guías seguridad industrial, manuales EPP, normativas seguridad, protocolos trabajo',
-};
+// Nota: Los metadatos se moverán a layout.tsx o se manejará el SEO de otra forma
+// ya que este componente ahora es 'use client'
 
-const guideCategories = [
+const staticGuideCategories = [
   {
     icon: Shield,
+    name: 'EPP',
     title: 'Equipos de Protección Personal',
     description: 'Guías completas sobre EPP, selección, uso y mantenimiento',
-    count: 12,
     color: 'blue'
   },
   {
     icon: HardHat,
+    name: 'Construcción',
     title: 'Seguridad en Construcción',
     description: 'Protocolos y equipos específicos para la industria de la construcción',
-    count: 8,
     color: 'orange'
   },
   {
     icon: Users,
+    name: 'Capacitación',
     title: 'Capacitación y Formación',
     description: 'Materiales para entrenamientos y certificaciones en seguridad',
-    count: 6,
     color: 'green'
   },
   {
     icon: Award,
+    name: 'Normativas',
     title: 'Normativas y Certificaciones',
     description: 'Guías sobre estándares internacionales y certificaciones',
-    count: 4,
     color: 'purple'
   }
 ];
+
+const allGuideCategories = ['Todas', 'EPP', 'Construcción', 'Capacitación', 'Normativas'];
 
 const featuredGuides = [
   {
@@ -119,6 +121,27 @@ const benefits = [
 ];
 
 export default function GuiasPage() {
+  const [selectedCategory, setSelectedCategory] = useState('Todas');
+
+  // Filtrar guías según la categoría seleccionada
+  const filteredGuides = useMemo(() => {
+    if (selectedCategory === 'Todas') {
+      return featuredGuides;
+    }
+    return featuredGuides.filter(guide => guide.category === selectedCategory);
+  }, [selectedCategory]);
+
+  // Calcular contadores de categorías dinámicamente
+  const guideCategories = useMemo(() => {
+    return staticGuideCategories.map(staticCat => {
+      const count = featuredGuides.filter(guide => guide.category === staticCat.name).length;
+      return {
+        ...staticCat,
+        count,
+        active: selectedCategory === staticCat.name
+      };
+    }).filter(category => category.count > 0);
+  }, [selectedCategory]);
   return (
     <BlogLayout>
       {/* Hero Section */}
@@ -183,6 +206,36 @@ export default function GuiasPage() {
           </p>
         </div>
 
+        {/* Filtros de categorías */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Filtrar por categoría:</h3>
+          <div className="flex flex-wrap gap-3">
+            {allGuideCategories.map((categoryName) => {
+              const categoryData = staticGuideCategories.find(cat => cat.name === categoryName);
+              const count = categoryName === 'Todas' 
+                ? featuredGuides.length 
+                : featuredGuides.filter(guide => guide.category === categoryName).length;
+              
+              if (count === 0 && categoryName !== 'Todas') return null;
+
+              return (
+                <Badge
+                  key={categoryName}
+                  variant={selectedCategory === categoryName ? "default" : "secondary"}
+                  onClick={() => setSelectedCategory(categoryName)}
+                  className={`px-4 py-2 cursor-pointer transition-all duration-200 hover:scale-105 ${
+                    selectedCategory === categoryName
+                      ? 'bg-blue-600 text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {categoryName === 'Todas' ? 'Todas las Guías' : categoryData?.title || categoryName} ({count})
+                </Badge>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {guideCategories.map((category, index) => {
             const colorClasses = {
@@ -193,7 +246,11 @@ export default function GuiasPage() {
             };
 
             return (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border-0 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+              <div 
+                key={index} 
+                onClick={() => setSelectedCategory(category.name)}
+                className="bg-white rounded-xl p-6 shadow-lg border-0 hover:shadow-xl transition-all duration-300 cursor-pointer group"
+              >
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${colorClasses[category.color as keyof typeof colorClasses].split(' ')[0]} ${colorClasses[category.color as keyof typeof colorClasses].split(' ')[1]} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
                   <category.icon className="h-6 w-6 text-white" />
                 </div>
@@ -218,22 +275,54 @@ export default function GuiasPage() {
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Guías Destacadas</h2>
-              <p className="text-gray-600">Las guías más completas y consultadas por profesionales</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                {selectedCategory === 'Todas' ? 'Guías Destacadas' : `Guías de ${selectedCategory}`}
+              </h2>
+              <p className="text-gray-600">
+                {filteredGuides.length > 0 
+                  ? `${filteredGuides.length} guía${filteredGuides.length !== 1 ? 's' : ''} disponible${filteredGuides.length !== 1 ? 's' : ''}`
+                  : 'No hay guías en esta categoría'
+                }
+              </p>
             </div>
-            <Button variant="outline">
-              Ver Todas las Guías
-            </Button>
+            {selectedCategory !== 'Todas' && (
+              <Button 
+                variant="outline"
+                onClick={() => setSelectedCategory('Todas')}
+              >
+                Ver Todas las Guías
+              </Button>
+            )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredGuides.map((guide, index) => (
-              <ArticleCard
-                key={guide.slug}
-                {...guide}
-              />
-            ))}
-          </div>
+          {filteredGuides.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredGuides.map((guide, index) => (
+                <ArticleCard
+                  key={guide.slug}
+                  {...guide}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <BookOpen className="w-16 h-16 mx-auto" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                No hay guías en esta categoría
+              </h3>
+              <p className="text-gray-500 mb-6">
+                Pronto agregaremos más contenido para la categoría "{selectedCategory}"
+              </p>
+              <Button 
+                onClick={() => setSelectedCategory('Todas')}
+                variant="outline"
+              >
+                Ver todas las guías
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* CTA Section */}

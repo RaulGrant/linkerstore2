@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useMemo } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -7,11 +10,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { TrendingUp, Clock, Calendar } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Blog de Seguridad Industrial | LinkerPro',
-  description: 'Guías completas, reseñas de productos y consejos de expertos en seguridad industrial y equipos de protección personal.',
-  keywords: 'seguridad industrial, EPP, equipos protección personal, guías seguridad, reseñas productos',
-};
+// Nota: Los metadatos se moverán a layout.tsx o se manejará el SEO de otra forma
+// ya que este componente ahora es 'use client'
 
 // Datos de los 15 artículos del plan maestro con fechas desde el 8 de agosto
 const featuredArticles = [
@@ -171,20 +171,49 @@ const featuredArticles = [
   }
 ];
 
-const categories = [
-  { name: 'Todos', count: 15, active: true },
-  { name: 'Seguridad Industrial', count: 1, active: false },
-  { name: 'Herramientas', count: 2, active: false },
-  { name: 'Primeros Auxilios', count: 1, active: false },
-  { name: 'EPP', count: 1, active: false },
-  { name: 'Calzado', count: 1, active: false },
-  { name: 'Seguridad', count: 4, active: false },
-  { name: 'Construcción', count: 1, active: false },
-  { name: 'Equipos', count: 2, active: false },
-  { name: 'Industrial', count: 2, active: false }
+const allCategories = [
+  'Todos',
+  'Seguridad Industrial', 
+  'Herramientas',
+  'Primeros Auxilios',
+  'EPP',
+  'Calzado', 
+  'Seguridad',
+  'Construcción',
+  'Equipos',
+  'Industrial'
 ];
 
 export default function BlogPage() {
+  const [selectedCategory, setSelectedCategory] = useState('Todos');
+
+  // Filtrar artículos según la categoría seleccionada
+  const filteredArticles = useMemo(() => {
+    if (selectedCategory === 'Todos') {
+      return featuredArticles;
+    }
+    return featuredArticles.filter(article => article.category === selectedCategory);
+  }, [selectedCategory]);
+
+  // Calcular contadores de categorías dinámicamente
+  const categories = useMemo(() => {
+    return allCategories.map(categoryName => {
+      if (categoryName === 'Todos') {
+        return {
+          name: categoryName,
+          count: featuredArticles.length,
+          active: selectedCategory === categoryName
+        };
+      }
+      
+      const count = featuredArticles.filter(article => article.category === categoryName).length;
+      return {
+        name: categoryName,
+        count,
+        active: selectedCategory === categoryName
+      };
+    }).filter(category => category.count > 0); // Solo mostrar categorías con artículos
+  }, [selectedCategory]);
   return (
     <BlogLayout>
       {/* Hero Section */}
@@ -245,7 +274,8 @@ export default function BlogPage() {
               <Badge
                 key={category.name}
                 variant={category.active ? "default" : "secondary"}
-                className={`px-4 py-2 cursor-pointer transition-all duration-200 ${
+                onClick={() => setSelectedCategory(category.name)}
+                className={`px-4 py-2 cursor-pointer transition-all duration-200 hover:scale-105 ${
                   category.active 
                     ? 'bg-blue-600 text-white shadow-lg' 
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -259,15 +289,43 @@ export default function BlogPage() {
 
         {/* Grid de artículos */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Artículos Destacados</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArticles.map((article, index) => (
-              <ArticleCard
-                key={article.slug}
-                {...article}
-              />
-            ))}
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">
+              {selectedCategory === 'Todos' ? 'Artículos Destacados' : `Artículos de ${selectedCategory}`}
+            </h2>
+            <span className="text-sm text-gray-500">
+              {filteredArticles.length} artículo{filteredArticles.length !== 1 ? 's' : ''}
+            </span>
           </div>
+          
+          {filteredArticles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.map((article, index) => (
+                <ArticleCard
+                  key={article.slug}
+                  {...article}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <Calendar className="w-16 h-16 mx-auto" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                No hay artículos en esta categoría
+              </h3>
+              <p className="text-gray-500 mb-6">
+                Pronto agregaremos más contenido para la categoría "{selectedCategory}"
+              </p>
+              <Button 
+                onClick={() => setSelectedCategory('Todos')}
+                variant="outline"
+              >
+                Ver todos los artículos
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Botón cargar más */}
