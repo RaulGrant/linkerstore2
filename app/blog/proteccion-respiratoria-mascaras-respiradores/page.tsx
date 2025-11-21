@@ -522,7 +522,7 @@ export default function ProteccionRespiratoriaPage() {
           </div>
         </section>
 
-        {/* CTA Final */}
+        {/* CTA Final 
         <section className="mb-12">
           <Card className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-0">
             <CardContent className="pt-8 pb-8 text-center">
@@ -545,7 +545,7 @@ export default function ProteccionRespiratoriaPage() {
               </div>
             </CardContent>
           </Card>
-        </section>
+        </section>*/}
 
         <Separator className="my-12" />
 
