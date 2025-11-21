@@ -19,45 +19,50 @@ const respiratorTypes = [
     protection: 'Partículas no tóxicas',
     efficiency: '80%',
     uses: 'Polvo, polen, partículas gruesas',
-    price: '$50 - $150 MXN',
+    price: '$150 MXN (Pack 3)',
     certification: 'EN 149',
-    color: 'blue'
+    color: 'blue',
+    link: 'https://mercadolibre.com/sec/1y9ipYB'
   },
   {
     name: 'Mascarilla Autofiltrante FFP2',
     protection: 'Partículas tóxicas y no tóxicas',
     efficiency: '94%',
     uses: 'Soldadura, cemento, madera',
-    price: '$80 - $250 MXN',
+    price: '$340 MXN (Pack 10)',
     certification: 'EN 149',
-    color: 'yellow'
+    color: 'yellow',
+    link: 'https://mercadolibre.com/sec/1Sy5jEP'
   },
   {
     name: 'Mascarilla Autofiltrante FFP3',
     protection: 'Partículas altamente tóxicas',
     efficiency: '99%',
     uses: 'Asbesto, fibra de vidrio, radiactivos',
-    price: '$150 - $400 MXN',
+    price: '$410 MXN',
     certification: 'EN 149',
-    color: 'red'
+    color: 'red',
+    link: 'https://mercadolibre.com/sec/1iUuf9x'
   },
   {
     name: 'Respirador Media Cara',
     protection: 'Gases, vapores y partículas',
     efficiency: '95-99%',
     uses: 'Pinturas, químicos, disolventes',
-    price: '$800 - $2,500 MXN',
+    price: '$250 - $500 MXN',
     certification: 'EN 140',
-    color: 'green'
+    color: 'green',
+    link: 'https://mercadolibre.com/sec/1zQQGoi'
   },
   {
     name: 'Respirador Cara Completa',
     protection: 'Protección total respiratoria y ocular',
     efficiency: '99.95%',
     uses: 'Químicos peligrosos, emergencias',
-    price: '$2,000 - $8,000 MXN',
+    price: '$270 - $800 MXN',
     certification: 'EN 136',
-    color: 'purple'
+    color: 'purple',
+    link: 'https://mercadolibre.com/sec/1Pw8Xku'
   }
 ];
 
@@ -281,6 +286,15 @@ export default function ProteccionRespiratoriaPage() {
                       <p className="text-sm text-gray-600">{respirator.price}</p>
                     </div>
                   </div>
+                  
+                  {respirator.link && (
+                    <Link href={respirator.link} target="_blank" className="block mt-4">
+                      <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white border-none">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Ver en Mercado Libre
+                      </Button>
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -441,67 +455,68 @@ export default function ProteccionRespiratoriaPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <Card className="border border-gray-200 hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-lg">3M Aura 9332+ FFP3</CardTitle>
+                <CardTitle className="text-lg">3M N95 Aura 9205+ Blanco</CardTitle>
                 <Badge className="bg-red-100 text-red-800 w-fit">Máxima Protección</Badge>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-4">
-                  Mascarilla autofiltrante plegable con válvula de exhalación. Ideal para ambientes con 
-                  partículas altamente tóxicas.
+                  Mascarilla N95 plegable, diseño de 3 paneles que se adapta a movimientos faciales. Alta eficiencia de filtración.
                 </p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Eficiencia:</span>
-                    <span className="font-medium">99%</span>
+                    <span className="font-medium">N95 (95%)</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Precio estimado:</span>
-                    <span className="font-medium">$250-400 MXN</span>
+                    <span className="font-medium">~$340 MXN (Pack 10)</span>
                   </div>
                 </div>
-                <Button className="w-full mt-4" variant="outline">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Ver en Tienda
-                </Button>
+                <Link href="https://mercadolibre.com/sec/2GWVdW7" target="_blank">
+                  <Button className="w-full mt-4 bg-yellow-500 hover:bg-yellow-600 text-white border-none">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Ver en Mercado Libre
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             <Card className="border border-gray-200 hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-lg">Honeywell N100 P100</CardTitle>
+                <CardTitle className="text-lg">Respirador North By Honeywell 550030</CardTitle>
                 <Badge className="bg-purple-100 text-purple-800 w-fit">Respirador Reutilizable</Badge>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-4">
-                  Respirador de media cara con filtros P100. Excelente para trabajos prolongados 
-                  con exposición a partículas.
+                  Respirador de media cara con filtros P100/N95 incluidos. Excelente sellado y comodidad para largas jornadas.
                 </p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Eficiencia:</span>
-                    <span className="font-medium">99.97%</span>
+                    <span className="font-medium">P100 (99.97%)</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Precio estimado:</span>
-                    <span className="font-medium">$1,200-2,000 MXN</span>
+                    <span className="font-medium">~$1,750 MXN</span>
                   </div>
                 </div>
-                <Button className="w-full mt-4" variant="outline">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Ver en Tienda
-                </Button>
+                <Link href="https://mercadolibre.com/sec/1YrtaK3" target="_blank">
+                  <Button className="w-full mt-4 bg-yellow-500 hover:bg-yellow-600 text-white border-none">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Ver en Mercado Libre
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             <Card className="border border-gray-200 hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-lg">MSA Advantage 900</CardTitle>
+                <CardTitle className="text-lg">Mascara Anti Gas Msa</CardTitle>
                 <Badge className="bg-green-100 text-green-800 w-fit">Cara Completa</Badge>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-4">
-                  Respirador de cara completa con protección ocular integrada. Para ambientes 
-                  con múltiples contaminantes.
+                  Máscara completa para protección integral contra gases y vapores. Visor amplio para mejor visibilidad.
                 </p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
@@ -510,13 +525,15 @@ export default function ProteccionRespiratoriaPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Precio estimado:</span>
-                    <span className="font-medium">$4,000-8,000 MXN</span>
+                    <span className="font-medium">~$1,535 MXN</span>
                   </div>
                 </div>
-                <Button className="w-full mt-4" variant="outline">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Ver en Tienda
-                </Button>
+                <Link href="https://mercadolibre.com/sec/1apcUca" target="_blank">
+                  <Button className="w-full mt-4 bg-yellow-500 hover:bg-yellow-600 text-white border-none">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Ver en Mercado Libre
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
