@@ -627,7 +627,7 @@ export default function ManualCascosSeguridad() {
           )}
         </motion.div>
 
-        {/* Descarga PDF */}
+        {/* Descarga PDF 
         <motion.div 
           className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white text-center mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -645,7 +645,7 @@ export default function ManualCascosSeguridad() {
           >
             Descargar Manual Técnico PDF
           </button>
-        </motion.div>
+        </motion.div> */}
 
         {/* Conclusión */}
         <motion.section 
