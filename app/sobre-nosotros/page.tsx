@@ -231,7 +231,7 @@ export default function SobreNosotrosPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="h-8 w-8 text-blue-600" />
@@ -240,13 +240,7 @@ export default function SobreNosotrosPage() {
                 <p className="text-gray-600">linkerpro.notifications@gmail.com</p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Teléfono</h3>
-                <p className="text-gray-600">+52 246 793 4968</p>
-              </div>
+       
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import BlogLayout from '@/components/blog/BlogLayout';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Shield, AlertTriangle, CheckCircle, Eye, Star, Info, Download, Scale, FileText, Users, Building, Gavel } from 'lucide-react';
+import { Calendar, Clock, Shield, AlertTriangle, CheckCircle, Eye, Star, Info, Download, Scale, FileText, Users, Building, Gavel, ExternalLink } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { trackBlogView, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
@@ -403,18 +403,18 @@ export default function GuiaNormativasSeguridadMexico() {
                   <div className="bg-white border border-blue-200 rounded-lg p-6">
                     <div className="text-center mb-4">
                       <Users className="h-12 w-12 text-blue-600 mx-auto mb-2" />
-                      <h4 className="font-semibold text-blue-800">Comisión de Seguridad e Higiene</h4>
+                      <h4 className="font-bold text-blue-800 text-lg">Comisión de Seguridad e Higiene</h4>
                     </div>
                     <div className="space-y-3">
                       <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Integración</h5>
-                        <p className="text-xs text-gray-600">
+                        <h5 className="font-semibold text-gray-900 text-base">Integración</h5>
+                        <p className="text-sm text-gray-600">
                           Igual número de representantes del patrón y de los trabajadores
                         </p>
                       </div>
                       <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Funciones</h5>
-                        <ul className="text-xs text-gray-600 space-y-1">
+                        <h5 className="font-semibold text-gray-900 text-base">Funciones</h5>
+                        <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Investigar accidentes y enfermedades</li>
                           <li>• Vigilar el cumplimiento normativo</li>
                           <li>• Proponer medidas preventivas</li>
@@ -427,18 +427,18 @@ export default function GuiaNormativasSeguridadMexico() {
                   <div className="bg-white border border-green-200 rounded-lg p-6">
                     <div className="text-center mb-4">
                       <Shield className="h-12 w-12 text-green-600 mx-auto mb-2" />
-                      <h4 className="font-semibold text-green-800">Servicios Preventivos</h4>
+                      <h4 className="font-bold text-green-800 text-lg">Servicios Preventivos</h4>
                     </div>
                     <div className="space-y-3">
                       <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Modalidades</h5>
-                        <p className="text-xs text-gray-600">
+                        <h5 className="font-semibold text-gray-900 text-base">Modalidades</h5>
+                        <p className="text-sm text-gray-600">
                           Internos, externos o mixtos según el tamaño de la empresa
                         </p>
                       </div>
                       <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Actividades</h5>
-                        <ul className="text-xs text-gray-600 space-y-1">
+                        <h5 className="font-semibold text-gray-900 text-base">Actividades</h5>
+                        <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Evaluación de riesgos</li>
                           <li>• Vigilancia de la salud</li>
                           <li>• Asesoría técnica</li>
@@ -451,22 +451,22 @@ export default function GuiaNormativasSeguridadMexico() {
               </div>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
-                <h3 className="text-lg font-semibold text-yellow-800 mb-4">Documentación Obligatoria</h3>
+                <h3 className="text-xl font-bold text-yellow-800 mb-4">Documentación Obligatoria</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <div className="bg-white p-4 rounded border border-yellow-200">
                     <FileText className="h-6 w-6 text-yellow-600 mb-2" />
-                    <h4 className="font-semibold text-sm text-gray-900">Programa de Seguridad e Higiene</h4>
-                    <p className="text-xs text-gray-600 mt-1">Diagnóstico, objetivos, metas y actividades preventivas</p>
+                    <h4 className="font-bold text-base text-gray-900">Programa de Seguridad e Higiene</h4>
+                    <p className="text-sm text-gray-600 mt-1">Diagnóstico, objetivos, metas y actividades preventivas</p>
                   </div>
                   <div className="bg-white p-4 rounded border border-yellow-200">
                     <CheckCircle className="h-6 w-6 text-yellow-600 mb-2" />
-                    <h4 className="font-semibold text-sm text-gray-900">Registros de Capacitación</h4>
-                    <p className="text-xs text-gray-600 mt-1">Evidencia de entrenamiento en seguridad e higiene</p>
+                    <h4 className="font-bold text-base text-gray-900">Registros de Capacitación</h4>
+                    <p className="text-sm text-gray-600 mt-1">Evidencia de entrenamiento en seguridad e higiene</p>
                   </div>
                   <div className="bg-white p-4 rounded border border-yellow-200">
                     <AlertTriangle className="h-6 w-6 text-yellow-600 mb-2" />
-                    <h4 className="font-semibold text-sm text-gray-900">Análisis de Riesgos</h4>
-                    <p className="text-xs text-gray-600 mt-1">Identificación, evaluación y control de riesgos</p>
+                    <h4 className="font-bold text-base text-gray-900">Análisis de Riesgos</h4>
+                    <p className="text-sm text-gray-600 mt-1">Identificación, evaluación y control de riesgos</p>
                   </div>
                 </div>
               </div>
@@ -635,59 +635,215 @@ export default function GuiaNormativasSeguridadMexico() {
           )}
         </motion.div>
 
-        {/* Recursos adicionales */}
+        {/* Recursos adicionales mejorados */}
         <motion.section 
-          className="mb-8 bg-gray-50 p-6 rounded-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          className="mb-12 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 shadow-lg"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Recursos y Enlaces Oficiales</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">📚 Documentos Oficiales</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <Download className="w-4 h-4 text-blue-600" />
-                  <a href="#" className="text-blue-600 hover:underline text-sm">
-                    Catálogo de NOM-STPS vigentes (PDF)
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Download className="w-4 h-4 text-blue-600" />
-                  <a href="#" className="text-blue-600 hover:underline text-sm">
-                    Ley Federal del Trabajo actualizada
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Download className="w-4 h-4 text-blue-600" />
-                  <a href="#" className="text-blue-600 hover:underline text-sm">
-                    Reglamento Federal de Seguridad y Salud
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">🌐 Sitios Web Oficiales</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="https://www.gob.mx/stps" className="text-blue-600 hover:underline text-sm">
-                    🏛️ Secretaría del Trabajo y Previsión Social
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.gob.mx/imss" className="text-blue-600 hover:underline text-sm">
-                    🏥 Instituto Mexicano del Seguro Social
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.dof.gob.mx/" className="text-blue-600 hover:underline text-sm">
-                    📄 Diario Oficial de la Federación
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="text-center mb-10">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 bg-clip-text text-transparent"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              📋 Recursos y Enlaces Oficiales
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              Accede directamente a las fuentes oficiales del gobierno mexicano para consultar normativas, 
+              descargar documentos actualizados y mantenerte al día con las regulaciones de seguridad laboral.
+            </motion.p>
           </div>
+
+          {/* Documentos Oficiales */}
+          <motion.div 
+            className="mb-12"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <FileText className="w-8 h-8 text-blue-700" />
+              </div>
+              Documentos Oficiales para Descarga
+            </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Catálogo NOM-STPS Vigentes",
+                  description: "Consulta todas las normas oficiales mexicanas de seguridad y salud en el trabajo actualizadas.",
+                  url: "https://asinom.stps.gob.mx/centro/centromarconormativo.aspx",
+                  icon: "📚",
+                  color: "from-blue-500 to-indigo-600",
+                  bgGradient: "from-blue-50 to-indigo-50",
+                  hoverColor: "group-hover:from-blue-600 group-hover:to-indigo-700"
+                },
+                {
+                  title: "Ley Federal del Trabajo",
+                  description: "Descarga la versión más actualizada de la LFT con las últimas reformas en materia laboral.",
+                  url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+                  icon: "⚖️",
+                  color: "from-green-500 to-emerald-600",
+                  bgGradient: "from-green-50 to-emerald-50",
+                  hoverColor: "group-hover:from-green-600 group-hover:to-emerald-700"
+                },
+                {
+                  title: "Reglamento Federal SST",
+                  description: "Reglamento completo de Seguridad y Salud en el Trabajo con procedimientos detallados.",
+                  url: "https://www.diputados.gob.mx/LeyesBiblio/regla/n152.pdf",
+                  icon: "🛡️",
+                  color: "from-red-500 to-rose-600",
+                  bgGradient: "from-red-50 to-rose-50",
+                  hoverColor: "group-hover:from-red-600 group-hover:to-rose-700"
+                }
+              ].map((doc, index) => (
+                <motion.div
+                  key={index}
+                  className="group"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + (index * 0.1), duration: 0.5 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                    onClick={() => trackInteraction('document_download', doc.title, 'normativas_resources')}
+                  >
+                    <div className={`bg-gradient-to-br ${doc.bgGradient} border-2 border-transparent group-hover:border-gray-200 rounded-2xl p-6 h-full transition-all duration-300 shadow-lg group-hover:shadow-2xl`}>
+                      <div className="text-center">
+                        <div className={`inline-flex p-4 bg-gradient-to-r ${doc.color} ${doc.hoverColor} rounded-xl transition-all duration-300 group-hover:scale-110 mb-4`}>
+                          <span className="text-4xl">{doc.icon}</span>
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
+                          {doc.title}
+                        </h4>
+                        <p className="text-gray-600 text-base leading-relaxed mb-4">
+                          {doc.description}
+                        </p>
+                        <div className="flex items-center justify-center gap-2 text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
+                          <Download className="w-5 h-5 group-hover:animate-bounce" />
+                          <span className="text-base">Descargar PDF</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Sitios Web Oficiales */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.0, duration: 0.6 }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+              <div className="p-3 bg-green-100 rounded-full">
+                <Building className="w-8 h-8 text-green-700" />
+              </div>
+              Portales Gubernamentales Oficiales
+            </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Secretaría del Trabajo y Previsión Social",
+                  description: "Portal oficial de la STPS con información, trámites y servicios relacionados con normatividad laboral.",
+                  url: "https://www.gob.mx/stps",
+                  icon: "🏛️",
+                  color: "from-blue-600 to-cyan-600",
+                  bgGradient: "from-blue-50 to-cyan-50",
+                  hoverColor: "group-hover:from-blue-700 group-hover:to-cyan-700"
+                },
+                {
+                  title: "Instituto Mexicano del Seguro Social",
+                  description: "Accede a información sobre prevención de riesgos de trabajo y servicios de salud ocupacional.",
+                  url: "https://www.gob.mx/imss",
+                  icon: "🏥",
+                  color: "from-green-600 to-teal-600",
+                  bgGradient: "from-green-50 to-teal-50",
+                  hoverColor: "group-hover:from-green-700 group-hover:to-teal-700"
+                },
+                {
+                  title: "Diario Oficial de la Federación",
+                  description: "Consulta las publicaciones oficiales, nuevas normativas y modificaciones a la legislación vigente.",
+                  url: "https://www.dof.gob.mx/",
+                  icon: "📄",
+                  color: "from-purple-600 to-indigo-600",
+                  bgGradient: "from-purple-50 to-indigo-50",
+                  hoverColor: "group-hover:from-purple-700 group-hover:to-indigo-700"
+                }
+              ].map((site, index) => (
+                <motion.div
+                  key={index}
+                  className="group"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.1 + (index * 0.1), duration: 0.5 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <a
+                    href={site.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                    onClick={() => trackInteraction('official_site_visit', site.title, 'normativas_resources')}
+                  >
+                    <div className={`bg-gradient-to-br ${site.bgGradient} border-2 border-transparent group-hover:border-gray-200 rounded-2xl p-6 h-full transition-all duration-300 shadow-lg group-hover:shadow-2xl`}>
+                      <div className="text-center">
+                        <div className={`inline-flex p-4 bg-gradient-to-r ${site.color} ${site.hoverColor} rounded-xl transition-all duration-300 group-hover:scale-110 mb-4`}>
+                          <span className="text-4xl">{site.icon}</span>
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
+                          {site.title}
+                        </h4>
+                        <p className="text-gray-600 text-base leading-relaxed mb-4">
+                          {site.description}
+                        </p>
+                        <div className="flex items-center justify-center gap-2 text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
+                          <ExternalLink className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                          <span className="text-base">Visitar Sitio</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Nota informativa */}
+          <motion.div 
+            className="mt-10 bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-400 p-6 rounded-r-2xl"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.4, duration: 0.5 }}
+          >
+            <div className="flex items-start gap-4">
+              <Info className="h-6 w-6 text-amber-500 mt-1 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold text-amber-800 text-lg mb-2">💡 Recomendación Profesional</h4>
+                <p className="text-amber-700 leading-relaxed">
+                  <strong>Mantén estos recursos en favoritos.</strong> Las normativas de seguridad se actualizan frecuentemente, 
+                  y tener acceso directo a las fuentes oficiales te garantiza trabajar siempre con la información más actual. 
+                  Te recomendamos revisar estos sitios al menos una vez al trimestre para estar al día con cualquier cambio normativo.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </motion.section>
 
         {/* CTA final */}
@@ -703,12 +859,10 @@ export default function GuiaNormativasSeguridadMexico() {
             de cumplimiento normativo efectivo y adaptado a tu empresa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <a href="/contacto" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block text-center">
               Consulta Gratuita
-            </button>
-            <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Ver Más Guías
-            </button>
+            </a>
+            
           </div>
         </motion.section>
       </article>

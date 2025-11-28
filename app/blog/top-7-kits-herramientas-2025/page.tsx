@@ -550,7 +550,7 @@ export default function KitsHerramientasArticle() {
                       </div>
                       <div className="ml-3">
                         <p className="text-sm text-blue-800">
-                          <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Amazon al momento de la publicación (30 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes de cada producto aquí mostrado.
+                          <strong>Nota importante:</strong> La calificación mostrada en este artículo corresponde a la información disponible en Mercado Libre al momento de la publicación (30 Ago 2025). Las valoraciones de los clientes en Amazon pueden variar con el tiempo. Te recomendamos consultar la página oficial del producto en Amazon para ver la calificación y reseñas más recientes de cada producto aquí mostrado.
                         </p>
                       </div>
                     </div>
@@ -817,7 +817,7 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-emerald-100 to-green-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-emerald-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-emerald-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-emerald-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">
@@ -954,7 +954,7 @@ export default function KitsHerramientasArticle() {
                         <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-200">
                           <div className="flex items-center justify-between">
                             <div>
-                              <p className="text-xl font-bold text-blue-600 mb-2">Disponible en Amazon</p>
+                              <p className="text-xl font-bold text-blue-600 mb-2">Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual en la plataforma</p>
                             </div>
                             <div className="text-right">

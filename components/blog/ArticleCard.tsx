@@ -74,18 +74,19 @@ export default function ArticleCard({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      whileHover={{ 
-        y: -8, 
-        scale: 1.03,
-        transition: { type: "spring", stiffness: 400, damping: 25 }
-      }}
-      transition={{ duration: 0.3 }}
-      className="h-full group"
-    >
-      <Card className="h-full overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 border-0 shadow-lg relative">
+    <Link href={`/blog/${slug}`} className="block h-full group cursor-pointer">
+      <motion.div
+        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        whileHover={{ 
+          y: -8, 
+          scale: 1.03,
+          transition: { type: "spring", stiffness: 400, damping: 25 }
+        }}
+        transition={{ duration: 0.3 }}
+        className="h-full"
+      >
+        <Card className="h-full overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 border-0 shadow-lg relative">
         {/* Efecto de brillo completo en hover */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 z-20 pointer-events-none"
@@ -281,11 +282,8 @@ export default function ArticleCard({
             transition={{ delay: 0.6 }}
             className="w-full"
           >
-            <Button 
-              asChild
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden"
-            >
-              <Link href={`/blog/${slug}`} className="flex items-center justify-center gap-2 relative z-10">
+            <div className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden rounded-md py-2 px-4">
+              <div className="flex items-center justify-center gap-2 relative z-10">
                 {/* Efecto de ondas en el botón */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
@@ -299,6 +297,7 @@ export default function ArticleCard({
                 <motion.span
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  className="font-medium"
                 >
                   Leer Artículo
                 </motion.span>
@@ -312,11 +311,12 @@ export default function ArticleCard({
                 >
                   <ArrowRight className="h-4 w-4" />
                 </motion.div>
-              </Link>
-            </Button>
+              </div>
+            </div>
           </motion.div>
         </CardFooter>
-      </Card>
-    </motion.div>
+        </Card>
+      </motion.div>
+    </Link>
   );
 }

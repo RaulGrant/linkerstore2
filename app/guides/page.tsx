@@ -55,7 +55,7 @@ export default function GuidesPage() {
               Tienda Industrial
             </Link>
             */}
-            <Link href="/guides" className="text-blue-600 font-medium">
+            <Link href="/guias" className="text-blue-600 font-medium">
               Guías de Compra
             </Link>
             <Link href="/faq" className="text-gray-600 hover:text-blue-600 transition-colors">

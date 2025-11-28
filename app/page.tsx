@@ -9,6 +9,7 @@ import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
 import { trackEvent, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 
+
 interface CountdownProps {
   targetDate: Date;
 }
@@ -16,10 +17,10 @@ interface CountdownProps {
 function CountdownTimer({ targetDate }: CountdownProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
+    days: 40,
+    hours: 6,
+    minutes: 7,
+    seconds: 40
   });
 
   // Calcular tiempo inicial del lado del servidor
@@ -59,19 +60,19 @@ function CountdownTimer({ targetDate }: CountdownProps) {
   // No renderizar hasta que el componente esté montado
   if (!isMounted) {
     return (
-      <div className="flex justify-center gap-4 mt-8">
+      <div className="flex justify-center gap-2 sm:gap-4 mt-8 px-4 sm:px-0">
         {[
-          { label: "Días", value: 91 },
+          { label: "Días", value: 51 },
           { label: "Horas", value: 0 },
           { label: "Minutos", value: 0 },
           { label: "Segundos", value: 0 }
         ].map((item, index) => (
           <div key={index} className="text-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
-              <div className="text-3xl font-bold text-white">
+            <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4 min-w-[60px] sm:min-w-[80px] border border-white/30">
+              <div className="text-xl sm:text-3xl font-bold text-white">
                 {item.value.toString().padStart(2, '0')}
               </div>
-              <div className="text-sm text-blue-100 font-medium">
+              <div className="text-xs sm:text-sm text-blue-100 font-medium">
                 {item.label}
               </div>
             </div>
@@ -82,7 +83,7 @@ function CountdownTimer({ targetDate }: CountdownProps) {
   }
 
   return (
-    <div className="flex justify-center gap-4 mt-8">
+    <div className="flex justify-center gap-2 sm:gap-4 mt-8 px-4 sm:px-0">
       {[
         { label: "Días", value: timeLeft.days },
         { label: "Horas", value: timeLeft.hours },
@@ -98,11 +99,11 @@ function CountdownTimer({ targetDate }: CountdownProps) {
           whileHover={{ scale: 1.05 }}
         >
           <motion.div 
-            className="bg-white/20 backdrop-blur-sm rounded-lg p-4 min-w-[80px] border border-white/30"
+            className="bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4 min-w-[60px] sm:min-w-[80px] border border-white/30"
             animate={{
               boxShadow: [
                 "0 0 20px rgba(59, 130, 246, 0.3)",
-                "0 0 30px rgba(147, 51, 234, 0.4)",
+                "0 0 30px rgba(30, 144, 255, 0.4)",
                 "0 0 20px rgba(59, 130, 246, 0.3)"
               ]
             }}
@@ -114,7 +115,7 @@ function CountdownTimer({ targetDate }: CountdownProps) {
             }}
           >
             <motion.div 
-              className="text-3xl font-bold text-white"
+              className="text-xl sm:text-3xl font-bold text-white"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ 
                 duration: 2, 
@@ -125,7 +126,7 @@ function CountdownTimer({ targetDate }: CountdownProps) {
             >
               {item.value.toString().padStart(2, '0')}
             </motion.div>
-            <div className="text-sm text-blue-100 font-medium">
+            <div className="text-xs sm:text-sm text-blue-100 font-medium">
               {item.label}
             </div>
           </motion.div>
@@ -159,8 +160,8 @@ export default function HomePage() {
     trackInteraction('button_click', ctaName, 'homepage');
   };
 
-  // Fecha objetivo: 3 meses desde ahora (1 de noviembre, 2025)
-  const targetDate = new Date('2025-11-01T00:00:00');
+  // Fecha objetivo: 15 de enero de 2026
+  const targetDate = new Date('2026-01-15T00:00:00');
 
   return (
     <motion.div 
@@ -170,217 +171,619 @@ export default function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* LinkerPro Section - Próximamente (MOVIDO ARRIBA) */}
+
+
+      {/* Hero Section LinkerStore */}
       <motion.section 
-        className="py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* Background animated particles */}
-        <div className="absolute inset-0">
-          {[...Array(15)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white rounded-full opacity-20"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: Math.random() * 2,
-                type: "tween"
-              }}
-            />
-          ))}
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Ondas animadas */}
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          {/* Partículas flotantes */}
+          {[...Array(20)].map((_, i) => {
+            const leftPos = (i * 5.2) % 100;
+            const topPos = ((i * 7.3) % 80) + 10;
+            const xOffset = ((i % 5) - 2) * 6;
+            const duration = 4 + (i % 3);
+            const delay = (i % 4) * 0.5;
+            const iconType = i % 3;
+            
+            return (
+              <motion.div
+                key={i}
+                className="absolute"
+                style={{
+                  left: `${leftPos}%`,
+                  top: `${topPos}%`,
+                }}
+                animate={{
+                  y: [0, -50, 0],
+                  x: [0, xOffset, 0],
+                  opacity: [0.1, 0.6, 0.1],
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: duration,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: delay,
+                }}
+              >
+                {iconType === 0 ? (
+                  <span className="text-2xl opacity-20">⚙️</span>
+                ) : iconType === 1 ? (
+                  <span className="text-xl opacity-20">🏭</span>
+                ) : (
+                  <span className="text-lg opacity-20">🔧</span>
+                )}
+              </motion.div>
+            );
+          })}
+          
+          {/* Líneas diagonales animadas */}
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(59,130,246,0.1)_50%,transparent_52%)] bg-[length:60px_60px] animate-pulse"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            {/* Badge "Próximamente" */}
-            <motion.div 
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
-              initial={{ scale: 0, rotateY: 180 }}
-              animate={{ scale: 1, rotateY: 0 }}
-              transition={{ type: "spring", bounce: 0.4, delay: 0.2 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Timer className="w-4 h-4 text-blue-300" />
-              <span className="text-blue-100 font-medium">Próximamente</span>
-            </motion.div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <motion.div
+            initial={{ y: 100, opacity: 0, scale: 0.8 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="max-w-6xl mx-auto"
+          >
+          
+             
 
-            {/* Título principal con animaciones espectaculares */}
             <motion.h1 
-              className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent"
-              initial={{ y: 100, opacity: 0, scale: 0.8 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.4, type: "spring", bounce: 0.4 }}
-              whileHover={{ 
-                scale: 1.05,
-                textShadow: '0 0 50px rgba(147, 51, 234, 0.8)',
-                transition: { type: "spring", stiffness: 300 }
-              }}
-            >
-              LinkerPro
-            </motion.h1>
-            
-            {/* Subtítulo impactante */}
-            <motion.div 
-              className="max-w-4xl mx-auto mb-8"
+              className="text-5xl lg:text-7xl font-black mb-8 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent leading-tight"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
+              whileHover={{ 
+                scale: 1.02,
+                textShadow: '0 0 30px rgba(59, 130, 246, 0.8)'
+              }}
             >
-              <p className="text-xl md:text-2xl text-blue-100 font-light leading-relaxed">
-                Mientras preparamos LinkerPro, descubre nuestro{" "}
-                <motion.span 
-                  className="font-bold text-white"
-                  whileHover={{ scale: 1.1, color: "#60a5fa" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  blog especializado en seguridad industrial
-                </motion.span>{" "}
-                con guías expertas,{" "}
-                <motion.span 
-                  className="font-bold text-yellow-300"
-                  whileHover={{ scale: 1.1, color: "#fbbf24" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  reseñas de equipos EPP
-                </motion.span>{" "}
-                y consejos para crear ambientes laborales más seguros
-              </p>
-            </motion.div>
+              Explora los mejores productos<br />
+              <span className="text-4xl lg:text-6xl">para la industria</span>
+            </motion.h1>
 
-            {/* Cuenta regresiva espectacular */}
-            <motion.div 
-              className="mb-8"
-              initial={{ y: 50, opacity: 0 }}
+            <motion.p 
+              className="text-xl lg:text-2xl mb-12 text-blue-100 max-w-4xl mx-auto leading-relaxed"
+              initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.8 }}
             >
-              <motion.p 
-                className="text-lg text-blue-200 mb-4 font-medium"
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{ 
-                  duration: 2, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  type: "tween"
-                }}
+              Descubre más de <span className="font-bold text-white">200 artículos especializados</span> en nuestro blog, 
+              accede a <span className="font-bold text-blue-300">100 guías técnicas detalladas</span> y explora 
+              los <span className="font-bold text-white">mejores productos</span> seleccionados para ti.
+              <br />
+              <motion.span 
+                className="inline-block mt-4 text-lg font-semibold text-yellow-300"
+                animate={{ opacity: [0.7, 1, 0.7] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-                🚀 Lanzamiento oficial en:
-              </motion.p>
-              <CountdownTimer targetDate={targetDate} />
-            </motion.div>
+                LinkerStore, tu aliado en la seguridad industrial 🛡️
+              </motion.span>
+            </motion.p>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons con efectos especiales */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-              initial={{ y: 50, opacity: 0 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
+              initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => handleCTAClick('blog_cta')}
-                >
-                  <Link href="/blog" className="flex items-center gap-2">
-                    <ShoppingBag className="w-5 h-5" />
-                    Explora Nuestro Blog de Seguridad
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button 
-                  asChild 
-                  variant="secondary" 
-                  size="lg" 
-                  className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
-                >
-                  <Link href="/guias" className="flex items-center gap-2">
-                    <Target className="w-5 h-5" />
-                    Ver Guías de Seguridad
-                  </Link>
-                </Button>
-              </motion.div>
-            </motion.div>
-
-            {/* Estadísticas impresionantes animadas */}
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-            >
               {[
-                { value: "50+", label: "Artículos Especializados" },
-                { value: "15+", label: "Guías Técnicas Detalladas" },
-                { value: "100%", label: "Contenido Verificado por Expertos" }
-              ].map((stat, index) => (
+                { 
+                  href: "/catalogo", 
+                  text: "Ver Tienda", 
+                  hoverText: "Tienda 🏭", 
+                  primary: false,
+                  icon: "🛠️"
+                },
+                { 
+                  href: "/guias", 
+                  text: "Ver Guías", 
+                  hoverText: "Guías ✨", 
+                  primary: true,
+                  icon: "📚"
+                },
+                { 
+                  href: "/blog", 
+                  text: "Leer Blog", 
+                  hoverText: "Blog 🚀", 
+                  primary: false,
+                  icon: "📖"
+                }
+                
+              ].map((button, index) => (
                 <motion.div
                   key={index}
-                  initial={{ scale: 0, rotateY: 180 }}
-                  animate={{ scale: 1, rotateY: 0 }}
-                  transition={{ 
-                    delay: 1.4 + index * 0.1, 
-                    type: "spring", 
-                    bounce: 0.4 
-                  }}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    y: -5,
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
-                  }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+                  className="relative group"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <motion.div 
-                    className="text-3xl font-bold text-white"
-                    animate={{ 
-                      textShadow: [
-                        "0 0 10px rgba(59, 130, 246, 0.5)",
-                        "0 0 20px rgba(147, 51, 234, 0.5)",
-                        "0 0 10px rgba(59, 130, 246, 0.5)"
-                      ]
-                    }}
-                    transition={{ 
-                      duration: 3, 
-                      repeat: Infinity, 
-                      ease: "easeInOut",
-                      type: "tween"
-                    }}
+                  <Button 
+                    asChild 
+                    size="lg" 
+                    className={`
+                      relative overflow-hidden px-8 py-4 text-lg font-semibold rounded-full shadow-xl transition-all duration-500 group
+                      ${button.primary 
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-2 border-transparent hover:border-white/30' 
+                        : 'bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm'
+                      }
+                    `}
+                    style={{ clipPath: 'inset(0 round 9999px)' }}
                   >
-                    {stat.value}
-                  </motion.div>
-                  <div className="text-blue-200">{stat.label}</div>
+                    <Link href={button.href} className="flex items-center gap-3 relative z-10">
+                      <span className="text-xl group-hover:opacity-0 transition-opacity duration-300">{button.icon}</span>
+                      <span className="group-hover:opacity-0 transition-opacity duration-300">
+                        {button.text}
+                      </span>
+                      <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-base">
+                        {button.hoverText}
+                      </span>
+                      
+                      {/* Línea diagonal rápida al cambiar texto */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -skew-x-12"
+                        initial={{ x: '-100%', opacity: 0 }}
+                        animate={{ 
+                          x: ['100%', '200%'],
+                          opacity: [0, 1, 0]
+                        }}
+                        transition={{ 
+                          duration: 0.4,
+                          ease: "easeOut",
+                          delay: 0
+                        }}
+                        style={{ 
+                          display: 'none'
+                        }}
+                        className="group-hover:block"
+                      />
+                    </Link>
+                  </Button>
+                  
+                  {/* Efecto reluciente diagonal contenido en botón */}
+                  <div className="absolute inset-0 rounded-full overflow-hidden">
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 -skew-x-12"
+                      initial={{ x: '-100%' }}
+                      animate={{ x: '200%' }}
+                      transition={{ 
+                        duration: 0.8, 
+                        repeat: Infinity, 
+                        repeatDelay: 2.5,
+                        ease: "linear"
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Glow effect más contenido */}
+                  <div className={`
+                    absolute inset-0 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-lg -z-10
+                    ${button.primary ? 'bg-blue-400' : 'bg-white'}
+                  `} />
                 </motion.div>
               ))}
             </motion.div>
-          </div>
+
+            {/* Mensaje especial para cursos */}
+            <motion.div 
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/30 rounded-full px-6 py-3 mb-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.span
+                className="text-xl"
+                animate={{ rotate: [0, 15, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                🎓
+              </motion.span>
+              <span className="text-yellow-100 font-medium">
+                Próximamente: Cursos especializados en seguridad industrial
+              </span>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+ {/* Banner de Video Promocional */}
+      <motion.section 
+        className="py-20 bg-gradient-to-b from-blue-800 to-blue-900 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+         
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Conoce LinkerStore en Acción
+            </h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Descubre cómo nuestros productos y servicios pueden transformar tu trabajo industrial
+            </p>
+          </motion.div>
+
+          {/* Banner de Video Simple */}
+          <motion.div 
+            className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-900/90 to-blue-600/90"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="relative aspect-video bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600">
+              {/* Animated Background Fallback */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/90 to-blue-600/95">
+                <div className="absolute inset-0 bg-[url('/images/seucrity.webp')] bg-cover bg-center opacity-30"></div>
+                {/* Animated particles */}
+                <div className="absolute inset-0">
+                  {[...Array(15)].map((_, i) => {
+                    const leftPos = (i * 6.67) % 100;
+                    const topPos = ((i * 13.3) % 80) + 10;
+                    const duration = 3 + (i % 4);
+                    const delay = (i % 5) * 0.4;
+                    
+                    return (
+                      <motion.div
+                        key={i}
+                        className="absolute w-1 h-1 bg-blue-300 rounded-full opacity-40"
+                        style={{
+                          left: `${leftPos}%`,
+                          top: `${topPos}%`,
+                        }}
+                        animate={{
+                          y: [0, -80, 0],
+                          opacity: [0.2, 0.8, 0.2],
+                          scale: [0.5, 1.5, 0.5],
+                        }}
+                        transition={{
+                          duration: duration,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: delay,
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Video Implementation with controls and sound */}
+              <video
+                className="absolute inset-0 w-full h-full object-cover z-10"
+                controls
+                autoPlay
+                loop
+                playsInline
+                preload="auto"
+                onCanPlay={(e) => {
+                  console.log('✅ Video cargado correctamente');
+                  // Intentar reproducir el video
+                  e.currentTarget.play().catch(console.log);
+                }}
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  console.log('❌ Error cargando video, usando fondo animado');
+                }}
+                onLoadedData={(e) => {
+                  console.log('📹 Video data cargado');
+                  // Asegurar que el video tenga volumen
+                  e.currentTarget.volume = 0.7;
+                }}
+                volume={0.7}
+              >
+                <source src="/videos/hero-banner.webm" type="video/webm" />
+                <source src="/videos/hero-banner.webm" type="video/webm" />
+              </video>
+            </div>
+          </motion.div>
+          
+          {/* Contenido debajo del video para mejor énfasis */}
+          <motion.div 
+            className="mt-12 max-w-4xl mx-auto px-8 text-center bg-gradient-to-b from-gray-900/95 via-gray-800/90 to-gray-900/95 rounded-3xl py-16 shadow-2xl border border-gray-700/50"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.h2 
+              className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.2, 
+                delay: 0.3,
+                type: "spring",
+                bounce: 0.4
+              }}
+              whileHover={{ 
+                scale: 1.02,
+                textShadow: "0px 0px 20px rgba(255,255,255,0.8)"
+              }}
+            >
+              LinkerStore - Seguridad Industrial
+            </motion.h2>
+            
+            <motion.p 
+              className="text-2xl mb-6 text-white/90 font-medium drop-shadow-lg"
+              initial={{ opacity: 0, x: -50, rotateX: 90 }}
+              whileInView={{ opacity: 1, x: 0, rotateX: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1, 
+                delay: 0.6,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                color: "#ffffff"
+              }}
+            >
+              Tu aliado en protección y herramientas industriales
+            </motion.p>
+            
+            <motion.p 
+              className="text-lg mb-10 text-white/80 leading-relaxed max-w-3xl mx-auto drop-shadow-md"
+              initial={{ opacity: 0, y: 30, blur: 10 }}
+              whileInView={{ opacity: 1, y: 0, blur: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.2, 
+                delay: 0.9,
+                ease: "easeOut"
+              }}
+              whileHover={{ 
+                scale: 1.02,
+                color: "#ffffff"
+              }}
+            >
+              Explora nuestra amplia gama de productos industriales, equipos de protección personal y herramientas especializadas para profesionales que exigen calidad y confianza.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+            >
+              <a
+                href="/catalogo"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                <span>Ir a la tienda</span>
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                  className="text-2xl"
+                >
+                  →
+                </motion.span>
+              </a>
+            </motion.div>
+          </motion.div>
         </div>
       </motion.section>
 
-      {/* Hero Section LinkerStore (temporalmente oculto) */}
+      
+
+       {/* Banner Carrusel de Productos */}
+      <motion.section 
+        className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+           
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+              Catálogo de Productos Seleccionados
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Explora los mejores productos de seguridad industrial seleccionados por nuestros expertos
+            </p>
+          </motion.div>
+
+          {/* Carrusel de productos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                emoji: "🦺",
+                name: "Overol Industrial Dickies",
+                category: "Ropa de Trabajo",
+                link: "https://articulo.mercadolibre.com.mx/MLM-1358999335-overol-peto-dickies-8329-mezclilla-uso-rudo-resistente-_JM",
+                color: "from-green-500 to-emerald-600"
+              },
+              {
+                emoji: "🥾",
+                name: "Botas Caterpillar Steel Toe",
+                category: "Calzado de Seguridad",
+                link: "https://articulo.mercadolibre.com.mx/MLM-2132681711-botas-caterpillar-second-shift-wp-steel-toe-p91660-_JM",
+                color: "from-yellow-500 to-orange-600"
+              },
+              {
+                emoji: "🔨",
+                name: "Kit de Herramientas Stanley",
+                category: "Herramientas",
+                link: "https://mercadolibre.com/sec/2Du7866",
+                color: "from-blue-500 to-indigo-600"
+              },
+              {
+                emoji: "🏥",
+                name: "Botiquín Industrial Jaloma",
+                category: "Primeros Auxilios",
+                link: "https://www.mercadolibre.com.mx/jaloma-botiquin-en-caja-plastica-primeros-auxilios-22-pzas/p/MLM35212740",
+                color: "from-red-500 to-pink-600"
+              },
+              {
+                emoji: "⛑️",
+                name: "Arnés de Seguridad Jyrsa",
+                category: "Trabajo en Altura",
+                link: "https://www.mercadolibre.com.mx/arnes-con-anillo-d-espalda-trabajo-alturas-jyrsa-jyr-10a-verde-alta-visibilidad/p/MLM43738470",
+                color: "from-teal-500 to-cyan-600"
+              },
+              {
+                emoji: "🔧",
+                name: "Rotomartillo DeWalt",
+                category: "Herramientas Eléctricas",
+                link: "https://www.mercadolibre.com.mx/rotomartillo-electroneumatico-dewalt-dch133m2-b2-inalambrico-amarillo-y-negro-con-16kw-de-potencia/p/MLM44712352",
+                color: "from-purple-500 to-violet-600"
+              },
+              {
+                emoji: "📐",
+                name: "Multímetro UNI-T UT204",
+                category: "Instrumentos",
+                link: "https://www.mercadolibre.com.mx/pinza-amperimetrica-digital-uni-t-ut204-600a-acdc-true-rms-ncv-multimetro-profesional/p/MLM15532755",
+                color: "from-orange-500 to-red-600"
+              },
+              {
+                emoji: "🪜",
+                name: "Escalera Industrial Cuprum",
+                category: "Equipos de Acceso",
+                link: "https://listado.mercadolibre.com.mx/escalera-cuprum-494-24n",
+                color: "from-indigo-500 to-blue-600"
+              }
+            ].map((product, index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 100, opacity: 0, scale: 0.8 }}
+                whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.1,
+                  type: "spring",
+                  bounce: 0.4
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  transition: { type: "spring", bounce: 0.4 }
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="group"
+              >
+                <div className={`relative overflow-hidden bg-gradient-to-br ${product.color} rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 h-64`}>
+                  {/* Background pattern */}
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+                  
+                  {/* Product content */}
+                  <div className="relative z-10 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        {product.emoji}
+                      </div>
+                      
+                      <Badge className="mb-3 bg-white/20 text-white border-white/30">
+                        {product.category}
+                      </Badge>
+                      
+                      <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+                        {product.name}
+                      </h3>
+                    </div>
+
+                    <motion.button
+                      onClick={() => {
+                        handleCTAClick(`product_${product.name}`);
+                        window.open(product.link, '_blank');
+                      }}
+                      className="relative overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 font-semibold py-3 px-4 rounded-xl transition-all duration-300 group/btn"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        🛒 Comprar en ML
+                      </span>
+                      
+                      {/* Efecto shine */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                        initial={{ x: '-100%' }}
+                        animate={{ x: '200%' }}
+                        transition={{ 
+                          duration: 0.8, 
+                          repeat: Infinity, 
+                          repeatDelay: 3,
+                          ease: "linear"
+                        }}
+                      />
+                    </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA Final */}
+          <motion.div 
+            className="text-center mt-24"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <motion.button
+              onClick={() => {
+                handleCTAClick('see_all_products');
+                window.location.href = '/catalogo';
+              }}
+              className="relative overflow-hidden bg-gradient-to-r from-white/10 to-white/5 border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 group"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="relative z-10 flex items-center gap-3">
+                <span className="text-2xl group-hover:animate-bounce">🛠️</span>
+                Ver Todo el Catálogo de Productos
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl bg-white" />
+            </motion.button>
+          </motion.div>
+        </div>
+      </motion.section>
+
+
+      {/* Hero Section LinkerStore Original (temporalmente oculto) */}
       {false && (
         <motion.section 
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
@@ -470,7 +873,7 @@ export default function HomePage() {
                     size="lg"
                     className="border-2 border-purple-400 bg-purple-400 text-purple-900 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg font-bold"
                   >
-                    <Link href="/guides" className="flex items-center gap-2">
+                    <Link href="/guias" className="flex items-center gap-2">
                       <Target className="mr-2 h-5 w-5" />
                       Ver Guías
                     </Link>
@@ -482,114 +885,383 @@ export default function HomePage() {
         </motion.section>
       )}
 
-      {/* Simple Categories Section */}
+{/* Hero Image Banner Section with Carousel */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Carousel State */}
+        {(() => {
+          const [currentImageIndex, setCurrentImageIndex] = useState(0);
+          
+          const images = [
+            {
+              src: '/images/seucrity.webp',
+              title: 'Herramientas Industriales de',
+              subtitle: 'Calidad Superior',
+              description: 'Equipos de protección, herramientas y soluciones industriales para profesionales que exigen lo mejor'
+            },
+            {
+              src: '/images/industrial-safety-2.webp',
+              title: 'Equipos de Seguridad',
+              subtitle: 'Certificados',
+              description: 'Protección personal y equipos industriales con certificaciones internacionales de calidad'
+            },
+            {
+              src: '/images/herramientas-banner.webp',
+              title: 'Herramientas Profesionales',
+              subtitle: 'de Alto Rendimiento',
+              description: 'Las mejores marcas en herramientas industriales para trabajos de precisión y durabilidad'
+            },
+            {
+              src: '/images/solutions.webp',
+              title: 'Soluciones Integrales',
+              subtitle: 'para la Industria',
+              description: 'Todo lo que necesitas para proyectos industriales y de construcción en un solo lugar'
+            }
+          ];
+
+          // Auto-advance carousel
+          useEffect(() => {
+            const interval = setInterval(() => {
+              setCurrentImageIndex((prevIndex) => 
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+              );
+            }, 10000);
+
+            return () => clearInterval(interval);
+          }, [images.length]);
+
+          const goToImage = (index) => {
+            setCurrentImageIndex(index);
+          };
+
+          const goToPrevious = () => {
+            setCurrentImageIndex(currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1);
+          };
+
+          const goToNext = () => {
+            setCurrentImageIndex(currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1);
+          };
+
+          return (
+            <>
+              {/* Background Images with Transitions */}
+              {images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url(${image.src})`,
+                  }}
+                  initial={{ opacity: 0 }}
+                  animate={{ 
+                    opacity: index === currentImageIndex ? 1 : 0,
+                    scale: index === currentImageIndex ? 1.05 : 1
+                  }}
+                  transition={{ 
+                    duration: 1,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                </motion.div>
+              ))}
+
+              {/* Navigation Arrows */}
+              <motion.button
+                onClick={goToPrevious}
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black p-3 rounded-full transition-all duration-300 group"
+                whileHover={{ scale: 1.1, x: -5 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.5 }}
+              >
+                <svg 
+                  className="w-6 h-6 group-hover:animate-pulse" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </motion.button>
+
+              <motion.button
+                onClick={goToNext}
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black p-3 rounded-full transition-all duration-300 group"
+                whileHover={{ scale: 1.1, x: 5 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.5 }}
+              >
+                <svg 
+                  className="w-6 h-6 group-hover:animate-pulse" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </motion.button>
+
+              {/* Dot Indicators */}
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+                {images.map((_, index) => (
+                  <motion.button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex 
+                        ? 'bg-white scale-125 shadow-lg' 
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.7 + index * 0.1 }}
+                  />
+                ))}
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10 container mx-auto px-6 text-center text-white">
+                <motion.div
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="max-w-4xl mx-auto"
+                >
+                  <motion.h1 
+                    className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    {images[currentImageIndex].title}
+                    <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                      {' '}{images[currentImageIndex].subtitle}
+                    </span>
+                  </motion.h1>
+                  
+                  <motion.p 
+                    className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                  >
+                    {images[currentImageIndex].description}
+                  </motion.p>
+                  
+                  <motion.div 
+                    className="flex flex-col sm:flex-row gap-4 justify-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                  >
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button 
+                        asChild
+                        size="lg" 
+                        className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+                      >
+                        <Link href="/catalogo">
+                          <span className="relative z-10">Ver Tienda</span>
+                          {/* Shine effect */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                            initial={{ x: '-100%' }}
+                            animate={{ x: '200%' }}
+                            transition={{ 
+                              duration: 0.6,
+                              repeat: Infinity,
+                              repeatDelay: 3,
+                              ease: "linear"
+                            }}
+                          />
+                        </Link>
+                      </Button>
+                    </motion.div>
+                    
+                   
+                  </motion.div>
+                </motion.div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="absolute bottom-0 left-0 h-1 bg-white/30 w-full z-20">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-orange-400 to-yellow-400"
+                  initial={{ width: '0%' }}
+                  animate={{ width: '100%' }}
+                  key={currentImageIndex}
+                  transition={{ duration: 8, ease: "linear" }}
+                />
+              </div>
+            </>
+          );
+        })()}
+      </section>
+      {/* Galería de navegación */}
       <motion.section 
-        className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+        className="py-20 bg-gradient-to-b from-blue-600 to-blue-800 relative overflow-hidden"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
             initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <Badge className="mb-4 bg-blue-100 text-blue-800">Contenido Especializado</Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Explora Nuestro Blog de Seguridad Industrial
+          
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Explora Nuestra Galería Industrial
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Información confiable y actualizada sobre equipos de protección personal, 
-              guías técnicas y mejores prácticas en seguridad laboral
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Descubre imágenes, guías y productos especializados para la industria
             </p>
           </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.4 }}
-          >
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Artículos del Blog",
-                description: "Contenido actualizado sobre seguridad industrial y EPP",
-                count: "50+ artículos",
+                emoji: "🏭",
+                title: "Seguridad Industrial",
+                description: "Artículos especializados y guías completas",
+                cta: "Ver Blog",
                 href: "/blog",
-                color: "bg-gradient-to-r from-green-500 to-emerald-600"
+                bgGradient: "from-blue-500 to-cyan-500",
+                image: "industrial-safety"
               },
               {
-                name: "Guías Técnicas",
-                description: "Manuales detallados y guías paso a paso",
-                count: "15+ guías",
+                emoji: "📚",
+                title: "Guías Técnicas",
+                description: "Manuales detallados paso a paso",
+                cta: "Explorar Guías",
                 href: "/guias",
-                color: "bg-gradient-to-r from-blue-500 to-cyan-600"
+                bgGradient: "from-green-500 to-emerald-500",
+                image: "technical-guides"
               },
               {
-                name: "Sobre Nosotros",
-                description: "Conoce a nuestro equipo de expertos certificados",
-                count: "Nuestro equipo",
+                emoji: "🛠️",
+                title: "Equipos EPP",
+                description: "Catálogo de productos industriales",
+                cta: "Ver Productos",
+                href: "/productos",
+                bgGradient: "from-purple-500 to-indigo-500",
+                image: "epp-equipment"
+              },
+              {
+                emoji: "🔧",
+                title: "Herramientas",
+                description: "Reseñas y comparativas de herramientas",
+                cta: "Leer Reseñas",
+                href: "/blog",
+                bgGradient: "from-orange-500 to-red-500",
+                image: "tools-review"
+              },
+              {
+                emoji: "📋",
+                title: "Normativas",
+                description: "Regulaciones y estándares industriales",
+                cta: "Ver Normativas",
+                href: "/blog/normativas-seguridad-industrial-mexico",
+                bgGradient: "from-teal-500 to-blue-500",
+                image: "regulations"
+              },
+              {
+                emoji: "🎓",
+                title: "Capacitación",
+                description: "Cursos y certificaciones próximamente",
+                cta: "Más Información",
                 href: "/sobre-nosotros",
-                color: "bg-gradient-to-r from-purple-500 to-indigo-600"
+                bgGradient: "from-yellow-500 to-orange-500",
+                image: "training"
               }
-            ].map((category, index) => (
+            ].map((item, index) => (
               <motion.div
-                key={category.name}
+                key={index}
                 initial={{ y: 100, opacity: 0, scale: 0.8 }}
-                animate={{ y: 0, opacity: 1, scale: 1 }}
+                whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ 
                   duration: 0.6, 
-                  delay: 1.6 + index * 0.2,
+                  delay: index * 0.1,
                   type: "spring",
                   bounce: 0.4
                 }}
                 whileHover={{ 
                   scale: 1.05, 
                   y: -10,
+                  rotateY: 5,
                   transition: { type: "spring", bounce: 0.4 }
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href={category.href} className="group block">
+                <Link href={item.href} className="group block">
                   <motion.div 
-                    className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 relative overflow-hidden"
+                    className="relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-80"
                     whileHover={{
                       boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                     }}
                   >
-                    <div className="relative z-10">
-                      <div className={`${category.color} p-4 rounded-xl w-16 h-16 flex items-center justify-center shadow-lg mb-6`}>
-                        <FileText className="w-8 h-8 text-white" />
-                      </div>
+                    {/* Imagen de fondo simulada con gradiente */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${item.bgGradient} opacity-90`}>
+                      <div className="absolute inset-0 bg-black/20"></div>
                       
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                        {category.name}
-                      </h3>
+                      {/* Patrón decorativo */}
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
                       
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {category.description}
-                      </p>
-
-                      <Badge variant="secondary" className="bg-gray-100 text-gray-700 mb-4">
-                        {category.count}
-                      </Badge>
-                      
-                      <div className="flex items-center text-blue-600 group-hover:text-blue-800 font-semibold">
-                        <span>Explorar sección</span>
-                        <ArrowRight className="w-5 h-5 ml-2" />
+                      {/* Emoji grande de fondo */}
+                      <div className="absolute top-4 right-4 text-6xl opacity-20 group-hover:opacity-30 transition-opacity">
+                        {item.emoji}
                       </div>
                     </div>
+
+                    <div className="relative z-10 p-6 h-full flex flex-col justify-between text-white">
+                      <div>
+                        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                          {item.emoji}
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
+                          {item.title}
+                        </h3>
+                        
+                        <p className="text-white/90 mb-4 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <motion.div 
+                        className="flex items-center text-white font-semibold group-hover:text-yellow-200 transition-colors"
+                        whileHover={{ x: 5 }}
+                      >
+                        <span className="mr-2">{item.cta}</span>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </motion.div>
+                    </div>
+
+                    {/* Efecto hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </motion.div>
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </motion.section>
 
-      {/* CTA Final */}
+     
+
+
+{/* CTA Final 
       <motion.section 
         className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white relative overflow-hidden"
         initial={{ opacity: 0 }}
@@ -646,47 +1318,582 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section>*/}
 
-      {/* Resto del contenido original... */}
-      <motion.section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2 
-            className="text-4xl font-bold text-gray-900 mb-6"
+     
+
+      {/* Simple Categories Section 
+      <motion.section 
+        className="py-20 bg-gradient-to-b from-blue-700 to-blue-900 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+          
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Explora Nuestro Blog de Seguridad Industrial
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Información confiable y actualizada sobre equipos de protección personal, 
+              guías técnicas y mejores prácticas en seguridad laboral
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.4 }}
+          >
+            {[
+              {
+                name: "Artículos del Blog",
+                description: "Contenido actualizado sobre seguridad industrial y EPP",
+                count: "200+ artículos",
+                href: "/blog",
+                color: "bg-gradient-to-r from-green-500 to-emerald-600"
+              },
+              {
+                name: "Guías Técnicas",
+                description: "Manuales detallados y guías paso a paso",
+                count: "100+ guías",
+                href: "/guias",
+                color: "bg-gradient-to-r from-blue-500 to-cyan-600"
+              },
+              {
+                name: "Sobre Nosotros",
+                description: "Conoce a nuestro equipo de expertos certificados",
+                count: "Nuestro equipo",
+                href: "/sobre-nosotros",
+                color: "bg-gradient-to-r from-purple-500 to-indigo-600"
+              }
+            ].map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ y: 100, opacity: 0, scale: 0.8 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 1.6 + index * 0.2,
+                  type: "spring",
+                  bounce: 0.4
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  transition: { type: "spring", bounce: 0.4 }
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link href={category.href} className="group block">
+                  <motion.div 
+                    className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 relative overflow-hidden"
+                    whileHover={{
+                      boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                    }}
+                  >
+                    <div className="relative z-10">
+                      <div className={`${category.color} p-4 rounded-xl w-16 h-16 flex items-center justify-center shadow-lg mb-6`}>
+                        <FileText className="w-8 h-8 text-white" />
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-white transition-colors">
+                        {category.name}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {category.description}
+                      </p>
+
+                      <Badge variant="secondary" className="bg-gray-100 text-gray-700 mb-4">
+                        {category.count}
+                      </Badge>
+                      
+                      <div className="flex items-center text-blue-600 group-hover:text-blue-800 font-semibold">
+                        <span>Explorar sección</span>
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section> */}
+
+      
+
+     
+
+      {/* Newsletter Subscription Banner */}
+      <motion.section 
+        className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-800 relative overflow-hidden"
+        data-newsletter-section
+        id="newsletter-section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        {/* Background animated elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          {/* Floating icons */}
+          {[...Array(8)].map((_, i) => {
+            const leftPos = (i * 12.5) % 100;
+            const topPos = ((i * 15.7) % 80) + 10;
+            const duration = 4 + (i % 3);
+            const delay = (i % 4) * 0.5;
+            const iconType = i % 3;
+            
+            return (
+              <motion.div
+                key={i}
+                className="absolute"
+                style={{
+                  left: `${leftPos}%`,
+                  top: `${topPos}%`,
+                }}
+                animate={{
+                  y: [0, -30, 0],
+                  opacity: [0.3, 0.8, 0.3],
+                  rotate: [0, 180, 360],
+                }}
+                transition={{
+                  duration: duration,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: delay,
+                }}
+              >
+                {iconType === 0 ? (
+                  <span className="text-2xl opacity-30">📧</span>
+                ) : iconType === 1 ? (
+                  <span className="text-xl opacity-30">🔔</span>
+                ) : (
+                  <span className="text-lg opacity-30">✨</span>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
-            Únete a Nuestra Comunidad de Seguridad
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-600 max-w-2xl mx-auto mb-8"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Mientras preparamos LinkerPro, mantente actualizado con nuestro blog especializado en seguridad industrial.
-          </motion.p>
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+            <motion.div 
+              className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-8"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", bounce: 0.4, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <Link href="/blog">
-                Explorar Blog de Seguridad
-              </Link>
-            </Button>
+              <motion.span
+                className="text-2xl"
+                animate={{ rotate: [0, 15, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                📧
+              </motion.span>
+              <span className="text-white font-semibold">Newsletter LinkerStore</span>
+            </motion.div>
+
+            <motion.h2 
+              className="text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              ¡Sé el primero en enterarte!
+            </motion.h2>
+            
+            <motion.p 
+              className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-white/90"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              Recibe <span className="font-bold">nuevos artículos del blog</span>, 
+              <span className="font-bold"> novedades exclusivas</span> y 
+              <span className="font-bold"> ofertas especiales</span> directamente en tu bandeja de entrada.
+              <br />
+              <span className="text-lg font-medium text-yellow-100 inline-block mt-2">
+                ¡Únete a más de 1,000 profesionales industriales! 🚀
+              </span>
+            </motion.p>
+
+            {/* Newsletter Signup Form */}
+            <motion.div 
+              className="max-w-2xl mx-auto"
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+                <motion.input
+                  type="email"
+                  placeholder="Tu correo electrónico profesional"
+                  className="flex-1 px-6 py-4 text-lg rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder-white/70 focus:outline-none focus:ring-4 focus:ring-white/30 focus:border-white transition-all duration-300"
+                  whileFocus={{ scale: 1.02 }}
+                  initial={{ x: -50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.9 }}
+                />
+                
+                <motion.button
+                  onClick={() => {
+                    handleCTAClick('newsletter_signup');
+                    // Aquí puedes agregar la lógica de suscripción
+                    alert('¡Gracias por suscribirte! Te mantendremos informado sobre las últimas novedades.');
+                  }}
+                  className="relative overflow-hidden bg-white text-blue-700 hover:bg-blue-50 font-bold px-8 py-4 text-lg rounded-full transition-all duration-300 group shadow-xl hover:shadow-2xl"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ x: 50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.1 }}
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    <span>Suscribirme Gratis</span>
+                    <motion.span
+                      className="text-xl"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1, repeat: Infinity }}
+                    >
+                      ✨
+                    </motion.span>
+                  </span>
+                  
+                  {/* Shine effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 rounded-full"
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '200%' }}
+                    transition={{ 
+                      duration: 1.5, 
+                      repeat: Infinity, 
+                      repeatDelay: 3,
+                      ease: "linear"
+                    }}
+                  />
+                </motion.button>
+              </div>
+              
+              <motion.p 
+                className="text-sm text-white/70 mt-4 max-w-md mx-auto"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 1.3 }}
+              >
+                📧 Sin spam, solo contenido valioso | 🔒 Tu email está seguro | 
+                ✌️ Cancela cuando quieras
+              </motion.p>
+            </motion.div>
+
+            {/* Benefits */}
+            <motion.div 
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 1.5 }}
+            >
+              {[
+                {
+                  icon: "📰",
+                  title: "Artículos Exclusivos",
+                  description: "Contenido especializado antes que nadie"
+                },
+                {
+                  icon: "🎯",
+                  title: "Ofertas Especiales",
+                  description: "Descuentos exclusivos para suscriptores"
+                },
+                {
+                  icon: "🔔",
+                  title: "Novedades Inmediatas",
+                  description: "Entérate de nuevos productos al instante"
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.7 + index * 0.2 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
+                  <p className="text-white/80 text-sm">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Banner Countdown Timer - Movido al Final */}
+      <motion.section 
+        className="py-16 sm:py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        {/* Background animated particles */}
+        <div className="absolute inset-0">
+          {[...Array(12)].map((_, i) => {
+            const leftPos = (i * 8.33) % 100;
+            const topPos = ((i * 11.7) % 90) + 5;
+            const duration = 4 + (i % 3);
+            const delay = (i % 6) * 0.33;
+            
+            return (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 bg-white rounded-full opacity-20"
+                style={{
+                  left: `${leftPos}%`,
+                  top: `${topPos}%`,
+                }}
+                animate={{
+                  y: [0, -100, 0],
+                  opacity: [0.2, 0.8, 0.2],
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration: duration,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: delay,
+                  type: "tween"
+                }}
+              />
+            );
+          })}
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center">
+            {/* Badge "Próximamente" */}
+            <motion.div 
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
+              initial={{ scale: 0, rotateY: 180 }}
+              whileInView={{ scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", bounce: 0.4, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <Timer className="w-4 h-4 text-blue-300" />
+              <span className="text-blue-100 font-medium">Próximamente</span>
+            </motion.div>
+
+            {/* Título principal con animaciones espectaculares */}
+            <motion.h1 
+              className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent"
+              initial={{ y: 100, opacity: 0, scale: 0.8 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4, type: "spring", bounce: 0.4 }}
+              whileHover={{ 
+                scale: 1.05,
+                textShadow: '0 0 50px rgba(147, 51, 234, 0.8)',
+                transition: { type: "spring", stiffness: 300 }
+              }}
+            >
+              LinkerPro
+            </motion.h1>
+            
+            {/* Subtítulo impactante */}
+            <motion.div 
+              className="max-w-4xl mx-auto mb-8"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              <p className="text-xl md:text-2xl text-blue-100 font-light leading-relaxed">
+                Mientras preparamos LinkerPro, descubre nuestro{" "}
+                <motion.span 
+                  className="font-bold text-white"
+                  whileHover={{ scale: 1.1, color: "#60a5fa" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  blog especializado en seguridad industrial
+                </motion.span>{" "}
+                con guías expertas,{" "}
+                <motion.span 
+                  className="font-bold text-yellow-300"
+                  whileHover={{ scale: 1.1, color: "#fbbf24" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  reseñas de equipos EPP
+                </motion.span>{" "}
+                y consejos para crear ambientes laborales más seguros
+              </p>
+            </motion.div>
+
+            {/* Cuenta regresiva espectacular */}
+            <motion.div 
+              className="mb-8"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <motion.p 
+                className="text-lg text-blue-200 mb-4 font-medium"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ 
+                  duration: 2, 
+                  repeat: Infinity, 
+                  ease: "easeInOut",
+                  type: "tween"
+                }}
+              >
+                🚀 Lanzamiento oficial en:
+              </motion.p>
+              <CountdownTimer targetDate={targetDate} />
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 1 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => handleCTAClick('blog_cta')}
+                >
+                  <Link href="/blog" className="flex items-center gap-2">
+                    <FileText className="w-5 h-5" />
+                    Explorar Blog
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  asChild 
+                  variant="secondary" 
+                  size="lg" 
+                  className="bg-white/15 border-2 border-white/50 text-white hover:bg-white/25 hover:border-white font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
+                >
+                  <Link href="/guias" className="flex items-center gap-2">
+                    <Target className="w-5 h-5" />
+                    Ver Guías
+                  </Link>
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => handleCTAClick('tienda_cta')}
+                >
+                  <Link href="/catalogo" className="flex items-center gap-2">
+                    <ShoppingBag className="w-5 h-5" />
+                    Ver Tienda
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            {/* Estadísticas impresionantes animadas */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              {[
+                { value: "200+", label: "Artículos Especializados" },
+                { value: "100+", label: "Guías Técnicas Detalladas" },
+                { value: "100%", label: "Contenido Verificado por Expertos" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ scale: 0, rotateY: 180 }}
+                  whileInView={{ scale: 1, rotateY: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    delay: 1.4 + index * 0.1, 
+                    type: "spring", 
+                    bounce: 0.4 
+                  }}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    y: -5,
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
+                  }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+                >
+                  <motion.div 
+                    className="text-3xl font-bold text-white"
+                    animate={{ 
+                      textShadow: [
+                        "0 0 10px rgba(59, 130, 246, 0.5)",
+                        "0 0 20px rgba(147, 51, 234, 0.5)",
+                        "0 0 10px rgba(59, 130, 246, 0.5)"
+                      ]
+                    }}
+                    transition={{ 
+                      duration: 3, 
+                      repeat: Infinity, 
+                      ease: "easeInOut",
+                      type: "tween"
+                    }}
+                  >
+                    {stat.value}
+                  </motion.div>
+                  <div className="text-blue-200">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </motion.section>
     </motion.div>

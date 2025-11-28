@@ -339,7 +339,7 @@ export default function BlogPage() {
         </div>
 
         {/* Enlaces rápidos y CTA */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           <div className="bg-white rounded-xl p-6 shadow-lg border-0">
             <h3 className="text-xl font-bold text-gray-900 mb-4">📋 Guías Técnicas</h3>
             <p className="text-gray-600 mb-4">
@@ -347,16 +347,6 @@ export default function BlogPage() {
             </p>
             <Button variant="outline" className="w-full" asChild>
               <Link href="/guias">Ver Todas las Guías</Link>
-            </Button>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-lg border-0">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🛡️ Equipos EPP</h3>
-            <p className="text-gray-600 mb-4">
-              Información sobre equipos de protección personal certificados y normativas.
-            </p>
-            <Button variant="outline" className="w-full" asChild>
-              <Link href="/blog?category=EPP">Artículos sobre EPP</Link>
             </Button>
           </div>
 

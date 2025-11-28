@@ -1354,16 +1354,7 @@ export default function MonitoresGasesArticle() {
                       <p className="text-lg sm:text-xl md:text-2xl font-bold mb-6">
                         🎯 La seguridad atmosférica no es negociable. La detección de gases es tu sentido extra.
                       </p>
-                      <motion.a
-                        href="/productos"
-                        className="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Shield className="h-6 w-6" />
-                        Explorar Detectores de Gases
-                        <ChevronDown className="h-5 w-5 rotate-[-90deg]" />
-                      </motion.a>
+                 
                     </div>
                   </div>
                 </div>

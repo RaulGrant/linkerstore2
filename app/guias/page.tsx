@@ -117,7 +117,6 @@ const benefits = [
   'Guías verificadas por expertos en seguridad industrial',
   'Información actualizada según normativas vigentes',
   'Ejemplos prácticos y casos de uso reales',
-  'Descargables en PDF para uso offline',
   'Actualizaciones constantes de contenido'
 ];
 
@@ -188,18 +187,29 @@ export default function GuiasPage() {
               ))}
             </div>
 
-            <Button 
-              size="lg" 
-              className="bg-white text-blue-900 hover:bg-gray-100 font-bold text-lg px-8 py-4"
-            >
-              Explorar Guías
-            </Button>
+            {/* Botón Explorar Guías */}
+            <div className="flex justify-center">
+              <Button 
+                size="lg" 
+                onClick={() => {
+                  const guidesSection = document.getElementById('guias-section');
+                  if (guidesSection) {
+                    guidesSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-white text-blue-900 hover:bg-gray-100 font-bold px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <BookOpen className="mr-2 h-5 w-5" />
+                Explorar Guías
+              </Button>
+            </div>
+
           </div>
         </div>
       </div>
 
       {/* Categorías de guías */}
-      <div className="container mx-auto px-4 py-16">
+      <div id="guias-section" className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Categorías de Guías</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -341,13 +351,6 @@ export default function GuiasPage() {
               className="bg-white text-slate-900 hover:bg-gray-100 font-bold"
             >
               Solicitar Guía Personalizada
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-slate-900"
-            >
-              Contactar Expertos
             </Button>
           </div>
         </div>

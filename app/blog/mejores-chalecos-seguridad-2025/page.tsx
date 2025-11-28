@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import BlogLayout from '@/components/blog/BlogLayout';
+import { motion } from "framer-motion";
+import BlogLayout from "@/components/blog/BlogLayout";
 import RelatedArticles from '@/components/blog/RelatedArticles';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,20 +13,22 @@ import {
   Shield, 
   AlertTriangle, 
   CheckCircle, 
-  Eye,
   Sun,
-  Moon,
-  Zap,
   Info,
   ChevronDown,
   ExternalLink,
   Star,
   ShoppingCart,
   Sparkles,
-  TrendingUp
+  TrendingUp,
+  Glasses,
+  Wind,
+  Eye,
+  Zap,
+  Target
 } from 'lucide-react';
 import { Chart as ChartJS, ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import { Doughnut, Bar } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import { trackAffiliateClick, trackBlogView, generateTrackingId } from '@/lib/meta-pixel';
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -36,32 +38,27 @@ export default function GuiaChalecosSeguridadArticle() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [visibleSection, setVisibleSection] = useState('');
 
-  // Track article view on component mount
   useEffect(() => {
     const articleId = generateTrackingId('article', 'guia-completa-chalecos-seguridad');
     trackBlogView(articleId, 'Guía Completa de Chalecos de Seguridad 2025', 'chaleco_seguridad');
   }, []);
 
-  // Efecto para la barra de progreso de lectura y detección de sección visible
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
 
-      // Detectar sección visible
       const sections = ['header', 'caracteristicas', 'productos', 'faq', 'conclusion'];
-      const currentSection = sections.find(section => {
+      for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          if (rect.top <= 200 && rect.bottom >= 200) {
+            setVisibleSection(section);
+            break;
+          }
         }
-        return false;
-      });
-      
-      if (currentSection) {
-        setVisibleSection(currentSection);
       }
     };
 
@@ -69,7 +66,6 @@ export default function GuiaChalecosSeguridadArticle() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Datos para gráficos de visibilidad
   const visibilityChartData = {
     labels: ['Clase 1', 'Clase 2', 'Clase 3'],
     datasets: [{
@@ -93,27 +89,9 @@ export default function GuiaChalecosSeguridadArticle() {
           font: { family: "'Inter', sans-serif", size: 12 }
         }
       }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          callback: function(value: any) {
-            return value + ' m²';
-          }
-        }
-      }
     }
   };
 
-  // Función para manejar clicks en enlaces de Amazon/afiliados
-  const handleAffiliateClick = (productName: string, url: string) => {
-    const productId = generateTrackingId('product', productName);
-    trackAffiliateClick('mercadolibre', productId, productName, 'chaleco_seguridad');
-    window.open(url, '_blank');
-  };
-
-  // Preguntas frecuentes
   const faqs = [
     {
       question: '¿Qué significa que un chaleco sea "Clase 2" según ANSI?',
@@ -122,6 +100,22 @@ export default function GuiaChalecosSeguridadArticle() {
     {
       question: '¿Cuál es la diferencia entre un chaleco de poliéster y uno de gabardina?',
       answer: 'La principal diferencia radica en el balance entre ligereza/confort y durabilidad/resistencia. Un chaleco de poliéster es ligero, económico y a menudo se presenta en formato de malla, lo que lo hace muy transpirable e ideal para climas cálidos o húmedos en México. Es perfecto para tareas que no implican un alto desgaste físico del material. Por otro lado, un chaleco de gabardina, que usualmente es de 100% algodón o una mezcla de algodón-poliéster, es significativamente más grueso, pesado y resistente. Está diseñado para el uso rudo, soportando la abrasión y los enganches del trabajo diario en construcción o industria pesada, y a menudo se asocia con roles de supervisión por su apariencia más robusta y profesional.'
+    },
+    {
+      question: '¿Es obligatorio usar chalecos de seguridad en México?',
+      answer: 'Sí, en México el uso de chalecos de seguridad está regulado principalmente por la NOM-017-STPS-2008 (Equipo de protección personal) y complementado por normas internacionales como ANSI/ISEA 107. La obligatoriedad depende del sector y nivel de riesgo: es mandatorio en construcción, trabajos viales, aeropuertos, puertos, y cualquier actividad donde exista tráfico vehicular o maquinaria pesada. Las empresas que no proporcionen EPP adecuado enfrentan multas significativas de la STPS (Secretaría del Trabajo y Previsión Social). Además, muchos contratos gubernamentales y proyectos de infraestructura exigen certificación específica de los chalecos utilizados.'
+    },
+    {
+      question: '¿Cada cuánto tiempo debo cambiar mi chaleco de seguridad?',
+      answer: 'No existe una fecha de vencimiento fija, pero la efectividad se deteriora con el tiempo. Debe reemplazarse cuando: 1) El color fluorescente esté desvanecido (prueba: compáralo con uno nuevo bajo luz solar), 2) Las cintas reflectantes estén agrietadas, despegadas o hayan perdido brillo (prueba con linterna en oscuridad), 3) La tela tenga rasgaduras que comprometan la integridad, 4) Después de un accidente o enganche severo, 5) Si ha estado expuesto frecuentemente a químicos o altas temperaturas. En uso industrial intenso, típicamente duran 6-12 meses. Para uso ocasional o de oficina, pueden durar 2-3 años. La regla de oro: si dudas de su efectividad, reemplázalo. Tu seguridad no tiene precio.'
+    },
+    {
+      question: '¿Puedo lavar mi chaleco de seguridad en lavadora?',
+      answer: 'Sí, pero siguiendo ciertas precauciones para preservar las propiedades de alta visibilidad. Recomendaciones: 1) Usa agua fría o tibia (máximo 40°C), 2) Detergente suave sin blanqueador ni suavizante de telas, 3) Ciclo delicado o normal (evita centrifugado intenso), 4) Sécar al aire libre, nunca en secadora térmica, 5) No usar plancha sobre las cintas reflectantes, 6) Lavar por separado las primeras veces para evitar transferencia de color. Los chalecos de gabardina toleran mejor el lavado que los de malla. Si se lava incorrectamente, el color fluorescente se desvanece prematuramente y las cintas reflectantes pueden despegarse o agrietarse.'
+    },
+    {
+      question: '¿Qué diferencia hay entre cintas reflectantes textiles y microprismáticas?',
+      answer: 'Las cintas textiles (más comunes y económicas) utilizan microesferas de vidrio embebidas en una matriz adhesiva. Son adecuadas para la mayoría de aplicaciones, pero pierden efectividad cuando se ensucian o mojan. Las cintas microprismáticas (premium) usan prismas microscópicos de acrílico que actúan como espejos, ofreciendo reflexión superior, especialmente en ángulos amplios. Son más duraderas, mantienen efectividad aunque estén húmedas o ligeramente sucias, y son obligatorias en aplicaciones de muy alto riesgo. Para trabajo general, las textiles son suficientes. Para trabajo nocturno intenso, carreteras de alta velocidad o condiciones climáticas adversas, vale la pena invertir en microprismáticas.'
     },
     {
       question: '¿Puedo personalizar un chaleco con el logo de mi empresa?',
@@ -171,11 +165,6 @@ export default function GuiaChalecosSeguridadArticle() {
       'Bolsillos limitados en comparación con modelos brigadista.'
       ],
       availabilityNote: 'Alta disponibilidad en colores neón (Naranja/Amarillo).',
-      priceInfo: {
-        previous: '$150 MXN',
-        current: '$135 MXN',
-        note: 'Precio promedio detectado en Mercado Libre México (nov 2025)'
-      },
       theme: {
         gradient: 'from-amber-50 via-orange-50 to-yellow-50',
         border: 'border-amber-200',
@@ -219,11 +208,6 @@ export default function GuiaChalecosSeguridadArticle() {
       'Tallas suelen venir amplias para usar sobre ropa.'
       ],
       availabilityNote: 'Revisar guía de tallas antes de comprar.',
-      priceInfo: {
-        previous: '$320 MXN',
-        current: '$297 MXN',
-        note: 'Promedio histórico Mercado Libre México, actualizado a noviembre 2025'
-      },
       theme: {
         gradient: 'from-emerald-50 via-green-50 to-teal-50',
         border: 'border-emerald-200',
@@ -261,7 +245,8 @@ export default function GuiaChalecosSeguridadArticle() {
         'Excelente ventilación para climas húmedos o tareas de verano.',
         'Costo unitario accesible para compras masivas o programas de voluntariado.',
         'Velcros laterales que permiten compartir tallas entre diferentes usuarios.',
-        'Entrega rápida gracias a stock constante en Ciudad de México.','Extremadamente barato.',
+        'Entrega rápida gracias a stock constante en Ciudad de México.',
+        'Extremadamente barato.',
       'No ocupa espacio al guardarse.',
       'Variedad de colores para distinguir equipos.'
       ],
@@ -272,11 +257,6 @@ export default function GuiaChalecosSeguridadArticle() {
       'Cintas reflectantes básicas (no alto desempeño).'
       ],
       availabilityNote: 'Ideal para mantener inventario de emergencia o rotar cada temporada a bajo costo.',
-      priceInfo: {
-        previous: '$60 MXN',
-        current: '$57 MXN',
-        note: 'Precio ideal para mayoreo (nov 2025)'
-      },
       theme: {
         gradient: 'from-teal-50 via-cyan-50 to-sky-50',
         border: 'border-teal-200',
@@ -334,11 +314,6 @@ export default function GuiaChalecosSeguridadArticle() {
       'Requiere planchado para verse impecable.'
       ],
       availabilityNote: 'Modelo con alta disponibilidad, disponible en tallas CH a XL.',
-      priceInfo: {
-        previous: '$200 MXN',
-        current: '$190 MXN',
-        note: 'Excelente relación calidad-precio (nov 2025)'
-      },
       theme: {
         gradient: 'from-purple-50 via-violet-50 to-amber-50',
         border: 'border-purple-200',
@@ -380,21 +355,18 @@ export default function GuiaChalecosSeguridadArticle() {
       pros: [
         'Desempeño nocturno sobresaliente incluso con lluvia ligera.',
         'Refuerzos de cordura que extienden la vida útil en hombros y cuello.',
-        'El fondo fluorescente conserva su tono tras múltiples lavadas.','Muy resistente al uso diario.',
+        'El fondo fluorescente conserva su tono tras múltiples lavadas.',
+        'Muy resistente al uso diario.',
       'Fácil de lavar.',
       'Bolsillos funcionales.'
       ],
       cons: [
         'El recubrimiento repelente puede sentirse rígido las primeras semanas; se suaviza con el uso.',
-        'No incluye ventilación lateral, por lo que en climas muy cálidos conviene alternarlo.','Rigidez inicial de la tela.',
+        'No incluye ventilación lateral, por lo que en climas muy cálidos conviene alternarlo.',
+        'Rigidez inicial de la tela.',
       'Peso medio.'
       ],
       availabilityNote: 'Verificar colores disponibles en la publicación.',
-      priceInfo: {
-        previous: '$90 MXN',
-        current: '$84 MXN',
-        note: 'Precio competitivo (nov 2025)'
-      },
       theme: {
         gradient: 'from-orange-50 via-amber-50 to-red-50',
         border: 'border-orange-200',
@@ -449,11 +421,6 @@ export default function GuiaChalecosSeguridadArticle() {
       'Tallas americanas (suelen ser más grandes que las nacionales).'
       ],
       availabilityNote: 'Producto importado, stock limitado.',
-      priceInfo: {
-        previous: '$1400 MXN',
-        current: '$1215 MXN',
-        note: 'Precio Premium por marca importada (nov 2025)'
-      },
       theme: {
         gradient: 'from-slate-50 via-blue-50 to-sky-50',
         border: 'border-blue-200',
@@ -498,11 +465,6 @@ export default function GuiaChalecosSeguridadArticle() {
         'Es más pesado que un chaleco de malla simple.'
       ],
       availabilityNote: 'Stock constante, verifique colores disponibles (Azul, Naranja, Kaki, etc).',
-      priceInfo: {
-        previous: '$550 MXN',
-        current: '$522 MXN',
-        note: 'Precio estimado promedio para modelo Gabardina 100% Algodón (nov 2025)'
-      },
       theme: {
         gradient: 'from-blue-50 via-indigo-50 to-slate-100',
         border: 'border-indigo-200',
@@ -512,227 +474,305 @@ export default function GuiaChalecosSeguridadArticle() {
     }
   ];
 
+  const relatedArticles = [
+    {
+      id: '1',
+      title: 'Los Mejores Arneses de Seguridad para Trabajo en Altura 2025',
+      excerpt: 'Guía definitiva sobre normativas mexicanas NOM-009-STPS y los mejores productos disponibles en el mercado para trabajo en altura.',
+      category: 'EPP',
+      publishDate: '4 Oct 2025',
+      readTime: '25 min',
+      slug: 'mejores-arneses-seguridad-trabajo-altura',
+      isPopular: true
+    },
+    {
+      id: '2',
+      title: 'El Mejor Calzado de Seguridad Industrial para México 2025',
+      excerpt: 'Análisis completo de normativas NOM-113 y los mejores productos del mercado mexicano para protección de pies.',
+      category: 'Calzado',
+      publishDate: '3 Oct 2025',
+      readTime: '25 min',
+      slug: 'mejor-calzado-industrial-botas-seguridad',
+      isPopular: true
+    },
+    {
+      id: '3',
+      title: 'Guía Completa: Los Mejores Overoles de Trabajo de 2025',
+      excerpt: 'Ropa de protección integral para diferentes industrias. Materiales, ajustes y características de seguridad evaluadas.',
+      category: 'EPP',
+      publishDate: '20 Ago 2025',
+      readTime: '20 min',
+      slug: 'guia-completa-mejores-overoles-trabajo-2025'
+    },
+    {
+      id: '4',
+      title: '¿Ya Conocías Estos Lentes de Protección Innovadores?',
+      excerpt: 'Descubre las últimas innovaciones en protección ocular. Tecnología antiempañante, UV y resistencia a impactos.',
+      category: 'Seguridad',
+      publishDate: '16 Ago 2025',
+      readTime: '15 min',
+      slug: 'lentes-proteccion-innovadores'
+    },
+    {
+      id: '5',
+      title: 'Guía NOM-009-STPS-2011: Trabajos en Alturas',
+      excerpt: 'Los 7 puntos clave que todo supervisor debe dominar para garantizar la seguridad en trabajos de altura.',
+      category: 'Seguridad Industrial',
+      publishDate: '1 Oct 2025',
+      readTime: '15 min',
+      slug: 'guia-nom-009-stps-2011-trabajos-altura'
+    },
+    {
+      id: '6',
+      title: 'Los Mejores Botiquines de Emergencia para el Lugar de Trabajo',
+      excerpt: 'Equipos de primeros auxilios especializados para diferentes entornos laborales. Normativas y contenido recomendado.',
+      category: 'Primeros Auxilios',
+      publishDate: '22 Ago 2025',
+      readTime: '18 min',
+      slug: 'mejores-botiquines-emergencia-trabajo'
+    }
+  ];
+
+  const handleAffiliateClick = (productName: string, url: string) => {
+    const productId = generateTrackingId('product', productName);
+    trackAffiliateClick('mercadolibre', productId, productName, 'chaleco_seguridad');
+    window.open(url, '_blank');
+  };
+
   return (
     <BlogLayout>
       <div className="min-h-screen">
-        {/* Barra de progreso de lectura mejorada */}
-        <motion.div 
-          className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 z-50 origin-left shadow-lg"
-          style={{ scaleX: scrollProgress / 100 }}
-          animate={{ 
-            boxShadow: [
-              "0 0 10px rgba(251, 191, 36, 0.5)",
-              "0 0 20px rgba(251, 191, 36, 0.8)",
-              "0 0 10px rgba(251, 191, 36, 0.5)"
-            ]
-          }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
-
-        {/* Navegación flotante */}
-        <motion.div
-          className="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 2, duration: 0.6 }}
-        >
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-2 border border-gray-200">
-            {[
-              { id: 'header', icon: '🏠', label: 'Inicio' },
-              { id: 'caracteristicas', icon: '🔍', label: 'Características' },
-              { id: 'productos', icon: '🛒', label: 'Productos' },
-              { id: 'faq', icon: '❓', label: 'FAQ' },
-              { id: 'conclusion', icon: '✅', label: 'Conclusión' }
-            ].map((section, index) => (
-              <motion.button
-                key={section.id}
-                className={`w-12 h-12 rounded-xl mb-2 last:mb-0 flex items-center justify-center text-lg transition-all ${
-                  visibleSection === section.id 
-                    ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-lg scale-110' 
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
-                }`}
-                onClick={() => document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' })}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                title={section.label}
-              >
-                {section.icon}
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Hero Section */}
+        {/* Hero Section con partículas animadas */}
         <section className="bg-gradient-to-br from-orange-900 via-yellow-900 to-green-900 text-white py-8 sm:py-10 md:py-12 sm:py-10 sm:py-12 md:py-16 md:py-20 relative overflow-hidden">
-          {/* Sistema masivo de partículas - Tema seguridad/chalecos */}
+          {/* Sistema masivo de partículas extendido por toda la sección */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {/* Partículas grandes flotantes (100 partículas) */}
-            {Array.from({ length: 100 }, (_, i) => (
+            {/* Partículas grandes flotantes (80 partículas - distribuidas por toda la sección) */}
+            {Array.from({ length: 80 }, (_, i) => (
               <motion.div
-                key={`hero-large-${i}`}
+                key={`section-large-particle-${i}`}
                 className="absolute rounded-full opacity-70"
                 style={{
-                  width: 4 + (i % 7),
-                  height: 4 + (i % 7),
-                  backgroundColor: `hsl(${30 + (i * 10)}, 85%, ${65 + (i % 25)}%)`,
-                  left: `${(i * 2.3) % 100}%`,
-                  top: `${(i * 3.9) % 100}%`,
+                  width: 4 + (i % 6),
+                  height: 4 + (i % 6),
+                  backgroundColor: `hsl(${45 + (i * 8)}, 85%, ${65 + (i % 25)}%)`,
+                  left: `${(i * 2.5) % 100}%`,
+                  top: `${(i * 3.7) % 100}%`,
                 }}
                 animate={{
-                  x: [0, 110 + (i % 60), -90 + (i % 40), 0],
-                  y: [0, -130 + (i % 50), 110 + (i % 45), 0],
-                  scale: [0.3, 1.3, 0.4, 1],
-                  opacity: [0.2, 0.9, 0.3, 0.7],
-                  rotate: [0, 190 + (i % 180), 360]
+                  x: [0, 100 + (i % 50), -80 + (i % 30), 0],
+                  y: [0, -120 + (i % 40), 100 + (i % 35), 0],
+                  scale: [0.3, 1.2, 0.5, 1],
+                  opacity: [0.2, 0.8, 0.3, 0.7],
+                  rotate: [0, 180 + (i % 180), 360]
                 }}
                 transition={{
-                  duration: 13 + (i % 9),
+                  duration: 12 + (i % 8),
                   repeat: Infinity,
-                  delay: i * 0.25,
+                  delay: i * 0.3,
                   ease: "easeInOut"
                 }}
               />
             ))}
 
-            {/* Símbolos de seguridad flotantes (25 símbolos) */}
-            {Array.from({ length: 25 }, (_, i) => (
+            {/* Partículas medianas rápidas (120 partículas) */}
+            {Array.from({ length: 120 }, (_, i) => (
               <motion.div
-                key={`symbol-${i}`}
-                className="absolute text-white opacity-30"
+                key={`section-medium-particle-${i}`}
+                className="absolute rounded-full opacity-60"
                 style={{
-                  fontSize: `${14 + (i % 10)}px`,
-                  left: `${(i * 4) % 100}%`,
-                  top: `${(i * 6) % 100}%`,
+                  width: 2 + (i % 4),
+                  height: 2 + (i % 4),
+                  backgroundColor: `hsl(${200 + (i * 4)}, 75%, ${70 + (i % 20)}%)`,
+                  left: `${(i * 1.67) % 100}%`,
+                  top: `${(i * 2.33) % 100}%`,
                 }}
                 animate={{
-                  y: [0, -60, 0],
-                  rotate: [0, 360],
-                  opacity: [0.2, 0.7, 0.2]
+                  x: [0, 60 + (i % 30), -40 + (i % 20)],
+                  y: [0, -80 + (i % 25), 60 + (i % 30)],
+                  scale: [0, 1, 0.2, 1, 0],
+                  opacity: [0, 0.9, 0.1, 0.6, 0]
                 }}
                 transition={{
-                  duration: 11 + (i % 6),
+                  duration: 6 + (i % 4),
                   repeat: Infinity,
-                  delay: i * 0.6,
-                  ease: "easeInOut"
+                  delay: i * 0.15,
+                  ease: "linear"
                 }}
-              >
-                {i % 4 === 0 ? '🦺' : 
-                 i % 4 === 1 ? '⚡' : 
-                 i % 4 === 2 ? '👁️' :
-                 '✨'}
-              </motion.div>
+              />
             ))}
 
-            {/* Ondas de visibilidad (40 ondas) */}
-            {Array.from({ length: 40 }, (_, i) => (
+            {/* Micropartículas súper rápidas (160 partículas) */}
+            {Array.from({ length: 160 }, (_, i) => (
               <motion.div
-                key={`wave-${i}`}
-                className="absolute border-2 border-yellow-400 rounded-full opacity-30"
+                key={`section-micro-particle-${i}`}
+                className="absolute rounded-full opacity-50"
                 style={{
-                  width: 70,
-                  height: 70,
-                  left: `${(i * 5.5) % 100}%`,
-                  top: `${(i * 7.5) % 100}%`,
+                  width: 1 + (i % 2),
+                  height: 1 + (i % 2),
+                  backgroundColor: `hsl(${280 + (i * 3)}, 80%, ${75 + (i % 15)}%)`,
+                  left: `${(i * 1.25) % 100}%`,
+                  top: `${(i * 1.75) % 100}%`,
                 }}
                 animate={{
-                  scale: [0, 3.5, 0],
-                  opacity: [0.6, 0, 0.4]
+                  x: [0, 30 + (i % 15), -20 + (i % 10)],
+                  y: [0, -40 + (i % 12), 30 + (i % 15)],
+                  scale: [0, 0.8, 0.1, 1, 0],
+                  opacity: [0, 0.7, 0.05, 0.5, 0],
+                  rotate: [0, 360 + (i % 180)]
                 }}
                 transition={{
-                  duration: 7,
+                  duration: 3 + (i % 2),
+                  repeat: Infinity,
+                  delay: i * 0.05,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+
+            {/* Líneas conectoras con gradientes (40 líneas) */}
+            {Array.from({ length: 40 }, (_, i) => (
+              <motion.div
+                key={`section-line-particle-${i}`}
+                className="absolute h-px bg-gradient-to-r from-transparent via-yellow-300 to-transparent opacity-40"
+                style={{
+                  width: 80 + (i * 15),
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 4.5) % 100}%`,
+                  transformOrigin: 'center center'
+                }}
+                animate={{
+                  scale: [0.2, 1.5, 0.3, 1],
+                  rotate: [0, 360 + (i % 90)],
+                  opacity: [0.1, 0.6, 0.05, 0.4]
+                }}
+                transition={{
+                  duration: 10 + (i % 5),
                   repeat: Infinity,
                   delay: i * 0.5,
-                  ease: "easeOut"
+                  ease: "easeInOut"
                 }}
               />
             ))}
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              transition={{ duration: 1 }}
             >
-              <motion.div
-                className="inline-flex items-center gap-2 bg-orange-600/20 border border-orange-400/30 rounded-full px-4 py-2 text-orange-100 text-sm font-medium mb-6"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                🦺 Equipo de Protección Personal
-              </motion.div>
-              
               <motion.h1 
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+                className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl sm:text-4xl md:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent"
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  backgroundSize: "200% 200%"
+                }}
               >
-                Los Mejores Chalecos de Seguridad Reflectantes 2025
+                Los 7 Mejores Chalecos de Seguridad 2025
               </motion.h1>
-              
               <motion.p 
-                className="text-xl text-orange-100 mb-4 sm:mb-6 md:mb-8"
+                className="text-xl md:text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 md:mb-8 text-orange-100 max-w-4xl mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ duration: 1.2, delay: 0.5 }}
               >
-                📋 Guía definitiva: Normativas ANSI, ciencia de la visibilidad y análisis de los 7 mejores productos
+                Guía completa para elegir el chaleco de alta visibilidad perfecto según tu trabajo y presupuesto en México.
               </motion.p>
               
               <motion.div 
-                className="flex items-center justify-center gap-3 text-sm text-orange-200"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
+                transition={{ duration: 1, delay: 0.7 }}
               >
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  8 de Noviembre, 2025
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <Calendar className="w-5 h-5 text-yellow-300" />
+                  <span className="text-sm font-medium">Actualizado: Enero 2025</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
-                  25 min de lectura
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <Clock className="w-5 h-5 text-green-300" />
+                  <span className="text-sm font-medium">Lectura: 15-20 min</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <Shield className="w-5 h-5 text-orange-300" />
+                  <span className="text-sm font-medium">Normativa ANSI</span>
                 </div>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* Contenido Principal */}
-        <div className="bg-gradient-to-br from-slate-50 via-orange-50 to-yellow-50 relative overflow-hidden min-h-screen">
-          {/* Fondo animado para el contenido */}
+        {/* Contenido principal */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50"></div>
+          
+          {/* Sistema masivo de partículas mejorado para el artículo */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {/* Partículas de fondo */}
-            {Array.from({ length: 120 }).map((_, i) => (
+            {/* Partículas flotantes principales (120 partículas) */}
+            {Array.from({ length: 120 }, (_, i) => (
               <motion.div
-                key={`content-particle-${i}`}
+                key={`main-particle-${i}`}
                 className="absolute rounded-full"
                 style={{
-                  width: `${4 + (i % 8)}px`,
-                  height: `${4 + (i % 8)}px`,
-                  background: `hsl(${30 + (i * 12) % 80}, 60%, ${50 + (i % 30)}%)`,
-                  left: `${(i * 11) % 100}%`,
-                  top: `${(i * 19) % 100}%`,
+                  width: `${3 + (i % 8)}px`,
+                  height: `${3 + (i % 8)}px`,
+                  backgroundColor: `hsl(${45 + (i * 3)}, 65%, ${65 + (i % 20)}%)`,
+                  left: `${(i * 8.33) % 100}%`,
+                  top: `${(i * 12.5) % 100}%`,
+                  opacity: 0.4 + (i % 4) * 0.1,
                 }}
                 animate={{
-                  y: [0, -70, 0],
-                  x: [0, 50, -30, 0],
-                  opacity: [0.3, 0.9, 0.3],
-                  scale: [0.7, 1.5, 0.7],
+                  y: [0, -25, 0],
+                  x: [0, 12, 0],
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 360],
                 }}
                 transition={{
-                  duration: 9 + (i % 9),
+                  duration: 18 + (i % 12),
                   repeat: Infinity,
-                  delay: i * 0.04,
                   ease: "easeInOut",
+                  delay: i * 0.05,
+                }}
+              />
+            ))}
+            
+            {/* Partículas medianas orbitales (80 partículas) */}
+            {Array.from({ length: 80 }, (_, i) => (
+              <motion.div
+                key={`orbital-particle-${i}`}
+                className="absolute rounded-full"
+                style={{
+                  width: `${6 + (i % 5)}px`,
+                  height: `${6 + (i % 5)}px`,
+                  backgroundColor: `hsl(${25 + (i * 4)}, 70%, ${55 + (i % 25)}%)`,
+                  left: `${(i * 12.5) % 100}%`,
+                  top: `${(i * 18.75) % 100}%`,
+                  opacity: 0.25,
+                }}
+                animate={{
+                  y: [0, 40, 0],
+                  x: [0, -15, 0],
+                  scale: [1.2, 0.8, 1.2],
+                  rotate: [0, -360],
+                }}
+                transition={{
+                  duration: 25 + (i % 15),
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.1,
                 }}
               />
             ))}
           </div>
 
+          {/* Introducción completa sobre normativas ANSI */}
           <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="w-full">
@@ -742,1278 +782,910 @@ export default function GuiaChalecosSeguridadArticle() {
                   transition={{ duration: 0.8 }}
                   className="prose prose-lg max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-white/50"
                 >
-                  {/* Introducción del artículo */}
-                  <motion.div 
-                    id="header"
-                    className="text-center mb-12 relative"
-                    initial={{ opacity: 0, y: 50 }}
+                  {/* Header del artículo */}
+                  <motion.div
+                    className="text-center mb-8 sm:mb-10 md:mb-12"
+                    initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ delay: 0.3 }}
                   >
-                    <motion.div
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ delay: 0.3, duration: 0.6 }}
-                    >
-                      <Badge className="mb-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white border-0 px-4 py-2 text-sm font-semibold shadow-lg">
-                        <motion.div
-                          animate={{ rotate: [0, 360] }}
-                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                          className="mr-2"
-                        >
-                          <Shield className="h-4 w-4" />
-                        </motion.div>
-                        Guía Técnica Especializada
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                      🦺 Los 7 Mejores Chalecos de Seguridad para 2025
+                    </h1>
+                    <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+                      La guía definitiva para elegir el chaleco de alta visibilidad perfecto según tu trabajo, presupuesto y las normativas mexicanas de seguridad industrial.
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-3 justify-center mb-6 sm:mb-8">
+                      <Badge className="bg-orange-100 text-orange-800 px-4 py-2 text-sm font-medium">
+                        📋 Normativa ANSI/ISEA 107
                       </Badge>
-                    </motion.div>
+                      <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-sm font-medium">
+                        🏗️ Construcción e Industria
+                      </Badge>
+                      <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm font-medium">
+                        🇲🇽 Mercado Mexicano
+                      </Badge>
+                    </div>
 
-                    <motion.h2 
-                      className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-orange-600 to-yellow-600 bg-clip-text text-transparent mb-6 leading-tight"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5, duration: 0.8 }}
-                    >
-                      La Ciencia de la{' '}
-                      <motion.span
-                        className="inline-block"
-                        animate={{ 
-                          textShadow: [
-                            "0 0 10px rgba(251, 191, 36, 0.5)",
-                            "0 0 20px rgba(251, 191, 36, 0.8)",
-                            "0 0 10px rgba(251, 191, 36, 0.5)"
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        Alta Visibilidad
-                      </motion.span>
-                    </motion.h2>
-
-                    <motion.p 
-                      className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.7, duration: 0.6 }}
-                    >
-                      Un análisis técnico completo de normativas ANSI, tecnología reflectante 
-                      y criterios de selección para chalecos de seguridad profesionales
-                    </motion.p>
+                    <div className="flex items-center justify-center gap-4 sm:gap-6 text-sm text-gray-600">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>Actualizado: Enero 2025</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        <span>Lectura: 18-22 min</span>
+                      </div>
+                    </div>
                   </motion.div>
 
-        {/* Introducción mejorada con estadísticas */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-        >
-          {/* Clasificación de Visibilidad */}
-          <Card className="mb-8 border-2 border-orange-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-orange-50 to-yellow-50">
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Eye className="h-6 w-6 text-orange-600" />
-                Clasificación de Visibilidad: La Norma ANSI/ISEA 107
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="space-y-6">
-                <p className="text-gray-700 leading-relaxed">
-                  La norma más importante que rige la ropa de alta visibilidad es la <strong>ANSI/ISEA 107</strong>. 
-                  Este es un estándar desarrollado por el Instituto Nacional Estadounidense de Estándares (ANSI) 
-                  y la Asociación Internacional de Equipos de Seguridad (ISEA) que especifica los requisitos de 
-                  diseño, materiales y rendimiento de las prendas de alta visibilidad. Aunque es una norma 
-                  estadounidense, es la referencia de facto para la calidad y seguridad en México.
-                </p>
-
-                {/* Tipos de Chalecos */}
-                <div className="grid md:grid-cols-3 gap-4">
-                  <Card className="border-2 border-blue-200">
-                    <CardHeader className="bg-blue-50">
-                      <CardTitle className="text-lg">Tipo O (Off-Road)</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <p className="text-sm text-gray-600 mb-3">
-                        Para trabajadores en entornos controlados, lejos de la vía pública y con tráfico 
-                        de vehículos que no supera los 40 km/h.
-                      </p>
-                      <div className="flex items-start gap-2 text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>Almacenes, minería subterránea, estacionamientos</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-2 border-green-200">
-                    <CardHeader className="bg-green-50">
-                      <CardTitle className="text-lg">Tipo R (Roadway)</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <p className="text-sm text-gray-600 mb-3">
-                        La categoría más común y relevante para la mayoría de los usuarios en México. 
-                        Diseñada para trabajadores expuestos al tráfico vehicular.
-                      </p>
-                      <div className="flex items-start gap-2 text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>Carreteras, construcción, maquinaria pesada</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-2 border-purple-200">
-                    <CardHeader className="bg-purple-50">
-                      <CardTitle className="text-lg">Tipo P (Public Safety)</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <p className="text-sm text-gray-600 mb-3">
-                        Específica para personal de emergencia y seguridad pública que requieren 
-                        visibilidad superior.
-                      </p>
-                      <div className="flex items-start gap-2 text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>Policías, bomberos, paramédicos</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Clases de Rendimiento */}
-                <div className="mt-8">
-                  <h4 className="text-xl font-semibold mb-4 text-gray-900">Clases de Rendimiento</h4>
-                  
-                  <div className="space-y-4">
-                    <Card className="border-l-4 border-l-yellow-400">
-                      <CardContent className="pt-6">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0">
-                            <Badge className="bg-yellow-100 text-yellow-800">Clase 1</Badge>
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-gray-900 mb-2">Nivel Más Bajo de Visibilidad</h5>
-                            <p className="text-gray-600 text-sm mb-3">
-                              Requiere una cantidad mínima de material fluorescente (0.14 m²) y material 
-                              reflectante (0.10 m²). Adecuada únicamente para entornos de bajo riesgo Tipo O, 
-                              donde los trabajadores están bien separados del tráfico lento.
-                            </p>
-                            <div className="bg-yellow-50 p-3 rounded-lg">
-                              <p className="text-sm text-yellow-800">
-                                <AlertTriangle className="h-4 w-4 inline mr-1" />
-                                No recomendado para la mayoría de aplicaciones industriales en México.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-l-4 border-l-orange-500">
-                      <CardContent className="pt-6">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0">
-                            <Badge className="bg-orange-100 text-orange-800">Clase 2</Badge>
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-gray-900 mb-2">Estándar de Oro para México</h5>
-                            <p className="text-gray-600 text-sm mb-3">
-                              Ofrece una visibilidad muy superior a la Clase 1 y es obligatoria para 
-                              trabajadores expuestos a tráfico con velocidades entre 40 km/h y 80 km/h. 
-                              Requiere mayor cantidad de material de fondo fluorescente (0.50 m²) y material 
-                              retrorreflectante (0.13 m²).
-                            </p>
-                            <div className="bg-orange-50 p-3 rounded-lg">
-                              <p className="text-sm text-orange-800">
-                                <CheckCircle className="h-4 w-4 inline mr-1" />
-                                Personal de construcción, servicios públicos, aeropuertos y directores de 
-                                tráfico deben usar, como mínimo, prendas de Clase 2.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-l-4 border-l-red-500">
-                      <CardContent className="pt-6">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0">
-                            <Badge className="bg-red-100 text-red-800">Clase 3</Badge>
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-gray-900 mb-2">Nivel Más Alto de Visibilidad</h5>
-                            <p className="text-gray-600 text-sm mb-3">
-                              Indispensable para trabajadores en entornos de muy alto riesgo, como carreteras 
-                              con velocidades superiores a 80 km/h, condiciones climáticas inclementes o 
-                              trabajos nocturnos complejos.
-                            </p>
-                            <div className="bg-red-50 p-3 rounded-lg">
-                              <p className="text-sm text-red-800">
-                                <Info className="h-4 w-4 inline mr-1" />
-                                Para cumplir con la Clase 3, la prenda debe tener material reflectante en 
-                                las mangas y pantalones, garantizando una silueta humana completa y 
-                                visibilidad de 360 grados. Un chaleco por sí solo no puede ser Clase 3.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-6">
-                  <div className="flex items-start gap-3">
-                    <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-blue-900 mb-2">Importante para Compradores</h4>
-                      <p className="text-blue-800 text-sm leading-relaxed">
-                        Al analizar las plataformas de comercio electrónico en México, existe una tendencia 
-                        clara: muchos chalecos robustos tipo "Brigadista" de gabardina se comercializan 
-                        destacando su durabilidad y cantidad de bolsillos, pero omiten cualquier mención 
-                        a su certificación o clase de visibilidad. Es fundamental que los compradores 
-                        busquen activamente la etiqueta que certifique el cumplimiento con 
-                        <strong> "ANSI/ISEA 107 Tipo R Clase 2"</strong> como mínimo para la mayoría de 
-                        los trabajos de riesgo.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Materiales y Construcción */}
-          <Card className="mb-8 border-2 border-green-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50">
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Sparkles className="h-6 w-6 text-green-600" />
-                Materiales y Construcción: Durabilidad vs. Comodidad Climática
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="space-y-6">
-                <p className="text-gray-700 leading-relaxed">
-                  El material del chaleco no solo define su durabilidad, sino también la comodidad del 
-                  trabajador, un factor clave para la seguridad y la productividad, especialmente en los 
-                  diversos climas de México.
-                </p>
-
-                {/* Comparación Poliéster vs Gabardina */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Card className="border-2 border-blue-200">
-                    <CardHeader className="bg-blue-50">
-                      <CardTitle className="text-lg flex items-center gap-2">
-                        <Sun className="h-5 w-5 text-blue-600" />
-                        Poliéster
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <p className="text-sm text-gray-600 mb-4">
-                        Es el tejido más utilizado en chalecos de seguridad por su ligereza, bajo costo, 
-                        resistencia a las arrugas y secado rápido. Su naturaleza sintética le confiere un 
-                        brillo que realza los colores fluorescentes, haciéndolo ideal para la alta visibilidad.
-                      </p>
-                      <div className="space-y-2">
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Peso ligero y transpirable</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Económico</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Ideal para climas cálidos</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Secado rápido</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-2 border-brown-200">
-                    <CardHeader className="bg-amber-50">
-                      <CardTitle className="text-lg flex items-center gap-2">
-                        <Shield className="h-5 w-5 text-amber-700" />
-                        Gabardina
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <p className="text-sm text-gray-600 mb-4">
-                        Típicamente una mezcla de algodón y poliéster o 100% algodón, la gabardina es 
-                        sinónimo de resistencia y uso rudo. Es un tejido más grueso, pesado y notablemente 
-                        más duradero, ideal para entornos de trabajo exigentes.
-                      </p>
-                      <div className="space-y-2">
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Durabilidad superior</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Resistente a abrasión y enganches</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Apariencia profesional</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">Ideal para supervisores</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Malla vs Tela Sólida */}
-                <div className="mt-8">
-                  <h4 className="text-xl font-semibold mb-4 text-gray-900">Malla vs. Tela Sólida</h4>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <Card className="border-2 border-cyan-200">
-                      <CardHeader className="bg-cyan-50">
-                        <CardTitle className="text-lg">Malla (de Poliéster)</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-4">
-                        <p className="text-sm text-gray-600 mb-3">
-                          La principal ventaja de la construcción en malla es su excepcional transpirabilidad. 
-                          El tejido abierto permite una circulación de aire constante, lo que reduce 
-                          significativamente el estrés por calor y la fatiga en los climas cálidos y húmedos 
-                          predominantes en gran parte de México.
-                        </p>
-                        <div className="bg-cyan-50 p-3 rounded-lg">
-                          <p className="text-sm text-cyan-800">
-                            <CheckCircle className="h-4 w-4 inline mr-1" />
-                            Chalecos muy ligeros y cómodos, ideales para largas jornadas bajo el sol.
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-2 border-slate-200">
-                      <CardHeader className="bg-slate-50">
-                        <CardTitle className="text-lg">Tela Sólida</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-4">
-                        <p className="text-sm text-gray-600 mb-3">
-                          Ofrece una mayor durabilidad estructural y protección contra el viento. La 
-                          superficie sólida es más resistente a los desgarros y proporciona una base más 
-                          estable para múltiples bolsillos cargados con herramientas o dispositivos.
-                        </p>
-                        <div className="bg-slate-50 p-3 rounded-lg">
-                          <p className="text-sm text-slate-800">
-                            <AlertTriangle className="h-4 w-4 inline mr-1" />
-                            Su capacidad para retener el calor es mayor, lo que puede ser una desventaja 
-                            en climas muy calurosos.
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Funcionalidad y Diseño Ergonómico */}
-          <Card className="mb-8 border-2 border-purple-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50">
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Zap className="h-6 w-6 text-purple-600" />
-                Funcionalidad y Diseño Ergonómico
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="space-y-6">
-                <p className="text-gray-700 leading-relaxed">
-                  Un chaleco de seguridad moderno es una herramienta de trabajo portátil. La disposición 
-                  y el tipo de bolsillos, así como los sistemas de cierre y ajuste, son factores 
-                  determinantes en su practicidad diaria.
-                </p>
-
-                {/* Funcionalidad de Bolsillos */}
-                <div>
-                  <h4 className="text-xl font-semibold mb-4 text-gray-900">Funcionalidad de Bolsillos</h4>
-                  <p className="text-gray-600 mb-4">
-                    La demanda en México muestra una alta valoración por los chalecos multibolsillos, 
-                    que permiten al trabajador llevar consigo sus herramientas y dispositivos de forma 
-                    organizada y accesible.
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-semibold text-gray-900 mb-1">Bolsillo Transparente</h5>
-                        <p className="text-sm text-gray-600">
-                          Para identificación (porta-gafete), esencial para el acceso a zonas de trabajo 
-                          controladas.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-semibold text-gray-900 mb-1">Bolsillos para Radio/Celular</h5>
-                        <p className="text-sm text-gray-600">
-                          Diseñados con las dimensiones adecuadas para mantener los dispositivos de 
-                          comunicación seguros.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-semibold text-gray-900 mb-1">Bolsillos Frontales Tipo Cargo</h5>
-                        <p className="text-sm text-gray-600">
-                          Bolsas amplias, a menudo con solapa y cierre de velcro o cremallera, para 
-                          guardar herramientas, guantes o notas.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h5 className="font-semibold text-gray-900 mb-1">Bolsillo Trasero para Planos</h5>
-                        <p className="text-sm text-gray-600">
-                          Una característica distintiva de los chalecos tipo "Brigadista", gran bolsa en 
-                          la espalda para llevar documentos, planos o tabletas.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Tipos de Cierre */}
-                <div>
-                  <h4 className="text-xl font-semibold mb-4 text-gray-900">Tipo de Cierre</h4>
-                  
-                  <div className="space-y-3">
-                    <Card className="border-l-4 border-l-blue-500">
-                      <CardContent className="pt-4">
-                        <h5 className="font-semibold text-gray-900 mb-2">Cremallera (Zipper)</h5>
-                        <p className="text-sm text-gray-600">
-                          Ofrece un cierre más seguro y es generalmente más duradero, preferido para el 
-                          uso rudo y diario. Las cremalleras de nylon o plástico reforzado son comunes 
-                          y resistentes.
-                        </p>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-l-4 border-l-purple-500">
-                      <CardContent className="pt-4">
-                        <h5 className="font-semibold text-gray-900 mb-2">Velcro</h5>
-                        <p className="text-sm text-gray-600 mb-2">
-                          Permite ponerse y quitarse el chaleco con gran rapidez. Algunos diseños incorporan 
-                          velcro en los hombros y costados para una función de seguridad "breakaway" 
-                          (desprendible).
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-        </motion.div>
-
-        {/* Productos Recomendados - Sección Mejorada */}
-        <motion.section 
-          id="productos"
-          className="mb-20 relative"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Fondo decorativo */}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50 rounded-3xl -z-10"></div>
-          
-          <div className="relative p-8">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <motion.h2 
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-4"
-                whileHover={{ scale: 1.02 }}
-              >
-                <motion.div 
-                  className="p-3 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl shadow-lg"
-                  animate={{ 
-                    rotate: [0, 10, -10, 0],
-                    scale: [1, 1.1, 1]
-                  }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                >
-                  <ShoppingCart className="h-8 w-8 text-white" />
-                </motion.div>
-                Los 7 Chalecos{' '}
-                <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                  Más Recomendados
-                </span>
-              </motion.h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-                Selección experta basada en{' '}
-                <span className="font-semibold text-orange-600">calidad</span>, 
-                <span className="font-semibold text-green-600"> durabilidad</span> y{' '}
-                <span className="font-semibold text-blue-600">precio</span>
-              </p>
-              
-              <motion.div
-                className="max-w-3xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                <p className="text-lg text-gray-700 leading-relaxed text-center">
-                  Después de analizar más de <span className="font-bold text-orange-600">50 modelos diferentes</span> disponibles 
-                  en el mercado mexicano, evaluar cientos de reseñas de usuarios reales y considerar factores como 
-                  disponibilidad, precio, certificaciones y experiencia de uso en campo, hemos seleccionado estos 
-                  <span className="font-bold text-green-600"> 7 chalecos excepcionales</span> que representan lo mejor 
-                  en cada categoría de precio y aplicación específica.
-                </p>
-              </motion.div>
-            </motion.div>
-
-            {/* Información contextual antes de los productos */}
-            <motion.div
-              className="mb-12 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-orange-200">
-                <div className="grid md:grid-cols-2 gap-8 mb-8">
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3, duration: 0.6 }}
+                  {/* Introducción completa */}
+                  <motion.section
+                    className="mb-8 sm:mb-10 md:mb-12"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.5 }}
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-orange-100 rounded-lg">
-                        <Shield className="h-6 w-6 text-orange-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">Criterios de Selección</h3>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Cada chaleco ha sido evaluado bajo estrictos criterios técnicos y de usabilidad, 
-                      considerando las condiciones específicas del mercado mexicano y las necesidades 
-                      de diversos sectores industriales.
-                    </p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        Cumplimiento de normativas ANSI/ISEA 107
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        Disponibilidad y precio en México
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        Valoraciones y experiencia de usuarios
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        Durabilidad en condiciones climáticas extremas
-                      </li>
-                    </ul>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-blue-100 rounded-lg">
-                        <TrendingUp className="h-6 w-6 text-blue-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">Análisis de Mercado</h3>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Los precios y disponibilidad han sido verificados en Mercado Libre México, 
-                      la plataforma líder de e-commerce, garantizando accesibilidad y confiabilidad 
-                      en las compras.
-                    </p>
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-blue-900 mb-2">Rango de Precios</h4>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-blue-600 font-medium">Económicos:</span>
-                          <br />$280 - $420
+                    <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-6 sm:p-8 border-l-4 border-orange-400 mb-8">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-orange-100 rounded-xl">
+                          <Shield className="w-8 h-8 text-orange-600" />
                         </div>
                         <div>
-                          <span className="text-blue-600 font-medium">Premium:</span>
-                          <br />$680 - $1,200
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Metodología de evaluación */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.7, duration: 0.6 }}
-                  className="border-t border-gray-200 pt-6"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-green-100 rounded-lg">
-                      <Star className="h-6 w-6 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">Metodología de Evaluación</h3>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-2xl font-bold text-orange-600 mb-1">40%</div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Calidad Técnica</div>
-                      <div className="text-xs text-gray-600">Materiales, certificaciones, durabilidad</div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-2xl font-bold text-green-600 mb-1">35%</div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Relación Precio-Valor</div>
-                      <div className="text-xs text-gray-600">Costo-beneficio, accesibilidad</div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-600 mb-1">25%</div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Experiencia Usuario</div>
-                      <div className="text-xs text-gray-600">Comodidad, funcionalidad, reseñas</div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-
-            <div className="space-y-12">
-              {recommendedProducts.map((product, index) => (
-                <motion.article
-                  key={product.id}
-                  className={`relative overflow-hidden rounded-3xl border-2 ${product.theme.border} bg-gradient-to-br ${product.theme.gradient} p-6 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)]`}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
-                >
-                  <div className="absolute inset-y-0 right-0 w-1/3 bg-white/40 blur-3xl -z-10" />
-                  <div className="absolute top-6 right-6">
-                    <Badge className={`${product.theme.badge} text-white font-semibold text-base px-4 py-2 shadow-lg`}>
-                      {product.emoji} #{product.rank}
-                    </Badge>
-                  </div>
-
-                  <div className="flex flex-col gap-6">
-                    <div className="flex flex-wrap items-center gap-4">
-                      <Badge
-                        variant="secondary"
-                        className="bg-white/70 text-gray-900 border-0 font-semibold tracking-wide"
-                      >
-                        {product.category}
-                      </Badge>
-                      <div className="flex items-center gap-2 text-yellow-500">
-                        <Star className="h-5 w-5 fill-current" />
-                        <span className="font-semibold text-gray-900">{product.rating.toFixed(1)}</span>
-                      </div>
-                      <span className="text-sm text-gray-600">{product.reviewCount}</span>
-                    </div>
-
-                    <div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                      <p className="text-lg text-gray-700 leading-relaxed">{product.tagline}</p>
-                    </div>
-
-                    <div className="bg-white/80 border border-white/60 rounded-2xl p-5 shadow-inner">
-                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                        <Shield className="h-5 w-5 text-orange-500" />
-                        Perfil ideal
-                      </h4>
-                      <p className="text-sm md:text-base text-gray-700">{product.bestFor}</p>
-                    </div>
-
-                    <div className="grid lg:grid-cols-3 gap-6">
-                      <div className="bg-white/70 rounded-2xl border border-white/50 p-5 space-y-3 lg:col-span-2">
-                        <h4 className="font-semibold text-gray-900 text-lg flex items-center gap-2">
-                          <Sparkles className="h-5 w-5 text-amber-500" />
-                          Por qué destaca
-                        </h4>
-                        <ul className="space-y-3">
-                          {product.highlights.map((highlight, highlightIndex) => (
-                            <li
-                              key={`${product.id}-highlight-${highlightIndex}`}
-                              className="flex items-start gap-3 text-sm md:text-base text-gray-700"
-                            >
-                              <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                              <span>{highlight}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="bg-white/70 rounded-2xl border border-white/50 p-5">
-                        <h4 className="font-semibold text-gray-900 text-lg flex items-center gap-2 mb-3">
-                          <Info className="h-5 w-5 text-blue-500" />
-                          Especificaciones clave
-                        </h4>
-                        <div className="space-y-3">
-                          {product.specs.map((spec) => (
-                            <div key={`${product.id}-spec-${spec.label}`}>
-                              <p className="text-xs uppercase tracking-wide text-gray-500">{spec.label}</p>
-                              <p className="text-sm text-gray-800 font-medium">{spec.value}</p>
-                            </div>
-                          ))}
+                          <h3 className="text-xl font-bold text-gray-900 mb-3">
+                            🎯 ¿Por Qué es Crucial Elegir Bien Tu Chaleco de Seguridad?
+                          </h3>
+                          <p className="text-gray-700 leading-relaxed">
+                            En México, la industria de la construcción y los servicios representan millones de empleos donde la <strong>visibilidad del trabajador puede ser la diferencia entre la vida y la muerte</strong>. Un chaleco de seguridad no es solo un accesorio obligatorio; es tu <strong>primera línea de defensa</strong> contra accidentes laborales causados por falta de visibilidad.
+                          </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="space-y-4">
-                      {product.summary.map((paragraph, paragraphIndex) => (
-                        <p key={`${product.id}-summary-${paragraphIndex}`} className="text-gray-700 leading-relaxed">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="bg-white/80 border border-green-200 rounded-2xl p-5">
-                        <h4 className="font-semibold text-green-800 flex items-center gap-2 mb-3">
-                          <CheckCircle className="h-5 w-5" />
-                          Ventajas clave
+                    <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8">
+                      <div className="space-y-4">
+                        <h4 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                          <Info className="w-6 h-6 text-blue-600" />
+                          La Ciencia de la Alta Visibilidad
                         </h4>
-                        <ul className="space-y-3 text-sm text-green-700">
-                          {product.pros.map((pro, proIndex) => (
-                            <li key={`${product.id}-pro-${proIndex}`} className="flex gap-2">
-                              <div className="mt-1 h-2 w-2 rounded-full bg-green-500 flex-shrink-0" />
-                              <span>{pro}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="bg-white/80 border border-red-200 rounded-2xl p-5">
-                        <h4 className="font-semibold text-red-800 flex items-center gap-2 mb-3">
-                          <AlertTriangle className="h-5 w-5" />
-                          Lo que debes considerar
-                        </h4>
-                        <ul className="space-y-3 text-sm text-red-700">
-                          {product.cons.map((con, conIndex) => (
-                            <li key={`${product.id}-con-${conIndex}`} className="flex gap-2">
-                              <div className="mt-1 h-2 w-2 rounded-full bg-red-500 flex-shrink-0" />
-                              <span>{con}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="bg-white/80 border border-gray-200 rounded-2xl p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                      <div>
-                        <p className="text-sm text-gray-500 line-through">{product.priceInfo.previous}</p>
-                        <p className="text-2xl font-bold text-gray-900">{product.priceInfo.current}</p>
-                        <p className="text-xs text-gray-500">{product.priceInfo.note}</p>
-                      </div>
-                      <div className="flex flex-col md:items-end gap-2">
-                        <motion.button
-                          className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold bg-gradient-to-r ${product.theme.button} shadow-lg`}
-                          whileHover={{ scale: 1.03 }}
-                          whileTap={{ scale: 0.97 }}
-                          onClick={() => handleAffiliateClick(product.name, product.url)}
-                        >
-                          Ir a Mercado Libre
-                          <ExternalLink className="h-4 w-4" />
-                        </motion.button>
-                        <span className="text-xs text-gray-500">Verifica precio y stock actualizado</span>
-                      </div>
-                    </div>
-
-                    <p className="text-sm text-gray-600 italic">{product.availabilityNote}</p>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-
-            {/* Información adicional post-productos */}
-            <motion.div
-              className="mt-12 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-green-200">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.6 }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-amber-100 rounded-lg">
-                        <Info className="h-6 w-6 text-amber-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">Recomendaciones por Sector</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="p-3 bg-orange-50 rounded-lg">
-                        <h4 className="font-semibold text-orange-800 mb-1">🏗️ Construcción</h4>
-                        <p className="text-sm text-orange-700">Chaleco Gabardina Elite o Multibolsillos Professional para durabilidad</p>
-                      </div>
-                      <div className="p-3 bg-blue-50 rounded-lg">
-                        <h4 className="font-semibold text-blue-800 mb-1">🚛 Transporte y Logística</h4>
-                        <p className="text-sm text-blue-700">Chaleco Clase 2 ANSI o Breakaway para máxima visibilidad</p>
-                      </div>
-                      <div className="p-3 bg-green-50 rounded-lg">
-                        <h4 className="font-semibold text-green-800 mb-1">🏭 Industrial General</h4>
-                        <p className="text-sm text-green-700">Chaleco de Malla Económico o Naranja Fluorescente Clase 2</p>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-purple-100 rounded-lg">
-                        <AlertTriangle className="h-6 w-6 text-purple-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">Consideraciones Importantes</h3>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="border-l-4 border-yellow-400 pl-4">
-                        <h4 className="font-semibold text-yellow-800 mb-1">⚠️ Verificación de Tallas</h4>
-                        <p className="text-sm text-gray-700">
-                          Consulta siempre la tabla de tallas del vendedor. Los chalecos muy ajustados 
-                          limitan movilidad; muy holgados reducen profesionalismo.
+                        <p className="text-gray-700 leading-relaxed">
+                          Los chalecos de alta visibilidad funcionan mediante dos principios científicos fundamentales: 
+                          la <strong>conspicuidad diurna</strong> (mediante colores fluorescentes que absorben radiación UV 
+                          invisible y la convierten en luz visible) y la <strong>retrorreflectividad nocturna</strong> (donde 
+                          microesferas de vidrio o prismas devuelven la luz directamente hacia su fuente).
                         </p>
                       </div>
-                      <div className="border-l-4 border-red-400 pl-4">
-                        <h4 className="font-semibold text-red-800 mb-1">🔍 Inspección Regular</h4>
-                        <p className="text-sm text-gray-700">
-                          Revisa semanalmente el estado de las cintas reflectantes y el color 
-                          fluorescente. Reemplaza inmediatamente si hay deterioro visible.
-                        </p>
-                      </div>
-                      <div className="border-l-4 border-blue-400 pl-4">
-                        <h4 className="font-semibold text-blue-800 mb-1">📋 Documentación</h4>
-                        <p className="text-sm text-gray-700">
-                          Conserva comprobantes y certificados. Algunos contratos gubernamentales 
-                          requieren evidencia de cumplimiento normativo.
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 border-2 border-orange-200 rounded-lg p-6">
-            <div className="flex items-start gap-3">
-              <Info className="h-6 w-6 text-orange-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-2">Nota sobre Enlaces de Afiliados</h3>
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  Los enlaces de productos que aparecen en esta guía son enlaces de afiliados a 
-                  Mercado Libre. Esto significa que podríamos recibir una comisión si realizas una 
-                  compra a través de estos enlaces, sin costo adicional para ti. Esto nos ayuda a 
-                  mantener nuestro contenido gratuito y de calidad. Solo recomendamos productos que 
-                  hemos investigado exhaustivamente y que consideramos que ofrecen valor real a nuestros 
-                  lectores.
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Preguntas Frecuentes - Mejorada */}
-        <motion.section 
-          id="faq"
-          className="mb-20"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="text-center mb-12"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.h2 
-              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-4"
-              whileHover={{ scale: 1.02 }}
-            >
-              <motion.div 
-                className="p-3 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl shadow-lg"
-                animate={{ 
-                  rotate: [0, -10, 10, 0],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                <Info className="h-8 w-8 text-white" />
-              </motion.div>
-              Preguntas{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Frecuentes
-              </span>
-            </motion.h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Resolvemos las dudas más comunes sobre{' '}
-              <span className="font-semibold text-blue-600">chalecos de seguridad</span>
-            </p>
-          </motion.div>
-
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-              >
-                <Card
-                  className={`border-2 transition-all duration-300 cursor-pointer relative overflow-hidden ${
-                    expandedFAQ === index 
-                      ? 'border-blue-400 shadow-2xl bg-gradient-to-r from-blue-50 to-purple-50' 
-                      : 'border-gray-200 hover:border-blue-300 hover:shadow-lg'
-                  }`}
-                  onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                >
-                  {/* Efecto de onda al expandir */}
-                  <AnimatePresence>
-                    {expandedFAQ === index && (
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-blue-200/20 to-purple-200/20"
-                        initial={{ scale: 0, borderRadius: '50%' }}
-                        animate={{ scale: 2, borderRadius: '0%' }}
-                        exit={{ scale: 0, borderRadius: '50%' }}
-                        transition={{ duration: 0.6 }}
-                      />
-                    )}
-                  </AnimatePresence>
-
-                  <CardHeader className="relative z-10">
-                    <div className="flex items-start justify-between gap-4">
-                      <motion.h3 
-                        className={`text-lg font-semibold transition-colors ${
-                          expandedFAQ === index ? 'text-blue-700' : 'text-gray-900'
-                        }`}
-                        layout
-                      >
-                        <span className="text-blue-500 font-bold mr-2">Q{index + 1}:</span>
-                        {faq.question}
-                      </motion.h3>
                       
-                      <motion.div
-                        animate={{ 
-                          rotate: expandedFAQ === index ? 180 : 0,
-                          scale: expandedFAQ === index ? 1.2 : 1
-                        }}
-                        transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
-                        className={`p-1 rounded-full ${
-                          expandedFAQ === index ? 'bg-blue-100' : 'bg-gray-100'
-                        }`}
-                      >
-                        <ChevronDown className={`h-5 w-5 flex-shrink-0 ${
-                          expandedFAQ === index ? 'text-blue-600' : 'text-gray-400'
-                        }`} />
-                      </motion.div>
+                      <div className="space-y-4">
+                        <h4 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                          <Sparkles className="w-6 h-6 text-purple-600" />
+                          El Estándar ANSI/ISEA 107
+                        </h4>
+                        <p className="text-gray-700 leading-relaxed">
+                          Esta norma estadounidense (adoptada mundialmente) clasifica los chalecos en tres clases según 
+                          el <strong>área mínima de material de fondo fluorescente</strong> y <strong>material retrorreflectante</strong>. 
+                          Cada clase está diseñada para diferentes niveles de riesgo vehicular y condiciones de trabajo.
+                        </p>
+                      </div>
                     </div>
-                  </CardHeader>
-                  
-                  <AnimatePresence>
-                    {expandedFAQ === index && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <CardContent className="relative z-10">
-                          <motion.div
-                            initial={{ y: -20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -20, opacity: 0 }}
-                            transition={{ delay: 0.1, duration: 0.3 }}
-                            className="bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-blue-200"
-                          >
+
+                    {/* Clasificación ANSI visual */}
+                    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 mb-8">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                        📊 Clasificación ANSI/ISEA 107: Niveles de Protección
+                      </h4>
+                      
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="text-center p-6 bg-yellow-50 rounded-xl border-2 border-yellow-200">
+                          <div className="w-16 h-16 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span className="text-2xl font-bold text-white">1</span>
+                          </div>
+                          <h5 className="text-xl font-bold text-yellow-800 mb-3">Clase 1</h5>
+                          <p className="text-sm text-gray-700 mb-3">Tráfico &lt; 40 km/h</p>
+                          <div className="space-y-2 text-xs">
+                            <div className="bg-yellow-100 p-2 rounded">
+                              <strong>Material de fondo:</strong> 0.14 m²
+                            </div>
+                            <div className="bg-yellow-100 p-2 rounded">
+                              <strong>Material reflectante:</strong> 0.10 m²
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="text-center p-6 bg-orange-50 rounded-xl border-2 border-orange-200">
+                          <div className="w-16 h-16 bg-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span className="text-2xl font-bold text-white">2</span>
+                          </div>
+                          <h5 className="text-xl font-bold text-orange-800 mb-3">Clase 2</h5>
+                          <p className="text-sm text-gray-700 mb-3">Tráfico 40-80 km/h</p>
+                          <div className="space-y-2 text-xs">
+                            <div className="bg-orange-100 p-2 rounded">
+                              <strong>Material de fondo:</strong> 0.50 m²
+                            </div>
+                            <div className="bg-orange-100 p-2 rounded">
+                              <strong>Material reflectante:</strong> 0.13 m²
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="text-center p-6 bg-red-50 rounded-xl border-2 border-red-200">
+                          <div className="w-16 h-16 bg-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span className="text-2xl font-bold text-white">3</span>
+                          </div>
+                          <h5 className="text-xl font-bold text-red-800 mb-3">Clase 3</h5>
+                          <p className="text-sm text-gray-700 mb-3">Tráfico &gt; 80 km/h</p>
+                          <div className="space-y-2 text-xs">
+                            <div className="bg-red-100 p-2 rounded">
+                              <strong>Material de fondo:</strong> 0.80 m²
+                            </div>
+                            <div className="bg-red-100 p-2 rounded">
+                              <strong>Material reflectante:</strong> 0.20 m²
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 sm:p-8 border-l-4 border-blue-400">
+                      <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <AlertTriangle className="w-6 h-6" />
+                        Recomendación para México
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        En la mayoría de los entornos laborales mexicanos (construcción, industria, logística), 
+                        recomendamos <strong>Clase 2 como estándar mínimo</strong>. Aunque los chalecos Clase 1 
+                        son más económicos, la diferencia de precio no justifica el riesgo reducido de protección.
+                      </p>
+                      <p className="text-sm text-blue-800 font-medium">
+                        💡 <strong>Tip profesional:</strong> Si tu presupuesto es muy ajustado, es mejor un chaleco Clase 2 
+                        básico que un Clase 1 premium. La clase siempre prevalece sobre las características adicionales.
+                      </p>
+                    </div>
+                  </motion.section>
+
+                  {/* Clasificación de Visibilidad ANSI */}
+                  <motion.section
+                    className="mb-8 sm:mb-10 md:mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <Card className="border-2 border-orange-200 shadow-lg">
+                      <CardHeader className="bg-gradient-to-r from-orange-50 to-yellow-50">
+                        <CardTitle className="flex items-center gap-2 text-2xl">
+                          <Eye className="h-6 w-6 text-orange-600" />
+                          Clasificación de Visibilidad: La Norma ANSI/ISEA 107
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-6">
+                        <div className="space-y-6">
+                          <p className="text-gray-700 leading-relaxed">
+                            La norma más importante que rige la ropa de alta visibilidad es la <strong>ANSI/ISEA 107</strong>. 
+                            Este es un estándar desarrollado por el Instituto Nacional Estadounidense de Estándares (ANSI) 
+                            y la Asociación Internacional de Equipos de Seguridad (ISEA) que especifica los requisitos de 
+                            diseño, materiales y rendimiento de las prendas de alta visibilidad. Aunque es una norma 
+                            estadounidense, es la referencia de facto para la calidad y seguridad en México.
+                          </p>
+
+                          {/* Tipos de Chalecos */}
+                          <div className="grid md:grid-cols-3 gap-4">
+                            <Card className="border-2 border-blue-200">
+                              <CardHeader className="bg-blue-50">
+                                <CardTitle className="text-lg">Tipo O (Off-Road)</CardTitle>
+                              </CardHeader>
+                              <CardContent className="pt-4">
+                                <p className="text-sm text-gray-600 mb-3">
+                                  Para trabajadores en entornos controlados, lejos de la vía pública y con tráfico 
+                                  de vehículos que no supera los 40 km/h.
+                                </p>
+                                <div className="flex items-start gap-2 text-sm text-gray-600">
+                                  <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                  <span>Almacenes, minería subterránea, estacionamientos</span>
+                                </div>
+                              </CardContent>
+                            </Card>
+
+                            <Card className="border-2 border-green-200">
+                              <CardHeader className="bg-green-50">
+                                <CardTitle className="text-lg">Tipo R (Roadway)</CardTitle>
+                              </CardHeader>
+                              <CardContent className="pt-4">
+                                <p className="text-sm text-gray-600 mb-3">
+                                  La categoría más común y relevante para la mayoría de los usuarios en México. 
+                                  Diseñada para trabajadores expuestos al tráfico vehicular.
+                                </p>
+                                <div className="flex items-start gap-2 text-sm text-gray-600">
+                                  <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                  <span>Carreteras, construcción, maquinaria pesada</span>
+                                </div>
+                              </CardContent>
+                            </Card>
+
+                            <Card className="border-2 border-purple-200">
+                              <CardHeader className="bg-purple-50">
+                                <CardTitle className="text-lg">Tipo P (Public Safety)</CardTitle>
+                              </CardHeader>
+                              <CardContent className="pt-4">
+                                <p className="text-sm text-gray-600 mb-3">
+                                  Específica para personal de emergencia y seguridad pública que requieren 
+                                  visibilidad superior.
+                                </p>
+                                <div className="flex items-start gap-2 text-sm text-gray-600">
+                                  <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                  <span>Policías, bomberos, paramédicos</span>
+                                </div>
+                              </CardContent>
+                            </Card>
+                          </div>
+
+                          {/* Clases de Rendimiento */}
+                          <div className="mt-8">
+                            <h4 className="text-xl font-semibold mb-4 text-gray-900">Clases de Rendimiento</h4>
+                            
+                            <div className="space-y-4">
+                              <Card className="border-l-4 border-l-yellow-400">
+                                <CardContent className="pt-6">
+                                  <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0">
+                                      <Badge className="bg-yellow-100 text-yellow-800">Clase 1</Badge>
+                                    </div>
+                                    <div>
+                                      <h5 className="font-semibold text-gray-900 mb-2">Nivel Más Bajo de Visibilidad</h5>
+                                      <p className="text-gray-600 text-sm mb-3">
+                                        Requiere una cantidad mínima de material fluorescente (0.14 m²) y material 
+                                        reflectante (0.10 m²). Adecuada únicamente para entornos de bajo riesgo Tipo O, 
+                                        donde los trabajadores están bien separados del tráfico lento.
+                                      </p>
+                                      <div className="bg-yellow-50 p-3 rounded-lg">
+                                        <p className="text-sm text-yellow-800">
+                                          <AlertTriangle className="h-4 w-4 inline mr-1" />
+                                          No recomendado para la mayoría de aplicaciones industriales en México.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </CardContent>
+                              </Card>
+
+                              <Card className="border-l-4 border-l-orange-500">
+                                <CardContent className="pt-6">
+                                  <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0">
+                                      <Badge className="bg-orange-100 text-orange-800">Clase 2</Badge>
+                                    </div>
+                                    <div>
+                                      <h5 className="font-semibold text-gray-900 mb-2">Estándar de Oro para México</h5>
+                                      <p className="text-gray-600 text-sm mb-3">
+                                        Ofrece una visibilidad muy superior a la Clase 1 y es obligatoria para 
+                                        trabajadores expuestos a tráfico con velocidades entre 40 km/h y 80 km/h. 
+                                        Requiere mayor cantidad de material de fondo fluorescente (0.50 m²) y material 
+                                        retrorreflectante (0.13 m²).
+                                      </p>
+                                      <div className="bg-orange-50 p-3 rounded-lg">
+                                        <p className="text-sm text-orange-800">
+                                          <CheckCircle className="h-4 w-4 inline mr-1" />
+                                          Personal de construcción, servicios públicos, aeropuertos y directores de 
+                                          tráfico deben usar, como mínimo, prendas de Clase 2.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </CardContent>
+                              </Card>
+
+                              <Card className="border-l-4 border-l-red-500">
+                                <CardContent className="pt-6">
+                                  <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0">
+                                      <Badge className="bg-red-100 text-red-800">Clase 3</Badge>
+                                    </div>
+                                    <div>
+                                      <h5 className="font-semibold text-gray-900 mb-2">Nivel Más Alto de Visibilidad</h5>
+                                      <p className="text-gray-600 text-sm mb-3">
+                                        Indispensable para trabajadores en entornos de muy alto riesgo, como carreteras 
+                                        con velocidades superiores a 80 km/h, condiciones climáticas inclementes o 
+                                        trabajos nocturnos complejos.
+                                      </p>
+                                      <div className="bg-red-50 p-3 rounded-lg">
+                                        <p className="text-sm text-red-800">
+                                          <Info className="h-4 w-4 inline mr-1" />
+                                          Para cumplir con la Clase 3, la prenda debe tener material reflectante en 
+                                          las mangas y pantalones, garantizando una silueta humana completa y 
+                                          visibilidad de 360 grados. Un chaleco por sí solo no puede ser Clase 3.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </CardContent>
+                              </Card>
+                            </div>
+                          </div>
+
+                          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-6">
                             <div className="flex items-start gap-3">
-                              <div className="flex-shrink-0 mt-1">
-                                <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                                  <span className="text-white text-xs font-bold">A</span>
+                              <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                              <div>
+                                <h4 className="font-semibold text-blue-900 mb-2">Importante para Compradores</h4>
+                                <p className="text-blue-800 text-sm leading-relaxed">
+                                  Al analizar las plataformas de comercio electrónico en México, existe una tendencia 
+                                  clara: muchos chalecos robustos tipo "Brigadista" de gabardina se comercializan 
+                                  destacando su durabilidad y cantidad de bolsillos, pero omiten cualquier mención 
+                                  a su certificación o clase de visibilidad. Es fundamental que los compradores 
+                                  busquen activamente la etiqueta que certifique el cumplimiento con 
+                                  <strong> "ANSI/ISEA 107 Tipo R Clase 2"</strong> como mínimo para la mayoría de 
+                                  los trabajos de riesgo.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.section>
+
+                  {/* Materiales y Construcción */}
+                  <motion.section
+                    className="mb-8 sm:mb-10 md:mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                  >
+                    <Card className="border-2 border-green-200 shadow-lg">
+                      <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50">
+                        <CardTitle className="flex items-center gap-2 text-2xl">
+                          <Sparkles className="h-6 w-6 text-green-600" />
+                          Materiales y Construcción: Durabilidad vs. Comodidad Climática
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-6">
+                        <div className="space-y-6">
+                          <p className="text-gray-700 leading-relaxed">
+                            El material del chaleco no solo define su durabilidad, sino también la comodidad del 
+                            trabajador, un factor clave para la seguridad y la productividad, especialmente en los 
+                            diversos climas de México.
+                          </p>
+
+                          {/* Comparación Poliéster vs Gabardina */}
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <Card className="border-2 border-blue-200">
+                              <CardHeader className="bg-blue-50">
+                                <CardTitle className="text-lg flex items-center gap-2">
+                                  <Sun className="h-5 w-5 text-blue-600" />
+                                  Poliéster
+                                </CardTitle>
+                              </CardHeader>
+                              <CardContent className="pt-4">
+                                <p className="text-sm text-gray-600 mb-4">
+                                  Es el tejido más utilizado en chalecos de seguridad por su ligereza, bajo costo, 
+                                  resistencia a las arrugas y secado rápido. Su naturaleza sintética le confiere un 
+                                  brillo que realza los colores fluorescentes, haciéndolo ideal para la alta visibilidad.
+                                </p>
+                                <div className="space-y-2">
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Peso ligero y transpirable</span>
+                                  </div>
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Económico</span>
+                                  </div>
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Ideal para climas cálidos</span>
+                                  </div>
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Secado rápido</span>
+                                  </div>
+                                </div>
+                              </CardContent>
+                            </Card>
+
+                            <Card className="border-2 border-amber-200">
+                              <CardHeader className="bg-amber-50">
+                                <CardTitle className="text-lg flex items-center gap-2">
+                                  <Shield className="h-5 w-5 text-amber-700" />
+                                  Gabardina
+                                </CardTitle>
+                              </CardHeader>
+                              <CardContent className="pt-4">
+                                <p className="text-sm text-gray-600 mb-4">
+                                  Típicamente una mezcla de algodón y poliéster o 100% algodón, la gabardina es 
+                                  sinónimo de resistencia y uso rudo. Es un tejido más grueso, pesado y notablemente 
+                                  más duradero, ideal para entornos de trabajo exigentes.
+                                </p>
+                                <div className="space-y-2">
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Durabilidad superior</span>
+                                  </div>
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Resistente a abrasión y enganches</span>
+                                  </div>
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Apariencia profesional</span>
+                                  </div>
+                                  <div className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-600">Ideal para supervisores</span>
+                                  </div>
+                                </div>
+                              </CardContent>
+                            </Card>
+                          </div>
+
+                          {/* Malla vs Tela Sólida */}
+                          <div className="mt-8">
+                            <h4 className="text-xl font-semibold mb-4 text-gray-900">Malla vs. Tela Sólida</h4>
+                            
+                            <div className="grid md:grid-cols-2 gap-6">
+                              <Card className="border-2 border-cyan-200">
+                                <CardHeader className="bg-cyan-50">
+                                  <CardTitle className="text-lg">Malla (de Poliéster)</CardTitle>
+                                </CardHeader>
+                                <CardContent className="pt-4">
+                                  <p className="text-sm text-gray-600 mb-3">
+                                    La principal ventaja de la construcción en malla es su excepcional transpirabilidad. 
+                                    El tejido abierto permite una circulación de aire constante, lo que reduce 
+                                    significativamente el estrés por calor y la fatiga en los climas cálidos y húmedos 
+                                    predominantes en gran parte de México.
+                                  </p>
+                                  <div className="bg-cyan-50 p-3 rounded-lg">
+                                    <p className="text-sm text-cyan-800">
+                                      <CheckCircle className="h-4 w-4 inline mr-1" />
+                                      Chalecos muy ligeros y cómodos, ideales para largas jornadas bajo el sol.
+                                    </p>
+                                  </div>
+                                </CardContent>
+                              </Card>
+
+                              <Card className="border-2 border-slate-200">
+                                <CardHeader className="bg-slate-50">
+                                  <CardTitle className="text-lg">Tela Sólida</CardTitle>
+                                </CardHeader>
+                                <CardContent className="pt-4">
+                                  <p className="text-sm text-gray-600 mb-3">
+                                    Ofrece una mayor durabilidad estructural y protección contra el viento. La 
+                                    superficie sólida es más resistente a los desgarros y proporciona una base más 
+                                    estable para múltiples bolsillos cargados con herramientas o dispositivos.
+                                  </p>
+                                  <div className="bg-slate-50 p-3 rounded-lg">
+                                    <p className="text-sm text-slate-800">
+                                      <AlertTriangle className="h-4 w-4 inline mr-1" />
+                                      Su capacidad para retener el calor es mayor, lo que puede ser una desventaja 
+                                      en climas muy calurosos.
+                                    </p>
+                                  </div>
+                                </CardContent>
+                              </Card>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.section>
+
+                  {/* Funcionalidad y Diseño Ergonómico */}
+                  <motion.section
+                    className="mb-8 sm:mb-10 md:mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.0 }}
+                  >
+                    <Card className="border-2 border-purple-200 shadow-lg">
+                      <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50">
+                        <CardTitle className="flex items-center gap-2 text-2xl">
+                          <Zap className="h-6 w-6 text-purple-600" />
+                          Funcionalidad y Diseño Ergonómico
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-6">
+                        <div className="space-y-6">
+                          <p className="text-gray-700 leading-relaxed">
+                            Un chaleco de seguridad moderno es una herramienta de trabajo portátil. La disposición 
+                            y el tipo de bolsillos, así como los sistemas de cierre y ajuste, son factores 
+                            determinantes en su practicidad diaria.
+                          </p>
+
+                          {/* Funcionalidad de Bolsillos */}
+                          <div>
+                            <h4 className="text-xl font-semibold mb-4 text-gray-900">Funcionalidad de Bolsillos</h4>
+                            <p className="text-gray-600 mb-4">
+                              La demanda en México muestra una alta valoración por los chalecos multibolsillos, 
+                              que permiten al trabajador llevar consigo sus herramientas y dispositivos de forma 
+                              organizada y accesible.
+                            </p>
+                            
+                            <div className="grid md:grid-cols-2 gap-4">
+                              <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <div>
+                                  <h5 className="font-semibold text-gray-900 mb-1">Bolsillo Transparente</h5>
+                                  <p className="text-sm text-gray-600">
+                                    Para identificación (porta-gafete), esencial para el acceso a zonas de trabajo 
+                                    controladas.
+                                  </p>
                                 </div>
                               </div>
-                              <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                                {faq.answer}
+
+                              <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <div>
+                                  <h5 className="font-semibold text-gray-900 mb-1">Bolsillos para Radio/Celular</h5>
+                                  <p className="text-sm text-gray-600">
+                                    Diseñados con las dimensiones adecuadas para mantener los dispositivos de 
+                                    comunicación seguros.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <div>
+                                  <h5 className="font-semibold text-gray-900 mb-1">Bolsillos Frontales Tipo Cargo</h5>
+                                  <p className="text-sm text-gray-600">
+                                    Bolsas amplias, a menudo con solapa y cierre de velcro o cremallera, para 
+                                    guardar herramientas, guantes o notas.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <div>
+                                  <h5 className="font-semibold text-gray-900 mb-1">Bolsillo Trasero para Planos</h5>
+                                  <p className="text-sm text-gray-600">
+                                    Una característica distintiva de los chalecos tipo "Brigadista", gran bolsa en 
+                                    la espalda para llevar documentos, planos o tabletas.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Tipos de Cierre */}
+                          <div>
+                            <h4 className="text-xl font-semibold mb-4 text-gray-900">Tipo de Cierre</h4>
+                            
+                            <div className="space-y-3">
+                              <Card className="border-l-4 border-l-blue-500">
+                                <CardContent className="pt-4">
+                                  <h5 className="font-semibold text-gray-900 mb-2">Cremallera (Zipper)</h5>
+                                  <p className="text-sm text-gray-600">
+                                    Ofrece un cierre más seguro y es generalmente más duradero, preferido para el 
+                                    uso rudo y diario. Las cremalleras de nylon o plástico reforzado son comunes 
+                                    y resistentes.
+                                  </p>
+                                </CardContent>
+                              </Card>
+
+                              <Card className="border-l-4 border-l-purple-500">
+                                <CardContent className="pt-4">
+                                  <h5 className="font-semibold text-gray-900 mb-2">Velcro</h5>
+                                  <p className="text-sm text-gray-600 mb-2">
+                                    Permite ponerse y quitarse el chaleco con gran rapidez. Algunos diseños incorporan 
+                                    velcro en los hombros y costados para una función de seguridad "breakaway" 
+                                    (desprendible).
+                                  </p>
+                                </CardContent>
+                              </Card>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.section>
+
+                  {/* Top 7 Productos Destacados */}
+                  <section id="productos" className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
+                    <motion.h2 
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                    >
+                      <span className="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
+                        🏆 Top 7 Chalecos de Seguridad Destacados en México 2025
+                      </span>
+                    </motion.h2>
+
+                    {/* Nota importante sobre calificaciones */}
+                    <motion.div 
+                      className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 md:p-6 rounded-r-lg mb-6 sm:mb-4 sm:mb-6 md:mb-8 md:mb-12"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                    >
+                      <div className="flex items-start">
+                        <Info className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 mr-3" />
+                        <div>
+                          <p className="text-sm text-blue-800">
+                            <strong>Nota importante:</strong> Las calificaciones y número de reseñas mostradas corresponden 
+                            a la información disponible en las plataformas al momento de la publicación (Enero 2025). 
+                            Te recomendamos visitar el enlace del producto para ver la información más actualizada, 
+                            incluyendo disponibilidad y reseñas recientes de compradores verificados.
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    <div className="space-y-12">
+                      {recommendedProducts.map((product, index) => (
+                        <motion.div 
+                          key={product.id}
+                          className={`bg-gradient-to-br ${product.theme.gradient} p-4 sm:p-6 md:p-8 rounded-3xl shadow-2xl border-2 ${product.theme.border}`}
+                          initial={{ opacity: 0, y: 50 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 + (index * 0.1) }}
+                        >
+                          <div className="flex items-center gap-4 mb-6">
+                            <Badge className={`${product.theme.badge} text-white font-bold text-lg px-4 sm:px-6 py-3`}>
+                              {product.emoji} #{product.rank}
+                            </Badge>
+                            <Badge className={`bg-${product.theme.badge.split('-')[1]}-100 text-${product.theme.badge.split('-')[1]}-800 px-4 py-2 font-bold`}>
+                              {product.category}
+                            </Badge>
+                          </div>
+
+                          <h3 className="text-xl sm:text-lg sm:text-xl md:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                            {product.name}
+                          </h3>
+
+                          <div className="flex items-center mb-4">
+                            <div className="flex text-yellow-400">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'fill-current' : 'text-gray-300'}`} />
+                              ))}
+                            </div>
+                            <span className="ml-2 text-gray-600">({product.reviewCount}) - {product.rating}/5</span>
+                          </div>
+
+                          <div className={`bg-${product.theme.badge.split('-')[1]}-50 p-4 rounded-xl mb-6`}>
+                            <p className={`text-${product.theme.badge.split('-')[1]}-800 font-semibold`}>
+                              <strong>🎯 Ideal para:</strong> {product.bestFor}
+                            </p>
+                          </div>
+
+                          <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                            {product.tagline}
+                          </p>
+
+                          {product.summary && (
+                            <div className="mb-6">
+                              {product.summary.map((paragraph, idx) => (
+                                <p key={idx} className="text-gray-700 leading-relaxed mb-3 text-base">
+                                  {paragraph}
+                                </p>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Especificaciones Técnicas */}
+                          {product.specs && (
+                            <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 mb-6">
+                              <h4 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-lg">
+                                <Shield className="h-6 w-6 text-blue-600" />
+                                Especificaciones Técnicas
+                              </h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {product.specs.map((spec, specIdx) => (
+                                  <div key={specIdx} className="bg-gray-50 p-3 rounded-lg">
+                                    <div className="text-sm font-semibold text-gray-800 mb-1">{spec.label}</div>
+                                    <div className="text-sm text-gray-600">{spec.value}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Destacados */}
+                          {product.highlights && (
+                            <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-xl mb-6 border-2 border-green-200">
+                              <h4 className="font-bold text-green-800 mb-4 text-lg flex items-center gap-2">
+                                <Sparkles className="h-6 w-6" />
+                                Características Destacadas
+                              </h4>
+                              <ul className="space-y-2">
+                                {product.highlights.map((highlight, hlIdx) => (
+                                  <li key={hlIdx} className="flex items-start gap-2 text-sm text-gray-700">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <span><strong>{highlight.split(':')[0]}:</strong> {highlight.split(':')[1]}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            <div className="bg-white p-3 sm:p-4 md:p-6 rounded-xl border border-gray-200">
+                              <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
+                                <CheckCircle className="h-5 w-5" />
+                                Ventajas
+                              </h4>
+                              <ul className="space-y-2 text-sm text-gray-700">
+                                {product.pros.map((pro, proIdx) => (
+                                  <li key={proIdx} className="flex items-start gap-2">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <span>{pro}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div className="bg-red-50 p-3 sm:p-4 md:p-6 rounded-xl border border-red-200">
+                              <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
+                                <AlertTriangle className="h-5 w-5" />
+                                Contras
+                              </h4>
+                              <ul className="space-y-2 text-sm text-gray-700">
+                                {product.cons.map((con, conIdx) => (
+                                  <li key={conIdx} className="flex items-start gap-2">
+                                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <span>{con}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+
+                          {/* Disponibilidad */}
+                          {product.availabilityNote && (
+                            <div className="bg-blue-50 p-4 rounded-xl mb-6">
+                              <p className="text-sm text-blue-800">
+                                <strong>📦 Disponibilidad:</strong> {product.availabilityNote}
                               </p>
                             </div>
-                          </motion.div>
-                        </CardContent>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+                          )}
 
-        {/* Conclusión - Sección Espectacular */}
-        <motion.section 
-          id="conclusion"
-          className="mb-20"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <motion.div 
-            className="relative bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 text-white rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl overflow-hidden"
-            initial={{ scale: 0.9, y: 50 }}
-            whileInView={{ scale: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-          >
-            {/* Partículas decorativas de fondo */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              {Array.from({ length: 40 }, (_, i) => (
-                <motion.div
-                  key={`conclusion-particle-${i}`}
-                  className="absolute rounded-full bg-white"
-                  style={{
-                    width: `${3 + (i % 4)}px`,
-                    height: `${3 + (i % 4)}px`,
-                    left: `${(i * 2.5) % 100}%`,
-                    top: `${(i * 3.7) % 100}%`,
-                  }}
-                  animate={{
-                    y: [0, -30, 0],
-                    x: [0, 20, 0],
-                    opacity: [0.1, 0.4, 0.1],
-                    scale: [1, 1.5, 1]
-                  }}
-                  transition={{
-                    duration: 8 + (i % 4),
-                    repeat: Infinity,
-                    delay: i * 0.1
-                  }}
-                />
-              ))}
-            </div>
+                          <div className={`bg-gradient-to-r ${product.theme.button} p-3 sm:p-4 md:p-6 rounded-xl border-2 border-gray-300`}>
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <p className="text-xl font-bold text-white mb-2">💰 Disponible en Mercado Libre</p>
+                                <p className="text-sm text-gray-100">* Ver disponibilidad y ofertas actuales en la plataforma</p>
+                              </div>
+                              <button 
+                                onClick={() => handleAffiliateClick(product.name, product.url)}
+                                className="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg flex items-center gap-2"
+                              >
+                                <ShoppingCart className="w-5 h-5" />
+                                Ver en Mercado Libre
+                                <ExternalLink className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </section>
 
-            {/* Formas geométricas decorativas */}
-            <motion.div
-              className="absolute top-10 right-10 w-20 h-20 bg-white/10 rounded-full"
-              animate={{ rotate: 360, scale: [1, 1.2, 1] }}
-              transition={{ duration: 20, repeat: Infinity }}
-            />
-            <motion.div
-              className="absolute bottom-10 left-10 w-16 h-16 bg-white/10 rounded-lg"
-              animate={{ rotate: -360, scale: [1, 1.1, 1] }}
-              transition={{ duration: 15, repeat: Infinity }}
-            />
-
-            <div className="relative z-10">
-              <motion.h2 
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                <motion.span
-                  animate={{ 
-                    textShadow: [
-                      "0 0 10px rgba(255, 255, 255, 0.5)",
-                      "0 0 20px rgba(255, 255, 255, 0.8)",
-                      "0 0 10px rgba(255, 255, 255, 0.5)"
-                    ]
-                  }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                >
-                  Tu Seguridad, Tu Responsabilidad, Tu Futuro
-                </motion.span>
-              </motion.h2>
-              
-              <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed mb-8">
-                <motion.p
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                >
-                  La elección de un chaleco de seguridad trasciende una simple compra: es una{' '}
-                  <motion.span 
-                    className="font-bold text-yellow-300"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    decisión que salva vidas
-                  </motion.span>. 
-                  Como hemos explorado, cada elemento técnico - desde las cintas reflectantes hasta 
-                  la certificación ANSI - representa años de investigación en seguridad industrial.
-                </motion.p>
-                
-                <motion.p
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.7, duration: 0.6 }}
-                >
-                  Para el profesional que busca{' '}
-                  <motion.span 
-                    className="font-semibold text-yellow-200"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    máxima funcionalidad y resistencia
-                  </motion.span>, el 
-                  <strong> Chaleco de Seguridad Industrial Gabardina 100% Algodón Elite</strong> 
-                  representa la cúspide de la ingeniería de protección. Para entornos de{' '}
-                  <motion.span 
-                    className="font-semibold text-red-200"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    alto riesgo y cumplimiento normativo
-                  </motion.span>, el 
-                  <strong> Chaleco Alta Visibilidad Bicolor Clase 2</strong> es la barrera 
-                  definitiva entre el peligro y la seguridad.
-                </motion.p>
-
-                <motion.div
-                  className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.9, duration: 0.6 }}
-                >
-                  <motion.p 
-                    className="font-bold mb-3 text-yellow-300 text-xl"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    💡 La Verdad Fundamental:
-                  </motion.p>
-                  <p>
-                    La{' '}
-                    <motion.span 
-                      className="font-bold text-yellow-200"
-                      animate={{ opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2, repeat: Infinity }}
+                  {/* Preguntas Frecuentes */}
+                  <section className="mb-4 sm:mb-6 md:mb-8 sm:mb-6 sm:mb-8 md:mb-12 md:mb-16">
+                    <motion.h2 
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
                     >
-                      visibilidad no es un lujo, es un derecho
-                    </motion.span>. 
-                    Cada trabajador merece regresar a casa seguro, y el chaleco correcto 
-                    es el guardián silencioso que hace posible ese regreso.
-                  </p>
-                </motion.div>
+                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        ❓ Preguntas Frecuentes
+                      </span>
+                    </motion.h2>
 
-                <motion.p
-                  className="text-center text-xl font-bold"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1.1, duration: 0.6 }}
-                >
-                  <motion.span
-                    animate={{ 
-                      color: ["#FEF3C7", "#FBBF24", "#F59E0B", "#FEF3C7"],
-                      scale: [1, 1.05, 1]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                    <div className="space-y-6">
+                      {faqs.map((faq, index) => (
+                        <motion.div
+                          key={index}
+                          className={`border-2 transition-all duration-300 cursor-pointer rounded-xl ${
+                            expandedFAQ === index 
+                              ? 'border-blue-400 shadow-2xl bg-gradient-to-r from-blue-50 to-purple-50' 
+                              : 'border-gray-200 hover:border-blue-300 hover:shadow-lg bg-white'
+                          }`}
+                          onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                        >
+                          <div className="p-4 sm:p-6">
+                            <div className="flex items-start justify-between gap-4">
+                              <h3 className={`text-lg font-semibold transition-colors ${
+                                expandedFAQ === index ? 'text-blue-700' : 'text-gray-900'
+                              }`}>
+                                <span className="text-blue-500 font-bold mr-2">Q{index + 1}:</span>
+                                {faq.question}
+                              </h3>
+                              
+                              <div className={`p-1 rounded-full transition-all duration-300 ${
+                                expandedFAQ === index 
+                                  ? 'bg-blue-100 text-blue-600 rotate-180' 
+                                  : 'bg-gray-100'
+                              }`}>
+                                <ChevronDown className={`h-5 w-5 ${
+                                  expandedFAQ === index ? 'text-blue-600' : 'text-gray-400'
+                                }`} />
+                              </div>
+                            </div>
+                            
+                            {expandedFAQ === index && (
+                              <div className="border-t border-blue-100 pt-4 mt-4">
+                                <div className="flex items-start gap-3">
+                                  <span className="text-blue-500 font-bold text-lg">A:</span>
+                                  <p className="text-gray-700 leading-relaxed">
+                                    {faq.answer}
+                                  </p>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </section>
+
+                  {/* Conclusión */}
+                  <motion.section 
+                    className="mb-8 sm:mb-10 md:mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 }}
                   >
-                    No dejes tu seguridad al azar; invierte en protección inteligente.
-                  </motion.span>
-                </motion.p>
-              </div>
+                    <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 text-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl">
+                      <div className="text-center">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
+                          Tu Seguridad, Tu Responsabilidad, Tu Futuro
+                        </h2>
+                        
+                        <div className="space-y-4 sm:space-y-6 text-lg leading-relaxed mb-6 sm:mb-8">
+                          <p>
+                            En el mundo laboral mexicano, donde la construcción, la industria y los servicios crecen cada día, 
+                            <span className="font-semibold text-yellow-300"> un chaleco de seguridad no es solo un accesorio</span>, sino 
+                            <span className="font-semibold text-orange-300"> una herramienta vital</span> que puede salvar tu vida.
+                          </p>
+                          
+                          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 my-6 sm:my-8">
+                            <p className="text-xl font-semibold mb-4">
+                              <span className="text-yellow-300">💡 Recuerda:</span> No compras un chaleco, 
+                              <span className="text-green-300"> inviertes en tu protección</span>.
+                            </p>
+                            
+                            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 text-sm">
+                              <div className="bg-white/5 rounded-lg p-3">
+                                <p><strong>✅ Elige Clase 2</strong> para tráfico vehicular</p>
+                              </div>
+                              <div className="bg-white/5 rounded-lg p-3">
+                                <p><strong>✅ Prioriza</strong> marcas con garantía</p>
+                              </div>
+                              <div className="bg-white/5 rounded-lg p-3">
+                                <p><strong>✅ Verifica</strong> cintas reflectantes de calidad</p>
+                              </div>
+                              <div className="bg-white/5 rounded-lg p-3">
+                                <p><strong>✅ Considera</strong> tu tipo de trabajo diario</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-              {/* Botón de acción final */}
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 1.3, duration: 0.6 }}
-              >
-                <motion.button
-                  className="bg-white text-orange-600 font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all"
-                  whileHover={{ 
-                    scale: 1.1, 
-                    boxShadow: "0 0 30px rgba(255, 255, 255, 0.5)" 
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    Ver Chalecos Recomendados ↑
-                  </motion.span>
-                </motion.button>
-              </motion.div>
-            </div>
-          </motion.div>
-        </motion.section>
-
-                  {/* Related Articles */}
-                  <RelatedArticles 
-                    articles={[
-                      {
-                        id: '1',
-                        title: 'Los Mejores Arneses de Seguridad para Trabajo en Altura 2025',
-                        excerpt: 'Guía definitiva sobre normativas mexicanas NOM-009-STPS y los mejores productos.',
-                        category: 'EPP',
-                        publishDate: '4 Oct 2025',
-                        readTime: '25 min',
-                        slug: 'mejores-arneses-seguridad-trabajo-altura'
-                      },
-                      {
-                        id: '2',
-                        title: 'El Mejor Calzado de Seguridad Industrial para México 2025',
-                        excerpt: 'Análisis completo de normativas NOM-113 y los mejores productos del mercado.',
-                        category: 'Calzado',
-                        publishDate: '3 Oct 2025',
-                        readTime: '25 min',
-                        slug: 'mejor-calzado-industrial-botas-seguridad'
-                      },
-                      {
-                        id: '3',
-                        title: 'Los Mejores Botiquines de Emergencia para el Trabajo',
-                        excerpt: 'Guía completa de normativas, productos y mejores prácticas en México.',
-                        category: 'Primeros Auxilios',
-                        publishDate: '2 Oct 2025',
-                        readTime: '20 min',
-                        slug: 'mejores-botiquines-emergencia-trabajo'
-                      }
-                    ]}
-                    title="Artículos Relacionados sobre Seguridad Industrial"
-                  />
+                        <div className="text-center">
+                          <p className="text-xl sm:text-2xl font-bold mb-4">
+                            🛡️ <span className="text-yellow-300">Protégete hoy</span>, 
+                            <span className="text-green-300"> trabaja seguro mañana</span> 🛡️
+                          </p>
+                          <p className="text-lg opacity-90">
+                            Tu familia te espera en casa. Haz que cada día laboral termine con tu regreso seguro.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.section>
                 </motion.article>
               </div>
             </div>
           </div>
         </div>
+
+        <RelatedArticles 
+          articles={relatedArticles}
+          title="Artículos Relacionados sobre Seguridad Industrial"
+        />
       </div>
     </BlogLayout>
   );

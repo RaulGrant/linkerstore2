@@ -359,7 +359,7 @@ export default function HomePage() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-900">
-              <Link href="/guides" className="flex items-center gap-2">
+              <Link href="/guias" className="flex items-center gap-2">
                 <Users className="w-5 h-5" />
                 Guías de Compra
               </Link>

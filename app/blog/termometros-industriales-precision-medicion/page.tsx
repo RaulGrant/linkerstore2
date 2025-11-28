@@ -390,12 +390,12 @@ export default function TermometrosIndustrialesArticle() {
                     </motion.p>
 
                     {/* Selector de tipo */}
-                    <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
+                    <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-4 sm:mb-6 md:mb-8 px-4 sm:px-0">
                       <motion.button
                         onClick={() => setSelectedType('infrarrojo')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-xl font-bold text-lg transition-all ${
+                        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-lg transition-all w-full sm:w-auto ${
                           selectedType === 'infrarrojo'
                             ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white shadow-2xl'
                             : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-red-300'
@@ -407,7 +407,7 @@ export default function TermometrosIndustrialesArticle() {
                         onClick={() => setSelectedType('contacto')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-xl font-bold text-lg transition-all ${
+                        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-lg transition-all w-full sm:w-auto ${
                           selectedType === 'contacto'
                             ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-2xl'
                             : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-blue-300'
@@ -419,7 +419,7 @@ export default function TermometrosIndustrialesArticle() {
                         onClick={() => setSelectedType('hibrido')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-xl font-bold text-lg transition-all ${
+                        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-lg transition-all w-full sm:w-auto ${
                           selectedType === 'hibrido'
                             ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl'
                             : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-purple-300'
@@ -1222,16 +1222,16 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $200 - $350 MXN</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-green-700 mb-2">💰 Rango de Precio: $200 - $350 MXN</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/1hXZobU"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1337,16 +1337,16 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-blue-700 mb-2">💰 Rango de Precio: $400 - $650 MXN</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-blue-700 mb-2">💰 Rango de Precio: $400 - $650 MXN</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/2RDXrZJ"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1451,16 +1451,16 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-purple-700 mb-2">💰 Rango de Precio: $450 - $750 MXN</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-purple-700 mb-2">💰 Rango de Precio: $450 - $750 MXN</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/12o5LsV"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1575,16 +1575,16 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-orange-100 to-red-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-orange-700 mb-2">💰 Rango de Precio: $2,500 - $3,500 MXN</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-orange-700 mb-2">💰 Rango de Precio: $2,500 - $3,500 MXN</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/29G733y"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1696,16 +1696,16 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-teal-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-teal-700 mb-2">💰 Rango de Precio: $1,800 - $2,800 MXN</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-teal-700 mb-2">💰 Rango de Precio: $1,800 - $2,800 MXN</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad en la plataforma</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/216huMe"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1818,16 +1818,16 @@ export default function TermometrosIndustrialesArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-indigo-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-indigo-700 mb-2">💰 Rango de Precio: $4,500 - $6,500 MXN</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-indigo-700 mb-2">💰 Rango de Precio: $4,500 - $6,500 MXN</p>
                               <p className="text-sm text-gray-600">* Consultar con distribuidores autorizados</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/2p3xDDQ"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>

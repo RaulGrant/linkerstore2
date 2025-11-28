@@ -48,7 +48,7 @@ export default function FAQPage() {
                 Tienda Industrial
               </Link>
               */}
-            <Link href="/guides" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/guias" className="text-gray-600 hover:text-blue-600 transition-colors">
               Guías de Compra
             </Link>
             <Link href="/faq" className="text-blue-600 font-medium">
@@ -358,7 +358,7 @@ export default function FAQPage() {
                   </Button>
                 </Link>
                 */}
-              <Link href="/guides">
+              <Link href="/guias">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
                   Guías de Compra
                   <ArrowRight className="ml-2 h-5 w-5" />

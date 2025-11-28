@@ -11,7 +11,9 @@ import {
   Mail,
   Phone,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
+  ShoppingBag,
+  HelpCircle
 } from 'lucide-react';
 
 export default function BlogFooter() {
@@ -23,11 +25,13 @@ export default function BlogFooter() {
 
   const quickLinks = [
     { name: 'Inicio', href: '/', icon: FileText },
+    { name: 'Tienda', href: '/catalogo', icon: ShoppingBag },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Guías Técnicas', href: '/guias', icon: Shield },
-    { name: 'Servicios', href: '/servicios', icon: Users },
+    //{ name: 'Servicios', href: '/servicios', icon: Users },
     { name: 'Contacto', href: '/contacto', icon: Users },
-    { name: 'Sobre Nosotros', href: '/sobre-nosotros', icon: Users }
+    { name: 'Sobre Nosotros', href: '/sobre-nosotros', icon: Users },
+    { name: 'Ayuda', href: '/ayuda', icon: HelpCircle }
   ];
 
   const categories = [
@@ -90,10 +94,6 @@ export default function BlogFooter() {
                   <Mail className="h-3 w-3" />
                   <span>linkerpro.notifications@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-400">
-                  <Phone className="h-3 w-3" />
-                  <span>+52 246 793 4968</span>
-                </div>
               </div>
             </div>
           </div>
@@ -121,11 +121,11 @@ export default function BlogFooter() {
               <h4 className="text-sm font-medium text-gray-200 mb-3">En LinkerStore</h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="text-center">
-                  <div className="text-lg font-bold text-blue-400">30+</div>
+                  <div className="text-lg font-bold text-blue-400">200+</div>
                   <div className="text-xs text-gray-400">Artículos</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-green-400">10+</div>
+                  <div className="text-lg font-bold text-green-400">100+</div>
                   <div className="text-xs text-gray-400">Guías</div>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function BlogFooter() {
                 size="sm" 
                 variant="secondary" 
                 className="w-full bg-white text-blue-600 hover:bg-gray-100 cursor-pointer"
-                onClick={() => handleNavigation('/sobre-nosotros')}
+                onClick={() => handleNavigation('/contacto')}
               >
                 <div className="flex items-center justify-center gap-1">
                   <span>Contactar Expertos</span>
@@ -191,7 +191,7 @@ export default function BlogFooter() {
         {/* Disclaimer sobre afiliados */}
         <div className="mt-6 p-4 bg-gray-800 rounded-lg">
           <p className="text-xs text-gray-400 text-center">
-            <strong>Divulgación:</strong> LinkerStore participa en los programas de afiliados de Amazon Associates y Mercado Libre Afiliados. 
+            <strong>Divulgación:</strong> LinkerStore participa en los programas de afiliados de  Mercado Libre Afiliados. 
             Podemos recibir comisiones por compras realizadas a través de nuestros enlaces, sin costo adicional para ti. 
             Esto nos ayuda a mantener nuestro contenido gratuito y de calidad.
           </p>

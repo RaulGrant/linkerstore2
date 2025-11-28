@@ -390,12 +390,12 @@ export default function RotomartillosTaladrosArticle() {
                     </motion.p>
 
                     {/* Selector de tipo de herramienta */}
-                    <div className="flex justify-center gap-4 mb-4 sm:mb-6 md:mb-8">
+                    <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-4 sm:mb-6 md:mb-8 px-4 sm:px-0">
                       <motion.button
                         onClick={() => setSelectedTool('taladro')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-xl font-bold text-lg transition-all ${
+                        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-lg transition-all w-full sm:w-auto ${
                           selectedTool === 'taladro'
                             ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-2xl'
                             : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-green-300'
@@ -407,7 +407,7 @@ export default function RotomartillosTaladrosArticle() {
                         onClick={() => setSelectedTool('percutor')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-xl font-bold text-lg transition-all ${
+                        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-lg transition-all w-full sm:w-auto ${
                           selectedTool === 'percutor'
                             ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-2xl'
                             : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-blue-300'
@@ -419,7 +419,7 @@ export default function RotomartillosTaladrosArticle() {
                         onClick={() => setSelectedTool('rotomartillo')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-xl font-bold text-lg transition-all ${
+                        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-lg transition-all w-full sm:w-auto ${
                           selectedTool === 'rotomartillo'
                             ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-2xl'
                             : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-red-300'
@@ -1047,16 +1047,16 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-yellow-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-yellow-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-yellow-700 mb-2">💰 Disponible en Mercado Libre</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-yellow-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/2Gqknap"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1151,16 +1151,16 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-blue-100 to-indigo-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-blue-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-blue-700 mb-2">💰 Disponible en Mercado Libre</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-blue-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/2tmyRVs"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1266,16 +1266,16 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-green-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-green-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/2tmyRVs"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1370,16 +1370,16 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-purple-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-purple-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
                               href="https://www.mercadolibre.com.mx/taladro-percutor-makita-hp1630-710w-220v-azul/p/MLM8390439"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1482,16 +1482,16 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-red-100 to-orange-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-red-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-red-700 mb-2">💰 Disponible en Mercado Libre</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-red-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
                               href="https://listado.mercadolibre.com.mx/milwaukee-m18-fuel-combo"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>
@@ -1596,16 +1596,16 @@ export default function RotomartillosTaladrosArticle() {
                         </div>
 
                         <div className="bg-gradient-to-r from-orange-100 to-amber-100 p-3 sm:p-4 md:p-6 rounded-xl border-2 border-orange-300">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xl font-bold text-orange-700 mb-2">💰 Disponible en Mercado Libre</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="text-center sm:text-left">
+                              <p className="text-lg sm:text-xl font-bold text-orange-700 mb-2">💰 Disponible en Mercado Libre</p>
                               <p className="text-sm text-gray-600">* Ver precio actual y disponibilidad</p>
                             </div>
                             <a 
                               href="https://mercadolibre.com/sec/1Dkr9c6"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all hover:scale-105 shadow-lg text-center text-sm sm:text-base whitespace-nowrap"
                             >
                               🛒 Ver en Mercado Libre →
                             </a>

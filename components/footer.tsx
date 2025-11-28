@@ -49,9 +49,7 @@ export function Footer() {
               <Link href="/guias" className="block text-gray-300 hover:text-white text-sm transition-colors">
                 Guías Técnicas
               </Link>
-              <Link href="/servicios" className="block text-gray-300 hover:text-white text-sm transition-colors">
-                Servicios
-              </Link>
+             
               <Link href="/sobre-nosotros" className="block text-gray-300 hover:text-white text-sm transition-colors">
                 Sobre Nosotros
               </Link>
@@ -89,10 +87,6 @@ export function Footer() {
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="h-4 w-4 text-blue-400" />
                 <span className="text-gray-300">linkerpro.notifications@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm">
-                <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">+52 246 793 4968</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4 text-blue-400" />

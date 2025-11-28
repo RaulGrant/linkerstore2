@@ -309,15 +309,7 @@ export default function ContactoPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-6 text-white">
-              <h3 className="text-lg font-bold mb-2">¿Necesitas una Respuesta Urgente?</h3>
-              <p className="text-blue-100 mb-4">
-                Para consultas urgentes sobre seguridad industrial, contacta directamente con nuestro equipo de emergencia.
-              </p>
-              <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-                Contacto de Emergencia
-              </Button>
-            </div>
+           
           </motion.div>
         </div>
 

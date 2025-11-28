@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 import BlogFooter from './BlogFooter';
 
@@ -11,10 +10,7 @@ interface BlogLayoutProps {
 
 export default function BlogLayout({ children, className = '' }: BlogLayoutProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <div
       className={`min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative ${className}`}
     >
       {/* Patrón de fondo estático simple */}
@@ -38,6 +34,6 @@ export default function BlogLayout({ children, className = '' }: BlogLayoutProps
       <div className="relative z-20">
         <BlogFooter />
       </div>
-    </motion.div>
+    </div>
   );
 }

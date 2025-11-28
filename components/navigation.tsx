@@ -20,7 +20,10 @@ import {
   CreditCard,
   Wallet,
   LogOut,
-  HelpCircle
+  HelpCircle,
+  MessageCircleCodeIcon,
+  MessageCircleDashed,
+  MessageCircleIcon
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -51,9 +54,12 @@ export default function Navigation({ user }: NavigationProps) {
 
   const mainNavItems = [
     { name: 'Inicio', href: '/', icon: Home },
+    { name: 'Tienda', href: '/catalogo', icon: ShoppingBag },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Guías', href: '/guias', icon: GraduationCap },
-    { name: 'Servicios', href: '/servicios', icon: Building2 },
+    { name: 'Contacto', href: '/contacto', icon: MessageCircleIcon },
+    { name: 'Sobre Nosotros', href: '/sobre-nosotros', icon: Users },
+    //{ name: 'Servicios', href: '/servicios', icon: Building2 },
     { name: 'Ayuda', href: '/ayuda', icon: HelpCircle },
     // { name: 'Tienda', href: '/store', icon: Store },
     // { name: 'Freelancers', href: '/map-freelancers', icon: Users }, // Temporalmente oculto
@@ -93,30 +99,112 @@ export default function Navigation({ user }: NavigationProps) {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <>
+      {/* CSS Animations for CTA Button */}
+      <style jsx>{`
+        @keyframes glow {
+          0% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), inset 0 0 20px rgba(59, 130, 246, 0.1); }
+          100% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.9), inset 0 0 30px rgba(59, 130, 246, 0.2); }
+        }
+        
+        @keyframes borderGlow {
+          0% { transform: scale(1); opacity: 0.7; }
+          50% { transform: scale(1.05); opacity: 0.9; }
+          100% { transform: scale(1); opacity: 0.7; }
+        }
+        
+        @keyframes ringPulse {
+          0% { transform: scale(1); opacity: 0.3; }
+          50% { transform: scale(1.1); opacity: 0.6; }
+          100% { transform: scale(1); opacity: 0.3; }
+        }
+      `}</style>
+      
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between min-w-0">
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 sm:gap-3 mr-6 md:mr-8 flex-shrink-0"
             onClick={() => handleNavClick('logo', '/')}
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
-              <span className="text-sm font-bold text-white">LS</span>
+            <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-blue-600 shadow-lg">
+              <span className="text-xs sm:text-sm font-bold text-white">LS</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">LinkerStore</span>
+            <span className="text-lg sm:text-xl font-bold text-gray-900 whitespace-nowrap">LinkerStore</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">
             {mainNavItems.map((item) => (
               <NavLink key={item.name} item={item} />
             ))}
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-6 md:gap-8 lg:gap-10 flex-shrink-0">
+            {/* Newsletter CTA Button */}
+            <div className="relative hidden md:block">
+              <Button 
+                size="lg" 
+                className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-base rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group animate-pulse"
+                style={{
+                  boxShadow: '0 0 20px rgba(59, 130, 246, 0.6), inset 0 0 20px rgba(59, 130, 246, 0.1)',
+                  animation: 'glow 2s ease-in-out infinite alternate'
+                }}
+                onClick={() => {
+                  const newsletterSection = document.getElementById('newsletter-section') || 
+                                          document.querySelector('[data-newsletter-section]');
+                  if (newsletterSection) {
+                    newsletterSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  handleNavClick('newsletter_cta', 'newsletter');
+                }}
+              >
+                {/* Animated border glow */}
+                <div 
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 opacity-75 blur-sm"
+                  style={{
+                    animation: 'borderGlow 3s ease-in-out infinite'
+                  }}
+                ></div>
+                
+                {/* Particles on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {[...Array(8)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-1 h-1 bg-blue-200 rounded-full animate-bounce"
+                      style={{
+                        left: `${20 + (i * 10)}%`,
+                        top: `${30 + (i % 2) * 40}%`,
+                        animationDelay: `${i * 0.1}s`,
+                        animationDuration: '0.6s'
+                      }}
+                    />
+                  ))}
+                </div>
+                
+                {/* Button content */}
+                <span className="relative z-10 flex items-center gap-2">
+                  <span className="text-lg animate-bounce">📧</span>
+                  Suscríbete
+                </span>
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              </Button>
+              
+              {/* Additional glow ring */}
+              <div 
+                className="absolute inset-0 rounded-full border-2 border-blue-400/30 -z-10"
+                style={{
+                  animation: 'ringPulse 2s ease-in-out infinite'
+                }}
+              ></div>
+            </div>
+
             {/* Cart - Temporalmente oculto
             <div className="hidden md:block">
               <CartSimulator />
@@ -159,11 +247,11 @@ export default function Navigation({ user }: NavigationProps) {
             {/* Mobile Menu */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="md:hidden">
-                  <Menu className="h-4 w-4" />
+                <Button variant="ghost" size="sm" className="md:hidden p-2">
+                  <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80">
+              <SheetContent side="right" className="w-80 sm:w-96">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between pb-4">
                     <span className="text-lg font-semibold">Menu</span>
@@ -198,6 +286,67 @@ export default function Navigation({ user }: NavigationProps) {
                       </>
                     )}
 
+                    {/* Newsletter CTA in Mobile */}
+                    <div className="mb-6 relative">
+                      <Button 
+                        className="relative w-full py-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group"
+                        style={{
+                          boxShadow: '0 0 15px rgba(59, 130, 246, 0.5), inset 0 0 15px rgba(59, 130, 246, 0.1)',
+                          animation: 'glow 2s ease-in-out infinite alternate'
+                        }}
+                        onClick={() => {
+                          const newsletterSection = document.getElementById('newsletter-section') || 
+                                                  document.querySelector('[data-newsletter-section]');
+                          if (newsletterSection) {
+                            newsletterSection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                          setIsMobileMenuOpen(false);
+                          handleNavClick('newsletter_cta_mobile', 'newsletter');
+                        }}
+                      >
+                        {/* Animated border glow */}
+                        <div 
+                          className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 opacity-60 blur-sm"
+                          style={{
+                            animation: 'borderGlow 3s ease-in-out infinite'
+                          }}
+                        ></div>
+                        
+                        {/* Particles on hover */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {[...Array(12)].map((_, i) => (
+                            <div
+                              key={i}
+                              className="absolute w-1.5 h-1.5 bg-blue-200 rounded-full animate-bounce"
+                              style={{
+                                left: `${10 + (i * 7)}%`,
+                                top: `${25 + (i % 3) * 25}%`,
+                                animationDelay: `${i * 0.08}s`,
+                                animationDuration: '0.7s'
+                              }}
+                            />
+                          ))}
+                        </div>
+                        
+                        {/* Button content */}
+                        <span className="relative z-10 flex items-center justify-center gap-3">
+                          <span className="text-xl animate-bounce">📧</span>
+                          Suscríbete al Newsletter
+                        </span>
+                        
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                      </Button>
+                      
+                      {/* Additional glow ring */}
+                      <div 
+                        className="absolute inset-0 rounded-xl border-2 border-blue-400/20 -z-10"
+                        style={{
+                          animation: 'ringPulse 2.5s ease-in-out infinite'
+                        }}
+                      ></div>
+                    </div>
+
                     {/* Cart in Mobile - Temporalmente oculto
                     <div className="mb-6">
                       <CartSimulator />
@@ -225,7 +374,8 @@ export default function Navigation({ user }: NavigationProps) {
             </Sheet>
           </div>
         </div>
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 }

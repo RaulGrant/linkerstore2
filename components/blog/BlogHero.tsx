@@ -144,7 +144,7 @@ export default function BlogHero({ title, subtitle, ctaText }: BlogHeroProps) {
           >
             <div className="flex items-center gap-2 text-blue-100">
               <span className="text-xl">📚</span>
-              <span className="text-lg font-semibold">30+ Artículos</span>
+              <span className="text-lg font-semibold">100+ Artículos</span>
             </div>
             <div className="flex items-center gap-2 text-blue-100">
               <span className="text-xl">🎯</span>
@@ -166,7 +166,17 @@ export default function BlogHero({ title, subtitle, ctaText }: BlogHeroProps) {
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => document.getElementById('latest-articles')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                const target = document.getElementById('latest-articles') || 
+                              document.getElementById('content') || 
+                              document.querySelector('main') ||
+                              document.querySelector('.container');
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+                }
+              }}
             >
               {ctaText}
               <ArrowRight className="ml-2 h-5 w-5" />

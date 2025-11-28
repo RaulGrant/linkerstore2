@@ -23,13 +23,25 @@ import {
   Settings,
   AlertCircle,
   CheckCircle,
-  Clock
+  Clock,
+  Filter,
+  TrendingUp,
+  Star,
+  History,
+  X,
+  Zap,
+  Target,
+  Lightbulb
 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AyudaPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [searchFocus, setSearchFocus] = useState(false);
 
   const categories = [
     {
@@ -62,46 +74,97 @@ export default function AyudaPage() {
     }
   ];
 
+  // Preguntas populares y sugerencias
+  const popularQuestions = [
+    'chalecos de seguridad',
+    'normativas mexicanas',
+    'EPP obligatorio',
+    'precios en México',
+    'certificaciones ISO'
+  ];
+
+  const searchSynonyms = {
+    'epp': ['equipo', 'protección', 'personal', 'seguridad'],
+    'chaleco': ['vest', 'alta visibilidad', 'reflectante'],
+    'norma': ['normativa', 'regulación', 'estándar', 'certificación'],
+    'méxico': ['mexicano', 'nacional', 'nom'],
+    'precio': ['costo', 'valor', 'económico', 'barato']
+  };
+
+  const categoryColors = {
+    'General': 'bg-blue-100 text-blue-800',
+    'Contenido': 'bg-green-100 text-green-800',
+    'Productos': 'bg-purple-100 text-purple-800',
+    'Normativas': 'bg-orange-100 text-orange-800',
+    'Técnico': 'bg-red-100 text-red-800',
+    'Cuenta': 'bg-gray-100 text-gray-800'
+  };
+
   const faqs = [
     {
       category: 'General',
       question: '¿Es gratuito el acceso al blog y las guías?',
-      answer: 'Sí, todo nuestro contenido sobre seguridad industrial es completamente gratuito. Nuestro objetivo es promover ambientes de trabajo más seguros mediante el acceso libre a información de calidad.'
+      answer: 'Sí, todo nuestro contenido sobre seguridad industrial es completamente gratuito. Nuestro objetivo es promover ambientes de trabajo más seguros mediante el acceso libre a información de calidad especializada para el mercado mexicano.',
+      keywords: ['gratis', 'costo', 'precio', 'acceso', 'contenido'],
+      popular: true
     },
     {
       category: 'Contenido',
       question: '¿Quién escribe los artículos y guías?',
-      answer: 'Nuestro contenido es creado por un equipo de expertos certificados en seguridad industrial, con más de 15 años de experiencia en el sector y certificaciones internacionales como NEBOSH, OHSAS 18001 e ISO 45001.'
+      answer: 'Nuestro contenido es creado por un equipo de expertos certificados en seguridad industrial, con más de 15 años de experiencia en el sector mexicano y certificaciones internacionales como OHSAS 18001, ISO 45001 e ISO 14001.',
+      keywords: ['autores', 'expertos', 'certificados', 'experiencia', 'ohsas', 'iso'],
+      popular: false
     },
     {
       category: 'Contenido',
       question: '¿Con qué frecuencia se actualiza el contenido?',
-      answer: 'Publicamos nuevo contenido semanalmente y revisamos nuestras guías técnicas trimestralmente para asegurar que estén actualizadas con las últimas normativas y mejores prácticas.'
+      answer: 'Publicamos nuevo contenido semanalmente y revisamos nuestras guías técnicas trimestralmente para asegurar que estén actualizadas con las últimas normativas oficiales mexicanas (NOM-STPS) e internacionales (ISO/OHSAS).',
+      keywords: ['actualización', 'frecuencia', 'semanal', 'trimestral', 'nuevo'],
+      popular: true
     },
     {
       category: 'Productos',
       question: '¿Las recomendaciones de productos son imparciales?',
-      answer: 'Sí. Aunque participamos en programas de afiliados, nuestras reseñas se basan únicamente en criterios técnicos objetivos. Siempre indicamos cuando un enlace es de afiliado de forma transparente.'
-    },
-    {
-      category: 'Servicios',
-      question: '¿Ofrecen consultoría personalizada?',
-      answer: 'Sí, ofrecemos servicios de consultoría en seguridad industrial para empresas. Puedes contactarnos a través de nuestra página de contacto para solicitar información sobre nuestros servicios especializados.'
-    },
-    {
-      category: 'Técnico',
-      question: '¿Cómo puedo descargar las guías en PDF?',
-      answer: 'Muchas de nuestras guías incluyen un botón de descarga en formato PDF. Esta funcionalidad está disponible para facilitar el acceso offline y la impresión para uso en campo.'
-    },
-    {
-      category: 'Cuenta',
-      question: '¿Necesito crear una cuenta para acceder al contenido?',
-      answer: 'No, todo nuestro contenido es accesible sin crear cuenta. Sin embargo, próximamente ofreceremos funcionalidades premium para usuarios registrados como favoritos y contenido personalizado.'
+      answer: 'Sí. Aunque participamos en programas de afiliados, nuestras reseñas se basan únicamente en criterios técnicos objetivos y disponibilidad en México. Siempre indicamos cuando un enlace es de afiliado de forma transparente.',
+      keywords: ['imparcial', 'afiliados', 'reseñas', 'técnico', 'transparente'],
+      popular: false
     },
     {
       category: 'Normativas',
-      question: '¿El contenido está actualizado con la legislación española?',
-      answer: 'Absolutamente. Todas nuestras guías incluyen referencias a la legislación española vigente (Ley 31/1995 de PRL, RD 39/1997, etc.) y normativas europeas EN/ISO aplicables.'
+      question: '¿El contenido está actualizado con la legislación mexicana?',
+      answer: 'Absolutamente. Todas nuestras guías incluyen referencias a la legislación mexicana vigente (Ley Federal del Trabajo, NOM-STPS), normativas internacionales ISO aplicables y estándares OHSAS reconocidos en México.',
+      keywords: ['legislación', 'mexicana', 'nom-stps', 'iso', 'ohsas', 'vigente'],
+      popular: true
+    },
+    {
+      category: 'Productos',
+      question: '¿Los productos recomendados están disponibles en México?',
+      answer: 'Sí, todos los productos que recomendamos están disponibles para compra en México a través de plataformas confiables como Mercado Libre.'
+    },
+    {
+      category: 'Normativas',
+      question: '¿Qué normativas oficiales mexicanas cubren en sus artículos?',
+      answer: 'Cubrimos todas las NOM-STPS vigentes incluyendo NOM-017-STPS (EPP), NOM-009-STPS (Trabajos en altura), NOM-020-STPS (Recipientes sometidos a presión), NOM-113-STPS (Calzado de seguridad), entre otras, complementadas con estándares ISO y OHSAS.'
+    },
+    {
+      category: 'Contenido',
+      question: '¿Tienen guías específicas sobre chalecos de seguridad y EPP?',
+      answer: 'Sí, tenemos guías completas sobre chalecos de seguridad (incluyendo normativa ANSI/ISEA 107), arneses para trabajo en altura, calzado industrial, cascos, y todo tipo de EPP. Cada guía incluye recomendaciones de productos disponibles en México.'
+    },
+    {
+      category: 'Técnico',
+      question: '¿Cómo eligen los productos que analizan en sus reseñas?',
+      answer: 'Seleccionamos productos basándonos en: 1) Disponibilidad confirmada en México, 2) Cumplimiento de normativas oficiales (NOM-STPS, ISO, OHSAS), 3) Relación calidad-precio, 4) Reputación del fabricante, y 5) Feedback de usuarios mexicanos verificados.'
+    },
+    {
+      category: 'Normativas',
+      question: '¿Cubren las diferencias entre normativas internacionales y mexicanas?',
+      answer: 'Definitivamente. Explicamos claramente las diferencias entre estándares internacionales (ISO, OHSAS, ANSI) y su aplicación en México, así como qué normativas NOM-STPS son obligatorias y cuáles son recomendaciones complementarias.'
+    },
+    {
+      category: 'Contenido',
+      question: '¿Tienen contenido sobre industrias específicas de México?',
+      answer: 'Sí, creamos contenido especializado para las principales industrias mexicanas: petrolera, minería, construcción, manufactura automotriz, agroindustria, y servicios. Cada sector tiene consideraciones específicas de seguridad que abordamos detalladamente.'
     }
   ];
 
@@ -112,11 +175,70 @@ export default function AyudaPage() {
     { title: 'Sobre Nosotros', href: '/sobre-nosotros', icon: Users }
   ];
 
-  const filteredFaqs = faqs.filter(faq => 
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Función de búsqueda inteligente
+  const smartSearch = (query: string, faq: any) => {
+    if (!query.trim()) return true;
+    
+    const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
+    const searchableText = `${faq.question} ${faq.answer} ${faq.category} ${faq.keywords?.join(' ') || ''}`.toLowerCase();
+    
+    // Búsqueda directa
+    const directMatch = searchTerms.every(term => searchableText.includes(term));
+    
+    // Búsqueda con sinónimos
+    const synonymMatch = searchTerms.some(term => {
+      const synonyms = searchSynonyms[term] || [];
+      return synonyms.some(synonym => searchableText.includes(synonym));
+    });
+    
+    return directMatch || synonymMatch;
+  };
+
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesSearch = smartSearch(searchQuery, faq);
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(faq.category);
+    return matchesSearch && matchesCategory;
+  });
+
+  // Ordenar por relevancia (preguntas populares primero si no hay búsqueda)
+  const sortedFaqs = filteredFaqs.sort((a, b) => {
+    if (!searchQuery) {
+      return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+    }
+    return 0;
+  });
+
+  // Obtener categorías únicas
+  const availableCategories = [...new Set(faqs.map(faq => faq.category))];
+
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim() && !searchHistory.includes(query.trim())) {
+      setSearchHistory(prev => [query.trim(), ...prev.slice(0, 4)]);
+    }
+  };
+
+  const highlightText = (text: string, query: string) => {
+    if (!query.trim()) return text;
+    
+    const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
+    let highlightedText = text;
+    
+    searchTerms.forEach(term => {
+      const regex = new RegExp(`(${term})`, 'gi');
+      highlightedText = highlightedText.replace(regex, '<mark class="bg-yellow-200 px-1 rounded">$1</mark>');
+    });
+    
+    return highlightedText;
+  };
 
   const toggleFaq = (index: number) => {
     setExpandedFaq(expandedFaq === index ? null : index);
@@ -158,19 +280,6 @@ export default function AyudaPage() {
               <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
                 Encuentra respuestas rápidas a todas tus preguntas sobre seguridad industrial
               </p>
-
-              {/* Barra de búsqueda */}
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-4 h-5 w-5 text-gray-400" />
-                  <Input
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Buscar en preguntas frecuentes..."
-                    className="pl-12 pr-4 py-4 text-lg bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-blue-200"
-                  />
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -238,7 +347,7 @@ export default function AyudaPage() {
           </div>
         </motion.section>
 
-        {/* Preguntas Frecuentes */}
+        {/* Preguntas Frecuentes con Buscador Avanzado */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -246,50 +355,225 @@ export default function AyudaPage() {
           className="mb-16"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Preguntas Frecuentes</h2>
-          <div className="max-w-4xl mx-auto space-y-4">
-            {filteredFaqs.map((faq, index) => (
-              <Card key={index} className="border-l-4 border-l-blue-500">
-                <CardContent className="p-0">
+          
+          {/* Buscador inteligente mejorado */}
+          <div className="max-w-4xl mx-auto mb-8 space-y-6">
+            {/* Barra de búsqueda principal */}
+            <div className="relative">
+              <div className="relative">
+                <Search className="absolute left-4 top-4 h-6 w-6 text-gray-400" />
+                <Input
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  onFocus={() => {setSearchFocus(true); setShowSuggestions(true)}}
+                  onBlur={() => setTimeout(() => {setSearchFocus(false); setShowSuggestions(false)}, 200)}
+                  placeholder="Buscar en preguntas frecuentes... (ej: chalecos, normativas, precios)"
+                  className="pl-12 pr-12 py-4 text-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 rounded-xl shadow-sm transition-all duration-300"
+                />
+                {searchQuery && (
                   <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full p-6 text-left hover:bg-gray-50 transition-colors flex justify-between items-center"
+                    onClick={() => {setSearchQuery(''); setSelectedCategories([]);}}
+                    className="absolute right-4 top-4 h-6 w-6 text-gray-400 hover:text-gray-600 transition-colors"
                   >
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Badge variant="outline" className="text-xs">
-                          {faq.category}
-                        </Badge>
-                      </div>
-                      <h3 className="font-semibold text-gray-900">{faq.question}</h3>
-                    </div>
-                    {expandedFaq === index ? 
-                      <ChevronUp className="h-5 w-5 text-gray-400" /> : 
-                      <ChevronDown className="h-5 w-5 text-gray-400" />
-                    }
+                    <X className="h-4 w-4" />
                   </button>
-                  {expandedFaq === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-6 pb-6"
-                    >
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                    </motion.div>
+                )}
+              </div>
+
+              {/* Sugerencias de búsqueda */}
+              {showSuggestions && (searchQuery.length > 0 || searchHistory.length > 0) && (
+                <div className="absolute top-full left-0 right-0 bg-white rounded-xl shadow-xl border border-gray-100 mt-2 z-10 max-h-80 overflow-y-auto">
+                  {/* Historial de búsqueda */}
+                  {searchHistory.length > 0 && searchQuery.length === 0 && (
+                    <div className="p-4 border-b border-gray-100">
+                      <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                        <History className="h-4 w-4" />
+                        <span>Búsquedas recientes</span>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {searchHistory.map((item, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleSearch(item)}
+                            className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+                          >
+                            {item}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   )}
-                </CardContent>
-              </Card>
-            ))}
+
+                  {/* Preguntas populares */}
+                  {searchQuery.length === 0 && (
+                    <div className="p-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                        <TrendingUp className="h-4 w-4" />
+                        <span>Búsquedas populares</span>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {popularQuestions.map((item, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleSearch(item)}
+                            className="px-3 py-1 text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-full transition-colors flex items-center gap-1"
+                          >
+                            <Lightbulb className="h-3 w-3" />
+                            {item}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Filtros por categoría */}
+            <div className="flex items-center gap-3 overflow-x-auto pb-2">
+              <div className="flex items-center gap-2 text-sm font-medium text-gray-700 whitespace-nowrap">
+                <Filter className="h-4 w-4" />
+                <span>Filtrar por:</span>
+              </div>
+              <div className="flex gap-2">
+                {availableCategories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => toggleCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
+                      selectedCategories.includes(category)
+                        ? 'bg-blue-500 text-white shadow-md'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category}
+                    {selectedCategories.includes(category) && (
+                      <X className="h-3 w-3 ml-1 inline" />
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Estadísticas de resultados */}
+            <div className="flex items-center justify-between text-sm text-gray-600">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center gap-1">
+                  <Target className="h-4 w-4" />
+                  {sortedFaqs.length} resultado{sortedFaqs.length !== 1 ? 's' : ''}
+                  {searchQuery && ` para "${searchQuery}"`}
+                </span>
+                {selectedCategories.length > 0 && (
+                  <span className="flex items-center gap-1 text-blue-600">
+                    <Filter className="h-3 w-3" />
+                    {selectedCategories.length} categoría{selectedCategories.length !== 1 ? 's' : ''} seleccionada{selectedCategories.length !== 1 ? 's' : ''}
+                  </span>
+                )}
+              </div>
+              {(searchQuery || selectedCategories.length > 0) && (
+                <button
+                  onClick={() => {setSearchQuery(''); setSelectedCategories([]);}}
+                  className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  <X className="h-3 w-3" />
+                  Limpiar filtros
+                </button>
+              )}
+            </div>
           </div>
 
-          {filteredFaqs.length === 0 && searchQuery && (
-            <div className="text-center py-12">
-              <AlertCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">No se encontraron resultados</h3>
-              <p className="text-gray-600">
-                Prueba con términos diferentes o contacta con nuestro equipo para ayuda personalizada.
+          {/* Resultados de preguntas */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            {sortedFaqs.map((faq, index) => {
+              const originalIndex = faqs.findIndex(f => f.question === faq.question);
+              return (
+                <Card key={originalIndex} className={`border-l-4 transition-all duration-300 hover:shadow-lg ${
+                  faq.popular && !searchQuery ? 'border-l-orange-400 bg-gradient-to-r from-orange-50 to-transparent' : 'border-l-blue-500'
+                }`}>
+                  <CardContent className="p-0">
+                    <button
+                      onClick={() => toggleFaq(originalIndex)}
+                      className="w-full p-6 text-left hover:bg-gray-50/50 transition-colors flex justify-between items-center"
+                    >
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge 
+                            variant="outline" 
+                            className={`text-xs font-medium ${categoryColors[faq.category] || 'bg-gray-100 text-gray-800'}`}
+                          >
+                            {faq.category}
+                          </Badge>
+                          {faq.popular && !searchQuery && (
+                            <Badge className="bg-orange-100 text-orange-700 text-xs flex items-center gap-1">
+                              <Star className="h-3 w-3" />
+                              Popular
+                            </Badge>
+                          )}
+                        </div>
+                        <h3 
+                          className="font-semibold text-gray-900 leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: highlightText(faq.question, searchQuery) }}
+                        />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {expandedFaq === originalIndex ? 
+                          <ChevronUp className="h-5 w-5 text-gray-400" /> : 
+                          <ChevronDown className="h-5 w-5 text-gray-400" />
+                        }
+                      </div>
+                    </button>
+                    {expandedFaq === originalIndex && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="px-6 pb-6"
+                      >
+                        <div className="bg-gray-50 rounded-lg p-4 border-l-2 border-l-blue-200">
+                          <p 
+                            className="text-gray-700 leading-relaxed"
+                            dangerouslySetInnerHTML={{ __html: highlightText(faq.answer, searchQuery) }}
+                          />
+                        </div>
+                      </motion.div>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+
+          {/* Estado vacío mejorado */}
+          {sortedFaqs.length === 0 && (
+            <div className="text-center py-16">
+              <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="h-8 w-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No se encontraron resultados</h3>
+              <p className="text-gray-600 mb-6 max-w-md mx-auto">
+                {searchQuery 
+                  ? `No pudimos encontrar preguntas relacionadas con "${searchQuery}". Prueba con términos diferentes o más generales.`
+                  : 'No hay preguntas que coincidan con los filtros seleccionados.'
+                }
               </p>
+              
+              {/* Sugerencias cuando no hay resultados */}
+              <div className="space-y-4">
+                <p className="text-sm text-gray-500">Prueba buscando:</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {popularQuestions.map((suggestion, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleSearch(suggestion)}
+                      className="px-4 py-2 text-sm bg-blue-50 text-blue-700 rounded-full hover:bg-blue-100 transition-colors flex items-center gap-1"
+                    >
+                      <Zap className="h-3 w-3" />
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
         </motion.section>
@@ -308,7 +592,7 @@ export default function AyudaPage() {
               Contacta con nosotros para consultas personalizadas.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Mail className="h-6 w-6" />
@@ -317,13 +601,6 @@ export default function AyudaPage() {
                 <p className="text-sm text-blue-100">linkerpro.notifications@gmail.com</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <Phone className="h-6 w-6" />
-                </div>
-                <h3 className="font-semibold mb-1">Teléfono</h3>
-                <p className="text-sm text-blue-100">+52 246 793 4968</p>
-              </div>
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -344,43 +621,7 @@ export default function AyudaPage() {
           </div>
         </motion.section>
 
-        {/* Estado del proyecto */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="mt-16"
-        >
-          <Card className="border-l-4 border-l-yellow-500 bg-yellow-50">
-            <CardContent className="p-6">
-              <div className="flex items-start gap-3">
-                <AlertCircle className="h-5 w-5 text-yellow-600 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-yellow-800 mb-2">Estado del Proyecto LinkerStore</h3>
-                  <p className="text-yellow-700 text-sm mb-3">
-                    Actualmente LinkerStore está en desarrollo. El blog y las guías están completamente funcionales, 
-                    pero algunas funcionalidades avanzadas como cuentas de usuario y servicios premium estarán 
-                    disponibles próximamente.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-green-100 text-green-800">
-                      <CheckCircle className="h-3 w-3 mr-1" />
-                      Blog Activo
-                    </Badge>
-                    <Badge className="bg-green-100 text-green-800">
-                      <CheckCircle className="h-3 w-3 mr-1" />
-                      Guías Disponibles
-                    </Badge>
-                    <Badge className="bg-yellow-100 text-yellow-800">
-                      <Clock className="h-3 w-3 mr-1" />
-                      Cuentas de Usuario (Próximamente)
-                    </Badge>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.section>
+       
       </div>
     </BlogLayout>
   );

@@ -6,10 +6,10 @@ import ConditionalFooter from '@/components/ConditionalFooter'
 import CookieConsent from '@/components/cookies/CookieConsent'
 
 export const metadata: Metadata = {
-  title: 'LinkerPro - Blog de Seguridad Industrial | Equipos de Protección Personal',
-  description: 'Tu fuente confiable de información sobre seguridad industrial y EPP. Guías, reseñas y consejos de expertos para crear ambientes de trabajo más seguros.',
+  title: 'LinkerStore - Tu Tienda de Equipos Industriales y Seguridad | EPP y Herramientas',
+  description: 'LinkerStore es tu tienda especializada en equipos industriales, herramientas profesionales y equipos de protección personal. Encuentra los mejores productos con guías expertas y reseñas detalladas.',
   generator: 'v0.dev',
-  keywords: 'seguridad industrial, EPP, equipos protección personal, blog seguridad, guías seguridad laboral, LinkerPro',
+  keywords: 'LinkerStore, equipos industriales, herramientas profesionales, EPP, seguridad industrial, tienda online, equipos protección personal, blog seguridad',
 }
 
 export default function RootLayout({

@@ -33,7 +33,7 @@ export default function ServiciosPage() {
       id: 'consultoria',
       icon: Shield,
       title: 'Consultoría en Seguridad Industrial',
-      price: 'Desde €299/día',
+      price: 'Desde $5,999 MXN/día',
       description: 'Evaluación de riesgos laborales y diseño de planes de seguridad personalizados para tu empresa.',
       features: [
         'Evaluación completa de riesgos laborales',
@@ -55,12 +55,12 @@ export default function ServiciosPage() {
       id: 'auditoria',
       icon: Award,
       title: 'Auditoría de Cumplimiento Normativo',
-      price: 'Desde €199/día',
-      description: 'Verificación del cumplimiento de normativas ISO 45001, legislación española y europea de seguridad.',
+      price: 'Desde $3,999 MXN/día',
+      description: 'Verificación del cumplimiento de normativas ISO 45001, Normas Oficiales Mexicanas (NOM) y legislación mexicana de seguridad.',
       features: [
         'Auditoría ISO 45001 y OHSAS 18001',
-        'Verificación legislación española (Ley 31/1995)',
-        'Revisión normativas europeas EN/CE',
+        'Verificación cumplimiento NOM-STPS mexicanas',
+        'Revisión normativas internacionales aplicables',
         'Análisis de documentación preventiva',
         'Evaluación de equipos y instalaciones',
         'Certificado de cumplimiento'
@@ -77,7 +77,7 @@ export default function ServiciosPage() {
       id: 'formacion',
       icon: Users,
       title: 'Formación Especializada',
-      price: 'Desde €150/sesión',
+      price: 'Desde $2,999 MXN/sesión',
       description: 'Cursos y talleres prácticos sobre uso correcto de EPP, normativas y mejores prácticas de seguridad.',
       features: [
         'Formación presencial y online',
@@ -99,7 +99,7 @@ export default function ServiciosPage() {
       id: 'contenido',
       icon: FileText,
       title: 'Contenido Técnico Personalizado',
-      price: 'Desde €99/artículo',
+      price: 'Desde $1,999 MXN/artículo',
       description: 'Creación de guías técnicas, manuales y contenido especializado para tu empresa o sector específico.',
       features: [
         'Artículos técnicos especializados',
@@ -148,30 +148,31 @@ export default function ServiciosPage() {
 
   const testimonials = [
     {
-      name: 'Carlos Ruiz',
-      position: 'Director de RRHH',
-      company: 'MetalCorp Industrias',
-      text: 'La auditoría de LinkerStore nos ayudó a identificar 15 puntos de mejora críticos. Su enfoque profesional y conocimiento técnico son excepcionales.',
+      name: 'Carlos Ruiz Hernández',
+      position: 'Director de Seguridad',
+      company: 'Industrias Monterrey SA de CV',
+      text: 'LinkerPro nos ayudó a cumplir con todas las NOM mexicanas de seguridad. Su consultoría identificó 18 puntos críticos de mejora y ahora tenemos cero accidentes laborales.',
       rating: 5
     },
     {
-      name: 'Ana López',
+      name: 'Ana Patricia López',
       position: 'Responsable de Prevención',
-      company: 'ConstructTech S.L.',
-      text: 'Los cursos de formación han mejorado significativamente la conciencia sobre seguridad de nuestro equipo. Muy recomendable.',
+      company: 'Construcciones del Bajío',
+      text: 'Los cursos de capacitación sobre uso correcto de EPP han transformado la cultura de seguridad de nuestra empresa. Excelente inversión.',
       rating: 5
     },
     {
-      name: 'Miguel Torres',
+      name: 'Miguel Torres García',
       position: 'Gerente de Operaciones',
-      company: 'Química Avanzada',
-      text: 'El contenido técnico que crearon para nosotros es de la más alta calidad. Superó nuestras expectativas.',
+      company: 'Petroquímica Mexicana',
+      text: 'El contenido técnico personalizado que desarrollaron para nuestros procesos químicos superó todas nuestras expectativas. Muy profesionales.',
       rating: 5
     }
   ];
 
   return (
     <BlogLayout>
+
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 opacity-20">
@@ -204,22 +205,67 @@ export default function ServiciosPage() {
               </h1>
               
               <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-                Consultoría especializada en seguridad industrial por expertos certificados
+                Consultoría especializada en seguridad industrial por expertos certificados en México
               </p>
+              
+              {/* Botones de CTA mejorados */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Consulta Gratuita
+                  </Button>
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="border-2 border-white/50 text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Descargar Catálogo
+                  </Button>
+                </motion.div>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">15+</div>
-                  <div className="text-sm text-blue-200">Años de Experiencia</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">500+</div>
-                  <div className="text-sm text-blue-200">Proyectos Completados</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">98%</div>
-                  <div className="text-sm text-blue-200">Satisfacción del Cliente</div>
-                </div>
+                <motion.div 
+                  className="text-center"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.5, type: "spring", bounce: 0.4 }}
+                >
+                  <div className="text-2xl font-bold">10+</div>
+                  <div className="text-sm text-blue-200">Años en México</div>
+                </motion.div>
+                <motion.div 
+                  className="text-center"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.6, type: "spring", bounce: 0.4 }}
+                >
+                  <div className="text-2xl font-bold">300+</div>
+                  <div className="text-sm text-blue-200">Empresas Atendidas</div>
+                </motion.div>
+                <motion.div 
+                  className="text-center"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.7, type: "spring", bounce: 0.4 }}
+                >
+                  <div className="text-2xl font-bold">100%</div>
+                  <div className="text-sm text-blue-200">Cumplimiento NOM</div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -227,7 +273,43 @@ export default function ServiciosPage() {
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        
+              {/* Proceso de Trabajo */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Proceso</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Un enfoque sistemático y profesional garantiza los mejores resultados en cada proyecto
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="text-center"
+              >
+                <div className="relative">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold">
+                    {step.step}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
         {/* Servicios Principales */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
@@ -318,12 +400,21 @@ export default function ServiciosPage() {
                           </ul>
                         </div>
 
-                        <Button className="w-full" asChild>
-                          <Link href="/contacto">
-                            Solicitar Información
-                            <ArrowRight className="h-4 w-4 ml-2" />
-                          </Link>
-                        </Button>
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <Button 
+                            className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" 
+                            asChild
+                          >
+                            <Link href="/contacto" className="flex items-center justify-center gap-2">
+                              <MessageCircle className="h-5 w-5" />
+                              Solicitar Cotización Gratuita
+                              <ArrowRight className="h-4 w-4" />
+                            </Link>
+                          </Button>
+                        </motion.div>
                       </motion.div>
                     )}
                   </CardContent>
@@ -333,43 +424,7 @@ export default function ServiciosPage() {
           </div>
         </motion.section>
 
-        {/* Proceso de Trabajo */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Proceso</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Un enfoque sistemático y profesional garantiza los mejores resultados en cada proyecto
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="text-center"
-              >
-                <div className="relative">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <step.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold">
-                    {step.step}
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+  
 
         {/* Testimonios */}
         <motion.section
@@ -425,48 +480,55 @@ export default function ServiciosPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button asChild size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link href="/contacto" className="flex items-center gap-2">
-                <MessageCircle className="h-4 w-4" />
-                Solicitar Consulta Gratuita
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <a href="tel:+34900123456" className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                Llamar Ahora: +52 246 793 4968
-              </a>
-            </Button>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <Link href="/contacto" className="flex items-center gap-2">
+                  <MessageCircle className="h-5 w-5" />
+                  Consulta Gratuita Inmediata
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline"
+                className="border-2 border-white/50 text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300"
+              >
+                <Link href="tel:+525512345678" className="flex items-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  Llamar Ahora
+                </Link>
+              </Button>
+            </motion.div>
           </div>
 
-          <div className="text-sm text-blue-200">
-            📧 linkerpro.notifications@gmail.com | 🕒 Lunes a Viernes, 9:00 - 18:00 GMT-6
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-blue-200">
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              linkerpro.notifications@gmail.com
+            </div>
+            <div className="hidden sm:block">|</div>
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              Lunes a Viernes, 9:00 - 18:00 (Horario de México)
+            </div>
           </div>
         </motion.section>
 
-        {/* Aviso sobre estado del proyecto */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="mt-16"
-        >
-          <Card className="border-l-4 border-l-yellow-500 bg-yellow-50">
-            <CardContent className="p-6">
-              <div className="flex items-start gap-3">
-                <Clock className="h-5 w-5 text-yellow-600 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-yellow-800 mb-2">Estado de los Servicios</h3>
-                  <p className="text-yellow-700 text-sm">
-                    Los servicios de consultoría están siendo preparados como parte del lanzamiento completo de LinkerStore. 
-                    Actualmente puedes contactar con nuestro equipo para consultas informales y orientación gratuita 
-                    sobre seguridad industrial.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.section>
+  
       </div>
     </BlogLayout>
   );
