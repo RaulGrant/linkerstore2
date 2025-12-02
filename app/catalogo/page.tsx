@@ -64,7 +64,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 3200,
-    image: "/images/products/herramientas 82 en 1/kit-herramientas-82.webp",
+    image: "/images/catalogo/kit-herramientas-82.webp",
     amazonUrl: "https://mercadolibre.com/sec/2naVqQs",
     features: [
       "247 piezas de grado profesional",
@@ -86,7 +86,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.2,
     reviews: 850,
-    image: "/images/products/llaves pretul/llaves-pretul.webp",
+    image: "/images/catalogo/llaves-pretul.webp",
     amazonUrl: "https://mercadolibre.com/sec/1GQ24Dg",
     features: [
       "83 piezas cuidadosamente seleccionadas",
@@ -108,7 +108,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.5,
     reviews: 2100,
-    image: "/images/products/juego_herramientas_218piezas/herramientas-218.webp",
+    image: "/images/catalogo/herramientas-218.webp",
     amazonUrl: "https://mercadolibre.com/sec/2Du7866",
     features: [
       "238 piezas para múltiples aplicaciones",
@@ -130,7 +130,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 1800,
-    image: "/images/products/destornilladores/destornilladores-precision.webp",
+    image: "/images/catalogo/destornilladores-precision.webp",
     amazonUrl: "https://mercadolibre.com/sec/1tT2HL7",
     features: [
       "150 piezas especializadas en electrónicos",
@@ -152,7 +152,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.5,
     reviews: 500,
-    image: "/images/products/herramientas 82 en 1/kit-herramientas-82.webp",
+    image: "/images/catalogo/kit-herramientas-82.webp",
     amazonUrl: "https://mercadolibre.com/sec/1miMzDg",
     features: [
       "Taladro inalámbrico incluido",
@@ -174,7 +174,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.0,
     reviews: 160,
-    image: "/images/products/juego_herramientas_218piezas/herramientas-218.webp",
+    image: "/images/catalogo/herramientas-218.webp",
     amazonUrl: "https://mercadolibre.com/sec/2KHakLi",
     features: [
       "216 piezas completas",
@@ -196,7 +196,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.0,
     reviews: 100,
-    image: "/images/products/Botiquin/botiquin-industrial.webp",
+    image: "/images/catalogo/botiquin-industrial.webp",
     amazonUrl: "https://mercadolibre.com/sec/2tACX4Z",
     features: [
       "168 piezas incluye curitas y guantes",
@@ -221,7 +221,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 300,
-    image: "/images/products/Botiquin/jaloma-22.webp",
+    image: "/images/catalogo/jaloma-22.webp",
     amazonUrl: "https://mercadolibre.com/sec/17VWdsg",
     features: [
       "22 piezas esenciales de primeros auxilios",
@@ -242,7 +242,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 220,
-    image: "/images/products/Botiquin/gabinete-surtek.webp",
+    image: "/images/catalogo/gabinete-surtek.webp",
     amazonUrl: "https://mercadolibre.com/sec/2wiufhR",
     features: [
       "Gabinete metálico para montaje en pared",
@@ -263,7 +263,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.2,
     reviews: 150,
-    image: "/images/products/overoles/redkap-ct10.webp",
+    image: "/images/catalogo/redkap-ct10.webp",
     amazonUrl: "https://mercadolibre.com/sec/2fgbB41",
     features: [
       "Capucha integrada",
@@ -285,7 +285,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.0,
     reviews: 15,
-    image: "/images/products/overoles/dickies-peto.webp",
+    image: "/images/catalogo/dickies-peto.webp",
     amazonUrl: "https://mercadolibre.com/sec/1sD7aUv",
     features: [
       "Cintas reflectantes",
@@ -307,7 +307,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 450,
-    image: "/images/products/overoles/guigua-mono-reparacion.webp",
+    image: "/images/catalogo/guigua-mono-reparacion.webp",
     amazonUrl: "https://mercadolibre.com/sec/1z6GYqc",
     features: [
       "Poliéster ligero y económico",
@@ -328,7 +328,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.3,
     reviews: 300,
-    image: "/images/products/overoles/sanfu-multibolsillos.webp",
+    image: "/images/catalogo/sanfu-multibolsillos.webp",
     amazonUrl: "https://mercadolibre.com/sec/1JKomB9",
     features: [
       "Múltiples bolsillos funcionales",
@@ -349,7 +349,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 5,
-    image: "/images/products/overoles/brisco-industrial-reflejante.webp",
+    image: "/images/catalogo/brisco-industrial-reflejante.webp",
     amazonUrl: "https://mercadolibre.com/sec/2bXCQGF",
     features: [
       "Cintas reflectantes de 2 pulgadas",
@@ -370,7 +370,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 266,
-    image: "/images/products/calzado/berrendo-3017.webp",
+    image: "/images/catalogo/berrendo-3017.webp",
     amazonUrl: "https://mercadolibre.com/sec/2VaKvc7",
     features: [
       "Certificación NOM-113-STPS-2009 Tipo II y Tipo III (PP+D)",
@@ -392,7 +392,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 3,
-    image: "/images/products/calzado/caterpillar-second-shift.webp",
+    image: "/images/catalogo/caterpillar-second-shift.webp",
     amazonUrl: "https://mercadolibre.com/sec/1KmV8U4",
     features: [
       "Construcción Goodyear Welt (resuelable)",
@@ -414,7 +414,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 10000,
-    image: "/images/products/calzado/timberland-pro-pit-boss.webp",
+    image: "/images/catalogo/timberland-pro-pit-boss.webp",
     amazonUrl: "https://mercadolibre.com/sec/2hukoND",
     features: [
       "Casquillo de acero",
@@ -436,7 +436,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 235,
-    image: "/images/products/calzado/riverline-spyder-spyg2.webp",
+    image: "/images/catalogo/riverline-spyder-spyg2.webp",
     amazonUrl: "https://mercadolibre.com/sec/1Tpzibx",
     features: [
       "Casquillo de policarbonato (ligero)",
@@ -458,7 +458,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.9,
     reviews: 79,
-    image: "/images/products/calzado/timberland-pro-pit-6.webp",
+    image: "/images/catalogo/timberland-pro-pit-6.webp",
     amazonUrl: "https://mercadolibre.com/sec/2LrJRAz",
     features: [
       "Casquillo de fibra de vidrio (100% libre de metal)",
@@ -480,7 +480,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 23500,
-    image: "/images/products/calzado/nieion-tenis-safety.webp",
+    image: "/images/catalogo/nieion-tenis-safety.webp",
     amazonUrl: "https://mercadolibre.com/sec/32PaSVu",
     features: [
       "Diseño tipo tenis casual y seguro",
@@ -502,7 +502,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 3800,
-    image: "/images/products/calzado/ekinio-tenis-seguridad.webp",
+    image: "/images/catalogo/ekinio-tenis-seguridad.webp",
     amazonUrl: "https://mercadolibre.com/sec/2jknq7Q",
     features: [
       "Puntera de acero (estándar europeo)",
@@ -524,7 +524,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.3,
     reviews: 60,
-    image: "/images/products/overoles/pro-tex-bolsas-cargo.webp",
+    image: "/images/catalogo/pro-tex-bolsas-cargo.webp",
     amazonUrl: "https://mercadolibre.com/sec/1ugpCn6",
     features: [
       "Cremallera de dos vías",
@@ -545,7 +545,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.9,
     reviews: 69,
-    image: "/images/products/Botiquin/botiquin-metalico-equipado.webp",
+    image: "/images/catalogo/botiquin-metalico-equipado.webp",
     amazonUrl: "https://mercadolibre.com/sec/1fCNzj2",
     features: [
       "Gabinete metálico mediano (equipado)",
@@ -566,7 +566,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.9,
     reviews: 284,
-    image: "/images/products/Botiquin/matein-1233.webp",
+    image: "/images/catalogo/matein-1233.webp",
     amazonUrl: "https://mercadolibre.com/sec/1GCdYb6",
     features: [
       "Maleta de tela impermeable con divisores ajustables",
@@ -587,7 +587,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 86,
-    image: "/images/products/Botiquin/blekrasi-ifak.webp",
+    image: "/images/catalogo/blekrasi-ifak.webp",
     amazonUrl: "https://mercadolibre.com/sec/2D1XM9U",
     features: [
       "Kit IFAK centrado en trauma y control de hemorragias",
@@ -608,7 +608,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 43,
-    image: "/images/products/Botiquin/botiquin-industrial-num5.webp",
+    image: "/images/catalogo/botiquin-industrial-num5.webp",
     amazonUrl: "https://mercadolibre.com/sec/2yRYKpK",
     features: [
       "Gabinete metálico de gran tamaño (~51x41x11 cm)",
@@ -621,7 +621,7 @@ const productCatalog: Product[] = [
   },
   
 
-  // Chalecos añadidos desde recommendedProducts (mapeados a category "EPP")
+  // Chalecos añadidos desde recommendedcatalogo (mapeados a category "EPP")
   {
     id: "gabardina-elite",
     name: "Chaleco De Seguridad Radians SV46 OXL Clase 2 Extra",
@@ -632,7 +632,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.5,
     reviews: 500,
-    image: "/images/products/chaleco/gabardina-elite.webp",
+    image: "/images/catalogo/gabardina-elite.webp",
     amazonUrl: "https://mercadolibre.com/sec/2RznHsW",
     features: [
       "4 líneas de cinta reflectante de alta ganancia",
@@ -654,7 +654,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 10,
-    image: "/images/products/chaleco/bicolor-ansi.webp",
+    image: "/images/catalogo/bicolor-ansi.webp",
     amazonUrl: "https://mercadolibre.com/sec/26Kem4U",
     features: [
       "Cumple especificaciones Clase 2",
@@ -676,7 +676,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 720,
-    image: "/images/products/chaleco/malla-economica.webp",
+    image: "/images/catalogo/malla-economica.webp",
     amazonUrl: "https://mercadolibre.com/sec/23uTvh2",
     features: [
       "Malla abierta de poliéster ultra ventilada",
@@ -698,7 +698,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 900,
-    image: "/images/products/chaleco/professional-max.webp",
+    image: "/images/catalogo/professional-max.webp",
     amazonUrl: "https://mercadolibre.com/sec/26CEJyr",
     features: [
       "ANSI/ISEA 107 Tipo R Clase 2",
@@ -720,7 +720,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 350,
-    image: "/images/products/chaleco/microprismas-naranja.webp",
+    image: "/images/catalogo/microprismas-naranja.webp",
     amazonUrl: "https://mercadolibre.com/sec/1GK5aRk",
     features: [
       "ANSI/ISEA 107 Tipo R Clase 2",
@@ -742,7 +742,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 10,
-    image: "/images/products/chaleco/breakaway-pro.webp",
+    image: "/images/catalogo/breakaway-pro.webp",
     amazonUrl: "https://mercadolibre.com/sec/2Xzhw76",
     features: [
       "ANSI/ISEA 107 Tipo R Clase 2 con feature breakaway",
@@ -764,7 +764,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 700,
-    image: "/images/products/chaleco/termico-invierno.webp",
+    image: "/images/catalogo/termico-invierno.webp",
     amazonUrl: "https://mercadolibre.com/sec/16xjRYw",
     features: [
       "Gabardina 100% algodón de alta resistencia",
@@ -788,7 +788,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.8,
     "reviews": 95,
-    "image": "/images/products/ANEMOMETRO/uni-t-ut363.webp",
+    "image": "/images/catalogo/uni-t-ut363.webp",
     "amazonUrl": "https://mercadolibre.com/sec/2PnRGPZ",
     "features": [
       "Impulsor de paletas (fan impeller)",
@@ -811,7 +811,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.8,
     "reviews": 210,
-    "image": "/images/products/SENALIZACION/cinta-barricada-surtek-100m.webp",
+    "image": "/images/catalogo/cinta-barricada-surtek-100m.webp",
     "amazonUrl": "https://mercadolibre.com/sec/2eFk373",
     "features": [
       "Longitud 100 m",
@@ -833,7 +833,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.6,
     "reviews": 119,
-    "image": "/images/products/SENALIZACION/cono-surtek-45cm.webp",
+    "image": "/images/catalogo/cono-surtek-45cm.webp",
     "amazonUrl": "https://mercadolibre.com/sec/1XHP4JG",
     "features": [
       "Altura 45 cm",
@@ -855,7 +855,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.8,
     "reviews": 284,
-    "image": "/images/products/ARNES/combyeo-arnes.webp",
+    "image": "/images/catalogo/combyeo-arnes.webp",
     "amazonUrl": "https://mercadolibre.com/sec/1aR5CWc",
     "features": [
       "Arnés de cuerpo completo en poliéster de alta tenacidad",
@@ -877,7 +877,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.7,
     "reviews": 142,
-    "image": "/images/products/ARNES/lica-kit.webp",
+    "image": "/images/catalogo/lica-kit.webp",
     "amazonUrl": "https://mercadolibre.com/sec/18FXEdR",
     "features": [
       "Arnés ARN-L en poliéster (1¾\")",
@@ -899,7 +899,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 5.0,
     "reviews": 500,
-    "image": "/images/products/CASCOS/infra-msa-fullbrim.webp",
+    "image": "/images/catalogo/infra-msa-fullbrim.webp",
     "amazonUrl": "https://mercadolibre.com/sec/1yZQSU9",
     "features": [
       "Carcasa en HDPE (Ala ancha, protección 360°)",
@@ -921,7 +921,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.8,
     "reviews": 100,
-    "image": "/images/products/SENALIZACION/malla-seguridad-1-2x30m.webp",
+    "image": "/images/catalogo/malla-seguridad-1-2x30m.webp",
     "amazonUrl": "https://mercadolibre.com/sec/27tsLrn",
     "features": [
       "Dimensiones 1.2 m x 30 m",
@@ -943,7 +943,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.8,
     "reviews": 120,
-    "image": "/images/products/ARNES/linea-vida-1-8m.webp",
+    "image": "/images/catalogo/linea-vida-1-8m.webp",
     "amazonUrl": "https://mercadolibre.com/sec/1zxq3ZX",
     "features": [
       "Longitud 1.8 m (6 pies)",
@@ -965,7 +965,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 5.0,
     "reviews": 50,
-    "image": "/images/products/ANCLAJES/hawk-av-f12.webp",
+    "image": "/images/catalogo/hawk-av-f12.webp",
     "amazonUrl": "https://mercadolibre.com/sec/2H47uQG",
     "features": [
       "Rango de apertura 3\" a 12\" (9 cm a 30.5 cm)",
@@ -987,7 +987,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 4.9,
     "reviews": 100,
-    "image": "/images/products/ANDAMIOS/zait-andamio-1-5x2-0x1-93m.webp",
+    "image": "/images/catalogo/zait-andamio-1-5x2-0x1-93m.webp",
     "amazonUrl": "https://mercadolibre.com/sec/25LEiT4",
     "features": [
       "Dimensiones: 1.5 m x 2.0 m x 1.93 m",
@@ -1009,7 +1009,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 5.0,
     "reviews": 45,
-    "image": "/images/products/ACCESORIOS/3m-dbi-sala-9501403.webp",
+    "image": "/images/catalogo/3m-dbi-sala-9501403.webp",
     "amazonUrl": "https://mercadolibre.com/sec/1ZzRV5u",
     "features": [
       "Modelo 9501403",
@@ -1031,7 +1031,7 @@ const productCatalog: Product[] = [
     "price": "Consultar precio",
     "rating": 5.0,
     "reviews": 150,
-    "image": "/images/products/RESCATE/petzl-jag-rescue-kit.webp",
+    "image": "/images/catalogo/petzl-jag-rescue-kit.webp",
     "amazonUrl": "https://mercadolibre.com/sec/1e6m8NF",
     "features": [
       "JAG System (ventaja mecánica 4:1)",
@@ -1056,7 +1056,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 2300,
-    image: "/images/products/lentes/kleenguard-nemesis-v30.webp",
+    image: "/images/catalogo/kleenguard-nemesis-v30.webp",
     amazonUrl: "https://mercadolibre.com/sec/31zmde5",
     features: [
       "Diseño deportivo y envolvente que mejora la aceptación de uso",
@@ -1078,7 +1078,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 1270,
-    image: "/images/products/lentes/milwaukee-antirayaduras.webp",
+    image: "/images/catalogo/milwaukee-antirayaduras.webp",
     amazonUrl: "https://mercadolibre.com/sec/2MKekSP",
     features: [
       "Recubrimiento de capa dura antirayaduras para uso intensivo",
@@ -1099,7 +1099,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 850,
-    image: "/images/products/lentes/3m-securefit-400-scotchgard.webp",
+    image: "/images/catalogo/3m-securefit-400-scotchgard.webp",
     amazonUrl: "https://mercadolibre.com/sec/2DmnYrR",
     features: [
       "Tecnología PDT (difusión de presión) en patillas para autoajuste",
@@ -1120,7 +1120,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 45,
-    image: "/images/products/lentes/hexarmor-vs250-variomatic.webp",
+    image: "/images/catalogo/hexarmor-vs250-variomatic.webp",
     amazonUrl: "https://mercadolibre.com/sec/14dSX7w",
     features: [
       "Micas fotocromáticas (Variomatic) que se adaptan a la luz",
@@ -1141,7 +1141,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 200,
-    image: "/images/products/lentes/truper-sobrelente-101954.webp",
+    image: "/images/catalogo/truper-sobrelente-101954.webp",
     amazonUrl: "https://mercadolibre.com/sec/1oqjT22",
     features: [
       "Diseño OTG (over-the-glass) para usar sobre gafas graduadas",
@@ -1162,7 +1162,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 300,
-    image: "/images/products/lentes/bolle-swift-otg-platinum-lite.webp",
+    image: "/images/catalogo/bolle-swift-otg-platinum-lite.webp",
     amazonUrl: "https://mercadolibre.com/sec/1MnYQJQ",
     features: [
       "Recubrimiento PLATINUM Lite (alto rendimiento antiempañante y anti-rayaduras)",
@@ -1186,7 +1186,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 0,
-    image: "/images/products/arnes/combyeo-kit.webp",
+    image: "/images/catalogo/combyeo-kit.webp",
     amazonUrl: "https://mercadolibre.com/sec/1xH4X5C",
     features: [
       "Incluye arnés, línea de vida/cuerda doble y gancho",
@@ -1207,7 +1207,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 100,
-    image: "/images/products/arnes/jyrsa-jyr-10a.webp",
+    image: "/images/catalogo/jyrsa-jyr-10a.webp",
     amazonUrl: "https://mercadolibre.com/sec/2wp8Rg7",
     features: [
       "1 anillo dorsal para detención de caídas",
@@ -1229,7 +1229,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 200,
-    image: "/images/products/arnes/truper-14434.webp",
+    image: "/images/catalogo/truper-14434.webp",
     amazonUrl: "https://mercadolibre.com/sec/1KPATiG",
     features: [
       "5 anillos 'D' (dorsal + 2 laterales + 2 hombros)",
@@ -1250,7 +1250,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 58,
-    image: "/images/products/arnes/lica-kit.webp",
+    image: "/images/catalogo/lica-kit.webp",
     amazonUrl: "https://mercadolibre.com/sec/1KjyJwP",
     features: [
       "Kit completo: arnés + amortiguador + punto de anclaje",
@@ -1271,7 +1271,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 85,
-    image: "/images/products/arnes/msa-vform.webp",
+    image: "/images/catalogo/msa-vform.webp",
     amazonUrl: "https://mercadolibre.com/sec/31fDL5v",
     features: [
       "Configuración 3 anillos (dorsal + 2 laterales)",
@@ -1292,7 +1292,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 100,
-    image: "/images/products/arnes/warthog-safety-5p.webp",
+    image: "/images/catalogo/warthog-safety-5p.webp",
     amazonUrl: "https://mercadolibre.com/sec/2pRdC1u",
     features: [
       "5 puntos de ajuste y anclaje",
@@ -1315,7 +1315,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.9,
     reviews: 72,
-    image: "/images/products/escaleras/cuprum-c-3217-06.webp",
+    image: "/images/catalogo/cuprum-c-3217-06.webp",
     amazonUrl: "https://mercadolibre.com/sec/1UNJ4FY",
     features: [
       "Construcción dieléctrica en fibra de vidrio (no conductora)",
@@ -1337,7 +1337,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 344,
-    image: "/images/products/escaleras/truper-101906.webp",
+    image: "/images/catalogo/truper-101906.webp",
     amazonUrl: "https://mercadolibre.com/sec/148UFBt",
     features: [
       "Múltiples configuraciones: andamio, tijera, recta, escalinata",
@@ -1359,7 +1359,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 18,
-    image: "/images/products/escaleras/cuprum-494-24n.webp",
+    image: "/images/catalogo/cuprum-494-24n.webp",
     amazonUrl: "https://mercadolibre.com/sec/31nsUtj",
     features: [
       "24 peldaños y gran alcance (>7 m altura de trabajo)",
@@ -1381,7 +1381,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 0,
-    image: "/images/products/escaleras/werner-platforma.webp",
+    image: "/images/catalogo/werner-platforma.webp",
     amazonUrl: "https://mercadolibre.com/sec/1YWK8fm",
     features: [
       "Plataforma amplia y barandales de protección",
@@ -1403,7 +1403,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.5,
     reviews: 84,
-    image: "/images/products/escaleras/escalera-convertible-economica.webp",
+    image: "/images/catalogo/escalera-convertible-economica.webp",
     amazonUrl: "https://mercadolibre.com/sec/2SF8EY2",
     features: [
       "Funcionalidad 2-en-1: tijera y extensión",
@@ -1428,7 +1428,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.9,
     reviews: 1500,
-    image: "/images/products/multimetros/fluke-117.webp",
+    image: "/images/catalogo/fluke-117.webp",
     amazonUrl: "https://mercadolibre.com/sec/1RmPMSC",
     features: [
       "True RMS para precisión en cargas complejas",
@@ -1450,7 +1450,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 422,
-    image: "/images/products/multimetros/uni-t-ut204-plus.webp",
+    image: "/images/catalogo/uni-t-ut204-plus.webp",
     amazonUrl: "https://mercadolibre.com/sec/12VAjv4",
     features: [
       "Medición de corriente AC/DC hasta 600 A",
@@ -1472,7 +1472,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 10000,
-    image: "/images/products/multimetros/kaiweets-ht118a.webp",
+    image: "/images/catalogo/kaiweets-ht118a.webp",
     amazonUrl: "https://mercadolibre.com/sec/2zf6CQZ",
     features: [
       "True RMS y auto-rango",
@@ -1494,7 +1494,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 75,
-    image: "/images/products/multimetros/fluke-101.webp",
+    image: "/images/catalogo/fluke-101.webp",
     amazonUrl: "https://mercadolibre.com/sec/1zvfg2j",
     features: [
       "Formato de bolsillo, muy compacto",
@@ -1516,7 +1516,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 514,
-    image: "/images/products/multimetros/astroai-trms-6000.webp",
+    image: "/images/catalogo/astroai-trms-6000.webp",
     amazonUrl: "https://mercadolibre.com/sec/2ZeSdgH",
     features: [
       "True RMS y auto-rango",
@@ -1538,7 +1538,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.5,
     reviews: 625,
-    image: "/images/products/multimetros/klein-mm400.webp",
+    image: "/images/catalogo/klein-mm400.webp",
     amazonUrl: "https://mercadolibre.com/sec/1aqEm5C",
     features: [
       "Construcción robusta y resistente a caídas (hasta 1 m)",
@@ -1563,7 +1563,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.6,
     reviews: 10,
-    image: "/images/products/power-tools/dewalt-dcd7781d2-b3.webp",
+    image: "/images/catalogo/dewalt-dcd7781d2-b3.webp",
     amazonUrl: "https://mercadolibre.com/sec/2Gqknap",
     features: [
       "Motor brushless 20V MAX para mayor autonomía y vida útil",
@@ -1584,7 +1584,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 100,
-    image: "/images/products/power-tools/bosch-gsb-18v-50.webp",
+    image: "/images/catalogo/bosch-gsb-18v-50.webp",
     amazonUrl: "https://mercadolibre.com/sec/2tmyRVs",
     features: [
       "Motor brushless de alto rendimiento",
@@ -1605,7 +1605,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 115,
-    image: "/images/products/power-tools/truper-roto-1-2a8.webp",
+    image: "/images/catalogo/truper-roto-1-2a8.webp",
     amazonUrl: "https://mercadolibre.com/sec/2tmyRVs",
     features: [
       "Motor de 750W para trabajo rudo",
@@ -1626,7 +1626,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 866,
-    image: "/images/products/power-tools/makita-hp1630.webp",
+    image: "/images/catalogo/makita-hp1630.webp",
     amazonUrl: "https://mercadolibre.com/sec/2pX4k44",
     features: [
       "710W de potencia en formato con cable",
@@ -1647,7 +1647,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 410,
-    image: "/images/products/power-tools/milwaukee-m18-fuel-2tool.webp",
+    image: "/images/catalogo/milwaukee-m18-fuel-2tool.webp",
     amazonUrl: "https://mercadolibre.com/sec/1VbykFr",
     features: [
       "Tecnología M18 FUEL para máxima potencia y eficiencia",
@@ -1668,7 +1668,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 130,
-    image: "/images/products/power-tools/dewalt-dch133m2.webp",
+    image: "/images/catalogo/dewalt-dch133m2.webp",
     amazonUrl: "https://mercadolibre.com/sec/1Dkr9c6",
     features: [
       "SDS Plus con mecanismo electroneumático para concreto",
@@ -1692,7 +1692,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 127,
-    image: "/images/products/termometros/goxawee-ir.webp",
+    image: "/images/catalogo/goxawee-ir.webp",
     amazonUrl: "https://mercadolibre.com/sec/1hXZobU",
     features: [
       "Rango de medición: -50°C a 600°C",
@@ -1714,7 +1714,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 313,
-    image: "/images/products/termometros/truper-18229.webp",
+    image: "/images/catalogo/truper-18229.webp",
     amazonUrl: "https://mercadolibre.com/sec/2RDXrZJ",
     features: [
       "Rango aproximado: -50°C a 550°C",
@@ -1736,7 +1736,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 5,
-    image: "/images/products/termometros/uni-t-ut300s.webp",
+    image: "/images/catalogo/uni-t-ut300s.webp",
     amazonUrl: "https://mercadolibre.com/sec/12o5LsV",
     features: [
       "Emisividad ajustable: 0.10 a 1.00",
@@ -1758,7 +1758,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 23,
-    image: "/images/products/termometros/fluke-62-max.webp",
+    image: "/images/catalogo/fluke-62-max.webp",
     amazonUrl: "https://mercadolibre.com/sec/29G733y",
     features: [
       "Rango de medición típ. -30°C a 500°C",
@@ -1780,7 +1780,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 240,
-    image: "/images/products/termometros/klein-ir07.webp",
+    image: "/images/catalogo/klein-ir07.webp",
     amazonUrl: "https://mercadolibre.com/sec/216huMe",
     features: [
       "2 en 1: medición IR + sonda de contacto desplegable",
@@ -1802,7 +1802,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 100,
-    image: "/images/products/termometros/fluke-51-ii.webp",
+    image: "/images/catalogo/fluke-51-ii.webp",
     amazonUrl: "https://mercadolibre.com/sec/2p3xDDQ",
     features: [
       "Precisión de laboratorio: ±0.05% + 0.3°C",
@@ -1826,7 +1826,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 100,
-    image: "/images/products/selladores/sika-sikaflex-1a-purform.webp",
+    image: "/images/catalogo/sika-sikaflex-1a-purform.webp",
     amazonUrl: "https://mercadolibre.com/sec/144sYAn",
     features: [
       "Monocomponente poliuretano que cura con humedad",
@@ -1849,7 +1849,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.7,
     reviews: 85,
-    image: "/images/products/selladores/loctite-si-596-rtv-rojo.webp",
+    image: "/images/catalogo/loctite-si-596-rtv-rojo.webp",
     amazonUrl: "https://mercadolibre.com/sec/1Lo35Ha",
     features: [
       "Resistencia térmica: servicio continuo hasta 260°C, picos intermitentes hasta 316°C",
@@ -1871,7 +1871,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 5.0,
     reviews: 45,
-    image: "/images/products/selladores/sika-anchorfix-2-tropical.webp",
+    image: "/images/catalogo/sika-anchorfix-2-tropical.webp",
     amazonUrl: "https://mercadolibre.com/sec/2Zz4qFv",
     features: [
       "Adhesivo epoxi-acrilato bicomponente (sin estireno/solventes)",
@@ -1892,7 +1892,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.1,
     reviews: 880,
-    image: "/images/products/selladores/dap-alex-plus.webp",
+    image: "/images/catalogo/dap-alex-plus.webp",
     amazonUrl: "https://mercadolibre.com/sec/1tjE5LE",
     features: [
       "Látex acrílico con aditivo de silicona para mayor flexibilidad",
@@ -1913,7 +1913,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 0,
-    image: "/images/products/selladores/tekbond-poliuretano-310ml.webp",
+    image: "/images/catalogo/tekbond-poliuretano-310ml.webp",
     amazonUrl: "https://mercadolibre.com/sec/1uqNhFp",
     features: [
       "Curado acético (RTV) monocomponente",
@@ -1935,7 +1935,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 0,
-    image: "/images/products/selladores/pennsylvania-duretan.webp",
+    image: "/images/catalogo/pennsylvania-duretan.webp",
     amazonUrl: "https://mercadolibre.com/sec/2mfa3UR",
     features: [
       "Poliuretano monocomponente para juntas verticales y horizontales",
@@ -1959,6 +1959,50 @@ const sortOptions = [
   { value: "reviews", label: "Más reseñas" },
   { value: "category", label: "Categoría" }
 ];
+
+// Componente para manejar imágenes en las tarjetas con fallback a emojis
+function ProductCardImage({ product }: { product: Product }) {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const getEmojiByCategory = (category: string) => {
+    switch(category) {
+      case 'Herramientas': return '🔧';
+      case 'EPP': return '🦺';
+      case 'Instrumentos': return '📊';
+      case 'Seguridad': return '🛡️';
+      default: return '📦';
+    }
+  };
+
+  return (
+    <>
+      {product.image && !imageError && (
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className={`object-cover transition-all duration-500 ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={() => setImageLoaded(true)}
+          onError={() => {
+            setImageError(true);
+            setImageLoaded(false);
+          }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      )}
+      
+      {/* Fallback emoji cuando no hay imagen o error de carga */}
+      {(!product.image || imageError || !imageLoaded) && (
+        <div className="text-7xl group-hover:text-8xl transition-all duration-300 filter drop-shadow-lg">
+          {getEmojiByCategory(product.category)}
+        </div>
+      )}
+    </>
+  );
+}
 
 export default function CatalogoPage() {
   const [mounted, setMounted] = useState(false);
@@ -3169,12 +3213,7 @@ export default function CatalogoPage() {
                       <div className="relative overflow-hidden">
                         {/* Enhanced Product Image Area */}
                         <div className="relative aspect-square bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                          <div className="text-7xl group-hover:text-8xl transition-all duration-300 filter drop-shadow-lg">
-                            {product.category === 'Herramientas' && '🔧'}
-                            {product.category === 'EPP' && '🦺'}
-                            {product.category === 'Instrumentos' && '📊'}
-                            {product.category === 'Seguridad' && '🛡️'}
-                          </div>
+                          <ProductCardImage product={product} />
                           
                           {/* Gradient overlay on hover */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -3558,14 +3597,7 @@ export default function CatalogoPage() {
                       {selectedProduct.brand}
                     </Badge>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                      <Share2 className="h-4 w-4" />
-                    </Button>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => setShowModal(false)}>
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </div>
+
                 </div>
                 <DialogTitle className="text-2xl font-bold text-left mt-2">
                   {selectedProduct.name}
