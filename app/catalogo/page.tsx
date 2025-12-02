@@ -3607,8 +3607,8 @@ export default function CatalogoPage() {
               <div className="flex-1 overflow-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                 <div className="flex flex-col lg:grid lg:grid-cols-2 gap-2 sm:gap-6 p-2 sm:p-6">
                   {/* Image Carousel */}
-                  <div className="order-1 lg:order-none space-y-2 sm:space-y-4">
-                    <div className="relative bg-gray-50 rounded-lg sm:rounded-2xl overflow-hidden aspect-[3/2] sm:aspect-[4/3] lg:aspect-square max-h-[200px] sm:max-h-[300px] lg:max-h-none">
+                  <div className="order-1 lg:order-none space-y-2 sm:space-y-4 flex flex-col items-center lg:items-start">
+                    <div className="relative bg-gray-50 rounded-lg sm:rounded-2xl overflow-hidden aspect-[3/2] sm:aspect-[4/3] lg:aspect-square max-h-[200px] sm:max-h-[300px] lg:max-h-none w-full max-w-sm sm:max-w-none">
                       <Image
                         src={selectedProduct.images?.[currentImageIndex] || selectedProduct.image || '/api/placeholder/400/400'}
                         alt={selectedProduct.name}
@@ -3658,7 +3658,7 @@ export default function CatalogoPage() {
                     
                     {/* Thumbnail strip */}
                     {selectedProduct.images && selectedProduct.images.length > 1 && (
-                      <div className="flex gap-2 overflow-x-auto pb-2">
+                      <div className="flex gap-2 overflow-x-auto pb-2 justify-center lg:justify-start">
                         {(selectedProduct.images as string[]).map((img: string, index: number) => (
                           <button
                             key={index}
@@ -3683,21 +3683,23 @@ export default function CatalogoPage() {
                   </div>
 
                   {/* Product Details */}
-                  <div className="order-2 lg:order-none space-y-2 sm:space-y-6">
+                  <div className="order-2 lg:order-none space-y-2 sm:space-y-6 text-center lg:text-left">
                     {/* Price */}
-                    <div className="bg-gradient-to-r from-green-50 to-blue-50 p-3 sm:p-4 rounded-lg border border-green-200">
-                      <div className="text-xl sm:text-3xl font-bold text-green-700">
-                        ${selectedProduct.price}
-                      </div>
-                      {selectedProduct.originalPrice && (
-                        <div className="text-xs sm:text-sm text-gray-500 line-through">
-                          Antes: ${selectedProduct.originalPrice}
+                    {selectedProduct.price && selectedProduct.price !== "Consultar precio" && (
+                      <div className="bg-gradient-to-r from-green-50 to-blue-50 p-3 sm:p-4 rounded-lg border border-green-200">
+                        <div className="text-xl sm:text-3xl font-bold text-green-700">
+                          ${selectedProduct.price}
                         </div>
-                      )}
-                    </div>
+                        {selectedProduct.originalPrice && (
+                          <div className="text-xs sm:text-sm text-gray-500 line-through">
+                            Antes: ${selectedProduct.originalPrice}
+                          </div>
+                        )}
+                      </div>
+                    )}
 
                     {/* Rating and Reviews */}
-                    <div className="flex items-center gap-2 sm:gap-4">
+                    <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-4">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
                           <Star
@@ -3730,9 +3732,9 @@ export default function CatalogoPage() {
                         <h3 className="text-sm sm:text-lg font-semibold mb-1 sm:mb-2">Características</h3>
                         <ul className="space-y-0.5 sm:space-y-1 max-h-24 sm:max-h-40 lg:max-h-none overflow-y-auto">
                           {(selectedProduct.features as string[]).map((feature: string, index: number) => (
-                            <li key={index} className="flex items-start gap-2 text-gray-700 text-xs sm:text-base">
+                            <li key={index} className="flex items-start justify-center lg:justify-start gap-2 text-gray-700 text-xs sm:text-base">
                               <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full flex-shrink-0 mt-1.5 sm:mt-2" />
-                              <span className="leading-tight">{feature}</span>
+                              <span className="leading-tight text-center lg:text-left">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -3822,7 +3824,7 @@ export default function CatalogoPage() {
                     </div>
 
                     {/* Additional Info */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600 text-center lg:text-left">
                       <div>
                         <span className="font-medium">Marca:</span> {selectedProduct.brand}
                       </div>
@@ -3830,7 +3832,7 @@ export default function CatalogoPage() {
                         <span className="font-medium">Categoría:</span> {selectedProduct.category}
                       </div>
                       {selectedProduct.model && (
-                        <div className="col-span-2">
+                        <div className="col-span-1 sm:col-span-2">
                           <span className="font-medium">Modelo:</span> {selectedProduct.model}
                         </div>
                       )}
