@@ -140,3 +140,33 @@ body {
     transform: scale(1.2) rotate(180deg);
   }
 }
+
+/* Estilos para scrollbar personalizado en el modal */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.6) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.6);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.8);
+}
+
+/* Mejoras adicionales para móvil */
+@media (max-width: 640px) {
+  .modal-mobile-optimized {
+    max-height: calc(100vh - 2rem);
+  }
+}

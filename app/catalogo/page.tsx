@@ -3583,32 +3583,32 @@ export default function CatalogoPage() {
 
       {/* Product Modal */}
       <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden p-0">
+        <DialogContent className="max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-hidden p-0 mx-2 sm:mx-4 w-[calc(100vw-16px)] sm:w-auto">
           {selectedProduct && (
             <div className="flex flex-col h-full">
               {/* Modal Header */}
-              <DialogHeader className="p-6 pb-4 border-b">
+              <DialogHeader className="p-4 sm:p-6 pb-3 sm:pb-4 border-b">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Badge className="bg-blue-100 text-blue-800 text-sm font-semibold">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                    <Badge className="bg-blue-100 text-blue-800 text-xs sm:text-sm font-semibold">
                       {selectedProduct.category}
                     </Badge>
-                    <Badge variant="outline" className="text-sm">
+                    <Badge variant="outline" className="text-xs sm:text-sm">
                       {selectedProduct.brand}
                     </Badge>
                   </div>
 
                 </div>
-                <DialogTitle className="text-2xl font-bold text-left mt-2">
+                <DialogTitle className="text-lg sm:text-2xl font-bold text-left mt-2 leading-tight">
                   {selectedProduct.name}
                 </DialogTitle>
               </DialogHeader>
 
-              <div className="flex-1 overflow-auto">
-                <div className="grid lg:grid-cols-2 gap-6 p-6">
+              <div className="flex-1 overflow-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6">
                   {/* Image Carousel */}
-                  <div className="space-y-4">
-                    <div className="relative bg-gray-50 rounded-2xl overflow-hidden aspect-square">
+                  <div className="space-y-2 sm:space-y-4">
+                    <div className="relative bg-gray-50 rounded-lg sm:rounded-2xl overflow-hidden aspect-square">
                       <Image
                         src={selectedProduct.images?.[currentImageIndex] || selectedProduct.image || '/api/placeholder/400/400'}
                         alt={selectedProduct.name}
@@ -3623,17 +3623,17 @@ export default function CatalogoPage() {
                             onClick={() => setCurrentImageIndex(prev => 
                               prev === 0 ? selectedProduct.images.length - 1 : prev - 1
                             )}
-                            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
+                            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-1.5 sm:p-2 shadow-lg transition-all"
                           >
-                            <ChevronLeft className="h-5 w-5" />
+                            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
                           </button>
                           <button
                             onClick={() => setCurrentImageIndex(prev => 
                               prev === selectedProduct.images.length - 1 ? 0 : prev + 1
                             )}
-                            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
+                            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-1.5 sm:p-2 shadow-lg transition-all"
                           >
-                            <ChevronRight className="h-5 w-5" />
+                            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
                           </button>
                         </>
                       )}
@@ -3683,7 +3683,7 @@ export default function CatalogoPage() {
                   </div>
 
                   {/* Product Details */}
-                  <div className="space-y-6">
+                  <div className="space-y-4 sm:space-y-6">
                     {/* Rating and Reviews */}
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
@@ -3700,14 +3700,14 @@ export default function CatalogoPage() {
                           />
                         ))}
                       </div>
-                      <span className="text-lg font-semibold">{selectedProduct.rating}</span>
-                      <span className="text-gray-600">({selectedProduct.reviews} reseñas)</span>
+                      <span className="text-base sm:text-lg font-semibold">{selectedProduct.rating}</span>
+                      <span className="text-gray-600 text-sm sm:text-base">({selectedProduct.reviews} reseñas)</span>
                     </div>
 
                     {/* Description */}
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Descripción</h3>
-                      <p className="text-gray-700 leading-relaxed">
+                      <h3 className="text-base sm:text-lg font-semibold mb-2">Descripción</h3>
+                      <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                         {selectedProduct.description || "Producto de alta calidad seleccionado por nuestros expertos."}
                       </p>
                     </div>
@@ -3715,11 +3715,11 @@ export default function CatalogoPage() {
                     {/* Features */}
                     {selectedProduct.features && (
                       <div>
-                        <h3 className="text-lg font-semibold mb-2">Características</h3>
-                        <ul className="space-y-1">
+                        <h3 className="text-base sm:text-lg font-semibold mb-2">Características</h3>
+                        <ul className="space-y-1 max-h-32 sm:max-h-none overflow-y-auto">
                           {(selectedProduct.features as string[]).map((feature: string, index: number) => (
-                            <li key={index} className="flex items-center gap-2 text-gray-700">
-                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                            <li key={index} className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -3728,10 +3728,10 @@ export default function CatalogoPage() {
                     )}
 
                     {/* Price and CTA */}
-                    <div className="space-y-4 pt-4 border-t">
+                    <div className="space-y-3 sm:space-y-4 pt-3 sm:pt-4 border-t">
                       {selectedProduct.originalPrice && (
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-gray-500 line-through">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="text-xs sm:text-sm text-gray-500 line-through">
                             ${selectedProduct.originalPrice}
                           </span>
                           <Badge className="bg-green-100 text-green-800 text-xs">
@@ -3747,7 +3747,7 @@ export default function CatalogoPage() {
                           
                           <Button
                             size="lg"
-                            className="relative w-full h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-orange-500 text-black font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border-3 border-yellow-300 hover:border-blue-400 z-10 text-lg"
+                            className="relative w-full h-12 sm:h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-orange-500 text-black font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border-2 sm:border-3 border-yellow-300 hover:border-blue-400 z-10 text-base sm:text-lg"
                             onClick={() => window.open(selectedProduct.amazonUrl, '_blank')}
                           >
                             {/* Efecto de destello principal */}
@@ -3791,16 +3791,18 @@ export default function CatalogoPage() {
                             
                             {/* Icono y texto */}
                             <div className="relative flex items-center justify-center z-10">
-                              <ShoppingBag className="w-7 h-7 mr-3 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
-                              <span className="relative text-lg md:text-xl font-extrabold">
+                              <ShoppingBag className="w-5 h-5 sm:w-7 sm:h-7 mr-2 sm:mr-3 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                              <span className="relative text-sm sm:text-lg md:text-xl font-extrabold">
                                 <span className="group-hover:opacity-0 transition-opacity duration-200">
-                                  Comprar en Mercado Libre
+                                  <span className="hidden sm:inline">Comprar en Mercado Libre</span>
+                                  <span className="sm:hidden">Comprar en ML</span>
                                 </span>
                                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-black whitespace-nowrap">
-                                  ¡Comprar ahora mismo!
+                                  <span className="hidden sm:inline">¡Comprar ahora mismo!</span>
+                                  <span className="sm:hidden">¡Comprar ya!</span>
                                 </span>
                               </span>
-                              <Sparkles className="w-6 h-6 ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blue-600 animate-pulse" />
+                              <Sparkles className="w-4 h-4 sm:w-6 sm:h-6 ml-2 sm:ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blue-600 animate-pulse" />
                             </div>
                           </Button>
                         </div>
@@ -3808,7 +3810,7 @@ export default function CatalogoPage() {
                     </div>
 
                     {/* Additional Info */}
-                    <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
                       <div>
                         <span className="font-medium">Marca:</span> {selectedProduct.brand}
                       </div>
