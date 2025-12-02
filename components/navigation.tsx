@@ -253,15 +253,8 @@ export default function Navigation({ user }: NavigationProps) {
               </SheetTrigger>
               <SheetContent side="right" className="w-80 sm:w-96">
                 <div className="flex flex-col h-full">
-                  <div className="flex items-center justify-between pb-4">
+                  <div className="flex items-center pb-4">
                     <span className="text-lg font-semibold">Menu</span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
                   </div>
 
                   <div className="flex-1 overflow-y-auto">

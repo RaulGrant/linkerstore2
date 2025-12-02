@@ -20,7 +20,10 @@ import {
   TrendingUp,
   Package,
   Target,
-  ShoppingBag
+  ShoppingBag,
+  Calendar,
+  Clock,
+  Eye
 } from 'lucide-react'
 import BlogLayout from '@/components/blog/BlogLayout'
 import { Badge } from "@/components/ui/badge"
@@ -661,34 +664,69 @@ export default function GuiaCalzadoSeguridad() {
     <BlogLayout>
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header Section */}
-        <div className="mb-12 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6"
-          >
-            <Shield className="w-4 h-4" />
-            Seguridad Industrial
-          </motion.div>
+        <motion.div 
+          className="mb-16 px-4 md:px-0"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+            <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-base font-medium">EPP</Badge>
+            <Badge className="bg-green-100 text-green-800 px-4 py-2 text-base font-medium">Protección Pies</Badge>
+            <Badge className="bg-purple-100 text-purple-800 px-4 py-2 text-base font-medium">NOM-113</Badge>
+            <Badge className="bg-orange-100 text-orange-800 px-4 py-2 text-base font-medium">Guía Técnica</Badge>
+          </div>
           
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
-          >
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent mb-8 leading-tight text-center md:text-left">
             Guía Completa de Calzado de Seguridad y Protección de Pies
-          </motion.h1>
+          </h1>
+          
+          <div className="flex flex-wrap items-center gap-8 text-base text-gray-600 mb-8 justify-center md:justify-start">
+            <div className="flex items-center gap-3">
+              <Calendar className="w-5 h-5" />
+              <span>20 Nov 2024</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-5 h-5" />
+              <span>12 min de lectura</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Eye className="w-5 h-5" />
+              <span>2,850 visualizaciones</span>
+            </div>
+          </div>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            transition={{ delay: 0.3 }}
+            className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 text-center md:text-left font-medium"
           >
             Todo lo que necesitas saber sobre la NOM-113-STPS-2009, tipos de protección y cómo elegir el calzado adecuado para tu industria.
           </motion.p>
-        </div>
+
+          <motion.div 
+            className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-400 p-6 rounded-r-xl shadow-lg"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <div className="flex items-start">
+              <motion.div
+                animate={{ bounce: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
+              >
+                <Footprints className="h-6 w-6 text-orange-500 mr-4 mt-1" />
+              </motion.div>
+              <div>
+                <h4 className="font-bold text-orange-800 text-lg mb-2">Protección Esencial</h4>
+                <p className="text-orange-700 text-base leading-relaxed">
+                  El 25% de los accidentes laborales afectan los pies. Un calzado certificado NOM-113 reduce el riesgo de lesiones en un 90%.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
 
         {/* Main Content Tabs */}
         <div className="mb-12">
