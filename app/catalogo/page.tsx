@@ -3740,19 +3740,70 @@ export default function CatalogoPage() {
                         </div>
                       )}
                       
-                      <div className="flex items-center gap-4">
-                        <Button
-                          size="lg"
-                          className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                          onClick={() => window.open(selectedProduct.amazonUrl, '_blank')}
-                        >
-                          <ExternalLink className="w-5 h-5 mr-2" />
-                          Ver en Amazon
-                        </Button>
-                        <Button variant="outline" size="lg" className="px-6">
-                          <Eye className="w-5 h-5 mr-2" />
-                          Comparar
-                        </Button>
+                      <div className="w-full">
+                        <div className="group relative w-full overflow-hidden rounded-xl">
+                          {/* Resplandor de fondo */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl blur-md opacity-40 group-hover:opacity-70 transition-opacity duration-300 scale-110" />
+                          
+                          <Button
+                            size="lg"
+                            className="relative w-full h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-orange-500 text-black font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border-3 border-yellow-300 hover:border-blue-400 z-10 text-lg"
+                            onClick={() => window.open(selectedProduct.amazonUrl, '_blank')}
+                          >
+                            {/* Efecto de destello principal */}
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl overflow-hidden">
+                              <div 
+                                className="absolute inset-0 rounded-xl"
+                                style={{
+                                  background: 'linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.4) 30%, rgba(147, 197, 253, 0.6) 50%, rgba(59, 130, 246, 0.4) 70%, transparent 100%)',
+                                  animation: 'shimmer 1.5s infinite',
+                                }} 
+                              />
+                            </div>
+                            
+                            {/* Bordes destellantes */}
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none">
+                              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-blue-400 to-transparent">
+                                <div 
+                                  className="h-full bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+                                  style={{ animation: 'shimmer 2s infinite' }}
+                                />
+                              </div>
+                              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-blue-400 to-transparent">
+                                <div 
+                                  className="h-full bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+                                  style={{ animation: 'shimmer 2s infinite 0.5s' }}
+                                />
+                              </div>
+                              <div className="absolute top-0 bottom-0 left-0 w-[3px] bg-gradient-to-b from-transparent via-blue-400 to-transparent">
+                                <div 
+                                  className="w-full bg-gradient-to-b from-transparent via-blue-500 to-transparent"
+                                  style={{ animation: 'shimmer 2s infinite 1s' }}
+                                />
+                              </div>
+                              <div className="absolute top-0 bottom-0 right-0 w-[3px] bg-gradient-to-b from-transparent via-blue-400 to-transparent">
+                                <div 
+                                  className="w-full bg-gradient-to-b from-transparent via-blue-500 to-transparent"
+                                  style={{ animation: 'shimmer 2s infinite 1.5s' }}
+                                />
+                              </div>
+                            </div>
+                            
+                            {/* Icono y texto */}
+                            <div className="relative flex items-center justify-center z-10">
+                              <ShoppingBag className="w-7 h-7 mr-3 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                              <span className="relative text-lg md:text-xl font-extrabold">
+                                <span className="group-hover:opacity-0 transition-opacity duration-200">
+                                  Comprar en Mercado Libre
+                                </span>
+                                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-black whitespace-nowrap">
+                                  ¡Comprar ahora mismo!
+                                </span>
+                              </span>
+                              <Sparkles className="w-6 h-6 ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blue-600 animate-pulse" />
+                            </div>
+                          </Button>
+                        </div>
                       </div>
                     </div>
 
