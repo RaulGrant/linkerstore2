@@ -11,9 +11,18 @@ interface HeroManualProps {
 
 export default function HeroManual({ showHeroCTAs = true }: HeroManualProps) {
   const [particles, setParticles] = useState<Array<{id: number, left: number, top: number, delay: number}>>([]);
+  const [isLargeMonitor, setIsLargeMonitor] = useState(false);
 
   useEffect(() => {
-    // Generate particles only on client side
+    // Check screen size for 24"+ monitors (1920px+)
+    const checkScreenSize = () => {
+      setIsLargeMonitor(window.innerWidth >= 1920);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Generate particles
     const newParticles = Array.from({ length: 20 }).map((_, i) => ({
       id: i,
       left: Math.random() * 100,
@@ -21,6 +30,8 @@ export default function HeroManual({ showHeroCTAs = true }: HeroManualProps) {
       delay: Math.random() * 2,
     }));
     setParticles(newParticles);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
   return (
@@ -57,108 +68,108 @@ export default function HeroManual({ showHeroCTAs = true }: HeroManualProps) {
         ))}
       </div>
 
-      {/* Hero Side CTAs */}
-      <div className="hidden xl:block">
-        {/* Left Side CTA */}
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: showHeroCTAs ? 1 : 0, x: showHeroCTAs ? 0 : -100 }}
-          transition={{ duration: showHeroCTAs ? 1.2 : 0.6, delay: showHeroCTAs ? 1.5 : 0 }}
-          className="fixed left-4 z-30"
-          style={{ top: 'calc(50% - 100px)', transform: 'translateY(-50%)', pointerEvents: showHeroCTAs ? 'auto' : 'none' }}
-        >
-          <div className="bg-gradient-to-b from-blue-600 to-blue-800 text-white p-6 rounded-2xl shadow-2xl w-80 hover:scale-105 transition-transform duration-300">
-            <div className="text-center mb-5">
-              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl">🛒</span>
+      {/* Hero Side CTAs - SOLO en monitores 24"+ */}
+      {isLargeMonitor && showHeroCTAs && (
+        <>
+          {/* Left Side CTA - Catálogo Premium */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 1.5 }}
+            className="fixed left-4 top-1/2 transform -translate-y-1/2 z-30"
+          >
+            <div className="bg-gradient-to-b from-blue-600 to-blue-800 text-white p-6 rounded-2xl shadow-2xl w-80 hover:scale-105 transition-transform duration-300">
+              <div className="text-center mb-5">
+                <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-2xl">🛒</span>
+                </div>
+                <h4 className="font-bold text-xl mb-2">Catálogo Premium</h4>
+                <p className="text-sm text-blue-100 mb-4">Descubre nuestra colección completa de cascos certificados</p>
               </div>
-              <h4 className="font-bold text-xl mb-2">Catálogo Premium</h4>
-              <p className="text-sm text-blue-100 mb-4">Descubre nuestra colección completa de cascos certificados</p>
+              
+              <div className="space-y-3 mb-5">
+                <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
+                  <span className="text-lg">🛡️</span>
+                  <div>
+                    <div className="text-sm font-medium">100+ Productos</div>
+                    <div className="text-xs text-blue-200 opacity-80">Cascos certificados NOM</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
+                  <span className="text-lg">⭐</span>
+                  <div>
+                    <div className="text-sm font-medium">Marcas Líderes</div>
+                    <div className="text-xs text-blue-200 opacity-80">3M, MSA, Honeywell, Brady</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
+                  <span className="text-lg">🚚</span>
+                  <div>
+                    <div className="text-sm font-medium">La mejor opción</div>
+                    <div className="text-xs text-blue-200 opacity-80">pensada para ti</div>
+                  </div>
+                </div>
+              </div>
+              
+              <a 
+                href="/catalogo" 
+                className="block w-full bg-white text-blue-600 px-4 py-3 rounded-full text-sm font-bold hover:bg-blue-50 transition-colors text-center"
+              >
+                Explorar Tienda →
+              </a>
             </div>
-            
-            <div className="space-y-3 mb-5">
-              <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                <span className="text-lg">🛡️</span>
-                <div>
-                  <div className="text-sm font-medium">100+ Productos</div>
-                  <div className="text-xs text-blue-200 opacity-80">Cascos certificados NOM</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                <span className="text-lg">⭐</span>
-                <div>
-                  <div className="text-sm font-medium">Marcas Líderes</div>
-                  <div className="text-xs text-blue-200 opacity-80">3M, MSA, Honeywell, Brady</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                <span className="text-lg">🚚</span>
-                <div>
-                  <div className="text-sm font-medium">La mejor opción</div>
-                  <div className="text-xs text-blue-200 opacity-80">pensada para ti</div>
-                </div>
-              </div>
-            </div>
-            
-            <a 
-              href="/catalogo" 
-              className="block w-full bg-white text-blue-600 px-4 py-3 rounded-full text-sm font-bold hover:bg-blue-50 transition-colors text-center"
-            >
-              Explorar Tienda →
-            </a>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Right Side CTA */}
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: showHeroCTAs ? 1 : 0, x: showHeroCTAs ? 0 : 100 }}
-          transition={{ duration: showHeroCTAs ? 1.2 : 0.6, delay: showHeroCTAs ? 1.7 : 0 }}
-          className="fixed right-4 z-30"
-          style={{ top: 'calc(50% - 100px)', transform: 'translateY(-50%)', pointerEvents: showHeroCTAs ? 'auto' : 'none' }}
-        >
-          <div className="bg-gradient-to-b from-orange-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl w-80 hover:scale-105 transition-transform duration-300">
-            <div className="text-center mb-5">
-              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl">📚</span>
+          {/* Right Side CTA - Guías Técnicas */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 1.7 }}
+            className="fixed right-4 top-1/2 transform -translate-y-1/2 z-30"
+          >
+            <div className="bg-gradient-to-b from-orange-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl w-80 hover:scale-105 transition-transform duration-300">
+              <div className="text-center mb-5">
+                <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-2xl">📚</span>
+                </div>
+                <h4 className="font-bold text-xl mb-2">Guías Técnicas</h4>
+                <p className="text-sm text-orange-100 mb-4">Accede a nuestra biblioteca de manuales especializados</p>
               </div>
-              <h4 className="font-bold text-xl mb-2">Guías Técnicas</h4>
-              <p className="text-sm text-orange-100 mb-4">Accede a nuestra biblioteca de manuales especializados</p>
+              
+              <div className="space-y-3 mb-5">
+                <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
+                  <span className="text-lg">📝</span>
+                  <div>
+                    <div className="text-sm font-medium">Manuales y guías</div>
+                    <div className="text-xs text-orange-200 opacity-80">Innovadores y actualizados</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
+                  <span className="text-lg">🎯</span>
+                  <div>
+                    <div className="text-sm font-medium">Especializados</div>
+                    <div className="text-xs text-orange-200 opacity-80">Por industria y equipo</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
+                  <span className="text-lg">✅</span>
+                  <div>
+                    <div className="text-sm font-medium">Gratuitos</div>
+                    <div className="text-xs text-orange-200 opacity-80">Acceso libre y completo</div>
+                  </div>
+                </div>
+              </div>
+              
+              <a 
+                href="/guias" 
+                className="block w-full bg-white text-orange-600 px-4 py-3 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors text-center"
+              >
+                Ver Todas las Guías →
+              </a>
             </div>
-            
-            <div className="space-y-3 mb-5">
-              <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                <span className="text-lg">📝</span>
-                <div>
-                  <div className="text-sm font-medium">Manuales y guías</div>
-                  <div className="text-xs text-orange-200 opacity-80">Innovadores y actualizados</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                <span className="text-lg">🎯</span>
-                <div>
-                  <div className="text-sm font-medium">Especializados</div>
-                  <div className="text-xs text-orange-200 opacity-80">Por industria y equipo</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                <span className="text-lg">✅</span>
-                <div>
-                  <div className="text-sm font-medium">Gratuitos</div>
-                  <div className="text-xs text-orange-200 opacity-80">Acceso libre y completo</div>
-                </div>
-              </div>
-            </div>
-            
-            <a 
-              href="/guias" 
-              className="block w-full bg-white text-orange-600 px-4 py-3 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors text-center"
-            >
-              Ver Todas las Guías →
-            </a>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+        </>
+      )}
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">

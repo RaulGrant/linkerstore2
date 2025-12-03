@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from '@/components/navigation'
 import ConditionalFooter from '@/components/ConditionalFooter'
 import CookieConsent from '@/components/cookies/CookieConsent'
+// import ChunkErrorProvider from '@/components/ChunkErrorProvider'
 
 export const metadata: Metadata = {
   title: 'LinkerStore - Tu Tienda de Equipos Industriales y Seguridad | EPP y Herramientas',

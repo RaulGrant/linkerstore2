@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import BlogLayout from "@/components/blog/BlogLayout";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from 'react';
-import HeroManual from "@/components/blog/ManualCascos/HeroManual";
+import HeroCalzado from "@/components/blog/ManualCalzado/HeroCalzado";
 import TopProducts from "@/components/blog/ManualCascos/TopProducts";
 import SectionBlock from "@/components/blog/ManualCascos/SectionBlock";
 import RelatedGuidesBanner from "@/components/blog/ManualCascos/RelatedGuidesBanner";
@@ -13,9 +13,24 @@ import SideBanners from "@/components/blog/ManualCascos/SideBanners";
 export default function ManualCascosArticle() {
   const [showSideBanners, setShowSideBanners] = useState(true);
   const [showHeroCTAs, setShowHeroCTAs] = useState(true);
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
   
   // Control side banners and hero CTAs visibility
   useEffect(() => {
+    // Screen size detection for banner visibility (24" = 1920px+)
+    const handleResize = () => {
+      const isLarge = window.innerWidth >= 1920;
+      setIsLargeScreen(isLarge);
+      if (!isLarge) {
+        setShowSideBanners(false);
+        setShowHeroCTAs(false);
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    
+    if (!isLargeScreen) return; // Skip scroll logic on small screens
     const handleScroll = () => {
       const heroSection = document.querySelector('section');
       const introSection = document.getElementById('introduccion-a-la-proteccion-craneal');
@@ -26,7 +41,7 @@ export default function ManualCascosArticle() {
         const heroRect = heroSection.getBoundingClientRect();
         // Hide hero CTAs when hero section is completely out of view
         const heroVisible = heroRect.bottom > 100;
-        setShowHeroCTAs(heroVisible);
+        setShowHeroCTAs(isLargeScreen && heroVisible);
       }
       
       // Control Side Banners visibility  
@@ -40,7 +55,7 @@ export default function ManualCascosArticle() {
         // Hide banners when references section completely exits the viewport
         const referencesEnded = referencesRect.bottom <= 0;
         
-        setShowSideBanners(introStarted && !referencesEnded);
+        setShowSideBanners(isLargeScreen && introStarted && !referencesEnded);
       }
     };
 
@@ -48,7 +63,10 @@ export default function ManualCascosArticle() {
     handleScroll();
     
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   
   // SEO and meta data
@@ -284,7 +302,7 @@ export default function ManualCascosArticle() {
         <SideBanners showBanners={showSideBanners} />
         
         {/* Hero Section */}
-        <HeroManual showHeroCTAs={showHeroCTAs} />
+        <HeroCalzado showHeroCTAs={showHeroCTAs} showSideCTAs={isLargeScreen} productType="cascos" />
         
         {/* Top 5 Products Section */}
         <TopProducts />

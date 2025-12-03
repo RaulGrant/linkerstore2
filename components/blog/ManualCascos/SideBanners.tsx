@@ -1,27 +1,77 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { X } from 'lucide-react';
 
 interface SideBannersProps {
   showBanners: boolean;
 }
 
 export default function SideBanners({ showBanners }: SideBannersProps) {
+  const [leftBannerVisible, setLeftBannerVisible] = useState(true);
+  const [rightBannerVisible, setRightBannerVisible] = useState(true);
+  const [isLargeMonitor, setIsLargeMonitor] = useState(false);
+
+  useEffect(() => {
+    // Detectar monitores de 24+ pulgadas (aproximadamente 1920px+ en width)
+    const checkScreenSize = () => {
+      // Para monitores de 24", consideramos resoluciones de 1920px+ en ancho
+      // y también verificamos la densidad de píxeles
+      const width = window.screen.width;
+      const height = window.screen.height;
+      const pixelRatio = window.devicePixelRatio || 1;
+      
+      // Calculamos el tamaño físico aproximado
+      const physicalWidth = width / pixelRatio;
+      const physicalHeight = height / pixelRatio;
+      
+      // Monitores de 24"+ generalmente tienen al menos 1920px de ancho
+      // y una relación de aspecto común
+      const isLarge = physicalWidth >= 1920 && physicalHeight >= 1080;
+      setIsLargeMonitor(isLarge);
+    };
+
+    const handleResize = () => {
+      checkScreenSize();
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Solo mostrar banners si están habilitados y es un monitor grande
+  if (!showBanners || !isLargeMonitor) {
+    return null;
+  }
+
   return (
-    <>
-      {showBanners && (
-        <>
-          {/* Left Side CTA */}
+    <div className="fixed inset-0 pointer-events-none z-20">
+      {/* Left Side CTA - Catálogo */}
+      <AnimatePresence>
+        {leftBannerVisible && (
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="hidden xl:block fixed left-6 z-20"
+            className="absolute left-6 pointer-events-auto"
             style={{ top: 'calc(50% - 200px)', transform: 'translateY(-50%)' }}
           >
-            <div className="bg-gradient-to-b from-blue-600 to-blue-800 text-white p-6 rounded-2xl shadow-2xl w-64 hover:scale-105 transition-transform duration-300">
+            <div className="relative bg-gradient-to-b from-blue-600 to-blue-800 text-white p-6 rounded-2xl shadow-2xl w-64 hover:scale-105 transition-transform duration-300">
+              {/* Close Button */}
+              <button
+                onClick={() => setLeftBannerVisible(false)}
+                className="absolute top-2 right-2 w-6 h-6 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors group"
+                aria-label="Cerrar banner"
+              >
+                <X size={14} className="text-white group-hover:text-blue-100" />
+              </button>
+              
               <div className="text-center mb-5">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">🛒</span>
@@ -62,17 +112,30 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
               </a>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
 
-          {/* Right Side CTA */}
+      {/* Right Side CTA - Más Guías */}
+      <AnimatePresence>
+        {rightBannerVisible && (
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="hidden xl:block fixed right-6 z-20"
+            className="absolute right-6 pointer-events-auto"
             style={{ top: 'calc(50% - 200px)', transform: 'translateY(-50%)' }}
           >
-            <div className="bg-gradient-to-b from-orange-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl w-64 hover:scale-105 transition-transform duration-300">
+            <div className="relative bg-gradient-to-b from-orange-500 to-red-600 text-white p-6 rounded-2xl shadow-2xl w-64 hover:scale-105 transition-transform duration-300">
+              {/* Close Button */}
+              <button
+                onClick={() => setRightBannerVisible(false)}
+                className="absolute top-2 right-2 w-6 h-6 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors group"
+                aria-label="Cerrar banner"
+              >
+                <X size={14} className="text-white group-hover:text-orange-100" />
+              </button>
+              
               <div className="text-center mb-5">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">📚</span>
@@ -113,8 +176,8 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
               </a>
             </div>
           </motion.div>
-        </>
-      )}
-    </>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
