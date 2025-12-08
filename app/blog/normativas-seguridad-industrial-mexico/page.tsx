@@ -2,641 +2,404 @@
 
 import { motion } from 'framer-motion';
 import BlogLayout from '@/components/blog/BlogLayout';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Shield, AlertTriangle, CheckCircle, Eye, Star, Info, Download, Scale, FileText, Users, Building, Gavel, ExternalLink } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { trackBlogView, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
-import { useScrollTracking } from '@/hooks/useScrollTracking';
+import { Info, Download, ExternalLink, CheckCircle, FileText, Building } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { trackBlogView, trackInteraction } from '@/lib/meta-pixel';
+
+// Import components
+import HeroNormativas from '@/components/blog/NormativasMexico/HeroNormativas';
+import TopProducts from '@/components/blog/NormativasMexico/TopProducts';
+import SectionBlock from '@/components/blog/ManualCascos/SectionBlock';
+import SideBanners from '@/components/blog/NormativasMexico/SideBanners';
+import RelatedGuidesBanner from '@/components/blog/NormativasMexico/RelatedGuidesBanner';
 
 export default function GuiaNormativasSeguridadMexico() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [showSideBanners, setShowSideBanners] = useState(true);
+  const [showHeroCTAs, setShowHeroCTAs] = useState(true);
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
   
-  // Enable scroll and engagement tracking
-  useScrollTracking({ 
-    pageTitle: 'Normativas de Seguridad Industrial en México: Marco Legal NOM-STPS Completo',
-    trackTimeOnPage: true 
-  });
+  const heroRef = useRef<HTMLDivElement>(null);
+  const section1Ref = useRef<HTMLDivElement>(null);
+  const section6Ref = useRef<HTMLDivElement>(null);
 
-  // Track guide view on component mount
+  // Track page view
   useEffect(() => {
-    const guideId = generateTrackingId('guide', 'normativas-seguridad-industrial-mexico');
-    trackBlogView(guideId, 'Normativas de Seguridad Industrial en México: Marco Legal NOM-STPS Completo', 'guia_legal');
+    trackBlogView('normativas-seguridad-industrial-mexico', 'Normativas de Seguridad Industrial en México | Guía Completa 2024', 'guia_legal');
   }, []);
 
-  // Handle tab interactions
-  const handleTabChange = (tabIndex: number, tabName: string) => {
-    setActiveTab(tabIndex);
-    trackInteraction('guide_tab_click', `tab_${tabIndex}_${tabName}`, 'normativas_guide_mexico');
-  };
+  // Screen size detection
+  useEffect(() => {
+    const handleResize = () => {
+      const isLarge = window.innerWidth >= 1920; // 24"+ monitors
+      setIsLargeScreen(isLarge);
+    };
 
-  const tabs = [
-    { id: 0, title: 'Marco Legal Mexicano', icon: '🇲🇽' },
-    { id: 1, title: 'Normas NOM-STPS', icon: '📋' },
-    { id: 2, title: 'Obligaciones Patronales', icon: '🏢' },
-    { id: 3, title: 'Inspecciones y Sanciones', icon: '⚖️' }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Scroll tracking
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide hero CTAs when hero is out of view
+      if (heroRef.current) {
+        const heroRect = heroRef.current.getBoundingClientRect();
+        setShowHeroCTAs(heroRect.bottom > 0 && heroRect.top < window.innerHeight);
+      }
+
+      // Show side banners from section 1 start to section 6 end
+      if (section1Ref.current && section6Ref.current) {
+        const section1Rect = section1Ref.current.getBoundingClientRect();
+        const section6Rect = section6Ref.current.getBoundingClientRect();
+        
+        const section1Started = section1Rect.top < window.innerHeight;
+        const section6Ended = section6Rect.bottom < 0;
+        
+        setShowSideBanners(section1Started && !section6Ended);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 7 Sections Data
+  const sectionsData = [
+    {
+      sectionNumber: 1,
+      title: "Marco Legal de Seguridad Industrial en México",
+      subtitle: "Fundamentos constitucionales y legislativos que regulan la seguridad y salud en el trabajo",
+      content: {
+        introduction: "El marco legal mexicano en materia de seguridad y salud en el trabajo se sustenta en la Constitución Política de los Estados Unidos Mexicanos, específicamente en el Artículo 123, que establece el derecho fundamental de los trabajadores a laborar en condiciones seguras. Este marco se complementa con la Ley Federal del Trabajo (LFT) y un extenso catálogo de Normas Oficiales Mexicanas (NOM-STPS) que regulan aspectos específicos de la prevención de riesgos laborales. La Secretaría del Trabajo y Previsión Social (STPS), en coordinación con el Instituto Mexicano del Seguro Social (IMSS), es la autoridad competente para vigilar el cumplimiento de estas disposiciones y sancionar las infracciones correspondientes.",
+        expertQuote: {
+          text: "El cumplimiento de las NOM-STPS no solo es una obligación legal, sino una inversión en capital humano que reduce costos por accidentes, aumenta la productividad y mejora el clima laboral. Las empresas que priorizan la seguridad industrial experimentan hasta 40% menos rotación de personal.",
+          source: "Dr. Roberto Sánchez, Especialista en Seguridad Industrial y Salud Ocupacional"
+        },
+        keyPoints: [
+          "Artículo 123 Constitucional: Base del derecho laboral mexicano, garantiza condiciones seguras de trabajo",
+          "Ley Federal del Trabajo: Capítulos específicos sobre seguridad, higiene y medio ambiente laboral",
+          "NOM-STPS: 41 normas oficiales vigentes que regulan aspectos técnicos de prevención",
+          "Autoridades: STPS e IMSS coordinan inspecciones y aplicación de sanciones",
+          "Ámbito de aplicación: Obligatorio para todos los centros de trabajo en territorio nacional"
+        ],
+        recommendations: [
+          "Designar un responsable interno de seguridad industrial que conozca profundamente el marco normativo",
+          "Realizar una auditoría inicial de cumplimiento para identificar brechas normativas prioritarias",
+          "Establecer un calendario de actualización normativa trimestral consultando el DOF",
+          "Implementar un sistema documental robusto que evidencie el cumplimiento ante inspecciones",
+          "Capacitar a todo el personal sobre sus derechos laborales y obligaciones en materia de seguridad"
+        ],
+        callToAction: {
+          text: "Descubre equipos de protección certificados que cumplen con las NOM-STPS vigentes",
+          link: "/catalogo"
+        }
+      },
+      icon: "⚖️",
+      bgGradient: "bg-gradient-to-br from-blue-500 to-indigo-600",
+      variant: "featured" as const
+    },
+    {
+      sectionNumber: 2,
+      title: "Panorama General de las NOM-STPS",
+      subtitle: "Estructura y clasificación del sistema normativo de seguridad y salud en el trabajo",
+      content: {
+        introduction: "Las Normas Oficiales Mexicanas de la Secretaría del Trabajo y Previsión Social (NOM-STPS) constituyen el marco regulatorio técnico que establece las condiciones mínimas de seguridad e higiene que deben cumplir los centros de trabajo. Actualmente existen 41 NOM-STPS vigentes, organizadas en cinco grandes categorías: seguridad, salud, organización, específicas y de producto. Estas normas son de observancia obligatoria en todo el territorio nacional y su incumplimiento puede derivar en sanciones económicas, clausuras y responsabilidades legales. Cada norma define su campo de aplicación, especificaciones técnicas, métodos de evaluación y evidencias documentales requeridas.",
+        expertQuote: {
+          text: "Las NOM-STPS evolucionan constantemente para adaptarse a nuevas tecnologías y riesgos emergentes. Las empresas deben mantener un sistema de vigilancia normativa para identificar modificaciones, nuevas publicaciones y periodos de transición que impacten sus operaciones.",
+          source: "Ing. María Fernanda López, Consultora en Cumplimiento Normativo STPS"
+        },
+        keyPoints: [
+          "5 categorías principales: Seguridad (prevención), Salud (higiene), Organización (gestión), Específicas (sectores) y Producto (EPP)",
+          "NOM-030-STPS: Marco general de servicios preventivos de seguridad y salud en el trabajo",
+          "Actualización constante: Publicaciones en el Diario Oficial de la Federación (DOF)",
+          "Aplicabilidad diferenciada: Según tamaño de empresa, número de trabajadores y giro industrial",
+          "Evidencia documental: Cada norma especifica registros, programas y constancias obligatorias"
+        ],
+        recommendations: [
+          "Realizar una matriz de aplicabilidad normativa específica para el giro y tamaño de tu empresa",
+          "Suscribirse a las actualizaciones del DOF para identificar modificaciones normativas oportunamente",
+          "Priorizar implementación por nivel de riesgo: primero normas de seguridad crítica, luego salud y organización",
+          "Contratar asesoría especializada para normas técnicas complejas (ergonomía, ruido, químicos)",
+          "Documentar todas las acciones de cumplimiento con fechas, responsables y evidencias fotográficas"
+        ],
+        callToAction: {
+          text: "Encuentra EPP certificado según las NOM-STPS aplicables a tu industria",
+          link: "/catalogo"
+        }
+      },
+      icon: "📋",
+      bgGradient: "bg-gradient-to-br from-green-500 to-emerald-600",
+      variant: "alternate" as const
+    },
+    {
+      sectionNumber: 3,
+      title: "Clasificación y Categorías de las Normas",
+      subtitle: "Organización temática del catálogo normativo NOM-STPS para facilitar su comprensión e implementación",
+      content: {
+        introduction: "El catálogo de NOM-STPS se organiza en categorías temáticas que permiten a las empresas identificar rápidamente las normas aplicables a su actividad. Las normas de SEGURIDAD previenen accidentes (maquinaria, electricidad, alturas, espacios confinados); las de SALUD protegen contra enfermedades ocupacionales (ruido, químicos, ergonomía); las de ORGANIZACIÓN establecen sistemas de gestión (comisiones de seguridad, capacitación); las ESPECÍFICAS regulan sectores particulares (minería, construcción, agrícola); y las de PRODUCTO certifican EPP. Esta clasificación facilita la implementación progresiva según prioridades de riesgo.",
+        expertQuote: {
+          text: "Una estrategia efectiva de cumplimiento normativo comienza identificando las 5-7 normas críticas aplicables al giro de la empresa, implementándolas completamente, y luego expandiendo gradualmente hacia normas complementarias. Intentar cumplir todas simultáneamente genera parálisis por análisis.",
+          source: "Lic. Carlos Ramírez, Auditor Certificado en Sistemas de Gestión de SST"
+        },
+        keyPoints: [
+          "Normas de Seguridad (NOM-001 a NOM-034): Prevención de accidentes por riesgos físicos y mecánicos",
+          "Normas de Salud (NOM-010, 011, 013, 014, 015, 024, 025): Protección contra agentes nocivos",
+          "Normas de Organización (NOM-019, 030): Comisiones de seguridad, servicios preventivos",
+          "Normas Específicas (NOM-003, 004, 023, 031, 032): Sectores minería, construcción, forestal, minas subterráneas",
+          "Normas de Producto (NOM-115, 116, 113): Especificaciones técnicas de EPP certificado"
+        ],
+        recommendations: [
+          "Desarrollar una matriz de riesgos que correlacione peligros identificados con normas aplicables",
+          "Priorizar normas según la jerarquía: primero seguridad crítica, luego salud, después organización",
+          "Para empresas nuevas: iniciar con NOM-001 (Edificios), NOM-002 (Incendios), NOM-017 (EPP)",
+          "Verificar tablas de aplicabilidad en cada norma (número de trabajadores, giro, tipo de riesgo)",
+          "Consultar al Instituto Mexicano del Seguro Social para validar normas aplicables a tu clase de riesgo"
+        ],
+        callToAction: {
+          text: "Adquiere EPP que cumple con las normas de producto NOM-115 y NOM-116",
+          link: "/catalogo"
+        }
+      },
+      icon: "🗂️",
+      bgGradient: "bg-gradient-to-br from-purple-500 to-pink-600",
+      variant: "default" as const
+    },
+    {
+      sectionNumber: 4,
+      title: "Obligaciones Patronales Fundamentales",
+      subtitle: "Responsabilidades legales ineludibles del empleador en materia de seguridad y salud laboral",
+      content: {
+        introduction: "La Ley Federal del Trabajo establece obligaciones patronales específicas en los artículos 132, 504 y 512-D. El patrón debe proporcionar EPP sin costo, capacitar en su uso correcto, mantener condiciones seguras en instalaciones, realizar análisis de riesgos, formar comisiones de seguridad e higiene, elaborar programas de prevención, registrar accidentes y enfermedades laborales ante el IMSS, y permitir inspecciones de autoridades. El incumplimiento genera responsabilidad civil, penal y administrativa, incluyendo multas económicas que van desde 15 hasta 20,450 UMAs ($1,543 a $2,106,355 pesos), clausuras parciales o totales, e incluso prisión en casos de muerte o incapacidad permanente de trabajadores.",
+        expertQuote: {
+          text: "La capacitación es la obligación patronal más frecuentemente incumplida y fiscalizada. No basta con impartir cursos; se requiere evidencia documental con lista de asistencia, constancias DC-3, evaluaciones de aprendizaje y seguimiento de efectividad en campo. Las autoridades solicitan esta documentación en el 95% de las inspecciones.",
+          source: "Mtra. Ana Patricia Gutiérrez, Especialista en Derecho Laboral y Seguridad Social"
+        },
+        keyPoints: [
+          "Proporcionar EPP gratuito, apropiado al riesgo, certificado y en buen estado (Art. 132 fracción XVI LFT)",
+          "Capacitación obligatoria: Inducción, anual de riesgos específicos, uso de EPP y equipo (NOM-019)",
+          "Comisiones de Seguridad e Higiene: Constitución, registro STPS, reuniones mensuales con actas (NOM-019)",
+          "Programas de prevención: Específicos según normas aplicables (incendios, químicos, ergonomía)",
+          "Notificación de riesgos: Análisis de puestos, señalización, hojas de seguridad de sustancias químicas",
+          "Exámenes médicos: Ingreso, periódicos, cambio de puesto, egreso según exposición a riesgos (NOM-030)"
+        ],
+        recommendations: [
+          "Crear expedientes individuales de trabajadores con constancias de capacitación, entrega de EPP y exámenes médicos",
+          "Documentar con fotografías fechadas las condiciones de seguridad de instalaciones y EPP entregado",
+          "Elaborar procedimientos escritos de trabajo seguro para tareas de alto riesgo",
+          "Mantener registros de mantenimiento preventivo de maquinaria, equipos y sistemas de protección",
+          "Realizar simulacros de emergencia trimestrales con evidencia de participación y mejoras identificadas",
+          "Contratar un seguro de responsabilidad civil patronal que cubra accidentes laborales graves"
+        ],
+        callToAction: {
+          text: "Cumple con tu obligación de proporcionar EPP certificado a tus trabajadores",
+          link: "/catalogo"
+        }
+      },
+      icon: "🏭",
+      bgGradient: "bg-gradient-to-br from-orange-500 to-red-600",
+      variant: "featured" as const
+    },
+    {
+      sectionNumber: 5,
+      title: "Comisiones de Seguridad e Higiene",
+      subtitle: "Integración, funciones y operación del órgano colegiado de prevención de riesgos laborales",
+      content: {
+        introduction: "La NOM-019-STPS-2011 establece la obligatoriedad de constituir Comisiones de Seguridad e Higiene en centros de trabajo con más de 15 trabajadores. Estas comisiones son órganos colegiados integrados paritariamente por representantes del patrón y de los trabajadores, con funciones de investigar accidentes, vigilar condiciones de seguridad, promover capacitación y proponer medidas correctivas. Deben realizar reuniones mensuales documentadas con actas firmadas, recorridos de verificación, investigaciones de accidentes e incidentes, y dar seguimiento a recomendaciones. Su correcta operación reduce hasta un 50% la incidencia de accidentes laborales.",
+        expertQuote: {
+          text: "La comisión de seguridad no es un requisito burocrático, es el motor del sistema de gestión de SST. Cuando opera efectivamente con participación genuina de trabajadores, se convierte en el mejor sensor de riesgos emergentes y generador de soluciones prácticas adaptadas a la realidad operativa de la empresa.",
+          source: "Ing. Jorge Mendoza, Coordinador de Seguridad Industrial en sector manufacturero"
+        },
+        keyPoints: [
+          "Integración paritaria: Igual número de representantes patronales y de trabajadores (NOM-019)",
+          "Coordinador: Preferentemente con experiencia en seguridad, capacitado en la norma",
+          "Reuniones mensuales: Mínimo 1 por mes, actas con agenda, acuerdos, responsables y fechas compromiso",
+          "Recorridos de verificación: Inspecciones programadas de instalaciones con reporte de condiciones inseguras",
+          "Investigación de accidentes: Análisis de causas raíz, medidas correctivas y preventivas documentadas",
+          "Registro ante STPS: Acta constitutiva con firmas de integrantes y constancia de registro estatal"
+        ],
+        recommendations: [
+          "Seleccionar coordinadores con liderazgo, conocimiento del proceso productivo y respaldo de la dirección",
+          "Capacitar a todos los integrantes en identificación de peligros, análisis de causas raíz y normatividad",
+          "Utilizar formatos estandarizados para actas, recorridos e investigaciones que faciliten documentación",
+          "Establecer indicadores de desempeño: actos/condiciones inseguras detectados, medidas implementadas, plazo promedio de cierre",
+          "Asignar presupuesto específico para que la comisión pueda implementar mejoras sin depender de autorizaciones",
+          "Realizar capacitación anual de actualización normativa para mantener vigencia del conocimiento"
+        ],
+        callToAction: {
+          text: "Equipa a tu comisión de seguridad con instrumentos de medición y EPP para recorridos",
+          link: "/catalogo"
+        }
+      },
+      icon: "👥",
+      bgGradient: "bg-gradient-to-br from-teal-500 to-cyan-600",
+      variant: "default" as const
+    },
+    {
+      sectionNumber: 6,
+      title: "Inspecciones y Régimen Sancionador",
+      subtitle: "Proceso de fiscalización, tipos de sanciones y recursos de defensa legal disponibles",
+      content: {
+        introduction: "La STPS realiza inspecciones ordinarias (programadas) y extraordinarias (por denuncia o accidente grave) para verificar el cumplimiento de la normatividad laboral. El proceso consta de tres etapas: notificación de visita (orden de inspección), desarrollo (recorrido de instalaciones, revisión documental, entrevistas), y conclusión (acta de inspección y emplazamiento). Las sanciones van desde amonestaciones hasta multas económicas de $1,543 a $2,106,355 pesos según gravedad, clausuras parciales/totales y hasta definitivas en casos de reincidencia. Los patrones tienen derecho a recursos de defensa: revocación ante la STPS (15 días), amparo ante juzgados federales (15 días) o revisión ante el TFJA (45 días).",
+        expertQuote: {
+          text: "El 80% de las sanciones en inspecciones provienen de deficiencias documentales, no de condiciones físicas de seguridad. Las empresas deben entender que el cumplimiento normativo requiere evidencia escrita: programas vigentes, actas de comisión firmadas, constancias de capacitación DC-3, y registros de mantenimiento.",
+          source: "Lic. Fernando Castillo, Ex Inspector Federal del Trabajo STPS"
+        },
+        keyPoints: [
+          "Tipos de inspección: Ordinaria (programada), extraordinaria (denuncia/accidente), comprobatoria (verificar correcciones)",
+          "Derechos del patrón: Exigir identificación del inspector, tener testigos de asistencia, recibir copia del acta",
+          "Infracciones leves: 15-155 UMAs ($1,543-$15,953) - Falta de señalización, registros incompletos",
+          "Infracciones graves: 156-770 UMAs ($16,056-$79,289) - Ausencia de comisión, falta de capacitación",
+          "Infracciones muy graves: 771-20,450 UMAs ($79,391-$2,106,355) - Riesgo inminente, reincidencia, ocultar accidentes",
+          "Medidas de seguridad: Clausura parcial/total inmediata si existe riesgo grave e inminente para trabajadores"
+        ],
+        recommendations: [
+          "Preparar un 'Kit de Inspección' con todos los documentos relevantes organizados por norma aplicable",
+          "Designar un responsable de atención a inspecciones capacitado en procedimientos y derechos patronales",
+          "En caso de emplazamiento: contratar abogado laboralista especializado para análisis y estrategia de defensa",
+          "Documentar fotográficamente con fecha todas las condiciones de seguridad actuales como evidencia",
+          "Atender emplazamientos dentro de los plazos establecidos para acceder a descuentos por pronto pago (hasta 20%)",
+          "Implementar mejoras inmediatamente tras inspección para demostrar buena fe en inspección comprobatoria"
+        ],
+        callToAction: {
+          text: "Evita sanciones: asegura que tu personal cuente con EPP certificado y en buenas condiciones",
+          link: "/catalogo"
+        }
+      },
+      icon: "🔍",
+      bgGradient: "bg-gradient-to-br from-red-500 to-rose-600",
+      variant: "alternate" as const
+    },
+    {
+      sectionNumber: 7,
+      title: "Estrategia de Implementación Práctica",
+      subtitle: "Metodología paso a paso para establecer un sistema de cumplimiento normativo efectivo y sostenible",
+      content: {
+        introduction: "Implementar un sistema de cumplimiento normativo NOM-STPS requiere un enfoque estructurado en fases: (1) Diagnóstico inicial mediante auditoría de brechas normativas, (2) Priorización según nivel de riesgo y probabilidad de inspección, (3) Desarrollo de documentación (políticas, programas, procedimientos), (4) Implementación física (señalización, EPP, controles ingenieriles), (5) Capacitación del personal, (6) Monitoreo y mejora continua. Este proceso puede tomar de 6 a 18 meses dependiendo del tamaño de la organización, pero genera retornos inmediatos: reducción de accidentalidad (30-50%), menor ausentismo (15-25%), incremento de productividad (10-20%) y protección legal ante contingencias.",
+        expertQuote: {
+          text: "La sostenibilidad del cumplimiento normativo depende de integrar la seguridad en la cultura organizacional, no solo en procedimientos documentados. Cuando cada trabajador entiende que la normatividad existe para protegerlo a él y a sus compañeros, el cumplimiento deja de ser una imposición y se convierte en un valor compartido.",
+          source: "Dr. Alejandro Torres, Consultor en Cultura de Seguridad y Comportamiento Organizacional"
+        },
+        keyPoints: [
+          "Fase 1 - Diagnóstico (mes 1-2): Auditoría de cumplimiento, identificación de brechas, estimación de inversión requerida",
+          "Fase 2 - Planificación (mes 2-3): Priorización de normas, asignación de responsabilidades, presupuestación",
+          "Fase 3 - Documentación (mes 3-6): Elaboración de programas, políticas, procedimientos y formatos requeridos",
+          "Fase 4 - Implementación física (mes 4-9): Adquisición de EPP, señalización, controles, adecuaciones en instalaciones",
+          "Fase 5 - Capacitación (mes 6-12): Programas de formación, evaluaciones, certificación interna",
+          "Fase 6 - Mejora continua (mes 12+): Auditorías internas, actualización normativa, indicadores de desempeño"
+        ],
+        recommendations: [
+          "Contratar consultoría externa para diagnóstico inicial y validación de documentación clave",
+          "Asignar un Gerente de Seguridad y Salud con dedicación exclusiva y reporte directo a dirección general",
+          "Implementar software de gestión de SST para centralizar documentación, capacitaciones y seguimiento de acciones",
+          "Establecer KPIs claros: índice de frecuencia, gravedad, capacitación completada, auditorías internas realizadas",
+          "Crear un programa de incentivos por cumplimiento de metas de seguridad (individual y por área)",
+          "Renovar certificación de cumplimiento anual mediante auditoría externa para validar sistema de gestión"
+        ],
+        callToAction: {
+          text: "Inicia tu implementación adquiriendo el EPP certificado que tu empresa necesita",
+          link: "/catalogo"
+        }
+      },
+      icon: "🎯",
+      bgGradient: "bg-gradient-to-br from-indigo-500 to-purple-600",
+      variant: "default" as const
+    }
   ];
 
   return (
     <BlogLayout>
-      <article className="max-w-4xl mx-auto">
-        {/* Header */}
-        <motion.div 
-          className="mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <div className="flex flex-wrap gap-2 mb-4">
-            <Badge className="bg-green-100 text-green-800">Marco Legal México</Badge>
-            <Badge className="bg-red-100 text-red-800">STPS</Badge>
-            <Badge className="bg-blue-100 text-blue-800">NOM-STPS</Badge>
-            <Badge className="bg-purple-100 text-purple-800">Cumplimiento Obligatorio</Badge>
-          </div>
-          
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Normativas de Seguridad Industrial en México: Marco Legal NOM-STPS Completo
-          </h1>
-          
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span>21 Nov 2024</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>28 min de lectura</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Eye className="w-4 h-4" />
-              <span>8,950 visualizaciones</span>
-            </div>
-          </div>
-
-          <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
-            <div className="flex items-start">
-              <Gavel className="h-5 w-5 text-green-400 mr-3 mt-0.5" />
-              <div>
-                <h4 className="font-semibold text-green-800">Marco Legal de Obligatorio Cumplimiento</h4>
-                <p className="text-green-700 text-sm">
-                  El incumplimiento de las NOM-STPS puede conllevar multas de hasta $2,106,750 pesos mexicanos 
-                  y clausura temporal o definitiva. El conocimiento del marco legal es fundamental para patrones y técnicos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Introducción */}
-        <motion.section 
-          className="mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            La seguridad y salud en el trabajo en México se regula a través de la Secretaría del Trabajo y Previsión Social (STPS) 
-            mediante las Normas Oficiales Mexicanas (NOM-STPS). Esta guía proporciona una visión integral del marco 
-            legal vigente, obligaciones patronales, procedimientos de cumplimiento y régimen sancionador aplicable en territorio mexicano.
-          </p>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <div className="flex items-start">
-              <Info className="h-5 w-5 text-blue-500 mr-3 mt-0.5" />
-              <div>
-                <h4 className="font-semibold text-blue-800 mb-2">¿Por qué es crucial conocer las NOM-STPS?</h4>
-                <ul className="text-blue-700 text-sm space-y-1">
-                  <li>• Cumplimiento legal obligatorio para todos los centros de trabajo</li>
-                  <li>• Prevención de accidentes y enfermedades de trabajo</li>
-                  <li>• Evitar sanciones económicas y clausuras</li>
-                  <li>• Protección de la integridad física de los trabajadores</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Tabs Navigation */}
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-2 border-b border-gray-200">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => handleTabChange(tab.id, tab.title)}
-                className={`px-4 py-3 text-sm font-medium rounded-t-lg transition-colors ${
-                  activeTab === tab.id
-                    ? 'bg-blue-600 text-white border-blue-600'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-              >
-                <span className="mr-2">{tab.icon}</span>
-                {tab.title}
-              </button>
-            ))}
-          </div>
+      <article className="relative">
+        {/* Hero Section */}
+        <div ref={heroRef}>
+          <HeroNormativas showHeroCTAs={showHeroCTAs} />
         </div>
 
-        {/* Tab Content */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="mb-8"
-        >
-          {activeTab === 0 && (
-            <section className="space-y-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Marco Legal Mexicano de Seguridad y Salud en el Trabajo</h2>
-              
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Fundamentos Constitucionales y Legales</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">🇲🇽 Constitución Política</h4>
-                    <p className="text-sm text-gray-700">
-                      Artículo 123: Establece el derecho al trabajo digno y socialmente útil, 
-                      incluyendo condiciones de higiene y seguridad en los centros laborales.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-blue-800 mb-2">📚 Ley Federal del Trabajo</h4>
-                    <p className="text-sm text-gray-700">
-                      Título Cuarto: Derechos y obligaciones de los trabajadores y patrones en materia 
-                      de prevención de riesgos de trabajo.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        {/* Side Banners - ONLY on 24"+ screens, visible from section 1 to section 6 */}
+        {isLargeScreen && <SideBanners showBanners={showSideBanners} />}
 
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-gray-900">Estructura Normativa STPS</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-white border border-green-200 rounded-lg p-4">
-                    <div className="text-center mb-3">
-                      <Building className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                      <h4 className="font-semibold text-green-800">STPS</h4>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Secretaría del Trabajo y Previsión Social - Autoridad reguladora 
-                      en materia laboral y de seguridad en el trabajo.
-                    </p>
-                  </div>
+        {/* Top Products Section */}
+        <TopProducts />
 
-                  <div className="bg-white border border-blue-200 rounded-lg p-4">
-                    <div className="text-center mb-3">
-                      <FileText className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                      <h4 className="font-semibold text-blue-800">NOM-STPS</h4>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Normas Oficiales Mexicanas que establecen las condiciones mínimas 
-                      de seguridad e higiene en los centros de trabajo.
-                    </p>
-                  </div>
+        {/* 7 Section Blocks */}
+        <div id="marco-legal" ref={section1Ref}>
+          <SectionBlock
+            sectionNumber={sectionsData[0].sectionNumber}
+            title={sectionsData[0].title}
+            subtitle={sectionsData[0].subtitle}
+            content={sectionsData[0].content}
+            icon={sectionsData[0].icon}
+            bgGradient={sectionsData[0].bgGradient}
+            variant={sectionsData[0].variant}
+          />
+        </div>
 
-                  <div className="bg-white border border-red-200 rounded-lg p-4">
-                    <div className="text-center mb-3">
-                      <Scale className="h-8 w-8 text-red-600 mx-auto mb-2" />
-                      <h4 className="font-semibold text-red-800">Inspecciones</h4>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Sistema de verificación del cumplimiento normativo a través 
-                      de inspectores federales del trabajo.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <SectionBlock
+          sectionNumber={sectionsData[1].sectionNumber}
+          title={sectionsData[1].title}
+          subtitle={sectionsData[1].subtitle}
+          content={sectionsData[1].content}
+          icon={sectionsData[1].icon}
+          bgGradient={sectionsData[1].bgGradient}
+          variant={sectionsData[1].variant}
+        />
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
-                <div className="flex items-start">
-                  <AlertTriangle className="h-5 w-5 text-yellow-400 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-yellow-800">Principio de Responsabilidad Patronal</h4>
-                    <p className="text-yellow-700 text-sm">
-                      El patrón es responsable de proporcionar un ambiente de trabajo seguro y saludable. 
-                      Esta responsabilidad es intransferible y abarca tanto la prevención como la reparación del daño.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
+        <SectionBlock
+          sectionNumber={sectionsData[2].sectionNumber}
+          title={sectionsData[2].title}
+          subtitle={sectionsData[2].subtitle}
+          content={sectionsData[2].content}
+          icon={sectionsData[2].icon}
+          bgGradient={sectionsData[2].bgGradient}
+          variant={sectionsData[2].variant}
+        />
 
-          {activeTab === 1 && (
-            <section className="space-y-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Principales Normas Oficiales Mexicanas (NOM-STPS)</h2>
-              
-              <div className="space-y-6">
-                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-4">
-                    <h3 className="text-white font-bold text-lg">NOM-001-STPS-2008</h3>
-                    <p className="text-blue-100 text-sm">Edificios, locales e instalaciones</p>
-                  </div>
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Objetivo</h4>
-                        <p className="text-sm text-gray-600">
-                          Establecer las condiciones de seguridad de los edificios, locales, 
-                          instalaciones y áreas en los centros de trabajo para su funcionamiento y conservación.
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Aplicación</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Todos los centros de trabajo</li>
-                          <li>• Edificaciones permanentes y temporales</li>
-                          <li>• Instalaciones eléctricas y sanitarias</li>
-                          <li>• Áreas de tránsito y evacuación</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <SectionBlock
+          sectionNumber={sectionsData[3].sectionNumber}
+          title={sectionsData[3].title}
+          subtitle={sectionsData[3].subtitle}
+          content={sectionsData[3].content}
+          icon={sectionsData[3].icon}
+          bgGradient={sectionsData[3].bgGradient}
+          variant={sectionsData[3].variant}
+        />
 
-                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-red-600 to-red-700 p-4">
-                    <h3 className="text-white font-bold text-lg">NOM-002-STPS-2010</h3>
-                    <p className="text-red-100 text-sm">Prevención y protección contra incendios</p>
-                  </div>
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Objetivo</h4>
-                        <p className="text-sm text-gray-600">
-                          Establecer los requerimientos para la prevención y protección contra incendios 
-                          en los centros de trabajo.
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Elementos Clave</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Brigadas de emergencia</li>
-                          <li>• Plan de atención a emergencias</li>
-                          <li>• Sistemas de detección y extinción</li>
-                          <li>• Rutas de evacuación</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <SectionBlock
+          sectionNumber={sectionsData[4].sectionNumber}
+          title={sectionsData[4].title}
+          subtitle={sectionsData[4].subtitle}
+          content={sectionsData[4].content}
+          icon={sectionsData[4].icon}
+          bgGradient={sectionsData[4].bgGradient}
+          variant={sectionsData[4].variant}
+        />
 
-                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-green-600 to-green-700 p-4">
-                    <h3 className="text-white font-bold text-lg">NOM-017-STPS-2008</h3>
-                    <p className="text-green-100 text-sm">Equipo de protección personal</p>
-                  </div>
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Objetivo</h4>
-                        <p className="text-sm text-gray-600">
-                          Establecer los requerimientos mínimos para que el patrón seleccione, 
-                          adquiera y proporcione equipo de protección personal.
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Tipos de EPP</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Protección para la cabeza</li>
-                          <li>• Protección auditiva y visual</li>
-                          <li>• Protección respiratoria</li>
-                          <li>• Protección de extremidades</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div ref={section6Ref}>
+          <SectionBlock
+            sectionNumber={sectionsData[5].sectionNumber}
+            title={sectionsData[5].title}
+            subtitle={sectionsData[5].subtitle}
+            content={sectionsData[5].content}
+            icon={sectionsData[5].icon}
+            bgGradient={sectionsData[5].bgGradient}
+            variant={sectionsData[5].variant}
+          />
+        </div>
 
-                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-4">
-                    <h3 className="text-white font-bold text-lg">NOM-030-STPS-2009</h3>
-                    <p className="text-purple-100 text-sm">Servicios preventivos de seguridad y salud</p>
-                  </div>
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Objetivo</h4>
-                        <p className="text-sm text-gray-600">
-                          Establecer las funciones y actividades que deberán realizar los servicios 
-                          preventivos de seguridad y salud en el trabajo.
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Servicios Preventivos</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Identificación de riesgos</li>
-                          <li>• Evaluación de factores de riesgo</li>
-                          <li>• Vigilancia del medio ambiente laboral</li>
-                          <li>• Vigilancia de la salud de los trabajadores</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <SectionBlock
+          sectionNumber={sectionsData[6].sectionNumber}
+          title={sectionsData[6].title}
+          subtitle={sectionsData[6].subtitle}
+          content={sectionsData[6].content}
+          icon={sectionsData[6].icon}
+          bgGradient={sectionsData[6].bgGradient}
+          variant={sectionsData[6].variant}
+        />
 
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">Otras NOM-STPS Importantes</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <div className="bg-white p-3 rounded border">
-                    <h4 className="font-semibold text-sm text-gray-900">NOM-004-STPS-1999</h4>
-                    <p className="text-xs text-gray-600">Sistemas y dispositivos de seguridad en maquinaria</p>
-                  </div>
-                  <div className="bg-white p-3 rounded border">
-                    <h4 className="font-semibold text-sm text-gray-900">NOM-005-STPS-1998</h4>
-                    <p className="text-xs text-gray-600">Manejo, transporte y almacenamiento de sustancias químicas peligrosas</p>
-                  </div>
-                  <div className="bg-white p-3 rounded border">
-                    <h4 className="font-semibold text-sm text-gray-900">NOM-009-STPS-2011</h4>
-                    <p className="text-xs text-gray-600">Condiciones de seguridad para realizar trabajos en altura</p>
-                  </div>
-                  <div className="bg-white p-3 rounded border">
-                    <h4 className="font-semibold text-sm text-gray-900">NOM-011-STPS-2001</h4>
-                    <p className="text-xs text-gray-600">Condiciones de seguridad e higiene en los centros de trabajo donde se genere ruido</p>
-                  </div>
-                  <div className="bg-white p-3 rounded border">
-                    <h4 className="font-semibold text-sm text-gray-900">NOM-025-STPS-2008</h4>
-                    <p className="text-xs text-gray-600">Condiciones de iluminación en los centros de trabajo</p>
-                  </div>
-                  <div className="bg-white p-3 rounded border">
-                    <h4 className="font-semibold text-sm text-gray-900">NOM-036-1-STPS-2018</h4>
-                    <p className="text-xs text-gray-600">Factores de riesgo ergonómico en el trabajo</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-
-          {activeTab === 2 && (
-            <section className="space-y-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Obligaciones Patronales en Seguridad y Salud</h2>
-              
-              <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Responsabilidades Fundamentales del Patrón</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-red-800 mb-2">⚠️ Obligaciones Inmediatas</h4>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Proporcionar condiciones seguras de trabajo</li>
-                      <li>• Suministrar EPP sin costo al trabajador</li>
-                      <li>• Capacitar en seguridad e higiene</li>
-                      <li>• Informar sobre los riesgos de trabajo</li>
-                      <li>• Realizar exámenes médicos</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-orange-800 mb-2">📋 Obligaciones de Gestión</h4>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Elaborar programa de seguridad e higiene</li>
-                      <li>• Integrar comisiones de seguridad e higiene</li>
-                      <li>• Llevar registros de accidentes y enfermedades</li>
-                      <li>• Realizar análisis de riesgos</li>
-                      <li>• Implementar medidas preventivas</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-gray-900">Estructura Organizacional de Seguridad</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white border border-blue-200 rounded-lg p-6">
-                    <div className="text-center mb-4">
-                      <Users className="h-12 w-12 text-blue-600 mx-auto mb-2" />
-                      <h4 className="font-bold text-blue-800 text-lg">Comisión de Seguridad e Higiene</h4>
-                    </div>
-                    <div className="space-y-3">
-                      <div>
-                        <h5 className="font-semibold text-gray-900 text-base">Integración</h5>
-                        <p className="text-sm text-gray-600">
-                          Igual número de representantes del patrón y de los trabajadores
-                        </p>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-900 text-base">Funciones</h5>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Investigar accidentes y enfermedades</li>
-                          <li>• Vigilar el cumplimiento normativo</li>
-                          <li>• Proponer medidas preventivas</li>
-                          <li>• Promover la capacitación</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white border border-green-200 rounded-lg p-6">
-                    <div className="text-center mb-4">
-                      <Shield className="h-12 w-12 text-green-600 mx-auto mb-2" />
-                      <h4 className="font-bold text-green-800 text-lg">Servicios Preventivos</h4>
-                    </div>
-                    <div className="space-y-3">
-                      <div>
-                        <h5 className="font-semibold text-gray-900 text-base">Modalidades</h5>
-                        <p className="text-sm text-gray-600">
-                          Internos, externos o mixtos según el tamaño de la empresa
-                        </p>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-900 text-base">Actividades</h5>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Evaluación de riesgos</li>
-                          <li>• Vigilancia de la salud</li>
-                          <li>• Asesoría técnica</li>
-                          <li>• Formación e información</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
-                <h3 className="text-xl font-bold text-yellow-800 mb-4">Documentación Obligatoria</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <div className="bg-white p-4 rounded border border-yellow-200">
-                    <FileText className="h-6 w-6 text-yellow-600 mb-2" />
-                    <h4 className="font-bold text-base text-gray-900">Programa de Seguridad e Higiene</h4>
-                    <p className="text-sm text-gray-600 mt-1">Diagnóstico, objetivos, metas y actividades preventivas</p>
-                  </div>
-                  <div className="bg-white p-4 rounded border border-yellow-200">
-                    <CheckCircle className="h-6 w-6 text-yellow-600 mb-2" />
-                    <h4 className="font-bold text-base text-gray-900">Registros de Capacitación</h4>
-                    <p className="text-sm text-gray-600 mt-1">Evidencia de entrenamiento en seguridad e higiene</p>
-                  </div>
-                  <div className="bg-white p-4 rounded border border-yellow-200">
-                    <AlertTriangle className="h-6 w-6 text-yellow-600 mb-2" />
-                    <h4 className="font-bold text-base text-gray-900">Análisis de Riesgos</h4>
-                    <p className="text-sm text-gray-600 mt-1">Identificación, evaluación y control de riesgos</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-
-          {activeTab === 3 && (
-            <section className="space-y-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Inspecciones y Régimen Sancionador</h2>
-              
-              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-red-900 mb-4">Proceso de Inspección Laboral</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-white p-4 rounded border border-red-100">
-                    <div className="text-center mb-3">
-                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                        <span className="text-red-600 font-bold text-sm">1</span>
-                      </div>
-                    </div>
-                    <h4 className="font-semibold text-red-800 text-sm mb-2">Inicio de Inspección</h4>
-                    <p className="text-xs text-gray-600">
-                      Programada, por denuncia o por accidente de trabajo. 
-                      El inspector presenta credencial y orden de inspección.
-                    </p>
-                  </div>
-                  <div className="bg-white p-4 rounded border border-red-100">
-                    <div className="text-center mb-3">
-                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                        <span className="text-red-600 font-bold text-sm">2</span>
-                      </div>
-                    </div>
-                    <h4 className="font-semibold text-red-800 text-sm mb-2">Desarrollo</h4>
-                    <p className="text-xs text-gray-600">
-                      Recorrido por las instalaciones, revisión de documentos, 
-                      entrevistas con trabajadores y representantes.
-                    </p>
-                  </div>
-                  <div className="bg-white p-4 rounded border border-red-100">
-                    <div className="text-center mb-3">
-                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mx-auto">
-                        <span className="text-red-600 font-bold text-sm">3</span>
-                      </div>
-                    </div>
-                    <h4 className="font-semibold text-red-800 text-sm mb-2">Conclusión</h4>
-                    <p className="text-xs text-gray-600">
-                      Elaboración del acta de inspección y, en su caso, 
-                      emplazamiento o inicio del procedimiento sancionador.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-gray-900">Tipos de Sanciones</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white border border-orange-200 rounded-lg overflow-hidden">
-                    <div className="bg-orange-100 p-4">
-                      <h4 className="font-semibold text-orange-800">💰 Multas Económicas</h4>
-                    </div>
-                    <div className="p-4 space-y-3">
-                      <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Infracciones Leves</h5>
-                        <p className="text-sm text-gray-600">15 a 155 veces la Unidad de Medida y Actualización (UMA)</p>
-                        <p className="text-xs text-green-600">$1,543.50 - $15,953.50 pesos</p>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Infracciones Graves</h5>
-                        <p className="text-sm text-gray-600">156 a 770 veces la UMA</p>
-                        <p className="text-xs text-orange-600">$16,056.60 - $79,289.00 pesos</p>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Infracciones Muy Graves</h5>
-                        <p className="text-sm text-gray-600">771 a 20,450 veces la UMA</p>
-                        <p className="text-xs text-red-600">$79,391.90 - $2,106,355.00 pesos</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white border border-red-200 rounded-lg overflow-hidden">
-                    <div className="bg-red-100 p-4">
-                      <h4 className="font-semibold text-red-800">🏢 Medidas de Seguridad</h4>
-                    </div>
-                    <div className="p-4 space-y-3">
-                      <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Clausura Parcial</h5>
-                        <p className="text-xs text-gray-600">
-                          Suspensión de actividades en áreas específicas donde existe riesgo inminente
-                        </p>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Clausura Total</h5>
-                        <p className="text-xs text-gray-600">
-                          Suspensión completa de actividades cuando el riesgo afecta todo el centro de trabajo
-                        </p>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-gray-900 text-sm">Clausura Definitiva</h5>
-                        <p className="text-xs text-gray-600">
-                          En casos de reincidencia grave o cuando no se corrigen las condiciones de riesgo
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-4">Factores Agravantes y Atenuantes</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-red-800 mb-2">Agravantes (Aumentan la sanción)</h4>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Reincidencia en el incumplimiento</li>
-                      <li>• Ocultación de información al inspector</li>
-                      <li>• Riesgo grave e inminente para los trabajadores</li>
-                      <li>• Falta de cooperación con la autoridad</li>
-                      <li>• Número elevado de trabajadores afectados</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">Atenuantes (Reducen la sanción)</h4>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Colaboración con el inspector</li>
-                      <li>• Adopción voluntaria de medidas correctivas</li>
-                      <li>• Falta de intencionalidad en el incumplimiento</li>
-                      <li>• Medidas preventivas implementadas previamente</li>
-                      <li>• Tamaño reducido de la empresa</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">Recursos y Procedimientos de Defensa</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                      <div>
-                        <h5 className="font-medium text-green-800 text-sm">Recurso de Revocación</h5>
-                        <p className="text-xs text-gray-600">
-                          Ante la misma autoridad que dictó la resolución. 
-                          Plazo: 15 días hábiles.
-                        </p>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-green-800 text-sm">Juicio de Amparo</h5>
-                        <p className="text-xs text-gray-600">
-                          Ante el Poder Judicial Federal. 
-                          Plazo: 15 días hábiles.
-                        </p>
-                      </div>
-                      <div>
-                        <h5 className="font-medium text-green-800 text-sm">Recurso de Revisión</h5>
-                        <p className="text-xs text-gray-600">
-                          Ante el Tribunal Federal de Justicia Fiscal y Administrativa. 
-                          Plazo: 45 días hábiles.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-        </motion.div>
-
-        {/* Recursos adicionales mejorados */}
+        {/* Recursos y Enlaces Oficiales - PRESERVED AS IS */}
         <motion.section 
+          id="recursos-oficiales"
           className="mb-12 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 shadow-lg"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -846,6 +609,9 @@ export default function GuiaNormativasSeguridadMexico() {
           </motion.div>
         </motion.section>
 
+        {/* Related Guides Banner - Moved to end */}
+        <RelatedGuidesBanner />
+
         {/* CTA final */}
         <motion.section 
           className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-lg text-center"
@@ -862,10 +628,13 @@ export default function GuiaNormativasSeguridadMexico() {
             <a href="/contacto" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block text-center">
               Consulta Gratuita
             </a>
-            
+            <a href="/catalogo" className="bg-blue-700 text-white border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-block text-center">
+              Ver Catálogo de EPP
+            </a>
           </div>
         </motion.section>
       </article>
     </BlogLayout>
   );
 }
+

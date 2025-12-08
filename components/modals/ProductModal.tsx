@@ -10,7 +10,7 @@ import { AmazonProduct } from '@/lib/types/store'
 import Image from 'next/image'
 import FavoritesModal from './FavoritesModal'
 import { getProductImageUrls, hasMultipleImages } from '@/lib/utils/productImageMapping'
-import { trackAffiliateClick, trackProductView, trackInitiateCheckout, trackInteraction, generateTrackingId } from '@/lib/meta-pixel'
+import { trackAffiliateClick, trackProductView, trackInitiateCheckout, generateTrackingId } from '@/lib/meta-pixel'
 
 interface ProductModalProps {
   product: AmazonProduct | null
@@ -40,10 +40,15 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
     }
   };
 
-  const handleTabInteraction = (tabValue: string) => {
-    if (product) {
-      const productId = generateTrackingId('product', product.asin);
-      trackInteraction('tab_click', tabValue, `product_modal_${product.asin}`);
+  const handleTabInteraction = async (tabValue: string) => {
+    if (product && typeof window !== 'undefined') {
+      try {
+        const { trackInteraction } = await import('@/lib/meta-pixel');
+        const productId = generateTrackingId('product', product.asin);
+        trackInteraction('tab_click', tabValue, `product_modal_${product.asin}`);
+      } catch (error) {
+        console.warn('Failed to load tracking:', error);
+      }
     }
   };
 

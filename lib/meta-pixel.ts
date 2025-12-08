@@ -1,8 +1,6 @@
 // Meta Pixel Tracking Utilities
 // Pixel ID: 2002160850545438
 
-import { CookiesManager } from './cookies-manager';
-
 declare global {
   interface Window {
     fbq: any;
@@ -13,7 +11,18 @@ declare global {
  * Check if marketing cookies are allowed
  */
 const canTrack = (): boolean => {
-  return CookiesManager.allowsMarketing();
+  if (typeof window === 'undefined') return false;
+  
+  try {
+    // Import CookiesManager dynamically to avoid SSR issues
+    const stored = localStorage.getItem('linkerstore_cookie_consent');
+    if (!stored) return false;
+    
+    const consent = JSON.parse(stored);
+    return consent?.marketing ?? false;
+  } catch (error) {
+    return false;
+  }
 };
 
 /**

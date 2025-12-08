@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
-import { trackEvent, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
+import { trackEvent, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 
 
@@ -156,8 +156,15 @@ export default function HomePage() {
   }, []);
 
   // Function to track button clicks
-  const handleCTAClick = (ctaName: string) => {
-    trackInteraction('button_click', ctaName, 'homepage');
+  const handleCTAClick = async (ctaName: string) => {
+    if (typeof window !== 'undefined') {
+      try {
+        const { trackInteraction } = await import('@/lib/meta-pixel');
+        trackInteraction('button_click', ctaName, 'homepage');
+      } catch (error) {
+        console.warn('Failed to load tracking:', error);
+      }
+    }
   };
 
   // Fecha objetivo: 15 de enero de 2026

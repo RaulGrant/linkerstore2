@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Star, CheckCircle, AlertTriangle, ChevronDown, ExternalLink, Calendar, Clock, Eye } from "lucide-react";
 import Link from "next/link";
-import { trackAffiliateClick, trackBlogView, trackInteraction, generateTrackingId } from '@/lib/meta-pixel';
+import { trackAffiliateClick, trackBlogView, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 import { useState, useEffect } from 'react';
 
@@ -39,14 +39,28 @@ export default function ChalecosClient() {
     return () => window.removeEventListener('scroll', updateScrollProgress);
   }, []);
 
-  const handleCTAClick = (ctaType: string) => {
-    trackInteraction('cta_click', ctaType, 'chalecos_guide');
+  const handleCTAClick = async (ctaType: string) => {
+    if (typeof window !== 'undefined') {
+      try {
+        const { trackInteraction } = await import('@/lib/meta-pixel');
+        trackInteraction('cta_click', ctaType, 'chalecos_guide');
+      } catch (error) {
+        console.warn('Failed to load tracking:', error);
+      }
+    }
   };
 
-  const handleFAQToggle = (index: number) => {
+  const handleFAQToggle = async (index: number) => {
     const newExpanded = expandedFAQ === index ? null : index;
     setExpandedFAQ(newExpanded);
-    trackInteraction('faq_toggle', `faq_${index}_${newExpanded ? 'open' : 'close'}`, 'chalecos_guide');
+    if (typeof window !== 'undefined') {
+      try {
+        const { trackInteraction } = await import('@/lib/meta-pixel');
+        trackInteraction('faq_toggle', `faq_${index}_${newExpanded ? 'open' : 'close'}`, 'chalecos_guide');
+      } catch (error) {
+        console.warn('Failed to load tracking:', error);
+      }
+    }
   };
 
   const handleAffiliateClick = (productName: string, url: string) => {

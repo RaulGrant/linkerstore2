@@ -57,10 +57,10 @@ def analyze_sections(text, page_texts):
             r"reglament[os]?"
         ],
         "helmet_types": [
-            r"tipos?\s+de\s+cascos?",
+            r"tipos?\s+de\s+guantes?",
             r"clasificaci[óo]n",
             r"categor[íi]as?",
-            r"clases?\s+de\s+cascos?"
+            r"clases?\s+de\s+guantes?"
         ],
         "materials": [
             r"materiales?",
@@ -156,7 +156,7 @@ def find_products_brands(text):
     return list(set(products_found))
 
 def main():
-    pdf_path = r"c:\ProyectosAlba\linkerstore\app\blog\manual-cascos-seguridad-proteccion-craneal\Guía Cascos Seguridad Leyes Mexicanas.pdf"
+    pdf_path = r"c:\ProyectosAlba\linkerstore\app\blog\guantes-trabajo-seleccion-riesgo-aplicacion\Guía de Guantes de Trabajo México.pdf"
     
     print("Extracting PDF content...")
     print("=" * 50)
@@ -179,7 +179,7 @@ def main():
     section_names = {
         "introduction": "1. Introducción y Alcance",
         "regulations": "2. Regulaciones Mexicanas Aplicables (Normas NOM)",
-        "helmet_types": "3. Tipos de Cascos y sus Usos",
+        "mask_types": "3. Tipos de Guantes y sus Usos",
         "materials": "4. Materiales, Resistencia e Identificadores Técnicos",
         "usage": "5. Uso Correcto y Compatibilidad con otros EPP",
         "maintenance": "6. Inspección, Mantenimiento y Vida Útil",
@@ -222,7 +222,7 @@ def main():
         print("No se encontraron marcas o productos específicos")
     
     # Save extracted text to file for manual review
-    output_file = "extracted_helmet_pdf_content.txt"
+    output_file = "extracted_guantes_pdf_content.txt"
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(full_text)
     
