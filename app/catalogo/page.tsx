@@ -209,9 +209,9 @@ const productCatalog: Product[] = [
     articleSource: "Top 7 Kits de Herramientas 2025"
   },
 
-   // botiquines de emergencia
+  // botiquines de emergencia
 
-   {
+  {
     id: "jaloma-22",
     name: "Jaloma Botiquín en Caja Plástica (22 pzas)",
     description: "Botiquín básico y portátil en caja plástica de 22 piezas, ideal para oficinas pequeñas, hogar y auto. Contiene elementos esenciales de primeros auxilios en un estuche ligero con asa.",
@@ -253,7 +253,7 @@ const productCatalog: Product[] = [
     tags: ["gabinete", "botiquín fijo", "metálico", "industrial"],
     articleSource: "Los Mejores Botiquines de Emergencia para el Trabajo en 2025"
   },
-    {
+  {
     id: "redkap-ct10",
     name: "Overol Industrial Alta Visibilidad Reflejante Capucha (Red Kap CT10)",
     description: "Overol industrial con capucha y cintas reflectantes, resistente a suciedad y polvo. Diseñado para movilidad y trabajo en entornos con necesidad de protección contra partículas y visibilidad.",
@@ -360,7 +360,7 @@ const productCatalog: Product[] = [
     tags: ["alta visibilidad", "gabardina", "reflejante", "carretera"],
     articleSource: "Top 6 Overoles Más Destacados en México"
   },
-    {
+  {
     id: "berrendo-3017",
     name: "Botas Berrendo 3017 Dieléctricas Biotech",
     description: "Bota unisex de piel Napa con casquillo de policarbonato y certificación dieléctrica. Resistente a aceites, construida por inyección directa para mayor durabilidad. Recomendada para trabajos eléctricos y mantenimiento industrial.",
@@ -619,7 +619,7 @@ const productCatalog: Product[] = [
     tags: ["industrial", "gran capacidad", "metálico", "urgencias"],
     articleSource: "Los Mejores Botiquines de Emergencia para el Trabajo en 2025"
   },
-  
+
 
   // Chalecos añadidos desde recommendedcatalogo (mapeados a category "EPP")
   {
@@ -1046,7 +1046,7 @@ const productCatalog: Product[] = [
 
   // Lentes de protección
 
-   {
+  {
     id: "kleenguard-nemesis-v30",
     name: "Kleenguard Nemesis V30 (Mica Ahumada/Gris)",
     description: "Lentes deportivos de seguridad con diseño envolvente, protección certificada de alto impacto y estética moderna que favorece su uso constante.",
@@ -1176,7 +1176,7 @@ const productCatalog: Product[] = [
 
   //  Arneses destacados del mercado mexicano 
 
-   {
+  {
     id: "combyeo-kit",
     name: "Combyeo Arnés de Seguridad con Cuerda Doble y Gancho",
     description: "Kit de ultra bajo costo que incluye arnés, cuerda doble y gancho. Comercializado como 'todo en uno' a precio muy bajo; no recomendable para uso profesional ya que sus certificaciones no son verificables.",
@@ -1186,7 +1186,7 @@ const productCatalog: Product[] = [
     price: "Consultar precio",
     rating: 4.8,
     reviews: 0,
-    image: "/images/catalogo/combyeo-kit.webp",
+    image: "/images/catalogo/combyeo-kit-F.webp",
     amazonUrl: "https://mercadolibre.com/sec/1xH4X5C",
     features: [
       "Incluye arnés, línea de vida/cuerda doble y gancho",
@@ -1302,10 +1302,10 @@ const productCatalog: Product[] = [
     ],
     tags: ["5-puntos", "ansi", "competidor", "warthog"],
     articleSource: "Top 6 Arneses Destacados del Mercado Mexicano 2025"
-  }, 
+  },
 
   // Escaleras industriales
-{
+  {
     id: "cuprum-c-3217-06",
     name: "Cuprum C-3217-06 - Escalera de Tijera de Fibra de Vidrio",
     description: "Escalera de tijera de fibra de vidrio dieléctrica, diseñada para electricistas y técnicos de mantenimiento. Incluye Holster Top® con ranuras para herramientas y tirantes antipellizcos para seguridad y comodidad en uso rudo.",
@@ -1414,9 +1414,9 @@ const productCatalog: Product[] = [
     ],
     tags: ["convertible", "tijera-extensión", "económica", "aluminio"],
     articleSource: "Top 5 Escaleras Destacadas del Mercado Mexicano 2025"
-  }, 
+  },
 
-// mejores multimetros destacados
+  // mejores multimetros destacados
 
   {
     id: "fluke-117",
@@ -1682,7 +1682,7 @@ const productCatalog: Product[] = [
 
   // termometros industriales
 
-   {
+  {
     id: "goxawee-ir-50-600",
     name: "GOXAWEE Termómetro Infrarrojo Digital (-50-600°C)",
     description: "Pirómetro infrarrojo económico y popular en México. Rango amplio (-50°C a 600°C) y operación 'apuntar y disparar', ideal para diagnósticos generales, talleres y uso doméstico avanzado.",
@@ -1816,7 +1816,7 @@ const productCatalog: Product[] = [
   },
 
   // Selladores Industriales
-   {
+  {
     id: "sika-sikaflex-1a-purform",
     name: "Sika Sikaflex-1a Purform",
     description: "Sellador poliuretano elástico monocomponente que cura con la humedad. Tecnología Purform que reduce diisocianatos y ofrece alto desempeño en juntas estructurales y aplicaciones de agua potable.",
@@ -1949,7 +1949,7 @@ const productCatalog: Product[] = [
 
 
 
-  
+
 ];
 
 const categories = ["Todas", "Herramientas", "EPP", "Instrumentos", "Seguridad"];
@@ -1966,7 +1966,7 @@ function ProductCardImage({ product }: { product: Product }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const getEmojiByCategory = (category: string) => {
-    switch(category) {
+    switch (category) {
       case 'Herramientas': return '🔧';
       case 'EPP': return '🦺';
       case 'Instrumentos': return '📊';
@@ -1982,9 +1982,8 @@ function ProductCardImage({ product }: { product: Product }) {
           src={product.image}
           alt={product.name}
           fill
-          className={`object-cover transition-all duration-500 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`object-cover transition-all duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           onLoad={() => setImageLoaded(true)}
           onError={() => {
             setImageError(true);
@@ -1993,7 +1992,7 @@ function ProductCardImage({ product }: { product: Product }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       )}
-      
+
       {/* Fallback emoji cuando no hay imagen o error de carga */}
       {(!product.image || imageError || !imageLoaded) && (
         <div className="text-7xl group-hover:text-8xl transition-all duration-300 filter drop-shadow-lg">
@@ -2026,13 +2025,13 @@ export default function CatalogoPage() {
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { damping: 25, stiffness: 150 });
   const springY = useSpring(mouseY, { damping: 25, stiffness: 150 });
-  
+
   // Scroll and view animations
   const { scrollY } = useScroll();
   const headerRef = useRef<HTMLDivElement>(null);
   const filtersRef = useRef<HTMLDivElement>(null);
   const productsRef = useRef<HTMLDivElement>(null);
-  
+
   const headerInView = useInView(headerRef, { once: true });
   const filtersInView = useInView(filtersRef, { once: true });
   const productsInView = useInView(productsRef, { once: true });
@@ -2067,7 +2066,7 @@ export default function CatalogoPage() {
   // Advanced filter and sort products
   useEffect(() => {
     setLoading(true);
-    
+
     let filtered = productCatalog;
 
     // Apply category filter
@@ -2132,8 +2131,8 @@ export default function CatalogoPage() {
 
   // Utility functions
   const toggleFavorite = (productId: string) => {
-    setFavorites(prev => 
-      prev.includes(productId) 
+    setFavorites(prev =>
+      prev.includes(productId)
         ? prev.filter(id => id !== productId)
         : [...prev, productId]
     );
@@ -2170,7 +2169,7 @@ export default function CatalogoPage() {
   // Mouse-tracking background transform (must be declared before JSX)
   const backgroundTransform = useTransform(
     [springX, springY],
-    ([x, y]) => 
+    ([x, y]) =>
       `radial-gradient(600px at ${x}px ${y}px, rgba(59, 130, 246, 0.15), transparent 70%)`
   );
 
@@ -2221,7 +2220,7 @@ export default function CatalogoPage() {
       </div>
 
       {/* Spectacular Hero Section */}
-      <motion.section 
+      <motion.section
         ref={headerRef}
         className="relative py-24 md:py-32 overflow-hidden"
         initial={{ opacity: 0 }}
@@ -2255,7 +2254,7 @@ export default function CatalogoPage() {
               delay: 2,
             }}
           />
-          
+
           {/* Floating industry icons */}
           {['🛠️', '🔧', '🦺', '📊', '🛡️', '⚙️', '🔩', '🧰', '📏', '🪛', '🔨', '⚡'].map((icon, i) => (
             <motion.div
@@ -2285,10 +2284,10 @@ export default function CatalogoPage() {
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ 
-              opacity: 1, 
-              y: 0, 
-              scale: 1 
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: 1
             }}
             transition={{ duration: 1, type: "spring", bounce: 0.4 }}
           >
@@ -2306,15 +2305,15 @@ export default function CatalogoPage() {
               </Badge>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               className="text-5xl lg:text-7xl font-black mb-8 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent leading-tight"
               initial={{ y: 50, opacity: 0 }}
-              animate={{ 
-                y: 0, 
-                opacity: 1 
+              animate={{
+                y: 0,
+                opacity: 1
               }}
               transition={{ duration: 1, delay: 0.5 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
                 textShadow: '0 0 30px rgba(59, 130, 246, 0.8)'
               }}
@@ -2325,19 +2324,19 @@ export default function CatalogoPage() {
               </span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               className="text-xl lg:text-2xl mb-12 text-blue-100 max-w-4xl mx-auto leading-relaxed"
               initial={{ y: 30, opacity: 0 }}
-              animate={{ 
-                y: 0, 
-                opacity: 1 
+              animate={{
+                y: 0,
+                opacity: 1
               }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Explora <span className="font-bold text-white">{productCatalog.length} productos industriales</span> cuidadosamente 
+              Explora <span className="font-bold text-white">{productCatalog.length} productos industriales</span> cuidadosamente
               seleccionados y <span className="font-bold text-yellow-300">reseñados por expertos</span> en nuestros artículos especializados.
               <br />
-              <motion.span 
+              <motion.span
                 className="inline-block mt-4 text-lg font-semibold text-green-300"
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -2349,9 +2348,9 @@ export default function CatalogoPage() {
             <motion.div
               className="flex flex-wrap justify-center items-center gap-6 mb-8"
               initial={{ y: 40, opacity: 0 }}
-              animate={{ 
-                y: 0, 
-                opacity: 1 
+              animate={{
+                y: 0,
+                opacity: 1
               }}
               transition={{ duration: 1, delay: 0.9 }}
             >
@@ -2364,14 +2363,14 @@ export default function CatalogoPage() {
                   key={i}
                   className={`flex items-center gap-3 bg-gradient-to-r ${item.color} text-black px-4 py-2 rounded-full font-semibold text-sm shadow-lg`}
                   initial={{ scale: 0, rotate: -180 }}
-                  animate={{ 
-                    scale: 1, 
-                    rotate: 0 
+                  animate={{
+                    scale: 1,
+                    rotate: 0
                   }}
-                  transition={{ 
-                    type: "spring", 
-                    bounce: 0.6, 
-                    delay: 1.1 + (i * 0.1) 
+                  transition={{
+                    type: "spring",
+                    bounce: 0.6,
+                    delay: 1.1 + (i * 0.1)
                   }}
                   whileHover={{ scale: 1.05, rotate: 5 }}
                 >
@@ -2385,22 +2384,22 @@ export default function CatalogoPage() {
       </motion.section>
 
       {/* Advanced Search & Filters Section */}
-      <motion.section 
+      <motion.section
         ref={filtersRef}
         className="py-8 bg-gradient-to-r from-white via-gray-50 to-white shadow-lg border-b relative overflow-hidden"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ 
-          opacity: 1, 
-          y: 0 
+        animate={{
+          opacity: 1,
+          y: 0
         }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         {/* Subtle background pattern */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           {/* Enhanced Search Bar - Store Style */}
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -2419,7 +2418,7 @@ export default function CatalogoPage() {
                   ease: "easeInOut"
                 }}
               />
-              
+
               <div className="relative bg-white/90 backdrop-blur-sm border-2 border-gray-200 rounded-3xl p-2 shadow-xl group-hover:border-blue-300 transition-all duration-300">
                 <div className="flex items-center">
                   <div className="flex-1 relative">
@@ -2432,7 +2431,7 @@ export default function CatalogoPage() {
                       className="pl-14 pr-4 py-4 text-lg bg-transparent border-0 focus:ring-0 placeholder:text-gray-400 text-gray-800 font-medium"
                     />
                   </div>
-                  
+
                   <div className="flex items-center gap-2 pr-2">
                     {searchTerm && (
                       <motion.button
@@ -2444,7 +2443,7 @@ export default function CatalogoPage() {
                         <X className="h-4 w-4 text-gray-600 group-hover/btn:text-red-500" />
                       </motion.button>
                     )}
-                    
+
                     <motion.button
                       className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl"
                       whileHover={{ scale: 1.05 }}
@@ -2462,12 +2461,12 @@ export default function CatalogoPage() {
           <div className="space-y-6">
             {/* Desktop Filters */}
             <div className="hidden lg:block">
-              <motion.div 
+              <motion.div
                 className="flex items-center justify-between mb-6"
                 initial={{ opacity: 0, x: -30 }}
-                animate={{ 
-                  opacity: 1, 
-                  x: 0 
+                animate={{
+                  opacity: 1,
+                  x: 0
                 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
@@ -2505,12 +2504,12 @@ export default function CatalogoPage() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="grid lg:grid-cols-12 gap-4 items-center mb-6"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ 
-                  opacity: 1, 
-                  y: 0 
+                animate={{
+                  opacity: 1,
+                  y: 0
                 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
@@ -2595,20 +2594,19 @@ export default function CatalogoPage() {
                       <SelectItem value="newest" className="text-base py-3 hover:bg-blue-50">Más recientes</SelectItem>
                     </SelectContent>
                   </Select>
-                  
+
                   <div className="flex items-center gap-2 text-sm font-medium text-gray-600 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl px-4 py-2">
                     <span>{filteredProducts.length}</span>
                     <span>productos</span>
                   </div>
-                  
+
                   <div className="flex border-2 border-gray-200 rounded-2xl bg-white/90 backdrop-blur-sm overflow-hidden">
                     <motion.button
                       onClick={() => setViewMode('grid')}
-                      className={`p-3 transition-all duration-300 ${
-                        viewMode === 'grid'
+                      className={`p-3 transition-all duration-300 ${viewMode === 'grid'
                           ? 'bg-blue-500 text-white shadow-inner'
                           : 'text-gray-600 hover:text-blue-500 hover:bg-blue-50'
-                      }`}
+                        }`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -2616,11 +2614,10 @@ export default function CatalogoPage() {
                     </motion.button>
                     <motion.button
                       onClick={() => setViewMode('list')}
-                      className={`p-3 transition-all duration-300 border-l-2 border-gray-200 ${
-                        viewMode === 'list'
+                      className={`p-3 transition-all duration-300 border-l-2 border-gray-200 ${viewMode === 'list'
                           ? 'bg-blue-500 text-white shadow-inner'
                           : 'text-gray-600 hover:text-blue-500 hover:bg-blue-50'
-                      }`}
+                        }`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -2632,14 +2629,14 @@ export default function CatalogoPage() {
 
               {/* Active Filters Pills - Store Style */}
               {(searchTerm || selectedCategory !== 'Todas' || selectedBrand !== 'all' || ratingFilter > 0) && (
-                <motion.div 
+                <motion.div
                   className="flex flex-wrap items-center gap-3 p-4 bg-blue-50 rounded-2xl border border-blue-200"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   transition={{ duration: 0.3 }}
                 >
                   <span className="text-sm font-medium text-blue-800">Filtros activos:</span>
-                  
+
                   {searchTerm && (
                     <motion.div
                       initial={{ scale: 0 }}
@@ -2657,7 +2654,7 @@ export default function CatalogoPage() {
                       </button>
                     </motion.div>
                   )}
-                  
+
                   {selectedCategory !== 'Todas' && (
                     <motion.div
                       initial={{ scale: 0 }}
@@ -2674,7 +2671,7 @@ export default function CatalogoPage() {
                       </button>
                     </motion.div>
                   )}
-                  
+
                   {selectedBrand !== 'all' && (
                     <motion.div
                       initial={{ scale: 0 }}
@@ -2691,7 +2688,7 @@ export default function CatalogoPage() {
                       </button>
                     </motion.div>
                   )}
-                  
+
                   {ratingFilter > 0 && (
                     <motion.div
                       initial={{ scale: 0 }}
@@ -2709,7 +2706,7 @@ export default function CatalogoPage() {
                       </button>
                     </motion.div>
                   )}
-                  
+
                   <motion.button
                     onClick={() => {
                       setSearchTerm('');
@@ -2881,7 +2878,7 @@ export default function CatalogoPage() {
                               </Badge>
                             )}
                           </div>
-                          
+
                           <Button
                             variant="outline"
                             size="sm"
@@ -2928,7 +2925,7 @@ export default function CatalogoPage() {
 
             {/* Active filters display */}
             {(selectedCategory !== 'Todas' || selectedBrand !== 'all' || ratingFilter > 0 || searchTerm) && (
-              <motion.div 
+              <motion.div
                 className="flex flex-wrap gap-2"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
@@ -2995,7 +2992,7 @@ export default function CatalogoPage() {
         <div className="container mx-auto px-6 relative">
           {/* Enhanced Results Counter */}
           {filteredProducts.length > 0 && (
-            <motion.div 
+            <motion.div
               className="flex items-center justify-between mb-8 p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-blue-100"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -3008,14 +3005,14 @@ export default function CatalogoPage() {
                 <div>
                   <p className="text-sm text-gray-600">Productos encontrados</p>
                   <p className="text-2xl font-bold text-gray-900">
-                    {filteredProducts.length} 
+                    {filteredProducts.length}
                     <span className="text-sm text-gray-500 font-normal ml-1">
                       de {productCatalog.length} total
                     </span>
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 {/* Quality indicators */}
                 <div className="hidden sm:flex items-center gap-4 text-sm">
@@ -3032,7 +3029,7 @@ export default function CatalogoPage() {
                     </span>
                   </div>
                 </div>
-                
+
                 {/* View mode indicators - enhanced */}
                 <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
                   <Button
@@ -3120,19 +3117,19 @@ export default function CatalogoPage() {
             </div>
           ) : filteredProducts.length === 0 ? (
             // Enhanced Empty State
-            <motion.div 
+            <motion.div
               className="text-center py-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <motion.div 
+              <motion.div
                 className="relative inline-block mb-8"
-                animate={{ 
+                animate={{
                   rotate: [0, -10, 10, -10, 0],
                   scale: [1, 1.1, 1]
                 }}
-                transition={{ 
+                transition={{
                   duration: 2,
                   repeat: Infinity,
                   repeatDelay: 3
@@ -3149,9 +3146,9 @@ export default function CatalogoPage() {
               <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto">
                 Intenta ajustar los filtros o cambiar el término de búsqueda para descubrir productos increíbles
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button 
+                <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold"
                   onClick={() => {
@@ -3164,9 +3161,9 @@ export default function CatalogoPage() {
                   <X className="w-5 h-5 mr-2" />
                   Limpiar todos los filtros
                 </Button>
-                <Button 
+                <Button
                   size="lg"
-                  variant="outline" 
+                  variant="outline"
                   className="border-blue-200 text-blue-600 hover:bg-blue-50"
                   onClick={() => setSearchTerm('')}
                 >
@@ -3188,7 +3185,7 @@ export default function CatalogoPage() {
             </motion.div>
           ) : (
             <div className={
-              viewMode === 'grid' 
+              viewMode === 'grid'
                 ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
                 : "space-y-6"
             }>
@@ -3214,10 +3211,10 @@ export default function CatalogoPage() {
                         {/* Enhanced Product Image Area */}
                         <div className="relative aspect-square bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500">
                           <ProductCardImage product={product} />
-                          
+
                           {/* Gradient overlay on hover */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          
+
                           {/* Enhanced badges */}
                           <div className="absolute top-3 left-3 flex flex-col gap-1">
                             <Badge className="bg-blue-600/90 text-white text-xs font-semibold backdrop-blur-sm">
@@ -3253,7 +3250,7 @@ export default function CatalogoPage() {
                           </div>
                         </div>
                       </div>
-                      
+
                       {/* Enhanced Content Area */}
                       <div className="p-5">
                         <div className="space-y-3">
@@ -3271,18 +3268,17 @@ export default function CatalogoPage() {
                           <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
                             {product.description}
                           </p>
-                          
+
                           {/* Enhanced Rating */}
                           <div className="flex items-center gap-3">
                             <div className="flex items-center gap-1">
                               {[...Array(5)].map((_, i) => (
                                 <Star
                                   key={i}
-                                  className={`w-4 h-4 transition-all duration-200 ${
-                                    i < Math.floor(product.rating) 
-                                      ? 'text-yellow-400 fill-current' 
+                                  className={`w-4 h-4 transition-all duration-200 ${i < Math.floor(product.rating)
+                                      ? 'text-yellow-400 fill-current'
                                       : 'text-gray-300'
-                                  }`}
+                                    }`}
                                 />
                               ))}
                             </div>
@@ -3292,10 +3288,10 @@ export default function CatalogoPage() {
                             </span>
                           </div>
                         </div>
-                        
+
                         {/* Enhanced CTA Button */}
                         <div className="mt-6">
-                          <Button 
+                          <Button
                             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                             onClick={(e) => {
                               e.stopPropagation();
@@ -3322,7 +3318,7 @@ export default function CatalogoPage() {
                             {product.category === 'Instrumentos' && '📊'}
                             {product.category === 'Seguridad' && '🛡️'}
                           </div>
-                          
+
                           {/* Category Badge */}
                           <Badge className="absolute top-2 left-2 bg-blue-600/90 text-white text-xs font-semibold backdrop-blur-sm">
                             {product.category}
@@ -3335,7 +3331,7 @@ export default function CatalogoPage() {
                             </Badge>
                           )}
                         </div>
-                        
+
                         {/* Enhanced Content Area */}
                         <div className="ml-8 flex-1 flex flex-col justify-between">
                           <div>
@@ -3357,7 +3353,7 @@ export default function CatalogoPage() {
                               </p>
                             </div>
                           </div>
-                          
+
                           {/* Bottom Section - Rating and Tags */}
                           <div className="space-y-4">
                             {/* Enhanced Rating */}
@@ -3366,11 +3362,10 @@ export default function CatalogoPage() {
                                 {[...Array(5)].map((_, i) => (
                                   <Star
                                     key={i}
-                                    className={`w-5 h-5 transition-all duration-200 ${
-                                      i < Math.floor(product.rating) 
-                                        ? 'text-yellow-400 fill-current' 
+                                    className={`w-5 h-5 transition-all duration-200 ${i < Math.floor(product.rating)
+                                        ? 'text-yellow-400 fill-current'
                                         : 'text-gray-300'
-                                    }`}
+                                      }`}
                                   />
                                 ))}
                               </div>
@@ -3389,10 +3384,10 @@ export default function CatalogoPage() {
                                   </Badge>
                                 ))}
                               </div>
-                              
+
                               {/* Enhanced CTA Button */}
                               <div className="flex justify-end">
-                                <Button 
+                                <Button
                                   className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -3508,7 +3503,7 @@ export default function CatalogoPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Descubre nuestros artículos detallados con reseñas expertas, comparativas profundas 
+              Descubre nuestros artículos detallados con reseñas expertas, comparativas profundas
               y guías de compra especializadas para tomar siempre la mejor decisión.
             </motion.p>
 
@@ -3615,12 +3610,12 @@ export default function CatalogoPage() {
                         fill
                         className="object-cover"
                       />
-                      
+
                       {/* Navigation arrows */}
                       {selectedProduct.images && selectedProduct.images.length > 1 && (
                         <>
                           <button
-                            onClick={() => setCurrentImageIndex(prev => 
+                            onClick={() => setCurrentImageIndex(prev =>
                               prev === 0 ? selectedProduct.images.length - 1 : prev - 1
                             )}
                             className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-1.5 sm:p-2 shadow-lg transition-all"
@@ -3628,7 +3623,7 @@ export default function CatalogoPage() {
                             <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
                           </button>
                           <button
-                            onClick={() => setCurrentImageIndex(prev => 
+                            onClick={() => setCurrentImageIndex(prev =>
                               prev === selectedProduct.images.length - 1 ? 0 : prev + 1
                             )}
                             className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-1.5 sm:p-2 shadow-lg transition-all"
@@ -3637,7 +3632,7 @@ export default function CatalogoPage() {
                           </button>
                         </>
                       )}
-                      
+
                       {/* Image indicators */}
                       {selectedProduct.images && selectedProduct.images.length > 1 && (
                         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
@@ -3645,17 +3640,16 @@ export default function CatalogoPage() {
                             <button
                               key={index}
                               onClick={() => setCurrentImageIndex(index)}
-                              className={`w-2 h-2 rounded-full transition-all ${
-                                index === currentImageIndex 
-                                  ? 'bg-white scale-125' 
+                              className={`w-2 h-2 rounded-full transition-all ${index === currentImageIndex
+                                  ? 'bg-white scale-125'
                                   : 'bg-white/50 hover:bg-white/75'
-                              }`}
+                                }`}
                             />
                           ))}
                         </div>
                       )}
                     </div>
-                    
+
                     {/* Thumbnail strip */}
                     {selectedProduct.images && selectedProduct.images.length > 1 && (
                       <div className="flex gap-2 overflow-x-auto pb-2 justify-center lg:justify-start">
@@ -3663,11 +3657,10 @@ export default function CatalogoPage() {
                           <button
                             key={index}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                              index === currentImageIndex 
-                                ? 'border-blue-500 scale-105' 
+                            className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${index === currentImageIndex
+                                ? 'border-blue-500 scale-105'
                                 : 'border-gray-200 hover:border-blue-300'
-                            }`}
+                              }`}
                           >
                             <Image
                               src={img}
@@ -3704,13 +3697,12 @@ export default function CatalogoPage() {
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                              i < Math.floor(selectedProduct.rating)
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ${i < Math.floor(selectedProduct.rating)
                                 ? 'text-yellow-400 fill-yellow-400'
                                 : i < selectedProduct.rating
-                                ? 'text-yellow-400 fill-yellow-400 opacity-50'
-                                : 'text-gray-300'
-                            }`}
+                                  ? 'text-yellow-400 fill-yellow-400 opacity-50'
+                                  : 'text-gray-300'
+                              }`}
                           />
                         ))}
                       </div>
@@ -3753,12 +3745,12 @@ export default function CatalogoPage() {
                           </Badge>
                         </div>
                       )}
-                      
+
                       <div className="w-full">
                         <div className="group relative w-full overflow-hidden rounded-xl">
                           {/* Resplandor de fondo */}
                           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl blur-md opacity-40 group-hover:opacity-70 transition-opacity duration-300 scale-110" />
-                          
+
                           <Button
                             size="lg"
                             className="relative w-full h-12 sm:h-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-orange-500 text-black font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border-2 sm:border-3 border-yellow-300 hover:border-blue-400 z-10 text-base sm:text-lg"
@@ -3766,43 +3758,43 @@ export default function CatalogoPage() {
                           >
                             {/* Efecto de destello principal */}
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl overflow-hidden">
-                              <div 
+                              <div
                                 className="absolute inset-0 rounded-xl"
                                 style={{
                                   background: 'linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.4) 30%, rgba(147, 197, 253, 0.6) 50%, rgba(59, 130, 246, 0.4) 70%, transparent 100%)',
                                   animation: 'shimmer 1.5s infinite',
-                                }} 
+                                }}
                               />
                             </div>
-                            
+
                             {/* Bordes destellantes */}
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none">
                               <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-blue-400 to-transparent">
-                                <div 
+                                <div
                                   className="h-full bg-gradient-to-r from-transparent via-blue-500 to-transparent"
                                   style={{ animation: 'shimmer 2s infinite' }}
                                 />
                               </div>
                               <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-blue-400 to-transparent">
-                                <div 
+                                <div
                                   className="h-full bg-gradient-to-r from-transparent via-blue-500 to-transparent"
                                   style={{ animation: 'shimmer 2s infinite 0.5s' }}
                                 />
                               </div>
                               <div className="absolute top-0 bottom-0 left-0 w-[3px] bg-gradient-to-b from-transparent via-blue-400 to-transparent">
-                                <div 
+                                <div
                                   className="w-full bg-gradient-to-b from-transparent via-blue-500 to-transparent"
                                   style={{ animation: 'shimmer 2s infinite 1s' }}
                                 />
                               </div>
                               <div className="absolute top-0 bottom-0 right-0 w-[3px] bg-gradient-to-b from-transparent via-blue-400 to-transparent">
-                                <div 
+                                <div
                                   className="w-full bg-gradient-to-b from-transparent via-blue-500 to-transparent"
                                   style={{ animation: 'shimmer 2s infinite 1.5s' }}
                                 />
                               </div>
                             </div>
-                            
+
                             {/* Icono y texto */}
                             <div className="relative flex items-center justify-center z-10">
                               <ShoppingBag className="w-5 h-5 sm:w-7 sm:h-7 mr-2 sm:mr-3 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
