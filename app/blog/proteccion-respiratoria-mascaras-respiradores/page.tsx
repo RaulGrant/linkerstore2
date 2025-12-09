@@ -308,8 +308,8 @@ export default function ProteccionRespiratoriaArticle() {
         { text: "Compatibilidad EPP", variant: "secondary" as const }
       ],
       callToAction: {
-        text: "Accede a videos instructivos sobre uso correcto de respiradores.",
-        link: "/guias"
+        text: "Mejora tu  calidad de trabajo con nuestros productos seleccionados especialmente para tí",
+        link: "/catalogo"
       }
     },
     {

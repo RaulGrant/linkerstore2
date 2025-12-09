@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Star, CheckCircle, ExternalLink, ClipboardList } from "lucide-react";
+import { Shield, Star, CheckCircle, ShoppingCart, ClipboardList } from "lucide-react";
 
 interface ComplianceSolution {
   id: number;
@@ -120,7 +120,7 @@ const complianceSolutions: ComplianceSolution[] = [
     model: "Overol con Cintas Reflejantes",
     rating: 4.0,
     reviews: 15,
-    image: "/images/catalogo/dickies-peto-F.webp",
+    image: "/images/catalogo/dickies-peto-F+.webp",
     certification: "NOM-017-STPS-2008",
     features: [
        "Cintas reflectantes",
@@ -266,8 +266,8 @@ export default function TopProducts() {
                   whileTap={{ scale: 0.97 }}
                   className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-3 text-sm font-semibold text-white transition-all hover:from-blue-700 hover:to-indigo-700"
                 >
-                  <ExternalLink className="h-4 w-4" />
-                  Consultar Detalles
+                  <ShoppingCart className="h-4 w-4" />
+                  Comprar en Mercado Libre
                 </motion.a>
               </div>
             </motion.div>

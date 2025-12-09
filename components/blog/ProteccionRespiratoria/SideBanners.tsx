@@ -21,7 +21,7 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden xl:block"
+            className="fixed left-4 top-[40%] -translate-y-1/2 z-40 hidden xl:block"
             style={{ width: '280px' }}
           >
             <Card className="bg-gradient-to-br from-green-600 to-emerald-700 border-0 shadow-2xl hover:scale-105 transition-transform duration-300">
@@ -43,7 +43,7 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
                   <div className="flex items-center gap-3 p-2 bg-white/10 rounded-lg">
                     <span className="text-sm">😷</span>
                     <div className="flex-1">
-                      <div className="text-xs font-medium">120+ Respiradores</div>
+                      <div className="text-xs font-medium">Los Mejores Respiradores</div>
                       <div className="text-xs text-green-200 opacity-80">N95, P100, Media Cara</div>
                     </div>
                   </div>
@@ -55,10 +55,10 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-white/10 rounded-lg">
-                    <span className="text-sm">🚚</span>
+                    <span className="text-sm">⭐</span>
                     <div className="flex-1">
-                      <div className="text-xs font-medium">Envío Rápido</div>
-                      <div className="text-xs text-green-200 opacity-80">Entrega en 24-48hrs</div>
+                      <div className="text-xs font-medium">Los Mejores Productos</div>
+                      <div className="text-xs text-green-200 opacity-80">Para Tu Industria</div>
                     </div>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden xl:block"
+            className="fixed right-4 top-[40%] -translate-y-1/2 z-40 hidden xl:block"
             style={{ width: '260px' }}
           >
             <Card className="bg-gradient-to-br from-emerald-600 to-teal-700 border-0 shadow-2xl hover:scale-105 transition-transform duration-300">

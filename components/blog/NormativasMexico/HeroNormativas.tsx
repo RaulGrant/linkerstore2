@@ -89,7 +89,7 @@ export default function HeroNormativas({ showHeroCTAs = true }: HeroNormativasPr
               
               <div className="space-y-3 mb-5">
                 <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                  <span className="text-lg">✅</span>
+                  <span className="text-lg">📋</span>
                   <div>
                     <div className="text-sm font-medium">100% Certificados</div>
                     <div className="text-xs text-blue-200 opacity-80">Cumplimiento normativo garantizado</div>
@@ -103,10 +103,10 @@ export default function HeroNormativas({ showHeroCTAs = true }: HeroNormativasPr
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
-                  <span className="text-lg">🚚</span>
+                  <span className="text-lg">✅</span>
                   <div>
-                    <div className="text-sm font-medium">Envío Directo</div>
-                    <div className="text-xs text-blue-200 opacity-80">A tu centro de trabajo</div>
+                    <div className="text-sm font-medium">Nuestra mejor selección</div>
+                    <div className="text-xs text-blue-200 opacity-80">Para tu centro de trabajo</div>
                   </div>
                 </div>
               </div>
@@ -140,8 +140,8 @@ export default function HeroNormativas({ showHeroCTAs = true }: HeroNormativasPr
                 <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
                   <span className="text-lg">📋</span>
                   <div>
-                    <div className="text-sm font-medium">Documentación Completa</div>
-                    <div className="text-xs text-orange-200 opacity-80">Implementación paso a paso</div>
+                    <div className="text-sm font-medium">Enlaces Oficiales</div>
+                    <div className="text-xs text-orange-200 opacity-80">Descarga los recursos oficiales</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg">
@@ -155,7 +155,7 @@ export default function HeroNormativas({ showHeroCTAs = true }: HeroNormativasPr
                   <span className="text-lg">✅</span>
                   <div>
                     <div className="text-sm font-medium">Acceso Gratuito</div>
-                    <div className="text-xs text-orange-200 opacity-80">Descarga y consulta libre</div>
+                    <div className="text-xs text-orange-200 opacity-80">Consulta libre de guías</div>
                   </div>
                 </div>
               </div>

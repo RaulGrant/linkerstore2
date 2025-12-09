@@ -173,7 +173,7 @@ export default function RelatedGuidesBanner() {
               <Button 
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-green-700"
+                className="border-white text-green-700 hover:bg-gray-100 hover:text-green-700"
               >
                 <a href="/contacto">
                   Consulta Técnica

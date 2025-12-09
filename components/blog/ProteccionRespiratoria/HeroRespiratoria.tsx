@@ -223,7 +223,7 @@ export default function HeroRespiratoria({ showHeroCTAs = true, showSideCTAs = f
           >
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5" />
-              <span>Actualizado 2024</span>
+              <span>Actualizado 2025</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
@@ -282,7 +282,7 @@ export default function HeroRespiratoria({ showHeroCTAs = true, showSideCTAs = f
                 Ver Catálogo de Respiradores
               </motion.a>
               <motion.a
-                href="#productos-recomendados"
+                href="#top-respiradores"
                 className="inline-flex items-center justify-center gap-3 bg-green-600/20 text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600/40 transition-colors backdrop-blur-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
