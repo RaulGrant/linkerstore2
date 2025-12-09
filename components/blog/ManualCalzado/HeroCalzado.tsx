@@ -261,7 +261,7 @@ export default function HeroCalzado({ showHeroCTAs = true, showSideCTAs = false,
           >
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5" />
-              <span>Actualizado 2024</span>
+              <span>Actualizado 2025</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
@@ -319,7 +319,7 @@ export default function HeroCalzado({ showHeroCTAs = true, showSideCTAs = false,
               transition={{ duration: 0.8, delay: 1 }}
             >
               <motion.a
-                href={productType === 'cascos' ? "/catalogo?categoria=cascos-seguridad" : "/catalogo?categoria=calzado-seguridad"}
+                href={productType === 'cascos' ? "/catalogo" : "/catalogo"}
                 className="inline-flex items-center justify-center gap-3 bg-white text-orange-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-colors shadow-lg"
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}
                 whileTap={{ scale: 0.95 }}

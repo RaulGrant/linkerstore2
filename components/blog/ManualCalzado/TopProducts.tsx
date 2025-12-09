@@ -13,7 +13,7 @@ const topProducts = [
     model: "Zapato de Seguridad Industrial",
     rating: 4.7,
     reviews: 1542,
-    image: "/images/calzado/berrendo-3017.webp",
+    image: "/images/catalogo/berrendo-3017.webp",
     certification: "NOM-113-STPS-2009",
     features: [
       "Casquillo de Policarbonato ultraligero",
@@ -27,7 +27,7 @@ const topProducts = [
       "Ultraligero y cómodo",
       "Máxima protección eléctrica"
     ],
-    amazonLink: "https://mercadolibre.com/sec/1KmV8U4",
+    amazonLink: "https://mercadolibre.com/sec/2VaKvc7",
     category: "Tipo III - Dieléctrico"
   },
   {
@@ -36,7 +36,7 @@ const topProducts = [
     model: "Bota de Trabajo Industrial 6 pulgadas",
     rating: 4.8,
     reviews: 923,
-    image: "/images/calzado/cat-second-shift.webp",
+    image: "/images/catalogo/caterpillar-second-shift-F.webp",
     certification: "NOM-113-STPS-2009",
     features: [
       "Casquillo de Acero reforzado",
@@ -59,7 +59,7 @@ const topProducts = [
     model: "Bota de Seguridad con Anti-Fatiga",
     rating: 4.6,
     reviews: 687,
-    image: "/images/calzado/timberland-pit-boss.webp",
+    image: "/images/catalogo/timberland-pro-pit-boss-F.webp",
     certification: "NOM-113-STPS-2009",
     features: [
       "Casquillo de Acero tradicional",
@@ -82,7 +82,7 @@ const topProducts = [
     model: "Zapato Deportivo de Seguridad",
     rating: 4.6,
     reviews: 235,
-    image: "/images/calzado/riverline-spyder.webp",
+    image: "/images/catalogo/riverline-spyder-spyg2-F.webp",
     certification: "NOM-113-STPS-2009",
     features: [
       "Casquillo de Policarbonato ligero",
@@ -105,7 +105,7 @@ const topProducts = [
     model: "Estilo Deportivo Libre de Metal",
     rating: 4.9,
     reviews: 79,
-    image: "/images/calzado/timberland-deportivo.webp",
+    image: "/images/catalogo/timberland-pro-pit-6-F.webp",
     certification: "NOM-113-STPS-2009",
     features: [
       "Casquillo de Fibra de Vidrio",
@@ -121,6 +121,30 @@ const topProducts = [
     ],
     amazonLink: "https://mercadolibre.com/sec/2LrJRAz",
     category: "Tipo II - Diseño"
+  },
+  {
+    id: 6,
+    name: "Zapatos De Seguridad Tenis De Industrial Botas Hombre Mujer",
+    model: "Calzado de Seguridad Unisex",
+    rating: 4.6,
+    reviews: 53,
+    image: "/images/catalogo/zapatos-seguridad-tenis-industrial-F.webp",
+    certification: "NOM-113-STPS-2009",
+    features: [
+      "Casquillo de Acero reforzado",
+      "Diseño tipo botin",
+      "Suela antideslizante de goma",
+      "Malla transpirable",
+      "Plantilla acolchonada"
+    ],
+    highlights: [
+      "Diseño unisex",
+      "Comodidad todo el día",
+      "Asequible y funcional"
+    ],
+    amazonLink: "https://mercadolibre.com/sec/14H7RAt",
+    category: "Tipo II - Unisex"
+
   }
 ];
 
@@ -154,11 +178,11 @@ export default function TopProducts() {
           transition={{ duration: 0.8 }}
         >
           <Badge className="bg-orange-100 text-orange-800 px-4 py-2 text-sm font-medium mb-4">
-            Top 5 Recomendados
+            Top 6 Recomendados
           </Badge>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Mejor Calzado de Seguridad 2024
+            Mejor Calzado de Seguridad 2025
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -192,9 +216,19 @@ export default function TopProducts() {
                 {product.category}
               </Badge>
 
-              {/* Product Image - Placeholder */}
+              {/* Product Image */}
               <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                <div className="text-6xl opacity-50">👞</div>
+                {product.image ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover w-full h-full"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="text-6xl opacity-50">👞</div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
@@ -268,7 +302,7 @@ export default function TopProducts() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Ver Precio en MercadoLibre
+                  Comprar en MercadoLibre
                 </motion.a>
               </div>
             </motion.div>
@@ -350,7 +384,7 @@ export default function TopProducts() {
               por su certificación dieléctrica Tipo III.
             </p>
             <motion.a
-              href="/catalogo?categoria=calzado-seguridad"
+              href="/catalogo"
               className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-xl font-bold hover:bg-orange-50 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

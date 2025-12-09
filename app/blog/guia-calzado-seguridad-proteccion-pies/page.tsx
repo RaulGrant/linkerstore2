@@ -30,31 +30,49 @@ export default function GuiaCalzadoSeguridadArticle() {
 
   // Control de scroll para banners
   useEffect(() => {
+    // Crear observer para detectar cuando TopProducts entra en viewport
+    const topProductsSection = document.getElementById('productos-recomendados');
+    
+    if (!topProductsSection) {
+      console.warn('TopProducts section not found');
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Si TopProducts está visible, ocultar banners
+          if (entry.isIntersecting) {
+            setShowSideBanners(false);
+          } else if (entry.boundingClientRect.top > 0) {
+            // Si TopProducts está arriba de la pantalla (no scrolleado aún), mostrar banners
+            setShowSideBanners(true);
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger cuando 10% del elemento es visible
+    );
+
+    observer.observe(topProductsSection);
+
+    // Fallback scroll listener para Hero CTAs
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
       
-      // Ocultar Hero CTAs después del 50% del Hero
-      if (scrollPosition > windowHeight * 0.5) {
+      if (scrollPosition > windowHeight * 0.6) {
         setShowHeroCTAs(false);
       } else {
         setShowHeroCTAs(true);
       }
-      
-      // Ocultar Side Banners en la sección de productos y en artículos relacionados
-      const isInProductsSection = scrollPosition > windowHeight * 1.5 && scrollPosition < windowHeight * 3;
-      const isInRelatedGuides = scrollPosition > documentHeight - windowHeight * 2.5;
-      
-      if (isInProductsSection || isInRelatedGuides) {
-        setShowSideBanners(false);
-      } else {
-        setShowSideBanners(true);
-      }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   // Data de secciones basada en contenido técnico

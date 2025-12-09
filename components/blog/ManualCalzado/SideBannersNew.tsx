@@ -152,13 +152,13 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-xl">⭐</span>
                 </div>
-                <h4 className="font-bold text-lg mb-2">Productos Top</h4>
-                <p className="text-xs text-green-100 mb-4">Los calzados de seguridad más recomendados por expertos</p>
+                <h4 className="font-bold text-lg mb-2">Visita nuestra tienda</h4>
+                <p className="text-xs text-green-100 mb-4">Los productos más recomendados por expertos</p>
               </div>
               
               <div className="space-y-2 mb-4 text-xs">
                 <div className="flex items-center gap-2 text-green-100">
-                  <span>✓</span> Certificación NOM-113
+                  <span>✓</span> Certificados NOM
                 </div>
                 <div className="flex items-center gap-2 text-green-100">
                   <span>✓</span> Marcas reconocidas
@@ -172,12 +172,12 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
               </div>
               
               <motion.a
-                href="/catalogo?categoria=calzado-seguridad&ordenar=mejor-valorado"
+                href="/catalogo"
                 className="w-full bg-white text-green-700 py-2.5 px-4 rounded-xl font-bold text-sm text-center block hover:bg-green-50 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Ver Productos Top
+                Ver Tienda
               </motion.a>
             </div>
           </motion.div>
