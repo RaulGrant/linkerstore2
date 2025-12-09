@@ -500,18 +500,12 @@ export default function HomePage() {
 
        {/* Banner Carrusel de Productos */}
       <motion.section 
-        className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden"
+        className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-gray-900 relative overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -522,7 +516,7 @@ export default function HomePage() {
           >
            
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-              Catálogo de Productos Seleccionados
+              Catálogo de Productos
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Explora los mejores productos de seguridad industrial seleccionados por nuestros expertos
@@ -533,76 +527,196 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "DEWALT DWMT81535 Kit de Mecánica",
+                name: "DEWALT DWMT81535",
                 category: "Kits de Herramientas",
                 image: "/images/catalogo/kit-herramientas-82.webp",
                 link: "https://mercadolibre.com/sec/2naVqQs",
                 rating: 4.8,
                 reviews: 3200,
-                description: "247 piezas de grado profesional"
               },
               {
-                name: "KIROGILY 150 en 1 Kit de Precisión",
-                category: "Herramientas de Precisión",
-                image: "/images/catalogo/destornilladores-precision.webp",
-                link: "https://mercadolibre.com/sec/1tT2HL7",
-                rating: 5.0,
-                reviews: 1800,
-                description: "150 piezas especializadas en electrónicos"
-              },
-              {
-                name: "Jaloma Botiquín (22 pzas)",
-                category: "Botiquines",
-                image: "/images/catalogo/jaloma-22.webp",
-                link: "https://mercadolibre.com/sec/17VWdsg",
-                rating: 4.8,
-                reviews: 300,
-                description: "Botiquín portátil para emergencias"
-              },
-              {
-                name: "Berrendo 3017 Botas Dieléctricas",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/berrendo-3017.webp",
-                link: "https://mercadolibre.com/sec/2VaKvc7",
-                rating: 4.7,
-                reviews: 266,
-                description: "Protección eléctrica certificada"
-              },
-              {
-                name: "Caterpillar Second Shift Steel Toe",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/caterpillar-second-shift.webp",
-                link: "https://mercadolibre.com/sec/1KmV8U4",
-                rating: 5.0,
-                reviews: 3,
-                description: "Construcción Goodyear Welt profesional"
-              },
-              {
-                name: "Dickies Overol Con Reflejantes",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/dickies-peto.webp",
-                link: "https://mercadolibre.com/sec/1sD7aUv",
-                rating: 4.0,
-                reviews: 15,
-                description: "Múltiples bolsillos seguros"
-              },
-              {
-                name: "Red Kap Overol Alta Visibilidad",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/redkap-ct10.webp",
-                link: "https://mercadolibre.com/sec/2fgbB41",
+                name: "Pretul SET-83",
+                category: "Kits de Herramientas",
+                image: "/images/catalogo/llaves-pretul.webp",
+                link: "https://mercadolibre.com/sec/1GQ24Dg",
                 rating: 4.2,
-                reviews: 150,
-                description: "Capucha integrada y reflejantes"
+                reviews: 850,
               },
               {
-                name: "CARTMAN 238 Piezas Kit",
+                name: "CARTMAN 238 Piezas",
                 category: "Kits de Herramientas",
                 image: "/images/catalogo/herramientas-218.webp",
                 link: "https://mercadolibre.com/sec/2Du7866",
                 rating: 4.5,
                 reviews: 2100,
-                description: "Ideal para bricolaje y uso doméstico"
+              },
+              {
+                name: "KIROGILY 150 en 1",
+                category: "Herramientas de Precisión",
+                image: "/images/catalogo/destornilladores-precision.webp",
+                link: "https://mercadolibre.com/sec/1tT2HL7",
+                rating: 5.0,
+                reviews: 1800,
+              },
+              {
+                name: "Kit Nanwei",
+                category: "Kits Eléctricos",
+                image: "/images/catalogo/kit-herramientas-82.webp",
+                link: "https://mercadolibre.com/sec/1miMzDg",
+                rating: 4.5,
+                reviews: 500,
+              },
+              {
+                name: "Juego 216 Piezas",
+                category: "Kits de Herramientas",
+                image: "/images/catalogo/herramientas-218.webp",
+                link: "https://mercadolibre.com/sec/2KHakLi",
+                rating: 4.0,
+                reviews: 160,
+              },
+              {
+                name: "Kit Deppon 168",
+                category: "Kits de Emergencia",
+                image: "/images/catalogo/botiquin-industrial.webp",
+                link: "https://mercadolibre.com/sec/2tACX4Z",
+                rating: 4.0,
+                reviews: 100,
+              },
+              {
+                name: "Jaloma Botiquín 22 pzas",
+                category: "Botiquines",
+                image: "/images/catalogo/jaloma-22.webp",
+                link: "https://mercadolibre.com/sec/17VWdsg",
+                rating: 4.8,
+                reviews: 300,
+              },
+              {
+                name: "Gabinete Surtek",
+                category: "Botiquines",
+                image: "/images/catalogo/gabinete-surtek.webp",
+                link: "https://mercadolibre.com/sec/2wiufhR",
+                rating: 4.8,
+                reviews: 220,
+              },
+              {
+                name: "Red Kap Overol CT10",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/redkap-ct10.webp",
+                link: "https://mercadolibre.com/sec/2fgbB41",
+                rating: 4.2,
+                reviews: 150,
+              },
+              {
+                name: "Dickies Overol",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/dickies-peto.webp",
+                link: "https://mercadolibre.com/sec/1sD7aUv",
+                rating: 4.0,
+                reviews: 15,
+              },
+              {
+                name: "GUIGUA Mono",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/guigua-mono-reparacion.webp",
+                link: "https://mercadolibre.com/sec/1z6GYqc",
+                rating: 4.6,
+                reviews: 450,
+              },
+              {
+                name: "Sanfu Multibolsillos",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/sanfu-multibolsillos.webp",
+                link: "https://mercadolibre.com/sec/1JKomB9",
+                rating: 4.3,
+                reviews: 300,
+              },
+              {
+                name: "BRISCO INDUSTRIAL",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/brisco-industrial-reflejante.webp",
+                link: "https://mercadolibre.com/sec/2bXCQGF",
+                rating: 5.0,
+                reviews: 5,
+              },
+              {
+                name: "Berrendo 3017",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/berrendo-3017.webp",
+                link: "https://mercadolibre.com/sec/2VaKvc7",
+                rating: 4.7,
+                reviews: 266,
+              },
+              {
+                name: "Caterpillar Second Shift",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/caterpillar-second-shift.webp",
+                link: "https://mercadolibre.com/sec/1KmV8U4",
+                rating: 5.0,
+                reviews: 3,
+              },
+              {
+                name: "Timberland PRO Pit Boss",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/timberland-pro-pit-boss.webp",
+                link: "https://mercadolibre.com/sec/2hukoND",
+                rating: 4.6,
+                reviews: 10000,
+              },
+              {
+                name: "Riverline Spyder",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/riverline-spyder-spyg2.webp",
+                link: "https://mercadolibre.com/sec/1Tpzibx",
+                rating: 4.6,
+                reviews: 235,
+              },
+              {
+                name: "Timberland Pro Pit 6",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/timberland-pro-pit-6.webp",
+                link: "https://mercadolibre.com/sec/2LrJRAz",
+                rating: 4.9,
+                reviews: 79,
+              },
+              {
+                name: "Nieion Tenis Safety",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/nieion-tenis-safety.webp",
+                link: "https://mercadolibre.com/sec/32PaSVu",
+                rating: 4.6,
+                reviews: 23500,
+              },
+              {
+                name: "Ekinio Tenis Seguridad",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/ekinio-tenis-seguridad.webp",
+                link: "https://mercadolibre.com/sec/2jknq7Q",
+                rating: 4.7,
+                reviews: 3800,
+              },
+              {
+                name: "PRO-TEX Overol Cargo",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/pro-tex-bolsas-cargo.webp",
+                link: "https://mercadolibre.com/sec/1ugpCn6",
+                rating: 4.3,
+                reviews: 60,
+              },
+              {
+                name: "Botiquín Metálico",
+                category: "Botiquines",
+                image: "/images/catalogo/botiquin-metalico-equipado.webp",
+                link: "https://mercadolibre.com/sec/1fCNzj2",
+                rating: 4.9,
+                reviews: 69,
+              },
+              {
+                name: "Matein 1233",
+                category: "Botiquines",
+                image: "/images/catalogo/matein-1233.webp",
+                link: "https://mercadolibre.com/sec/1GCdYb6",
+                rating: 4.9,
+                reviews: 284,
               }
             ].map((product, index) => (
               <motion.div
@@ -612,7 +726,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ 
                   duration: 0.6, 
-                  delay: index * 0.1,
+                  delay: index * 0.05,
                   type: "spring",
                   bounce: 0.4
                 }}
@@ -624,9 +738,9 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="group"
               >
-                <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 h-80 flex flex-col">
+                <div className="relative overflow-hidden bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-80 flex flex-col border border-gray-200 hover:border-orange-400">
                   {/* Image container */}
-                  <div className="relative w-full h-40 bg-gray-800 overflow-hidden">
+                  <div className="relative w-full h-40 bg-gray-100 overflow-hidden">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -637,23 +751,19 @@ export default function HomePage() {
                       }}
                     />
                     {/* Fallback overlay si falla la imagen */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 opacity-30"></div>
                   </div>
                   
                   {/* Product content */}
-                  <div className="relative z-10 flex-1 flex flex-col justify-between p-4">
+                  <div className="relative z-10 flex-1 flex flex-col justify-between p-3">
                     <div>
-                      <Badge className="mb-2 bg-blue-500/30 text-blue-100 border-blue-400/50">
+                      <Badge className="mb-2 bg-blue-100 text-blue-700 border-blue-300 text-xs">
                         {product.category}
                       </Badge>
                       
-                      <h3 className="text-sm font-bold text-white mb-2 leading-tight line-clamp-2">
+                      <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight line-clamp-2">
                         {product.name}
                       </h3>
-
-                      <p className="text-xs text-gray-300 mb-3 line-clamp-2">
-                        {product.description}
-                      </p>
 
                       <div className="flex items-center gap-1 mb-3">
                         <div className="flex items-center">
@@ -663,12 +773,12 @@ export default function HomePage() {
                               className={`w-3 h-3 ${
                                 i < Math.floor(product.rating)
                                   ? 'fill-yellow-400 text-yellow-400'
-                                  : 'text-gray-600'
+                                  : 'text-gray-300'
                               }`}
                             />
                           ))}
                         </div>
-                        <span className="text-xs text-gray-300">
+                        <span className="text-xs text-gray-500">
                           ({product.reviews})
                         </span>
                       </div>
@@ -684,7 +794,7 @@ export default function HomePage() {
                       whileTap={{ scale: 0.98 }}
                     >
                       <span className="relative z-10 flex items-center justify-center gap-1">
-                        🛒 Comprar
+                         Comprar 🛒
                       </span>
                       
                       {/* Efecto shine */}
@@ -708,7 +818,7 @@ export default function HomePage() {
 
           {/* CTA Final */}
           <motion.div 
-            className="text-center mt-24"
+            className="text-center mt-20"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -719,13 +829,13 @@ export default function HomePage() {
                 handleCTAClick('see_all_products');
                 window.location.href = '/catalogo';
               }}
-              className="relative overflow-hidden bg-gradient-to-r from-white/10 to-white/5 border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 group"
+              className="relative overflow-hidden bg-gradient-to-r from-white text-blue-900 hover:from-gray-100 border-2 border-white font-semibold px-8 py-4 rounded-full transition-all duration-300 group shadow-lg hover:shadow-2xl"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center gap-3">
                 <span className="text-2xl group-hover:animate-bounce">🛠️</span>
-                Ver Todo el Catálogo de Productos
+                Ver Todo el Catálogo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               
