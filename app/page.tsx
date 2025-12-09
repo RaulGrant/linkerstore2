@@ -384,218 +384,119 @@ export default function HomePage() {
                 </motion.div>
               ))}
             </motion.div>
-
-            {/* Mensaje especial para cursos */}
+            {/* Carrusel de Productos en Hero */}
             <motion.div 
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/30 rounded-full px-6 py-3 mb-8"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2, duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
+              className="mt-20 w-full"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 1.4 }}
             >
-              <motion.span
-                className="text-xl"
-                animate={{ rotate: [0, 15, -15, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🎓
-              </motion.span>
-              <span className="text-yellow-100 font-medium">
-                Próximamente: Cursos especializados en seguridad industrial
-              </span>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.section>
- {/* Banner de Video Promocional */}
-      <motion.section 
-        className="py-20 bg-gradient-to-b from-blue-800 to-blue-900 relative overflow-hidden"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-         
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Conoce LinkerStore en Acción
-            </h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              Descubre cómo nuestros productos y servicios pueden transformar tu trabajo industrial
-            </p>
-          </motion.div>
+              <h3 className="text-3xl font-bold mb-12 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                Productos Destacados
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[
+                  {
+                    name: "DEWALT DWMT81535",
+                    category: "Kits Herramientas",
+                    image: "/images/catalogo/kit-herramientas-82.webp",
+                    link: "https://mercadolibre.com/sec/2naVqQs",
+                    rating: 4.8,
+                    reviews: 3200,
+                  },
+                  {
+                    name: "Berrendo 3017",
+                    category: "Calzado Seguridad",
+                    image: "/images/catalogo/berrendo-3017.webp",
+                    link: "https://mercadolibre.com/sec/2VaKvc7",
+                    rating: 4.7,
+                    reviews: 266,
+                  },
+                  {
+                    name: "Jaloma Botiquín",
+                    category: "Primeros Auxilios",
+                    image: "/images/catalogo/jaloma-22.webp",
+                    link: "https://mercadolibre.com/sec/17VWdsg",
+                    rating: 4.8,
+                    reviews: 300,
+                  },
+                  {
+                    name: "Dickies Overol",
+                    category: "Ropa Seguridad",
+                    image: "/images/catalogo/dickies-peto.webp",
+                    link: "https://mercadolibre.com/sec/1sD7aUv",
+                    rating: 4.0,
+                    reviews: 15,
+                  }
+                ].map((product, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                    whileHover={{ y: -10, scale: 1.05 }}
+                    className="group"
+                  >
+                    <div className="relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                      {/* Image */}
+                      <div className="relative h-40 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 overflow-hidden">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-300"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      </div>
 
-          {/* Banner de Video Simple */}
-          <motion.div 
-            className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-900/90 to-blue-600/90"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="relative aspect-video bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600">
-              {/* Animated Background Fallback */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/90 to-blue-600/95">
-                <div className="absolute inset-0 bg-[url('/images/seucrity.webp')] bg-cover bg-center opacity-30"></div>
-                {/* Animated particles */}
-                <div className="absolute inset-0">
-                  {[...Array(15)].map((_, i) => {
-                    const leftPos = (i * 6.67) % 100;
-                    const topPos = ((i * 13.3) % 80) + 10;
-                    const duration = 3 + (i % 4);
-                    const delay = (i % 5) * 0.4;
-                    
-                    return (
-                      <motion.div
-                        key={i}
-                        className="absolute w-1 h-1 bg-blue-300 rounded-full opacity-40"
-                        style={{
-                          left: `${leftPos}%`,
-                          top: `${topPos}%`,
-                        }}
-                        animate={{
-                          y: [0, -80, 0],
-                          opacity: [0.2, 0.8, 0.2],
-                          scale: [0.5, 1.5, 0.5],
-                        }}
-                        transition={{
-                          duration: duration,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: delay,
-                        }}
-                      />
-                    );
-                  })}
-                </div>
+                      {/* Content */}
+                      <div className="flex-1 p-4 flex flex-col justify-between">
+                        <div>
+                          <Badge className="mb-2 bg-blue-500/30 text-blue-100 border-blue-400/50 text-xs">
+                            {product.category}
+                          </Badge>
+                          <h4 className="text-sm font-bold text-white mb-2 line-clamp-2">
+                            {product.name}
+                          </h4>
+                          <div className="flex items-center gap-1">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`w-2.5 h-2.5 ${
+                                  i < Math.floor(product.rating)
+                                    ? 'fill-yellow-400 text-yellow-400'
+                                    : 'text-gray-500'
+                                }`}
+                              />
+                            ))}
+                            <span className="text-xs text-gray-300 ml-1">
+                              ({product.reviews})
+                            </span>
+                          </div>
+                        </div>
+
+                        <motion.button
+                          onClick={() => {
+                            handleCTAClick(`hero_product_${product.name}`);
+                            window.open(product.link, '_blank');
+                          }}
+                          className="w-full mt-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-xs"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          Comprar
+                        </motion.button>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-
-              {/* Video Implementation with controls and sound */}
-              <video
-                className="absolute inset-0 w-full h-full object-cover z-10"
-                controls
-                autoPlay
-                loop
-                playsInline
-                preload="auto"
-                onCanPlay={(e) => {
-                  console.log('✅ Video cargado correctamente');
-                  // Intentar reproducir el video
-                  e.currentTarget.play().catch(console.log);
-                }}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  console.log('❌ Error cargando video, usando fondo animado');
-                }}
-                onLoadedData={(e) => {
-                  console.log('📹 Video data cargado');
-                  // Asegurar que el video tenga volumen
-                  e.currentTarget.volume = 0.7;
-                }}
-                volume={0.7}
-              >
-                <source src="/videos/hero-banner.webm" type="video/webm" />
-                <source src="/videos/hero-banner.webm" type="video/webm" />
-              </video>
-            </div>
-          </motion.div>
-          
-          {/* Contenido debajo del video para mejor énfasis */}
-          <motion.div 
-            className="mt-12 max-w-4xl mx-auto px-8 text-center bg-gradient-to-b from-gray-900/95 via-gray-800/90 to-gray-900/95 rounded-3xl py-16 shadow-2xl border border-gray-700/50"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <motion.h2 
-              className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl"
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 1.2, 
-                delay: 0.3,
-                type: "spring",
-                bounce: 0.4
-              }}
-              whileHover={{ 
-                scale: 1.02,
-                textShadow: "0px 0px 20px rgba(255,255,255,0.8)"
-              }}
-            >
-              LinkerStore - Seguridad Industrial
-            </motion.h2>
-            
-            <motion.p 
-              className="text-2xl mb-6 text-white/90 font-medium drop-shadow-lg"
-              initial={{ opacity: 0, x: -50, rotateX: 90 }}
-              whileInView={{ opacity: 1, x: 0, rotateX: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 1, 
-                delay: 0.6,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.05,
-                color: "#ffffff"
-              }}
-            >
-              Tu aliado en protección y herramientas industriales
-            </motion.p>
-            
-            <motion.p 
-              className="text-lg mb-10 text-white/80 leading-relaxed max-w-3xl mx-auto drop-shadow-md"
-              initial={{ opacity: 0, y: 30, blur: 10 }}
-              whileInView={{ opacity: 1, y: 0, blur: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 1.2, 
-                delay: 0.9,
-                ease: "easeOut"
-              }}
-              whileHover={{ 
-                scale: 1.02,
-                color: "#ffffff"
-              }}
-            >
-              Explora nuestra amplia gama de productos industriales, equipos de protección personal y herramientas especializadas para profesionales que exigen calidad y confianza.
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-            >
-              <a
-                href="/catalogo"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                <span>Ir a la tienda</span>
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                  className="text-2xl"
-                >
-                  →
-                </motion.span>
-              </a>
             </motion.div>
           </motion.div>
         </div>
       </motion.section>
-
-      
 
        {/* Banner Carrusel de Productos */}
       <motion.section 
@@ -835,8 +736,191 @@ export default function HomePage() {
         </div>
       </motion.section>
 
+ {/* Banner de Video Promocional */}
+      <motion.section 
+        className="py-20 bg-gradient-to-b from-blue-800 to-blue-900 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+         
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Conoce LinkerStore en Acción
+            </h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Descubre cómo nuestros productos y servicios pueden transformar tu trabajo industrial
+            </p>
+          </motion.div>
 
-      {/* Hero Section LinkerStore Original (temporalmente oculto) */}
+          {/* Banner de Video Simple */}
+          <motion.div 
+            className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-900/90 to-blue-600/90"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="relative aspect-video bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600">
+              {/* Animated Background Fallback */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/90 to-blue-600/95">
+                <div className="absolute inset-0 bg-[url('/images/seucrity.webp')] bg-cover bg-center opacity-30"></div>
+                {/* Animated particles */}
+                <div className="absolute inset-0">
+                  {[...Array(15)].map((_, i) => {
+                    const leftPos = (i * 6.67) % 100;
+                    const topPos = ((i * 13.3) % 80) + 10;
+                    const duration = 3 + (i % 4);
+                    const delay = (i % 5) * 0.4;
+                    
+                    return (
+                      <motion.div
+                        key={i}
+                        className="absolute w-1 h-1 bg-blue-300 rounded-full opacity-40"
+                        style={{
+                          left: `${leftPos}%`,
+                          top: `${topPos}%`,
+                        }}
+                        animate={{
+                          y: [0, -80, 0],
+                          opacity: [0.2, 0.8, 0.2],
+                          scale: [0.5, 1.5, 0.5],
+                        }}
+                        transition={{
+                          duration: duration,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: delay,
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Video Implementation with controls and muted by default */}
+              <video
+                className="absolute inset-0 w-full h-full object-cover z-10"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                onCanPlay={(e) => {
+                  console.log('✅ Video cargado correctamente');
+                  // Intentar reproducir el video
+                  e.currentTarget.play().catch(console.log);
+                }}
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  console.log('❌ Error cargando video, usando fondo animado');
+                }}
+                onLoadedData={(e) => {
+                  console.log('📹 Video data cargado');
+                }}
+              >
+                <source src="/videos/hero-banner.webm" type="video/webm" />
+                <source src="/videos/hero-banner.webm" type="video/webm" />
+              </video>
+            </div>
+          </motion.div>
+          
+          {/* Contenido debajo del video para mejor énfasis */}
+          <motion.div 
+            className="mt-12 max-w-4xl mx-auto px-8 text-center bg-gradient-to-b from-gray-900/95 via-gray-800/90 to-gray-900/95 rounded-3xl py-16 shadow-2xl border border-gray-700/50"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.h2 
+              className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.2, 
+                delay: 0.3,
+                type: "spring",
+                bounce: 0.4
+              }}
+              whileHover={{ 
+                scale: 1.02,
+                textShadow: "0px 0px 20px rgba(255,255,255,0.8)"
+              }}
+            >
+              LinkerStore - Seguridad Industrial
+            </motion.h2>
+            
+            <motion.p 
+              className="text-2xl mb-6 text-white/90 font-medium drop-shadow-lg"
+              initial={{ opacity: 0, x: -50, rotateX: 90 }}
+              whileInView={{ opacity: 1, x: 0, rotateX: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1, 
+                delay: 0.6,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                color: "#ffffff"
+              }}
+            >
+              Tu aliado en protección y herramientas industriales
+            </motion.p>
+            
+            <motion.p 
+              className="text-lg mb-10 text-white/80 leading-relaxed max-w-3xl mx-auto drop-shadow-md"
+              initial={{ opacity: 0, y: 30, blur: 10 }}
+              whileInView={{ opacity: 1, y: 0, blur: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.2, 
+                delay: 0.9,
+                ease: "easeOut"
+              }}
+              whileHover={{ 
+                scale: 1.02,
+                color: "#ffffff"
+              }}
+            >
+              Explora nuestra amplia gama de productos industriales, equipos de protección personal y herramientas especializadas para profesionales que exigen calidad y confianza.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+            >
+              <a
+                href="/catalogo"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                <span>Ir a la tienda</span>
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                  className="text-2xl"
+                >
+                  →
+                </motion.span>
+              </a>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
       {false && (
         <motion.section 
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
