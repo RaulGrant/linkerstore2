@@ -1290,7 +1290,7 @@ export default function HomePage() {
                 title: "Equipos EPP",
                 description: "Compra del catálogo de productos industriales",
                 cta: "Ver Productos",
-                href: "/productos",
+                href: "/catalogo",
                 bgGradient: "from-purple-500 to-indigo-500",
                 image: "epp-equipment"
               },
