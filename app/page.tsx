@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ShoppingBag, Target, Timer, FileText, Star } from "lucide-react";
+import { ArrowRight, ShoppingBag, Target, Timer, FileText, Star, Search } from "lucide-react";
 import { trackEvent, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 
@@ -134,6 +134,378 @@ function CountdownTimer({ targetDate }: CountdownProps) {
         </motion.div>
       ))}
     </div>
+  );
+}
+
+interface CatalogProduct {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  brand: string;
+  price: string;
+  rating: number;
+  reviews: number;
+  image: string;
+  amazonUrl: string;
+  mercadoLibreUrl?: string;
+  features: string[];
+  tags: string[];
+  articleSource: string;
+}
+
+// Importar productos del catálogo
+async function getAllCatalogProducts(): Promise<CatalogProduct[]> {
+  try {
+    const response = await fetch('https://linkerstore.vercel.app/catalogo', {
+      cache: 'no-store'
+    });
+    if (!response.ok) return [];
+    // Aquí iríamos a extraer los productos, pero por ahora retornamos un array vacío
+    return [];
+  } catch (error) {
+    console.error('Error fetching catalog:', error);
+    return [];
+  }
+}
+
+function ProductCatalogSection() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [products, setProducts] = useState<CatalogProduct[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Productos de ejemplo del catálogo (se reemplazará con datos reales del endpoint)
+  const catalogProducts: CatalogProduct[] = [
+    {
+      id: "dewalt-dwmt81535",
+      name: "DEWALT DWMT81535 Kit de Mecánica",
+      description: "Kit profesional de 247 piezas con matracas de 72 dientes y acabado de cromo pulido.",
+      category: "Herramientas",
+      subcategory: "Kits de Herramientas",
+      brand: "DEWALT",
+      price: "Consultar precio",
+      rating: 4.8,
+      reviews: 3200,
+      image: "/images/catalogo/kit-herramientas-82.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2naVqQs",
+      features: ["247 piezas", "Acero CR-V", "Matracas 72 dientes"],
+      tags: ["profesional", "mecánica"],
+      articleSource: "Top 7 Kits",
+    },
+    {
+      id: "pretul-set-83",
+      name: "Pretul SET-83 Kit de Herramientas",
+      description: "Kit económico de 83 piezas con herramientas esenciales.",
+      category: "Herramientas",
+      subcategory: "Kits de Herramientas",
+      brand: "Pretul",
+      price: "Consultar precio",
+      rating: 4.2,
+      reviews: 850,
+      image: "/images/catalogo/llaves-pretul.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1GQ24Dg",
+      features: ["83 piezas", "Acero al carbono", "Métrico e imperial"],
+      tags: ["económico", "básico"],
+      articleSource: "Top 7 Kits",
+    },
+    {
+      id: "berrendo-3017",
+      name: "Berrendo 3017",
+      description: "Calzado de seguridad premium con gran comodidad.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Berrendo",
+      price: "Consultar precio",
+      rating: 4.7,
+      reviews: 266,
+      image: "/images/catalogo/berrendo-3017.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2VaKvc7",
+      features: ["Punta de acero", "Suela resistente", "Cómodo"],
+      tags: ["seguridad", "calzado"],
+      articleSource: "Mejores Zapatos",
+    },
+    {
+      id: "jaloma-botiquin",
+      name: "Jaloma Botiquín 22 pzas",
+      description: "Botiquín de primeros auxilios completo.",
+      category: "Seguridad",
+      subcategory: "Botiquines",
+      brand: "Jaloma",
+      price: "Consultar precio",
+      rating: 4.8,
+      reviews: 300,
+      image: "/images/catalogo/jaloma-22.webp",
+      amazonUrl: "https://mercadolibre.com/sec/17VWdsg",
+      features: ["22 piezas", "Estuche plástico", "Completo"],
+      tags: ["primeros auxilios", "seguridad"],
+      articleSource: "Botiquines",
+    },
+    {
+      id: "dickies-overol",
+      name: "Dickies Overol",
+      description: "Ropa de seguridad profesional de alta calidad.",
+      category: "EPP",
+      subcategory: "Ropa de Seguridad",
+      brand: "Dickies",
+      price: "Consultar precio",
+      rating: 4.0,
+      reviews: 15,
+      image: "/images/catalogo/dickies-peto.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1sD7aUv",
+      features: ["Tela duradera", "Múltiples bolsillos", "Profesional"],
+      tags: ["ropa", "seguridad"],
+      articleSource: "Ropa Laboral",
+    },
+  ];
+
+  useEffect(() => {
+    setProducts(catalogProducts);
+    setIsLoading(false);
+  }, []);
+
+  // Extraer todas las categorías únicas
+  const categories = useMemo(() => {
+    const cats = ['Todos'];
+    const uniqueCats = new Set(catalogProducts.map(p => p.category));
+    return [...cats, ...Array.from(uniqueCats)];
+  }, []);
+
+  // Filtrar y ordenar productos
+  const filteredProducts = useMemo(() => {
+    let filtered = catalogProducts;
+
+    // Filtrar por categoría
+    if (selectedCategory !== 'Todos') {
+      filtered = filtered.filter(p => p.category === selectedCategory);
+    }
+
+    // Filtrar por búsqueda
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(p =>
+        p.name.toLowerCase().includes(query) ||
+        p.description.toLowerCase().includes(query) ||
+        p.brand.toLowerCase().includes(query) ||
+        p.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    }
+
+    // Ordenar por rating (mejor valorado primero)
+    return filtered.sort((a, b) => b.rating - a.rating);
+  }, [selectedCategory, searchQuery]);
+
+  const handleCTAClick = (action: string) => {
+    trackEvent(action, {
+      source: 'homepage_catalog',
+      timestamp: new Date().toISOString(),
+    });
+  };
+
+  return (
+    <motion.section
+      className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-gray-900 relative overflow-hidden"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+            Catálogo de Productos
+          </h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Explora los mejores productos de seguridad industrial seleccionados por nuestros expertos
+          </p>
+        </motion.div>
+
+        {/* Barra de búsqueda */}
+        <motion.div
+          className="mb-8"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="relative max-w-2xl mx-auto">
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Buscar productos por nombre, marca o categoría..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-6 py-3 rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder-blue-200 focus:outline-none focus:border-white/60 transition-all"
+            />
+          </div>
+        </motion.div>
+
+        {/* Filtros por categoría */}
+        <motion.div
+          className="mb-12 flex flex-wrap gap-3 justify-center"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {categories.map((category) => (
+            <motion.button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 border-2 ${
+                selectedCategory === category
+                  ? 'bg-orange-500 text-white border-orange-600 shadow-lg'
+                  : 'bg-white/10 text-white border-white/30 hover:border-white/60 backdrop-blur-sm'
+              }`}
+            >
+              {category}
+            </motion.button>
+          ))}
+        </motion.div>
+
+        {/* Grid de productos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredProducts.map((product, index) => (
+            <motion.button
+              key={product.id}
+              onClick={() => {
+                handleCTAClick(`product_${product.name}`);
+                window.open(product.amazonUrl, '_blank');
+              }}
+              initial={{ y: 100, opacity: 0, scale: 0.8 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.05,
+                type: "spring",
+                bounce: 0.4
+              }}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                transition: { type: "spring", bounce: 0.4 }
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative overflow-hidden bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-80 flex flex-col border border-gray-200 hover:border-orange-400 text-center"
+            >
+              {/* Image container */}
+              <div className="relative w-full h-40 bg-gray-100 overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+
+              {/* Product content */}
+              <div className="relative z-10 flex-1 flex flex-col justify-between p-3 items-center">
+                <div className="w-full">
+                  <Badge className="mb-2 bg-blue-100 text-blue-700 border-blue-300 text-xs inline-block">
+                    {product.subcategory}
+                  </Badge>
+
+                  <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight line-clamp-2">
+                    {product.name}
+                  </h3>
+
+                  <div className="flex items-center gap-1 mb-3 justify-center">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-3 h-3 ${
+                            i < Math.floor(product.rating)
+                              ? 'fill-yellow-400 text-yellow-400'
+                              : 'text-gray-300'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-gray-500">
+                      ({product.reviews})
+                    </span>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-sm">
+                  <span className="relative z-10 flex items-center justify-center gap-1">
+                    Comprar 🛒
+                  </span>
+
+                  {/* Efecto shine */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '200%' }}
+                    transition={{
+                      duration: 0.8,
+                      repeat: Infinity,
+                      repeatDelay: 3,
+                      ease: "linear"
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.button>
+          ))}
+        </div>
+
+        {/* Mensaje cuando no hay productos */}
+        {filteredProducts.length === 0 && (
+          <motion.div
+            className="text-center py-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <p className="text-xl text-blue-100">
+              No se encontraron productos que coincidan con tu búsqueda.
+            </p>
+          </motion.div>
+        )}
+
+        {/* CTA Final */}
+        <motion.div
+          className="text-center mt-20"
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <motion.button
+            onClick={() => {
+              handleCTAClick('see_all_products');
+              window.location.href = '/catalogo';
+            }}
+            className="relative overflow-hidden bg-gradient-to-r from-white text-blue-900 hover:from-gray-100 border-2 border-white font-semibold px-8 py-4 rounded-full transition-all duration-300 group shadow-lg hover:shadow-2xl"
+            whileHover={{ scale: 1.05, y: -5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="relative z-10 flex items-center gap-3">
+              <span className="text-2xl group-hover:animate-bounce">🛠️</span>
+              Ver Todo el Catálogo
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl bg-white" />
+          </motion.button>
+        </motion.div>
+      </div>
+    </motion.section>
   );
 }
 
@@ -508,344 +880,7 @@ export default function HomePage() {
       </motion.section>
 
        {/* Banner Carrusel de Productos */}
-      <motion.section 
-        className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-gray-900 relative overflow-hidden"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-           
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-              Catálogo de Productos
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Explora los mejores productos de seguridad industrial seleccionados por nuestros expertos
-            </p>
-          </motion.div>
-
-          {/* Carrusel de productos */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                name: "DEWALT DWMT81535",
-                category: "Kits de Herramientas",
-                image: "/images/catalogo/kit-herramientas-82.webp",
-                link: "https://mercadolibre.com/sec/2naVqQs",
-                rating: 4.8,
-                reviews: 3200,
-              },
-              {
-                name: "Pretul SET-83",
-                category: "Kits de Herramientas",
-                image: "/images/catalogo/llaves-pretul.webp",
-                link: "https://mercadolibre.com/sec/1GQ24Dg",
-                rating: 4.2,
-                reviews: 850,
-              },
-              {
-                name: "CARTMAN 238 Piezas",
-                category: "Kits de Herramientas",
-                image: "/images/catalogo/herramientas-218.webp",
-                link: "https://mercadolibre.com/sec/2Du7866",
-                rating: 4.5,
-                reviews: 2100,
-              },
-              {
-                name: "KIROGILY 150 en 1",
-                category: "Herramientas de Precisión",
-                image: "/images/catalogo/destornilladores-precision.webp",
-                link: "https://mercadolibre.com/sec/1tT2HL7",
-                rating: 5.0,
-                reviews: 1800,
-              },
-              {
-                name: "Kit Nanwei",
-                category: "Kits Eléctricos",
-                image: "/images/catalogo/kit-herramientas-82.webp",
-                link: "https://mercadolibre.com/sec/1miMzDg",
-                rating: 4.5,
-                reviews: 500,
-              },
-              {
-                name: "Juego 216 Piezas",
-                category: "Kits de Herramientas",
-                image: "/images/catalogo/herramientas-218.webp",
-                link: "https://mercadolibre.com/sec/2KHakLi",
-                rating: 4.0,
-                reviews: 160,
-              },
-              {
-                name: "Kit Deppon 168",
-                category: "Kits de Emergencia",
-                image: "/images/catalogo/botiquin-industrial.webp",
-                link: "https://mercadolibre.com/sec/2tACX4Z",
-                rating: 4.0,
-                reviews: 100,
-              },
-              {
-                name: "Jaloma Botiquín 22 pzas",
-                category: "Botiquines",
-                image: "/images/catalogo/jaloma-22.webp",
-                link: "https://mercadolibre.com/sec/17VWdsg",
-                rating: 4.8,
-                reviews: 300,
-              },
-              {
-                name: "Gabinete Surtek",
-                category: "Botiquines",
-                image: "/images/catalogo/gabinete-surtek.webp",
-                link: "https://mercadolibre.com/sec/2wiufhR",
-                rating: 4.8,
-                reviews: 220,
-              },
-              {
-                name: "Red Kap Overol CT10",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/redkap-ct10.webp",
-                link: "https://mercadolibre.com/sec/2fgbB41",
-                rating: 4.2,
-                reviews: 150,
-              },
-              {
-                name: "Dickies Overol",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/dickies-peto.webp",
-                link: "https://mercadolibre.com/sec/1sD7aUv",
-                rating: 4.0,
-                reviews: 15,
-              },
-              {
-                name: "GUIGUA Mono",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/guigua-mono-reparacion.webp",
-                link: "https://mercadolibre.com/sec/1z6GYqc",
-                rating: 4.6,
-                reviews: 450,
-              },
-              {
-                name: "Sanfu Multibolsillos",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/sanfu-multibolsillos.webp",
-                link: "https://mercadolibre.com/sec/1JKomB9",
-                rating: 4.3,
-                reviews: 300,
-              },
-              {
-                name: "BRISCO INDUSTRIAL",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/brisco-industrial-reflejante.webp",
-                link: "https://mercadolibre.com/sec/2bXCQGF",
-                rating: 5.0,
-                reviews: 5,
-              },
-              {
-                name: "Berrendo 3017",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/berrendo-3017.webp",
-                link: "https://mercadolibre.com/sec/2VaKvc7",
-                rating: 4.7,
-                reviews: 266,
-              },
-              {
-                name: "Caterpillar Second Shift",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/caterpillar-second-shift.webp",
-                link: "https://mercadolibre.com/sec/1KmV8U4",
-                rating: 5.0,
-                reviews: 3,
-              },
-              {
-                name: "Timberland PRO Pit Boss",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/timberland-pro-pit-boss.webp",
-                link: "https://mercadolibre.com/sec/2hukoND",
-                rating: 4.6,
-                reviews: 10000,
-              },
-              {
-                name: "Riverline Spyder",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/riverline-spyder-spyg2.webp",
-                link: "https://mercadolibre.com/sec/1Tpzibx",
-                rating: 4.6,
-                reviews: 235,
-              },
-              {
-                name: "Timberland Pro Pit 6",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/timberland-pro-pit-6.webp",
-                link: "https://mercadolibre.com/sec/2LrJRAz",
-                rating: 4.9,
-                reviews: 79,
-              },
-              {
-                name: "Nieion Tenis Safety",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/nieion-tenis-safety.webp",
-                link: "https://mercadolibre.com/sec/32PaSVu",
-                rating: 4.6,
-                reviews: 23500,
-              },
-              {
-                name: "Ekinio Tenis Seguridad",
-                category: "Calzado de Seguridad",
-                image: "/images/catalogo/ekinio-tenis-seguridad.webp",
-                link: "https://mercadolibre.com/sec/2jknq7Q",
-                rating: 4.7,
-                reviews: 3800,
-              },
-              {
-                name: "PRO-TEX Overol Cargo",
-                category: "Ropa de Seguridad",
-                image: "/images/catalogo/pro-tex-bolsas-cargo.webp",
-                link: "https://mercadolibre.com/sec/1ugpCn6",
-                rating: 4.3,
-                reviews: 60,
-              },
-              {
-                name: "Botiquín Metálico",
-                category: "Botiquines",
-                image: "/images/catalogo/botiquin-metalico-equipado.webp",
-                link: "https://mercadolibre.com/sec/1fCNzj2",
-                rating: 4.9,
-                reviews: 69,
-              },
-              {
-                name: "Matein 1233",
-                category: "Botiquines",
-                image: "/images/catalogo/matein-1233.webp",
-                link: "https://mercadolibre.com/sec/1GCdYb6",
-                rating: 4.9,
-                reviews: 284,
-              }
-            ].map((product, index) => (
-              <motion.button
-                key={index}
-                onClick={() => {
-                  handleCTAClick(`product_${product.name}`);
-                  window.open(product.link, '_blank');
-                }}
-                initial={{ y: 100, opacity: 0, scale: 0.8 }}
-                whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.05,
-                  type: "spring",
-                  bounce: 0.4
-                }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -10,
-                  transition: { type: "spring", bounce: 0.4 }
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative overflow-hidden bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-80 flex flex-col border border-gray-200 hover:border-orange-400 text-center"
-              >
-                {/* Image container */}
-                <div className="relative w-full h-40 bg-gray-100 overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
-                
-                {/* Product content */}
-                <div className="relative z-10 flex-1 flex flex-col justify-between p-3 items-center">
-                  <div className="w-full">
-                    <Badge className="mb-2 bg-blue-100 text-blue-700 border-blue-300 text-xs inline-block">
-                      {product.category}
-                    </Badge>
-                    
-                    <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight line-clamp-2">
-                      {product.name}
-                    </h3>
-
-                    <div className="flex items-center gap-1 mb-3 justify-center">
-                      <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-3 h-3 ${
-                              i < Math.floor(product.rating)
-                                ? 'fill-yellow-400 text-yellow-400'
-                                : 'text-gray-300'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <span className="text-xs text-gray-500">
-                        ({product.reviews})
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="relative overflow-hidden w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-sm">
-                    <span className="relative z-10 flex items-center justify-center gap-1">
-                      Comprar 🛒
-                    </span>
-                    
-                    {/* Efecto shine */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-                      initial={{ x: '-100%' }}
-                      animate={{ x: '200%' }}
-                      transition={{ 
-                        duration: 0.8, 
-                        repeat: Infinity, 
-                        repeatDelay: 3,
-                        ease: "linear"
-                      }}
-                    />
-                  </div>
-                </div>
-              </motion.button>
-            ))}
-          </div>
-
-          {/* CTA Final */}
-          <motion.div 
-            className="text-center mt-20"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <motion.button
-              onClick={() => {
-                handleCTAClick('see_all_products');
-                window.location.href = '/catalogo';
-              }}
-              className="relative overflow-hidden bg-gradient-to-r from-white text-blue-900 hover:from-gray-100 border-2 border-white font-semibold px-8 py-4 rounded-full transition-all duration-300 group shadow-lg hover:shadow-2xl"
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                <span className="text-2xl group-hover:animate-bounce">🛠️</span>
-                Ver Todo el Catálogo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              
-              {/* Glow effect */}
-              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl bg-white" />
-            </motion.button>
-          </motion.div>
-        </div>
-      </motion.section>
+      <ProductCatalogSection />
 
  {/* Banner de Video Promocional */}
       <motion.section 
