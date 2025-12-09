@@ -312,7 +312,7 @@ export default function TopProducts() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Ver en Mercado Libre
+                    Comprar en Mercado Libre
                   </motion.a>
                 </div>
               </div>

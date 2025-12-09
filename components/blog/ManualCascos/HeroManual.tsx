@@ -248,15 +248,18 @@ export default function HeroManual({ showHeroCTAs = true }: HeroManualProps) {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex justify-center items-center"
           >
-            <motion.a
-              href="#top-productos"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold px-8 py-4 rounded-full text-lg shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
+              onClick={() => {
+                const element = document.getElementById('top-productos');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold px-8 py-4 rounded-full text-lg shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 cursor-pointer border-0"
             >
-              <Shield className="w-6 h-6 mr-2 inline" />
+              <Shield className="w-6 h-6 mr-2" />
               Ver Cascos Recomendados
-            </motion.a>
+            </button>
           </motion.div>
 
           {/* Key highlights */}
@@ -274,7 +277,7 @@ export default function HeroManual({ showHeroCTAs = true }: HeroManualProps) {
               },
               {
                 icon: "⭐",
-                title: "Top 5 Productos",
+                title: "Top 6 Productos",
                 description: "Cascos certificados recomendados por expertos en seguridad"
               }
             ].map((item, index) => (

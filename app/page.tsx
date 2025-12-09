@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { ArrowRight, ShoppingBag, Target, Timer, FileText } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ShoppingBag, Target, Timer, FileText, Star } from "lucide-react";
 import { trackEvent, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
 
@@ -631,60 +632,76 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                emoji: "🦺",
-                name: "Overol Industrial Dickies",
-                category: "Ropa de Trabajo",
-                link: "https://articulo.mercadolibre.com.mx/MLM-1358999335-overol-peto-dickies-8329-mezclilla-uso-rudo-resistente-_JM",
-                color: "from-green-500 to-emerald-600"
+                name: "DEWALT DWMT81535 Kit de Mecánica",
+                category: "Kits de Herramientas",
+                image: "/images/catalogo/kit-herramientas-82.webp",
+                link: "https://mercadolibre.com/sec/2naVqQs",
+                rating: 4.8,
+                reviews: 3200,
+                description: "247 piezas de grado profesional"
               },
               {
-                emoji: "🥾",
-                name: "Botas Caterpillar Steel Toe",
+                name: "KIROGILY 150 en 1 Kit de Precisión",
+                category: "Herramientas de Precisión",
+                image: "/images/catalogo/destornilladores-precision.webp",
+                link: "https://mercadolibre.com/sec/1tT2HL7",
+                rating: 5.0,
+                reviews: 1800,
+                description: "150 piezas especializadas en electrónicos"
+              },
+              {
+                name: "Jaloma Botiquín (22 pzas)",
+                category: "Botiquines",
+                image: "/images/catalogo/jaloma-22.webp",
+                link: "https://mercadolibre.com/sec/17VWdsg",
+                rating: 4.8,
+                reviews: 300,
+                description: "Botiquín portátil para emergencias"
+              },
+              {
+                name: "Berrendo 3017 Botas Dieléctricas",
                 category: "Calzado de Seguridad",
-                link: "https://articulo.mercadolibre.com.mx/MLM-2132681711-botas-caterpillar-second-shift-wp-steel-toe-p91660-_JM",
-                color: "from-yellow-500 to-orange-600"
+                image: "/images/catalogo/berrendo-3017.webp",
+                link: "https://mercadolibre.com/sec/2VaKvc7",
+                rating: 4.7,
+                reviews: 266,
+                description: "Protección eléctrica certificada"
               },
               {
-                emoji: "🔨",
-                name: "Kit de Herramientas Stanley",
-                category: "Herramientas",
+                name: "Caterpillar Second Shift Steel Toe",
+                category: "Calzado de Seguridad",
+                image: "/images/catalogo/caterpillar-second-shift.webp",
+                link: "https://mercadolibre.com/sec/1KmV8U4",
+                rating: 5.0,
+                reviews: 3,
+                description: "Construcción Goodyear Welt profesional"
+              },
+              {
+                name: "Dickies Overol Con Reflejantes",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/dickies-peto.webp",
+                link: "https://mercadolibre.com/sec/1sD7aUv",
+                rating: 4.0,
+                reviews: 15,
+                description: "Múltiples bolsillos seguros"
+              },
+              {
+                name: "Red Kap Overol Alta Visibilidad",
+                category: "Ropa de Seguridad",
+                image: "/images/catalogo/redkap-ct10.webp",
+                link: "https://mercadolibre.com/sec/2fgbB41",
+                rating: 4.2,
+                reviews: 150,
+                description: "Capucha integrada y reflejantes"
+              },
+              {
+                name: "CARTMAN 238 Piezas Kit",
+                category: "Kits de Herramientas",
+                image: "/images/catalogo/herramientas-218.webp",
                 link: "https://mercadolibre.com/sec/2Du7866",
-                color: "from-blue-500 to-indigo-600"
-              },
-              {
-                emoji: "🏥",
-                name: "Botiquín Industrial Jaloma",
-                category: "Primeros Auxilios",
-                link: "https://www.mercadolibre.com.mx/jaloma-botiquin-en-caja-plastica-primeros-auxilios-22-pzas/p/MLM35212740",
-                color: "from-red-500 to-pink-600"
-              },
-              {
-                emoji: "⛑️",
-                name: "Arnés de Seguridad Jyrsa",
-                category: "Trabajo en Altura",
-                link: "https://www.mercadolibre.com.mx/arnes-con-anillo-d-espalda-trabajo-alturas-jyrsa-jyr-10a-verde-alta-visibilidad/p/MLM43738470",
-                color: "from-teal-500 to-cyan-600"
-              },
-              {
-                emoji: "🔧",
-                name: "Rotomartillo DeWalt",
-                category: "Herramientas Eléctricas",
-                link: "https://www.mercadolibre.com.mx/rotomartillo-electroneumatico-dewalt-dch133m2-b2-inalambrico-amarillo-y-negro-con-16kw-de-potencia/p/MLM44712352",
-                color: "from-purple-500 to-violet-600"
-              },
-              {
-                emoji: "📐",
-                name: "Multímetro UNI-T UT204",
-                category: "Instrumentos",
-                link: "https://www.mercadolibre.com.mx/pinza-amperimetrica-digital-uni-t-ut204-600a-acdc-true-rms-ncv-multimetro-profesional/p/MLM15532755",
-                color: "from-orange-500 to-red-600"
-              },
-              {
-                emoji: "🪜",
-                name: "Escalera Industrial Cuprum",
-                category: "Equipos de Acceso",
-                link: "https://listado.mercadolibre.com.mx/escalera-cuprum-494-24n",
-                color: "from-indigo-500 to-blue-600"
+                rating: 4.5,
+                reviews: 2100,
+                description: "Ideal para bricolaje y uso doméstico"
               }
             ].map((product, index) => (
               <motion.div
@@ -706,25 +723,54 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="group"
               >
-                <div className={`relative overflow-hidden bg-gradient-to-br ${product.color} rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 h-64`}>
-                  {/* Background pattern */}
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+                <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 h-80 flex flex-col">
+                  {/* Image container */}
+                  <div className="relative w-full h-40 bg-gray-800 overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                    {/* Fallback overlay si falla la imagen */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 opacity-20"></div>
+                  </div>
                   
                   {/* Product content */}
-                  <div className="relative z-10 h-full flex flex-col justify-between">
+                  <div className="relative z-10 flex-1 flex flex-col justify-between p-4">
                     <div>
-                      <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                        {product.emoji}
-                      </div>
-                      
-                      <Badge className="mb-3 bg-white/20 text-white border-white/30">
+                      <Badge className="mb-2 bg-blue-500/30 text-blue-100 border-blue-400/50">
                         {product.category}
                       </Badge>
                       
-                      <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+                      <h3 className="text-sm font-bold text-white mb-2 leading-tight line-clamp-2">
                         {product.name}
                       </h3>
+
+                      <p className="text-xs text-gray-300 mb-3 line-clamp-2">
+                        {product.description}
+                      </p>
+
+                      <div className="flex items-center gap-1 mb-3">
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`w-3 h-3 ${
+                                i < Math.floor(product.rating)
+                                  ? 'fill-yellow-400 text-yellow-400'
+                                  : 'text-gray-600'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-xs text-gray-300">
+                          ({product.reviews})
+                        </span>
+                      </div>
                     </div>
 
                     <motion.button
@@ -732,17 +778,17 @@ export default function HomePage() {
                         handleCTAClick(`product_${product.name}`);
                         window.open(product.link, '_blank');
                       }}
-                      className="relative overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 font-semibold py-3 px-4 rounded-xl transition-all duration-300 group/btn"
+                      className="relative overflow-hidden w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-sm group/btn"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <span className="relative z-10 flex items-center justify-center gap-2">
-                        🛒 Comprar en ML
+                      <span className="relative z-10 flex items-center justify-center gap-1">
+                        🛒 Comprar
                       </span>
                       
                       {/* Efecto shine */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
                         initial={{ x: '-100%' }}
                         animate={{ x: '200%' }}
                         transition={{ 
@@ -1140,7 +1186,7 @@ export default function HomePage() {
               {
                 emoji: "🏭",
                 title: "Seguridad Industrial",
-                description: "Artículos especializados y guías completas",
+                description: "Explora los artículos especializados y guías completas que hemos preparado especialmente para tí",
                 cta: "Ver Blog",
                 href: "/blog",
                 bgGradient: "from-blue-500 to-cyan-500",
@@ -1149,7 +1195,7 @@ export default function HomePage() {
               {
                 emoji: "📚",
                 title: "Guías Técnicas",
-                description: "Manuales detallados paso a paso",
+                description: "Visita los manuales detallados paso a paso",
                 cta: "Explorar Guías",
                 href: "/guias",
                 bgGradient: "from-green-500 to-emerald-500",
@@ -1158,7 +1204,7 @@ export default function HomePage() {
               {
                 emoji: "🛠️",
                 title: "Equipos EPP",
-                description: "Catálogo de productos industriales",
+                description: "Compra del catálogo de productos industriales",
                 cta: "Ver Productos",
                 href: "/productos",
                 bgGradient: "from-purple-500 to-indigo-500",
@@ -1167,7 +1213,7 @@ export default function HomePage() {
               {
                 emoji: "🔧",
                 title: "Herramientas",
-                description: "Reseñas y comparativas de herramientas",
+                description: "Explora las Reseñas y comparativas de herramientas industriales",
                 cta: "Leer Reseñas",
                 href: "/blog",
                 bgGradient: "from-orange-500 to-red-500",
@@ -1176,18 +1222,18 @@ export default function HomePage() {
               {
                 emoji: "📋",
                 title: "Normativas",
-                description: "Regulaciones y estándares industriales",
+                description: "Enterate de las regulaciones y estándares industriales de México",
                 cta: "Ver Normativas",
                 href: "/blog/normativas-seguridad-industrial-mexico",
                 bgGradient: "from-teal-500 to-blue-500",
                 image: "regulations"
               },
               {
-                emoji: "🎓",
-                title: "Capacitación",
-                description: "Cursos y certificaciones próximamente",
-                cta: "Más Información",
-                href: "/sobre-nosotros",
+                emoji: "🤝",
+                title: "¿Tienes una consulta especial?",
+                description: "Estamos aquí para ayudarte con cualquier consulta o necesidad específica que tengas",
+                cta: "Contactanos",
+                href: "/contacto",
                 bgGradient: "from-yellow-500 to-orange-500",
                 image: "training"
               }

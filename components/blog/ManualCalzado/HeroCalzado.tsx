@@ -327,15 +327,7 @@ export default function HeroCalzado({ showHeroCTAs = true, showSideCTAs = false,
                 {productType === 'cascos' ? <Shield className="w-6 h-6" /> : <Footprints className="w-6 h-6" />}
                 {productType === 'cascos' ? 'Ver Catálogo de Cascos' : 'Ver Catálogo de Calzado'}
               </motion.a>
-              <motion.a
-                href="#productos-recomendados"
-                className="inline-flex items-center justify-center gap-3 bg-orange-600/20 text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-600/40 transition-colors backdrop-blur-sm"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Star className="w-6 h-6" />
-                Ver Productos Top
-              </motion.a>
+              
             </motion.div>
           )}
         </div>

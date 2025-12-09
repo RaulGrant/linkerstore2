@@ -226,8 +226,8 @@ export default function ManualCascosArticle() {
           "Documentar procedimientos específicos por puesto de trabajo"
         ],
         callToAction: {
-          text: "Accede a videos instructivos sobre uso correcto de cascos.",
-          link: "/recursos/videos-uso-cascos"
+          text: "Asegura el mejor ajuste con nuestra gama de cascos ajustables.",
+          link: "/catalogo"
         }
       },
       icon: "🎯",

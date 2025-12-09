@@ -96,19 +96,19 @@ export default function SideBanners({ showBanners }: SideBannersProps) {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 p-2 bg-white/10 rounded-lg">
-                  <span className="text-sm">🚚</span>
+                  <span className="text-sm">⭐</span>
                   <div>
-                    <div className="text-xs font-medium">Envío Rápido</div>
-                    <div className="text-xs text-blue-200 opacity-80">A todo México</div>
+                    <div className="text-xs font-medium">La mejor selección</div>
+                    <div className="text-xs text-blue-200 opacity-80">Para tu industria</div>
                   </div>
                 </div>
               </div>
               
               <a 
-                href="/tienda" 
+                href="/catalogo" 
                 className="block w-full bg-white text-blue-600 px-3 py-2 rounded-full text-xs font-bold hover:bg-blue-50 transition-colors text-center"
               >
-                Ver Catálogo →
+                Ver Tienda 
               </a>
             </div>
           </motion.div>
