@@ -386,7 +386,7 @@ export default function HomePage() {
             </motion.div>
             {/* Carrusel de Productos en Hero */}
             <motion.div 
-              className="mt-20 w-full"
+              className="mt-20 w-full mb-20"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.4 }}
@@ -429,68 +429,77 @@ export default function HomePage() {
                     reviews: 15,
                   }
                 ].map((product, index) => (
-                  <motion.div
+                  <motion.button
                     key={index}
+                    onClick={() => {
+                      handleCTAClick(`hero_product_${product.name}`);
+                      window.open(product.link, '_blank');
+                    }}
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.05 }}
-                    className="group"
+                    className="group relative bg-white rounded-xl border border-gray-200 hover:border-orange-400 transition-all duration-300 overflow-hidden h-full flex flex-col shadow-lg hover:shadow-2xl text-center"
                   >
-                    <div className="relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                      {/* Image */}
-                      <div className="relative h-40 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 overflow-hidden">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-300"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
+                    {/* Image */}
+                    <div className="relative h-40 bg-gray-100 overflow-hidden">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 p-4 flex flex-col justify-between items-center">
+                      <div className="bg-white -mx-4 -mt-4 px-4 pt-4 pb-3 w-full">
+                        <Badge className="mb-2 bg-blue-100 text-blue-700 border-blue-300 text-xs inline-block">
+                          {product.category}
+                        </Badge>
+                        <h4 className="text-sm font-bold text-gray-900 mb-2 line-clamp-2">
+                          {product.name}
+                        </h4>
+                      </div>
+                      <div className="flex items-center gap-1 mb-3">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`w-2.5 h-2.5 ${
+                              i < Math.floor(product.rating)
+                                ? 'fill-yellow-400 text-yellow-400'
+                                : 'text-gray-300'
+                            }`}
+                          />
+                        ))}
+                        <span className="text-xs text-gray-500 ml-1">
+                          ({product.reviews})
+                        </span>
+                      </div>
+
+                      <div className="relative overflow-hidden w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-sm">
+                        <span className="relative z-10 flex items-center justify-center gap-1">
+                          Comprar 🛒
+                        </span>
+                        
+                        {/* Efecto shine */}
+                        <motion.div
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                          initial={{ x: '-100%' }}
+                          animate={{ x: '200%' }}
+                          transition={{ 
+                            duration: 0.8, 
+                            repeat: Infinity, 
+                            repeatDelay: 3,
+                            ease: "linear"
                           }}
                         />
                       </div>
-
-                      {/* Content */}
-                      <div className="flex-1 p-4 flex flex-col justify-between">
-                        <div>
-                          <Badge className="mb-2 bg-blue-500/30 text-blue-100 border-blue-400/50 text-xs">
-                            {product.category}
-                          </Badge>
-                          <h4 className="text-sm font-bold text-white mb-2 line-clamp-2">
-                            {product.name}
-                          </h4>
-                          <div className="flex items-center gap-1">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`w-2.5 h-2.5 ${
-                                  i < Math.floor(product.rating)
-                                    ? 'fill-yellow-400 text-yellow-400'
-                                    : 'text-gray-500'
-                                }`}
-                              />
-                            ))}
-                            <span className="text-xs text-gray-300 ml-1">
-                              ({product.reviews})
-                            </span>
-                          </div>
-                        </div>
-
-                        <motion.button
-                          onClick={() => {
-                            handleCTAClick(`hero_product_${product.name}`);
-                            window.open(product.link, '_blank');
-                          }}
-                          className="w-full mt-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-xs"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          Comprar
-                        </motion.button>
-                      </div>
                     </div>
-                  </motion.div>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>
@@ -719,8 +728,12 @@ export default function HomePage() {
                 reviews: 284,
               }
             ].map((product, index) => (
-              <motion.div
+              <motion.button
                 key={index}
+                onClick={() => {
+                  handleCTAClick(`product_${product.name}`);
+                  window.open(product.link, '_blank');
+                }}
                 initial={{ y: 100, opacity: 0, scale: 0.8 }}
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -736,83 +749,71 @@ export default function HomePage() {
                   transition: { type: "spring", bounce: 0.4 }
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group"
+                className="group relative overflow-hidden bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-80 flex flex-col border border-gray-200 hover:border-orange-400 text-center"
               >
-                <div className="relative overflow-hidden bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-80 flex flex-col border border-gray-200 hover:border-orange-400">
-                  {/* Image container */}
-                  <div className="relative w-full h-40 bg-gray-100 overflow-hidden">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
+                {/* Image container */}
+                <div className="relative w-full h-40 bg-gray-100 overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+                
+                {/* Product content */}
+                <div className="relative z-10 flex-1 flex flex-col justify-between p-3 items-center">
+                  <div className="w-full">
+                    <Badge className="mb-2 bg-blue-100 text-blue-700 border-blue-300 text-xs inline-block">
+                      {product.category}
+                    </Badge>
+                    
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight line-clamp-2">
+                      {product.name}
+                    </h3>
+
+                    <div className="flex items-center gap-1 mb-3 justify-center">
+                      <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`w-3 h-3 ${
+                              i < Math.floor(product.rating)
+                                ? 'fill-yellow-400 text-yellow-400'
+                                : 'text-gray-300'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-xs text-gray-500">
+                        ({product.reviews})
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="relative overflow-hidden w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-sm">
+                    <span className="relative z-10 flex items-center justify-center gap-1">
+                      Comprar 🛒
+                    </span>
+                    
+                    {/* Efecto shine */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                      initial={{ x: '-100%' }}
+                      animate={{ x: '200%' }}
+                      transition={{ 
+                        duration: 0.8, 
+                        repeat: Infinity, 
+                        repeatDelay: 3,
+                        ease: "linear"
                       }}
                     />
-                    {/* Fallback overlay si falla la imagen */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 opacity-30"></div>
-                  </div>
-                  
-                  {/* Product content */}
-                  <div className="relative z-10 flex-1 flex flex-col justify-between p-3">
-                    <div>
-                      <Badge className="mb-2 bg-blue-100 text-blue-700 border-blue-300 text-xs">
-                        {product.category}
-                      </Badge>
-                      
-                      <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight line-clamp-2">
-                        {product.name}
-                      </h3>
-
-                      <div className="flex items-center gap-1 mb-3">
-                        <div className="flex items-center">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-3 h-3 ${
-                                i < Math.floor(product.rating)
-                                  ? 'fill-yellow-400 text-yellow-400'
-                                  : 'text-gray-300'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                        <span className="text-xs text-gray-500">
-                          ({product.reviews})
-                        </span>
-                      </div>
-                    </div>
-
-                    <motion.button
-                      onClick={() => {
-                        handleCTAClick(`product_${product.name}`);
-                        window.open(product.link, '_blank');
-                      }}
-                      className="relative overflow-hidden w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 text-sm group/btn"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <span className="relative z-10 flex items-center justify-center gap-1">
-                         Comprar 🛒
-                      </span>
-                      
-                      {/* Efecto shine */}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-                        initial={{ x: '-100%' }}
-                        animate={{ x: '200%' }}
-                        transition={{ 
-                          duration: 0.8, 
-                          repeat: Infinity, 
-                          repeatDelay: 3,
-                          ease: "linear"
-                        }}
-                      />
-                    </motion.button>
                   </div>
                 </div>
-              </motion.div>
+              </motion.button>
             ))}
           </div>
 
