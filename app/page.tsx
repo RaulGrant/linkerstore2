@@ -175,9 +175,10 @@ function ProductCatalogSection() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [products, setProducts] = useState<CatalogProduct[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showMoreProducts, setShowMoreProducts] = useState(false);
 
-  // Productos de ejemplo del catálogo (se reemplazará con datos reales del endpoint)
-  const catalogProducts: CatalogProduct[] = [
+  // Todos los productos del catálogo
+  const allCatalogProducts: CatalogProduct[] = [
     {
       id: "dewalt-dwmt81535",
       name: "DEWALT DWMT81535 Kit de Mecánica",
@@ -211,25 +212,89 @@ function ProductCatalogSection() {
       articleSource: "Top 7 Kits",
     },
     {
-      id: "berrendo-3017",
-      name: "Berrendo 3017",
-      description: "Calzado de seguridad premium con gran comodidad.",
-      category: "EPP",
-      subcategory: "Calzado de Seguridad",
-      brand: "Berrendo",
+      id: "cartman-238",
+      name: "CARTMAN 238 Piezas Kit de Herramientas",
+      description: "Kit versátil de 238 piezas ideal para bricolaje doméstico y proyectos variados.",
+      category: "Herramientas",
+      subcategory: "Kits de Herramientas",
+      brand: "CARTMAN",
       price: "Consultar precio",
-      rating: 4.7,
-      reviews: 266,
-      image: "/images/catalogo/berrendo-3017.webp",
-      amazonUrl: "https://mercadolibre.com/sec/2VaKvc7",
-      features: ["Punta de acero", "Suela resistente", "Cómodo"],
-      tags: ["seguridad", "calzado"],
-      articleSource: "Mejores Zapatos",
+      rating: 4.5,
+      reviews: 2100,
+      image: "/images/catalogo/herramientas-218.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2Du7866",
+      features: ["238 piezas", "Puntas magnéticas", "Acero aleado"],
+      tags: ["versátil", "bricolaje", "completo"],
+      articleSource: "Top 7 Kits",
     },
     {
-      id: "jaloma-botiquin",
-      name: "Jaloma Botiquín 22 pzas",
-      description: "Botiquín de primeros auxilios completo.",
+      id: "kirogily-150",
+      name: "KIROGILY 150 en 1 Kit de Precisión",
+      description: "Kit especializado en electrónicos con 150 piezas de precisión para dispositivos modernos.",
+      category: "Herramientas",
+      subcategory: "Herramientas de Precisión",
+      brand: "KIROGILY",
+      price: "Consultar precio",
+      rating: 5.0,
+      reviews: 1800,
+      image: "/images/catalogo/destornilladores-precision.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1tT2HL7",
+      features: ["150 piezas", "Electrónicos", "Compacto"],
+      tags: ["electrónicos", "precisión", "compacto"],
+      articleSource: "Top 7 Kits",
+    },
+    {
+      id: "kit-nanwei",
+      name: "Kit Nanwei con Taladro Inalámbrico",
+      description: "Kit híbrido que incluye taladro inalámbrico y herramientas manuales esenciales para el hogar.",
+      category: "Herramientas",
+      subcategory: "Kits Eléctricos",
+      brand: "Nanwei",
+      price: "Consultar precio",
+      rating: 4.5,
+      reviews: 500,
+      image: "/images/catalogo/kit-herramientas-82.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1miMzDg",
+      features: ["Taladro inalámbrico", "Batería litio", "Completo"],
+      tags: ["eléctrico", "completo", "hogar"],
+      articleSource: "Top 7 Kits",
+    },
+    {
+      id: "juego-216-pcs",
+      name: "Juego de Herramientas 216 Piezas",
+      description: "Kit extenso de 216 piezas con múltiples matracas y amplia variedad de dados y puntas.",
+      category: "Herramientas",
+      subcategory: "Kits de Herramientas",
+      brand: "Generic",
+      price: "Consultar precio",
+      rating: 4.0,
+      reviews: 160,
+      image: "/images/catalogo/herramientas-218.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2KHakLi",
+      features: ["216 piezas", "3 matracas", "Maletín rígido"],
+      tags: ["extenso", "económico", "matracas"],
+      articleSource: "Top 7 Kits",
+    },
+    {
+      id: "kit-deppon-168",
+      name: "Kit Deppon 168 Piezas + Primeros Auxilios",
+      description: "Kit híbrido de 168 piezas que incluye herramientas y suministros de primeros auxilios.",
+      category: "Herramientas",
+      subcategory: "Kits de Emergencia",
+      brand: "Deppon",
+      price: "Consultar precio",
+      rating: 4.0,
+      reviews: 100,
+      image: "/images/catalogo/botiquin-industrial.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2tACX4Z",
+      features: ["168 piezas", "Curitas", "Guantes"],
+      tags: ["emergencia", "híbrido", "auto"],
+      articleSource: "Top 7 Kits",
+    },
+    {
+      id: "jaloma-22",
+      name: "Jaloma Botiquín en Caja Plástica (22 pzas)",
+      description: "Botiquín básico y portátil en caja plástica de 22 piezas, ideal para oficinas pequeñas, hogar y auto.",
       category: "Seguridad",
       subcategory: "Botiquines",
       brand: "Jaloma",
@@ -238,14 +303,46 @@ function ProductCatalogSection() {
       reviews: 300,
       image: "/images/catalogo/jaloma-22.webp",
       amazonUrl: "https://mercadolibre.com/sec/17VWdsg",
-      features: ["22 piezas", "Estuche plástico", "Completo"],
-      tags: ["primeros auxilios", "seguridad"],
+      features: ["22 piezas", "Portátil", "Económico"],
+      tags: ["botiquín", "primeros auxilios", "portátil"],
       articleSource: "Botiquines",
     },
     {
-      id: "dickies-overol",
-      name: "Dickies Overol",
-      description: "Ropa de seguridad profesional de alta calidad.",
+      id: "gabinete-surtek-vacio",
+      name: "Gabinete para Botiquín Surtek (Vacío)",
+      description: "Gabinete metálico vacío para montar en pared, hecho en lámina calibre 24.",
+      category: "Seguridad",
+      subcategory: "Botiquines",
+      brand: "Surtek",
+      price: "Consultar precio",
+      rating: 4.8,
+      reviews: 220,
+      image: "/images/catalogo/gabinete-surtek.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2wiufhR",
+      features: ["Metálico", "Calibre 24", "Montaje en pared"],
+      tags: ["gabinete", "botiquín fijo", "metálico"],
+      articleSource: "Botiquines",
+    },
+    {
+      id: "redkap-ct10",
+      name: "Overol Industrial Alta Visibilidad Reflejante Capucha (Red Kap CT10)",
+      description: "Overol industrial con capucha y cintas reflectantes, resistente a suciedad y polvo.",
+      category: "EPP",
+      subcategory: "Ropa de Seguridad",
+      brand: "Red Kap",
+      price: "Consultar precio",
+      rating: 4.2,
+      reviews: 150,
+      image: "/images/catalogo/redkap-ct10.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2fgbB41",
+      features: ["Capucha integrada", "Cintas reflectantes", "Duradero"],
+      tags: ["overol", "alta visibilidad", "capucha"],
+      articleSource: "Overoles",
+    },
+    {
+      id: "dickies-peto",
+      name: "Overol Industrial Con Cintas Reflejantes Unisex (Dickies Peto)",
+      description: "Overol unisex con cintas reflectantes y múltiples bolsillos seguros.",
       category: "EPP",
       subcategory: "Ropa de Seguridad",
       brand: "Dickies",
@@ -254,27 +351,172 @@ function ProductCatalogSection() {
       reviews: 15,
       image: "/images/catalogo/dickies-peto.webp",
       amazonUrl: "https://mercadolibre.com/sec/1sD7aUv",
-      features: ["Tela duradera", "Múltiples bolsillos", "Profesional"],
-      tags: ["ropa", "seguridad"],
-      articleSource: "Ropa Laboral",
+      features: ["Cintas reflectantes", "Bolsillos seguros", "Cómodo"],
+      tags: ["overol", "unisex", "reflejante"],
+      articleSource: "Overoles",
+    },
+    {
+      id: "guigua-mono-reparacion",
+      name: "GUIGUA Mono de Reparación",
+      description: "Mono ligero de poliéster económico, ideal para talleres pequeños.",
+      category: "EPP",
+      subcategory: "Ropa de Seguridad",
+      brand: "GUIGUA",
+      price: "Consultar precio",
+      rating: 4.6,
+      reviews: 450,
+      image: "/images/catalogo/guigua-mono-reparacion.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1z6GYqc",
+      features: ["Poliéster ligero", "Económico", "Fácil mantenimiento"],
+      tags: ["mono", "económico", "poliéster"],
+      articleSource: "Overoles",
+    },
+    {
+      id: "sanfu-multibolsillos",
+      name: "Sanfu Uniforme De Trabajo De Una Sola Pieza Multibolsillos",
+      description: "Overol/uniforme de una sola pieza con múltiples bolsillos y tela resistente.",
+      category: "EPP",
+      subcategory: "Ropa de Seguridad",
+      brand: "Sanfu",
+      price: "Consultar precio",
+      rating: 4.3,
+      reviews: 300,
+      image: "/images/catalogo/sanfu-multibolsillos.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1JKomB9",
+      features: ["Múltiples bolsillos", "Tela resistente", "Cómodo"],
+      tags: ["multibolsillos", "uniforme", "confort"],
+      articleSource: "Overoles",
+    },
+    {
+      id: "brisco-industrial-reflejante",
+      name: "BRISCO INDUSTRIAL Overol Reflejante (Alta Visibilidad)",
+      description: "Overol tipo gabardina poliéster/algodón con cintas reflectantes de 2\" para máxima visibilidad.",
+      category: "EPP",
+      subcategory: "Ropa de Seguridad",
+      brand: "BRISCO INDUSTRIAL",
+      price: "Consultar precio",
+      rating: 5.0,
+      reviews: 5,
+      image: "/images/catalogo/brisco-industrial-reflejante.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2bXCQGF",
+      features: ["Cintas reflectantes", "Gabardina", "Robusta"],
+      tags: ["alta visibilidad", "gabardina", "reflejante"],
+      articleSource: "Overoles",
+    },
+    {
+      id: "berrendo-3017",
+      name: "Botas Berrendo 3017 Dieléctricas Biotech",
+      description: "Bota unisex de piel Napa con casquillo de policarbonato y certificación dieléctrica.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Berrendo",
+      price: "Consultar precio",
+      rating: 4.7,
+      reviews: 266,
+      image: "/images/catalogo/berrendo-3017.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2VaKvc7",
+      features: ["Dieléctrica", "Policarbonato", "NOM-113"],
+      tags: ["botas", "dieléctrica", "resistente"],
+      articleSource: "Calzado",
+    },
+    {
+      id: "caterpillar-second-shift",
+      name: "Caterpillar Second Shift Steel Toe WP",
+      description: "Bota robusta con puntera de acero, construcción Goodyear Welt y caracterización waterproof.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Caterpillar",
+      price: "Consultar precio",
+      rating: 5.0,
+      reviews: 3,
+      image: "/images/catalogo/caterpillar-second-shift.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1KmV8U4",
+      features: ["Goodyear Welt", "Steel Toe", "Waterproof"],
+      tags: ["goodyear", "steel-toe", "waterproof"],
+      articleSource: "Calzado",
+    },
+    {
+      id: "timberland-pro-pit-boss",
+      name: "Timberland PRO Pit Boss 6\" Steel Toe",
+      description: "Bota de alto confort y protección con casquillo de acero y tecnología PRO 24/7.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Timberland PRO",
+      price: "Consultar precio",
+      rating: 4.6,
+      reviews: 10000,
+      image: "/images/catalogo/timberland-pro-pit-boss.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2hukoND",
+      features: ["Steel Toe", "Anti-fatiga", "Confort"],
+      tags: ["confort", "steel-toe", "anti-fatiga"],
+      articleSource: "Calzado",
+    },
+    {
+      id: "riverline-spyder-spyg2",
+      name: "Riverline Spyder SPYG2",
+      description: "Calzado ergonómico y ligero con casquillo de policarbonato y suela PU de doble densidad.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Riverline",
+      price: "Consultar precio",
+      rating: 4.6,
+      reviews: 235,
+      image: "/images/catalogo/riverline-spyder-spyg2.webp",
+      amazonUrl: "https://mercadolibre.com/sec/1Tpzibx",
+      features: ["Policarbonato", "Suela PU", "Ligero"],
+      tags: ["ligero", "ergonómico", "policarbonato"],
+      articleSource: "Calzado",
+    },
+    {
+      id: "timberland-pro-pit-6",
+      name: "Timberland Pro Pit 6 Botas Industriales Dieléctricas",
+      description: "Modelo tipo tenis industrial con casquillo no metálico y protección dieléctrica.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Timberland PRO",
+      price: "Consultar precio",
+      rating: 4.9,
+      reviews: 79,
+      image: "/images/catalogo/timberland-pro-pit-6.webp",
+      amazonUrl: "https://mercadolibre.com/sec/2LrJRAz",
+      features: ["Fibra de vidrio", "Dieléctrica", "Moderno"],
+      tags: ["fibra-de-vidrio", "dieléctrica", "diseño"],
+      articleSource: "Calzado",
+    },
+    {
+      id: "nieion-tenis-safety",
+      name: "Nieion Tenis de Seguridad Sport Industrial",
+      description: "Calzado tipo tenis de seguridad, líder en ventas con miles de reseñas.",
+      category: "EPP",
+      subcategory: "Calzado de Seguridad",
+      brand: "Nieion",
+      price: "Consultar precio",
+      rating: 4.6,
+      reviews: 23500,
+      image: "/images/catalogo/nieion-tenis-safety.webp",
+      amazonUrl: "https://mercadolibre.com/sec/32PaSVu",
+      features: ["Steel Toe", "Kevlar", "Transpirable"],
+      tags: ["tenis", "mas-ventas", "kevlar"],
+      articleSource: "Calzado",
     },
   ];
 
+  // Inicializar productos
   useEffect(() => {
-    setProducts(catalogProducts);
+    setProducts(allCatalogProducts);
     setIsLoading(false);
   }, []);
 
   // Extraer todas las categorías únicas
   const categories = useMemo(() => {
     const cats = ['Todos'];
-    const uniqueCats = new Set(catalogProducts.map(p => p.category));
+    const uniqueCats = new Set(allCatalogProducts.map(p => p.category));
     return [...cats, ...Array.from(uniqueCats)];
   }, []);
 
   // Filtrar y ordenar productos
   const filteredProducts = useMemo(() => {
-    let filtered = catalogProducts;
+    let filtered = allCatalogProducts;
 
     // Filtrar por categoría
     if (selectedCategory !== 'Todos') {
@@ -295,6 +537,11 @@ function ProductCatalogSection() {
     // Ordenar por rating (mejor valorado primero)
     return filtered.sort((a, b) => b.rating - a.rating);
   }, [selectedCategory, searchQuery]);
+
+  // Productos a mostrar (solo 21 inicialmente o todos si se clickea "Ver más")
+  const productsToDisplay = useMemo(() => {
+    return showMoreProducts ? filteredProducts : filteredProducts.slice(0, 21);
+  }, [filteredProducts, showMoreProducts]);
 
   const handleCTAClick = (action: string) => {
     trackEvent(action, {
@@ -374,7 +621,7 @@ function ProductCatalogSection() {
 
         {/* Grid de productos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product, index) => (
+          {productsToDisplay.map((product, index) => (
             <motion.button
               key={product.id}
               onClick={() => {
@@ -463,6 +710,42 @@ function ProductCatalogSection() {
             </motion.button>
           ))}
         </div>
+
+        {/* Botón "Ver más" cuando hay más productos disponibles */}
+        {filteredProducts.length > 21 && !showMoreProducts && (
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.button
+              onClick={() => setShowMoreProducts(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-lg"
+            >
+              <span className="relative z-10 flex items-center gap-2 justify-center">
+                Ver {filteredProducts.length - 21} productos más
+                <ArrowRight className="w-5 h-5" />
+              </span>
+              
+              {/* Efecto shine */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                initial={{ x: '-100%' }}
+                animate={{ x: '200%' }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: "linear"
+                }}
+              />
+            </motion.button>
+          </motion.div>
+        )}
 
         {/* Mensaje cuando no hay productos */}
         {filteredProducts.length === 0 && (
