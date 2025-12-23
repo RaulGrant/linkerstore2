@@ -1459,28 +1459,34 @@ export default function HomePage() {
           
           const images = [
             {
-              src: '/images/seucrity.webp',
+              src: '/images/catalogo/banners/banner1.webp',
               title: 'Herramientas Industriales de',
               subtitle: 'Calidad Superior',
               description: 'Equipos de protección, herramientas y soluciones industriales para profesionales que exigen lo mejor'
             },
             {
-              src: '/images/industrial-safety-2.webp',
+              src: '/images/catalogo/banners/banner2.webp',
               title: 'Equipos de Seguridad',
               subtitle: 'Certificados',
               description: 'Protección personal y equipos industriales con certificaciones internacionales de calidad'
             },
             {
-              src: '/images/herramientas-banner.webp',
+              src: '/images/catalogo/banners/banner3.webp',
               title: 'Herramientas Profesionales',
               subtitle: 'de Alto Rendimiento',
               description: 'Las mejores marcas en herramientas industriales para trabajos de precisión y durabilidad'
             },
             {
-              src: '/images/solutions.webp',
+              src: '/images/catalogo/banners/banner4.webp',
               title: 'Soluciones Integrales',
               subtitle: 'para la Industria',
               description: 'Todo lo que necesitas para proyectos industriales y de construcción en un solo lugar'
+            },
+            {
+              src: '/images/catalogo/banners/banner5.webp',
+              title: 'Tecnología Avanzada',
+              subtitle: 'para Profesionales',
+              description: 'Innovación y calidad en cada producto para maximizar tu productividad y seguridad'
             }
           ];
 
@@ -1490,7 +1496,7 @@ export default function HomePage() {
               setCurrentImageIndex((prevIndex) => 
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
               );
-            }, 10000);
+            }, 7000);
 
             return () => clearInterval(interval);
           }, [images.length]);
