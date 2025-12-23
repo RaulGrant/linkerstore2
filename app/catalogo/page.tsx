@@ -1025,6 +1025,94 @@ const productCatalog: Product[] = [
   "tags": ["placa anclaje", "montaje", "acero", "suspensión", "500kg", "multiuso"],
   "articleSource": "Top Equipos de Seguridad 2025"
 },
+{
+  "id": "generica-placa-rigging-4-orificios",
+  "name": "Placa de Anclaje Multiusos (Rigging Plate) 4 Orificios",
+  "description": "Placa de aparejo tipo 'Paw' fabricada en metal resistente y ligero. Diseñada con 4 orificios (1 punto de carga principal y 3 de distribución) para organizar conectores y crear sistemas de anclaje múltiples de manera ordenada y segura.",
+  "category": "Escalada y Trabajos Verticales",
+  "subcategory": "Placas Multianclaje",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 5.0,
+  "reviews": 2,
+  "image": "/images/catalogo/placa-rigging-4-orificios-negro/placa-rigging-4-orificios-negro.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1P3ap8M",
+  "features": [
+    "Diseño: 4 orificios (1 grande de carga + 3 de distribución)",
+    "Dimensiones: 9 cm x 8.4 cm",
+    "Material: Metal de alta calidad y ligero",
+    "Color: Negro",
+    "Uso: Sistemas de aparejo, escalada, rescate y puentes de cuerda"
+  ],
+  "tags": ["rigging plate", "placa anclaje", "escalada", "rescate", "4 orificios", "paw", "outdoor"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "generica-conector-poste-3.8cm-4pz",
+  "name": "Set 4 Conectores de Anclaje para Postes 3.8 cm (Poste a Viga)",
+  "description": "Juego de 4 placas de fijación metálicas diseñadas para conectar postes a vigas en estructuras de madera estándar. Ideales para la construcción de pérgolas, barandillas, cercas y muebles de jardín, ofreciendo resistencia a la corrosión y estabilidad estructural.",
+  "category": "Construcción y Estructuras",
+  "subcategory": "Conectores para Madera",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 5.0,
+  "reviews": 2,
+  "image": "/images/catalogo/conector-poste-3.8cm/conector-poste-3.8cm.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1eHWp7Q",
+  "features": [
+    "Ancho interior: 3.8 cm (1.50 pulgadas)",
+    "Dimensiones: 3.81 cm x 5.08 cm",
+    "Material: Metal sólido resistente al óxido",
+    "Contenido: 4 soportes de anclaje",
+    "Uso: Pérgolas, decks, barandillas y cobertizos"
+  ],
+  "tags": ["conector madera", "soporte poste", "pérgola", "construcción", "bricolaje", "herrajes"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "generica-kit-terminales-cobre-64pz",
+  "name": "Kit de 64 Terminales de Cobre y Tubo Termoencogible (AWG 12-2)",
+  "description": "Juego completo de terminales de anillo fabricados en 100% cobre puro para máxima conductividad y resistencia a la corrosión. Incluye surtido de conectores (Serie SC) y tubos termorretráctiles para cables desde calibre AWG 12 hasta AWG 2. Ideal para baterías, sistemas solares y automotrices.",
+  "category": "Electricidad y Mantenimiento",
+  "subcategory": "Conectores y Terminales",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 5,
+  "image": "/images/catalogo/kit-terminales-cobre-64pz/kit-terminales-cobre-64pz.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2qaXM8S",
+  "features": [
+    "Material: 100% Cobre puro (Alta conductividad)",
+    "Contenido: 64 piezas (Terminales SC y Termoencogible)",
+    "Compatibilidad de Cable: AWG 12, 10, 8, 6, 4, 2",
+    "Variedad de medidas: SC6-6 hasta SC35-10",
+    "Uso: Automotriz, Marina, Paneles Solares, Distribución"
+  ],
+  "tags": ["terminales", "cobre", "conectores", "electricidad", "AWG", "mantenimiento", "baterías"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "generica-sc6-6-terminales-cobre-50pz",
+  "name": "Pack 50 Terminales de Anillo de Cobre SC6-6",
+  "description": "Paquete de 50 terminales tubulares de cobre modelo SC6-6. Diseñados para ofrecer una fuerte conductividad y larga vida útil en conexiones eléctricas de baterías, inversores y aplicaciones automotrices. Aptos para instalación por prensado o soldadura.",
+  "category": "Electricidad y Mantenimiento",
+  "subcategory": "Conectores y Terminales",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 5.0,
+  "reviews": 2,
+  "image": "/images/catalogo/terminales-cobre-sc6-6/terminales-cobre-sc6-6.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2JiunzX",
+  "features": [
+    "Modelo: SC6-6",
+    "Material: Cobre de alta conductividad",
+    "Contenido: 50 piezas",
+    "Método de fijación: Prensado (Crimping) y Soldadura",
+    "Aplicaciones: Inversores, baterías, automotriz y tableros de distribución"
+  ],
+  "tags": ["terminales", "cobre", "SC6-6", "electricidad", "batería", "automotriz", "conector"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "lica-kit-seguridad",
     name: "Lica Kit de Seguridad (Arnés + Línea + Punto Fijo)",
