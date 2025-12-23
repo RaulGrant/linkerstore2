@@ -158,7 +158,7 @@ interface CatalogProduct {
 // Importar productos del catálogo
 async function getAllCatalogProducts(): Promise<CatalogProduct[]> {
   try {
-    const response = await fetch('https://linkerstore.vercel.app/catalogo', {
+    const response = await fetch('https://linkerstore.com.mx/catalogo', {
       cache: 'no-store'
     });
     if (!response.ok) return [];
@@ -829,72 +829,175 @@ export default function HomePage() {
   return (
     <motion.div 
       className="min-h-screen relative overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #312e81 50%, #1e1b4b 100%)' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-
-
       {/* Hero Section LinkerStore */}
       <motion.section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Ondas animadas */}
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        {/* Banner Carousel Background */}
+        {(() => {
+          const [currentImageIndex, setCurrentImageIndex] = useState(0);
           
-          {/* Partículas flotantes */}
-          {[...Array(20)].map((_, i) => {
-            const leftPos = (i * 5.2) % 100;
-            const topPos = ((i * 7.3) % 80) + 10;
-            const xOffset = ((i % 5) - 2) * 6;
-            const duration = 4 + (i % 3);
-            const delay = (i % 4) * 0.5;
-            const iconType = i % 3;
-            
-            return (
-              <motion.div
-                key={i}
-                className="absolute"
-                style={{
-                  left: `${leftPos}%`,
-                  top: `${topPos}%`,
-                }}
-                animate={{
-                  y: [0, -50, 0],
-                  x: [0, xOffset, 0],
-                  opacity: [0.1, 0.6, 0.1],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: duration,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: delay,
-                }}
-              >
-                {iconType === 0 ? (
-                  <span className="text-2xl opacity-20">⚙️</span>
-                ) : iconType === 1 ? (
-                  <span className="text-xl opacity-20">🏭</span>
-                ) : (
-                  <span className="text-lg opacity-20">🔧</span>
-                )}
-              </motion.div>
-            );
-          })}
-          
-          {/* Líneas diagonales animadas */}
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(59,130,246,0.1)_50%,transparent_52%)] bg-[length:60px_60px] animate-pulse"></div>
-        </div>
+          const images = [
+            {
+              src: '/images/catalogo/banners/banner1.webp',
+              title: 'Herramientas Industriales de',
+              subtitle: 'Calidad Superior',
+              description: 'Equipos de protección, herramientas y soluciones industriales para profesionales que exigen lo mejor'
+            },
+            {
+              src: '/images/catalogo/banners/banner2.webp',
+              title: 'Equipos de Seguridad',
+              subtitle: 'Certificados',
+              description: 'Protección personal y equipos industriales con certificaciones internacionales de calidad'
+            },
+            {
+              src: '/images/catalogo/banners/banner3.webp',
+              title: 'Herramientas Profesionales',
+              subtitle: 'de Alto Rendimiento',
+              description: 'Las mejores marcas en herramientas industriales para trabajos de precisión y durabilidad'
+            },
+            {
+              src: '/images/catalogo/banners/banner4.webp',
+              title: 'Soluciones Integrales',
+              subtitle: 'para la Industria',
+              description: 'Todo lo que necesitas para proyectos industriales y de construcción en un solo lugar'
+            },
+            {
+              src: '/images/catalogo/banners/banner5.webp',
+              title: 'Tecnología Avanzada',
+              subtitle: 'para Profesionales',
+              description: 'Innovación y calidad en cada producto para maximizar tu productividad y seguridad'
+            }
+          ];
 
-        <div className="container mx-auto px-6 text-center relative z-10">
+          // Auto-advance carousel
+          useEffect(() => {
+            const interval = setInterval(() => {
+              setCurrentImageIndex((prevIndex) => 
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+              );
+            }, 7000);
+
+            return () => clearInterval(interval);
+          }, [images.length]);
+
+          const goToImage = (index) => {
+            setCurrentImageIndex(index);
+          };
+
+          const goToPrevious = () => {
+            setCurrentImageIndex(currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1);
+          };
+
+          const goToNext = () => {
+            setCurrentImageIndex(currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1);
+          };
+
+          return (
+            <>
+              {/* Background Images with Transitions */}
+              {images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url(${image.src})`,
+                  }}
+                  initial={{ opacity: 0 }}
+                  animate={{ 
+                    opacity: index === currentImageIndex ? 1 : 0,
+                    scale: index === currentImageIndex ? 1.05 : 1
+                  }}
+                  transition={{ 
+                    duration: 1,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                </motion.div>
+              ))}
+
+              {/* Navigation Arrows */}
+              <motion.button
+                onClick={goToPrevious}
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black p-3 rounded-full transition-all duration-300 group"
+                whileHover={{ scale: 1.1, x: -5 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.5 }}
+              >
+                <svg 
+                  className="w-6 h-6 group-hover:animate-pulse" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </motion.button>
+
+              <motion.button
+                onClick={goToNext}
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black p-3 rounded-full transition-all duration-300 group"
+                whileHover={{ scale: 1.1, x: 5 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.5 }}
+              >
+                <svg 
+                  className="w-6 h-6 group-hover:animate-pulse" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </motion.button>
+
+              {/* Dot Indicators */}
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+                {images.map((_, index) => (
+                  <motion.button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex 
+                        ? 'bg-white scale-125 shadow-lg' 
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.7 + index * 0.1 }}
+                  />
+                ))}
+              </div>
+
+              {/* Progress Bar */}
+              <div className="absolute bottom-0 left-0 h-1 bg-white/30 w-full z-20">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-orange-400 to-yellow-400"
+                  initial={{ width: '0%' }}
+                  animate={{ width: '100%' }}
+                  key={currentImageIndex}
+                  transition={{ duration: 7, ease: "linear" }}
+                />
+              </div>
+            </>
+          );
+        })()}
+
+        <div className="container mx-auto px-6 text-center relative z-30">
           <motion.div
             initial={{ y: 100, opacity: 0, scale: 0.8 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
