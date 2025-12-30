@@ -1113,6 +1113,647 @@ const productCatalog: Product[] = [
   "tags": ["terminales", "cobre", "SC6-6", "electricidad", "batería", "automotriz", "conector"],
   "articleSource": "Top Equipos de Seguridad 2025"
 },
+
+{
+  "id": "jyrsa-jyr-moch01k-kit-3pz",
+  "name": "Kit Contra Caídas 3 Pzas Arnés + Línea de Vida Jyrsa JYR-MOCH01K",
+  "description": "Kit integral de protección contra caídas que incluye un arnés de cuerpo completo (JYR-10A), una línea de vida con amortiguador de impacto (JYR-AMC1 de 1.83m) y una mochila resistente. Diseñado para trabajos en construcción, andamios y mantenimiento, cumpliendo con normativas nacionales e internacionales.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Kits de Altura",
+  "brand": "Jyrsa",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/jyrsa/kit-jyr-moch01k.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2MLKzWT",
+  "features": [
+    "Incluye: Arnés JYR-10A + Amortiguador JYR-AMC1 + Mochila",
+    "Normativas: NOM-009-STPS-2011, ANSI Z359.1-2007, OSHA 1926",
+    "Material: Herrajes de acero con recubrimiento de zinc y bicromato",
+    "Aplicación: Construcción, andamios y rescate",
+    "Ventaja: Solución portátil y lista para usar"
+  ],
+  "tags": ["jyrsa", "kit altura", "arnés", "línea de vida", "amortiguador", "seguridad industrial", "JYR-MOCH01K"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "alto-kc-h03a-30m",
+  "name": "Kit Línea de Vida Horizontal Temporal 30m Cuerda Sintética ALTO",
+  "description": "Sistema de línea de vida horizontal temporal (HLL) de 30 metros (100 pies) fabricado en cuerda sintética de alta resistencia. Kit completo reutilizable que incluye tensor, absorbedores de energía y anclajes. Diseñado para ofrecer seguridad continua a múltiples usuarios con una resistencia estándar de 5,000 lbs por persona.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Líneas de Vida Horizontales",
+  "brand": "ALTO",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/alto/linea-vida-temporal-30m-sintetica.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2SrTY6L",
+  "features": [
+    "Longitud: 30 metros (100 pies)",
+    "Modelo: KC H03A",
+    "Material: Cuerda sintética de alta resistencia",
+    "Componentes: Línea, tensor/ajustador, absorbedores y anclajes",
+    "Resistencia: 5,000 lbs (22.2 KN) por usuario",
+    "Tipo: Temporal y reutilizable"
+  ],
+  "tags": ["ALTO", "línea de vida horizontal", "cuerda sintética", "30m", "KC H03A", "seguridad industrial", "temporal"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-freno-cable-3-8-mosqueton",
+  "name": "Freno Anticaídas para Cable de Acero 3/8\" con Mosquetón (EN 353-2)",
+  "description": "Dispositivo deslizador anticaídas (carrito) diseñado para líneas de vida verticales de cable de acero de 3/8\". Fabricado en aleación de acero de alta resistencia, cuenta con bloqueo instantáneo inercial y sistema de seguridad por gravedad que impide su instalación invertida. Incluye mosquetón con resistencia de 2500kg.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Frenos y Deslizadores",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/freno-cable-3-8.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2Qum1Ud",
+  "features": [
+    "Compatibilidad: Cable de acero de 3/8\" (aprox. 9.5mm)",
+    "Certificación: EN 353-2",
+    "Material: Aleación de acero de alta resistencia",
+    "Mosquetón incluido: Carga de ruptura 2500kg (25 KN)",
+    "Sistema de seguridad: Bloqueo instantáneo y anti-inversión",
+    "Uso: Torres, escaleras fijas, exploración y rescate"
+  ],
+  "tags": ["freno cable", "anticaídas", "3/8", "EN 353-2", "seguridad industrial", "carrito", "línea vertical"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-freno-cable-9.5mm-25kn",
+  "name": "Freno Anticaídas para Cable 3/8\" (9.5mm) con Mosquetón 25KN",
+  "description": "Dispositivo anticaídas deslizante para líneas de vida verticales de cable de acero de 9.5mm. Fabricado en acero aleado para alta durabilidad. Incluye un mosquetón ovalado con cierre de rosca certificado a 25KN. Cuenta con sistema de seguridad por gravedad que impide la instalación invertida.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Frenos y Deslizadores",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/freno-cable-9.5mm-25kn.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1XdBFbd",
+  "features": [
+    "Compatibilidad: Cable de acero de 9.5 mm (3/8\")",
+    "Material: Acero aleado de alta resistencia",
+    "Mosquetón incluido: Ovalado con cierre de rosca (25 KN / 2500 kg)",
+    "Seguridad: Bloqueo por leva y sistema anti-inversión",
+    "Uso: Torres, escaleras fijas, rescate y pozos"
+  ],
+  "tags": ["freno cable", "anticaídas", "3/8", "9.5mm", "25KN", "seguridad industrial", "carrito"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "generica-freno-cable-3-8-inox-en353",
+  "name": "Freno Anticaídas para Cable 3/8\" Certificado EN 353-2 + Mosquetón",
+  "description": "Dispositivo anticaídas deslizante certificado bajo norma EN 353-2 para líneas de vida de cable de 3/8\". Fabricado en acero inoxidable de alta resistencia para máxima durabilidad. Incluye mosquetón ovalado de 25KN. Cuenta con sistema de bloqueo por leva instantáneo y seguro gravitatorio que impide la instalación invertida.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Frenos y Deslizadores",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/freno-cable-3-8-inox-en353.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2k1wmWw",
+  "features": [
+    "Certificación: EN 353-2 (Norma europea)",
+    "Compatibilidad: Cable de 3/8 pulgadas",
+    "Material: Acero inoxidable / Aleación reforzada",
+    "Mosquetón incluido: Ovalado con seguro de rosca (2500 kg)",
+    "Seguridad: Bloqueo instantáneo y sistema anti-inversión",
+    "Uso: Rescate, industria, mantenimiento y escalada"
+  ],
+  "tags": ["freno cable", "anticaídas", "3/8", "EN 353-2", "seguridad industrial", "acero inoxidable", "rescate"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-freno-cable-3-8-en353-v2",
+  "name": "Freno Anticaídas para Cable 3/8\" (9.5mm) Certificado EN 353-2 + Mosquetón",
+  "description": "Dispositivo anticaídas deslizante certificado para líneas de vida verticales de cable de acero de 3/8\" (9.5 mm). Fabricado en acero de alta resistencia (aleación/inoxidable). Cuenta con sistema de bloqueo por leva instantáneo y seguro gravitatorio anti-inversión. Incluye mosquetón ovalado con seguro de rosca de 2500kg.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Frenos y Deslizadores",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/freno-cable-3-8-en353-v2.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/31zx2YR",
+  "features": [
+    "Compatibilidad: Cable de acero de 3/8\" (aprox. 9.5mm)",
+    "Certificación: Cumple con EN 353-2",
+    "Material: Aleación de acero / Acero inoxidable",
+    "Mosquetón incluido: Ovalado con cierre de rosca (25 KN / 2500 kg)",
+    "Seguridad: Seguro gravitatorio (impide instalación inversa)",
+    "Uso: Rescate, industria, torres y espacios confinados"
+  ],
+  "tags": ["freno cable", "anticaídas", "3/8", "EN 353-2", "seguridad industrial", "mosquetón 25kn"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-kit-cable-acero-30m-3mm",
+  "name": "Kit de Cable de Acero Inoxidable 30m (3mm) con Tensores y Accesorios",
+  "description": "Kit completo de instalación con 30 metros de cable de acero inoxidable 304 recubierto de PVC (3mm de espesor total). Incluye 117 piezas de hardware (tensores, abrazaderas, taquetes, ganchos) ideales para jardinería, guías de luces, barandillas ligeras y decoración exterior. Resistente a la corrosión.",
+  "category": "Ferretería y Exteriores",
+  "subcategory": "Cables y Sujeción",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/kit-cable-acero-30m-3mm.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1LDDUKS",
+  "features": [
+    "Cable: 30 metros de acero inoxidable 304 con recubrimiento plástico (3mm)",
+    "Resistencia: Anticorrosión y abrasión (Ideal intemperie)",
+    "Contenido del Kit: 5 tensores, 10 taquetes, 6 abrazaderas, 20 casquillos, ganchos y bridas",
+    "Total piezas: 117 accesorios",
+    "Uso: Luces colgantes, plantas trepadoras, decoración (No apto para carga humana)"
+  ],
+  "tags": ["cable acero", "tensores", "kit instalación", "jardín", "bricolaje", "3mm", "outdoor"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-kit-cable-acero-100m-50kg",
+  "name": "Kit de Cable de Acero Inoxidable 100m (Uso Ligero 50kg)",
+  "description": "Kit de 100 metros de cable de acero inoxidable 304 con recubrimiento plástico. Construcción 7x7 hilos flexible y resistente a la intemperie. Diseñado para cargas ligeras (máximo 50 kg) como colgar luces de exterior, tendederos y guías para plantas.",
+  "category": "Ferretería y Exteriores",
+  "subcategory": "Cables y Sujeción",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.1,
+  "reviews": 10,
+  "image": "/images/catalogo/generica/kit-cable-acero-100m.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2Ci5ycF",
+  "features": [
+    "Longitud: 100 metros",
+    "Material: Acero Inoxidable 304 (Recubierto)",
+    "Diámetro: 1/16\" (núcleo) - 3/32\" (recubierto)",
+    "Carga de rotura: 50 kg (Solo cargas ligeras)",
+    "Construcción: 7x7 hilos (Flexible)",
+    "Uso: Jardinería, decoración, luces colgantes"
+  ],
+  "tags": ["cable acero", "100m", "jardín", "luces", "decoración", "bricolaje", "uso ligero"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-kit-cable-acero-50m-50kg",
+  "name": "Kit de Cable de Acero Inoxidable 50m (Uso Ligero 50kg)",
+  "description": "Kit de instalación con 50 metros de cable de acero inoxidable 304 recubierto de PVC. Incluye tensores M5, ganchos y accesorios de fijación. Diseñado para cargas ligeras (máximo 50 kg) como colgar luces de exterior, tendederos y guías para plantas trepadoras.",
+  "category": "Ferretería y Exteriores",
+  "subcategory": "Cables y Sujeción",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 12,
+  "image": "/images/catalogo/generica/kit-cable-acero-50m.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/191Agec",
+  "features": [
+    "Longitud: 50 metros",
+    "Material: Acero Inoxidable 304 (Recubierto PVC)",
+    "Contenido: 4 tensores M5, 8 ganchos, 8 guardacabos, 16 casquillos",
+    "Carga de rotura: 50 kg (Solo cargas ligeras)",
+    "Diámetro: 1/16\" (núcleo) - 3/32\" (recubierto)",
+    "Uso: Jardinería, decoración, luces colgantes"
+  ],
+  "tags": ["cable acero", "50m", "jardín", "luces", "decoración", "kit instalación", "uso ligero"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-kit-cable-acero-50m-completo",
+  "name": "Kit de Cable de Acero Inoxidable 50m con Tensores (Recubierto de PVC)",
+  "description": "Kit completo de 50 metros de cable de acero inoxidable 304 con recubrimiento de vinilo/PVC resistente a la corrosión. Incluye tensores M5, ganchos y accesorios de aluminio. Ideal para colgar luces exteriores, barandillas de cable, guías para enredaderas y tendederos.",
+  "category": "Ferretería y Exteriores",
+  "subcategory": "Cables y Sujeción",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 8,
+  "image": "/images/catalogo/generica/kit-cable-acero-50m-completo.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/31qAKAo",
+  "features": [
+    "Longitud: 50 metros (Recubierto de PVC)",
+    "Material: Acero Inoxidable 304 (Alta resistencia a corrosión)",
+    "Incluye: 4 Tensores M5, 8 Ganchos, 8 Guardacabos, 16 Casquillos",
+    "Uso: Jardinería, luces colgantes, barandillas ligeras, tendederos",
+    "Instalación: Fácil montaje con herramientas básicas"
+  ],
+  "tags": ["cable acero", "50m", "tensores", "jardín", "luces exterior", "bricolaje", "kit completo"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "creator-tensores-m4-6pz",
+  "name": "Set 6 Ganchos Tensores M4 Acero Inoxidable 304 (Gancho y Ojo)",
+  "description": "Paquete de 6 tensores de acero inoxidable 304 tipo gancho y ojo (M4). Resistentes al agua y la corrosión. Ideales para tensar cables ligeros, tendederos, antenas y cadenas en interiores o exteriores. Diseñados para cargas ligeras.",
+  "category": "Ferretería y Exteriores",
+  "subcategory": "Tensores y Sujeción",
+  "brand": "Creator",
+  "price": "Consultar precio",
+  "rating": 4.6,
+  "reviews": 19,
+  "image": "/images/catalogo/creator/tensores-m4-6pz.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2qjYxuk",
+  "features": [
+    "Modelo: M4 OC (Gancho y Ojo)",
+    "Material: Acero Inoxidable 304",
+    "Carga Máxima: 20 kg (Uso ligero)",
+    "Contenido: 6 Piezas",
+    "Extensión máxima: 14.5 cm",
+    "Uso: Tendederos, antenas, decoración, cables domésticos"
+  ],
+  "tags": ["tensores", "M4", "acero inoxidable", "gancho y ojo", "hardware", "bricolaje", "20kg"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "sihpac-linea-posicionamiento-cuerda-1.8m",
+  "name": "Línea de Posicionamiento (Estrobo) Cuerda Trenzada 1.83m con Ganchos",
+  "description": "Línea de vida simple fabricada en cuerda trenzada de alta resistencia color naranja/gris. Equipada con ganchos de acero en ambos extremos. Diseñada específicamente para labores de posicionamiento y restricción de movimiento, permitiendo al usuario trabajar con manos libres o limitando su acceso a zonas de riesgo de caída.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Líneas de Posicionamiento (Estrobos)",
+  "brand": "SIHPAC / Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 2,
+  "image": "/images/catalogo/sihpac/linea-posicionamiento-cuerda-1.8m.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1zxq3ZX",
+  "features": [
+    "Longitud: 1.83 metros",
+    "Material: Cuerda trenzada",
+    "Ganchos: Acero (Resistencia 2267 Kgs / 5000 lbs)",
+    "Capacidad de Carga: 140 Kgs",
+    "Uso: Posicionamiento y Restricción (No para detención de caídas libres)",
+    "Normativa mencionada: CE EN-361 (Verificar etiqueta)"
+  ],
+  "tags": ["posicionamiento", "estrobo", "cuerda", "1.8m", "ganchos acero", "seguridad industrial", "restricción"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "alto-c1t-180-cuerda-18m",
+  "name": "Cuerda de Vida Vertical 1/2\" x 18m ALTO (Modelo C1T-180)",
+  "description": "Línea de vida vertical flexible fabricada en cuerda trenzada de alta tenacidad de 1/2 pulgada (aprox. 13mm). Longitud total de 18 metros. Diseñada para servir como línea de anclaje segura para el ascenso y descenso de trabajadores, utilizando un dispositivo anticaídas deslizante (freno). Incluye gancho de acero forjado en un extremo.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Líneas de Vida Verticales",
+  "brand": "ALTO",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/alto/cuerda-vida-c1t-180.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1bv8hKS",
+  "features": [
+    "Longitud: 18 metros",
+    "Diámetro: 1/2\" (13 mm)",
+    "Modelo: C1T-180",
+    "Material: Cuerda sintética de alta resistencia",
+    "Conexión: Gancho de acero en un extremo",
+    "Uso: Sistema de protección vertical (requiere freno de cuerda)"
+  ],
+  "tags": ["ALTO", "línea vertical", "cuerda vida", "1/2", "18m", "C1T-180", "seguridad industrial"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-dispositivo-anti-asfixia-kit",
+  "name": "Kit Dispositivo de Emergencia Anti-Asfixia y Rescate (Niños y Adultos)",
+  "description": "Dispositivo de primeros auxilios basado en succión no invasiva para liberar obstrucciones en las vías respiratorias (atragantamiento). El kit combinado incluye versiones para hogar y viaje, con mascarillas intercambiables para adultos y niños. Cuenta con un sistema de válvula unidireccional que evita empujar el objeto hacia adentro.",
+  "category": "Primeros Auxilios y Emergencias",
+  "subcategory": "Equipos de Rescate y RCP",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.2,
+  "reviews": 48,
+  "image": "/images/catalogo/generica/dispositivo-anti-asfixia.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/19Lh5hK",
+  "features": [
+    "Sistema: Succión con válvula unidireccional patentada",
+    "Kit Combinado: Incluye equipo para Hogar y Kit de Viaje",
+    "Mascarillas incluidas: Adulto, Pediátrica y de Práctica",
+    "Vida útil: El dispositivo no caduca (Mascarillas reemplazables cada 2-3 años)",
+    "Uso: Fácil operación, apto para auto-aplicación en emergencia"
+  ],
+  "tags": ["anti-asfixia", "atragantamiento", "primeros auxilios", "rescate", "succión", "heimlich", "seguridad hogar"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-dispositivo-anti-asfixia-basico",
+  "name": "Dispositivo de Emergencia Anti-Asfixia y Rescate (Kit Básico)",
+  "description": "Dispositivo de succión no invasivo diseñado para liberar obstrucciones de las vías respiratorias en emergencias de atragantamiento. Sistema patentado fácil de usar que permite la auto-aplicación si se está solo. El dispositivo principal no tiene caducidad y es seguro para niños y adultos.",
+  "category": "Primeros Auxilios y Emergencias",
+  "subcategory": "Equipos de Rescate y RCP",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 13,
+  "image": "/images/catalogo/generica/dispositivo-anti-asfixia-basico.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1M61FJ5",
+  "features": [
+    "Mecanismo: Succión por vacío no invasiva",
+    "Contenido: 1 Dispositivo de succión + 1 Máscara adulto + 1 Máscara niño",
+    "Versatilidad: Apto para niños y adultos",
+    "Durabilidad: Dispositivo sin caducidad (Mascarillas reemplazables cada 2-3 años)",
+    "Uso: Diseño intuitivo apto para auto-rescate"
+  ],
+  "tags": ["anti-asfixia", "atragantamiento", "primeros auxilios", "succión", "rescate", "seguridad familiar"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-dispositivo-anti-asfixia-basico",
+  "name": "Dispositivo de Emergencia Anti-Asfixia y Rescate (Kit Básico)",
+  "description": "Dispositivo de succión no invasivo diseñado para liberar obstrucciones de las vías respiratorias en emergencias de atragantamiento. Sistema patentado fácil de usar que permite la auto-aplicación si se está solo. El dispositivo principal no tiene caducidad y es seguro para niños y adultos.",
+  "category": "Primeros Auxilios y Emergencias",
+  "subcategory": "Equipos de Rescate y RCP",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 13,
+  "image": "/images/catalogo/generica/dispositivo-anti-asfixia-basicoo.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1M61FJ5",
+  "features": [
+    "Mecanismo: Succión por vacío no invasiva",
+    "Contenido: 1 Dispositivo de succión + 1 Máscara adulto + 1 Máscara niño",
+    "Versatilidad: Apto para niños y adultos",
+    "Durabilidad: Dispositivo sin caducidad (Mascarillas reemplazables cada 2-3 años)",
+    "Uso: Diseño intuitivo apto para auto-rescate"
+  ],
+  "tags": ["anti-asfixia", "atragantamiento", "primeros auxilios", "succión", "rescate", "seguridad familiar"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-dispositivo-anti-asfixia-combo-v2",
+  "name": "Kit Completo Dispositivo Anti-Asfixia (Hogar + Viaje) Niños y Adultos",
+  "description": "Kit combinado de emergencia para atragantamiento que incluye dos sets: uno para el hogar y otro portátil para viaje. Utiliza un sistema de succión patentado con válvula unidireccional para liberar obstrucciones en las vías respiratorias. Incluye mascarillas de diferentes tamaños (adulto, pediátrica y práctica) y bolsa de transporte.",
+  "category": "Primeros Auxilios y Emergencias",
+  "subcategory": "Equipos de Rescate y RCP",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.4,
+  "reviews": 33,
+  "image": "/images/catalogo/generica/dispositivo-anti-asfixia-combo.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2eUsxP4",
+  "features": [
+    "Contenido: Kit Hogar + Kit de Viaje",
+    "Mascarillas incluidas: Adulto, Pediátrica y Práctica",
+    "Mecanismo: Succión no invasiva con válvula unidireccional",
+    "Portabilidad: Incluye bolsa de viaje duradera",
+    "Durabilidad: Unidad de succión sin caducidad",
+    "Uso: Apto para auto-rescate en caso de estar solo"
+  ],
+  "tags": ["anti-asfixia", "atragantamiento", "primeros auxilios", "kit viaje", "succión", "rescate", "seguridad familiar"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "msa-kit-rescate-4a1-15m",
+  "name": "Kit de Rescate en Alturas MSA 15 Metros (Sistema 4:1)",
+  "description": "Sistema de rescate y descenso con ventaja mecánica 4:1, diseñado para subir o bajar personal y equipos en espacios confinados o situaciones industriales. Las poleas cuentan con bloqueo antirretroceso para mayor seguridad. El kit ofrece un despliegue rápido y soporta carga para dos personas.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Rescate y Espacios Confinados",
+  "brand": "MSA",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/msa/kit-rescate-15m.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1szsEjo",
+  "features": [
+    "Sistema: Polipasto con ventaja mecánica 4:1",
+    "Recorrido efectivo: 15 metros",
+    "Longitud de cuerda: 200 pies (aprox. 60m)",
+    "Componentes: Poleas con bloqueo, puño ascensor, mosquetón y cuerda",
+    "Capacidad de carga: Clasificado para 2 personas",
+    "Uso: Rescate industrial y espacios confinados"
+  ],
+  "tags": ["rescate", "espacios confinados", "MSA", "sistema 4:1", "poleas", "polipasto", "seguridad industrial"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "b4-arnes-escalada-rescate",
+  "name": "Arnés de Escalada y Rescate Ajustable B4 (Certificado UIAA/CE)",
+  "description": "Arnés de medio cuerpo ligero y totalmente ajustable fabricado en poliéster de alta resistencia. Diseñado con acolchado ergonómico en cintura y perneras para máxima comodidad. Cuenta con certificación internacional UIAA y CE (EN 12277) para escalada en roca, alpinismo técnico y rescate.",
+  "category": "Escalada y Trabajos Verticales",
+  "subcategory": "Arneses",
+  "brand": "B4 / Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/arnes-b4-escalada.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2ZihX8J",
+  "features": [
+    "Certificaciones: CE0082, EN 12277, UIAA",
+    "Material: Poliéster de alta tenacidad con costuras reforzadas",
+    "Comodidad: Cinturón y perneras acolchados y transpirables",
+    "Organización: 4 bucles portamateriales (2 rígidos delanteros, 2 suaves traseros)",
+    "Ajuste: Hebillas rápidas para centrado perfecto",
+    "Uso: Escalada, rescate, arborismo y alpinismo"
+  ],
+  "tags": ["arnés", "escalada", "rescate", "UIAA", "EN 12277", "arborismo", "seguridad vertical"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "sihpac-chaleco-elastico-reflejante",
+  "name": "Chaleco Arnés Elástico Reflejante Alta Visibilidad (Tipo Carrillero)",
+  "description": "Chaleco ligero tipo arnés fabricado con cintas elásticas ajustables y bandas reflejantes textiles de alta visibilidad. Diseño ergonómico con broche plástico de seguridad y configuración en 'X' en la espalda. Ideal para ciclistas, motociclistas, personal de construcción y seguridad vial.",
+  "category": "Ropa de Trabajo",
+  "subcategory": "Alta Visibilidad",
+  "brand": "SIHPAC",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 28,
+  "image": "/images/catalogo/sihpac/chaleco-elastico-reflejante.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2LS7D4N",
+  "features": [
+    "Material: Cintas elásticas con reflejante textil",
+    "Talla: Unitalla (Totalmente ajustable a cualquier complexión)",
+    "Cierre: Broche de plástico de liberación rápida",
+    "Diseño: Ligero y no obstructivo (Tipo Carrillero)",
+    "Colores disponibles: Naranja, Amarillo, Verde, Azul, Rosa, Negro",
+    "Uso: Seguridad vial, ciclismo, running, minería y construcción"
+  ],
+  "tags": ["chaleco reflejante", "alta visibilidad", "seguridad vial", "ciclismo", "arnés elástico", "correr", "señalización"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-chaleco-arnes-reflectante-deportivo",
+  "name": "Chaleco Arnés Reflectante de Alta Visibilidad (Moto, Bici, Correr)",
+  "description": "Chaleco tipo arnés ultraligero y transpirable diseñado para ofrecer máxima visibilidad nocturna (detectable a más de 450 metros / 500 yardas). Cuenta con cintas elásticas ajustables con 4 hebillas y bandas reflectantes de 360 grados. Ideal para deportes al aire libre, motociclismo y seguridad vial en cualquier clima.",
+  "category": "Ropa de Trabajo",
+  "subcategory": "Alta Visibilidad",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.5,
+  "reviews": 29,
+  "image": "/images/catalogo/generica/chaleco-arnes-reflectante-deportivo.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1zquyAz",
+  "features": [
+    "Visibilidad: Detectable a +500 yardas (Reflectante 360°)",
+    "Ajuste: Cintura 70-98 cm | Largo 38-50 cm (4 hebillas)",
+    "Material: Tejido elástico de alta intensidad (Ancho 4cm)",
+    "Peso: 120g (Ultraligero y ventilado)",
+    "Resistencia: A prueba de agua",
+    "Uso: Running, Ciclismo, Motociclismo, Construcción"
+  ],
+  "tags": ["chaleco reflectante", "alta visibilidad", "ciclismo", "running", "seguridad vial", "arnés deportivo", "360 grados"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+}, 
+
+{
+  "id": "generica-chaleco-arnes-reflectante-v2",
+  "name": "Chaleco Arnés Reflectante Ajustable (Alta Visibilidad 360°)",
+  "description": "Chaleco tipo arnés de alta visibilidad con franjas plateadas ultrabrillantes. Ofrece visibilidad de 360° a una distancia de 200 a 300 metros en condiciones de oscuridad, lluvia o niebla. Fabricado con hilo elástico importado y totalmente ajustable mediante 4 hebillas para adaptarse a cualquier ropa y estación.",
+  "category": "Ropa de Trabajo",
+  "subcategory": "Alta Visibilidad",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 570,
+  "image": "/images/catalogo/generica/chaleco-arnes-reflectante-v2.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1zquyAz",
+  "features": [
+    "Visibilidad: 200 a 300 metros (360 grados)",
+    "Ajuste: Cintura 70-98 cm | Largo 38-50 cm",
+    "Material: Hilo elástico importado con película térmica de alto brillo",
+    "Condiciones: Visible en lluvia, niebla y oscuridad total",
+    "Diseño: 4 hebillas ajustables, ligero y plegable (cabe en el bolsillo)",
+    "Uso: Motociclismo, ciclismo, running, pasear mascotas"
+  ],
+  "tags": ["chaleco reflectante", "alta visibilidad", "arnés elástico", "seguridad vial", "moto", "running", "impermeable"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "generica-chaleco-arnes-reflectante-2pcs-verde",
+  "name": "Set 2 Chalecos Arnés Reflectante Ajustable (Verde) - Alta Visibilidad",
+  "description": "Paquete de 2 chalecos tipo arnés de alta visibilidad en color verde. Diseñados con tiras reflectantes de plata ultra brillantes para garantizar seguridad 360° en condiciones de poca luz. Sistema elástico totalmente ajustable mediante 4 hebillas, apto para usar sobre cualquier tipo de ropa en invierno o verano.",
+  "category": "Ropa de Trabajo",
+  "subcategory": "Alta Visibilidad",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/generica/chaleco-arnes-reflectante-2pcs-verde.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/23BNczH",
+  "features": [
+    "Contenido: 2 Piezas",
+    "Color: Verde (Alta visibilidad)",
+    "Ajuste: Cintura 70-98 cm | Largo 38-50 cm",
+    "Visibilidad: 360 grados (Tiras reflectantes plata)",
+    "Material: Polímero resistente y bandas elásticas transpirables",
+    "Uso: Motociclismo, ciclismo, running, peatones"
+  ],
+  "tags": ["chaleco reflectante", "2 piezas", "alta visibilidad", "verde", "seguridad vial", "arnés deportivo", "moto"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "advancare-guantes-nitrilo-azul-1000pz",
+  "name": "Caja Master Guantes de Nitrilo Advancare Azul (1000 pzas) - Grado Médico",
+  "description": "Paquete mayorista de 1000 guantes de nitrilo azul (10 cajas de 100 unidades). Libres de polvo y no estériles. Cuentan con formulación avanzada probada para resistir más de 60 productos químicos y aprobada para la manipulación de medicamentos de quimioterapia. Ofrecen ajuste cómodo y alta sensibilidad táctil.",
+  "category": "Protección Manual",
+  "subcategory": "Guantes Desechables",
+  "brand": "Advancare",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/advancare/guantes-nitrilo-1000pz.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1SGZfkE",
+  "features": [
+    "Contenido: 1000 Guantes (10 cajas x 100)",
+    "Material: Nitrilo avanzado (Sin polvo)",
+    "Resistencia: +60 productos químicos y medicamentos de quimioterapia",
+    "Textura: Antideslizante con alta sensibilidad táctil",
+    "Uso: Médico, Laboratorio, Industrial, Limpieza",
+    "Grado: Profesional / Examen"
+  ],
+  "tags": ["guantes nitrilo", "1000 piezas", "advancare", "grado médico", "quimioterapia", "sin polvo", "azul", "EPP"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "bluelander-guantes-nitrilo-azul-200pz-m",
+  "name": "Guantes de Nitrilo Azul Bluelander Talla Mediana (200 Pzas) - Sin Polvo",
+  "description": "Paquete de 200 guantes desechables de nitrilo azul, libres de látex y polvo. Diseñados especialmente para personas con alergias o piel sensible (hipoalergénicos). Ofrecen una barrera resistente contra productos químicos, virus y bacterias. Ideales para aplicaciones médicas, industria alimentaria, limpieza y tareas generales.",
+  "category": "Protección Manual",
+  "subcategory": "Guantes Desechables",
+  "brand": "Bluelander",
+  "price": "Consultar precio",
+  "rating": 4.7,
+  "reviews": 2375,
+  "image": "/images/catalogo/bluelander/guantes-nitrilo-200pz-m.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1EfnvUQ",
+  "features": [
+    "Contenido: 200 Piezas",
+    "Talla: Mediana",
+    "Material: Nitrilo (Libre de látex y polvo)",
+    "Propiedad: Hipoalergénicos",
+    "Protección: Resistente a químicos, virus y bacterias",
+    "Uso: Salud, alimentos, industria y limpieza"
+  ],
+  "tags": ["guantes nitrilo", "bluelander", "sin latex", "hipoalergénico", "200 piezas", "azul", "examen", "seguridad sanitaria"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "ambiderm-soft-nitrilo-negro-100pz-g",
+  "name": "Guantes de Nitrilo Negro Ambiderm Soft Talla G (100 Pzas) - Antideslizantes",
+  "description": "Caja de 100 guantes desechables de nitrilo color negro, modelo Ambiderm Soft. Diseño con textura antideslizante para un agarre seguro. Fabricados libres de látex y polvo, ideales para prevenir alergias. Ofrecen una barrera resistente contra productos químicos, virus y bacterias. Marca mexicana líder en el sector médico y dental.",
+  "category": "Protección Manual",
+  "subcategory": "Guantes Desechables",
+  "brand": "Ambiderm",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 4582,
+  "image": "/images/catalogo/ambiderm/guantes-nitrilo-negro-soft.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/32ThShR",
+  "features": [
+    "Contenido: 100 Unidades (Talla G / Grande)",
+    "Material: Nitrilo (Sin látex ni polvo)",
+    "Color: Negro (Ideal para uso estético, tatuajes y alimentos)",
+    "Textura: Antideslizante",
+    "Protección: Alta resistencia a químicos y biológicos",
+    "Origen: Marca Mexicana (Visión Eco-friendly)"
+  ],
+  "tags": ["guantes nitrilo", "negro", "ambiderm", "sin latex", "antideslizante", "tatuaje", "medico", "100 piezas", "soft"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+}, 
+
+{
+  "id": "msa-10219290-linea-temporal-30m",
+  "name": "Línea de Vida Temporal Horizontal MSA 30m (Cable de Acero) 2 Usuarios",
+  "description": "Sistema de línea de vida horizontal temporal de cable de acero galvanizado ajustable hasta 30 metros (100 pies). Diseñada para soportar hasta 2 trabajadores simultáneamente. Incluye sistema de desplazadores (bypass shuttles) que permiten el paso por los puntos intermedios sin desconectarse, anclajes de brazo cruzado y absorbedor de impactos.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Líneas de Vida Horizontales",
+  "brand": "MSA",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/msa/linea-vida-temporal-10219290.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2Y29wRG",
+  "features": [
+    "Longitud máxima: 30 metros (100 pies)",
+    "Capacidad: 2 Trabajadores simultáneos",
+    "Material: Cable de acero galvanizado (Alta resistencia)",
+    "Sistema Bypass: Incluye 2 desplazadores para paso continuo",
+    "Componentes: Tensor, indicador de tensión, absorbedor y 2 anclajes de brazo cruzado",
+    "Normativa: Cumple OSHA 29 CFR 1910.140 / 1926.502"
+  ],
+  "tags": ["MSA", "línea de vida horizontal", "cable acero", "10219290", "bypass", "2 usuarios", "OSHA", "seguridad industrial"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
   {
     id: "lica-kit-seguridad",
     name: "Lica Kit de Seguridad (Arnés + Línea + Punto Fijo)",
