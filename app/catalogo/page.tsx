@@ -142,50 +142,72 @@ const productCatalog: Product[] = [
     tags: ["electrónicos", "precisión", "compacto", "magnético"],
     articleSource: "Top 7 Kits de Herramientas 2025"
   },
+
   {
-    id: "kit-nanwei",
-    name: "Kit Nanwei con Taladro Inalámbrico",
-    description: "Kit híbrido que incluye taladro inalámbrico y herramientas manuales esenciales para el hogar.",
-    category: "Herramientas",
-    subcategory: "Kits Eléctricos",
-    brand: "Nanwei",
-    price: "Consultar precio",
-    rating: 4.5,
-    reviews: 500,
-    image: "/images/catalogo/kit-herramientas-82.webp",
-    amazonUrl: "https://mercadolibre.com/sec/1miMzDg",
-    features: [
-      "Taladro inalámbrico incluido",
-      "Batería de litio recargable",
-      "Herramientas manuales básicas",
-      "Estuche compacto organizador",
-      "Ideal para mudanza nueva"
-    ],
-    tags: ["eléctrico", "completo", "hogar", "versátil"],
-    articleSource: "Top 7 Kits de Herramientas 2025"
-  },
+  "id": "nanwei-llave-impacto-brushless-kit",
+  "name": "Llave de Impacto Inalámbrica Nanwei Brushless 21V (Kit con 2 Baterías)",
+  "description": "Potente llave de impacto con motor sin escobillas (brushless) que entrega 400 N.m de torque en un cuerpo ultra compacto de 11 cm. Su innovador eje dual de tungsteno permite alternar entre dados y puntas de destornillador sin adaptadores. Incluye dos baterías de 4.0Ah y función de parada automática para evitar caídas de tornillos.",
+  "category": "Herramientas Eléctricas",
+  "subcategory": "Llaves de Impacto",
+  "brand": "Nanwei",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/nanwei/llave-impacto-nw-d5350.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2KM8Uyy",
+  "features": [
+    "Motor: Sin escobillas (Brushless) modelo 4815 de alta eficiencia",
+    "Torque Máximo: 400 N.m para trabajos pesados",
+    "Batería: Incluye 2 baterías de Li-ion de 21V 4.0Ah (4000 mAh)",
+    "Cabezal Dual: Eje 2 en 1 (Cuadro de 1/2\" y entrada hex para puntas)",
+    "Velocidad: 0-2300 RPM y 0-3000 impactos por minuto (SPM)",
+    "Seguridad: Modo de parada automática en reversa (Auto-stop)"
+  ],
+  "tags": [
+    "llave de impacto",
+    "nanwei",
+    "brushless",
+    "herramientas inalámbricas",
+    "mecánica",
+    "construcción",
+    "400nm",
+    "batería 21v"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+}, 
+
   {
-    id: "juego-216-pcs",
-    name: "Juego de Herramientas 216 Piezas",
-    description: "Kit extenso de 216 piezas con múltiples matracas y amplia variedad de dados y puntas.",
-    category: "Herramientas",
-    subcategory: "Kits de Herramientas",
-    brand: "Generic",
-    price: "Consultar precio",
-    rating: 4.0,
-    reviews: 160,
-    image: "/images/catalogo/herramientas-218.webp",
-    amazonUrl: "https://mercadolibre.com/sec/2KHakLi",
-    features: [
-      "216 piezas completas",
-      "3 matracas diferentes medidas",
-      "Material acero cromo vanadio",
-      "Maletín rígido organizado",
-      "Excelente relación precio-cantidad"
-    ],
-    tags: ["extenso", "económico", "matracas", "organizado"],
-    articleSource: "Top 7 Kits de Herramientas 2025"
-  },
+  "id": "merion-juego-herramientas-46-piezas",
+  "name": "Juego de Herramientas Mecánicas 46 Piezas Merion 1/4\" (Acero Cromo Vanadio)",
+  "description": "Kit completo de reparación de 46 piezas fabricadas en acero al cromo vanadio de alta resistencia térmica y a la corrosión. Incluye una llave de trinquete de 1/4\" con liberación rápida, variedad de dados métricos, puntas de destornillador y barras de extensión flexibles. Todo organizado en un estuche compacto y resistente, ideal para mecánica automotriz, bicicletas y reparaciones domésticas.",
+  "category": "Herramientas Manuales",
+  "subcategory": "Juegos de Dados y Puntas",
+  "brand": "Merion",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/merion/juego-herramientas-46-piezas.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2iR5mpK",
+  "features": [
+    "Material: Acero al Cromo Vanadio (Cr-V) con tratamiento térmico",
+    "Trinquete: Llave de 1/4\" con mango de goma antideslizante y liberación rápida",
+    "Contenido: 13 dados (4-14mm), 21 puntas (Torx, Hex, Cruz, Plana) y 3 llaves Allen",
+    "Versatilidad: Incluye extensión flexible, junta universal y barra deslizante",
+    "Estuche: Caja organizadora rígida color verde (23x12x4 cm)",
+    "Aplicaciones: Mantenimiento automotriz, motocicletas y bricolaje"
+  ],
+  "tags": [
+    "juego de herramientas",
+    "merion",
+    "dados 1/4",
+    "cromo vanadio",
+    "mecánica",
+    "reparación",
+    "kit 46 piezas",
+    "trinquete"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "kit-deppon-168",
     name: "Kit Deppon 168 Piezas + Primeros Auxilios",
@@ -211,28 +233,6 @@ const productCatalog: Product[] = [
 
 
   // TRABAJOS EN ALTURA
-  {
-  "id": "jostein-jth9420-6m",
-  "name": "Línea de Vida Auto Retráctil 6m Jostein JTH-9420",
-  "description": "Cable retráctil de 20 pies (6 m) con cable de acero galvanizado y carcasa termoplástica. Incluye sistema interno de absorción de impactos y conector giratorio con indicador de caída.",
-  "category": "Trabajos en Alturas",
-  "subcategory": "Retráctiles",
-  "brand": "Jostein",
-  "price": "Consultar precio",
-  "rating": 5.0,
-  "reviews": 2,
-  "image": "/images/catalogo/linea-vida-jostein/linea-vida-jostein.webp",
-  "amazonUrl": "https://mercadolibre.com/sec/2iso2WJ",
-  "features": [
-    "Cable de acero galvanizado de 3/16\" (4.8 mm)",
-    "Longitud máxima: 6 metros (20 pies)",
-    "Capacidad de carga: 140 kg (310 lbs)",
-    "Certificación ANSI Z359.14-2021 Clase 1",
-    "Fuerza máxima de detención: 616.88 kg"
-  ],
-  "tags": ["jostein", "retráctil", "acero", "seguridad industrial", "alturas", "JTH-9420"],
-  "articleSource": "Top Equipos de Seguridad 2025"
-},
  {
     "id": "urrea-uslv2-7ft",
     "name": "Línea Vida Auto Retráctil 7ft Urrea USLV2",
@@ -1731,6 +1731,150 @@ const productCatalog: Product[] = [
 }, 
 
 {
+  "id": "msa-v-gard-ala-ancha-blanco-matraca",
+  "name": "Casco de Seguridad MSA V-Gard Ala Ancha Blanco (Suspensión Matraca)",
+  "description": "Casco de seguridad industrial modelo V-Gard de ala ancha (Full Brim), fabricado en polietileno de alta densidad. Diseñado para ofrecer protección contra impactos superiores (Tipo I), penetración y tensión eléctrica. Incluye suspensión con ajuste de matraca (ratchet) para un calce rápido y seguro. Ideal para petroquímica, construcción y minería.",
+  "category": "Protección de Cabeza",
+  "subcategory": "Cascos de Seguridad",
+  "brand": "MSA",
+  "price": "Consultar precio",
+  "rating": 4.9,
+  "reviews": 1019,
+  "image": "/images/catalogo/msa/casco-v-gard-ala-ancha-blanco.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1m3Jf7S",
+  "features": [
+    "Modelo: V-Gard Ala Ancha (Full Brim)",
+    "Color: Blanco",
+    "Suspensión: Ajuste tipo Matraca (Ratchet)",
+    "Material: Polietileno de alta densidad",
+    "Protección: Tipo I (Impacto superior) y Dieléctrico",
+    "Normativa: Cumple con normatividad mexicana (NOM) e internacional",
+    "Uso: Petroquímica, Construcción, Minería, Industria General"
+  ],
+  "tags": ["casco seguridad", "MSA", "V-Gard", "ala ancha", "matraca", "blanco", "EPP", "industrial"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "infra-casco-ala-ancha-verde-matraca",
+  "name": "Casco de Seguridad Infra Ala Ancha Verde (Ajuste Matraca Clase E)",
+  "description": "Casco de seguridad industrial tipo Ala Ancha (Full Brim) marca Infra en color verde. Clasificado como Clase E (Dieléctrico) para protección contra tensión eléctrica e impactos. Cuenta con una suspensión de 4 puntos con sistema de ajuste por matraca, siendo un equipo cómodo, ligero y de alta visibilidad.",
+  "category": "Protección de Cabeza",
+  "subcategory": "Cascos de Seguridad",
+  "brand": "Infra",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 437,
+  "image": "/images/catalogo/infra/casco-ala-ancha-verde.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/33jKifn",
+  "features": [
+    "Modelo: Ala Ancha (Protección solar y contra lluvia)",
+    "Color: Verde",
+    "Clasificación: Clase E (Dieléctrico - Alta Tensión)",
+    "Suspensión: 4 puntos con ajuste de Matraca",
+    "Material: Polímero de alta resistencia y visibilidad",
+    "Uso: Industria eléctrica, construcción y seguridad general"
+  ],
+  "tags": ["casco seguridad", "infra", "ala ancha", "verde", "matraca", "clase E", "dieléctrico", "EPP"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "iga-casco-coraza-ala-ancha-blanco",
+  "name": "Casco de Seguridad Ala Ancha IGA Coraza Clase E (Blanco) - Matraca",
+  "description": "Casco de seguridad industrial modelo Coraza (Ala Ancha), fabricado en polietileno de alta densidad. Clasificado como Clase E (Dieléctrico), protege contra alto voltaje hasta 20,000 V e impactos (Tipo I). Incluye suspensión de 6 puntos con ajuste cómodo de matraca. Cumple con normativas NOM, ANSI, PEMEX y CFE.",
+  "category": "Protección de Cabeza",
+  "subcategory": "Cascos de Seguridad",
+  "brand": "IGA",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/iga/casco-coraza-ala-ancha-blanco.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/31Jy3jP",
+  "features": [
+    "Modelo: Coraza A (Ala Ancha / Full Brim)",
+    "Clase: E (Dieléctrico hasta 20,000 V)",
+    "Suspensión: 6 puntos con ajuste de Matraca",
+    "Material: Polietileno de Alta Densidad",
+    "Normativas: NOM-115-STPS, ANSI Z89.1, PEMEX EST-SS-058, CFE",
+    "Talla: Ajustable 6 ½ - 8 ½ (52-68 cm)"
+  ],
+  "tags": ["casco seguridad", "IGA", "ala ancha", "clase E", "dieléctrico", "matraca", "blanco", "coraza", "NOM-115"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "msa-kit-casco-ala-ancha-rojo-barbiquejo",
+  "name": "Kit Casco MSA Ala Ancha Rojo con Matraca + Barbiquejo 4 Puntos",
+  "description": "Kit de seguridad integral que incluye un casco MSA de ala ancha (Full Brim) color rojo y un barbiquejo de 4 puntos. El casco cuenta con suspensión Fas-trac (matraca), es Clase E (dieléctrico hasta 20,000V) y Tipo I. El barbiquejo está fabricado en poliéster no elástico para asegurar la retención firme del casco.",
+  "category": "Protección de Cabeza",
+  "subcategory": "Cascos de Seguridad",
+  "brand": "MSA",
+  "price": "Consultar precio",
+  "rating": 4.9,
+  "reviews": 32,
+  "image": "/images/catalogo/msa/kit-casco-ala-ancha-rojo-barbiquejo.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1zmRvaR",
+  "features": [
+    "Incluye: Casco Ala Ancha Rojo + Barbiquejo 4 Puntos",
+    "Suspensión: Fas-trac (Matraca) ajustable",
+    "Seguridad: Clase E (Dieléctrico 20,000 Volts) y Tipo I",
+    "Barbiquejo: Poliéster no elástico con clips de conexión rápida",
+    "Normativas: NOM-115-STPS, NRF-058-PEMEX, CFE-NRF-012",
+    "Material: Polietileno de alta densidad (HDPE)"
+  ],
+  "tags": ["casco seguridad", "MSA", "kit", "ala ancha", "barbiquejo", "rojo", "clase E", "matraca", "pemex"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "msa-kit-casco-ala-ancha-barbiquejo-4pt",
+  "name": "Kit Casco MSA V-Gard Ala Ancha con Matraca + Barbiquejo 4 Puntos",
+  "description": "Kit de seguridad industrial que incluye un casco MSA V-Gard de ala completa (Full Brim) y un barbiquejo de 4 puntos para máxima sujeción. El casco está fabricado en polietileno de alta densidad con suspensión de matraca. Ofrece protección certificada contra impactos superiores (Tipo I) y tensión eléctrica. Ideal para industrias exigentes como petroquímica y construcción.",
+  "category": "Protección de Cabeza",
+  "subcategory": "Cascos de Seguridad",
+  "brand": "MSA",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/msa/kit-casco-ala-ancha-barbiquejo.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1zWVSe8",
+  "features": [
+    "Incluye: Casco V-Gard Ala Ancha + Barbiquejo 4 Puntos",
+    "Suspensión: Matraca (Ajuste rápido y seguro)",
+    "Material: Polietileno de alta densidad",
+    "Protección: Tipo I (Impacto) y Dieléctrica",
+    "Uso: Petroquímica, Construcción, Minería, Petróleo",
+    "Ventaja: Mayor retención gracias al barbiquejo de 4 puntos"
+  ],
+  "tags": ["casco seguridad", "MSA", "kit", "ala ancha", "barbiquejo 4 puntos", "V-Gard", "industrial", "matraca"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
+  "id": "msa-constant-force-post-latchways",
+  "name": "Anclaje Anticaídas MSA Latchways Constant Force Post (Para Lámina Engargolada)",
+  "description": "Punto de anclaje anticaídas especializado para techos de lámina acanalada tipo 'Standing Seam' (engargolada). Utiliza tecnología Constant Force para absorber la energía del impacto. Su diseño con tenazas permite una instalación segura sin penetrar la lámina, preservando la impermeabilidad. Compatible con separaciones de crestas de 12 a 24 pulgadas.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Puntos de Anclaje",
+  "brand": "MSA / Latchways",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/msa/anclaje-constant-force-post.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1NFvvg1",
+  "features": [
+    "Tecnología: Constant Force (Absorción de energía por deformación)",
+    "Instalación: No penetrante (Sujeción por tenazas a las crestas)",
+    "Compatibilidad: Crestas con separación de 12\", 18\" o 24\"",
+    "Material: Acero Inoxidable y Aluminio (Alta resistencia a la intemperie)",
+    "Normativas: EN 795:2012 Tipo A, CEN/TS 16415:2013",
+    "Uso: Punto de anclaje único o soporte para líneas de vida horizontales"
+  ],
+  "tags": ["anclaje", "techo", "latchways", "MSA", "constant force", "standing seam", "anticaídas", "no penetrante", "industrial"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+{
   "id": "msa-10219290-linea-temporal-30m",
   "name": "Línea de Vida Temporal Horizontal MSA 30m (Cable de Acero) 2 Usuarios",
   "description": "Sistema de línea de vida horizontal temporal de cable de acero galvanizado ajustable hasta 30 metros (100 pies). Diseñada para soportar hasta 2 trabajadores simultáneamente. Incluye sistema de desplazadores (bypass shuttles) que permiten el paso por los puntos intermedios sin desconectarse, anclajes de brazo cruzado y absorbedor de impactos.",
@@ -1937,27 +2081,37 @@ const productCatalog: Product[] = [
     articleSource: "Top Equipos de Seguridad 2025"
   },
   {
-    id: "generic-casco-visera",
-    name: "Casco de Seguridad con Visera y Orejeras",
-    description: "Casco industrial multifuncional con ranuras para accesorios, ideal para rescate y minería.",
-    category: "Trabajos en Alturas",
-    subcategory: "Protección Cabeza",
-    brand: "Genérico",
-    price: "Consultar precio",
-    rating: 5.0,
-    reviews: 1,
-    image: "/images/catalogo/kit-casco/kit-cascos.webp",
-    amazonUrl: "https://mercadolibre.com/sec/12czggY",
-    features: [
-      "Visor y orejeras integrables",
-      "Material ABS resistente",
-      "Elementos reflectivos",
-      "Cumplimiento estándares internacionales",
-      "Diseño versátil y ligero"
-    ],
-    tags: ["multifuncional", "rescate", "minería", "completo"],
-    articleSource: "Top Equipos de Seguridad 2025"
-  },
+  "id": "aolamegs-casco-seguridad-forestal-kit",
+  "name": "Casco de Seguridad Forestal Industrial con Visera y Orejeras Aolamegs",
+  "description": "Sistema de protección integral diseñado para trabajos de paisajismo, tala y construcción. Combina un casco de ABS de alta resistencia con suspensión de 6 puntos, orejeras para protección auditiva y una visera certificada para proteger el rostro de astillas y escombros. Su diseño ventilado y ajuste ergonómico garantizan comodidad durante jornadas largas.",
+  "category": "Protección Craneal",
+  "subcategory": "Cascos Forestales",
+  "brand": "Aolamegs",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/aolamegs/casco-forestal-sf06.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1tLcSp5",
+  "features": [
+    "Material: Carcasa de ABS de alta calidad resistente a impactos",
+    "Suspensión: Arnés interno de tela de 6 puntos con correa en Y",
+    "Certificaciones: Cumple con estándares UE CE EN397:2012 (Casco) y EN166 (Visor)",
+    "Ajuste: Adaptable para circunferencias de cabeza de 52 a 63 cm",
+    "Resistencia Térmica: Soporta temperaturas operativas de -20°C a 50°C",
+    "Aplicaciones: Jardinería, tala forestal, construcción y rescate"
+  ],
+  "tags": [
+    "casco forestal",
+    "aolamegs",
+    "seguridad industrial",
+    "protección auditiva",
+    "visor de malla",
+    "tala",
+    "jardinería",
+    "EPP"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "sfp-shield-doble",
     name: "SFP Shield Línea Retráctil Doble Brazo",
@@ -2351,26 +2505,36 @@ const productCatalog: Product[] = [
     articleSource: "Top 6 Overoles Más Destacados en México"
   },
   {
-    id: "botiquin-metalico-equipado",
-    name: "Botiquín Metálico de Pared Mediano (Equipado)",
-    description: "Gabinete metálico mediano ya equipado con material de curación básico. Solución lista para usar para oficinas y comercios que necesitan un botiquín de pared duradero.",
-    category: "Seguridad",
-    subcategory: "Botiquines",
-    brand: "Generic",
-    price: "Consultar precio",
-    rating: 4.9,
-    reviews: 69,
-    image: "/images/catalogo/botiquin-metalico-equipado.webp",
-    amazonUrl: "https://mercadolibre.com/sec/1fCNzj2",
-    features: [
-      "Gabinete metálico mediano (equipado)",
-      "Incluye material básico de curación",
-      "Solución lista para usar para oficinas y comercios",
-      "Acabado duradero y apariencia profesional"
-    ],
-    tags: ["equipado", "botiquín de pared", "oficina", "listo para usar"],
-    articleSource: "Los Mejores Botiquines de Emergencia para el Trabajo en 2025"
-  },
+  "id": "dimmex-botiquin-equipado-mediano",
+  "name": "Botiquín de Primeros Auxilios Equipado Metálico Dimmex (22x30 cm)",
+  "description": "Gabinete metálico resistente con acabado en pintura blanca, diseñado para atender emergencias básicas en oficinas, hogares o pequeños comercios. Cuenta con una repisa interior para organización, asa portátil y orificios para montaje en pared. Viene completamente equipado con material de curación esencial y señalética normativa.",
+  "category": "Seguridad Industrial",
+  "subcategory": "Primeros Auxilios",
+  "brand": "Dimmex",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/dimmex/botiquin-mediano-equipado.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1RfvQ4c",
+  "features": [
+    "Dimensiones: 22 x 30 x 7.5 cm (Tamaño Mediano)",
+    "Estructura: Gabinete metálico con portacandado y asa superior",
+    "Instalación: Preparación trasera para colgar en pared",
+    "Contenido Líquido: Alcohol, agua oxigenada, violeta de genciana, mertodol",
+    "Material de Curación: Gasas, algodón, vendas, curitas, micropore y cotonetes",
+    "Extras: Incluye letrero de señalización de botiquín (15x15 cm)"
+  ],
+  "tags": [
+    "botiquín",
+    "primeros auxilios",
+    "dimmex",
+    "seguridad industrial",
+    "emergencia",
+    "gabinete metálico",
+    "protección civil"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "matein-1233",
     name: "Botiquín Matein 1233 Multicompartimiento",
@@ -3278,27 +3442,36 @@ const productCatalog: Product[] = [
     articleSource: "Top 6 Multímetros Destacados en México 2025"
   },
   {
-    id: "kaiweets-ht118a",
-    name: "Kaiweets HT118A True RMS 6000 Cuentas",
-    description: "Multímetro True RMS con clasificación de seguridad elevada (CAT III 1000V / CAT IV 600V), auto-rango y funciones adicionales como medición de temperatura, NCV y linterna incorporada. Excelente opción 'alto valor' para técnicos y aficionados serios.",
-    category: "EPP",
-    subcategory: "Multímetros",
-    brand: "Kaiweets",
-    price: "Consultar precio",
-    rating: 4.7,
-    reviews: 10000,
-    image: "/images/catalogo/kaiweets-ht118a.webp",
-    amazonUrl: "https://mercadolibre.com/sec/2zf6CQZ",
-    features: [
-      "True RMS y auto-rango",
-      "Clasificación de seguridad CAT III 1000V / CAT IV 600V",
-      "Medición de temperatura, NCV y linterna integrada",
-      "Pantalla grande de 6000 cuentas y protección con doble fusible cerámico",
-      "Indicadores visuales y diseño inteligente para seguridad"
-    ],
-    tags: ["true-rms", "CAT-IV", "NCV", "6000-cuentas", "alto-valor"],
-    articleSource: "Top 6 Multímetros Destacados en México 2025"
-  },
+  "id": "tsm599-multimetro-digital-inteligente",
+  "name": "Multímetro Digital Inteligente TSM599 TRMS 6000 Cuentas",
+  "description": "Multímetro digital de rango automático con tecnología TRMS y pantalla de 6000 cuentas para mediciones precisas. Este dispositivo inteligente integra funciones avanzadas como detección de voltaje sin contacto (NCV), medición de temperatura y pruebas completas de componentes electrónicos. Ideal para electricistas y técnicos que requieren versatilidad y seguridad.",
+  "category": "Herramientas de Medición",
+  "subcategory": "Multímetros Digitales",
+  "brand": "TSM",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/tsm/multimetro-tsm599.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2PVLCCn",
+  "features": [
+    "Pantalla: Digital de 6000 cuentas con tecnología TRMS",
+    "Seguridad: Detección de voltaje sin contacto (NCV)",
+    "Mediciones Básicas: Voltaje y Corriente (AC/DC), Resistencia, Continuidad",
+    "Funciones Avanzadas: Capacitancia, Frecuencia (Hz), Diodos",
+    "Extras: Medición de temperatura ambiente y ciclo de trabajo (%)",
+    "Diseño: Modo inteligente automatizado y retención de datos"
+  ],
+  "tags": [
+    "multímetro digital",
+    "TRMS",
+    "electricidad",
+    "NCV",
+    "tester",
+    "6000 cuentas",
+    "herramientas de diagnóstico"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "fluke-101",
     name: "Fluke 101 - Multímetro Digital de Bolsillo",
@@ -3498,27 +3671,36 @@ const productCatalog: Product[] = [
   // termometros industriales
 
   {
-    id: "goxawee-ir-50-600",
-    name: "GOXAWEE Termómetro Infrarrojo Digital (-50-600°C)",
-    description: "Pirómetro infrarrojo económico y popular en México. Rango amplio (-50°C a 600°C) y operación 'apuntar y disparar', ideal para diagnósticos generales, talleres y uso doméstico avanzado.",
-    category: "Instrumentos",
-    subcategory: "Termómetros",
-    brand: "GOXAWEE",
-    price: "Consultar precio",
-    rating: 4.7,
-    reviews: 127,
-    image: "/images/catalogo/goxawee-ir.webp",
-    amazonUrl: "https://mercadolibre.com/sec/1hXZobU",
-    features: [
-      "Rango de medición: -50°C a 600°C",
-      "Relación D:S 12:1",
-      "Operación simple tipo 'apuntar y disparar'",
-      "Emisividad fija (0.95)",
-      "Construcción plástica, sin protección IP"
-    ],
-    tags: ["infrarrojo", "pirómetro", "12:1", "-50-600C", "entrada"],
-    articleSource: "Top 6 Termómetros Industriales Destacados 2025"
-  },
+  "id": "termometro-infrarrojo-digital-recargable",
+  "name": "Termómetro Infrarrojo Digital 2 en 1 Recargable (Cuerpo y Objetos)",
+  "description": "Dispositivo de medición de temperatura sin contacto de grado médico, diseñado para uso seguro en familias y control de accesos. Cuenta con tecnología infrarroja de alta precisión y batería recargable vía USB. Su sistema de doble modo permite medir tanto temperatura corporal como superficies (agua, alimentos), con alertas visuales de color en pantalla.",
+  "category": "Salud y Seguridad",
+  "subcategory": "Instrumentos de Medición",
+  "brand": "Genérico",
+  "price": "Consultar precio",
+  "rating": 4.4,
+  "reviews": 165,
+  "image": "/images/catalogo/generica/termometro-infrarrojo-usb.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1VEa92Z",
+  "features": [
+    "Tecnología: Infrarroja sin contacto (Distancia efectiva 1-15 cm)",
+    "Modos de Medición: 2 en 1 (Corporal y Objetos/Superficies)",
+    "Alimentación: Batería interna recargable vía cable USB (Incluido)",
+    "Interfaz: Pantalla retroiluminada con cambio de color según temperatura",
+    "Rango de Medición: 32°C a 42.9°C",
+    "Peso: Ultraligero (45g) para uso continuo sin fatiga"
+  ],
+  "tags": [
+    "termómetro infrarrojo",
+    "sin contacto",
+    "seguridad sanitaria",
+    "recargable USB",
+    "medición temperatura",
+    "salud",
+    "control de acceso"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "truper-mete-500-18229",
     name: "Truper 18229 (METE-500) - Termómetro Infrarrojo",
@@ -3698,26 +3880,37 @@ const productCatalog: Product[] = [
     articleSource: "Top 6 Selladores Destacados del Mercado Mexicano 2025"
   },
   {
-    id: "dap-alex-plus",
-    name: "DAP Alex Plus (Acrílico con Silicona)",
-    description: "Sellador látex acrílico mejorado con aditivos de silicona: pintable rápidamente, fácil de aplicar y limpiar. Ideal para juntas interiores, marcos y molduras.",
-    category: "Construcción",
-    subcategory: "Selladores",
-    brand: "DAP",
-    price: "Consultar precio",
-    rating: 4.1,
-    reviews: 880,
-    image: "/images/catalogo/dap-alex-plus.webp",
-    amazonUrl: "https://mercadolibre.com/sec/1tjE5LE",
-    features: [
-      "Látex acrílico con aditivo de silicona para mayor flexibilidad",
-      "Pintable en ~30 minutos con pinturas látex/aceite",
-      "Fácil aplicación, alisado y limpieza con agua",
-      "Menor encogimiento que acrílicos puros"
-    ],
-    tags: ["acrílico", "pintable", "dap-alex-plus", "acabado-rapido"],
-    articleSource: "Top 6 Selladores Destacados del Mercado Mexicano 2025"
-  },
+  "id": "dap-alex-plus-blanco-300ml",
+  "name": "Sellador Acrílico Siliconado DAP Alex Plus Blanco (300ml)",
+  "description": "Sellador de látex acrílico de calidad superior infusionado con silicona para garantizar máxima flexibilidad y adhesión. Diseñado para uso interior y exterior, ofrece un sello impermeable duradero que no brilla ni decolora la pintura. Su fórmula de secado rápido permite pintar en solo 30 minutos. Resistente al moho y a condiciones climáticas adversas.",
+  "category": "Construcción y Ferretería",
+  "subcategory": "Selladores y Adhesivos",
+  "brand": "DAP",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/dap/sellador-alex-plus-blanco.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/28UYgSf",
+  "features": [
+    "Fórmula: Látex Acrílico con Silicona (Cumple ASTM C834)",
+    "Tiempo de Pintado: Listo en 30 minutos (Pinturas látex o aceite)",
+    "Versatilidad: Uso Interior y Exterior (Impermeable)",
+    "Adherencia: Vidrio, madera, metal, mampostería y yeso",
+    "Rango de Temperatura: Operación de -29 °C a +82 °C",
+    "Durabilidad: Resistente al moho y hongos, garantía extendida de fábrica"
+  ],
+  "tags": [
+    "sellador acrílico",
+    "siliconado",
+    "DAP",
+    "Alex Plus",
+    "impermeable",
+    "pintable",
+    "calafateo",
+    "reparaciones hogar"
+  ],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
   {
     id: "blanc-tekbond-poliuretano-310ml",
     name: "Sellador Poliuretano 310ml Blanc Tekbond (DOWSIL 732 antes)",
