@@ -9,6 +9,7 @@ import Image from "next/image";
 import { ArrowRight, ShoppingBag, Target, Timer, FileText, Star, Search } from "lucide-react";
 import { trackEvent, generateTrackingId } from '@/lib/meta-pixel';
 import { useScrollTracking } from '@/hooks/useScrollTracking';
+import TrustedBrandsBanner from '@/components/home/TrustedBrandsBanner';
 
 
 interface CountdownProps {
@@ -1453,6 +1454,10 @@ export default function HomePage() {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Trusted Brands Banner */}
+      <TrustedBrandsBanner />
+
       {false && (
         <motion.section 
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"

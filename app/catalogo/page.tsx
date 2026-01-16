@@ -77,6 +77,97 @@ const productCatalog: Product[] = [
     articleSource: "Top 7 Kits de Herramientas 2025"
   },
   {
+  "id": "alto-sca-516-freno-cable-8mm",
+  "name": "Sujetador Freno para Cable de Acero 5/16\" (8mm) ALTO SCA-516",
+  "description": "Arrestador de caída móvil (freno) diseñado para líneas de vida verticales de cable de acero. Mecanismo autobloqueante que permite el libre desplazamiento durante el ascenso y descenso, bloqueándose instantáneamente en caso de una caída.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Frenos y Arrestadores",
+  "brand": "ALTO",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/freno-cable-sca-516/freno-cable-sca-516.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1meU34q",
+  "features": [
+    "Modelo: SCA-516",
+    "Compatibilidad: Cable de acero de 5/16\" (8 mm)",
+    "Tipo: Dispositivo autobloqueante (Arrestador móvil)",
+    "Uso: Líneas de vida verticales permanentes (ej. escaleras fijas)",
+    "Función: Bloqueo automático por inercia/velocidad",
+    "Garantía de fábrica: 15 días"
+  ],
+  "tags": ["ALTO", "freno cable", "arrestador", "cable grab", "5/16", "8mm", "seguridad industrial"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "generica-swage-lag-screw-5pack",
+  "name": "Kit 5 Tensores de Rosca Swage para Cable de Acero Inoxidable",
+  "description": "Set de 5 tornillos tensores (Swage Lag Screws) fabricados en acero inoxidable de alta resistencia. Cuentan con terminal de horquilla articulada con pasador de seguridad, ideales para tensar cables en sistemas de barandillas, uso marino y aplicaciones industriales.",
+  "category": "Construcción y Arquitectura",
+  "subcategory": "Herrajes para Barandales",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 5.0,
+  "reviews": 4,
+  "image": "/images/catalogo/swage-lag-screw-5pack/swage-lag-screw-5pack.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/245xT4s",
+  "features": [
+    "Contenido: 5 Piezas",
+    "Material: Acero inoxidable (Resistente a la corrosión y óxido)",
+    "Tipo: Tornillo de retardo con terminal de horquilla (Swage)",
+    "Acabado: Pulido electrolítico de alta precisión",
+    "Aplicación: Tensado de cables en barandillas, marino e industrial"
+  ],
+  "tags": ["tensores", "swage", "cable acero", "barandales", "acero inoxidable", "arquitectura", "marine"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},{
+  "id": "generica-freno-cable-3-8-en353",
+  "name": "Freno Anticaídas para Cable de Acero 3/8\" ",
+  "description": "Dispositivo arrestador de caídas deslizante con mecanismo de leva de acero aleado. Diseñado para líneas de vida verticales de cable de acero de 3/8\" (9.5 mm) y compatible con cuerdas de 12-16 mm. Incluye sensor de gravedad que impide la instalación inversa y mosquetón de acero.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Frenos y Arrestadores",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 5.0,
+  "reviews": 10,
+  "image": "/images/catalogo/genericafreno-cable-3-8-en353/genericafreno-cable-3-8-en353.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/2RXwNk6",
+  "features": [
+    "Compatibilidad: Cable de acero 3/8\" (9.5 mm) y Cuerda 12-16 mm",
+    "Capacidad de carga: 2500 kg (25 KN)",
+    "Certificación: Norma Internacional EN 353-2",
+    "Sistema de seguridad: Bloqueo inercial y Anti-error por gravedad",
+    "Material: Acero aleado resistente a la corrosión",
+    "Incluye: Freno y Mosquetón ovalado de acero"
+  ],
+  "tags": ["freno cable", "arrestador", "3/8", "EN 353-2", "seguridad industrial", "doble protección"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+{
+  "id": "adooadii-m3soutdoor0058-arnes-kit",
+  "name": "Kit Arnés de Seguridad 5 Puntos + Línea de Vida con Amortiguador AdooAdii",
+  "description": "Kit de protección contra caídas que incluye un arnés de cuerpo completo ajustable de 5 puntos y una línea de vida con amortiguador de impacto (aprox. 1.8m - 2m). Fabricado en poliéster de alta tenacidad con herrajes de acero estampado y gancho grande. Ideal para construcción, rescate y trabajos en altura.",
+  "category": "Trabajos en Alturas",
+  "subcategory": "Kits de Altura",
+  "brand": "AdooAdii",
+  "price": "Consultar precio",
+  "rating": 0.0,
+  "reviews": 0,
+  "image": "/images/catalogo/arnes-kit-m3soutdoor0058/arnes-kit-m3soutdoor0058.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1rQdnsB",
+  "features": [
+    "Modelo: M3SOUTDOOR0058",
+    "Material: Poliéster 100% de alta tenacidad",
+    "Configuración: 5 puntos de ajuste y anillo D dorsal",
+    "Incluye: Línea de vida con amortiguador y gancho doble grande",
+    "Capacidad de carga máxima: 200 kg (Resistencia tensil 25 kN)",
+    "Normativa mencionada: ANSI"
+  ],
+  "tags": ["arnés seguridad", "kit altura", "línea de vida", "amortiguador", "5 puntos", "construcción", "AdooAdii"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
+  {
     id: "pretul-set-83",
     name: "Pretul SET-83 Kit de Herramientas",
     description: "Kit económico de 83 piezas con herramientas esenciales para mecánica básica.",
@@ -1113,6 +1204,30 @@ const productCatalog: Product[] = [
   "tags": ["terminales", "cobre", "SC6-6", "electricidad", "batería", "automotriz", "conector"],
   "articleSource": "Top Equipos de Seguridad 2025"
 },
+{
+  "id": "generica-terminales-1-0-awg-10pz",
+  "name": "Pack 10 Terminales Anillo Cobre 1/0 AWG (Ojo 3/8\")",
+  "description": "Paquete de 10 terminales de anillo de alta resistencia para cable calibre 1/0 AWG con orificio de 3/8\". Fabricados en 100% cobre recocido de alta pureza para máxima conductividad. Incluye tubo termorretráctil 3:1 certificado para una instalación profesional y segura contra la corrosión.",
+  "category": "Electricidad y Mantenimiento",
+  "subcategory": "Conectores y Terminales",
+  "brand": "Genérica",
+  "price": "Consultar precio",
+  "rating": 4.8,
+  "reviews": 54,
+  "image": "/images/catalogo/terminales-1-0-awg-3-8/terminales-1-0-awg-3-8.webp",
+  "amazonUrl": "https://mercadolibre.com/sec/1GGJfn2",
+  "features": [
+    "Calibre de cable: 1/0 AWG",
+    "Diámetro del anillo: 3/8 de pulgada",
+    "Material: 100% Cobre recocido de alta pureza",
+    "Incluye: 10 terminales + Tubo termorretráctil 3:1 (UL/CSA)",
+    "Diseño: Extremo cerrado resistente a humedad y corrosión",
+    "Aplicación: Baterías, paneles solares, marina y automotriz"
+  ],
+  "tags": ["terminales", "cobre", "1/0 AWG", "3/8", "batería", "solar", "conectores", "heavy duty"],
+  "articleSource": "Top Equipos de Seguridad 2025"
+},
+
   {
     id: "lica-kit-seguridad",
     name: "Lica Kit de Seguridad (Arnés + Línea + Punto Fijo)",

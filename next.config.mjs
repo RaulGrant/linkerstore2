@@ -9,6 +9,20 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  webpack: (config, { isServer }) => {
+    // Deshabilitar el caché de webpack para evitar problemas
+    config.cache = false;
+    
+    // Mejorar la resolución de módulos
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    
+    return config;
+  },
   experimental: {
     serverActions: {
       allowedOrigins: ["localhost:3007"],
