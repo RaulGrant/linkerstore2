@@ -26,76 +26,92 @@ const trustedBrands: TrustedBrand[] = [
   },
   {
     id: '2',
+    name: 'AJRH Industrial',
+    logo: '/images/brands/ajrh.jpg',
+    url: '/ajrh-industrial',
+    description: 'Servicios Industriales Especializados',
+    isInternal: true
+  },
+  {
+    id: '3',
+    name: 'Interiores Grevel',
+    logo: '/images/brands/grevel.jpg',
+    url: '/interiores-grevel',
+    description: 'Remodelación y Construcción',
+    isInternal: true
+  },
+  {
+    id: '4',
     name: '3M',
     logo: '/images/brands/3m-logo.png',
     url: 'https://www.3m.com',
     description: 'Líder mundial en EPP'
   },
   {
-    id: '3',
+    id: '5',
     name: 'MSA Safety',
     logo: '/images/brands/msa-logo.png',
     url: 'https://www.msasafety.com',
     description: 'Equipos de seguridad certificados'
   },
   {
-    id: '4',
+    id: '6',
     name: 'Honeywell',
     logo: '/images/brands/honeywell-logo.png',
     url: 'https://www.honeywell.com',
     description: 'Innovación en protección personal'
   },
   {
-    id: '5',
+    id: '7',
     name: 'DuPont',
     logo: '/images/brands/dupont-logo.png',
     url: 'https://www.dupont.com',
     description: 'Ropa de protección química'
   },
   {
-    id: '6',
+    id: '8',
     name: 'Ansell',
     logo: '/images/brands/ansell-logo.png',
     url: 'https://www.ansell.com',
     description: 'Guantes industriales premium'
   },
   {
-    id: '7',
+    id: '9',
     name: 'Miller',
     logo: '/images/brands/miller-logo.png',
     url: 'https://www.millerfallprotection.com',
     description: 'Sistemas anticaídas profesionales'
   },
   {
-    id: '8',
+    id: '10',
     name: 'Brady',
     logo: '/images/brands/brady-logo.png',
     url: 'https://www.bradycorp.com',
     description: 'Señalización y etiquetado industrial'
   },
   {
-    id: '9',
+    id: '11',
     name: 'Moldex',
     logo: '/images/brands/moldex-logo.png',
     url: 'https://www.moldex.com',
     description: 'Protección respiratoria avanzada'
   },
   {
-    id: '10',
+    id: '12',
     name: 'North Safety',
     logo: '/images/brands/north-logo.png',
     url: 'https://www.honeywellsafety.com',
     description: 'Respiradores y mascarillas'
   },
   {
-    id: '11',
+    id: '13',
     name: 'Bullard',
     logo: '/images/brands/bullard-logo.png',
     url: 'https://www.bullard.com',
     description: 'Cascos y protección craneal'
   },
   {
-    id: '12',
+    id: '14',
     name: 'Dräger',
     logo: '/images/brands/drager-logo.png',
     url: 'https://www.draeger.com',

@@ -12,11 +12,10 @@ import Footer from '@/components/cenacap/Footer';
 export default function CenacapLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <StickyNavbar />
+
       <HeroSection />
       <CoursesSection />
       <WhyChooseUsSection />
-      <TrustedBrandsBanner />
       <TestimonialsSection />
       <CTASection />
       <Footer />
