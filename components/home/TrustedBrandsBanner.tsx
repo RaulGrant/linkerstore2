@@ -42,80 +42,11 @@ const trustedBrands: TrustedBrand[] = [
   },
   {
     id: '4',
-    name: '3M',
-    logo: '/images/brands/3m-logo.png',
-    url: 'https://www.3m.com',
-    description: 'Líder mundial en EPP'
-  },
-  {
-    id: '5',
-    name: 'MSA Safety',
-    logo: '/images/brands/msa-logo.png',
-    url: 'https://www.msasafety.com',
-    description: 'Equipos de seguridad certificados'
-  },
-  {
-    id: '6',
-    name: 'Honeywell',
-    logo: '/images/brands/honeywell-logo.png',
-    url: 'https://www.honeywell.com',
-    description: 'Innovación en protección personal'
-  },
-  {
-    id: '7',
-    name: 'DuPont',
-    logo: '/images/brands/dupont-logo.png',
-    url: 'https://www.dupont.com',
-    description: 'Ropa de protección química'
-  },
-  {
-    id: '8',
-    name: 'Ansell',
-    logo: '/images/brands/ansell-logo.png',
-    url: 'https://www.ansell.com',
-    description: 'Guantes industriales premium'
-  },
-  {
-    id: '9',
-    name: 'Miller',
-    logo: '/images/brands/miller-logo.png',
-    url: 'https://www.millerfallprotection.com',
-    description: 'Sistemas anticaídas profesionales'
-  },
-  {
-    id: '10',
-    name: 'Brady',
-    logo: '/images/brands/brady-logo.png',
-    url: 'https://www.bradycorp.com',
-    description: 'Señalización y etiquetado industrial'
-  },
-  {
-    id: '11',
-    name: 'Moldex',
-    logo: '/images/brands/moldex-logo.png',
-    url: 'https://www.moldex.com',
-    description: 'Protección respiratoria avanzada'
-  },
-  {
-    id: '12',
-    name: 'North Safety',
-    logo: '/images/brands/north-logo.png',
-    url: 'https://www.honeywellsafety.com',
-    description: 'Respiradores y mascarillas'
-  },
-  {
-    id: '13',
-    name: 'Bullard',
-    logo: '/images/brands/bullard-logo.png',
-    url: 'https://www.bullard.com',
-    description: 'Cascos y protección craneal'
-  },
-  {
-    id: '14',
-    name: 'Dräger',
-    logo: '/images/brands/drager-logo.png',
-    url: 'https://www.draeger.com',
-    description: 'Detección de gases y respiración'
+    name: 'AASI',
+    logo: '/images/brands/asi.png',
+    url: '/aasi',
+    description: 'Capacitación en Seguridad Industrial',
+    isInternal: true
   }
 ];
 
@@ -123,29 +54,9 @@ interface TrustedBrandsBannerProps {
   variant?: 'grid' | 'carousel';
 }
 
-export default function TrustedBrandsBanner({ variant = 'grid' }: TrustedBrandsBannerProps) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
+export default function TrustedBrandsBanner({ variant = 'carousel' }: TrustedBrandsBannerProps) {
+  // Duplicar las marcas para crear un efecto de loop infinito
+  const duplicatedBrands = [...trustedBrands, ...trustedBrands, ...trustedBrands];
 
   const handleBrandClick = (brand: TrustedBrand) => {
     if (brand.isInternal) {
@@ -198,109 +109,121 @@ export default function TrustedBrandsBanner({ variant = 'grid' }: TrustedBrandsB
           </p>
         </motion.div>
 
-        {/* Brands Grid */}
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {trustedBrands.map((brand) => (
-            <motion.div
-              key={brand.id}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Card
-                className={`group relative bg-white/95 hover:bg-white backdrop-blur-sm border-2 transition-all duration-300 cursor-pointer h-full shadow-lg hover:shadow-2xl ${
-                  brand.isInternal 
-                    ? 'border-orange-300 hover:border-orange-500' 
-                    : 'border-transparent hover:border-blue-400'
-                }`}
-                onClick={() => handleBrandClick(brand)}
-                role="button"
-                aria-label={`Visitar ${brand.isInternal ? 'página' : 'sitio web'} de ${brand.name}`}
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleBrandClick(brand);
-                  }
-                }}
+        {/* Carrusel Infinito de Marcas */}
+        <div className="relative overflow-hidden">
+          {/* Gradientes de fade en los bordes */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
+          
+          <motion.div
+            className="flex gap-6"
+            animate={{
+              x: [0, -100 * trustedBrands.length],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 30,
+                ease: "linear",
+              },
+            }}
+          >
+            {duplicatedBrands.map((brand, index) => (
+              <motion.div
+                key={`${brand.id}-${index}`}
+                className="flex-shrink-0 w-64"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <CardContent className="p-6 flex flex-col items-center justify-center h-full min-h-[140px]">
-                  {/* Logo Container */}
-                  <div className="relative w-full h-20 mb-3 flex items-center justify-center">
-                    <div className="relative w-full h-full">
-                      {/* Placeholder/Fallback */}
-                      <div className={`absolute inset-0 flex items-center justify-center rounded-lg ${
-                        brand.isInternal 
-                          ? 'bg-gradient-to-br from-blue-900 to-orange-500' 
-                          : 'bg-gradient-to-br from-gray-100 to-gray-200'
-                      }`}>
-                        <span className={`text-2xl font-bold ${
-                          brand.isInternal ? 'text-white' : 'text-gray-400'
-                        }`}>
-                          {brand.name.charAt(0)}
-                        </span>
-                      </div>
-                      
-                      {/* Actual Image */}
-                      <Image
-                        src={brand.logo}
-                        alt={`Logo de ${brand.name}`}
-                        fill
-                        className="object-contain p-2 transition-all duration-300 group-hover:scale-110"
-                        onError={(e) => {
-                          // Hide image on error, show fallback
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Brand Name */}
-                  <h3 className={`text-sm font-semibold text-center mb-1 transition-colors ${
+                <Card
+                  className={`group relative bg-white/95 hover:bg-white backdrop-blur-sm border-2 transition-all duration-300 cursor-pointer h-full shadow-lg hover:shadow-2xl ${
                     brand.isInternal 
-                      ? 'text-gray-800 group-hover:text-orange-600' 
-                      : 'text-gray-800 group-hover:text-blue-600'
-                  }`}>
-                    {brand.name}
-                  </h3>
+                      ? 'border-orange-300 hover:border-orange-500' 
+                      : 'border-transparent hover:border-blue-400'
+                  }`}
+                  onClick={() => handleBrandClick(brand)}
+                  role="button"
+                  aria-label={`Visitar ${brand.isInternal ? 'página' : 'sitio web'} de ${brand.name}`}
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleBrandClick(brand);
+                    }
+                  }}
+                >
+                  <CardContent className="p-6 flex flex-col items-center justify-center h-full min-h-[180px]">
+                    {/* Logo Container */}
+                    <div className="relative w-full h-24 mb-4 flex items-center justify-center">
+                      <div className="relative w-full h-full">
+                        {/* Placeholder/Fallback */}
+                        <div className={`absolute inset-0 flex items-center justify-center rounded-lg ${
+                          brand.isInternal 
+                            ? 'bg-gradient-to-br from-blue-900 to-orange-500' 
+                            : 'bg-gradient-to-br from-gray-100 to-gray-200'
+                        }`}>
+                          <span className={`text-3xl font-bold ${
+                            brand.isInternal ? 'text-white' : 'text-gray-400'
+                          }`}>
+                            {brand.name.charAt(0)}
+                          </span>
+                        </div>
+                        
+                        {/* Actual Image */}
+                        <Image
+                          src={brand.logo}
+                          alt={`Logo de ${brand.name}`}
+                          fill
+                          className="object-contain p-2 transition-all duration-300 group-hover:scale-110"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    </div>
 
-                  {/* Description (visible on hover) */}
-                  {brand.description && (
-                    <p className="text-xs text-gray-500 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
-                      {brand.description}
-                    </p>
-                  )}
+                    {/* Brand Name */}
+                    <h3 className={`text-base font-semibold text-center mb-2 transition-colors ${
+                      brand.isInternal 
+                        ? 'text-gray-800 group-hover:text-orange-600' 
+                        : 'text-gray-800 group-hover:text-blue-600'
+                    }`}>
+                      {brand.name}
+                    </h3>
 
-                  {/* Link Icon */}
-                  <motion.div
-                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                    initial={{ scale: 0 }}
-                    whileHover={{ scale: 1.2 }}
-                  >
-                    {brand.isInternal ? (
-                      <span className="text-orange-500 text-xs font-bold">Ver más</span>
-                    ) : (
-                      <ExternalLink className="w-4 h-4 text-blue-500" />
+                    {/* Description */}
+                    {brand.description && (
+                      <p className="text-xs text-gray-500 text-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                        {brand.description}
+                      </p>
                     )}
-                  </motion.div>
 
-                  {/* Hover Glow Effect */}
-                  <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                    brand.isInternal
-                      ? 'bg-gradient-to-r from-orange-400/0 via-orange-400/0 to-orange-400/0 group-hover:from-orange-400/10 group-hover:via-orange-400/5 group-hover:to-orange-400/10'
-                      : 'bg-gradient-to-r from-blue-400/0 via-blue-400/0 to-blue-400/0 group-hover:from-blue-400/10 group-hover:via-blue-400/5 group-hover:to-blue-400/10'
-                  }`}></div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+                    {/* Link Icon */}
+                    <motion.div
+                      className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                      initial={{ scale: 0 }}
+                      whileHover={{ scale: 1.2 }}
+                    >
+                      {brand.isInternal ? (
+                        <span className="text-orange-500 text-xs font-bold">Ver más</span>
+                      ) : (
+                        <ExternalLink className="w-4 h-4 text-blue-500" />
+                      )}
+                    </motion.div>
+
+                    {/* Hover Glow Effect */}
+                    <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
+                      brand.isInternal
+                        ? 'bg-gradient-to-r from-orange-400/0 via-orange-400/0 to-orange-400/0 group-hover:from-orange-400/10 group-hover:via-orange-400/5 group-hover:to-orange-400/10'
+                        : 'bg-gradient-to-r from-blue-400/0 via-blue-400/0 to-blue-400/0 group-hover:from-blue-400/10 group-hover:via-blue-400/5 group-hover:to-blue-400/10'
+                    }`}></div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
 
         {/* Bottom CTA */}
         <motion.div

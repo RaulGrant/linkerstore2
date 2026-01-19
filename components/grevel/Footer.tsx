@@ -25,7 +25,7 @@ const contactDetails = [
   },
   {
     icon: Phone,
-    text: '+52 (229) 123-4567'
+    text: '+52 (247) 254-4357'
   },
   {
     icon: Mail,

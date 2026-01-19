@@ -134,7 +134,7 @@ export default function MaintenanceSection() {
                       }}
                       onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1A6FD9'}
                       onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2D8CFF'}
-                      onClick={() => window.open('https://wa.me/522291234567', '_blank')}
+                      onClick={() => window.open('https://wa.me/522472544357', '_blank')}
                     >
                       Solicitar Servicio
                     </Button>

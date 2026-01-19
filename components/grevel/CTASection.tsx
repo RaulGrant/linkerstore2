@@ -76,7 +76,7 @@ export default function CTASection() {
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1A6FD9'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2D8CFF'}
-                onClick={() => window.open('https://wa.me/522291234567?text=Hola, me interesa solicitar una cotización', '_blank')}
+                onClick={() => window.open('https://wa.me/522472544357?text=Hola, me interesa solicitar una cotización', '_blank')}
               >
                 <MessageCircle className="mr-2 h-6 w-6" />
                 WhatsApp

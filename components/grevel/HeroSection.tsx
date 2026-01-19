@@ -39,7 +39,7 @@ export default function HeroSection() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/522291234567', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.me/522472544357', '_blank', 'noopener,noreferrer');
   };
 
   const scrollToProjects = () => {
