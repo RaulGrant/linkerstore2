@@ -1266,6 +1266,9 @@ export default function HomePage() {
         </div>
       </motion.section>
 
+      {/* Trusted Brands Banner - Justo después del Hero */}
+      <TrustedBrandsBanner />
+
        {/* Banner Carrusel de Productos */}
       <ProductCatalogSection />
 
@@ -1454,9 +1457,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Trusted Brands Banner */}
-      <TrustedBrandsBanner />
 
       {false && (
         <motion.section 
