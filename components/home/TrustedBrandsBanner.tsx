@@ -145,9 +145,9 @@ export default function TrustedBrandsBanner({ variant = 'carousel' }: TrustedBra
 
         {/* Carrusel Infinito de Marcas - MEJORADO */}
         <div className="relative overflow-hidden py-8">
-          {/* Gradientes de fade más pronunciados */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
+          {/* Gradientes de fade más pronunciados - Solo desktop */}
+          <div className="hidden md:block absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
+          <div className="hidden md:block absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
           
           {/* Desktop - Carrusel horizontal más grande */}
           <div className="hidden md:block">
