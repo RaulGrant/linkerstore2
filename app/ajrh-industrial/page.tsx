@@ -8,10 +8,12 @@ import ComplianceSection from '@/components/ajrh/ComplianceSection';
 import ProcessSection from '@/components/ajrh/ProcessSection';
 import CTASection from '@/components/ajrh/CTASection';
 import Footer from '@/components/ajrh/Footer';
+import PageInteractions from '@/components/ajrh/PageInteractions';
 
 export default function AJRHIndustrialLanding() {
   return (
     <div className="bg-white">
+      <PageInteractions />
       <HeroSection />
       <SupervisionSection />
       <ServicesSection />
