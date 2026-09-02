@@ -185,9 +185,9 @@ export default function CoursesSection() {
                     </span>
                     <Button
                       onClick={() => openWhatsApp(course.title)}
-                      className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-orange-500 hover:to-orange-600 text-white group/btn"
+                      className="rounded-xl border border-orange-300/30 bg-gradient-to-r from-orange-500 to-red-600 px-5 font-bold text-white shadow-lg shadow-orange-900/30 transition-all hover:-translate-y-1 hover:from-orange-400 hover:to-red-500 hover:shadow-orange-500/40 group/btn"
                     >
-                      Tomar curso ya!
+                      Consultar disponibilidad
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </div>
@@ -205,7 +205,7 @@ export default function CoursesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <Button size="lg" onClick={() => openWhatsApp('información general')} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold shadow-lg shadow-orange-500/50">Inscríbete hoy</Button>
+          <Button size="lg" onClick={() => openWhatsApp('información general')} className="rounded-xl border border-orange-300/40 bg-gradient-to-r from-orange-500 to-red-600 px-8 font-bold text-white shadow-xl shadow-orange-500/30 transition-all hover:-translate-y-1 hover:from-orange-400 hover:to-red-500">Explorar opciones</Button>
         </motion.div>
       </div>
     </section>

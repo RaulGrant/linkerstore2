@@ -205,7 +205,7 @@ export default function CTASection() {
                       </>
                     ) : (
                       <>
-                        Enviar Solicitud
+                        Enviar datos por WhatsApp
                         <Send className="ml-2" />
                       </>
                     )}

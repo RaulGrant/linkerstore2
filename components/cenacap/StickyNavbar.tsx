@@ -79,7 +79,7 @@ export default function StickyNavbar() {
               onClick={openWhatsApp}
               className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold shadow-lg shadow-orange-500/50 hover:shadow-orange-500/70 transition-all duration-300"
             >
-              Inscríbete Ahora
+              Solicitar información
             </Button>
           </div>
 
@@ -116,7 +116,7 @@ export default function StickyNavbar() {
                   onClick={() => scrollToSection('#contacto')}
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold w-full"
                 >
-                  Inscríbete Ahora
+                  Solicitar información
                 </Button>
               </div>
             </motion.div>

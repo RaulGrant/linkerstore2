@@ -15,7 +15,7 @@ export default function OfferBanner() {
         <h2 className="text-4xl font-black uppercase leading-tight text-white drop-shadow-lg sm:text-6xl">2X1</h2>
         <h3 className="mt-1 text-2xl font-black text-yellow-100 sm:text-4xl">Formación de supervisor de seguridad</h3>
         <p className="mx-auto mt-3 max-w-2xl text-base font-semibold text-white/90 sm:text-lg">Elige crecer en seguridad industrial. Pregunta hoy por la disponibilidad de esta promoción exclusiva.</p>
-        <Button type="button" onClick={openWhatsApp} size="lg" className="mt-6 bg-white px-8 text-lg font-black text-red-700 shadow-xl hover:bg-yellow-100">Tomar curso ya! <ArrowRight className="ml-2" /></Button>
+        <Button type="button" onClick={openWhatsApp} size="lg" className="mt-6 rounded-xl border-2 border-yellow-200 bg-white px-8 text-lg font-black text-red-700 shadow-xl transition-all hover:-translate-y-1 hover:bg-yellow-100 hover:shadow-2xl">Quiero aprovechar la promoción <ArrowRight className="ml-2" /></Button>
       </motion.div>
     </section>
   );

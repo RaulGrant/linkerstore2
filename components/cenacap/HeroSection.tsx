@@ -30,8 +30,8 @@ export default function HeroSection() {
               key={i}
               className="absolute w-1 h-1 bg-orange-400 rounded-full"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${(i * 37) % 100}%`,
+                top: `${(i * 61) % 100}%`,
               }}
               animate={{
                 y: [0, -30, 0],
@@ -39,9 +39,9 @@ export default function HeroSection() {
                 scale: [1, 1.5, 1],
               }}
               transition={{
-                duration: 3 + Math.random() * 2,
+                duration: 3 + (i % 3),
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: (i % 4) * 0.5,
               }}
             />
           ))}
@@ -117,7 +117,7 @@ export default function HeroSection() {
                 onClick={() => openWhatsApp('Hola, quiero información sobre los cursos de CENACAP.')}
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 py-6 text-lg shadow-xl shadow-orange-500/50 hover:shadow-orange-500/70 transition-all duration-300 group"
               >
-                Ver Cursos Disponibles
+                Conocer opciones de capacitación
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>
@@ -129,7 +129,7 @@ export default function HeroSection() {
                 variant="outline"
                 className="border-2 border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-8 py-6 text-lg transition-all duration-300"
               >
-                Inscríbete hoy
+                Hablar con un asesor
               </Button>
             </motion.div>
           </motion.div>
