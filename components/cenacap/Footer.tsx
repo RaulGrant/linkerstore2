@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, Youtube } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -53,12 +53,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative">
-                <div className="absolute inset-0 bg-orange-500 blur-xl opacity-50"></div>
-                <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">C</span>
-                </div>
-              </div>
+              <img src="/images/brands/cenacap-logo.webp" alt="Logo CENACAP" className="h-14 w-14 object-contain" />
               <div>
                 <h3 className="text-white font-bold text-lg">CENACAP</h3>
                 <p className="text-orange-400 text-xs">Centro de Capacitación</p>
@@ -76,11 +71,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400 text-sm">
                 <Mail className="w-4 h-4 mr-2 text-orange-400" />
-                <span>contacto@cenacap.com.mx</span>
-              </div>
-              <div className="flex items-start text-gray-400 text-sm">
-                <MapPin className="w-4 h-4 mr-2 text-orange-400 mt-0.5" />
-                <span>Av. Revolución 123, Centro, CDMX</span>
+                <span>emmanuelramirezfernandez15@gmail.com</span>
               </div>
             </div>
           </motion.div>
@@ -159,7 +150,7 @@ export default function Footer() {
 
         <div className="mb-6 flex flex-col items-center gap-2 text-sm text-gray-300 sm:flex-row sm:justify-center sm:gap-8">
           <span><Phone className="mr-2 inline h-4 w-4 text-orange-400" />+52 246 134 1074</span>
-          <span><Mail className="mr-2 inline h-4 w-4 text-orange-400" />contacto@cenacap.com.mx</span>
+          <span><Mail className="mr-2 inline h-4 w-4 text-orange-400" />emmanuelramirezfernandez15@gmail.com</span>
         </div>
 
         {/* Bottom Footer */}

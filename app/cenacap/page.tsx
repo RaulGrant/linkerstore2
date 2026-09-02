@@ -8,11 +8,13 @@ import TrustedBrandsBanner from '@/components/home/TrustedBrandsBanner';
 import TestimonialsSection from '@/components/cenacap/TestimonialsSection';
 import CTASection from '@/components/cenacap/CTASection';
 import Footer from '@/components/cenacap/Footer';
+import OfferBanner from '@/components/cenacap/OfferBanner';
 
 export default function CenacapLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
 
+      <OfferBanner />
       <HeroSection />
       <CoursesSection />
       <WhyChooseUsSection />

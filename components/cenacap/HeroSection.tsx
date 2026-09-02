@@ -72,6 +72,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Main Title */}
+          <img src="/images/brands/cenacap-logo.webp" alt="Logo CENACAP" className="mx-auto mb-6 h-40 w-40 object-contain drop-shadow-2xl" />
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}

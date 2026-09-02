@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
-import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Phone, Mail, Send, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function CTASection() {
@@ -61,12 +61,6 @@ export default function CTASection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div className="mb-12 rounded-3xl border-2 border-orange-300 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 p-8 text-center shadow-2xl shadow-orange-500/30" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-sm font-black uppercase tracking-widest text-orange-100">Oferta especial</p>
-          <h3 className="mt-2 text-3xl md:text-4xl font-black text-white">2X1 en la Formación de supervisor de seguridad</h3>
-          <p className="mt-2 text-orange-100">Pregunta por disponibilidad y recibe atención directa por WhatsApp.</p>
-          <Button type="button" onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20aprovechar%20la%20oferta%20especial%202x1%20en%20la%20Formaci%C3%B3n%20de%20supervisor%20de%20seguridad.', '_blank')} className="mt-5 bg-white text-orange-700 hover:bg-orange-50 font-bold">Tomar curso ya!</Button>
-        </motion.div>
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -147,7 +141,7 @@ export default function CTASection() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-orange-500 focus:ring-orange-500"
-                      placeholder="55 1234 5678"
+                      placeholder="246 134 1074"
                     />
                   </div>
 
@@ -250,27 +244,11 @@ export default function CTASection() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Email</h4>
-                    <p className="text-gray-400">contacto@cenacap.com.mx</p>
-                    <p className="text-gray-400">capacitacion@cenacap.com.mx</p>
+                    <p className="text-gray-400">emmanuelramirezfernandez15@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-slate-800/50 backdrop-blur-lg border-2 border-slate-700 hover:border-orange-500/50 transition-all duration-300 group">
-                <CardContent className="p-6 flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <MapPin className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Dirección</h4>
-                    <p className="text-gray-400">
-                      Av. Revolución 123,
-                      <br />
-                      Col. Centro, CDMX 06000
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
 
             {/* Business Hours */}

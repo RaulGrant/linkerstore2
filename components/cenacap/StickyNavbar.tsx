@@ -53,12 +53,7 @@ export default function StickyNavbar() {
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-orange-500 blur-xl opacity-50"></div>
-              <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-            </div>
+            <img src="/images/brands/cenacap-logo.webp" alt="CENACAP" className="h-14 w-14 rounded-lg object-contain" />
             <div>
               <h1 className="text-white font-bold text-xl">CENACAP</h1>
               <p className="text-orange-400 text-xs">Centro de Capacitación</p>
