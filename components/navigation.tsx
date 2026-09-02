@@ -42,6 +42,11 @@ export default function Navigation({ user }: NavigationProps) {
   const isAuthenticated = !!user;
   const isCompany = user?.role === 'company';
   const isFreelancer = user?.role === 'freelancer';
+  const isCenacap = pathname.startsWith('/cenacap');
+
+  const scrollToCenacapSection = (sectionId: string) => {
+    document.querySelector(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   // Function to track navigation clicks
   const handleNavClick = async (linkName: string, linkPath: string) => {
@@ -330,6 +335,25 @@ export default function Navigation({ user }: NavigationProps) {
               </div>
             </div>
           </div>
+          {isCenacap && (
+            <div className="flex min-h-12 items-center justify-between gap-4 border-t border-orange-100 py-2">
+              <button onClick={() => scrollToCenacapSection('#hero')} className="flex items-center gap-2 text-left">
+                <img src="/images/brands/cenacap-logo.webp" alt="CENACAP" className="h-9 w-9 rounded-md object-contain" />
+                <span>
+                  <span className="block text-sm font-bold text-slate-900">CENACAP</span>
+                  <span className="block text-xs text-orange-600">Centro de Capacitación</span>
+                </span>
+              </button>
+              <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
+                <button onClick={() => scrollToCenacapSection('#cursos')} className="hover:text-orange-600">Cursos</button>
+                <button onClick={() => scrollToCenacapSection('#nosotros')} className="hover:text-orange-600">Nosotros</button>
+                <button onClick={() => scrollToCenacapSection('#contacto')} className="hover:text-orange-600">Contacto</button>
+              </nav>
+              <Button onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20los%20cursos%20de%20CENACAP.', '_blank')} className="shrink-0 bg-gradient-to-r from-orange-500 to-red-600 font-bold text-white hover:from-orange-600 hover:to-red-700">
+                Solicitar información
+              </Button>
+            </div>
+          )}
         </div>
       </header>
     </>
