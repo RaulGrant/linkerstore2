@@ -11,10 +11,10 @@ interface Course {
   title: string;
   duration: string;
   modality: string;
-  price: string;
   icon: string;
   certification: string;
   description: string;
+  cta: string;
 }
 
 const courses: Course[] = [
@@ -23,63 +23,63 @@ const courses: Course[] = [
     title: 'Seguridad en el mantenimiento de las instalaciones eléctricas',
     duration: '8 horas',
     modality: 'Presencial',
-    price: 'Consultar',
     icon: '⚡',
     certification: 'STPS',
     description: 'Prevención de riesgos y prácticas seguras para el mantenimiento de instalaciones eléctricas.',
+    cta: 'Reserva tu lugar',
   },
   {
     id: '2',
     title: 'Operación de equipos de elevación personal',
     duration: '16 horas',
     modality: 'Presencial',
-    price: 'Consultar',
     icon: '🏗️',
     certification: 'STPS + CONOCER',
     description: 'Operación segura, inspección y prevención de riesgos en equipos de elevación personal.',
+    cta: 'Tomar este curso',
   },
   {
     id: '3',
     title: 'Trabajos en espacios confinados',
     duration: '12 horas',
     modality: 'Híbrido',
-    price: 'Consultar',
     icon: '🚧',
     certification: 'STPS',
     description: 'Procedimientos de entrada, trabajo y rescate en espacios confinados.',
+    cta: 'Quiero más información',
   },
   {
     id: '4',
     title: 'Corte y Soldadura',
     duration: '16 horas',
     modality: 'Online',
-    price: 'Consultar',
     icon: '🔥',
     certification: 'STPS',
     description: 'Prácticas seguras para trabajos en caliente, corte y soldadura.',
+    cta: 'Me apunto',
   },
   {
     id: '5',
     title: 'Mantenimiento, uso y manejo de extintores',
     duration: '8 horas',
     modality: 'Presencial',
-    price: 'Consultar',
     icon: '🧯',
     certification: 'STPS',
     description: 'Identificación, mantenimiento y uso correcto de extintores.',
+    cta: 'Apartar mi lugar',
   },
   {
     id: '6',
     title: 'Trabajos en alturas',
     duration: '16 horas',
     modality: 'Presencial',
-    price: 'Consultar',
     icon: '🪜',
     certification: 'STPS',
     description: 'Sistemas anticaídas, prevención y rescate para trabajos en alturas.',
+    cta: 'Quiero inscribirme',
   },
   {
-    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Presencial', price: 'Consultar', icon: '🔒', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.'
+    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Presencial', icon: '🔒', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.', cta: 'Conocer el programa'
   },
 ];
 
@@ -145,22 +145,23 @@ export default function CoursesSection() {
         >
           {courses.map((course) => (
             <motion.div key={course.id} variants={itemVariants}>
-              <Card className="bg-slate-800/50 backdrop-blur-lg border-2 border-slate-700 hover:border-orange-500/50 transition-all duration-300 h-full group hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-2">
-                <CardHeader>
+              <Card className="relative h-full overflow-hidden border-2 border-slate-700 bg-gradient-to-br from-slate-800 via-slate-900 to-blue-950 backdrop-blur-lg transition-all duration-300 group hover:-translate-y-2 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/30">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-orange-400 via-yellow-300 to-red-500" />
+                <CardHeader className="pt-7">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="text-5xl group-hover:scale-110 transition-transform">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-orange-300/30 bg-orange-500/10 text-5xl shadow-lg shadow-orange-950/30 transition-transform group-hover:scale-110 group-hover:rotate-3">
                       {course.icon}
                     </div>
-                    <Badge className="bg-orange-500 text-white font-semibold">
+                    <Badge className="border border-yellow-200/40 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold shadow-md">
                       {course.certification}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-orange-400 transition-colors">
+                  <CardTitle className="min-h-14 text-xl font-bold leading-snug text-white transition-colors group-hover:text-yellow-200">
                     {course.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-400 mb-6 line-clamp-2">
+                  <p className="mb-6 line-clamp-2 text-gray-300">
                     {course.description}
                   </p>
 
@@ -179,15 +180,12 @@ export default function CoursesSection() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-orange-400">
-                      {course.price}
-                    </span>
+                  <div>
                     <Button
                       onClick={() => openWhatsApp(course.title)}
-                      className="rounded-xl border border-orange-300/30 bg-gradient-to-r from-orange-500 to-red-600 px-5 font-bold text-white shadow-lg shadow-orange-900/30 transition-all hover:-translate-y-1 hover:from-orange-400 hover:to-red-500 hover:shadow-orange-500/40 group/btn"
+                      className="w-full rounded-xl border border-orange-200/50 bg-gradient-to-r from-orange-500 via-orange-500 to-red-600 px-5 font-bold text-white shadow-lg shadow-orange-900/30 transition-all hover:-translate-y-1 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 hover:shadow-orange-500/50 group/btn"
                     >
-                      Consultar disponibilidad
+                      {course.cta}
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </div>
