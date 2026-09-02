@@ -125,7 +125,7 @@ export default function HeroSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                onClick={() => openWhatsApp('Hola, quiero cotizar un curso de CENACAP.')}
+                onClick={() => openWhatsApp('Hola, quiero saber más sobre los cursos de CENACAP.')}
                 variant="outline"
                 className="w-full border-2 border-orange-400 px-5 py-6 text-base font-bold text-orange-400 transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:w-auto sm:px-8 sm:text-lg"
               >
