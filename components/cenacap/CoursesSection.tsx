@@ -48,7 +48,7 @@ const courses: Course[] = [
     duration: '8 horas',
     modality: 'Online',
     icon: '🚧',
-    image: '/images/cenacap/courses/espacios-confinados.webp',
+    image: '/images/cenacap/courses/espacios-confinados.jpg',
     certification: 'STPS',
     description: 'Procedimientos de entrada, trabajo y rescate en espacios confinados.',
     cta: 'Quiero más información',
@@ -59,7 +59,7 @@ const courses: Course[] = [
     duration: '8 horas',
     modality: 'Online',
     icon: '🔥',
-    image: '/images/cenacap/courses/corte-y-soldadura.webp',
+    image: '/images/cenacap/courses/corte-y-soldadura.jpg',
     certification: 'STPS',
     description: 'Prácticas seguras para trabajos en caliente, corte y soldadura.',
     cta: 'Me apunto',
@@ -70,7 +70,7 @@ const courses: Course[] = [
     duration: '8 horas',
     modality: 'Online',
     icon: '🧯',
-    image: '/images/cenacap/courses/extintores.webp',
+    image: '/images/cenacap/courses/extintores.jpg',
     certification: 'STPS',
     description: 'Identificación, mantenimiento y uso correcto de extintores.',
     cta: 'Apartar mi lugar',
@@ -81,13 +81,13 @@ const courses: Course[] = [
     duration: '8 horas',
     modality: 'Online',
     icon: '🪜',
-    image: '/images/cenacap/courses/trabajos-en-alturas.webp',
+    image: '/images/cenacap/courses/trabajos-en-alturas.jpg',
     certification: 'STPS',
     description: 'Sistemas anticaídas, prevención y rescate para trabajos en alturas.',
     cta: 'Quiero inscribirme',
   },
   {
-    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Online', icon: '🔒', image: '/images/cenacap/courses/loto.webp', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.', cta: 'Ver el programa'
+    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Online', icon: '🔒', image: '/images/cenacap/courses/loto.jpg', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.', cta: 'Ver el programa'
   },
 ];
 
