@@ -137,7 +137,7 @@ export default function CoursesSection() {
 
         {/* Courses Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -156,7 +156,7 @@ export default function CoursesSection() {
                       {course.certification}
                     </Badge>
                   </div>
-                  <CardTitle className="min-h-14 text-xl font-bold leading-snug text-white transition-colors group-hover:text-yellow-200">
+                  <CardTitle className="text-xl font-bold leading-snug text-white transition-colors group-hover:text-yellow-200 sm:min-h-14">
                     {course.title}
                   </CardTitle>
                 </CardHeader>
@@ -183,7 +183,7 @@ export default function CoursesSection() {
                   <div>
                     <Button
                       onClick={() => openWhatsApp(course.title)}
-                      className="w-full rounded-xl border border-orange-200/50 bg-gradient-to-r from-orange-500 via-orange-500 to-red-600 px-5 font-bold text-white shadow-lg shadow-orange-900/30 transition-all hover:-translate-y-1 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 hover:shadow-orange-500/50 group/btn"
+                      className="w-full rounded-xl border border-orange-200/50 bg-gradient-to-r from-orange-500 via-orange-500 to-red-600 px-4 py-3 text-sm font-bold text-white shadow-lg shadow-orange-900/30 transition-all hover:-translate-y-1 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 hover:shadow-orange-500/50 sm:px-5 sm:text-base group/btn"
                     >
                       {course.cta}
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

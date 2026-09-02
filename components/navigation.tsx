@@ -336,8 +336,8 @@ export default function Navigation({ user }: NavigationProps) {
             </div>
           </div>
           {isCenacap && (
-            <div className="flex min-h-12 items-center justify-between gap-4 border-t border-orange-100 py-2">
-              <button onClick={() => scrollToCenacapSection('#hero')} className="flex items-center gap-2 text-left">
+            <div className="flex flex-col gap-3 border-t border-orange-100 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-2">
+              <button onClick={() => scrollToCenacapSection('#hero')} className="flex items-center gap-2 self-start text-left sm:self-auto">
                 <img src="/images/brands/cenacap-logo.webp" alt="CENACAP" className="h-9 w-9 rounded-md object-contain" />
                 <span>
                   <span className="block text-sm font-bold text-slate-900">CENACAP</span>
@@ -349,7 +349,7 @@ export default function Navigation({ user }: NavigationProps) {
                 <button onClick={() => scrollToCenacapSection('#nosotros')} className="hover:text-orange-600">Nosotros</button>
                 <button onClick={() => scrollToCenacapSection('#contacto')} className="hover:text-orange-600">Contacto</button>
               </nav>
-              <Button onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20los%20cursos%20de%20CENACAP.', '_blank')} className="shrink-0 bg-gradient-to-r from-orange-500 to-red-600 font-bold text-white hover:from-orange-600 hover:to-red-700">
+              <Button onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20los%20cursos%20de%20CENACAP.', '_blank')} className="w-full shrink-0 bg-gradient-to-r from-orange-500 to-red-600 text-sm font-bold text-white hover:from-orange-600 hover:to-red-700 sm:w-auto sm:text-base">
                 Solicitar información
               </Button>
             </div>

@@ -115,7 +115,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 onClick={() => openWhatsApp('Hola, quiero información sobre los cursos de CENACAP.')}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 py-6 text-lg shadow-xl shadow-orange-500/50 hover:shadow-orange-500/70 transition-all duration-300 group"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-6 text-base font-bold text-white shadow-xl shadow-orange-500/50 transition-all duration-300 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-500/70 sm:w-auto sm:px-8 sm:text-lg group"
               >
                 Conocer opciones de capacitación
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -127,7 +127,7 @@ export default function HeroSection() {
                 size="lg"
                 onClick={() => openWhatsApp('Hola, quiero cotizar un curso de CENACAP.')}
                 variant="outline"
-                className="border-2 border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-8 py-6 text-lg transition-all duration-300"
+                className="w-full border-2 border-orange-400 px-5 py-6 text-base font-bold text-orange-400 transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:w-auto sm:px-8 sm:text-lg"
               >
                 Hablar con un asesor
               </Button>
