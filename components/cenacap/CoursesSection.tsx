@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, MapPin, Award, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
 
 interface Course {
   id: string;
@@ -12,6 +13,7 @@ interface Course {
   duration: string;
   modality: string;
   icon: string;
+  image: string;
   certification: string;
   description: string;
   cta: string;
@@ -24,6 +26,7 @@ const courses: Course[] = [
     duration: '8 horas',
     modality: 'Online',
     icon: '⚡',
+    image: '/images/cenacap/courses/seguridad-electrica.webp',
     certification: 'STPS',
     description: 'Prevención de riesgos y prácticas seguras para el mantenimiento de instalaciones eléctricas.',
     cta: 'Reserva tu lugar',
@@ -31,9 +34,10 @@ const courses: Course[] = [
   {
     id: '2',
     title: 'Operación de equipos de elevación personal',
-    duration: '16 horas',
+    duration: '8 horas',
     modality: 'Online',
     icon: '🏗️',
+    image: '/images/cenacap/courses/elevacion-personal.webp',
     certification: 'STPS',
     description: 'Operación segura, inspección y prevención de riesgos en equipos de elevación personal.',
     cta: 'Tomar este curso',
@@ -41,9 +45,10 @@ const courses: Course[] = [
   {
     id: '3',
     title: 'Trabajos en espacios confinados',
-    duration: '12 horas',
+    duration: '8 horas',
     modality: 'Online',
     icon: '🚧',
+    image: '/images/cenacap/courses/espacios-confinados.webp',
     certification: 'STPS',
     description: 'Procedimientos de entrada, trabajo y rescate en espacios confinados.',
     cta: 'Quiero más información',
@@ -51,9 +56,10 @@ const courses: Course[] = [
   {
     id: '4',
     title: 'Corte y Soldadura',
-    duration: '16 horas',
+    duration: '8 horas',
     modality: 'Online',
     icon: '🔥',
+    image: '/images/cenacap/courses/corte-y-soldadura.webp',
     certification: 'STPS',
     description: 'Prácticas seguras para trabajos en caliente, corte y soldadura.',
     cta: 'Me apunto',
@@ -64,6 +70,7 @@ const courses: Course[] = [
     duration: '8 horas',
     modality: 'Online',
     icon: '🧯',
+    image: '/images/cenacap/courses/extintores.webp',
     certification: 'STPS',
     description: 'Identificación, mantenimiento y uso correcto de extintores.',
     cta: 'Apartar mi lugar',
@@ -71,17 +78,28 @@ const courses: Course[] = [
   {
     id: '6',
     title: 'Trabajos en alturas',
-    duration: '16 horas',
+    duration: '8 horas',
     modality: 'Online',
     icon: '🪜',
+    image: '/images/cenacap/courses/trabajos-en-alturas.webp',
     certification: 'STPS',
     description: 'Sistemas anticaídas, prevención y rescate para trabajos en alturas.',
     cta: 'Quiero inscribirme',
   },
   {
-    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Online', icon: '🔒', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.', cta: 'Ver el programa'
+    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Online', icon: '🔒', image: '/images/cenacap/courses/loto.webp', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.', cta: 'Ver el programa'
   },
 ];
+
+function CourseVisual({ course }: { course: Course }) {
+  const [imageFailed, setImageFailed] = useState(false);
+
+  if (!imageFailed) {
+    return <img src={course.image} alt="" onError={() => setImageFailed(true)} className="h-full w-full object-cover" />;
+  }
+
+  return <span aria-label={course.title}>{course.icon}</span>;
+}
 
 export default function CoursesSection() {
   const openWhatsApp = (course: string) => window.open(`https://wa.me/522461341074?text=${encodeURIComponent(`Hola, quiero saber más sobre el curso de ${course}.`)}`, '_blank');
@@ -149,8 +167,8 @@ export default function CoursesSection() {
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-orange-400 via-yellow-300 to-red-500" />
                 <CardHeader className="pt-7">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-orange-300/30 bg-orange-500/10 text-5xl shadow-lg shadow-orange-950/30 transition-transform group-hover:scale-110 group-hover:rotate-3">
-                      {course.icon}
+                    <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-orange-300/30 bg-orange-500/10 text-5xl shadow-lg shadow-orange-950/30 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                      <CourseVisual course={course} />
                     </div>
                     <Badge className="border border-yellow-200/40 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold shadow-md">
                       {course.certification}

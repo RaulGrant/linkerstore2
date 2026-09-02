@@ -13,7 +13,8 @@ interface Testimonial {
   company: string;
   text: string;
   rating: number;
-  image: string;
+  emoji: string;
+  photo: string;
   course: string;
 }
 
@@ -25,7 +26,8 @@ const testimonials: Testimonial[] = [
     company: 'Grupo Industrial XYZ',
     text: 'La capacitación en trabajo en alturas cambió completamente mi perspectiva profesional. Los instructores son excelentes y el equipo de primera calidad. Totalmente recomendado.',
     rating: 5,
-    image: '👨‍💼',
+    emoji: '👨‍💼',
+    photo: '/images/cenacap/testimonials/carlos-mendez.webp',
     course: 'Trabajo en Alturas',
   },
   {
@@ -35,7 +37,8 @@ const testimonials: Testimonial[] = [
     company: 'Construcciones ABC',
     text: 'Excelente centro de capacitación. La certificación STPS me abrió puertas laborales que no imaginaba. El contenido es actualizado y práctico.',
     rating: 5,
-    image: '👩‍💼',
+    emoji: '👩‍💼',
+    photo: '/images/cenacap/testimonials/ana-rodriguez.webp',
     course: 'Manejo de Extintores',
   },
   {
@@ -45,7 +48,8 @@ const testimonials: Testimonial[] = [
     company: 'Industrias del Norte',
     text: 'Capacité a todo mi equipo aquí y los resultados fueron inmediatos. Reducimos incidentes en un 80%. La inversión valió completamente la pena.',
     rating: 5,
-    image: '👨‍🏭',
+    emoji: '👨‍🏭',
+    photo: '/images/cenacap/testimonials/roberto-garcia.webp',
     course: 'Prevención de Incendios',
   },
   {
@@ -55,7 +59,8 @@ const testimonials: Testimonial[] = [
     company: 'Petroquímica del Golfo',
     text: 'El curso de espacios confinados superó mis expectativas. Ejercicios realistas que me prepararon para situaciones reales en campo.',
     rating: 5,
-    image: '👩‍🔧',
+    emoji: '👩‍🔧',
+    photo: '/images/cenacap/testimonials/maria-fernandez.webp',
     course: 'Espacios Confinados',
   },
   {
@@ -65,10 +70,22 @@ const testimonials: Testimonial[] = [
     company: 'Manufacturas del Bajío',
     text: 'La capacitación en primeros auxilios es la más completa que he tomado. Instructores con experiencia real y casos de estudio muy útiles.',
     rating: 5,
-    image: '👨‍⚕️',
+    emoji: '👨‍⚕️',
+    photo: '/images/cenacap/testimonials/jorge-ramirez.webp',
     course: 'Primeros Auxilios',
   },
 ];
+
+function TestimonialAvatar({ testimonial, size = 'large' }: { testimonial: Testimonial; size?: 'large' | 'small' }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const dimensions = size === 'large' ? 'h-20 w-20 text-5xl' : 'h-12 w-12 text-3xl';
+
+  return (
+    <div className={`${dimensions} shrink-0 overflow-hidden rounded-full border-2 border-orange-400/50 bg-slate-700 flex items-center justify-center`}>
+      {!imageFailed ? <img src={testimonial.photo} alt={`Foto de ${testimonial.name}`} onError={() => setImageFailed(true)} className="h-full w-full object-cover" /> : testimonial.emoji}
+    </div>
+  );
+}
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -149,7 +166,7 @@ export default function TestimonialsSection() {
 
                 {/* Author Info */}
                 <div className="flex flex-col items-center">
-                  <div className="text-5xl mb-4">{currentTestimonial.image}</div>
+                  <div className="mb-4"><TestimonialAvatar testimonial={currentTestimonial} /></div>
                   <h4 className="text-2xl font-bold text-white mb-1">
                     {currentTestimonial.name}
                   </h4>
@@ -220,7 +237,7 @@ export default function TestimonialsSection() {
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
-                  <div className="text-3xl mr-3">{testimonial.image}</div>
+                  <div className="mr-3"><TestimonialAvatar testimonial={testimonial} size="small" /></div>
                   <div>
                     <h5 className="text-white font-semibold">{testimonial.name}</h5>
                     <p className="text-gray-400 text-xs">{testimonial.role}</p>
