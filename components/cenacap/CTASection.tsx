@@ -274,19 +274,6 @@ export default function CTASection() {
               </CardContent>
             </Card>
 
-            {/* Map Placeholder */}
-            <div className="bg-slate-800/50 backdrop-blur-lg border-2 border-slate-700 rounded-2xl overflow-hidden h-64">
-              <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-16 h-16 text-orange-400 mx-auto mb-3" />
-                  <p className="text-gray-400">
-                    Mapa de ubicación
-                    <br />
-                    <span className="text-sm">(Próximamente)</span>
-                  </p>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
