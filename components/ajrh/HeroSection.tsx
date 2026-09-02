@@ -55,6 +55,9 @@ export default function HeroSection() {
         }} />
       </div>
 
+      <motion.div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-green-200/30 blur-3xl" animate={{ scale: [1, 1.15, 1], opacity: [0.35, 0.6, 0.35] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} />
+      <motion.div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-emerald-100/40 blur-3xl" animate={{ x: [0, 35, 0], y: [0, -20, 0] }} transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }} />
+
       <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -148,14 +151,14 @@ export default function HeroSection() {
               className="grid grid-cols-3 gap-4 pt-8"
             >
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <motion.div key={index} whileHover={{ y: -5, scale: 1.04 }} transition={{ type: 'spring', stiffness: 300 }} className="text-center rounded-xl p-2">
                   <div className="text-3xl md:text-4xl font-black text-green-600">
                     {counters[index]}{stat.suffix}
                   </div>
                   <div className="text-sm md:text-base text-gray-600 mt-1">
                     {stat.label}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </motion.div>
@@ -183,6 +186,8 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.2, duration: 0.6 }}
+              animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="absolute -top-6 -right-6 bg-white p-4 rounded-full shadow-xl border-4 border-green-600"
             >
               <CheckCircle className="h-12 w-12 text-green-600" />
@@ -192,6 +197,8 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4, duration: 0.6 }}
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl"
             >
               <TrendingUp className="h-8 w-8 text-green-600 mb-2" />

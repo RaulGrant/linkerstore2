@@ -81,6 +81,7 @@ export default function ProcessSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ delay: 0.3 + index * 0.2, duration: 0.6 }}
+                    whileHover={{ y: -6 }}
                     className="relative"
                   >
                     {/* Step Circle */}

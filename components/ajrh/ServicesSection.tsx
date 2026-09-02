@@ -135,7 +135,7 @@ export default function ServicesSection() {
           {industrialServices.map((service) => {
             const IconComponent = iconMap[service.icon as keyof typeof iconMap];
             return (
-              <motion.div key={service.id} variants={itemVariants}>
+              <motion.div key={service.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 260 }}>
                 <Card className="h-full border-2 border-gray-200 hover:border-green-600 hover:shadow-2xl hover:shadow-green-100 hover:-translate-y-2 transition-all duration-300 group bg-white">
                   <CardContent className="p-6">
                     {/* Icon */}
