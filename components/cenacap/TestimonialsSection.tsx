@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     name: 'Ana Rodríguez',
     role: 'Técnico en Seguridad',
     company: 'Construcciones ABC',
-    text: 'Excelente centro de capacitación. La certificación CONOCER me abrió puertas laborales que no imaginaba. El contenido es actualizado y práctico.',
+    text: 'Excelente centro de capacitación. La certificación STPS me abrió puertas laborales que no imaginaba. El contenido es actualizado y práctico.',
     rating: 5,
     image: '👩‍💼',
     course: 'Manejo de Extintores',

@@ -117,7 +117,7 @@ export default function HeroSection() {
                 onClick={() => openWhatsApp('Hola, quiero información sobre los cursos de CENACAP.')}
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-6 text-base font-bold text-white shadow-xl shadow-orange-500/50 transition-all duration-300 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-500/70 sm:w-auto sm:px-8 sm:text-lg group"
               >
-                Conocer opciones de capacitación
+                Ver opciones de capacitación
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>

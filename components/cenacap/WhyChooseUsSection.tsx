@@ -14,8 +14,8 @@ const features = [
   {
     icon: Award,
     title: 'Certificaciones Oficiales',
-    description: 'Reconocimiento STPS, CONOCER y organismos internacionales que validan tu preparación.',
-    stat: 'STPS/CONOCER',
+    description: 'Reconocimiento STPS que respalda tu preparación profesional.',
+    stat: 'STPS',
   },
   {
     icon: Wrench,
@@ -26,7 +26,7 @@ const features = [
   {
     icon: Clock,
     title: 'Flexibilidad de Horarios',
-    description: 'Cursos presenciales, online e híbridos adaptados a tu disponibilidad laboral.',
+    description: 'Cursos online adaptados a tu disponibilidad laboral.',
     stat: '24/7 disponible',
   },
 ];
