@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail } from 'lucide-react';
 
 const footerLinks = {
   services: [
@@ -27,16 +27,12 @@ const socialLinks = [
 
 const contactDetails = [
   {
-    icon: MapPin,
-    text: 'Av. Industrial #123, Col. Industrial, Veracruz, Ver. C.P. 91697'
-  },
-  {
     icon: Phone,
-    text: '+52 (229) 123-4567'
+    text: '+52 241 195 4096'
   },
   {
     icon: Mail,
-    text: 'contacto@ajrhindustrial.com'
+    text: 'emmanuelramirezfernandez15@gmail.com'
   },
   {
     icon: null,

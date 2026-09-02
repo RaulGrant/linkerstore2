@@ -102,7 +102,7 @@ function CourseVisual({ course }: { course: Course }) {
 }
 
 export default function CoursesSection() {
-  const openWhatsApp = (course: string) => window.open(`https://wa.me/522461341074?text=${encodeURIComponent(`Hola, quiero saber más sobre el curso de ${course}.`)}`, '_blank');
+  const openWhatsApp = (course: string) => window.open(`https://wa.me/522411954096?text=${encodeURIComponent(`Hola, quiero saber más sobre el curso de ${course}.`)}`, '_blank');
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

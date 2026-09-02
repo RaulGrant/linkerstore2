@@ -27,7 +27,7 @@ export default function CTASection() {
     setIsSubmitting(true);
 
     const message = `Hola, quiero inscribirme al curso de ${formData.course}. Mi nombre es ${formData.name}, teléfono ${formData.phone}, correo ${formData.email}. ${formData.message}`;
-    window.open(`https://wa.me/522461341074?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/522411954096?text=${encodeURIComponent(message)}`, '_blank');
     await new Promise((resolve) => setTimeout(resolve, 400));
 
     setIsSubmitting(false);
@@ -141,7 +141,7 @@ export default function CTASection() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-orange-500 focus:ring-orange-500"
-                      placeholder="246 134 1074"
+                      placeholder="241 195 4096"
                     />
                   </div>
 
@@ -232,7 +232,7 @@ export default function CTASection() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Teléfono</h4>
-                    <p className="text-gray-400">+52 246 134 1074</p>
+                    <p className="text-gray-400">+52 241 195 4096</p>
                   </div>
                 </CardContent>
               </Card>

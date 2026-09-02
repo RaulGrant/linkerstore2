@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 export default function OfferBanner() {
-  const openWhatsApp = () => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20aprovechar%20la%20oferta%20especial%202x1%20en%20la%20Formaci%C3%B3n%20de%20supervisor%20de%20seguridad.', '_blank');
+  const openWhatsApp = () => window.open('https://wa.me/522411954096?text=Hola,%20quiero%20aprovechar%20la%20oferta%20especial%202x1%20en%20la%20Formaci%C3%B3n%20de%20supervisor%20de%20seguridad.', '_blank');
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-red-600 to-orange-500 px-4 py-10 sm:py-12">

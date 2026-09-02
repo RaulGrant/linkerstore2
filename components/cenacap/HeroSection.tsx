@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function HeroSection() {
-  const openWhatsApp = (message: string) => window.open(`https://wa.me/522461341074?text=${encodeURIComponent(message)}`, '_blank');
+  const openWhatsApp = (message: string) => window.open(`https://wa.me/522411954096?text=${encodeURIComponent(message)}`, '_blank');
   const stats = [
     { icon: Users, label: 'Profesionales Capacitados', value: '500+' },
     { icon: Award, label: 'Años de Experiencia', value: '15+' },

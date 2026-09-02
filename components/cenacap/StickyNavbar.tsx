@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 export default function StickyNavbar() {
-  const openWhatsApp = () => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20inscribirme%20a%20un%20curso%20de%20CENACAP.', '_blank');
+  const openWhatsApp = () => window.open('https://wa.me/522411954096?text=Hola,%20quiero%20inscribirme%20a%20un%20curso%20de%20CENACAP.', '_blank');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

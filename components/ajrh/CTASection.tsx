@@ -13,13 +13,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Teléfono',
-    value: '+52 (229) 123-4567',
+    value: '+52 241 195 4096',
     description: 'Línea directa disponible'
   },
   {
     icon: Mail,
     title: 'Email',
-    value: 'contacto@ajrhindustrial.com',
+    value: 'emmanuelramirezfernandez15@gmail.com',
     description: 'Respuesta en 24 horas'
   },
   {
@@ -49,8 +49,10 @@ export default function CTASection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const serviceName = document.querySelector<HTMLSelectElement>('#service option:checked')?.textContent || formData.service;
+    const message = `Hola, quiero solicitar una cotización de AJRH Industrial. Nombre: ${formData.name}. Correo: ${formData.email}. Teléfono: ${formData.phone}. Servicio: ${serviceName}. Mensaje: ${formData.message || 'Sin mensaje adicional'}`;
+    window.open(`https://wa.me/522411954096?text=${encodeURIComponent(message)}`, '_blank');
+    await new Promise(resolve => setTimeout(resolve, 400));
 
     setIsSubmitting(false);
     setIsSuccess(true);
@@ -173,7 +175,7 @@ export default function CTASection() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="mt-2 border-2 border-gray-200 focus:border-green-600"
-                    placeholder="229-123-4567"
+                    placeholder="241 195 4096"
                   />
                 </div>
 
@@ -281,7 +283,7 @@ export default function CTASection() {
               <Button
                 size="lg"
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-bold transition-all duration-300 hover:scale-105"
-                onClick={() => window.location.href = 'tel:+522291234567'}
+                onClick={() => window.location.href = 'tel:+522411954096'}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Llamar Ahora
@@ -290,7 +292,7 @@ export default function CTASection() {
                 size="lg"
                 variant="outline"
                 className="w-full border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold transition-all duration-300 hover:scale-105"
-                onClick={() => window.location.href = 'mailto:contacto@ajrhindustrial.com'}
+                onClick={() => window.location.href = 'mailto:emmanuelramirezfernandez15@gmail.com'}
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Enviar Email
