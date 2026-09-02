@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 export default function StickyNavbar() {
+  const openWhatsApp = () => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20inscribirme%20a%20un%20curso%20de%20CENACAP.', '_blank');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -80,7 +81,7 @@ export default function StickyNavbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              onClick={() => scrollToSection('#contacto')}
+              onClick={openWhatsApp}
               className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold shadow-lg shadow-orange-500/50 hover:shadow-orange-500/70 transition-all duration-300"
             >
               Inscríbete Ahora

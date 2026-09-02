@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function HeroSection() {
+  const openWhatsApp = (message: string) => window.open(`https://wa.me/522461341074?text=${encodeURIComponent(message)}`, '_blank');
   const stats = [
     { icon: Users, label: 'Profesionales Capacitados', value: '500+' },
     { icon: Award, label: 'Años de Experiencia', value: '15+' },
@@ -66,7 +67,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Badge className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 text-sm font-semibold border-2 border-orange-400/50 shadow-lg shadow-orange-500/50">
-              🏆 Certificación Oficial STPS y CONOCER
+              Formación práctica en seguridad industrial
             </Badge>
           </motion.div>
 
@@ -112,7 +113,7 @@ export default function HeroSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                onClick={() => scrollToSection('#cursos')}
+                onClick={() => openWhatsApp('Hola, quiero información sobre los cursos de CENACAP.')}
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 py-6 text-lg shadow-xl shadow-orange-500/50 hover:shadow-orange-500/70 transition-all duration-300 group"
               >
                 Ver Cursos Disponibles
@@ -123,11 +124,11 @@ export default function HeroSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                onClick={() => scrollToSection('#contacto')}
+                onClick={() => openWhatsApp('Hola, quiero cotizar un curso de CENACAP.')}
                 variant="outline"
                 className="border-2 border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 font-bold px-8 py-6 text-lg transition-all duration-300"
               >
-                Solicita Información
+                Inscríbete hoy
               </Button>
             </motion.div>
           </motion.div>

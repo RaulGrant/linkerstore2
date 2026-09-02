@@ -26,8 +26,9 @@ export default function CTASection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const message = `Hola, quiero inscribirme al curso de ${formData.course}. Mi nombre es ${formData.name}, teléfono ${formData.phone}, correo ${formData.email}. ${formData.message}`;
+    window.open(`https://wa.me/522461341074?text=${encodeURIComponent(message)}`, '_blank');
+    await new Promise((resolve) => setTimeout(resolve, 400));
 
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -49,13 +50,7 @@ export default function CTASection() {
   };
 
   const courses = [
-    'Uso y Manejo de Extintores',
-    'Trabajo en Alturas',
-    'Primeros Auxilios',
-    'Manejo de Sustancias Peligrosas',
-    'Prevención de Incendios',
-    'Espacios Confinados',
-    'Otro',
+    'Seguridad en el mantenimiento de las instalaciones eléctricas', 'Operación de equipos de elevación personal', 'Trabajos en espacios confinados', 'Corte y Soldadura', 'Mantenimiento, uso y manejo de extintores', 'Trabajos en alturas', 'LOTO: Bloqueo y etiquetado de energías peligrosas', 'Formación de supervisor de seguridad',
   ];
 
   return (
@@ -66,6 +61,12 @@ export default function CTASection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div className="mb-12 rounded-3xl border-2 border-orange-300 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 p-8 text-center shadow-2xl shadow-orange-500/30" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <p className="text-sm font-black uppercase tracking-widest text-orange-100">Oferta especial</p>
+          <h3 className="mt-2 text-3xl md:text-4xl font-black text-white">2X1 en la Formación de supervisor de seguridad</h3>
+          <p className="mt-2 text-orange-100">Pregunta por disponibilidad y recibe atención directa por WhatsApp.</p>
+          <Button type="button" onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20aprovechar%20la%20oferta%20especial%202x1%20en%20la%20Formaci%C3%B3n%20de%20supervisor%20de%20seguridad.', '_blank')} className="mt-5 bg-white text-orange-700 hover:bg-orange-50 font-bold">Tomar curso ya!</Button>
+        </motion.div>
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -237,8 +238,7 @@ export default function CTASection() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Teléfono</h4>
-                    <p className="text-gray-400">+52 55 1234 5678</p>
-                    <p className="text-gray-400">+52 55 8765 4321</p>
+                    <p className="text-gray-400">+52 246 134 1074</p>
                   </div>
                 </CardContent>
               </Card>

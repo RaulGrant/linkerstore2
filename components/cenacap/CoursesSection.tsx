@@ -20,67 +20,71 @@ interface Course {
 const courses: Course[] = [
   {
     id: '1',
-    title: 'Uso y Manejo de Extintores',
+    title: 'Seguridad en el mantenimiento de las instalaciones eléctricas',
+    duration: '8 horas',
+    modality: 'Presencial',
+    price: 'Consultar',
+    icon: '⚡',
+    certification: 'STPS',
+    description: 'Prevención de riesgos y prácticas seguras para el mantenimiento de instalaciones eléctricas.',
+  },
+  {
+    id: '2',
+    title: 'Operación de equipos de elevación personal',
+    duration: '16 horas',
+    modality: 'Presencial',
+    price: 'Consultar',
+    icon: '🏗️',
+    certification: 'STPS + CONOCER',
+    description: 'Operación segura, inspección y prevención de riesgos en equipos de elevación personal.',
+  },
+  {
+    id: '3',
+    title: 'Trabajos en espacios confinados',
+    duration: '12 horas',
+    modality: 'Híbrido',
+    price: 'Consultar',
+    icon: '🚧',
+    certification: 'STPS',
+    description: 'Procedimientos de entrada, trabajo y rescate en espacios confinados.',
+  },
+  {
+    id: '4',
+    title: 'Corte y Soldadura',
+    duration: '16 horas',
+    modality: 'Online',
+    price: 'Consultar',
+    icon: '🔥',
+    certification: 'STPS',
+    description: 'Prácticas seguras para trabajos en caliente, corte y soldadura.',
+  },
+  {
+    id: '5',
+    title: 'Mantenimiento, uso y manejo de extintores',
     duration: '8 horas',
     modality: 'Presencial',
     price: 'Consultar',
     icon: '🧯',
     certification: 'STPS',
-    description: 'Capacitación teórico-práctica en identificación, uso y mantenimiento de extintores.',
+    description: 'Identificación, mantenimiento y uso correcto de extintores.',
   },
   {
-    id: '2',
-    title: 'Trabajo en Alturas',
+    id: '6',
+    title: 'Trabajos en alturas',
     duration: '16 horas',
     modality: 'Presencial',
     price: 'Consultar',
     icon: '🪜',
-    certification: 'STPS + CONOCER',
-    description: 'Curso certificado con prácticas en sistemas anticaídas y rescate en alturas.',
-  },
-  {
-    id: '3',
-    title: 'Primeros Auxilios',
-    duration: '12 horas',
-    modality: 'Híbrido',
-    price: 'Consultar',
-    icon: '🩹',
-    certification: 'Cruz Roja',
-    description: 'Atención de emergencias médicas en el lugar de trabajo.',
-  },
-  {
-    id: '4',
-    title: 'Manejo de Sustancias Peligrosas',
-    duration: '10 horas',
-    modality: 'Online',
-    price: 'Consultar',
-    icon: '☣️',
     certification: 'STPS',
-    description: 'Identificación y manejo seguro de materiales peligrosos según NOM-018.',
+    description: 'Sistemas anticaídas, prevención y rescate para trabajos en alturas.',
   },
   {
-    id: '5',
-    title: 'Prevención de Incendios',
-    duration: '6 horas',
-    modality: 'Presencial',
-    price: 'Consultar',
-    icon: '🚒',
-    certification: 'Bomberos',
-    description: 'Estrategias de prevención y combate de incendios en instalaciones industriales.',
-  },
-  {
-    id: '6',
-    title: 'Espacios Confinados',
-    duration: '12 horas',
-    modality: 'Presencial',
-    price: 'Consultar',
-    icon: '🔒',
-    certification: 'STPS + OSHA',
-    description: 'Procedimientos de entrada, trabajo y rescate en espacios confinados.',
+    id: '7', title: 'LOTO: Bloqueo y etiquetado de energías peligrosas', duration: '8 horas', modality: 'Presencial', price: 'Consultar', icon: '🔒', certification: 'STPS', description: 'Control seguro de energías peligrosas durante mantenimiento.'
   },
 ];
 
 export default function CoursesSection() {
+  const openWhatsApp = (course: string) => window.open(`https://wa.me/522461341074?text=${encodeURIComponent(`Hola, quiero cotizar el curso de ${course}.`)}`, '_blank');
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -180,9 +184,10 @@ export default function CoursesSection() {
                       {course.price}
                     </span>
                     <Button
+                      onClick={() => openWhatsApp(course.title)}
                       className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-orange-500 hover:to-orange-600 text-white group/btn"
                     >
-                      Más Info
+                      Tomar curso ya!
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </div>
@@ -200,15 +205,7 @@ export default function CoursesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <p className="text-gray-300 mb-6">
-            ¿No encuentras el curso que buscas?
-          </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold shadow-lg shadow-orange-500/50"
-          >
-            Ver Catálogo Completo
-          </Button>
+          <Button size="lg" onClick={() => openWhatsApp('información general')} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold shadow-lg shadow-orange-500/50">Inscríbete hoy</Button>
         </motion.div>
       </div>
     </section>

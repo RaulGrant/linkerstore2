@@ -15,19 +15,7 @@ export default function Footer() {
   ];
 
   const courses = [
-    { name: 'Uso de Extintores', href: '#cursos' },
-    { name: 'Trabajo en Alturas', href: '#cursos' },
-    { name: 'Primeros Auxilios', href: '#cursos' },
-    { name: 'Prevención de Incendios', href: '#cursos' },
-    { name: 'Espacios Confinados', href: '#cursos' },
-  ];
-
-  const certifications = [
-    'STPS',
-    'CONOCER',
-    'Cruz Roja Mexicana',
-    'OSHA',
-    'Bomberos CDMX',
+    { name: 'Seguridad eléctrica', href: '#cursos' }, { name: 'Equipos de elevación', href: '#cursos' }, { name: 'Espacios confinados', href: '#cursos' }, { name: 'Corte y Soldadura', href: '#cursos' }, { name: 'LOTO', href: '#cursos' },
   ];
 
   const socialLinks = [
@@ -84,7 +72,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center text-gray-400 text-sm">
                 <Phone className="w-4 h-4 mr-2 text-orange-400" />
-                <span>+52 55 1234 5678</span>
+                <span>+52 246 134 1074</span>
               </div>
               <div className="flex items-center text-gray-400 text-sm">
                 <Mail className="w-4 h-4 mr-2 text-orange-400" />
@@ -141,25 +129,13 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Certifications & Social */}
+          {/* Social */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="text-white font-bold text-lg mb-4">Certificaciones</h4>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {certifications.map((cert) => (
-                <span
-                  key={cert}
-                  className="bg-slate-800/50 text-gray-300 px-3 py-1 rounded-full text-xs border border-slate-700"
-                >
-                  {cert}
-                </span>
-              ))}
-            </div>
-
             <h4 className="text-white font-bold text-lg mb-4">Síguenos</h4>
             <div className="flex space-x-3">
               {socialLinks.map((social) => (
@@ -180,6 +156,11 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-slate-800 mb-8"></div>
+
+        <div className="mb-6 flex flex-col items-center gap-2 text-sm text-gray-300 sm:flex-row sm:justify-center sm:gap-8">
+          <span><Phone className="mr-2 inline h-4 w-4 text-orange-400" />+52 246 134 1074</span>
+          <span><Mail className="mr-2 inline h-4 w-4 text-orange-400" />contacto@cenacap.com.mx</span>
+        </div>
 
         {/* Bottom Footer */}
         <motion.div
