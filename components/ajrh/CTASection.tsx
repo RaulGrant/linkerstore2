@@ -95,7 +95,7 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 leading-tight">
             ¿Listo para iniciar tu proyecto industrial?
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -103,15 +103,15 @@ export default function CTASection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid min-w-0 gap-8 lg:grid-cols-2 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-white p-8 rounded-2xl shadow-2xl border-2 border-gray-200"
+            className="min-w-0 rounded-2xl border-2 border-gray-200 bg-white p-5 shadow-2xl sm:p-8"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
               Solicitar Cotización
             </h3>
 
@@ -142,7 +142,7 @@ export default function CTASection() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-2 border-2 border-gray-200 focus:border-green-600"
+                    className="mt-2 w-full min-w-0 border-2 border-gray-200 focus:border-green-600"
                     placeholder="Juan Pérez"
                   />
                 </div>
@@ -158,7 +158,7 @@ export default function CTASection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-2 border-2 border-gray-200 focus:border-green-600"
+                    className="mt-2 w-full min-w-0 border-2 border-gray-200 focus:border-green-600"
                     placeholder="juan@empresa.com"
                   />
                 </div>
@@ -174,7 +174,7 @@ export default function CTASection() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="mt-2 border-2 border-gray-200 focus:border-green-600"
+                    className="mt-2 w-full min-w-0 border-2 border-gray-200 focus:border-green-600"
                     placeholder="241 195 4096"
                   />
                 </div>
@@ -189,7 +189,7 @@ export default function CTASection() {
                     required
                     value={formData.service}
                     onChange={handleChange as any}
-                    className="mt-2 w-full px-3 py-2 border-2 border-gray-200 rounded-md focus:border-green-600 focus:outline-none"
+                    className="mt-2 w-full min-w-0 px-3 py-2 text-sm sm:text-base border-2 border-gray-200 rounded-md focus:border-green-600 focus:outline-none"
                   >
                     <option value="">Selecciona un servicio</option>
                     <option value="supervision">Supervisión Industrial</option>
@@ -211,7 +211,7 @@ export default function CTASection() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="mt-2 border-2 border-gray-200 focus:border-green-600 min-h-[120px]"
+                    className="mt-2 w-full min-w-0 border-2 border-gray-200 focus:border-green-600 min-h-[120px]"
                     placeholder="Cuéntanos sobre tu proyecto..."
                   />
                 </div>
@@ -239,7 +239,7 @@ export default function CTASection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="space-y-6"
+            className="min-w-0 space-y-6"
           >
             <div className="space-y-6">
               {contactInfo.map((info, index) => {
@@ -252,16 +252,16 @@ export default function CTASection() {
                     transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
                     className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-200 hover:border-green-600 transition-colors duration-300"
                   >
-                    <div className="flex items-start gap-4">
+                    <div className="flex min-w-0 items-start gap-4">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                         <IconComponent className="h-6 w-6 text-green-600" />
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <h4 className="text-lg font-bold text-gray-900 mb-1">
                           {info.title}
                         </h4>
                         <p className="text-green-600 font-semibold mb-1">
-                          {info.value}
+                          <span className="break-words">{info.value}</span>
                         </p>
                         <p className="text-sm text-gray-600">
                           {info.description}
