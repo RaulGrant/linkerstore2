@@ -98,7 +98,7 @@ function CourseVisual({ course }: { course: Course }) {
     return <img src={course.image} alt="" onError={() => setImageFailed(true)} className="h-full w-full object-cover" />;
   }
 
-  return <span aria-label={course.title}>{course.icon}</span>;
+  return <span aria-label={course.title} className="text-6xl">{course.icon}</span>;
 }
 
 export default function CoursesSection() {
@@ -166,11 +166,10 @@ export default function CoursesSection() {
               <Card className="relative h-full overflow-hidden border-2 border-slate-700 bg-gradient-to-br from-slate-800 via-slate-900 to-blue-950 backdrop-blur-lg transition-all duration-300 group hover:-translate-y-2 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/30">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-orange-400 via-yellow-300 to-red-500" />
                 <CardHeader className="pt-7">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-orange-300/30 bg-orange-500/10 text-5xl shadow-lg shadow-orange-950/30 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                  <div className="relative mb-5 flex h-44 w-full items-center justify-center overflow-hidden rounded-2xl border border-orange-300/30 bg-orange-500/10 shadow-lg shadow-orange-950/30 transition-transform group-hover:scale-[1.02] sm:h-48">
                       <CourseVisual course={course} />
-                    </div>
-                    <Badge className="border border-yellow-200/40 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold shadow-md">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
+                    <Badge className="absolute right-3 top-3 border border-yellow-200/40 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold shadow-md">
                       {course.certification}
                     </Badge>
                   </div>
