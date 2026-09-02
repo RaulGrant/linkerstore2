@@ -78,7 +78,9 @@ const testimonials: Testimonial[] = [
 
 function TestimonialAvatar({ testimonial, size = 'large' }: { testimonial: Testimonial; size?: 'large' | 'small' }) {
   const [imageFailed, setImageFailed] = useState(false);
-  const dimensions = size === 'large' ? 'h-20 w-20 text-5xl' : 'h-12 w-12 text-3xl';
+  const dimensions = size === 'large'
+    ? 'h-28 w-28 text-7xl sm:h-36 sm:w-36'
+    : 'h-16 w-16 text-4xl sm:h-20 sm:w-20';
 
   return (
     <div className={`${dimensions} shrink-0 overflow-hidden rounded-full border-2 border-orange-400/50 bg-slate-700 flex items-center justify-center`}>
