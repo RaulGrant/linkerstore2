@@ -27,7 +27,7 @@ const testimonials: Testimonial[] = [
     text: 'La capacitación en trabajo en alturas cambió completamente mi perspectiva profesional. Los instructores son excelentes y el equipo de primera calidad. Totalmente recomendado.',
     rating: 5,
     emoji: '👨‍💼',
-    photo: '/images/cenacap/testimonials/carlos-mendez.webp',
+    photo: '/images/cenacap/testimonials/carlos-mendez.png',
     course: 'Trabajo en Alturas',
   },
   {
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     text: 'Excelente centro de capacitación. La certificación STPS me abrió puertas laborales que no imaginaba. El contenido es actualizado y práctico.',
     rating: 5,
     emoji: '👩‍💼',
-    photo: '/images/cenacap/testimonials/ana-rodriguez.webp',
+    photo: '/images/cenacap/testimonials/ana-rodriguez.png',
     course: 'Manejo de Extintores',
   },
   {
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     text: 'Capacité a todo mi equipo aquí y los resultados fueron inmediatos. Reducimos incidentes en un 80%. La inversión valió completamente la pena.',
     rating: 5,
     emoji: '👨‍🏭',
-    photo: '/images/cenacap/testimonials/roberto-garcia.webp',
+    photo: '/images/cenacap/testimonials/roberto-garcia.png',
     course: 'Prevención de Incendios',
   },
   {
@@ -60,7 +60,7 @@ const testimonials: Testimonial[] = [
     text: 'El curso de espacios confinados superó mis expectativas. Ejercicios realistas que me prepararon para situaciones reales en campo.',
     rating: 5,
     emoji: '👩‍🔧',
-    photo: '/images/cenacap/testimonials/maria-fernandez.webp',
+    photo: '/images/cenacap/testimonials/maria-fernandez.png',
     course: 'Espacios Confinados',
   },
   {
@@ -71,7 +71,7 @@ const testimonials: Testimonial[] = [
     text: 'La capacitación en primeros auxilios es la más completa que he tomado. Instructores con experiencia real y casos de estudio muy útiles.',
     rating: 5,
     emoji: '👨‍⚕️',
-    photo: '/images/cenacap/testimonials/jorge-ramirez.webp',
+    photo: '/images/cenacap/testimonials/jorge-ramirez.png',
     course: 'Primeros Auxilios',
   },
 ];
