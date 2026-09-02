@@ -238,13 +238,13 @@ export default function CTASection() {
               </Card>
 
               <Card className="bg-slate-800/50 backdrop-blur-lg border-2 border-slate-700 hover:border-orange-500/50 transition-all duration-300 group">
-                <CardContent className="p-6 flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <CardContent className="flex items-center space-x-4 p-5 sm:p-6">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-700 transition-transform group-hover:scale-110">
                     <Mail className="w-7 h-7 text-white" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h4 className="text-white font-semibold mb-1">Email</h4>
-                    <p className="text-gray-400">emmanuelramirezfernandez15@gmail.com</p>
+                    <p className="break-all text-sm leading-relaxed text-gray-400 sm:text-base">emmanuelramirezfernandez15@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
