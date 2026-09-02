@@ -83,10 +83,10 @@ export default function HeroSection() {
               CENACAP
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl mt-2 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Centro de Capacitación en
+              Centro Nacional de
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Seguridad Industrial
+              Capacitación Profesional
             </span>
           </motion.h1>
 
