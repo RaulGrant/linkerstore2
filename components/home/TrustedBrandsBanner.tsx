@@ -15,7 +15,7 @@ interface TrustedBrand {
 }
 
 const trustedBrands: TrustedBrand[] = [
-  { id: 'cenacap', name: 'CEDETEP', logo: '/images/brands/cenacap-logo.webp', url: '/cenacap', description: 'Centro Educativo de Desarrollo Técnico y Profesional' },
+  { id: 'cedetep', name: 'CEDETEP', logo: '/images/brands/cenacap-logo.webp', url: '/cedetep', description: 'Centro Educativo de Desarrollo Técnico y Profesional' },
   { id: 'ajrh', name: 'AJRH Industrial', logo: '/images/brands/ajrh.jpg', url: '/ajrh-industrial', description: 'Servicios Industriales Especializados' },
   { id: 'grevel', name: 'Interiores Grevel', logo: '/images/brands/grevel.jpg', url: '/interiores-grevel', description: 'Remodelación y Construcción' },
   { id: 'aasi', name: 'AASI', logo: '/images/brands/asi.png', url: '/aasi', description: 'Capacitación en Seguridad Industrial' },

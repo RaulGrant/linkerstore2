@@ -42,9 +42,9 @@ export default function Navigation({ user }: NavigationProps) {
   const isAuthenticated = !!user;
   const isCompany = user?.role === 'company';
   const isFreelancer = user?.role === 'freelancer';
-  const isCenacap = pathname.startsWith('/cenacap');
+  const isCedetep = pathname.startsWith('/cedetep');
 
-  const scrollToCenacapSection = (sectionId: string) => {
+  const scrollToCedetepSection = (sectionId: string) => {
     document.querySelector(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -335,9 +335,9 @@ export default function Navigation({ user }: NavigationProps) {
               </div>
             </div>
           </div>
-          {isCenacap && (
+          {isCedetep && (
             <div className="flex flex-col gap-3 border-t border-orange-100 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-2">
-              <button onClick={() => scrollToCenacapSection('#hero')} className="flex items-center gap-2 self-start text-left sm:self-auto">
+              <button onClick={() => scrollToCedetepSection('#hero')} className="flex items-center gap-2 self-start text-left sm:self-auto">
                 <img src="/images/brands/cenacap-logo.webp" alt="CEDETEP" className="h-9 w-9 rounded-md object-contain" />
                 <span>
                   <span className="block text-sm font-bold text-slate-900">CEDETEP</span>
@@ -345,9 +345,9 @@ export default function Navigation({ user }: NavigationProps) {
                 </span>
               </button>
               <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
-                <button onClick={() => scrollToCenacapSection('#cursos')} className="hover:text-orange-600">Cursos</button>
-                <button onClick={() => scrollToCenacapSection('#nosotros')} className="hover:text-orange-600">Nosotros</button>
-                <button onClick={() => scrollToCenacapSection('#contacto')} className="hover:text-orange-600">Contacto</button>
+                <button onClick={() => scrollToCedetepSection('#cursos')} className="hover:text-orange-600">Cursos</button>
+                <button onClick={() => scrollToCedetepSection('#nosotros')} className="hover:text-orange-600">Nosotros</button>
+                <button onClick={() => scrollToCedetepSection('#contacto')} className="hover:text-orange-600">Contacto</button>
               </nav>
               <Button onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20los%20cursos%20de%20CEDETEP.', '_blank')} className="w-full shrink-0 bg-gradient-to-r from-orange-500 to-red-600 text-sm font-bold text-white hover:from-orange-600 hover:to-red-700 sm:w-auto sm:text-base">
                 Solicitar información
