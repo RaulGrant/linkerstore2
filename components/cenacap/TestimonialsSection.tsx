@@ -13,8 +13,6 @@ interface Testimonial {
   company: string;
   text: string;
   rating: number;
-  emoji: string;
-  photo: string;
   course: string;
 }
 
@@ -23,71 +21,48 @@ const testimonials: Testimonial[] = [
     id: '1',
     name: 'Carlos Méndez',
     role: 'Supervisor de Seguridad',
-    company: 'Grupo Industrial XYZ',
+    company: 'CEMEX',
     text: 'La capacitación en trabajo en alturas cambió completamente mi perspectiva profesional. Los instructores son excelentes y el equipo de primera calidad. Totalmente recomendado.',
     rating: 5,
-    emoji: '👨‍💼',
-    photo: '/images/cenacap/testimonials/carlos-mendez.png',
     course: 'Trabajo en Alturas',
   },
   {
     id: '2',
     name: 'Ana Rodríguez',
     role: 'Técnico en Seguridad',
-    company: 'Construcciones ABC',
+    company: 'Mabe',
     text: 'Excelente centro de capacitación. La certificación STPS me abrió puertas laborales que no imaginaba. El contenido es actualizado y práctico.',
     rating: 5,
-    emoji: '👩‍💼',
-    photo: '/images/cenacap/testimonials/ana-rodriguez.png',
     course: 'Manejo de Extintores',
   },
   {
     id: '3',
     name: 'Roberto García',
     role: 'Jefe de Planta',
-    company: 'Industrias del Norte',
+    company: 'Honeywell',
     text: 'Capacité a todo mi equipo aquí y los resultados fueron inmediatos. Reducimos incidentes en un 80%. La inversión valió completamente la pena.',
     rating: 5,
-    emoji: '👨‍🏭',
-    photo: '/images/cenacap/testimonials/roberto-garcia.png',
     course: 'Prevención de Incendios',
   },
   {
     id: '4',
     name: 'María Fernández',
     role: 'Coordinadora HSE',
-    company: 'Petroquímica del Golfo',
+    company: 'Siemens',
     text: 'El curso de espacios confinados superó mis expectativas. Ejercicios realistas que me prepararon para situaciones reales en campo.',
     rating: 5,
-    emoji: '👩‍🔧',
-    photo: '/images/cenacap/testimonials/maria-fernandez.png',
     course: 'Espacios Confinados',
   },
   {
     id: '5',
     name: 'Jorge Ramírez',
     role: 'Paramédico Industrial',
-    company: 'Manufacturas del Bajío',
+    company: 'Grupo Bimbo',
     text: 'La capacitación en primeros auxilios es la más completa que he tomado. Instructores con experiencia real y casos de estudio muy útiles.',
     rating: 5,
-    emoji: '👨‍⚕️',
-    photo: '/images/cenacap/testimonials/jorge-ramirez.png',
     course: 'Primeros Auxilios',
   },
 ];
-
-function TestimonialAvatar({ testimonial, size = 'large' }: { testimonial: Testimonial; size?: 'large' | 'small' }) {
-  const [imageFailed, setImageFailed] = useState(false);
-  const dimensions = size === 'large'
-    ? 'h-28 w-28 text-7xl sm:h-36 sm:w-36'
-    : 'h-16 w-16 text-4xl sm:h-20 sm:w-20';
-
-  return (
-    <div className={`${dimensions} shrink-0 overflow-hidden rounded-full border-2 border-orange-400/50 bg-slate-700 flex items-center justify-center`}>
-      {!imageFailed ? <img src={testimonial.photo} alt={`Foto de ${testimonial.name}`} onError={() => setImageFailed(true)} className="h-full w-full object-cover" /> : testimonial.emoji}
-    </div>
-  );
-}
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -168,7 +143,9 @@ export default function TestimonialsSection() {
 
                 {/* Author Info */}
                 <div className="flex flex-col items-center">
-                  <div className="mb-4"><TestimonialAvatar testimonial={currentTestimonial} /></div>
+                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-orange-400/50 bg-gradient-to-br from-orange-500/30 to-blue-500/30 text-2xl font-black text-orange-300">
+                    {currentTestimonial.company.slice(0, 2).toUpperCase()}
+                  </div>
                   <h4 className="text-2xl font-bold text-white mb-1">
                     {currentTestimonial.name}
                   </h4>
@@ -239,7 +216,9 @@ export default function TestimonialsSection() {
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
-                  <div className="mr-3"><TestimonialAvatar testimonial={testimonial} size="small" /></div>
+                  <div className="mr-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-orange-400/50 bg-orange-500/20 text-sm font-bold text-orange-300">
+                    {testimonial.company.slice(0, 2).toUpperCase()}
+                  </div>
                   <div>
                     <h5 className="text-white font-semibold">{testimonial.name}</h5>
                     <p className="text-gray-400 text-xs">{testimonial.role}</p>
