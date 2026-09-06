@@ -349,7 +349,7 @@ export default function Navigation({ user }: NavigationProps) {
                 <button onClick={() => scrollToCenacapSection('#nosotros')} className="hover:text-orange-600">Nosotros</button>
                 <button onClick={() => scrollToCenacapSection('#contacto')} className="hover:text-orange-600">Contacto</button>
               </nav>
-              <Button onClick={() => window.open('https://wa.me/522411954096?text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20los%20cursos%20de%20CEDETEP.', '_blank')} className="w-full shrink-0 bg-gradient-to-r from-orange-500 to-red-600 text-sm font-bold text-white hover:from-orange-600 hover:to-red-700 sm:w-auto sm:text-base">
+              <Button onClick={() => window.open('https://wa.me/522461341074?text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20los%20cursos%20de%20CEDETEP.', '_blank')} className="w-full shrink-0 bg-gradient-to-r from-orange-500 to-red-600 text-sm font-bold text-white hover:from-orange-600 hover:to-red-700 sm:w-auto sm:text-base">
                 Solicitar información
               </Button>
             </div>
