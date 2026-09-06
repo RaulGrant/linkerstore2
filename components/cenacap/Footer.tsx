@@ -53,10 +53,10 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/images/brands/cenacap-logo.webp" alt="Logo CENACAP" className="h-14 w-14 object-contain" />
+              <img src="/images/brands/cenacap-logo.webp" alt="Logo CEDETEP" className="h-14 w-14 object-contain" />
               <div>
-                <h3 className="text-white font-bold text-lg">CENACAP</h3>
-                <p className="text-orange-400 text-xs">Centro de Capacitación</p>
+                <h3 className="text-white font-bold text-lg">CEDETEP</h3>
+                <p className="text-orange-400 text-xs">Centro Educativo de Desarrollo Técnico y Profesional</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm mb-4">
@@ -67,7 +67,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center text-gray-400 text-sm">
                 <Phone className="w-4 h-4 mr-2 text-orange-400" />
-                <span>+52 241 195 4096</span>
+                <span>+52 246 134 1074</span>
               </div>
               <div className="flex items-center text-gray-400 text-sm">
                 <Mail className="w-4 h-4 mr-2 text-orange-400" />
@@ -149,7 +149,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 mb-8"></div>
 
         <div className="mb-6 flex flex-col items-center gap-2 text-sm text-gray-300 sm:flex-row sm:justify-center sm:gap-8">
-            <span><Phone className="mr-2 inline h-4 w-4 text-orange-400" />+52 241 195 4096</span>
+          <span><Phone className="mr-2 inline h-4 w-4 text-orange-400" />+52 246 134 1074</span>
           <span><Mail className="mr-2 inline h-4 w-4 text-orange-400" />emmanuelramirezfernandez15@gmail.com</span>
         </div>
 
@@ -162,7 +162,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="text-gray-500 text-sm text-center md:text-left">
-            © {currentYear} CENACAP - Centro de Capacitación en Seguridad Industrial. Todos los derechos reservados.
+            © {currentYear} CEDETEP - Centro Educativo de Desarrollo Técnico y Profesional. Todos los derechos reservados.
           </p>
 
           <div className="flex space-x-6 text-sm">

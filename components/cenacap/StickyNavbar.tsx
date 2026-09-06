@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 export default function StickyNavbar() {
-  const openWhatsApp = () => window.open('https://wa.me/522411954096?text=Hola,%20quiero%20inscribirme%20a%20un%20curso%20de%20CENACAP.', '_blank');
+  const openWhatsApp = () => window.open('https://wa.me/522411954096?text=Hola,%20quiero%20inscribirme%20a%20un%20curso%20de%20CEDETEP.', '_blank');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -53,9 +53,9 @@ export default function StickyNavbar() {
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
           >
-            <img src="/images/brands/cenacap-logo.webp" alt="CENACAP" className="h-14 w-14 rounded-lg object-contain" />
+            <img src="/images/brands/cenacap-logo.webp" alt="CEDETEP" className="h-14 w-14 rounded-lg object-contain" />
             <div>
-              <h1 className="text-white font-bold text-xl">CENACAP</h1>
+              <h1 className="text-white font-bold text-xl">CEDETEP</h1>
               <p className="text-orange-400 text-xs">Centro de Capacitación</p>
             </div>
           </motion.div>

@@ -72,7 +72,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Main Title */}
-          <img src="/images/brands/cenacap-logo.webp" alt="Logo CENACAP" className="mx-auto mb-6 h-40 w-40 object-contain drop-shadow-2xl" />
+          <img src="/images/brands/cenacap-logo.webp" alt="Logo CEDETEP" className="mx-auto mb-6 h-40 w-40 object-contain drop-shadow-2xl" />
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
@@ -80,10 +80,10 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <span className="block bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              CENACAP
+              CEDETEP
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl mt-2 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Centro Nacional de
+              Centro Educativo de Desarrollo Técnico y Profesional
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
               Capacitación Profesional
@@ -100,7 +100,7 @@ export default function HeroSection() {
             Formación profesional certificada para un futuro más seguro.
             <br />
             <span className="text-orange-400 font-semibold">
-              Construye tu carrera en seguridad industrial.
+              Construye tu carrera y desarrollo en la industria.
             </span>
           </motion.p>
 
@@ -114,7 +114,7 @@ export default function HeroSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                onClick={() => openWhatsApp('Hola, quiero información sobre los cursos de CENACAP.')}
+                onClick={() => openWhatsApp('Hola, quiero información sobre los cursos de CEDETEP.')}
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-6 text-base font-bold text-white shadow-xl shadow-orange-500/50 transition-all duration-300 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-500/70 sm:w-auto sm:px-8 sm:text-lg group"
               >
                 Ver opciones de capacitación
@@ -125,7 +125,7 @@ export default function HeroSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                onClick={() => openWhatsApp('Hola, quiero saber más sobre los cursos de CENACAP.')}
+                onClick={() => openWhatsApp('Hola, quiero saber más sobre los cursos de CEDETEP.')}
                 variant="outline"
                 className="w-full border-2 border-orange-400 px-5 py-6 text-base font-bold text-orange-400 transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:w-auto sm:px-8 sm:text-lg"
               >
