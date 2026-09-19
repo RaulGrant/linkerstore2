@@ -53,7 +53,7 @@ export default function StickyNavbar() {
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
           >
-            <img src="/images/brands/cenacap-logo.webp" alt="CEDETEP" className="h-14 w-14 rounded-lg object-contain" />
+            <img src="/images/brands/cedetep-logo.png" alt="CEDETEP" className="h-14 w-14 rounded-lg object-contain" />
             <div>
               <h1 className="text-white font-bold text-xl">CEDETEP</h1>
               <p className="text-orange-400 text-xs">Centro de Capacitación</p>

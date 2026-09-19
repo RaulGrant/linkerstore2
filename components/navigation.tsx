@@ -338,7 +338,7 @@ export default function Navigation({ user }: NavigationProps) {
           {isCedetep && (
             <div className="flex flex-col gap-3 border-t border-orange-100 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-2">
               <button onClick={() => scrollToCedetepSection('#hero')} className="flex items-center gap-2 self-start text-left sm:self-auto">
-                <img src="/images/brands/cenacap-logo.webp" alt="CEDETEP" className="h-9 w-9 rounded-md object-contain" />
+                <img src="/images/brands/cedetep-logo.png" alt="CEDETEP" className="h-9 w-9 rounded-md object-contain" />
                 <span>
                   <span className="block text-sm font-bold text-slate-900">CEDETEP</span>
                   <span className="block text-xs text-orange-600">Centro de Capacitación</span>

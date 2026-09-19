@@ -53,7 +53,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/images/brands/cenacap-logo.webp" alt="Logo CEDETEP" className="h-14 w-14 object-contain" />
+              <img src="/images/brands/cedetep-logo.png" alt="Logo CEDETEP" className="h-14 w-14 object-contain" />
               <div>
                 <h3 className="text-white font-bold text-lg">CEDETEP</h3>
                 <p className="text-orange-400 text-xs">Centro Educativo de Desarrollo Técnico y Profesional</p>
